@@ -22,10 +22,10 @@ export default function HomePage() {
           <TrendingUp size={16} />
           <span>2026 AI 최신 트렌드</span>
         </div>
-        <h1 className="text-4xl font-bold text-white mb-3">
+        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
           CLOID<span className="text-violet-400">.AI</span>
         </h1>
-        <p className="text-slate-400 text-lg max-w-xl">
+        <p className="text-slate-400 text-base sm:text-lg max-w-xl">
           AI 도구, 프롬프트, 개발 패턴을 한 곳에서 학습하고 실습하세요.
           매일 업데이트되는 AI 연습 포털.
         </p>

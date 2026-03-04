@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { BookOpen, FileText, Video, Terminal, ExternalLink } from "lucide-react";
+import { BookOpen, FileText, Video, Terminal, ExternalLink, ArrowLeft } from "lucide-react";
 import type { LearningTopic, LearningResource } from "@/lib/types";
 import TagBadge from "@/components/TagBadge";
 
@@ -51,7 +51,7 @@ function ResourceCard({ r }: { r: LearningResource }) {
 }
 
 export default function LearningClient({ topics }: { topics: LearningTopic[] }) {
-  const [selectedId, setSelectedId] = useState(topics[0]?.id ?? "");
+  const [selectedId, setSelectedId] = useState<string | null>(null);
   const topic = topics.find((t) => t.id === selectedId);
 
   return (
@@ -62,8 +62,8 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
       </div>
 
       <div className="flex flex-col md:flex-row gap-6">
-        {/* Sidebar */}
-        <div className="md:w-64 shrink-0 space-y-2">
+        {/* Sidebar — 모바일: 토픽 선택 시 숨김 */}
+        <div className={`md:w-64 shrink-0 space-y-2 ${selectedId ? "hidden md:block" : "block"}`}>
           <p className="text-xs text-slate-500 uppercase tracking-wider mb-3 px-1">학습 토픽</p>
           {topics.map((t) => (
             <button
@@ -86,7 +86,15 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
         {/* Content */}
         {topic && (
           <div className="flex-1 min-w-0">
-            <div className="p-6 rounded-xl border border-slate-800 bg-slate-900/30">
+            {/* 모바일 뒤로가기 */}
+            <button
+              onClick={() => setSelectedId(null)}
+              className="md:hidden flex items-center gap-1.5 text-sm text-slate-400 hover:text-white mb-4 transition-colors"
+            >
+              <ArrowLeft size={16} />
+              토픽 목록
+            </button>
+            <div className="p-5 sm:p-6 rounded-xl border border-slate-800 bg-slate-900/30">
               <div className="flex items-start justify-between gap-4 mb-4">
                 <div>
                   <h2 className="text-xl font-bold text-white mb-1">{topic.title}</h2>
@@ -104,6 +112,13 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
                 {topic.resources.map((r, i) => <ResourceCard key={i} r={r} />)}
               </div>
             </div>
+          </div>
+        )}
+
+        {/* 모바일: 아무것도 선택 안 됐을 때 안내 */}
+        {!selectedId && (
+          <div className="hidden md:flex flex-1 items-center justify-center h-64 text-slate-500 border border-slate-800 rounded-xl">
+            왼쪽에서 토픽을 선택하세요
           </div>
         )}
       </div>

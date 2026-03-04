@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Zap } from "lucide-react";
+import { Zap, ArrowLeft } from "lucide-react";
 import type { Skill } from "@/lib/types";
 import SearchFilter from "@/components/SearchFilter";
 import TagBadge from "@/components/TagBadge";
@@ -48,7 +48,36 @@ export default function SkillsClient({ skills, allTags }: Props) {
 
       <SearchFilter allTags={allTags} onSearchChange={setQuery} onTagToggle={toggleTag} activeTags={activeTags} query={query} />
 
-      <div className="flex flex-col md:flex-row gap-6">
+      {/* 모바일: 상세보기 화면 (선택 시) */}
+      {selected && (
+        <div className="md:hidden mb-4">
+          <button
+            onClick={() => setSelected(null)}
+            className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-white mb-4 transition-colors"
+          >
+            <ArrowLeft size={16} />
+            목록으로
+          </button>
+          <div className="p-5 rounded-xl border border-slate-800 bg-slate-900/30">
+            <div className="flex items-start justify-between gap-4 mb-3">
+              <h2 className="text-xl font-bold text-white">{selected.title}</h2>
+              <span className={`text-sm shrink-0 ${difficultyColor[selected.difficulty]}`}>
+                {difficultyLabel[selected.difficulty]}
+              </span>
+            </div>
+            <p className="text-slate-400 text-sm mb-4">{selected.summary}</p>
+            <div className="flex flex-wrap gap-1.5 mb-6">
+              {selected.tags.map((tag) => <TagBadge key={tag} tag={tag} />)}
+            </div>
+            <pre className="whitespace-pre-wrap text-sm text-slate-300 leading-relaxed font-sans">
+              {selected.content}
+            </pre>
+          </div>
+        </div>
+      )}
+
+      {/* 모바일: 목록 (선택 시 숨김) / 데스크톱: 항상 표시 */}
+      <div className={`flex gap-6 ${selected ? "hidden md:flex" : "flex flex-col md:flex-row"}`}>
         {/* List */}
         <div className="md:w-72 shrink-0 space-y-2">
           {filtered.map((skill) => (
@@ -78,8 +107,8 @@ export default function SkillsClient({ skills, allTags }: Props) {
           )}
         </div>
 
-        {/* Detail */}
-        <div className="flex-1 min-w-0">
+        {/* Detail (데스크톱) */}
+        <div className="hidden md:block flex-1 min-w-0">
           {selected ? (
             <div className="p-6 rounded-xl border border-slate-800 bg-slate-900/30 sticky top-20">
               <div className="flex items-start justify-between gap-4 mb-3">
