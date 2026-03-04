@@ -48,7 +48,7 @@ export default function AskAI() {
       <div className="flex items-center gap-2 mb-4">
         <Sparkles size={20} className="text-violet-400" />
         <h2 className="text-lg font-semibold text-white">AI에게 물어보기</h2>
-        <span className="text-xs text-violet-400 bg-violet-900/40 px-2 py-0.5 rounded-full border border-violet-700/50">Gemini</span>
+        <span className="text-xs text-violet-400 bg-violet-900/40 px-2 py-0.5 rounded-full border border-violet-700/50">GPT-4o mini</span>
       </div>
 
       {/* 빠른 질문 */}
