@@ -1,0 +1,148 @@
+[
+  {
+    "slug": "2026-03-04-anthropicsclaude-code-v2168",
+    "title": "[anthropics/claude-code] v2.1.68",
+    "date": "2026-03-04",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.68",
+    "excerpt": "## What's changed\n\n- Opus 4.6 now defaults to medium effort for Max and Team subscribers. Medium effort works well for m"
+  },
+  {
+    "slug": "2026-03-04-anthropicsclaude-code-v2166",
+    "title": "[anthropics/claude-code] v2.1.66",
+    "date": "2026-03-04",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.66",
+    "excerpt": "\n"
+  },
+  {
+    "slug": "2026-02-28-anthropicsclaude-code-v2163",
+    "title": "[anthropics/claude-code] v2.1.63",
+    "date": "2026-02-28",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.63",
+    "excerpt": "## What's changed\n\n- Added `/simplify` and `/batch` bundled slash commands\n- Fixed local slash command output like /cost"
+  },
+  {
+    "slug": "2026-02-25-anthropicsanthropic-sdk-python-v0840",
+    "title": "[anthropics/anthropic-sdk-python] v0.84.0",
+    "date": "2026-02-25",
+    "tags": [
+      "tool"
+    ],
+    "score": 93,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.84.0",
+    "excerpt": "## 0.84.0 (2026-02-25)\n\nFull Changelog: [v0.83.0...v0.84.0](https://github.com/anthropics/anthropic-sdk-python/compare/v"
+  },
+  {
+    "slug": "2026-02-23-anthropics-claude-code-security-finds-500-vulnerabilities-ho",
+    "title": "Anthropic's Claude Code Security finds 500+ vulnerabilities: how security leaders should respond - VentureBeat",
+    "date": "2026-02-23",
+    "tags": [
+      "claude-code",
+      "security"
+    ],
+    "score": 92,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXV5V1NNbjkxSXktSi11bjVrZ2lKYmdaQlNmUllsVk1vQWd0UnpHcS1ZUlVRSnRpbjJycEFGQ2hWbXJlMlhvcDRGY2NOQ05oejM2MlRxZ1RIX0s3UUhvZW16RWpMSlNMSkNZSmZ0UEJNa1dVMlV3REFzejliTHM1M1VlUVlkY1hNQm9sbkF1XzNRM2oyWlZkZTdRQQ?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXV5V1NNbjkxSXktSi11bjVrZ2lKYmdaQlNmUllsVk1vQWd0UnpHcS1"
+  },
+  {
+    "slug": "2026-02-23-infosec-community-panics-as-anthropic-rolls-out-claude-code-",
+    "title": "Infosec community panics as Anthropic rolls out Claude code security checker - theregister.com",
+    "date": "2026-02-23",
+    "tags": [
+      "claude-code",
+      "security"
+    ],
+    "score": 92,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1ZX2FEZm5sMkd0ZXRYQXM3UmU4RU82a1NhWnk5V0RIN3pvX2N3V1B3eHRfYzdUbkJ1VU8tc2NDRkF6N0FyZXhFNFlkVXI4bUFqdjVJX193cU91aUJ4SnhURTdVZW9MbTI3cWFwZzFjeDBMMS1G?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE1ZX2FEZm5sMkd0ZXRYQXM3UmU4RU82a1NhWnk5V0RIN3pvX2N3V1B3eHR"
+  },
+  {
+    "slug": "2026-02-28-creator-of-claude-code-fears-this-could-be-the-last-year-tha",
+    "title": "Creator of Claude Code Fears This Could Be the Last Year That Software Engineers Are Employable - Futurism",
+    "date": "2026-02-28",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 86,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBUclVmeEt4cF9sdHo2WERlTUdrYXFuNmxRTW1DU1ZkMjJtaWZZX3ZVbi1IOXZ6UEZGbUlzMjFRcTFJYy1pLURONWJxZVNTX24ySXZKd29ENzhwRms1bmlNaGFMZEYtTUYxYUNOazI4X2xlQl91cnotQU42Wmk?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFBUclVmeEt4cF9sdHo2WERlTUdrYXFuNmxRTW1DU1ZkMjJtaWZZX3ZVbi1"
+  },
+  {
+    "slug": "2026-02-20-anthropicsanthropic-sdk-python-v0830",
+    "title": "[anthropics/anthropic-sdk-python] v0.83.0",
+    "date": "2026-02-20",
+    "tags": [
+      "tool"
+    ],
+    "score": 83,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.83.0",
+    "excerpt": "## 0.83.0 (2026-02-19)\n\nFull Changelog: [v0.82.0...v0.83.0](https://github.com/anthropics/anthropic-sdk-python/compare/v"
+  },
+  {
+    "slug": "2026-02-20-anthropicsanthropic-sdk-typescript-vertex-sdk-v0144",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.14.4",
+    "date": "2026-02-20",
+    "tags": [
+      "tool"
+    ],
+    "score": 83,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.14.4",
+    "excerpt": "## 0.14.4 (2026-02-19)\n\nFull Changelog: [vertex-sdk-v0.14.3...vertex-sdk-v0.14.4](https://github.com/anthropics/anthropi"
+  },
+  {
+    "slug": "2026-02-20-anthropicsanthropic-sdk-typescript-sdk-v0780",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.78.0",
+    "date": "2026-02-20",
+    "tags": [
+      "tool"
+    ],
+    "score": 83,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.78.0",
+    "excerpt": "## 0.78.0 (2026-02-19)\n\nFull Changelog: [sdk-v0.77.0...sdk-v0.78.0](https://github.com/anthropics/anthropic-sdk-typescri"
+  },
+  {
+    "slug": "claude-code-remote-mcp",
+    "title": "Claude Code + Remote MCP 완전 정복",
+    "date": "2026-03-01",
+    "tags": [
+      "Claude",
+      "MCP",
+      "Remote",
+      "Productivity"
+    ],
+    "excerpt": "Claude Code에서 Remote MCP 서버를 연결해 로컬 파일시스템 없이도 강력한 AI 에이전트를 운영하는 방법"
+  },
+  {
+    "slug": "nextjs15-app-router",
+    "title": "Next.js 15 App Router 핵심 변경점",
+    "date": "2026-02-20",
+    "tags": [
+      "Next.js",
+      "React",
+      "Frontend"
+    ],
+    "excerpt": "Next.js 15에서 달라진 캐싱 전략, Turbopack 기본 활성화, React 19 지원 등을 실습 코드와 함께 정리"
+  },
+  {
+    "slug": "gemini-2-multimodal",
+    "title": "Gemini 2.0 멀티모달 API 실전 활용",
+    "date": "2026-02-10",
+    "tags": [
+      "Gemini",
+      "Google",
+      "Multimodal"
+    ],
+    "excerpt": "Gemini 2.0 Flash/Pro의 이미지·오디오·비디오 멀티모달 입력을 Next.js API Route와 연동하는 패턴"
+  }
+]

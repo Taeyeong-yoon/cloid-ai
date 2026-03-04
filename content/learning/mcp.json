@@ -1,0 +1,50 @@
+{
+  "id": "mcp",
+  "title": "MCP (Model Context Protocol) 마스터",
+  "description": "AI 에이전트의 컨텍스트를 확장하는 MCP 프로토콜 이해와 서버 구축",
+  "level": "intermediate",
+  "tags": [
+    "MCP",
+    "Claude",
+    "Protocol",
+    "Server"
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "MCP 공식 사양",
+      "url": "https://modelcontextprotocol.io",
+      "description": "MCP 프로토콜 전체 사양 및 SDK 가이드"
+    },
+    {
+      "type": "doc",
+      "title": "MCP 서버 퀵스타트",
+      "url": "https://modelcontextprotocol.io/quickstart/server",
+      "description": "TypeScript로 나만의 MCP 서버 구축하기"
+    },
+    {
+      "type": "doc",
+      "title": "MCP 서버 목록",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "description": "공식/커뮤니티 MCP 서버 모음"
+    },
+    {
+      "type": "video",
+      "title": "MCP 서버 구축 튜토리얼",
+      "url": "https://youtube.com/results?search_query=model+context+protocol+tutorial",
+      "description": "MCP 프로토콜 실습 영상"
+    },
+    {
+      "type": "practice",
+      "title": "Filesystem MCP 서버 연결",
+      "description": "로컬 파일시스템을 Claude에 연결하는 MCP 서버 설정 실습",
+      "command": "npx @modelcontextprotocol/server-filesystem ~/Desktop"
+    },
+    {
+      "type": "practice",
+      "title": "커스텀 MCP 서버 만들기",
+      "description": "TypeScript SDK로 나만의 도구를 Claude에 노출하는 MCP 서버 구축",
+      "command": "npm create mcp-server my-server"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "claude-code",
+  "title": "Claude Code 완전 가이드",
+  "description": "Anthropic의 AI 코딩 에이전트 Claude Code를 처음부터 고급 활용까지 단계별로 학습",
+  "level": "beginner",
+  "tags": [
+    "Claude",
+    "AI",
+    "CLI",
+    "Agent"
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Claude Code 공식 문서",
+      "url": "https://docs.anthropic.com/claude-code",
+      "description": "설치부터 고급 설정까지 공식 가이드"
+    },
+    {
+      "type": "doc",
+      "title": "Claude Code GitHub",
+      "url": "https://github.com/anthropics/claude-code",
+      "description": "오픈소스 레포지토리 및 릴리즈 노트"
+    },
+    {
+      "type": "doc",
+      "title": "Claude Code 키보드 단축키",
+      "url": "https://docs.anthropic.com/claude-code/shortcuts",
+      "description": "생산성을 높이는 단축키 모음"
+    },
+    {
+      "type": "video",
+      "title": "Claude Code 완전 가이드 (유튜브)",
+      "url": "https://youtube.com/results?search_query=claude+code+tutorial",
+      "description": "Claude Code 실전 사용법 영상"
+    },
+    {
+      "type": "practice",
+      "title": "첫 번째 프로젝트: TODO 앱 만들기",
+      "description": "Claude Code로 처음부터 끝까지 TODO 앱을 만들며 기본기 습득",
+      "command": "claude \"Create a todo app with Next.js and Tailwind\""
+    },
+    {
+      "type": "practice",
+      "title": "CLAUDE.md 작성 실습",
+      "description": "프로젝트 지침 파일 CLAUDE.md를 작성해 일관된 코딩 스타일 유지",
+      "command": "claude \"Create a CLAUDE.md for this project with coding conventions\""
+    }
+  ]
+}

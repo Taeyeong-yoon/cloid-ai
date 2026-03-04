@@ -1,0 +1,50 @@
+{
+  "id": "remote-control",
+  "title": "AI 원격 제어 & 자동화",
+  "description": "AI를 활용해 서버, CI/CD, 클라우드 인프라를 자동으로 제어하는 방법",
+  "level": "advanced",
+  "tags": [
+    "Automation",
+    "CI/CD",
+    "DevOps",
+    "Agent"
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Claude Code + GitHub Actions",
+      "url": "https://docs.anthropic.com/claude-code/github-actions",
+      "description": "CI 파이프라인에서 Claude Code를 활용한 자동화"
+    },
+    {
+      "type": "doc",
+      "title": "Headless Claude Code 실행",
+      "url": "https://docs.anthropic.com/claude-code/headless",
+      "description": "서버/CI 환경에서 Claude Code 비대화형 실행"
+    },
+    {
+      "type": "doc",
+      "title": "Remote MCP 서버 구성",
+      "url": "https://docs.anthropic.com/claude-code/mcp",
+      "description": "원격 MCP 서버를 통한 인프라 자동화"
+    },
+    {
+      "type": "video",
+      "title": "AI 자동화 에이전트 구축",
+      "url": "https://youtube.com/results?search_query=AI+automation+agent+tutorial",
+      "description": "AI 원격 제어 자동화 실습"
+    },
+    {
+      "type": "practice",
+      "title": "자동 PR 리뷰 봇 만들기",
+      "description": "GitHub Webhook + Claude API로 자동 코드 리뷰 시스템 구축",
+      "command": "claude \"Review this PR and suggest improvements\" --input-file diff.txt"
+    },
+    {
+      "type": "practice",
+      "title": "Cron 기반 AI 에이전트 스케줄러",
+      "description": "매일 정해진 시간에 AI 에이전트가 작업을 수행하도록 자동화",
+      "command": "claude --print \"Summarize today's repo changes\" | mail -s 'Daily AI Summary' you@example.com"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+---
+title: "Anthropic's Claude Code Security finds 500+ vulnerabilities: how security leaders should respond - VentureBeat"
+date: "2026-02-23"
+tags:
+  - claude-code
+  - security
+score: 92
+sourceUrl: "https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXV5V1NNbjkxSXktSi11bjVrZ2lKYmdaQlNmUllsVk1vQWd0UnpHcS1ZUlVRSnRpbjJycEFGQ2hWbXJlMlhvcDRGY2NOQ05oejM2MlRxZ1RIX0s3UUhvZW16RWpMSlNMSkNZSmZ0UEJNa1dVMlV3REFzejliTHM1M1VlUVlkY1hNQm9sbkF1XzNRM2oyWlZkZTdRQQ?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXV5V1NNbjkxSXktSi11bjVrZ2lKYmdaQlNmUllsVk1vQWd0UnpHcS1ZUlVRSnRpbjJycEFGQ2hWbXJlMlhvcDRGY2NOQ05oejM2MlRxZ1RIX0s3UUhvZW16RWpMSlNMSkNZSmZ0UEJNa1dVMlV3REFzejliTHM1M1VlUVlkY1hNQm9sbkF1XzNRM2oyWlZkZTdRQQ?oc=5' target='_blank'&gt;Anthropic's"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXV5V1NNbjkxSXktSi11bjVrZ2lKYmdaQlNmUllsVk1vQWd0UnpHcS1ZUlVRSnRpbjJycEFGQ2hWbXJlMlhvcDRGY2NOQ05oejM2MlRxZ1RIX0s3UUhvZW16RWpMSlNMSkNZSmZ0UEJNa1dVMlV3REFzejliTHM1M1VlUVlkY1hNQm9sbkF1XzNRM2oyWlZkZTdRQQ?oc=5" target="_blank"&gt;Anthropic's
+
+**출처**: [https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXV5V1NNbjkxSXktSi11bjVrZ2lKYmdaQlNmUllsVk1vQWd0UnpHcS1ZUlVRSnRpbjJycEFGQ2hWbXJlMlhvcDRGY2NOQ05oejM2MlRxZ1RIX0s3UUhvZW16RWpMSlNMSkNZSmZ0UEJNa1dVMlV3REFzejliTHM1M1VlUVlkY1hNQm9sbkF1XzNRM2oyWlZkZTdRQQ?oc=5](https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXV5V1NNbjkxSXktSi11bjVrZ2lKYmdaQlNmUllsVk1vQWd0UnpHcS1ZUlVRSnRpbjJycEFGQ2hWbXJlMlhvcDRGY2NOQ05oejM2MlRxZ1RIX0s3UUhvZW16RWpMSlNMSkNZSmZ0UEJNa1dVMlV3REFzejliTHM1M1VlUVlkY1hNQm9sbkF1XzNRM2oyWlZkZTdRQQ?oc=5)
