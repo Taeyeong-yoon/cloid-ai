@@ -3,6 +3,7 @@ import { getAllRadarPosts } from "@/lib/radar";
 import { formatDate } from "@/lib/utils";
 import { Radar, BookOpen, Zap, FlaskConical, ArrowRight, TrendingUp } from "lucide-react";
 import TagBadge from "@/components/TagBadge";
+import AskAI from "@/components/AskAI";
 
 const quickLinks = [
   { href: "/radar", label: "AI 트렌드 레이더", icon: Radar, desc: "최신 AI 동향 파악" },
@@ -47,6 +48,9 @@ export default function HomePage() {
           </Link>
         ))}
       </section>
+
+      {/* Ask AI */}
+      <AskAI />
 
       {/* Latest radar posts */}
       <section>

@@ -231,6 +231,47 @@ class GoogleNewsProvider implements SourceProvider {
   }
 }
 
+class NaverNewsProvider implements SourceProvider {
+  name = 'Naver News';
+
+  async fetchItems(): Promise<RawItem[]> {
+    const clientId = process.env.NAVER_CLIENT_ID;
+    const clientSecret = process.env.NAVER_CLIENT_SECRET;
+    if (!clientId || !clientSecret) throw new Error('Naver API 키 없음');
+
+    const queries = ['AI 클로드 Anthropic', 'AI 에이전트 개발', 'Claude Code'];
+    const allItems: RawItem[] = [];
+
+    for (const q of queries) {
+      try {
+        const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(q)}&display=5&sort=date`;
+        const res = await fetch(url, {
+          headers: {
+            'X-Naver-Client-Id': clientId,
+            'X-Naver-Client-Secret': clientSecret,
+          },
+          signal: AbortSignal.timeout(6000),
+        });
+        if (!res.ok) continue;
+        const data = await res.json() as { items?: Array<{ title: string; originallink: string; link: string; pubDate: string; description: string }> };
+        for (const item of data.items ?? []) {
+          allItems.push({
+            title: item.title.replace(/<[^>]+>/g, '').replace(/&quot;/g, '"').replace(/&amp;/g, '&').trim(),
+            url: item.originallink || item.link,
+            publishedAt: item.pubDate,
+            snippet: item.description.replace(/<[^>]+>/g, '').replace(/&quot;/g, '"').trim().slice(0, 200),
+            source: 'Naver News',
+          });
+        }
+      } catch {/* try next query */}
+    }
+
+    if (allItems.length === 0) throw new Error('Naver API 결과 없음');
+    console.log(`[Naver News] ${allItems.length}개 수집`);
+    return allItems;
+  }
+}
+
 class FallbackProvider implements SourceProvider {
   name = 'Fallback';
 
@@ -331,6 +372,7 @@ async function runPipeline() {
     new AnthropicBlogProvider(),
     new GitHubProvider(),
     new GoogleNewsProvider(),
+    new NaverNewsProvider(),  // 한국어 AI 뉴스
   ];
 
   const rawItems: RawItem[] = [];
