@@ -30,9 +30,21 @@
     },
     {
       "type": "video",
-      "title": "Claude Code 완전 가이드 (유튜브)",
-      "url": "https://youtube.com/results?search_query=claude+code+tutorial",
-      "description": "Claude Code 실전 사용법 영상"
+      "title": "Claude Code 왕초보 입문 튜토리얼 23가지 팁 | 클로드코드 설치 사용법 50분 강의 완전정복 2026 가이드",
+      "url": "https://www.youtube.com/watch?v=1_bRmkUvjHA",
+      "description": "안녕하세요 AI싱크클럽입니다. 오늘은 Claude Code 왕초보 입문 영상을 준비했습니다. 코딩 1도 몰라도 괜찮습니다. 설치부터 실전 ..."
+    },
+    {
+      "type": "video",
+      "title": "Claude Code Tutorial for Beginners",
+      "url": "https://www.youtube.com/watch?v=eMZmDH3T2bY",
+      "description": "This Claude Code Tutorial teaches you what I wish I knew as a software developer about Claude Code before I started AI c"
+    },
+    {
+      "type": "video",
+      "title": "코딩 1도 모르는 직장인을 위한 Claude Code 시작 가이드",
+      "url": "https://www.youtube.com/watch?v=C6xlOsQFyOQ",
+      "description": "Claude Code를 활용해 콘텐츠 팀, 전략/기획 팀, 경영지원 팀 같은 나만의 AI 에이전트 팀을 만드는 방법을 알려드립니다. 코딩 몰라도 ..."
     },
     {
       "type": "practice",

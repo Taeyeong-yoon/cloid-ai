@@ -30,9 +30,21 @@
     },
     {
       "type": "video",
-      "title": "MCP 서버 구축 튜토리얼",
-      "url": "https://youtube.com/results?search_query=model+context+protocol+tutorial",
-      "description": "MCP 프로토콜 실습 영상"
+      "title": "7분만에 MCP 이해하기 | Model Context Protocol",
+      "url": "https://www.youtube.com/watch?v=ha9kn0qe4Mc",
+      "description": "더 알아보기 : https://www.anthropic.com/news/model-context-protocol https://docs.anthropic.com/en/docs/agents-and-tools/mcp ."
+    },
+    {
+      "type": "video",
+      "title": "Model Context Protocol Clearly Explained | MCP Beyond the Hype",
+      "url": "https://www.youtube.com/watch?v=tzrwxLNHtRY",
+      "description": "This video contains a very simple explanation of MCP, also known as Model Context Protocol. We will first understand wha"
+    },
+    {
+      "type": "video",
+      "title": "Model Context Protocol (MCP) Explained in 20 Minutes",
+      "url": "https://www.youtube.com/watch?v=N3vHJcHBS-w",
+      "description": "Work with me: https://www.shawhintalebi.com Ship AI apps in weeks, not months: https://aibuilder.academy/yt/N3vHJcHBS-w "
     },
     {
       "type": "practice",
