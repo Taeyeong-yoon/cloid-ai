@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, Lock, LogIn, UserPlus } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 interface Props {
   signIn: (formData: FormData) => Promise<{ error: string } | undefined>;
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export default function AuthForm({ signIn, signUp }: Props) {
+  const { t } = useTranslation();
   const [mode, setMode] = useState<"login" | "signup">("login");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -33,7 +35,7 @@ export default function AuthForm({ signIn, signUp }: Props) {
         <input
           name="email"
           type="email"
-          placeholder="이메일"
+          placeholder={t.auth.email}
           required
           className="w-full bg-slate-800/60 border border-slate-700 rounded-lg pl-9 pr-4 py-2.5 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-violet-500"
         />
@@ -43,14 +45,18 @@ export default function AuthForm({ signIn, signUp }: Props) {
         <input
           name="password"
           type="password"
-          placeholder="비밀번호"
+          placeholder={t.auth.password}
           required
           minLength={6}
           className="w-full bg-slate-800/60 border border-slate-700 rounded-lg pl-9 pr-4 py-2.5 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-violet-500"
         />
       </div>
 
-      {error && <p className="text-red-400 text-sm bg-red-900/20 border border-red-800 rounded-lg px-3 py-2">{error}</p>}
+      {error && (
+        <p className="text-red-400 text-sm bg-red-900/20 border border-red-800 rounded-lg px-3 py-2">
+          {error}
+        </p>
+      )}
 
       <button
         type="submit"
@@ -58,17 +64,20 @@ export default function AuthForm({ signIn, signUp }: Props) {
         className="w-full flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500 disabled:opacity-50 text-white font-medium py-2.5 rounded-lg transition-colors"
       >
         {mode === "login" ? <LogIn size={16} /> : <UserPlus size={16} />}
-        {loading ? "처리 중..." : mode === "login" ? "로그인" : "회원가입"}
+        {loading ? t.auth.processing : mode === "login" ? t.common.login : t.auth.signup}
       </button>
 
       <p className="text-center text-sm text-slate-500">
-        {mode === "login" ? "계정이 없으신가요?" : "이미 계정이 있으신가요?"}
+        {mode === "login" ? t.auth.no_account : t.auth.have_account}
         <button
           type="button"
-          onClick={() => { setMode(mode === "login" ? "signup" : "login"); setError(""); }}
+          onClick={() => {
+            setMode(mode === "login" ? "signup" : "login");
+            setError("");
+          }}
           className="ml-1.5 text-violet-400 hover:text-violet-300"
         >
-          {mode === "login" ? "회원가입" : "로그인"}
+          {mode === "login" ? t.auth.signup : t.common.login}
         </button>
       </p>
     </form>

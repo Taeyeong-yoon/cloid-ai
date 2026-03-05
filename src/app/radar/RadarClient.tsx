@@ -7,6 +7,7 @@ import type { RadarPost } from "@/lib/types";
 import { formatDate } from "@/lib/utils";
 import SearchFilter from "@/components/SearchFilter";
 import TagBadge from "@/components/TagBadge";
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 interface Props {
   posts: RadarPost[];
@@ -14,25 +15,33 @@ interface Props {
 }
 
 export default function RadarClient({ posts, allTags }: Props) {
+  const { t } = useTranslation();
   const [query, setQuery] = useState("");
   const [activeTags, setActiveTags] = useState<string[]>([]);
 
   const filtered = posts.filter((p) => {
-    const matchQ = !query || p.title.toLowerCase().includes(query.toLowerCase()) || p.summary.toLowerCase().includes(query.toLowerCase());
-    const matchT = activeTags.length === 0 || activeTags.every((t) => p.tags.includes(t));
+    const matchQ =
+      !query ||
+      p.title.toLowerCase().includes(query.toLowerCase()) ||
+      p.summary.toLowerCase().includes(query.toLowerCase());
+    const matchT = activeTags.length === 0 || activeTags.every((tag) => p.tags.includes(tag));
     return matchQ && matchT;
   });
 
   function toggleTag(tag: string) {
-    setActiveTags((prev) => prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]);
+    setActiveTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    );
   }
 
   return (
     <div>
       <div className="flex items-center gap-2 mb-6">
         <Radar size={22} className="text-violet-400" />
-        <h1 className="text-2xl font-bold text-white">AI 트렌드 레이더</h1>
-        <span className="ml-auto text-sm text-slate-500">{filtered.length}개</span>
+        <h1 className="text-2xl font-bold text-white">{t.radar.title}</h1>
+        <span className="ml-auto text-sm text-slate-500">
+          {filtered.length}{t.radar.count}
+        </span>
       </div>
 
       <SearchFilter
@@ -41,6 +50,7 @@ export default function RadarClient({ posts, allTags }: Props) {
         onTagToggle={toggleTag}
         activeTags={activeTags}
         query={query}
+        placeholder={t.common.search_placeholder}
       />
 
       <div className="grid md:grid-cols-2 gap-4">
@@ -63,7 +73,7 @@ export default function RadarClient({ posts, allTags }: Props) {
           </Link>
         ))}
         {filtered.length === 0 && (
-          <p className="col-span-2 text-center text-slate-500 py-12">검색 결과가 없습니다.</p>
+          <p className="col-span-2 text-center text-slate-500 py-12">{t.common.no_results}</p>
         )}
       </div>
     </div>

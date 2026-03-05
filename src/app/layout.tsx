@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
   title: "CLOID.AI – AI 연습 포털",
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className="min-h-screen bg-[#0f1117] text-slate-200">
-        <Nav />
-        <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
+        <Providers>
+          <Nav />
+          <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
+        </Providers>
       </body>
     </html>
   );

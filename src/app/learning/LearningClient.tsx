@@ -4,12 +4,7 @@ import { useState } from "react";
 import { BookOpen, FileText, Video, Terminal, ExternalLink, ArrowLeft } from "lucide-react";
 import type { LearningTopic, LearningResource } from "@/lib/types";
 import TagBadge from "@/components/TagBadge";
-
-const levelLabel: Record<string, string> = {
-  beginner: "입문",
-  intermediate: "중급",
-  advanced: "고급",
-};
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 const levelColor: Record<string, string> = {
   beginner: "text-emerald-400 bg-emerald-900/30 border-emerald-700/50",
@@ -51,33 +46,42 @@ function ResourceCard({ r }: { r: LearningResource }) {
 }
 
 export default function LearningClient({ topics }: { topics: LearningTopic[] }) {
+  const { t } = useTranslation();
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const topic = topics.find((t) => t.id === selectedId);
+  const topic = topics.find((tp) => tp.id === selectedId);
+
+  const levelLabel: Record<string, string> = {
+    beginner: t.common.level_beginner,
+    intermediate: t.common.level_intermediate,
+    advanced: t.common.level_advanced,
+  };
 
   return (
     <div>
       <div className="flex items-center gap-2 mb-6">
         <BookOpen size={22} className="text-violet-400" />
-        <h1 className="text-2xl font-bold text-white">주제별 학습</h1>
+        <h1 className="text-2xl font-bold text-white">{t.learning.title}</h1>
       </div>
 
       <div className="flex flex-col md:flex-row gap-6">
-        {/* Sidebar — 모바일: 토픽 선택 시 숨김 */}
+        {/* Sidebar */}
         <div className={`md:w-64 shrink-0 space-y-2 ${selectedId ? "hidden md:block" : "block"}`}>
-          <p className="text-xs text-slate-500 uppercase tracking-wider mb-3 px-1">학습 토픽</p>
-          {topics.map((t) => (
+          <p className="text-xs text-slate-500 uppercase tracking-wider mb-3 px-1">
+            {t.learning.topics_sidebar}
+          </p>
+          {topics.map((tp) => (
             <button
-              key={t.id}
-              onClick={() => setSelectedId(t.id)}
+              key={tp.id}
+              onClick={() => setSelectedId(tp.id)}
               className={`w-full text-left px-4 py-3 rounded-lg border transition-all ${
-                selectedId === t.id
+                selectedId === tp.id
                   ? "bg-violet-900/40 border-violet-600 text-white"
                   : "bg-slate-900/30 border-slate-800 text-slate-400 hover:border-slate-600 hover:text-white"
               }`}
             >
-              <div className="text-sm font-medium">{t.title}</div>
-              <div className={`text-xs mt-1 inline-block px-1.5 py-0.5 rounded border ${levelColor[t.level]}`}>
-                {levelLabel[t.level]}
+              <div className="text-sm font-medium">{tp.title}</div>
+              <div className={`text-xs mt-1 inline-block px-1.5 py-0.5 rounded border ${levelColor[tp.level]}`}>
+                {levelLabel[tp.level]}
               </div>
             </button>
           ))}
@@ -86,13 +90,12 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
         {/* Content */}
         {topic && (
           <div className="flex-1 min-w-0">
-            {/* 모바일 뒤로가기 */}
             <button
               onClick={() => setSelectedId(null)}
               className="md:hidden flex items-center gap-1.5 text-sm text-slate-400 hover:text-white mb-4 transition-colors"
             >
               <ArrowLeft size={16} />
-              토픽 목록
+              {t.learning.back_to_topics}
             </button>
             <div className="p-5 sm:p-6 rounded-xl border border-slate-800 bg-slate-900/30">
               <div className="flex items-start justify-between gap-4 mb-4">
@@ -108,17 +111,18 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
                 {topic.tags.map((tag) => <TagBadge key={tag} tag={tag} />)}
               </div>
               <div className="space-y-3">
-                <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">학습 자료</h3>
+                <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">
+                  {t.learning.resources_heading}
+                </h3>
                 {topic.resources.map((r, i) => <ResourceCard key={i} r={r} />)}
               </div>
             </div>
           </div>
         )}
 
-        {/* 모바일: 아무것도 선택 안 됐을 때 안내 */}
         {!selectedId && (
           <div className="hidden md:flex flex-1 items-center justify-center h-64 text-slate-500 border border-slate-800 rounded-xl">
-            왼쪽에서 토픽을 선택하세요
+            {t.learning.select_topic}
           </div>
         )}
       </div>
