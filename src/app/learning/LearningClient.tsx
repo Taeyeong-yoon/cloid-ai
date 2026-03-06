@@ -22,9 +22,14 @@ function isYouTubeUrl(url: string) {
   return /youtube\.com|youtu\.be/.test(url);
 }
 
+function isAnthropicUrl(url: string) {
+  return /anthropic\.com|docs\.anthropic\.com/.test(url);
+}
+
 function ResourceCard({ r }: { r: LearningResource }) {
   const Icon = resourceIcon[r.type];
   const isYT = r.url && isYouTubeUrl(r.url);
+  const isAnthropic = r.url && !isYT && isAnthropicUrl(r.url);
   return (
     <div className="p-4 rounded-lg border border-slate-800 bg-slate-900/40">
       <div className="flex items-start gap-3">
@@ -45,9 +50,22 @@ function ResourceCard({ r }: { r: LearningResource }) {
                   </svg>
                   YouTube
                 </a>
+              ) : isAnthropic ? (
+                <a
+                  href={r.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-[#D97706] hover:bg-[#B45309] text-white transition-colors shrink-0"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3">
+                    <path d="M13.827 3.52h3.603L24 20h-3.603l-6.57-16.48zm-7.258 0h3.767L16.906 20h-3.674l-1.343-3.461H5.017L3.674 20H0L6.569 3.52zm4.132 9.959L8.453 7.687 6.205 13.48H10.7z"/>
+                  </svg>
+                  Claude 공식문서
+                </a>
               ) : (
-                <a href={r.url} target="_blank" rel="noreferrer" className="text-slate-500 hover:text-violet-400">
-                  <ExternalLink size={12} />
+                <a href={r.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold border border-slate-600 hover:border-violet-500 text-slate-400 hover:text-violet-400 transition-colors shrink-0">
+                  <ExternalLink size={10} />
+                  링크
                 </a>
               )
             )}
