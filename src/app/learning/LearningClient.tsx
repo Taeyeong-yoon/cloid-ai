@@ -18,8 +18,13 @@ const resourceIcon = {
   practice: Terminal,
 };
 
+function isYouTubeUrl(url: string) {
+  return /youtube\.com|youtu\.be/.test(url);
+}
+
 function ResourceCard({ r }: { r: LearningResource }) {
   const Icon = resourceIcon[r.type];
+  const isYT = r.url && isYouTubeUrl(r.url);
   return (
     <div className="p-4 rounded-lg border border-slate-800 bg-slate-900/40">
       <div className="flex items-start gap-3">
@@ -28,9 +33,23 @@ function ResourceCard({ r }: { r: LearningResource }) {
           <div className="flex items-center gap-2 mb-1">
             <span className="font-medium text-white text-sm">{r.title}</span>
             {r.url && (
-              <a href={r.url} target="_blank" rel="noreferrer" className="text-slate-500 hover:text-violet-400">
-                <ExternalLink size={12} />
-              </a>
+              isYT ? (
+                <a
+                  href={r.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-red-600 hover:bg-red-500 text-white transition-colors shrink-0"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  YouTube
+                </a>
+              ) : (
+                <a href={r.url} target="_blank" rel="noreferrer" className="text-slate-500 hover:text-violet-400">
+                  <ExternalLink size={12} />
+                </a>
+              )
             )}
           </div>
           <p className="text-xs text-slate-400 mb-2">{r.description}</p>
