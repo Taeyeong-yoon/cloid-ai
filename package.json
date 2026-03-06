@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "radar:update": "tsx scripts/update_radar.ts",
-    "learning:update": "tsx scripts/update_learning.ts"
+    "learning:update": "tsx scripts/update_learning.ts",
+    "weekly:content": "tsx scripts/weekly_content.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
