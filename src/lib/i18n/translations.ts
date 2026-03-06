@@ -44,6 +44,8 @@ export const translations = {
       quick_q2: "What is an MCP server?",
       quick_q3: "Share prompt engineering tips",
       quick_q4: "How to build an AI agent",
+      ai_tools_heading: "Quick Access to AI Tools",
+      learning_section_heading: "Learning & Practice",
     },
     radar: {
       title: "AI Trend Radar",
@@ -73,6 +75,8 @@ export const translations = {
       signup: "Sign Up",
       no_account: "Don't have an account?",
       have_account: "Already have an account?",
+      login_required: "Sign in to access Learning, Skills, Labs, and more.",
+      continue_with_google: "Continue with Google",
     },
     account: {
       joined: "Joined",
@@ -129,6 +133,8 @@ export const translations = {
       quick_q2: "MCP 서버란 무엇인가요?",
       quick_q3: "프롬프트 엔지니어링 팁 알려줘",
       quick_q4: "AI 에이전트 만드는 법",
+      ai_tools_heading: "주요 AI 도구 바로가기",
+      learning_section_heading: "학습 & 실습",
     },
     radar: {
       title: "AI 트렌드 레이더",
@@ -158,6 +164,8 @@ export const translations = {
       signup: "회원가입",
       no_account: "계정이 없으신가요?",
       have_account: "이미 계정이 있으신가요?",
+      login_required: "학습, 스킬, 실습 기능을 이용하려면 로그인이 필요합니다.",
+      continue_with_google: "구글로 계속하기",
     },
     account: {
       joined: "가입일",

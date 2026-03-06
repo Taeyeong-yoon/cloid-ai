@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
+    <html lang="en">
       <body className="min-h-screen bg-[#0f1117] text-slate-200">
         <Providers>
           <Nav />

@@ -1,9 +1,11 @@
 "use client";
 
-import Link from "next/link";
+import { useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { BookOpen, Zap, FlaskConical, ArrowRight, TrendingUp, ExternalLink } from "lucide-react";
 import AskAI from "@/components/AskAI";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
+import { useAuth } from "@/lib/auth/AuthContext";
 
 // 주요 AI 도구 목록 (바로가기)
 const AI_TOOLS = [
@@ -47,7 +49,7 @@ const AI_TOOLS = [
     name: "Cursor",
     url: "https://cursor.com",
     bg: "bg-[#1a1a1a]",
-    desc: "AI 코드 에디터",
+    desc: "AI Code Editor",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5">
         <polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>
@@ -58,7 +60,7 @@ const AI_TOOLS = [
     name: "Perplexity",
     url: "https://perplexity.ai",
     bg: "bg-[#20808d]",
-    desc: "AI 검색",
+    desc: "AI Search",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
         <path d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z" opacity=".2"/><path d="M12 8v4l3 3"/>
@@ -69,7 +71,7 @@ const AI_TOOLS = [
     name: "Midjourney",
     url: "https://midjourney.com",
     bg: "bg-[#000]",
-    desc: "AI 이미지",
+    desc: "AI Image",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
         <path d="M12 2L2 19h20L12 2zm0 4l7 13H5l7-13z"/>
@@ -80,7 +82,7 @@ const AI_TOOLS = [
     name: "Runway",
     url: "https://runwayml.com",
     bg: "bg-[#3b0764]",
-    desc: "AI 영상",
+    desc: "AI Video",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
         <path d="M8 5v14l11-7z"/>
@@ -91,7 +93,7 @@ const AI_TOOLS = [
     name: "Notion AI",
     url: "https://www.notion.so",
     bg: "bg-[#1a1a1a]",
-    desc: "AI 노트",
+    desc: "AI Notes",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
         <path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.934zm14.337.745c.093.42 0 .84-.42.887l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.14c-.093-.514.28-.887.747-.933z"/>
@@ -102,6 +104,24 @@ const AI_TOOLS = [
 
 export default function HomeClient() {
   const { t } = useTranslation();
+  const { user, openLoginModal } = useAuth();
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    if (searchParams.get("auth") === "required") {
+      openLoginModal();
+    }
+  }, [searchParams, openLoginModal]);
+
+  function handleSectionClick(e: React.MouseEvent, href: string) {
+    e.preventDefault();
+    if (!user) {
+      openLoginModal();
+    } else {
+      router.push(href);
+    }
+  }
 
   const sections = [
     { href: "/learning", label: t.home.learning_label, icon: BookOpen, desc: t.home.learning_desc, color: "text-blue-400", border: "hover:border-blue-700" },
@@ -130,7 +150,7 @@ export default function HomeClient() {
       <section>
         <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
           <ExternalLink size={14} />
-          주요 AI 도구 바로가기
+          {t.home.ai_tools_heading}
         </h2>
         <div className="grid grid-cols-4 sm:grid-cols-8 gap-2">
           {AI_TOOLS.map((tool) => (
@@ -159,14 +179,15 @@ export default function HomeClient() {
       {/* 학습 섹션 링크 */}
       <section>
         <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3">
-          학습 & 실습
+          {t.home.learning_section_heading}
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {sections.map(({ href, label, icon: Icon, desc, color, border }) => (
-            <Link
+            <a
               key={href}
               href={href}
-              className={`group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 ${border} hover:bg-slate-800/50 transition-all`}
+              onClick={(e) => handleSectionClick(e, href)}
+              className={`group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 ${border} hover:bg-slate-800/50 transition-all cursor-pointer`}
             >
               <Icon size={20} className={color} />
               <div>
@@ -176,7 +197,7 @@ export default function HomeClient() {
                 <div className="text-xs text-slate-500 mt-0.5">{desc}</div>
               </div>
               <ArrowRight size={14} className="text-slate-600 group-hover:text-slate-400 mt-auto self-end transition-colors" />
-            </Link>
+            </a>
           ))}
         </div>
       </section>

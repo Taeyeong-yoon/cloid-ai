@@ -2,41 +2,58 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Brain, Radar, BookOpen, Zap, FlaskConical, User, LogIn, Menu, X } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
+import { useAuth } from "@/lib/auth/AuthContext";
 import LangSwitcher from "./LangSwitcher";
 
 export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
+  const { user, openLoginModal } = useAuth();
+  const router = useRouter();
+
+  const authed = isLoggedIn || !!user;
 
   const links = [
-    { href: "/", label: t.nav.home, icon: Brain },
-    { href: "/radar", label: t.nav.radar, icon: Radar },
-    { href: "/learning", label: t.nav.learning, icon: BookOpen },
-    { href: "/skills", label: t.nav.skills, icon: Zap },
-    { href: "/labs", label: t.nav.labs, icon: FlaskConical },
+    { href: "/", label: t.nav.home, icon: Brain, guard: false },
+    { href: "/radar", label: t.nav.radar, icon: Radar, guard: true },
+    { href: "/learning", label: t.nav.learning, icon: BookOpen, guard: true },
+    { href: "/skills", label: t.nav.skills, icon: Zap, guard: true },
+    { href: "/labs", label: t.nav.labs, icon: FlaskConical, guard: true },
   ];
+
+  function handleClick(e: React.MouseEvent, href: string, guard: boolean) {
+    e.preventDefault();
+    setOpen(false);
+    if (guard && !authed) {
+      openLoginModal();
+    } else {
+      router.push(href);
+    }
+  }
 
   return (
     <>
       {/* ── 데스크톱 (md 이상) ── */}
       <div className="hidden md:flex items-center gap-1">
         <nav className="flex items-center gap-1">
-          {links.map(({ href, label, icon: Icon }) => (
-            <Link
+          {links.map(({ href, label, icon: Icon, guard }) => (
+            <a
               key={href}
               href={href}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+              onClick={(e) => handleClick(e, href, guard)}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
             >
               <Icon size={14} />
               {label}
-            </Link>
+            </a>
           ))}
         </nav>
 
         <div className="ml-2 pl-2 border-l border-slate-700 flex items-center gap-2">
-          {isLoggedIn ? (
+          {authed ? (
             <Link
               href="/account"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm text-violet-400 hover:text-violet-300 hover:bg-slate-800 transition-colors"
@@ -45,16 +62,14 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
               {t.common.my_account}
             </Link>
           ) : (
-            <Link
-              href="/login"
+            <button
+              onClick={openLoginModal}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
             >
               <LogIn size={14} />
               {t.common.login}
-            </Link>
+            </button>
           )}
-
-          {/* 언어 선택 드롭다운 */}
           <LangSwitcher />
         </div>
       </div>
@@ -75,19 +90,19 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
       {open && (
         <div className="md:hidden absolute top-14 left-0 right-0 bg-[#0f1117] border-b border-slate-800 shadow-xl z-40">
           <nav className="flex flex-col p-3 gap-1">
-            {links.map(({ href, label, icon: Icon }) => (
-              <Link
+            {links.map(({ href, label, icon: Icon, guard }) => (
+              <a
                 key={href}
                 href={href}
-                onClick={() => setOpen(false)}
-                className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors text-base"
+                onClick={(e) => handleClick(e, href, guard)}
+                className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors text-base cursor-pointer"
               >
                 <Icon size={18} />
                 {label}
-              </Link>
+              </a>
             ))}
             <div className="border-t border-slate-800 mt-1 pt-1">
-              {isLoggedIn ? (
+              {authed ? (
                 <Link
                   href="/account"
                   onClick={() => setOpen(false)}
@@ -97,14 +112,13 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
                   {t.common.my_account}
                 </Link>
               ) : (
-                <Link
-                  href="/login"
-                  onClick={() => setOpen(false)}
-                  className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors text-base"
+                <button
+                  onClick={() => { setOpen(false); openLoginModal(); }}
+                  className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors text-base"
                 >
                   <LogIn size={18} />
                   {t.common.login}
-                </Link>
+                </button>
               )}
             </div>
           </nav>
