@@ -7,10 +7,13 @@ const learningDir = path.join(process.cwd(), 'content/learning');
 export function getAllTopics(): LearningTopic[] {
   try {
     const files = fs.readdirSync(learningDir).filter((f) => f.endsWith('.json'));
-    return files.map((file) => {
-      const raw = fs.readFileSync(path.join(learningDir, file), 'utf-8');
-      return JSON.parse(raw) as LearningTopic;
-    });
+    const levelOrder: Record<string, number> = { beginner: 0, intermediate: 1, advanced: 2 };
+    return files
+      .map((file) => {
+        const raw = fs.readFileSync(path.join(learningDir, file), 'utf-8');
+        return JSON.parse(raw) as LearningTopic;
+      })
+      .sort((a, b) => (levelOrder[a.level] ?? 1) - (levelOrder[b.level] ?? 1));
   } catch {
     return [];
   }

@@ -236,15 +236,19 @@ export default function SkillsClient({ skills }: { skills: Skill[] }) {
     advanced: skills.filter((s) => s.difficulty === "advanced").length,
   }), [skills]);
 
-  const filtered = useMemo(() => skills.filter((s) => {
-    const matchD = difficulty === "all" || s.difficulty === difficulty;
-    const matchQ =
-      !query ||
-      s.title.toLowerCase().includes(query.toLowerCase()) ||
-      s.summary.toLowerCase().includes(query.toLowerCase()) ||
-      s.tags.some((tag) => tag.toLowerCase().includes(query.toLowerCase()));
-    return matchD && matchQ;
-  }), [skills, difficulty, query]);
+  const DIFF_ORDER: Record<string, number> = { beginner: 0, intermediate: 1, advanced: 2 };
+  const filtered = useMemo(() => skills
+    .filter((s) => {
+      const matchD = difficulty === "all" || s.difficulty === difficulty;
+      const matchQ =
+        !query ||
+        s.title.toLowerCase().includes(query.toLowerCase()) ||
+        s.summary.toLowerCase().includes(query.toLowerCase()) ||
+        s.tags.some((tag) => tag.toLowerCase().includes(query.toLowerCase()));
+      return matchD && matchQ;
+    })
+    .sort((a, b) => (DIFF_ORDER[a.difficulty] ?? 1) - (DIFF_ORDER[b.difficulty] ?? 1)),
+  [skills, difficulty, query]);
 
   function handleSelect(skill: Skill) {
     setSelected((prev) => (prev?.slug === skill.slug ? null : skill));
