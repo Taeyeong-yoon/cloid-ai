@@ -1,0 +1,43 @@
+{
+  "id": "lab-claude-code-component",
+  "title": "Claude Code로 컴포넌트 자동 생성",
+  "description": "Next.js 프로젝트에서 Claude Code를 사용해 UI 컴포넌트를 자동으로 생성하고 테스트하는 실습",
+  "difficulty": "beginner",
+  "duration": "30분",
+  "tags": ["Claude Code", "Next.js", "TypeScript", "Tailwind"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "Claude Code 설치",
+      "instruction": "터미널에서 Claude Code를 전역으로 설치합니다.",
+      "prompt": "",
+      "expected_result": "claude 명령어가 전역에서 실행 가능해집니다.",
+      "tip": "Node.js 18 이상이 필요합니다."
+    },
+    {
+      "step": 2,
+      "title": "프로젝트 디렉토리에서 claude 실행",
+      "instruction": "Next.js 프로젝트 루트에서 claude 명령어를 실행하고 컴포넌트 생성을 요청합니다.",
+      "prompt": "Create a responsive card component with TypeScript and Tailwind CSS. It should accept title, description, and an optional imageUrl prop.",
+      "expected_result": "components/ 폴더에 Card.tsx 파일이 생성됩니다.",
+      "tip": "프롬프트가 구체적일수록 더 정확한 컴포넌트가 생성됩니다."
+    },
+    {
+      "step": 3,
+      "title": "생성된 컴포넌트 확인 및 수정",
+      "instruction": "생성된 Card.tsx를 열어 확인하고, 필요하면 Claude에게 수정을 요청합니다.",
+      "prompt": "Add hover animation to the card component and make the image section optional with a placeholder.",
+      "expected_result": "호버 애니메이션이 추가된 개선된 Card 컴포넌트",
+      "tip": "Claude Code는 기존 파일을 읽고 맥락을 이해한 상태에서 수정합니다."
+    }
+  ],
+  "challenge": "생성된 Card 컴포넌트를 사용해 3개의 카드를 보여주는 CardGrid 컴포넌트도 만들어보세요.",
+  "related_skills": ["claude-code-basics"],
+  "videos": [
+    {
+      "title": "Claude Code 컴포넌트 자동 생성 실습",
+      "search_keyword": "Claude Code Next.js 컴포넌트 자동 생성 실습 한국어",
+      "url": ""
+    }
+  ]
+}

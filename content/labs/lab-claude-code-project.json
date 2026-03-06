@@ -1,0 +1,43 @@
+{
+  "id": "lab-claude-code-project",
+  "title": "Claude Code로 웹사이트 만들기",
+  "description": "Claude Code 에이전트 모드로 처음부터 끝까지 Next.js 웹사이트를 자율 구현하는 고급 실습",
+  "difficulty": "advanced",
+  "duration": "1시간",
+  "tags": ["Claude Code", "Next.js", "에이전트", "풀스택"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "CLAUDE.md 작성으로 프로젝트 컨텍스트 설정",
+      "instruction": "프로젝트 루트에 CLAUDE.md를 작성해 Claude Code가 참조할 컨텍스트를 설정합니다.",
+      "prompt": "이 Next.js 15 프로젝트의 CLAUDE.md를 작성해줘. 스택: TypeScript, Tailwind CSS, Supabase. 규칙: 함수형 컴포넌트만 사용, 'use client' 최소화, 컴포넌트 파일은 PascalCase.",
+      "expected_result": "프로젝트 컨텍스트가 담긴 CLAUDE.md 파일",
+      "tip": "CLAUDE.md가 있으면 Claude Code가 매번 같은 맥락에서 작업합니다."
+    },
+    {
+      "step": 2,
+      "title": "에이전트 모드로 기능 일괄 구현",
+      "instruction": "Claude Code에게 전체 기능 구현을 한 번의 요청으로 위임합니다.",
+      "prompt": "포트폴리오 웹사이트를 만들어줘. 필요한 것: Hero 섹션(이름, 직함, 소개), About 섹션, 프로젝트 카드 그리드(3개), 연락처 폼(Formspree 연동). 다크모드 지원. 반응형. 애니메이션은 Framer Motion 사용.",
+      "expected_result": "완전히 구현된 포트폴리오 사이트 파일들",
+      "tip": "구체적인 요구사항을 한 번에 전달할수록 에이전트가 더 잘 구현합니다."
+    },
+    {
+      "step": 3,
+      "title": "코드 리뷰 및 개선 요청",
+      "instruction": "생성된 코드를 Claude Code에게 리뷰시키고 개선점을 적용합니다.",
+      "prompt": "방금 생성된 코드를 검토해줘. 성능 최적화(이미지 최적화, lazy loading), 접근성(ARIA 레이블), SEO(메타태그) 관점에서 개선이 필요한 부분을 찾아서 직접 수정해줘.",
+      "expected_result": "성능, 접근성, SEO가 개선된 최종 포트폴리오 사이트",
+      "tip": "리뷰 후 직접 수정하게 하면 수동으로 작업할 필요가 없습니다."
+    }
+  ],
+  "challenge": "Supabase를 연동해서 방문자가 프로젝트에 좋아요를 누를 수 있는 기능을 추가해보세요.",
+  "related_skills": ["claude-code-basics", "mcp-server-setup"],
+  "videos": [
+    {
+      "title": "Claude Code로 웹사이트 처음부터 만들기",
+      "search_keyword": "Claude Code 웹사이트 Next.js 에이전트 모드 실전 한국어 2025",
+      "url": ""
+    }
+  ]
+}

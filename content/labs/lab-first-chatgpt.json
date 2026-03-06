@@ -1,0 +1,43 @@
+{
+  "id": "lab-first-chatgpt",
+  "title": "첫 ChatGPT 대화: 자기소개서 만들기",
+  "description": "ChatGPT와의 첫 대화로 나만의 자기소개서를 단계별로 완성하는 입문 실습",
+  "difficulty": "beginner",
+  "duration": "10분",
+  "tags": ["ChatGPT", "자기소개서", "글쓰기", "프롬프트"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "ChatGPT에 접속하고 역할 부여",
+      "instruction": "chat.openai.com에 접속한 뒤, AI에게 전문 커리어 컨설턴트 역할을 부여합니다.",
+      "prompt": "당신은 10년 경력의 커리어 컨설턴트입니다. 제 자기소개서를 함께 작성해주세요. 먼저 제 직무와 경력을 물어봐 주세요.",
+      "expected_result": "AI가 직무, 경력, 강점 등 필요한 정보를 질문합니다.",
+      "tip": "역할을 먼저 부여하면 더 전문적인 답변을 받을 수 있습니다."
+    },
+    {
+      "step": 2,
+      "title": "나의 정보 제공하기",
+      "instruction": "AI가 질문한 내용에 솔직하게 답변합니다. 지원 직무, 주요 경험, 강점 3가지를 포함하세요.",
+      "prompt": "지원 직무: [직무명], 주요 경험: [경험 요약], 강점: [강점1], [강점2], [강점3]",
+      "expected_result": "AI가 정보를 바탕으로 초안을 작성합니다.",
+      "tip": "최대한 구체적인 수치나 결과를 포함하면 자기소개서 품질이 높아집니다."
+    },
+    {
+      "step": 3,
+      "title": "피드백으로 다듬기",
+      "instruction": "생성된 초안을 읽고, 마음에 들지 않는 부분을 구체적으로 요청해 수정합니다.",
+      "prompt": "첫 문단을 더 임팩트 있게 바꿔줘. 숫자나 성과를 포함해서 시작하면 좋겠어.",
+      "expected_result": "수정된 자기소개서 완성본",
+      "tip": "한 번에 모든 걸 바꾸려 하지 말고, 단락 단위로 피드백하세요."
+    }
+  ],
+  "challenge": "완성된 자기소개서를 영어로도 번역해달라고 요청해보세요.",
+  "related_skills": ["prompt-basics", "ai-writing-assistant"],
+  "videos": [
+    {
+      "title": "ChatGPT로 자기소개서 쓰기 실전",
+      "search_keyword": "ChatGPT 자기소개서 쓰기 실전 한국어 2025",
+      "url": ""
+    }
+  ]
+}

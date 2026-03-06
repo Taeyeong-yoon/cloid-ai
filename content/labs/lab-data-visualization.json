@@ -1,0 +1,43 @@
+{
+  "id": "lab-data-visualization",
+  "title": "AI로 데이터 시각화하기",
+  "description": "CSV 데이터를 Claude에게 붙여넣고, Chart.js를 사용한 인터랙티브 차트를 자동 생성하는 실습",
+  "difficulty": "intermediate",
+  "duration": "30분",
+  "tags": ["데이터", "Chart.js", "시각화", "Claude"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "데이터 붙여넣기와 차트 요청",
+      "instruction": "시각화할 CSV 데이터를 Claude에게 붙여넣고 차트 생성을 요청합니다.",
+      "prompt": "아래 월별 매출 데이터를 Chart.js를 사용한 HTML 파일로 만들어줘. 바 차트와 라인 차트를 탭으로 전환할 수 있게 해줘.\n\n월,매출(만원)\n1월,450\n2월,380\n3월,520\n4월,610\n5월,580\n6월,720",
+      "expected_result": "바 차트와 라인 차트 탭 전환이 가능한 인터랙티브 HTML 파일",
+      "tip": "Chart.js CDN을 사용하면 설치 없이 바로 사용할 수 있습니다."
+    },
+    {
+      "step": 2,
+      "title": "여러 데이터셋 비교 차트",
+      "instruction": "2개 이상의 데이터셋을 하나의 차트에서 비교하도록 요청합니다.",
+      "prompt": "이전 해(2023년) 데이터도 추가해서 올해와 비교하는 차트로 만들어줘. 색상으로 구분하고, 범례도 표시해줘.\n\n2023년: 380, 310, 420, 490, 460, 580",
+      "expected_result": "2024년과 2023년 매출을 비교하는 그룹 바 차트",
+      "tip": "datasets 배열에 데이터를 추가하면 여러 시리즈를 비교할 수 있습니다."
+    },
+    {
+      "step": 3,
+      "title": "인터랙티브 기능 추가",
+      "instruction": "차트에 툴팁 커스터마이징과 데이터 필터링 기능을 추가합니다.",
+      "prompt": "차트에 호버 시 전년 대비 증감률도 툴팁에 표시해줘. 그리고 클릭하면 해당 월 상세 정보를 아래에 표시하는 기능도 추가해줘.",
+      "expected_result": "증감률 툴팁과 클릭 상세 정보가 포함된 완성형 대시보드",
+      "tip": "Chart.js의 onClick 콜백으로 클릭된 데이터 포인트를 감지할 수 있습니다."
+    }
+  ],
+  "challenge": "실제 본인의 가계부 데이터나 업무 데이터를 붙여넣고 의미 있는 인사이트를 도출하는 대시보드를 만들어보세요.",
+  "related_skills": ["ai-data-analysis", "ai-code-generation"],
+  "videos": [
+    {
+      "title": "AI로 데이터 시각화 대시보드 만들기",
+      "search_keyword": "AI Chart.js 데이터 시각화 대시보드 만들기 한국어 2025",
+      "url": ""
+    }
+  ]
+}

@@ -27,6 +27,34 @@ export interface LearningTopic {
   resources: LearningResource[];
 }
 
+export interface LabStep {
+  step: number;
+  title: string;
+  instruction: string;
+  prompt?: string;
+  expected_result?: string;
+  tip?: string;
+}
+
+export interface LabVideo {
+  title: string;
+  search_keyword: string;
+  url: string;
+}
+
+export interface LabItem {
+  id: string;
+  title: string;
+  description: string;
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  duration: string;
+  tags: string[];
+  steps: LabStep[];
+  challenge?: string;
+  related_skills?: string[];
+  videos?: LabVideo[];
+}
+
 export interface Skill {
   slug: string;
   title: string;

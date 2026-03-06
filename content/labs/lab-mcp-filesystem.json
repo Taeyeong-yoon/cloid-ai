@@ -1,0 +1,43 @@
+{
+  "id": "lab-mcp-filesystem",
+  "title": "MCP Filesystem 서버 연결",
+  "description": "로컬 파일시스템에 접근하는 MCP 서버를 Claude Desktop에 연결하고 파일 읽기/쓰기를 실습",
+  "difficulty": "intermediate",
+  "duration": "30분",
+  "tags": ["MCP", "Claude Desktop", "파일시스템"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "Claude Desktop 앱 설치",
+      "instruction": "Anthropic 공식 사이트에서 Claude Desktop을 다운로드하여 설치합니다.",
+      "prompt": "",
+      "expected_result": "Claude Desktop 앱이 설치되어 실행됩니다.",
+      "tip": "claude.ai/download 에서 다운로드할 수 있습니다."
+    },
+    {
+      "step": 2,
+      "title": "claude_desktop_config.json에 MCP 서버 추가",
+      "instruction": "설정 파일에 filesystem MCP 서버를 추가합니다. macOS: ~/Library/Application Support/Claude/claude_desktop_config.json, Windows: %APPDATA%\\Claude\\claude_desktop_config.json",
+      "prompt": "",
+      "expected_result": "config 파일에 mcpServers 항목이 추가됩니다.",
+      "tip": "경로에 접근하려는 폴더를 args 배열에 추가하세요."
+    },
+    {
+      "step": 3,
+      "title": "Claude에서 연결 확인",
+      "instruction": "Claude Desktop을 재시작하고 대화창에서 파일 목록을 요청해 연결을 확인합니다.",
+      "prompt": "내 Desktop 폴더에 있는 파일 목록을 보여줘",
+      "expected_result": "Claude가 실제 파일 목록을 답변합니다.",
+      "tip": "MCP 아이콘이 입력창에 나타나면 서버가 정상 연결된 것입니다."
+    }
+  ],
+  "challenge": "MCP를 통해 Claude에게 새 텍스트 파일을 만들게 하고, 그 파일에 내용을 추가해보세요.",
+  "related_skills": ["mcp-server-setup"],
+  "videos": [
+    {
+      "title": "MCP 파일시스템 서버 연결 실습",
+      "search_keyword": "MCP filesystem 서버 Claude Desktop 연결 실습 한국어",
+      "url": ""
+    }
+  ]
+}

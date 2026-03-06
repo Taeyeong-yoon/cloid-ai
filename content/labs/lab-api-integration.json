@@ -1,0 +1,43 @@
+{
+  "id": "lab-api-integration",
+  "title": "AI API 연동 실습",
+  "description": "OpenAI, Claude, Gemini API를 Next.js에 연동하고 라우트 핸들러를 구현하는 고급 실습",
+  "difficulty": "advanced",
+  "duration": "1시간",
+  "tags": ["API", "Next.js", "OpenAI", "Claude", "Gemini"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "API 라우트 핸들러 구조 설계",
+      "instruction": "여러 AI API를 추상화하는 Next.js 라우트 핸들러를 설계합니다.",
+      "prompt": "Next.js 15 App Router에서 여러 AI 프로바이더(OpenAI, Anthropic, Gemini)를 하나의 API 인터페이스로 추상화하는 라우트 핸들러를 설계해줘. POST /api/chat에서 { provider, model, messages } 를 받아 각 API로 라우팅하는 구조.",
+      "expected_result": "AI API 추상화 레이어 설계안과 타입 정의",
+      "tip": "공통 인터페이스를 먼저 설계하면 프로바이더 추가/변경이 쉬워집니다."
+    },
+    {
+      "step": 2,
+      "title": "각 API 연동 구현",
+      "instruction": "설계한 구조에 맞춰 각 AI API 연동 코드를 구현합니다.",
+      "prompt": "위 설계를 바탕으로 실제 코드를 작성해줘. OpenAI는 gpt-4o-mini, Anthropic은 claude-haiku-4-5-20251001, Gemini는 gemini-2.0-flash를 기본 모델로 사용해. 각 API의 응답 형식을 통일된 { content, usage } 형태로 반환해줘.",
+      "expected_result": "3개 AI API가 통합된 /api/chat 라우트 핸들러",
+      "tip": "에러 핸들링을 각 프로바이더별로 구현해 원인을 명확히 파악할 수 있게 하세요."
+    },
+    {
+      "step": 3,
+      "title": "스트리밍과 토큰 사용량 추적",
+      "instruction": "스트리밍 응답과 토큰 사용량 로깅을 추가합니다.",
+      "prompt": "API 라우트에 스트리밍 지원을 추가해줘. ReadableStream을 사용하고, 응답 완료 시 사용된 토큰 수를 Supabase usage_logs 테이블에 기록하는 로직도 추가해줘.",
+      "expected_result": "스트리밍 지원 + 토큰 사용량 로깅이 완성된 API 라우트",
+      "tip": "스트리밍 중에는 토큰 카운트를 마지막 청크에서 받아 저장하세요."
+    }
+  ],
+  "challenge": "Rate limiting(분당 10회 제한)과 사용자별 API 키 관리 기능을 추가해보세요.",
+  "related_skills": ["ai-agent-building", "rag-implementation"],
+  "videos": [
+    {
+      "title": "Next.js AI API 연동 실전",
+      "search_keyword": "Next.js AI API 연동 OpenAI Claude Gemini 실전 한국어 2025",
+      "url": ""
+    }
+  ]
+}

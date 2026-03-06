@@ -1,0 +1,43 @@
+{
+  "id": "lab-image-prompt",
+  "title": "AI 이미지 프롬프트 실험실",
+  "description": "DALL-E 3 또는 Midjourney에서 같은 주제를 다양한 프롬프트로 실험하며 AI 이미지 생성 원리를 익히는 실습",
+  "difficulty": "beginner",
+  "duration": "30분",
+  "tags": ["DALL-E", "이미지 생성", "프롬프트", "Midjourney"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "기본 프롬프트로 시작",
+      "instruction": "ChatGPT 또는 DALL-E 3에 접속해 가장 단순한 프롬프트로 이미지를 생성합니다.",
+      "prompt": "A cat sitting on a window",
+      "expected_result": "평범한 고양이 이미지",
+      "tip": "먼저 단순 버전을 만들어야 비교 실험이 가능합니다."
+    },
+    {
+      "step": 2,
+      "title": "스타일과 세부 묘사 추가",
+      "instruction": "같은 주제에 아트 스타일, 조명, 분위기 등을 추가해 프롬프트를 강화합니다.",
+      "prompt": "A fluffy orange cat sitting on a rainy window sill, warm golden bokeh lighting, Studio Ghibli anime style, detailed fur texture, cozy and melancholic mood",
+      "expected_result": "지브리 스타일의 감성적인 고양이 이미지",
+      "tip": "스타일 키워드(Studio Ghibli, oil painting, photorealistic)가 결과물에 큰 영향을 줍니다."
+    },
+    {
+      "step": 3,
+      "title": "부정 프롬프트와 비율 설정",
+      "instruction": "원하지 않는 요소를 제외하고 이미지 비율을 지정해서 생성합니다.",
+      "prompt": "A fluffy orange cat on a window sill, Studio Ghibli style, warm lighting --ar 16:9 --no blurry, deformed, extra limbs",
+      "expected_result": "16:9 비율의 깔끔한 지브리 고양이 이미지",
+      "tip": "Midjourney는 --no 키워드로 제외 요소를 지정할 수 있습니다."
+    }
+  ],
+  "challenge": "동일한 주제를 5가지 다른 스타일(사진, 수채화, 픽셀 아트, 3D 렌더, 만화)로 만들어보세요.",
+  "related_skills": ["ai-image-creation", "prompt-basics"],
+  "videos": [
+    {
+      "title": "AI 이미지 프롬프트 완벽 가이드",
+      "search_keyword": "DALL-E Midjourney 이미지 프롬프트 작성법 한국어 2025",
+      "url": ""
+    }
+  ]
+}

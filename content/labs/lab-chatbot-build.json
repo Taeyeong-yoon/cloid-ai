@@ -1,0 +1,43 @@
+{
+  "id": "lab-chatbot-build",
+  "title": "나만의 AI 챗봇 만들기",
+  "description": "Claude API를 활용해 특정 페르소나를 가진 나만의 AI 챗봇을 HTML 단일 파일로 구현하는 실습",
+  "difficulty": "intermediate",
+  "duration": "1시간",
+  "tags": ["Claude API", "챗봇", "JavaScript", "API"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "시스템 프롬프트로 페르소나 설정",
+      "instruction": "만들고 싶은 챗봇의 성격과 역할을 먼저 정의합니다.",
+      "prompt": "나는 요리 전문가 챗봇을 만들고 싶어. 이름은 '셰프 AI'이고, 항상 친근하고 열정적으로 요리를 가르쳐줘. 재료와 분량을 물어보고 레시피를 단계별로 설명하는 챗봇이야. 이 챗봇의 시스템 프롬프트를 작성해줘.",
+      "expected_result": "챗봇 페르소나를 정의하는 시스템 프롬프트 텍스트",
+      "tip": "시스템 프롬프트가 챗봇의 성격과 행동 방식을 결정합니다."
+    },
+    {
+      "step": 2,
+      "title": "챗봇 UI와 API 연동 구현",
+      "instruction": "단일 HTML 파일로 챗봇 UI와 Claude API 연동을 구현합니다.",
+      "prompt": "Claude API를 사용하는 요리 챗봇 HTML 파일을 만들어줘. API 키를 입력하는 필드, 채팅 UI(말풍선 스타일), 메시지 입력창, 전송 버튼이 필요해. 시스템 프롬프트는 위에서 작성한 셰프 AI 페르소나를 사용해줘.",
+      "expected_result": "Claude API와 연동되는 완전한 챗봇 HTML 파일",
+      "tip": "보안을 위해 API 키를 코드에 직접 넣지 말고 입력 필드에서 받아야 합니다."
+    },
+    {
+      "step": 3,
+      "title": "대화 기록과 UX 개선",
+      "instruction": "대화 히스토리 유지와 사용자 경험을 개선합니다.",
+      "prompt": "챗봇에 대화 기록 초기화 버튼, 로딩 스피너, 그리고 마크다운 렌더링(레시피 목록이 보기 좋게 표시되도록)을 추가해줘.",
+      "expected_result": "대화 초기화, 로딩 상태, 마크다운 렌더링이 지원되는 완성형 챗봇",
+      "tip": "marked.js CDN을 사용하면 마크다운을 HTML로 쉽게 변환할 수 있습니다."
+    }
+  ],
+  "challenge": "챗봇에 이미지 첨부 기능을 추가해서 재료 사진을 보내면 레시피를 추천하는 기능을 구현해보세요.",
+  "related_skills": ["claude-prompt-patterns", "ai-code-generation"],
+  "videos": [
+    {
+      "title": "Claude API로 챗봇 만들기 실전",
+      "search_keyword": "Claude API 챗봇 만들기 JavaScript 한국어 2025",
+      "url": ""
+    }
+  ]
+}

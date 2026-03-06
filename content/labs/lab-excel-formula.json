@@ -1,0 +1,43 @@
+{
+  "id": "lab-excel-formula",
+  "title": "AI로 엑셀 수식 생성하기",
+  "description": "Claude에게 원하는 엑셀 기능을 설명하면 수식을 자동으로 생성하고 오류를 해결하는 실습",
+  "difficulty": "beginner",
+  "duration": "10분",
+  "tags": ["엑셀", "수식", "업무자동화", "Claude"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "원하는 기능을 말로 설명하기",
+      "instruction": "엑셀 수식을 몰라도 원하는 결과를 Claude에게 말로 설명합니다.",
+      "prompt": "엑셀에서 A2:A100 범위의 숫자들 중에서 B열의 값이 '완료'인 행만 골라서 합계를 구하는 수식을 만들어줘.",
+      "expected_result": "=SUMIF(B2:B100,\"완료\",A2:A100) 같은 수식과 설명",
+      "tip": "수식 이름을 몰라도 괜찮습니다. 원하는 결과만 설명하면 됩니다."
+    },
+    {
+      "step": 2,
+      "title": "복잡한 조건 수식 요청",
+      "instruction": "여러 조건이 있는 복잡한 계산을 요청합니다.",
+      "prompt": "A열은 날짜, B열은 카테고리, C열은 금액이야. 2024년 1월이고 카테고리가 '식비'인 행의 금액 합계를 구하는 수식 만들어줘.",
+      "expected_result": "SUMIFS 함수를 사용한 다중 조건 수식과 사용 방법 설명",
+      "tip": "날짜 조건은 SUMIFS에서 >=, <= 연산자를 사용합니다."
+    },
+    {
+      "step": 3,
+      "title": "수식 오류 해결하기",
+      "instruction": "기존에 사용하던 수식에서 오류가 났을 때 Claude에게 붙여넣고 해결을 요청합니다.",
+      "prompt": "이 수식에서 #VALUE! 오류가 나는데 이유가 뭐야? =VLOOKUP(A2,Sheet2!B:C,2,FALSE) 그리고 수정해줘.",
+      "expected_result": "오류 원인 설명과 수정된 수식",
+      "tip": "오류 메시지와 함께 수식 전체를 붙여넣어 주세요."
+    }
+  ],
+  "challenge": "매달 지출 내역에서 카테고리별 합계와 비율을 자동으로 계산하는 수식 세트를 만들어보세요.",
+  "related_skills": ["ai-excel-automation"],
+  "videos": [
+    {
+      "title": "AI로 엑셀 수식 자동 생성",
+      "search_keyword": "AI 엑셀 수식 자동 생성 ChatGPT Claude 한국어 2025",
+      "url": ""
+    }
+  ]
+}

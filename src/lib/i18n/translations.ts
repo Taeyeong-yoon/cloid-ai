@@ -63,48 +63,8 @@ export const translations = {
       select_skill: "Select a skill on the left",
     },
     labs: {
-      title: "Today's Lab",
-      desc: "3 hands-on AI exercises. Copy the command and start right away.",
-      command_label: "Run Command",
-      steps_label: "Steps",
-      items: [
-        {
-          title: "Auto-generate components with Claude Code",
-          description:
-            "Practice automatically generating and testing UI components using Claude Code in a Next.js project.",
-          category: "Claude Code",
-          difficulty: "beginner",
-          steps: [
-            "Install Claude Code: npm install -g @anthropic-ai/claude-code",
-            "Run the claude command in your project directory",
-            "Review and modify the generated component",
-          ],
-        },
-        {
-          title: "Connect MCP Filesystem Server",
-          description:
-            "Connect an MCP server that accesses the local filesystem to Claude Desktop and practice reading/writing files.",
-          category: "MCP",
-          difficulty: "intermediate",
-          steps: [
-            "Install the Claude Desktop app",
-            "Add MCP server to claude_desktop_config.json",
-            "Verify connection by asking Claude 'Show me the file list'",
-          ],
-        },
-        {
-          title: "Implement Gemini API Streaming",
-          description:
-            "Practice implementing real-time streaming responses using the Gemini 2.0 Flash API in Next.js.",
-          category: "Gemini",
-          difficulty: "intermediate",
-          steps: [
-            "Get an API key from Google AI Studio",
-            "Set GEMINI_API_KEY in your environment variables",
-            "Create app/api/stream/route.ts and implement streaming",
-          ],
-        },
-      ],
+      title: "AI Labs",
+      desc: "Hands-on AI exercises with step-by-step guides and copy-ready prompts.",
     },
     auth: {
       email: "Email",
@@ -188,48 +148,8 @@ export const translations = {
       select_skill: "왼쪽에서 스킬을 선택하세요",
     },
     labs: {
-      title: "오늘의 실습",
-      desc: "직접 실행해보는 AI 실습 3선. 커맨드를 복사해서 바로 시작하세요.",
-      command_label: "실행 커맨드",
-      steps_label: "실습 단계",
-      items: [
-        {
-          title: "Claude Code로 컴포넌트 자동 생성",
-          description:
-            "Next.js 프로젝트에서 Claude Code를 사용해 UI 컴포넌트를 자동으로 생성하고 테스트하는 실습",
-          category: "Claude Code",
-          difficulty: "beginner",
-          steps: [
-            "Claude Code 설치: npm install -g @anthropic-ai/claude-code",
-            "프로젝트 디렉토리에서 claude 명령어 실행",
-            "생성된 컴포넌트 확인 및 수정",
-          ],
-        },
-        {
-          title: "MCP Filesystem 서버 연결",
-          description:
-            "로컬 파일시스템에 접근하는 MCP 서버를 Claude Desktop에 연결하고 파일 읽기/쓰기를 실습",
-          category: "MCP",
-          difficulty: "intermediate",
-          steps: [
-            "Claude Desktop 앱 설치",
-            "claude_desktop_config.json에 MCP 서버 추가",
-            "Claude에서 '파일 목록 보여줘' 요청으로 연결 확인",
-          ],
-        },
-        {
-          title: "Gemini API 스트리밍 응답 구현",
-          description:
-            "Gemini 2.0 Flash API를 사용해 실시간 스트리밍 응답을 Next.js에 구현하는 실습",
-          category: "Gemini",
-          difficulty: "intermediate",
-          steps: [
-            "Google AI Studio에서 API 키 발급",
-            "환경 변수에 GEMINI_API_KEY 설정",
-            "app/api/stream/route.ts 파일 생성 후 스트리밍 구현",
-          ],
-        },
-      ],
+      title: "AI 실습",
+      desc: "단계별 가이드와 복사 가능한 프롬프트로 직접 실행해보는 AI 실습",
     },
     auth: {
       email: "이메일",
