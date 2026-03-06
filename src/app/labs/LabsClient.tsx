@@ -138,7 +138,7 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
           className="flex items-center gap-1.5 text-sm text-violet-400 hover:text-violet-300 transition-colors"
         >
           <Play size={13} />
-          {expanded ? "실습 접기" : `실습 시작 (${lab.steps.length}단계)`}
+          {expanded ? t.labs.collapse : `${t.labs.start_steps} (${lab.steps.length})`}
           {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
         </button>
       </div>
@@ -157,15 +157,15 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
               {step.prompt && (
                 <div className="mb-2">
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs text-slate-500 uppercase tracking-wider">프롬프트</span>
+                    <span className="text-xs text-slate-500 uppercase tracking-wider">{t.labs.prompt_label}</span>
                     <button
                       onClick={() => copyPrompt(step.prompt!, i)}
                       className="flex items-center gap-1 text-xs text-slate-500 hover:text-slate-300 transition-colors"
                     >
                       {copiedIdx === i ? (
-                        <><Check size={11} className="text-emerald-400" /> 복사됨</>
+                        <><Check size={11} className="text-emerald-400" /> {t.common.copied}</>
                       ) : (
-                        <><Copy size={11} /> 복사</>
+                        <><Copy size={11} /> {t.common.copy}</>
                       )}
                     </button>
                   </div>
@@ -180,7 +180,7 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
               {step.expected_result && (
                 <div className="flex items-start gap-1.5 text-xs text-slate-500 mb-1">
                   <Target size={11} className="shrink-0 mt-0.5 text-violet-500" />
-                  <span>예상 결과: {step.expected_result}</span>
+                  <span>{t.labs.expected_result} {step.expected_result}</span>
                 </div>
               )}
 
@@ -198,7 +198,7 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
             <div className="mt-4 p-3 rounded-lg bg-violet-900/20 border border-violet-800/50">
               <div className="flex items-center gap-1.5 text-xs text-violet-400 font-semibold mb-1">
                 <FlaskConical size={12} />
-                도전 과제
+                {t.labs.challenge_title}
               </div>
               <p className="text-sm text-slate-300">{lab.challenge}</p>
             </div>
@@ -207,7 +207,7 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
           {/* Videos */}
           {lab.videos && lab.videos.length > 0 && (
             <div className="mt-4">
-              <p className="text-xs text-slate-500 uppercase tracking-wider mb-2">참고 영상</p>
+              <p className="text-xs text-slate-500 uppercase tracking-wider mb-2">{t.labs.videos_title}</p>
               <div className="space-y-2">
                 {lab.videos.map((v, i) => (
                   <VideoCard key={i} v={v} />

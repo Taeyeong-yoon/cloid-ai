@@ -6,13 +6,13 @@ import type { Skill } from "@/lib/types";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 // ─── 난이도 설정 ───────────────────────────────────────────────
-const DIFFICULTY = [
-  { key: "all",          label: "전체",  color: "text-slate-300",  bg: "bg-slate-700",            border: "border-slate-600" },
-  { key: "beginner",     label: "입문",  color: "text-emerald-300", bg: "bg-emerald-900/60",       border: "border-emerald-700" },
-  { key: "intermediate", label: "중급",  color: "text-amber-300",   bg: "bg-amber-900/60",         border: "border-amber-700"  },
-  { key: "advanced",     label: "고급",  color: "text-rose-300",    bg: "bg-rose-900/60",          border: "border-rose-700"   },
+const DIFFICULTY_CONFIG = [
+  { key: "all",          color: "text-slate-300",   bg: "bg-slate-700",       border: "border-slate-600"  },
+  { key: "beginner",     color: "text-emerald-300", bg: "bg-emerald-900/60",  border: "border-emerald-700" },
+  { key: "intermediate", color: "text-amber-300",   bg: "bg-amber-900/60",    border: "border-amber-700"  },
+  { key: "advanced",     color: "text-rose-300",    bg: "bg-rose-900/60",     border: "border-rose-700"   },
 ] as const;
-type DifficultyKey = (typeof DIFFICULTY)[number]["key"];
+type DifficultyKey = (typeof DIFFICULTY_CONFIG)[number]["key"];
 
 // ─── 마크다운 렌더러 ──────────────────────────────────────────
 function MarkdownContent({ raw }: { raw: string }) {
@@ -144,7 +144,9 @@ function formatInline(text: string): string {
 
 // ─── 스킬 카드 ────────────────────────────────────────────────
 function SkillCard({ skill, selected, onClick }: { skill: Skill; selected: boolean; onClick: () => void }) {
-  const diff = DIFFICULTY.find((d) => d.key === skill.difficulty) ?? DIFFICULTY[1];
+  const diff = DIFFICULTY_CONFIG.find((d) => d.key === skill.difficulty) ?? DIFFICULTY_CONFIG[1];
+  const { t } = useTranslation();
+  const diffLabel: Record<string, string> = { beginner: t.common.level_beginner, intermediate: t.common.level_intermediate, advanced: t.common.level_advanced };
   return (
     <button
       onClick={onClick}
@@ -156,7 +158,7 @@ function SkillCard({ skill, selected, onClick }: { skill: Skill; selected: boole
     >
       <div className="flex items-start justify-between gap-2 mb-2">
         <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${diff.bg} ${diff.color} ${diff.border} border`}>
-          {diff.label}
+          {diffLabel[skill.difficulty]}
         </span>
         {selected && <span className="w-1.5 h-1.5 rounded-full bg-violet-400 mt-1.5 shrink-0" />}
       </div>
@@ -177,7 +179,9 @@ function SkillCard({ skill, selected, onClick }: { skill: Skill; selected: boole
 
 // ─── 상세 패널 ────────────────────────────────────────────────
 function SkillDetail({ skill, onClose }: { skill: Skill; onClose: () => void }) {
-  const diff = DIFFICULTY.find((d) => d.key === skill.difficulty) ?? DIFFICULTY[1];
+  const diff = DIFFICULTY_CONFIG.find((d) => d.key === skill.difficulty) ?? DIFFICULTY_CONFIG[1];
+  const { t } = useTranslation();
+  const diffLabel: Record<string, string> = { beginner: t.common.level_beginner, intermediate: t.common.level_intermediate, advanced: t.common.level_advanced };
 
   // frontmatter 제거 후 콘텐츠만 추출
   const content = skill.content.replace(/^---[\s\S]*?---\n?/, "").trim();
@@ -191,7 +195,7 @@ function SkillDetail({ skill, onClose }: { skill: Skill; onClose: () => void }) 
             <div className="flex items-start justify-between gap-3">
               <div className="flex-1 min-w-0">
                 <span className={`inline-block text-xs px-2.5 py-1 rounded-full font-medium mb-3 ${diff.bg} ${diff.color} ${diff.border} border`}>
-                  {diff.label}
+                  {diffLabel[skill.difficulty]}
                 </span>
                 <h2 className="text-xl font-bold text-white leading-snug mb-1.5">{skill.title}</h2>
                 <p className="text-sm text-slate-400 leading-relaxed">{skill.summary}</p>
@@ -266,22 +270,25 @@ export default function SkillsClient({ skills }: { skills: Skill[] }) {
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
         {/* 난이도 탭 — 단일 선택 */}
         <div className="flex gap-1.5 p-1 bg-slate-900 border border-slate-800 rounded-xl">
-          {DIFFICULTY.map((d) => (
-            <button
-              key={d.key}
-              onClick={() => { setDifficulty(d.key); setSelected(null); }}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
-                difficulty === d.key
-                  ? `${d.bg} ${d.color} ${d.border} border shadow-sm`
-                  : "text-slate-500 hover:text-slate-300"
-              }`}
-            >
-              {d.label}
-              <span className={`text-xs ${difficulty === d.key ? "opacity-80" : "opacity-50"}`}>
-                {counts[d.key]}
-              </span>
-            </button>
-          ))}
+          {DIFFICULTY_CONFIG.map((d) => {
+            const tabLabel: Record<string, string> = { all: t.common.level_all, beginner: t.common.level_beginner, intermediate: t.common.level_intermediate, advanced: t.common.level_advanced };
+            return (
+              <button
+                key={d.key}
+                onClick={() => { setDifficulty(d.key); setSelected(null); }}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                  difficulty === d.key
+                    ? `${d.bg} ${d.color} ${d.border} border shadow-sm`
+                    : "text-slate-500 hover:text-slate-300"
+                }`}
+              >
+                {tabLabel[d.key]}
+                <span className={`text-xs ${difficulty === d.key ? "opacity-80" : "opacity-50"}`}>
+                  {counts[d.key]}
+                </span>
+              </button>
+            );
+          })}
         </div>
 
         {/* 검색 */}
@@ -289,7 +296,7 @@ export default function SkillsClient({ skills }: { skills: Skill[] }) {
           <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
           <input
             type="text"
-            placeholder="스킬 검색..."
+            placeholder={t.skills.search_placeholder}
             value={query}
             onChange={(e) => { setQuery(e.target.value); setSelected(null); }}
             className="w-full h-full bg-slate-900 border border-slate-800 rounded-xl pl-9 pr-8 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-violet-600 transition-colors"
