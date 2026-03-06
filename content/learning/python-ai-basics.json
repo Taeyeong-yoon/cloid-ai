@@ -1,0 +1,63 @@
+{
+  "id": "python-ai-basics",
+  "title": "Python + AI 기초",
+  "description": "파이썬 기초부터 OpenAI·Anthropic API 연동까지, AI 개발을 위한 Python 입문 실전 과정",
+  "level": "intermediate",
+  "tags": ["Python", "API", "OpenAI", "Anthropic", "개발"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Anthropic Python SDK 공식 문서",
+      "url": "https://docs.anthropic.com/en/api/getting-started",
+      "description": "Python으로 Claude API를 호출하는 공식 가이드"
+    },
+    {
+      "type": "doc",
+      "title": "OpenAI Python SDK GitHub",
+      "url": "https://github.com/openai/openai-python",
+      "description": "OpenAI 공식 Python 라이브러리 소스 및 사용법"
+    },
+    {
+      "type": "doc",
+      "title": "Google Colab — 무료 Python 실행 환경",
+      "url": "https://colab.research.google.com",
+      "description": "브라우저에서 바로 Python을 실행하는 무료 Jupyter 환경"
+    },
+    {
+      "type": "doc",
+      "title": "Python 공식 튜토리얼 (한국어)",
+      "url": "https://docs.python.org/ko/3/tutorial/",
+      "description": "Python 3 공식 입문 튜토리얼 — 한국어 번역본"
+    },
+    {
+      "type": "video",
+      "title": "파이썬으로 ChatGPT API 연동하기 — 처음부터 끝까지",
+      "search_keyword": "파이썬 ChatGPT OpenAI API 연동 입문 한국어 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Claude API Python 실습 — AI 앱 만들기",
+      "search_keyword": "Claude API Python 실습 AI 앱 만들기 Anthropic 한국어",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Python for AI Beginners — Full Course",
+      "search_keyword": "Python AI API beginners full course OpenAI Anthropic 2025",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "Claude API 첫 호출",
+      "description": "Google Colab에서 anthropic 패키지를 설치하고 API 키를 설정해 첫 번째 Claude API 호출을 완성하는 실습",
+      "command": "pip install anthropic && python -c \"import anthropic; client = anthropic.Anthropic(api_key='your-key'); print(client.messages.create(model='claude-sonnet-4-5', max_tokens=100, messages=[{'role':'user','content':'안녕!'}]).content[0].text)\""
+    },
+    {
+      "type": "practice",
+      "title": "스트리밍 챗봇 만들기",
+      "description": "Claude API의 스트리밍 기능을 활용해 터미널에서 대화할 수 있는 간단한 챗봇 Python 스크립트 작성",
+      "command": "claude '스트리밍을 지원하는 Claude API 챗봇 Python 코드를 작성해줘. 대화 히스토리 유지, 종료는 quit 입력'"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "claude-code-mastery",
+  "title": "Claude Code 마스터",
+  "description": "Claude Code의 에이전트 모드, CLAUDE.md 설정, Git 통합, 멀티파일 작업까지 전문가 수준으로 활용하는 심화 과정",
+  "level": "advanced",
+  "tags": ["Claude Code", "Anthropic", "AI 에이전트", "터미널", "Git"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Claude Code 공식 문서",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+      "description": "Claude Code 설치·설정·핵심 기능 전체 공식 가이드"
+    },
+    {
+      "type": "doc",
+      "title": "Claude Code GitHub 레포지토리",
+      "url": "https://github.com/anthropics/claude-code",
+      "description": "오픈소스 코드, 릴리즈 노트, 이슈 트래커"
+    },
+    {
+      "type": "doc",
+      "title": "Claude Code CLAUDE.md 가이드",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/memory",
+      "description": "프로젝트 지침 파일 CLAUDE.md로 컨텍스트 영구 설정"
+    },
+    {
+      "type": "doc",
+      "title": "Claude Code MCP 서버 연동",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+      "description": "Claude Code에 MCP 서버를 연결해 도구 확장하기"
+    },
+    {
+      "type": "video",
+      "title": "Claude Code 마스터 클래스 — 에이전트 모드 실전",
+      "search_keyword": "Claude Code 마스터 에이전트 모드 실전 한국어 2025 2026",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Claude Code로 실제 프로젝트 만들기 — 처음부터 배포까지",
+      "search_keyword": "Claude Code 실제 프로젝트 처음부터 배포 한국어 실습",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Claude Code Advanced Workflows",
+      "search_keyword": "Claude Code advanced workflows agentic mode production 2025",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "CLAUDE.md 작성 및 프로젝트 컨텍스트 설정",
+      "description": "프로젝트 루트에 CLAUDE.md를 만들어 기술 스택, 코딩 규칙, 금지 사항, 자주 사용하는 명령어를 정의하는 실습",
+      "command": "claude '이 프로젝트의 CLAUDE.md를 작성해줘. Next.js 15, TypeScript, Tailwind, Supabase 스택, 함수형 컴포넌트만 사용'"
+    },
+    {
+      "type": "practice",
+      "title": "에이전트 모드로 전체 기능 구현 위임",
+      "description": "Claude Code에게 인증 기능 전체(로그인·회원가입·JWT·미들웨어)를 한 번의 요청으로 자율 구현시키는 실습",
+      "command": "claude '이 Next.js 프로젝트에 Supabase Auth로 이메일 로그인·회원가입·세션 미들웨어를 완전히 구현해줘. 테스트도 작성해줘'"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "ai-automation",
+  "title": "AI 자동화 워크플로",
+  "description": "Zapier·Make·n8n과 AI를 연동해서 이메일·소셜미디어·데이터 처리를 완전 자동화하는 실전 과정",
+  "level": "intermediate",
+  "tags": ["자동화", "Zapier", "Make", "n8n", "노코드"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Zapier + ChatGPT 연동 가이드",
+      "url": "https://zapier.com/apps/chatgpt/integrations",
+      "description": "Zapier에서 ChatGPT/OpenAI 앱을 연동하는 공식 문서"
+    },
+    {
+      "type": "doc",
+      "title": "Make (Integromat) AI 자동화 가이드",
+      "url": "https://www.make.com/en/integrations/openai-gpt-3",
+      "description": "Make에서 OpenAI와 연동하는 시나리오 구성 방법"
+    },
+    {
+      "type": "doc",
+      "title": "n8n AI 노드 공식 문서",
+      "url": "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain/",
+      "description": "오픈소스 자동화 도구 n8n의 AI/LangChain 노드 가이드"
+    },
+    {
+      "type": "doc",
+      "title": "OpenAI API 레퍼런스",
+      "url": "https://platform.openai.com/docs/api-reference",
+      "description": "자동화에서 직접 API 호출 시 필요한 엔드포인트 레퍼런스"
+    },
+    {
+      "type": "video",
+      "title": "Zapier + ChatGPT 자동화 실전 — 이메일 자동 분류",
+      "search_keyword": "Zapier ChatGPT 연동 자동화 이메일 분류 한국어 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Make로 SNS 콘텐츠 자동화하기",
+      "search_keyword": "Make Integromat SNS 자동화 AI 콘텐츠 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "n8n AI Automation Workflow Tutorial",
+      "search_keyword": "n8n AI automation workflow tutorial 2025 beginners",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "Gmail 수신 → AI 분류 → Notion 저장 자동화",
+      "description": "Zapier에서 Gmail 새 이메일 트리거 → ChatGPT로 중요도/카테고리 분류 → Notion 데이터베이스에 저장하는 Zap 구성",
+      "command": "Zapier → New Zap → Gmail(Trigger: New Email) → OpenAI(분류 프롬프트) → Notion(Create Page)"
+    },
+    {
+      "type": "practice",
+      "title": "구글 폼 응답 → AI 분석 → 슬랙 알림",
+      "description": "고객 피드백 폼 응답이 들어오면 AI가 감정분석·우선순위를 판단하고 슬랙 채널에 요약 알림을 보내는 자동화",
+      "command": "Zapier → Google Forms(Trigger) → OpenAI(감정분석) → Slack(Send Message)"
+    }
+  ]
+}

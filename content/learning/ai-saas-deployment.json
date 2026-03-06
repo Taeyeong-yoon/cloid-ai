@@ -1,0 +1,63 @@
+{
+  "id": "ai-saas-deployment",
+  "title": "AI SaaS 배포와 운영",
+  "description": "Next.js + Supabase + Vercel로 AI SaaS를 프로덕션에 배포하고, 모니터링·확장·수익화까지 운영하는 실전 과정",
+  "level": "advanced",
+  "tags": ["SaaS", "배포", "Vercel", "Supabase", "운영", "모니터링"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Vercel 배포 공식 가이드",
+      "url": "https://vercel.com/docs/deployments/overview",
+      "description": "GitHub 연동, 환경변수, 도메인 설정, Edge Functions까지 Vercel 배포 전체 가이드"
+    },
+    {
+      "type": "doc",
+      "title": "Supabase 프로덕션 체크리스트",
+      "url": "https://supabase.com/docs/guides/platform/going-into-prod",
+      "description": "RLS 설정, 백업, 성능, 보안 등 프로덕션 전 필수 체크리스트"
+    },
+    {
+      "type": "doc",
+      "title": "Stripe 결제 연동 가이드",
+      "url": "https://stripe.com/docs/billing/subscriptions/overview",
+      "description": "구독 결제, 웹훅, 프리미엄 플랜 관리를 위한 Stripe Billing 가이드"
+    },
+    {
+      "type": "doc",
+      "title": "Sentry 에러 트래킹 — Next.js 연동",
+      "url": "https://docs.sentry.io/platforms/javascript/guides/nextjs/",
+      "description": "프로덕션 에러를 실시간으로 추적하는 Sentry Next.js 연동 가이드"
+    },
+    {
+      "type": "video",
+      "title": "AI SaaS 처음부터 배포까지 — Next.js Supabase Vercel",
+      "search_keyword": "AI SaaS 만들기 배포 Next.js Supabase Vercel 한국어 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "SaaS 수익화 전략 — Stripe 결제 연동 실전",
+      "search_keyword": "SaaS Stripe 결제 연동 구독 모델 Next.js 한국어 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Deploy AI SaaS to Production — Full Guide",
+      "search_keyword": "deploy AI SaaS production Vercel Supabase monitoring 2025",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "Vercel 프로덕션 배포 + 커스텀 도메인 연결",
+      "description": "GitHub 저장소를 Vercel에 연결하고 환경변수를 설정한 뒤, 커스텀 도메인을 연결해 첫 프로덕션 배포 완성",
+      "command": "vercel --prod && vercel domains add yourdomain.com"
+    },
+    {
+      "type": "practice",
+      "title": "Stripe 구독 결제 + Supabase 플랜 연동",
+      "description": "Stripe Checkout으로 결제를 받고, Webhook으로 Supabase 사용자의 플랜을 자동으로 업그레이드하는 실습",
+      "command": "stripe listen --forward-to localhost:3000/api/webhooks/stripe"
+    }
+  ]
+}

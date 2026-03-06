@@ -1,0 +1,63 @@
+{
+  "id": "chatgpt-mastery",
+  "title": "ChatGPT 완전 활용법",
+  "description": "회원가입부터 고급 기능까지, ChatGPT를 업무와 일상에서 200% 활용하는 완전 가이드",
+  "level": "beginner",
+  "tags": ["ChatGPT", "OpenAI", "GPT-4o", "생산성"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "ChatGPT 공식 도움말 센터",
+      "url": "https://help.openai.com/en/collections/3742473-chatgpt",
+      "description": "ChatGPT 사용법, 기능, FAQ 공식 문서"
+    },
+    {
+      "type": "doc",
+      "title": "OpenAI GPT-4o 모델 소개",
+      "url": "https://openai.com/index/hello-gpt-4o/",
+      "description": "최신 GPT-4o 모델의 멀티모달 기능과 특징 설명"
+    },
+    {
+      "type": "doc",
+      "title": "ChatGPT Custom Instructions 가이드",
+      "url": "https://openai.com/blog/custom-instructions-for-chatgpt",
+      "description": "나에게 맞는 커스텀 지시사항 설정으로 매번 같은 설명 없애기"
+    },
+    {
+      "type": "doc",
+      "title": "OpenAI GPTs 만들기 가이드",
+      "url": "https://openai.com/blog/introducing-gpts",
+      "description": "나만의 GPT를 만들고 공유하는 방법"
+    },
+    {
+      "type": "video",
+      "title": "ChatGPT 완전 정복 — 직장인 활용법 A to Z",
+      "search_keyword": "ChatGPT 완전 정복 직장인 활용법 2025 한국어",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "ChatGPT 숨겨진 기능 10가지",
+      "search_keyword": "ChatGPT 숨겨진 기능 꿀팁 모르면 손해 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "ChatGPT Advanced Features Tutorial",
+      "search_keyword": "ChatGPT advanced features tutorial GPT-4o 2025",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "Custom Instructions 설정하기",
+      "description": "ChatGPT 설정에서 나에 대한 정보(직업, 선호 스타일, 언어 등)를 등록해 매번 반복 설명 없애기",
+      "command": "ChatGPT → 프로필 → 커스텀 지시사항 → '나에 대해' + '어떻게 응답할지' 각각 입력"
+    },
+    {
+      "type": "practice",
+      "title": "이미지 분석 + 데이터 분석 실습",
+      "description": "사진이나 PDF를 업로드해서 내용 요약, 데이터 분석, 그래프 생성 등 멀티모달 기능 체험",
+      "command": "ChatGPT에 엑셀/CSV 파일 업로드 후 '이 데이터를 분석하고 주요 인사이트 3가지를 알려줘' 입력"
+    }
+  ]
+}

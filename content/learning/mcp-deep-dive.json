@@ -1,0 +1,63 @@
+{
+  "id": "mcp-deep-dive",
+  "title": "MCP 프로토콜 심화",
+  "description": "Model Context Protocol의 내부 아키텍처, 커스텀 서버 구축, 프로덕션 배포까지 MCP를 완전히 마스터하는 고급 과정",
+  "level": "advanced",
+  "tags": ["MCP", "TypeScript", "AI 도구", "서버", "프로토콜"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "MCP 공식 사양 문서",
+      "url": "https://modelcontextprotocol.io/specification",
+      "description": "MCP 프로토콜 전체 사양 — 메시지 형식, 전송 레이어, 기능 목록"
+    },
+    {
+      "type": "doc",
+      "title": "MCP TypeScript SDK",
+      "url": "https://github.com/modelcontextprotocol/typescript-sdk",
+      "description": "TypeScript로 MCP 서버/클라이언트를 개발하는 공식 SDK"
+    },
+    {
+      "type": "doc",
+      "title": "MCP 서버 예제 모음",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "description": "파일시스템, GitHub, Slack, PostgreSQL 등 공식 MCP 서버 구현체"
+    },
+    {
+      "type": "doc",
+      "title": "MCP 퀵스타트 — 서버 구축",
+      "url": "https://modelcontextprotocol.io/quickstart/server",
+      "description": "5분 만에 첫 MCP 서버를 만드는 공식 퀵스타트 가이드"
+    },
+    {
+      "type": "video",
+      "title": "MCP 서버 직접 만들기 — TypeScript 실전",
+      "search_keyword": "MCP 서버 만들기 TypeScript 실전 한국어 2025 Model Context Protocol",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "MCP 아키텍처 완전 이해 — 클라이언트와 서버",
+      "search_keyword": "MCP Model Context Protocol 아키텍처 설명 한국어 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Building Production MCP Servers",
+      "search_keyword": "building production MCP servers TypeScript deployment 2025",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "날씨 API MCP 서버 구축",
+      "description": "OpenWeatherMap API를 감싸는 MCP 서버를 TypeScript로 만들고 Claude Desktop에 연결하는 실습",
+      "command": "npm create mcp-server weather-mcp && cd weather-mcp && npm install @modelcontextprotocol/sdk"
+    },
+    {
+      "type": "practice",
+      "title": "로컬 파일시스템 MCP 서버 연결",
+      "description": "공식 filesystem MCP 서버를 Claude Desktop에 연결해서 Claude가 내 파일을 읽고 쓰는 경험 실습",
+      "command": "npx @modelcontextprotocol/server-filesystem ~/Desktop"
+    }
+  ]
+}

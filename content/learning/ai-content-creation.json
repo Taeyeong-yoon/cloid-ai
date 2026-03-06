@@ -1,0 +1,63 @@
+{
+  "id": "ai-content-creation",
+  "title": "AI 콘텐츠 제작 파이프라인",
+  "description": "블로그·유튜브·SNS·뉴스레터를 AI로 제작하는 End-to-End 파이프라인 구축 실전 과정",
+  "level": "intermediate",
+  "tags": ["콘텐츠 제작", "블로그", "유튜브", "SNS", "SEO"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Google 검색 센터 — AI 콘텐츠 가이드",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "description": "Google의 AI 생성 콘텐츠에 대한 공식 가이드라인"
+    },
+    {
+      "type": "doc",
+      "title": "Anthropic 클로드 — 글쓰기 프롬프트",
+      "url": "https://docs.anthropic.com/en/prompt-library",
+      "description": "블로그, 카피, 이메일 등 글쓰기 전문 프롬프트 모음"
+    },
+    {
+      "type": "doc",
+      "title": "Canva AI 기능 가이드",
+      "url": "https://www.canva.com/ai-image-generator/",
+      "description": "Canva Magic Studio — AI로 디자인·이미지·영상 제작"
+    },
+    {
+      "type": "doc",
+      "title": "ElevenLabs AI 음성 생성",
+      "url": "https://elevenlabs.io/docs",
+      "description": "텍스트를 자연스러운 AI 음성으로 변환 — 유튜브 나레이션 자동화"
+    },
+    {
+      "type": "video",
+      "title": "AI로 블로그부터 유튜브까지 — 콘텐츠 파이프라인 구축",
+      "search_keyword": "AI 콘텐츠 파이프라인 블로그 유튜브 SNS 자동화 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "ChatGPT SEO 블로그 글쓰기 — 검색 상위 노출",
+      "search_keyword": "ChatGPT SEO 블로그 글쓰기 구글 상위 노출 2025 한국어",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "AI Content Creation Full Workflow",
+      "search_keyword": "AI content creation workflow blog youtube social media 2025",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "1개 아이디어 → 5개 플랫폼 콘텐츠 변환",
+      "description": "하나의 핵심 인사이트를 블로그·링크드인·인스타그램·트위터·유튜브 스크립트로 각각 변환하는 멀티 포맷 실습",
+      "command": "claude '아이디어: AI가 업무를 대체하는 것이 아니라 업그레이드한다. 이것을 블로그·링크드인·인스타·트위터·유튜브 스크립트로 각각 만들어줘'"
+    },
+    {
+      "type": "practice",
+      "title": "SEO 최적화 블로그 포스트 파이프라인",
+      "description": "키워드 리서치 → 목차 → 본문 → 메타 디스크립션 → 내부 링크 전략까지 AI와 함께 완전한 SEO 포스트 완성",
+      "command": "claude '키워드: AI 업무 자동화. 1) 검색 의도 분석 2) SEO 목차 3) 본문 2000자 4) 메타 디스크립션 순서로 작성해줘'"
+    }
+  ]
+}

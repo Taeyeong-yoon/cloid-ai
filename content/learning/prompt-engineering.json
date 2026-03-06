@@ -1,0 +1,63 @@
+{
+  "id": "prompt-engineering",
+  "title": "프롬프트 엔지니어링 기초",
+  "description": "AI에서 최고의 결과를 끌어내는 프롬프트 작성 원칙과 실전 패턴을 단계별로 학습",
+  "level": "beginner",
+  "tags": ["프롬프트", "ChatGPT", "Claude", "AI 기초"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "OpenAI 프롬프트 엔지니어링 가이드",
+      "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+      "description": "OpenAI 공식 프롬프트 작성 전략과 6가지 원칙"
+    },
+    {
+      "type": "doc",
+      "title": "Anthropic 프롬프트 엔지니어링 개요",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+      "description": "Claude에 최적화된 프롬프트 작성 공식 가이드"
+    },
+    {
+      "type": "doc",
+      "title": "Anthropic 프롬프트 라이브러리",
+      "url": "https://docs.anthropic.com/en/prompt-library",
+      "description": "즉시 사용 가능한 실전 프롬프트 템플릿 모음"
+    },
+    {
+      "type": "doc",
+      "title": "Learn Prompting — 무료 오픈소스 가이드",
+      "url": "https://learnprompting.org/docs/intro",
+      "description": "커뮤니티가 만든 종합적인 프롬프트 엔지니어링 교재"
+    },
+    {
+      "type": "video",
+      "title": "프롬프트 엔지니어링 완벽 가이드 — 초보자도 쉽게",
+      "search_keyword": "프롬프트 엔지니어링 기초 완벽 가이드 한국어 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "좋은 프롬프트 vs 나쁜 프롬프트 비교 실험",
+      "search_keyword": "좋은 프롬프트 나쁜 프롬프트 비교 ChatGPT Claude",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Prompt Engineering Full Course",
+      "search_keyword": "prompt engineering full course beginner 2025",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "나쁜 프롬프트 → 좋은 프롬프트 변환 실습",
+      "description": "Claude에게 모호한 질문을 던진 후, 역할·목적·형식·제약을 추가해 개선하는 과정 실습",
+      "command": "claude \"이메일 써줘\" → \"거래처 납품 지연 사과 이메일을 정중한 톤으로 3문장 이내로 써줘\""
+    },
+    {
+      "type": "practice",
+      "title": "Few-shot 프롬프트 실습",
+      "description": "예시를 2~3개 제공하고 AI가 패턴을 학습해 원하는 형식의 결과를 생성하는 실습",
+      "command": "claude \"입력: '사과' → 출력: '빨간 과일'. 입력: '바나나' → 출력: '노란 과일'. 입력: '포도' → 출력:\""
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "ai-tools-overview",
+  "title": "2026 주요 AI 도구 총정리",
+  "description": "ChatGPT, Claude, Gemini, Cursor, Perplexity 등 2026년 필수 AI 도구를 카테고리별로 비교 정리",
+  "level": "beginner",
+  "tags": ["AI 도구", "ChatGPT", "Claude", "Gemini", "Perplexity"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Claude 공식 사이트",
+      "url": "https://claude.ai",
+      "description": "Anthropic의 Claude — 긴 문서 분석, 코딩, 창작에 강한 AI"
+    },
+    {
+      "type": "doc",
+      "title": "Google Gemini 공식 사이트",
+      "url": "https://gemini.google.com",
+      "description": "Google의 Gemini — 검색 연동, 멀티모달, Google Workspace 통합"
+    },
+    {
+      "type": "doc",
+      "title": "Perplexity AI — AI 검색 엔진",
+      "url": "https://www.perplexity.ai",
+      "description": "실시간 웹 검색 기반 AI 답변, 출처 링크 포함"
+    },
+    {
+      "type": "doc",
+      "title": "Cursor AI 코드 에디터",
+      "url": "https://cursor.com",
+      "description": "AI가 내장된 VS Code 기반 코드 에디터"
+    },
+    {
+      "type": "video",
+      "title": "2026 AI 도구 총정리 — 뭘 써야 할까?",
+      "search_keyword": "2026 AI 도구 비교 ChatGPT Claude Gemini 뭐가 좋을까",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "AI 도구별 특징과 용도 완벽 정리",
+      "search_keyword": "AI 도구 종류 특징 용도 비교 2025 한국어",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Best AI Tools 2025 Comparison",
+      "search_keyword": "best AI tools comparison 2025 Claude ChatGPT Gemini",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "같은 질문을 3개 AI에 던져보기",
+      "description": "동일한 복잡한 질문을 ChatGPT, Claude, Gemini에 각각 입력하고 답변 품질·스타일 차이 비교",
+      "command": "동일 프롬프트를 chat.openai.com, claude.ai, gemini.google.com에 각각 입력 후 결과 비교"
+    },
+    {
+      "type": "practice",
+      "title": "Perplexity로 실시간 정보 검색하기",
+      "description": "Perplexity.ai에서 최신 뉴스나 정보가 필요한 질문을 하고 출처 링크와 함께 답변 받기",
+      "command": "perplexity.ai → '2026년 AI 시장 최신 트렌드는?' 입력 후 출처 확인"
+    }
+  ]
+}

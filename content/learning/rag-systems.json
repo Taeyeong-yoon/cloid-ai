@@ -1,0 +1,63 @@
+{
+  "id": "rag-systems",
+  "title": "RAG 시스템 구축",
+  "description": "벡터 임베딩·Chroma·Supabase pgvector를 활용해 나만의 데이터로 AI 질의응답 시스템을 처음부터 구축하는 실전 과정",
+  "level": "advanced",
+  "tags": ["RAG", "벡터DB", "임베딩", "LangChain", "Supabase"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "LangChain RAG 공식 튜토리얼",
+      "url": "https://python.langchain.com/docs/tutorials/rag/",
+      "description": "LangChain으로 RAG 시스템을 처음 구축하는 공식 튜토리얼"
+    },
+    {
+      "type": "doc",
+      "title": "Supabase pgvector 가이드",
+      "url": "https://supabase.com/docs/guides/ai/vector-columns",
+      "description": "Supabase에서 벡터 컬럼을 설정하고 유사도 검색하는 공식 가이드"
+    },
+    {
+      "type": "doc",
+      "title": "OpenAI 임베딩 API 가이드",
+      "url": "https://platform.openai.com/docs/guides/embeddings",
+      "description": "text-embedding-3-small/large 모델로 텍스트를 벡터로 변환하는 방법"
+    },
+    {
+      "type": "doc",
+      "title": "Chroma 벡터 DB 공식 문서",
+      "url": "https://docs.trychroma.com",
+      "description": "로컬에서 쉽게 쓸 수 있는 오픈소스 벡터 DB Chroma 사용법"
+    },
+    {
+      "type": "video",
+      "title": "RAG 시스템 처음부터 구현하기 — Python 실전",
+      "search_keyword": "RAG 시스템 구현 Python LangChain 벡터DB 한국어 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "PDF 업로드 AI 질의응답 시스템 만들기",
+      "search_keyword": "PDF 업로드 AI 질의응답 RAG 시스템 만들기 한국어",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "RAG from Scratch — Full Tutorial",
+      "search_keyword": "RAG from scratch tutorial LangChain ChromaDB OpenAI 2025",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "PDF RAG 시스템 구축",
+      "description": "PDF 파일을 청킹→임베딩→Chroma 저장 후, 질문하면 관련 단락을 검색해서 Claude가 답변하는 시스템 구축",
+      "command": "pip install langchain anthropic chromadb pypdf && python rag_pipeline.py --pdf your_document.pdf"
+    },
+    {
+      "type": "practice",
+      "title": "Supabase 벡터 DB 연동 RAG",
+      "description": "Supabase에 pgvector 확장을 활성화하고 문서 임베딩을 저장한 뒤 유사도 검색으로 RAG를 구성하는 실습",
+      "command": "-- Supabase SQL Editor\nCREATE EXTENSION vector;\nCREATE TABLE docs (id bigserial, content text, embedding vector(1536));"
+    }
+  ]
+}

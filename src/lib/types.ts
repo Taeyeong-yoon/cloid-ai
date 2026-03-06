@@ -13,7 +13,8 @@ export interface LearningResource {
   type: 'doc' | 'video' | 'practice';
   title: string;
   url?: string;
-  description: string;
+  search_keyword?: string;
+  description?: string;
   command?: string;
 }
 

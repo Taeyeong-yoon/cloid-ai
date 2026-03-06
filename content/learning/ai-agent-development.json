@@ -1,0 +1,63 @@
+{
+  "id": "ai-agent-development",
+  "title": "AI 에이전트 개발",
+  "description": "LangChain·CrewAI·Anthropic Agent SDK로 자율적으로 목표를 달성하는 AI 에이전트를 설계하고 배포하는 실전 과정",
+  "level": "advanced",
+  "tags": ["AI 에이전트", "LangChain", "CrewAI", "Python", "자율 AI"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "LangChain 에이전트 공식 문서",
+      "url": "https://python.langchain.com/docs/how_to/#agents",
+      "description": "LangChain으로 ReAct, Plan-and-Execute 에이전트 구현 가이드"
+    },
+    {
+      "type": "doc",
+      "title": "CrewAI 공식 문서",
+      "url": "https://docs.crewai.com",
+      "description": "멀티 에이전트 협업 프레임워크 CrewAI 전체 가이드"
+    },
+    {
+      "type": "doc",
+      "title": "Anthropic 에이전트 구축 가이드",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/agents-and-tools/agents-overview",
+      "description": "Anthropic이 권장하는 에이전트 설계 원칙과 패턴"
+    },
+    {
+      "type": "doc",
+      "title": "LangSmith — 에이전트 디버깅 도구",
+      "url": "https://docs.smith.langchain.com",
+      "description": "에이전트 실행 추적, 디버깅, 평가를 위한 LangSmith 플랫폼"
+    },
+    {
+      "type": "video",
+      "title": "AI 에이전트 만들기 — LangChain Python 실전",
+      "search_keyword": "AI 에이전트 만들기 LangChain Python 실전 한국어 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "CrewAI 멀티 에이전트 시스템 구축",
+      "search_keyword": "CrewAI 멀티 에이전트 시스템 구축 한국어 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "AI Agent Development Full Course",
+      "search_keyword": "AI agent development LangChain CrewAI full course 2025",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "웹 검색 ReAct 에이전트 만들기",
+      "description": "LangChain + Claude로 DuckDuckGo 검색 도구를 활용하는 ReAct 패턴 에이전트 구현",
+      "command": "pip install langchain langchain-anthropic duckduckgo-search && python -c 'from langchain.agents import create_react_agent ...'"
+    },
+    {
+      "type": "practice",
+      "title": "CrewAI 리서치-작가 팀 구성",
+      "description": "리서처 에이전트가 정보를 수집하고 작가 에이전트가 블로그를 작성하는 2인 크루 구성 실습",
+      "command": "pip install crewai && python -c 'from crewai import Agent, Task, Crew ...'"
+    }
+  ]
+}

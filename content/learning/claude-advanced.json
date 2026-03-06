@@ -1,0 +1,63 @@
+{
+  "id": "claude-advanced",
+  "title": "Claude 심화 활용",
+  "description": "XML 태그, 시스템 프롬프트, 프롬프트 체이닝, Projects 기능까지 Claude를 전문가처럼 활용하는 심화 과정",
+  "level": "intermediate",
+  "tags": ["Claude", "XML", "시스템 프롬프트", "프롬프트 체이닝"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Claude 프롬프트 엔지니어링 공식 가이드",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+      "description": "XML 태그, 체이닝, 롤 지정 등 Claude 전용 고급 기법"
+    },
+    {
+      "type": "doc",
+      "title": "Claude 모델 비교 — 언제 무엇을 쓸까",
+      "url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+      "description": "Opus, Sonnet, Haiku 모델별 특징과 사용 케이스"
+    },
+    {
+      "type": "doc",
+      "title": "Claude API — 시스템 프롬프트 가이드",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts",
+      "description": "시스템 프롬프트로 Claude의 페르소나와 행동 규칙 설정"
+    },
+    {
+      "type": "doc",
+      "title": "Anthropic 공식 프롬프트 라이브러리",
+      "url": "https://docs.anthropic.com/en/prompt-library",
+      "description": "즉시 사용 가능한 고급 프롬프트 템플릿 50개+"
+    },
+    {
+      "type": "video",
+      "title": "Claude XML 태그 활용법 — 전문가 프롬프트 패턴",
+      "search_keyword": "Claude XML 태그 고급 프롬프트 엔지니어링 한국어 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Claude Projects 기능 완전 정복",
+      "search_keyword": "Claude Projects 기능 사용법 컨텍스트 유지 한국어",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Advanced Claude Prompting Techniques",
+      "search_keyword": "advanced Claude prompting techniques chain of thought 2025",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "XML 태그 구조화 프롬프트 실습",
+      "description": "role, task, context, output_format 태그를 활용한 구조화 프롬프트를 작성하고 태그 없는 버전과 비교",
+      "command": "claude.ai → <role>시니어 편집자</role><task>아래 글을 교정해줘</task><output_format>수정본 + 변경 이유 목록</output_format>"
+    },
+    {
+      "type": "practice",
+      "title": "3단계 프롬프트 체이닝",
+      "description": "분석 → 요약 → 이메일 작성 순서로 이전 결과를 다음 프롬프트에 활용하는 체이닝 실습",
+      "command": "1단계: '분석해줘' → 2단계: '위 결과를 3줄로 요약해줘' → 3단계: '위 요약으로 임원 보고 이메일 작성해줘'"
+    }
+  ]
+}

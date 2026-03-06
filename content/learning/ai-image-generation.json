@@ -1,0 +1,63 @@
+{
+  "id": "ai-image-generation",
+  "title": "AI 이미지 생성 마스터",
+  "description": "DALL-E 3, Midjourney, Stable Diffusion, Ideogram을 활용해 원하는 이미지를 정확히 생성하는 프롬프트 마스터 과정",
+  "level": "beginner",
+  "tags": ["이미지 생성", "DALL-E", "Midjourney", "Stable Diffusion", "Ideogram"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "DALL-E 3 사용 가이드 (OpenAI)",
+      "url": "https://platform.openai.com/docs/guides/images",
+      "description": "DALL-E 3 API 문서 및 이미지 생성 파라미터 설명"
+    },
+    {
+      "type": "doc",
+      "title": "Ideogram 공식 사이트",
+      "url": "https://ideogram.ai",
+      "description": "텍스트 렌더링에 강한 AI 이미지 생성 도구 — 무료 플랜 있음"
+    },
+    {
+      "type": "doc",
+      "title": "Midjourney 공식 문서",
+      "url": "https://docs.midjourney.com",
+      "description": "Midjourney 파라미터, 스타일, 명령어 전체 가이드"
+    },
+    {
+      "type": "doc",
+      "title": "Stable Diffusion 프롬프트 가이드",
+      "url": "https://stable-diffusion-art.com/prompt-guide/",
+      "description": "Stable Diffusion에서 원하는 이미지를 생성하는 프롬프트 작성 기법"
+    },
+    {
+      "type": "video",
+      "title": "AI 이미지 생성 완벽 입문 — DALL-E Midjourney 비교",
+      "search_keyword": "AI 이미지 생성 DALL-E Midjourney Ideogram 비교 한국어 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Midjourney로 프로급 이미지 만들기",
+      "search_keyword": "Midjourney 사용법 프롬프트 고급 기법 한국어",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "AI Image Generation Masterclass",
+      "search_keyword": "AI image generation masterclass beginner advanced 2025",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "Ideogram으로 텍스트 포함 이미지 만들기",
+      "description": "Ideogram.ai에서 로고, 썸네일, 포스터 등 텍스트가 포함된 이미지를 생성하는 실습",
+      "command": "ideogram.ai → 'minimalist poster with bold text \"AI는 도구다\", dark background, Korean typography' 입력"
+    },
+    {
+      "type": "practice",
+      "title": "DALL-E 3으로 상품 이미지 생성",
+      "description": "ChatGPT에서 DALL-E 3으로 제품 광고용 이미지를 생성하고 다양한 스타일로 변형하는 실습",
+      "command": "ChatGPT → '커피잔 제품 사진, 흰 배경, 스튜디오 조명, 고급스러운 상업 사진 스타일' 이미지 생성"
+    }
+  ]
+}

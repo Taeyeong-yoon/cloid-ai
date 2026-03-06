@@ -1,0 +1,63 @@
+{
+  "id": "cursor-development",
+  "title": "Cursor AI 개발 실전",
+  "description": "AI 코드 에디터 Cursor의 Chat·Composer·Tab 자동완성을 실무 프로젝트에 적용하는 단계별 실전 과정",
+  "level": "intermediate",
+  "tags": ["Cursor", "AI 코딩", "VS Code", "개발 도구"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Cursor 공식 문서",
+      "url": "https://docs.cursor.com",
+      "description": "Cursor 설치, 단축키, 핵심 기능 전체 가이드"
+    },
+    {
+      "type": "doc",
+      "title": "Cursor Composer 사용 가이드",
+      "url": "https://docs.cursor.com/chat/overview",
+      "description": "멀티파일 동시 편집 Composer 기능 상세 설명"
+    },
+    {
+      "type": "doc",
+      "title": "Cursor Rules 설정 가이드",
+      "url": "https://docs.cursor.com/context/rules-for-ai",
+      "description": ".cursorrules 파일로 프로젝트 코딩 규칙 설정"
+    },
+    {
+      "type": "doc",
+      "title": "Cursor 공식 포럼 — 팁 & 트릭",
+      "url": "https://forum.cursor.com",
+      "description": "커뮤니티 공유 Cursor 활용 팁과 트릭 모음"
+    },
+    {
+      "type": "video",
+      "title": "Cursor AI 완전 정복 — 설치부터 실전까지",
+      "search_keyword": "Cursor AI 에디터 완전 정복 설치 사용법 한국어 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Cursor로 웹앱 만들기 — 비개발자도 가능",
+      "search_keyword": "Cursor AI 웹앱 만들기 비개발자 튜토리얼 한국어",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "Cursor AI Full Tutorial — Composer & Chat",
+      "search_keyword": "Cursor AI full tutorial composer agent mode 2025",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "Cursor Composer로 투두앱 만들기",
+      "description": "Ctrl+I로 Composer를 열고 Next.js + Tailwind 투두앱을 자연어 명령으로 처음부터 생성",
+      "command": "Cursor → Ctrl+I → 'Next.js + TypeScript + Tailwind로 할 일 추가/완료/삭제 기능이 있는 투두앱 만들어줘'"
+    },
+    {
+      "type": "practice",
+      "title": ".cursorrules 파일 설정",
+      "description": "프로젝트 루트에 .cursorrules를 만들고 코딩 스타일, 사용 기술, 금지 패턴을 정의해서 AI 일관성 높이기",
+      "command": "프로젝트 루트 → .cursorrules 파일 생성 → 'TypeScript 필수, any 금지, 함수형 컴포넌트만, 한국어 주석' 등 규칙 작성"
+    }
+  ]
+}

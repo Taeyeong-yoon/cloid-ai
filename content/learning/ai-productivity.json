@@ -1,0 +1,63 @@
+{
+  "id": "ai-productivity",
+  "title": "AI로 업무 생산성 10배 높이기",
+  "description": "이메일·문서·회의·데이터 정리까지, 반복 업무를 AI로 자동화해 하루 2시간을 돌려받는 실전 가이드",
+  "level": "beginner",
+  "tags": ["생산성", "자동화", "업무 효율", "이메일", "문서"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Anthropic 프롬프트 라이브러리 — 업무 활용",
+      "url": "https://docs.anthropic.com/en/prompt-library",
+      "description": "이메일, 요약, 번역 등 업무용 즉시 사용 프롬프트"
+    },
+    {
+      "type": "doc",
+      "title": "Microsoft Copilot 공식 가이드",
+      "url": "https://support.microsoft.com/en-us/copilot",
+      "description": "Word, Excel, Teams에서 AI 비서 Copilot 활용법"
+    },
+    {
+      "type": "doc",
+      "title": "Notion AI 공식 가이드",
+      "url": "https://www.notion.so/help/notion-ai",
+      "description": "Notion 내장 AI로 문서 요약·초안 작성·번역하는 방법"
+    },
+    {
+      "type": "doc",
+      "title": "Zapier AI 자동화 가이드",
+      "url": "https://zapier.com/blog/ai-automation/",
+      "description": "Zapier와 ChatGPT를 연동한 업무 자동화 실전 예시"
+    },
+    {
+      "type": "video",
+      "title": "AI로 하루 2시간 절약하는 직장인 루틴",
+      "search_keyword": "AI 업무 생산성 직장인 하루 루틴 2시간 절약 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "ChatGPT로 이메일·보고서·PPT 10배 빠르게",
+      "search_keyword": "ChatGPT 이메일 보고서 PPT 자동화 직장인 활용 2025",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "AI Productivity Hacks for Professionals",
+      "search_keyword": "AI productivity hacks professionals work 2025",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "아침 업무 브리핑 프롬프트 만들기",
+      "description": "오늘의 할 일·미팅·우선순위를 AI가 매일 정리해주는 나만의 아침 루틴 프롬프트 제작",
+      "command": "claude \"오늘 할 일: [목록]. 미팅: [시간]. 우선순위 순서와 시간 블록 계획표를 만들어줘\""
+    },
+    {
+      "type": "practice",
+      "title": "회의 후 액션아이템 자동 추출",
+      "description": "회의 메모나 녹취록을 붙여넣으면 AI가 결정사항·담당자·기한을 표로 정리하는 실습",
+      "command": "claude \"[회의 메모 붙여넣기] → 결정사항, 담당자, 기한을 표로 정리해줘\""
+    }
+  ]
+}
