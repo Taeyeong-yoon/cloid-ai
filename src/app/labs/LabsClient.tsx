@@ -59,6 +59,7 @@ function VideoCard({ v }: { v: LabVideo }) {
         <img
           src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
           alt={v.title}
+          loading="lazy"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
@@ -80,6 +81,7 @@ function VideoCard({ v }: { v: LabVideo }) {
         title={v.title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
+        loading="lazy"
         className="w-full h-full"
       />
     </div>
