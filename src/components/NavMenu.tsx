@@ -125,9 +125,20 @@ function SearchModal({ onClose }: { onClose: () => void }) {
               </span>
             </button>
           ) : (
-            <p className="text-xs text-slate-500 text-center py-2">
-              검색어를 입력하면 해당 섹션의 콘텐츠를 탐색합니다.
-            </p>
+            <div className="space-y-3">
+              <p className="text-xs text-slate-500">{t.search?.popular ?? "인기 검색어"}</p>
+              <div className="flex flex-wrap gap-2">
+                {["Claude API", "MCP", "프롬프트", "에이전트", "RAG", "LangChain"].map((keyword) => (
+                  <button
+                    key={keyword}
+                    onClick={() => setQuery(keyword)}
+                    className="text-xs px-3 py-1.5 rounded-full border border-slate-700 text-slate-400 hover:border-violet-600 hover:text-violet-300 hover:bg-violet-900/20 transition-all"
+                  >
+                    {keyword}
+                  </button>
+                ))}
+              </div>
+            </div>
           )}
 
           {/* Ask AI 연결 */}
@@ -158,7 +169,7 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
 
   const links = [
     { href: "/",        label: t.nav.home,     icon: Brain,        guard: false },
-    { href: "/radar",   label: t.nav.radar,    icon: Radar,        guard: true  },
+    { href: "/radar",   label: t.nav.radar,    icon: Radar,        guard: false },
     { href: "/learning",label: t.nav.learning, icon: BookOpen,     guard: true  },
     { href: "/skills",  label: t.nav.skills,   icon: Zap,          guard: true  },
     { href: "/labs",    label: t.nav.labs,     icon: FlaskConical, guard: true  },

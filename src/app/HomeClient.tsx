@@ -14,6 +14,7 @@ import {
   Briefcase,
   Rocket,
   Radio,
+  ChevronDown,
 } from "lucide-react";
 import AskAI from "@/components/AskAI";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
@@ -250,9 +251,19 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
         <p className="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed mb-1">
           {t.home.hero_desc}
         </p>
-        <p className="text-slate-500 text-sm max-w-xl leading-relaxed mb-6">
+        <p className="text-slate-500 text-sm max-w-xl leading-relaxed mb-3">
           {t.home.hero_sub_desc}
         </p>
+
+        {/* 소셜프루프 한 줄 */}
+        <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-slate-500">
+          <span className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+            {t.home.social_proof_updated}
+          </span>
+          <span>📚 {t.home.social_proof_contents}</span>
+          <span>🧪 {t.home.social_proof_labs}</span>
+        </div>
 
         {/* 수준별 시작 경로 배너 */}
         <div className="rounded-xl border border-slate-700 bg-slate-900/50 p-4">
@@ -314,7 +325,6 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
             </h2>
             <a
               href="/radar"
-              onClick={(e) => handleGuardedClick(e, "/radar")}
               data-event="cta_today_update_view_all"
               className="text-xs text-violet-400 hover:text-violet-300 transition-colors"
             >
@@ -325,8 +335,7 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
             {/* Radar 카드 */}
             {todayUpdate.radar && (
               <a
-                href={`/radar`}
-                onClick={(e) => handleGuardedClick(e, `/radar`)}
+                href="/radar"
                 data-event="cta_today_radar"
                 className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-700 hover:bg-slate-800/50 transition-all"
               >
@@ -412,67 +421,8 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
         </section>
       )}
 
-      {/* ── 3. Quick Access ──────────────────────────────────── */}
-      <section>
-        <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
-          <ExternalLink size={14} />
-          {t.home.ai_tools_heading}
-        </h2>
-        <div className="grid grid-cols-4 sm:grid-cols-8 gap-2">
-          {AI_TOOLS.map((tool) => (
-            <div key={tool.name} className="flex flex-col items-center gap-1">
-              <a
-                href={tool.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col items-center gap-1.5 p-3 rounded-xl border border-slate-800 hover:border-slate-600 bg-slate-900/40 hover:bg-slate-800/60 transition-all w-full"
-                title={tool.desc}
-              >
-                <div className={`w-9 h-9 rounded-lg ${tool.bg} flex items-center justify-center text-white shadow-sm`}>
-                  {tool.icon}
-                </div>
-                <span className="text-xs text-slate-400 group-hover:text-white transition-colors text-center leading-tight">
-                  {tool.name}
-                </span>
-              </a>
-              <a
-                href={`/learning`}
-                onClick={(e) => handleGuardedClick(e, `/learning`)}
-                data-event={`cta_learn_tool_${tool.learnTag}`}
-                className="text-[10px] text-violet-500 hover:text-violet-300 transition-colors hover:underline"
-              >
-                {t.home.learn_tool}
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ── 4. Ask AI ────────────────────────────────────────── */}
       <AskAI />
-
-      {/* ── HTML 미리보기 빠른 이동 배너 ───────────────────── */}
-      <div className="flex items-center justify-between p-3 rounded-xl border border-amber-800/30 bg-amber-950/20 hover:border-amber-700/50 transition-all">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700/50 flex items-center justify-center text-amber-400">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-            </svg>
-          </div>
-          <div>
-            <p className="text-sm font-medium text-white">HTML 코드 미리보기</p>
-            <p className="text-xs text-slate-500">AI가 만든 HTML을 붙여넣으면 즉시 미리보기 + 파일 저장</p>
-          </div>
-        </div>
-        <a
-          href="/labs"
-          onClick={(e) => handleGuardedClick(e, "/labs")}
-          data-event="cta_html_preview_shortcut"
-          className="shrink-0 text-xs text-amber-400 hover:text-amber-300 hover:underline transition-colors"
-        >
-          Labs에서 열기 →
-        </a>
-      </div>
 
       {/* ── 5. 학습 여정 ─────────────────────────────────────── */}
       <section>
@@ -535,7 +485,59 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
         </div>
       </section>
 
-      {/* ── 6. 로그인 유도 / 이어보기 ───────────────────────── */}
+      {/* ── 6. 신뢰 요소 ─────────────────────────────────────── */}
+      <section className="rounded-2xl border border-slate-800 bg-slate-900/30 p-6">
+        <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">
+          💡 {t.home.why_cloid}
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
+          <div className="text-center p-4 rounded-xl bg-slate-800/40 border border-slate-700">
+            <div className="text-2xl font-bold text-violet-400 mb-1">50+</div>
+            <div className="text-xs text-slate-400">{t.home.trust_contents}</div>
+          </div>
+          <div className="text-center p-4 rounded-xl bg-slate-800/40 border border-slate-700">
+            <div className="text-2xl font-bold text-emerald-400 mb-1">{t.home.trust_daily}</div>
+            <div className="text-xs text-slate-400">{t.home.trust_update}</div>
+          </div>
+          <div className="text-center p-4 rounded-xl bg-slate-800/40 border border-slate-700">
+            <div className="text-2xl font-bold text-amber-400 mb-1">100%</div>
+            <div className="text-xs text-slate-400">{t.home.trust_free}</div>
+          </div>
+        </div>
+        <div className="flex items-center gap-3 p-4 rounded-xl bg-slate-800/30 border border-slate-700/50">
+          <div className="w-10 h-10 rounded-full bg-violet-900/50 border border-violet-700 flex items-center justify-center text-violet-400 text-lg shrink-0">
+            🧑‍💻
+          </div>
+          <div>
+            <p className="text-sm font-medium text-white">{t.home.trust_operator_title}</p>
+            <p className="text-xs text-slate-500">{t.home.trust_operator_desc}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 7. FAQ ───────────────────────────────────────────── */}
+      <section id="faq">
+        <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3">
+          ❓ {t.home.faq_title}
+        </h2>
+        <div className="space-y-2">
+          {[
+            { q: t.home.faq_q1, a: t.home.faq_a1 },
+            { q: t.home.faq_q2, a: t.home.faq_a2 },
+            { q: t.home.faq_q3, a: t.home.faq_a3 },
+          ].map((item) => (
+            <details key={item.q} className="group rounded-lg border border-slate-700 bg-slate-900/40">
+              <summary className="flex items-center justify-between px-4 py-3 cursor-pointer text-sm text-white hover:text-violet-300 transition-colors list-none">
+                {item.q}
+                <ChevronDown size={14} className="text-slate-500 group-open:rotate-180 transition-transform shrink-0" />
+              </summary>
+              <p className="px-4 pb-3 text-xs text-slate-400 leading-relaxed">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      {/* ── 8. 로그인 유도 / 이어보기 ───────────────────────── */}
       {!user ? (
         <section className="rounded-xl border border-slate-700 bg-slate-900/50 p-5">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -609,6 +611,65 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
           </div>
         </section>
       )}
+
+      {/* ── 9. Quick Access ──────────────────────────────────── */}
+      <section>
+        <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+          <ExternalLink size={14} />
+          {t.home.ai_tools_heading}
+        </h2>
+        <div className="grid grid-cols-4 sm:grid-cols-8 gap-2">
+          {AI_TOOLS.map((tool) => (
+            <div key={tool.name} className="flex flex-col items-center gap-1">
+              <a
+                href={tool.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center gap-1.5 p-3 rounded-xl border border-slate-800 hover:border-slate-600 bg-slate-900/40 hover:bg-slate-800/60 transition-all w-full"
+                title={tool.desc}
+              >
+                <div className={`w-9 h-9 rounded-lg ${tool.bg} flex items-center justify-center text-white shadow-sm`}>
+                  {tool.icon}
+                </div>
+                <span className="text-xs text-slate-400 group-hover:text-white transition-colors text-center leading-tight">
+                  {tool.name}
+                </span>
+              </a>
+              <a
+                href="/learning"
+                onClick={(e) => handleGuardedClick(e, "/learning")}
+                data-event={`cta_learn_tool_${tool.learnTag}`}
+                className="text-[10px] text-violet-500 hover:text-violet-300 transition-colors hover:underline"
+              >
+                {t.home.learn_tool}
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── HTML 미리보기 빠른 이동 배너 ───────────────────── */}
+      <div className="flex items-center justify-between p-3 rounded-xl border border-amber-800/30 bg-amber-950/20 hover:border-amber-700/50 transition-all">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700/50 flex items-center justify-center text-amber-400">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div>
+            <p className="text-sm font-medium text-white">HTML 코드 미리보기</p>
+            <p className="text-xs text-slate-500">AI가 만든 HTML을 붙여넣으면 즉시 미리보기 + 파일 저장</p>
+          </div>
+        </div>
+        <a
+          href="/labs"
+          onClick={(e) => handleGuardedClick(e, "/labs")}
+          data-event="cta_html_preview_shortcut"
+          className="shrink-0 text-xs text-amber-400 hover:text-amber-300 hover:underline transition-colors"
+        >
+          Labs에서 열기 →
+        </a>
+      </div>
 
     </div>
   );

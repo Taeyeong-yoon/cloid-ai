@@ -39,7 +39,7 @@ export default function RootLayout({
                 <div className="flex flex-col sm:items-end gap-2">
                   <div className="flex items-center gap-4">
                     <a
-                      href="/learning"
+                      href="/#faq"
                       className="text-xs text-slate-500 hover:text-slate-300 transition-colors"
                     >
                       자주 묻는 질문
@@ -53,7 +53,9 @@ export default function RootLayout({
                   </div>
                   <div className="flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                    <span className="text-xs text-slate-500">콘텐츠 업데이트 주기: 매일</span>
+                    <span className="text-xs text-slate-500">
+                      콘텐츠 업데이트 주기: 매일 · {new Date().toLocaleDateString("ko-KR", { month: "long", day: "numeric" })} 업데이트
+                    </span>
                   </div>
                 </div>
               </div>

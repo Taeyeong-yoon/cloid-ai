@@ -142,7 +142,7 @@ export default function AskAI() {
         <Sparkles size={20} className="text-violet-400" />
         <h2 className="text-lg font-semibold text-white">{t.home.ask_ai_title}</h2>
         <span className="text-xs text-violet-400 bg-violet-900/40 px-2 py-0.5 rounded-full border border-violet-700/50">
-          GPT-5.2 mini
+          GPT-4o mini
         </span>
       </div>
 
@@ -224,7 +224,7 @@ export default function AskAI() {
                       {item.title}
                     </div>
                     <span className="text-[10px] text-violet-500 group-hover:underline">
-                      바로보기 →
+                      {t.common.view_now}
                     </span>
                   </a>
                 ))}
