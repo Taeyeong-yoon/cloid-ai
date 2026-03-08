@@ -167,7 +167,7 @@ SEO용 키워드: [키워드 3~5개]
 
 - "AI 블로그 글쓰기 ChatGPT 활용법"
 - "챗지피티로 SNS 콘텐츠 만들기"
-- "AI writing tools for content creators 2025"
+- "AI writing tools for content creators 2026"
 - "Claude AI 글쓰기 한국어"
 
 ---

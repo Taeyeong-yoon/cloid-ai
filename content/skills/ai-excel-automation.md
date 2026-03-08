@@ -163,7 +163,7 @@ VLOOKUP과 XLOOKUP 두 가지 방법 모두 알려주세요.
 ## 📺 추천 영상 (아래 키워드로 유튜브 검색)
 
 - "ChatGPT 엑셀 수식 자동 생성 방법"
-- "AI로 엑셀 업무 자동화 2025"
+- "AI로 엑셀 업무 자동화 2026"
 - "Excel formula AI ChatGPT tutorial"
 - "엑셀 함수 모르면 AI에게 물어보기"
 

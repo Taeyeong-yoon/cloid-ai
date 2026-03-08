@@ -201,9 +201,9 @@ JSON 형식으로 출력해주세요.
 ## 📺 추천 영상 (아래 키워드로 유튜브 검색)
 
 - "Zapier ChatGPT 연동 자동화 한국어"
-- "Zapier OpenAI integration tutorial 2025"
+- "Zapier OpenAI integration tutorial 2026"
 - "업무 자동화 Zapier Make 비교"
-- "AI workflow automation no-code 2025"
+- "AI workflow automation no-code 2026"
 
 ---
 

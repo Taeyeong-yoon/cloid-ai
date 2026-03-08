@@ -134,10 +134,10 @@ clean and modern style, centered composition
 
 ## 📺 추천 영상 (아래 키워드로 유튜브 검색)
 
-- "AI 이미지 생성 DALL-E Midjourney 비교 2025"
+- "AI 이미지 생성 DALL-E Midjourney 비교 2026"
 - "Ideogram 사용법 한국어 무료"
 - "AI 이미지 프롬프트 작성법 초보"
-- "Midjourney beginner tutorial 2025"
+- "Midjourney beginner tutorial 2026"
 
 ---
 

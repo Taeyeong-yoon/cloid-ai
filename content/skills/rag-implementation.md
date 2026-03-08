@@ -45,7 +45,7 @@ Python으로 PDF 파일 기반 RAG 시스템을 만들어주세요.
 3. 임베딩: OpenAI text-embedding-3-small
 4. 벡터DB: Chroma (로컬)
 5. 검색: 코사인 유사도 Top-5
-6. 답변 생성: Claude claude-3-5-sonnet
+6. 답변 생성: Claude claude-sonnet-4-6
 
 사용 예시:
 - "이 문서에서 [질문]에 대해 알려줘"
@@ -64,7 +64,7 @@ Supabase pgvector를 사용하는 RAG 시스템을 만들어주세요.
 구성:
 - 벡터DB: Supabase (pgvector 확장)
 - 임베딩: OpenAI text-embedding-3-small (1536 차원)
-- LLM: Claude claude-3-5-sonnet
+- LLM: Claude claude-sonnet-4-6
 
 SQL 스키마:
 CREATE TABLE documents (
@@ -250,7 +250,7 @@ SQLite에 메트릭 저장
 ## 📺 추천 영상 (아래 키워드로 유튜브 검색)
 
 - "RAG 시스템 구현 Python LangChain 한국어"
-- "RAG tutorial LangChain ChromaDB Claude 2025"
+- "RAG tutorial LangChain ChromaDB Claude 2026"
 - "벡터 데이터베이스 임베딩 RAG 입문"
 - "Supabase pgvector RAG implementation"
 

@@ -292,10 +292,10 @@ MCP 서버에 로깅 시스템을 추가해주세요.
 
 ## 📺 추천 영상 (아래 키워드로 유튜브 검색)
 
-- "MCP 서버 만들기 TypeScript 한국어 2025"
+- "MCP 서버 만들기 TypeScript 한국어 2026"
 - "Model Context Protocol server tutorial from scratch"
 - "Claude MCP custom tool building guide"
-- "MCP server Claude Desktop integration 2025"
+- "MCP server Claude Desktop integration 2026"
 
 ---
 

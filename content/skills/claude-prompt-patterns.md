@@ -240,7 +240,7 @@ XML 태그를 적절히 활용해주세요.
 ## 📺 추천 영상 (아래 키워드로 유튜브 검색)
 
 - "Claude XML 프롬프트 엔지니어링 고급"
-- "Anthropic prompt engineering best practices 2025"
+- "Anthropic prompt engineering best practices 2026"
 - "프롬프트 체이닝 실전 예제 Claude"
 - "Claude API system prompt tutorial"
 

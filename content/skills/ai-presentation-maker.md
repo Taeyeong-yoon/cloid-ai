@@ -163,7 +163,7 @@ summary: "기획→구성→디자인 단계별 AI 프롬프트 체인으로 발
 - "ChatGPT 발표자료 PPT 자동 만들기"
 - "AI로 프레젠테이션 10분 만에 완성"
 - "Canva AI 발표자료 만들기 한국어"
-- "ChatGPT PowerPoint presentation creation 2025"
+- "ChatGPT PowerPoint presentation creation 2026"
 
 ---
 

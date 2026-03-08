@@ -225,7 +225,7 @@ SEO 콘텐츠 기획을 도와주세요.
 ## 📺 추천 영상 (아래 키워드로 유튜브 검색)
 
 - "AI SEO 콘텐츠 작성 ChatGPT 블로그 최적화"
-- "ChatGPT SEO content writing strategy 2025"
+- "ChatGPT SEO content writing strategy 2026"
 - "구글 상위 노출 AI 블로그 글쓰기"
 - "SEO content cluster strategy with AI"
 

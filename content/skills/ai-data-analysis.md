@@ -222,7 +222,7 @@ products (product_id, name, category, price)
 
 - "ChatGPT 데이터 분석 CSV 업로드 방법"
 - "AI 데이터 분석 코딩 없이 인사이트"
-- "ChatGPT data analysis tutorial 2025"
+- "ChatGPT data analysis tutorial 2026"
 - "Python 데이터 분석 AI 자동화 입문"
 
 ---

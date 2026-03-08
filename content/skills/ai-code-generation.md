@@ -188,7 +188,7 @@ TypeScript 사용
 
 - "ChatGPT로 웹사이트 만들기 비개발자"
 - "AI 코딩 입문 HTML CSS JavaScript"
-- "Claude AI web app creation no code 2025"
+- "Claude AI web app creation no code 2026"
 - "비개발자 AI 코딩 실전 프로젝트"
 
 ---

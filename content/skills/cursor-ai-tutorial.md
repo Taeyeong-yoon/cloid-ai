@@ -7,7 +7,7 @@ summary: "Cursor AI 에디터 설치·설정부터 실제 투두앱 완성까지
 
 ## 🎯 학습 목표
 
-1. Cursor를 설치하고 Claude/GPT-4o 모델과 연동할 수 있다
+1. Cursor를 설치하고 Claude/GPT-5.2 모델과 연동할 수 있다
 2. Cursor의 핵심 기능(Chat, Composer, Tab 자동완성)을 실무에 활용할 수 있다
 3. Cursor로 투두앱을 처음부터 끝까지 완성할 수 있다
 
@@ -30,7 +30,7 @@ Cursor는 AI가 내장된 코드 에디터입니다. VS Code 기반이라 기존
 
 1. cursor.com에서 Cursor 다운로드 및 설치
 2. VS Code 설정 임포트 (선택사항 — 기존 VS Code 사용자)
-3. Settings → Models에서 사용할 모델 선택 (claude-3.5-sonnet 권장)
+3. Settings → Models에서 사용할 모델 선택 (claude-sonnet-4-6 권장)
 4. API 키 설정 (OpenAI, Anthropic) 또는 Cursor Pro 구독
 
 **첫 프로젝트 열기:**
@@ -217,9 +217,9 @@ React.memo, useMemo, useCallback 활용 방안을 포함해주세요.
 
 ## 📺 추천 영상 (아래 키워드로 유튜브 검색)
 
-- "Cursor AI 에디터 완전 가이드 한국어 2025"
+- "Cursor AI 에디터 완전 가이드 한국어 2026"
 - "Cursor IDE tutorial beginner to advanced"
-- "Cursor vs Claude Code 비교 2025"
+- "Cursor vs Claude Code 비교 2026"
 - "Cursor AI 투두앱 만들기 실습"
 
 ---
