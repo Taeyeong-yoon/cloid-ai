@@ -153,7 +153,7 @@ export default function AskAI() {
       </div>
 
       {/* 수준별 빠른 질문 */}
-      <div className="flex gap-2 mb-4 overflow-x-auto pb-1 -mx-1 px-1 snap-x">
+      <div className="flex gap-2 mb-4 overflow-x-auto pb-1 -mx-1 px-1 snap-x scrollbar-none" style={{scrollbarWidth:"none"}}>
         {QUICK_QUESTIONS.map((q) => (
           <button
             key={q.text}
