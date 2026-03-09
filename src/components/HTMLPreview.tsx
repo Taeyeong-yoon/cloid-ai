@@ -81,8 +81,15 @@ ${html}
   ];
 
   return (
-    <div className={`rounded-xl border border-amber-800/40 bg-gradient-to-br from-amber-950/20 to-slate-900/60 overflow-hidden transition-all ${
-      fullscreen ? "fixed inset-4 z-50 shadow-2xl border-amber-600/60" : ""
+    <>
+    {/* 전체화면 딤 오버레이 */}
+    {fullscreen && (
+      <div className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm" onClick={() => setFullscreen(false)} />
+    )}
+    <div className={`rounded-xl border border-amber-800/40 overflow-hidden transition-all ${
+      fullscreen
+        ? "fixed inset-4 z-50 shadow-2xl border-amber-600/60 bg-[#0f1117]"
+        : "bg-gradient-to-br from-amber-950/20 to-slate-900/60"
     }`}>
       {/* 헤더 */}
       <div className="flex items-center justify-between px-4 py-2.5 border-b border-amber-800/30 bg-amber-950/20">
@@ -211,5 +218,6 @@ ${html}
         </p>
       </div>
     </div>
+    </>
   );
 }
