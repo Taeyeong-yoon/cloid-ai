@@ -110,6 +110,9 @@ export const translations = {
       faq_a2: "Yes, all learning content and labs are free. Sign in with Google for progress tracking and bookmarks.",
       faq_q3: "How often is content updated?",
       faq_a3: "We monitor AI trends daily and add new content daily to weekly. The latest tools and techniques are reflected quickly.",
+      no_content_yet: "Browse recommended content",
+      rate_limit_exceeded_guest: "Daily limit (3) reached. Sign in for up to 10 questions!",
+      rate_limit_exceeded_user: "Daily limit (10) reached. Please try again tomorrow.",
     },
     radar: {
       title: "AI Trend Radar",
@@ -288,6 +291,9 @@ export const translations = {
       faq_a2: "네, 모든 학습 콘텐츠와 실습은 무료입니다. 구글 로그인만 하면 진도 저장, 북마크 등 추가 기능을 사용할 수 있습니다.",
       faq_q3: "콘텐츠는 얼마나 자주 업데이트되나요?",
       faq_a3: "AI 트렌드를 매일 모니터링하고, 새로운 콘텐츠를 매일~주 단위로 추가합니다. 최신 도구와 기법을 빠르게 반영합니다.",
+      no_content_yet: "추천 콘텐츠 보러가기",
+      rate_limit_exceeded_guest: "일일 질문 한도(3회)를 초과했습니다. 로그인하면 10회까지 사용할 수 있어요!",
+      rate_limit_exceeded_user: "일일 질문 한도(10회)를 초과했습니다. 내일 다시 이용해주세요.",
     },
     radar: {
       title: "AI 트렌드 레이더",

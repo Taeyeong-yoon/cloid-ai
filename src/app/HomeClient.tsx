@@ -14,9 +14,9 @@ import {
   Briefcase,
   Rocket,
   Radio,
-  ChevronDown,
 } from "lucide-react";
 import AskAI from "@/components/AskAI";
+import HTMLPreview from "@/components/HTMLPreview";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 import { useAuth } from "@/lib/auth/AuthContext";
 
@@ -200,6 +200,7 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
       desc: t.home.journey_radar_desc,
       cta: t.home.radar_label + " →",
       event: "cta_journey_radar",
+      guard: false,
     },
     {
       step: "②",
@@ -211,6 +212,7 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
       desc: t.home.journey_learning_desc,
       cta: t.home.learning_label + " →",
       event: "cta_journey_learning",
+      guard: false,
     },
     {
       step: "③",
@@ -222,6 +224,7 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
       desc: t.home.journey_skills_desc,
       cta: t.home.skills_label + " →",
       event: "cta_journey_skills",
+      guard: true,
     },
     {
       step: "④",
@@ -233,6 +236,7 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
       desc: t.home.journey_labs_desc,
       cta: t.home.labs_label + " →",
       event: "cta_journey_labs",
+      guard: true,
     },
   ];
 
@@ -245,7 +249,7 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
           <TrendingUp size={16} />
           <span>{t.home.trending_badge}</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
           CLOID<span className="text-violet-400">.AI</span>
         </h1>
         <p className="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed mb-1">
@@ -256,7 +260,7 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
         </p>
 
         {/* 소셜프루프 한 줄 */}
-        <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-slate-500">
+        <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-2 sm:gap-4 mb-6 text-xs sm:text-sm text-slate-500">
           <span className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             {t.home.social_proof_updated}
@@ -271,7 +275,6 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
             <a
               href="/learning?level=beginner"
-              onClick={(e) => handleGuardedClick(e, "/learning?level=beginner")}
               data-event="cta_level_beginner"
               className="flex items-center gap-3 p-3 rounded-lg border border-slate-700 hover:border-green-700 hover:bg-green-900/10 transition-all group"
             >
@@ -315,7 +318,10 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
         </div>
       </section>
 
-      {/* ── 2. 오늘의 업데이트 ───────────────────────────────── */}
+      {/* ── 2. Ask AI (히어로 바로 아래) ─────────────────────── */}
+      <AskAI />
+
+      {/* ── 3. 오늘의 업데이트 ───────────────────────────────── */}
       {(todayUpdate.radar || todayUpdate.learning || todayUpdate.lab) && (
         <section>
           <div className="flex items-center justify-between mb-3">
@@ -331,13 +337,13 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
               {t.home.today_update_view_all} →
             </a>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 overflow-x-auto">
+          <div className="flex sm:grid sm:grid-cols-3 gap-3 overflow-x-auto pb-2 snap-x snap-mandatory">
             {/* Radar 카드 */}
             {todayUpdate.radar && (
               <a
                 href="/radar"
                 data-event="cta_today_radar"
-                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-700 hover:bg-slate-800/50 transition-all"
+                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-700 hover:bg-slate-800/50 transition-all min-w-[280px] sm:min-w-0 snap-start"
               >
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-bold text-emerald-400 bg-emerald-900/30 px-2 py-0.5 rounded-full border border-emerald-800/50">
@@ -360,13 +366,12 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
               </a>
             )}
 
-            {/* Learning 카드 */}
+            {/* Learning 카드 - 비로그인 개방 (작업 8) */}
             {todayUpdate.learning && (
               <a
                 href="/learning"
-                onClick={(e) => handleGuardedClick(e, "/learning")}
                 data-event="cta_today_learning"
-                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-blue-700 hover:bg-slate-800/50 transition-all"
+                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-blue-700 hover:bg-slate-800/50 transition-all min-w-[280px] sm:min-w-0 snap-start"
               >
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-bold text-blue-400 bg-blue-900/30 px-2 py-0.5 rounded-full border border-blue-800/50">
@@ -395,7 +400,7 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
                 href="/labs"
                 onClick={(e) => handleGuardedClick(e, "/labs")}
                 data-event="cta_today_lab"
-                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-violet-700 hover:bg-slate-800/50 transition-all"
+                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-violet-700 hover:bg-slate-800/50 transition-all min-w-[280px] sm:min-w-0 snap-start"
               >
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-bold text-violet-400 bg-violet-900/30 px-2 py-0.5 rounded-full border border-violet-800/50">
@@ -421,10 +426,7 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
         </section>
       )}
 
-      {/* ── 4. Ask AI ────────────────────────────────────────── */}
-      <AskAI />
-
-      {/* ── 5. 학습 여정 ─────────────────────────────────────── */}
+      {/* ── 4. 학습 여정 ─────────────────────────────────────── */}
       <section>
         <div className="mb-4">
           <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">
@@ -435,13 +437,13 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
 
         {/* 4단계 흐름 */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
-          {journey.map(({ step, href, label, icon: Icon, color, border, desc, cta, event }, idx) => (
+          {journey.map(({ step, href, label, icon: Icon, color, border, desc, cta, event, guard }, idx) => (
             <div key={href} className="flex flex-col sm:flex-row md:flex-col items-stretch gap-2">
               <a
                 href={href}
-                onClick={(e) => handleGuardedClick(e, href)}
+                onClick={guard ? (e) => handleGuardedClick(e, href) : undefined}
                 data-event={event}
-                className={`group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 ${border} hover:bg-slate-800/50 transition-all cursor-pointer flex-1`}
+                className={`group flex flex-col gap-2 p-3 sm:p-4 rounded-xl border border-slate-800 bg-slate-900/50 ${border} hover:bg-slate-800/50 transition-all cursor-pointer flex-1`}
               >
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold text-slate-500">{step}</span>
@@ -485,59 +487,7 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
         </div>
       </section>
 
-      {/* ── 6. 신뢰 요소 ─────────────────────────────────────── */}
-      <section className="rounded-2xl border border-slate-800 bg-slate-900/30 p-6">
-        <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">
-          💡 {t.home.why_cloid}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
-          <div className="text-center p-4 rounded-xl bg-slate-800/40 border border-slate-700">
-            <div className="text-2xl font-bold text-violet-400 mb-1">50+</div>
-            <div className="text-xs text-slate-400">{t.home.trust_contents}</div>
-          </div>
-          <div className="text-center p-4 rounded-xl bg-slate-800/40 border border-slate-700">
-            <div className="text-2xl font-bold text-emerald-400 mb-1">{t.home.trust_daily}</div>
-            <div className="text-xs text-slate-400">{t.home.trust_update}</div>
-          </div>
-          <div className="text-center p-4 rounded-xl bg-slate-800/40 border border-slate-700">
-            <div className="text-2xl font-bold text-amber-400 mb-1">100%</div>
-            <div className="text-xs text-slate-400">{t.home.trust_free}</div>
-          </div>
-        </div>
-        <div className="flex items-center gap-3 p-4 rounded-xl bg-slate-800/30 border border-slate-700/50">
-          <div className="w-10 h-10 rounded-full bg-violet-900/50 border border-violet-700 flex items-center justify-center text-violet-400 text-lg shrink-0">
-            🧑‍💻
-          </div>
-          <div>
-            <p className="text-sm font-medium text-white">{t.home.trust_operator_title}</p>
-            <p className="text-xs text-slate-500">{t.home.trust_operator_desc}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 7. FAQ ───────────────────────────────────────────── */}
-      <section id="faq">
-        <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3">
-          ❓ {t.home.faq_title}
-        </h2>
-        <div className="space-y-2">
-          {[
-            { q: t.home.faq_q1, a: t.home.faq_a1 },
-            { q: t.home.faq_q2, a: t.home.faq_a2 },
-            { q: t.home.faq_q3, a: t.home.faq_a3 },
-          ].map((item) => (
-            <details key={item.q} className="group rounded-lg border border-slate-700 bg-slate-900/40">
-              <summary className="flex items-center justify-between px-4 py-3 cursor-pointer text-sm text-white hover:text-violet-300 transition-colors list-none">
-                {item.q}
-                <ChevronDown size={14} className="text-slate-500 group-open:rotate-180 transition-transform shrink-0" />
-              </summary>
-              <p className="px-4 pb-3 text-xs text-slate-400 leading-relaxed">{item.a}</p>
-            </details>
-          ))}
-        </div>
-      </section>
-
-      {/* ── 8. 로그인 유도 / 이어보기 ───────────────────────── */}
+      {/* ── 5. 로그인 유도 / 이어보기 ───────────────────────── */}
       {!user ? (
         <section className="rounded-xl border border-slate-700 bg-slate-900/50 p-5">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -584,12 +534,14 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
               <div className="flex items-center gap-2">
                 <BookOpen size={14} className="text-blue-400" />
                 <span className="text-xs text-slate-400">{t.home.continue_reading}:</span>
-                <span className="text-xs text-slate-200">—</span>
+                <span className="text-xs text-slate-200">
+                  {todayUpdate.learning?.title ?? t.home.no_content_yet}
+                </span>
               </div>
               <a
-                href="/learning"
+                href={todayUpdate.learning ? "/learning" : "/learning"}
                 data-event="cta_welcome_continue_reading"
-                className="text-xs text-violet-400 hover:text-violet-300 hover:underline transition-colors"
+                className="text-xs text-violet-400 hover:text-violet-300 hover:underline transition-colors shrink-0"
               >
                 {t.home.continue_btn} →
               </a>
@@ -598,12 +550,14 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
               <div className="flex items-center gap-2">
                 <FlaskConical size={14} className="text-violet-400" />
                 <span className="text-xs text-slate-400">{t.home.continue_lab}:</span>
-                <span className="text-xs text-slate-200">—</span>
+                <span className="text-xs text-slate-200">
+                  {todayUpdate.lab?.title ?? t.home.no_content_yet}
+                </span>
               </div>
               <a
                 href="/labs"
                 data-event="cta_welcome_continue_lab"
-                className="text-xs text-violet-400 hover:text-violet-300 hover:underline transition-colors"
+                className="text-xs text-violet-400 hover:text-violet-300 hover:underline transition-colors shrink-0"
               >
                 {t.home.continue_btn} →
               </a>
@@ -612,7 +566,7 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
         </section>
       )}
 
-      {/* ── 9. Quick Access ──────────────────────────────────── */}
+      {/* ── 6. AI 도구 바로가기 ──────────────────────────────── */}
       <section>
         <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
           <ExternalLink size={14} />
@@ -628,7 +582,7 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
                 className="group flex flex-col items-center gap-1.5 p-3 rounded-xl border border-slate-800 hover:border-slate-600 bg-slate-900/40 hover:bg-slate-800/60 transition-all w-full"
                 title={tool.desc}
               >
-                <div className={`w-9 h-9 rounded-lg ${tool.bg} flex items-center justify-center text-white shadow-sm`}>
+                <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-lg ${tool.bg} flex items-center justify-center text-white shadow-sm`}>
                   {tool.icon}
                 </div>
                 <span className="text-xs text-slate-400 group-hover:text-white transition-colors text-center leading-tight">
@@ -637,7 +591,6 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
               </a>
               <a
                 href="/learning"
-                onClick={(e) => handleGuardedClick(e, "/learning")}
                 data-event={`cta_learn_tool_${tool.learnTag}`}
                 className="text-[10px] text-violet-500 hover:text-violet-300 transition-colors hover:underline"
               >
@@ -648,28 +601,8 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
         </div>
       </section>
 
-      {/* ── HTML 미리보기 빠른 이동 배너 ───────────────────── */}
-      <div className="flex items-center justify-between p-3 rounded-xl border border-amber-800/30 bg-amber-950/20 hover:border-amber-700/50 transition-all">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-amber-900/50 border border-amber-700/50 flex items-center justify-center text-amber-400">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
-              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-            </svg>
-          </div>
-          <div>
-            <p className="text-sm font-medium text-white">HTML 코드 미리보기</p>
-            <p className="text-xs text-slate-500">AI가 만든 HTML을 붙여넣으면 즉시 미리보기 + 파일 저장</p>
-          </div>
-        </div>
-        <a
-          href="/labs"
-          onClick={(e) => handleGuardedClick(e, "/labs")}
-          data-event="cta_html_preview_shortcut"
-          className="shrink-0 text-xs text-amber-400 hover:text-amber-300 hover:underline transition-colors"
-        >
-          Labs에서 열기 →
-        </a>
-      </div>
+      {/* ── 7. HTML/CSS/JS 미리보기 (비로그인 체험용) ────────── */}
+      <HTMLPreview />
 
     </div>
   );

@@ -1,5 +1,6 @@
 import OpenAI from 'openai';
 import { NextRequest, NextResponse } from 'next/server';
+import { createClient } from '@/lib/supabase/server';
 
 // ── IP당 분당 5회 제한 ─────────────────────────────────────
 const rateLimitMap = new Map<string, number[]>();
@@ -18,6 +19,24 @@ function isRateLimited(ip: string): boolean {
     }
   }
   return false;
+}
+
+// ── 일일 사용자별 제한 ─────────────────────────────────────
+const dailyLimitMap = new Map<string, { count: number; resetAt: number }>();
+
+function checkDailyLimit(identifier: string, isLoggedIn: boolean): boolean {
+  const limit = isLoggedIn ? 10 : 3;
+  const now = Date.now();
+  const record = dailyLimitMap.get(identifier);
+
+  if (!record || now > record.resetAt) {
+    dailyLimitMap.set(identifier, { count: 1, resetAt: now + 24 * 60 * 60 * 1000 });
+    return true;
+  }
+
+  if (record.count >= limit) return false;
+  record.count++;
+  return true;
 }
 
 // ── 일일 호출 카운터 (과금 보호) ──────────────────────────
@@ -54,6 +73,25 @@ export async function POST(req: NextRequest) {
       { error: '요청이 너무 많습니다. 1분 후 다시 시도해주세요. (분당 5회 제한)' },
       { status: 429 },
     );
+  }
+
+  // ── 로그인 여부 확인 + 사용자별 일일 제한 ─────────────────
+  let userId: string | null = null;
+  try {
+    const supabase = await createClient();
+    const { data } = await supabase.auth.getUser();
+    userId = data.user?.id ?? null;
+  } catch {}
+
+  const identifier = userId ?? `ip:${ip}`;
+  const isLoggedIn = !!userId;
+
+  if (!checkDailyLimit(identifier, isLoggedIn)) {
+    const limit = isLoggedIn ? 10 : 3;
+    const errorMsg = isLoggedIn
+      ? `일일 질문 한도(${limit}회)를 초과했습니다. 내일 다시 이용해주세요.`
+      : `일일 질문 한도(${limit}회)를 초과했습니다. 로그인하면 10회까지 사용할 수 있어요!`;
+    return NextResponse.json({ error: errorMsg, requiresLogin: !isLoggedIn }, { status: 429 });
   }
 
   if (isDailyLimitReached()) {

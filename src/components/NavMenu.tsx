@@ -67,7 +67,7 @@ function SearchModal({ onClose }: { onClose: () => void }) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-start justify-center pt-20 px-4 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-[100] flex items-start justify-center pt-12 sm:pt-20 px-4 bg-black/60 backdrop-blur-sm"
       onClick={onClose}
     >
       <div
@@ -95,7 +95,7 @@ function SearchModal({ onClose }: { onClose: () => void }) {
         </form>
 
         {/* 섹션 탭 */}
-        <div className="flex gap-1 p-3 border-b border-slate-800">
+        <div className="flex gap-1 p-3 border-b border-slate-800 overflow-x-auto">
           {SEARCH_TABS.map((tab) => (
             <button
               key={tab.key}
@@ -170,7 +170,7 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
   const links = [
     { href: "/",        label: t.nav.home,     icon: Brain,        guard: false },
     { href: "/radar",   label: t.nav.radar,    icon: Radar,        guard: false },
-    { href: "/learning",label: t.nav.learning, icon: BookOpen,     guard: true  },
+    { href: "/learning",label: t.nav.learning, icon: BookOpen,     guard: false },
     { href: "/skills",  label: t.nav.skills,   icon: Zap,          guard: true  },
     { href: "/labs",    label: t.nav.labs,     icon: FlaskConical, guard: true  },
   ];

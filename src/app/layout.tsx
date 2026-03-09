@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Providers from "@/components/Providers";
+import FooterFAQ from "@/components/FooterFAQ";
 
 export const metadata: Metadata = {
   title: "CLOID.AI – AI 연습 포털",
@@ -20,10 +21,13 @@ export default function RootLayout({
           <Nav />
           <main className="max-w-6xl mx-auto px-4 py-8 w-full flex-1">{children}</main>
 
+          {/* ── FAQ (컴팩트) ── */}
+          <FooterFAQ />
+
           {/* ── 푸터 ─────────────────────────────────────────── */}
           <footer className="border-t border-slate-800 bg-[#0f1117]/80 mt-16">
             <div className="max-w-6xl mx-auto px-4 py-8">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 flex-wrap">
                 {/* 브랜드 + 설명 */}
                 <div>
                   <div className="font-bold text-base text-white mb-1">
