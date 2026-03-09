@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { Sparkles, Send, Loader2 } from "lucide-react";
+import { Sparkles, Send, Loader2, X } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 // ── 키워드 → 내부 콘텐츠 매핑 (MVP: 클라이언트 사이드) ──────
@@ -202,9 +202,18 @@ export default function AskAI() {
       {/* 답변 + 관련 콘텐츠 */}
       {answer && (
         <div ref={answerRef} className="mt-4 p-4 rounded-xl bg-slate-900/60 border border-slate-700">
-          <div className="flex items-center gap-2 mb-3 text-xs text-violet-400">
-            <Sparkles size={12} />
-            <span>{t.home.gemini_answer}</span>
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2 text-xs text-violet-400">
+              <Sparkles size={12} />
+              <span>{t.home.gemini_answer}</span>
+            </div>
+            <button
+              onClick={() => { setAnswer(""); setRelatedContent([]); }}
+              className="p-1 rounded text-slate-500 hover:text-white hover:bg-slate-700 transition-colors"
+              title="닫기"
+            >
+              <X size={14} />
+            </button>
           </div>
           <div className="text-sm text-slate-300 leading-relaxed whitespace-pre-wrap">{answer}</div>
 

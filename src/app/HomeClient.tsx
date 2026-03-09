@@ -331,7 +331,10 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* ── 2. Ask AI (히어로 바로 아래) ─────────────────────── */}
+      {/* ── 2. HTML/CSS/JS 미리보기 (수준별 경로 바로 아래) ─── */}
+      <HTMLPreview />
+
+      {/* ── 3. Ask AI ────────────────────────────────────────── */}
       <AskAI />
 
       {/* ── 3. 오늘의 업데이트 ───────────────────────────────── */}
@@ -614,8 +617,6 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* ── 7. HTML/CSS/JS 미리보기 (비로그인 체험용) ────────── */}
-      <HTMLPreview />
 
     </div>
   );
