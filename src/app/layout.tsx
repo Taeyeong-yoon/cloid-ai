@@ -98,17 +98,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
              - 사이트 등록 → 스크립트 발급 → ID를 아래 스크립트에 교체
         */}
 
-        {/* ── Google Analytics 4 (2-5) ── */}
-        {/* TODO: Google Analytics에서 측정 ID 발급 후 G-XXXXXXXXXX 교체 */}
-        {/* 발급 방법: https://analytics.google.com → 관리 → 데이터 스트림 → 웹 → 측정 ID 복사 */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" />
+        {/* ── Google Analytics 4 (G-YFNXBBN14Q) ── */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YFNXBBN14Q" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-XXXXXXXXXX');
+              gtag('config', 'G-YFNXBBN14Q');
             `,
           }}
         />
