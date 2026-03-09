@@ -1,8 +1,24 @@
+import type { Metadata } from "next";
 import { getRadarPost, getAllRadarPosts } from "@/lib/radar";
 import { formatDate } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import TagBadge from "@/components/TagBadge";
 import RadarBackLink from "./RadarBackLink";
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getRadarPost(slug);
+  if (!post) return {};
+  return {
+    title: `${post.title} – CLOID.AI Radar`,
+    description: post.summary || "AI 트렌드 상세 분석 – CLOID.AI",
+    openGraph: {
+      title: post.title,
+      description: post.summary,
+      url: `https://cloid.ai/radar/${slug}`,
+    },
+  };
+}
 
 export async function generateStaticParams() {
   return getAllRadarPosts().map((p) => ({ slug: p.slug }));

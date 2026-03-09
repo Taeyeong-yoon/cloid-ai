@@ -10,57 +10,63 @@ const KEYWORD_CONTENT: Record<
   { type: string; icon: string; title: string; href: string }[]
 > = {
   claude: [
-    { type: "Learning", icon: "📖", title: "Claude API 시작하기", href: "/learning" },
-    { type: "Labs", icon: "🧪", title: "Claude API 연동 실습", href: "/labs" },
+    { type: "Learning", icon: "📖", title: "Claude Code 마스터하기", href: "/learning?q=claude" },
+    { type: "Labs", icon: "🧪", title: "Claude Code 컴포넌트 실습", href: "/labs?q=claude" },
   ],
   mcp: [
-    { type: "Learning", icon: "📖", title: "MCP 입문 가이드", href: "/learning" },
-    { type: "Skills", icon: "🔧", title: "MCP 서버 연결 레시피", href: "/skills" },
-    { type: "Labs", icon: "🧪", title: "MCP 첫 실습", href: "/labs" },
+    { type: "Learning", icon: "📖", title: "MCP 심화 학습", href: "/learning?q=mcp" },
+    { type: "Labs", icon: "🧪", title: "MCP 파일시스템 실습", href: "/labs?q=mcp" },
   ],
   프롬프트: [
-    { type: "Learning", icon: "📖", title: "프롬프트 엔지니어링 기초", href: "/learning" },
-    { type: "Skills", icon: "🔧", title: "프롬프트 레시피 모음", href: "/skills" },
+    { type: "Learning", icon: "📖", title: "프롬프트 엔지니어링", href: "/learning?q=prompt" },
+    { type: "Skills", icon: "🔧", title: "프롬프트 레시피", href: "/skills?q=prompt" },
   ],
   prompt: [
-    { type: "Learning", icon: "📖", title: "Prompt Engineering Basics", href: "/learning" },
-    { type: "Skills", icon: "🔧", title: "Prompt Recipe Collection", href: "/skills" },
+    { type: "Learning", icon: "📖", title: "Prompt Engineering", href: "/learning?q=prompt" },
+    { type: "Skills", icon: "🔧", title: "Prompt Recipes", href: "/skills?q=prompt" },
   ],
   agent: [
-    { type: "Learning", icon: "📖", title: "AI 에이전트 개론", href: "/learning" },
-    { type: "Labs", icon: "🧪", title: "AI 에이전트 실습", href: "/labs" },
+    { type: "Learning", icon: "📖", title: "AI 에이전트 개발", href: "/learning?q=agent" },
+    { type: "Labs", icon: "🧪", title: "챗봇 만들기 실습", href: "/labs?q=chatbot" },
   ],
   에이전트: [
-    { type: "Learning", icon: "📖", title: "AI 에이전트 개론", href: "/learning" },
-    { type: "Labs", icon: "🧪", title: "AI 에이전트 실습", href: "/labs" },
+    { type: "Learning", icon: "📖", title: "AI 에이전트 개발", href: "/learning?q=agent" },
+    { type: "Labs", icon: "🧪", title: "챗봇 만들기 실습", href: "/labs?q=chatbot" },
   ],
   rag: [
-    { type: "Learning", icon: "📖", title: "RAG 파이프라인 이해하기", href: "/learning" },
-    { type: "Labs", icon: "🧪", title: "RAG 구축 실습", href: "/labs" },
+    { type: "Learning", icon: "📖", title: "RAG 시스템 구축", href: "/learning?q=rag" },
+    { type: "Labs", icon: "🧪", title: "데이터 시각화 실습", href: "/labs?q=data" },
   ],
   langchain: [
-    { type: "Learning", icon: "📖", title: "LangChain 기초", href: "/learning" },
-    { type: "Labs", icon: "🧪", title: "LangChain 실습", href: "/labs" },
+    { type: "Learning", icon: "📖", title: "RAG 시스템 학습", href: "/learning?q=rag" },
+    { type: "Labs", icon: "🧪", title: "API 연동 실습", href: "/labs?q=api" },
   ],
   cursor: [
-    { type: "Learning", icon: "📖", title: "Cursor AI 사용법", href: "/learning" },
-    { type: "Skills", icon: "🔧", title: "Cursor 실무 레시피", href: "/skills" },
+    { type: "Learning", icon: "📖", title: "Cursor AI 개발", href: "/learning?q=cursor" },
+    { type: "Skills", icon: "🔧", title: "Cursor 실무 패턴", href: "/skills?q=cursor" },
   ],
   자동화: [
-    { type: "Skills", icon: "🔧", title: "AI 자동화 레시피", href: "/skills" },
-    { type: "Labs", icon: "🧪", title: "AI 자동화 실습", href: "/labs" },
+    { type: "Learning", icon: "📖", title: "AI 자동화 학습", href: "/learning?q=automation" },
+    { type: "Labs", icon: "🧪", title: "AI 이메일 자동화 실습", href: "/labs?q=email" },
   ],
   automation: [
-    { type: "Skills", icon: "🔧", title: "AI Automation Recipes", href: "/skills" },
-    { type: "Labs", icon: "🧪", title: "AI Automation Lab", href: "/labs" },
+    { type: "Learning", icon: "📖", title: "AI Automation", href: "/learning?q=automation" },
+    { type: "Labs", icon: "🧪", title: "Email Automation Lab", href: "/labs?q=email" },
   ],
   gemini: [
-    { type: "Learning", icon: "📖", title: "Gemini API 시작하기", href: "/learning" },
-    { type: "Labs", icon: "🧪", title: "Gemini 실습", href: "/labs" },
+    { type: "Learning", icon: "📖", title: "AI 도구 개요", href: "/learning?q=gemini" },
+    { type: "Labs", icon: "🧪", title: "Gemini 스트리밍 실습", href: "/labs?q=gemini" },
   ],
   openai: [
-    { type: "Learning", icon: "📖", title: "OpenAI API 기초", href: "/learning" },
-    { type: "Skills", icon: "🔧", title: "OpenAI 프롬프트 레시피", href: "/skills" },
+    { type: "Learning", icon: "📖", title: "ChatGPT 마스터", href: "/learning?q=chatgpt" },
+    { type: "Skills", icon: "🔧", title: "OpenAI 프롬프트", href: "/skills?q=openai" },
+  ],
+  python: [
+    { type: "Learning", icon: "📖", title: "Python AI 기초", href: "/learning?q=python" },
+    { type: "Labs", icon: "🧪", title: "API 연동 실습", href: "/labs?q=api" },
+  ],
+  html: [
+    { type: "Labs", icon: "🧪", title: "HTML 앱 만들기 실습", href: "/labs?q=html" },
   ],
 };
 
@@ -147,14 +153,14 @@ export default function AskAI() {
       </div>
 
       {/* 수준별 빠른 질문 */}
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex gap-2 mb-4 overflow-x-auto pb-1 -mx-1 px-1 snap-x">
         {QUICK_QUESTIONS.map((q) => (
           <button
             key={q.text}
             onClick={() => handleAsk(q.text)}
             disabled={loading}
             data-event={`cta_quick_question_${q.level}`}
-            className="text-xs px-3 py-1.5 rounded-full border border-slate-700 text-slate-400 hover:border-violet-600 hover:text-violet-300 hover:bg-violet-900/20 transition-all disabled:opacity-50 flex items-center gap-1"
+            className="shrink-0 text-xs px-3 py-1.5 rounded-full border border-slate-700 text-slate-400 hover:border-violet-600 hover:text-violet-300 hover:bg-violet-900/20 transition-all disabled:opacity-50 flex items-center gap-1"
           >
             <span>{q.emoji}</span>
             {q.text}

@@ -114,13 +114,13 @@ export async function POST(req: NextRequest) {
     const openai = new OpenAI({ apiKey });
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
-      max_tokens: 600,
+      max_tokens: 500,
       temperature: 0.7,
       messages: [
         {
           role: 'system',
           content:
-            '당신은 AI 학습 포털 CLOID.AI의 AI 도우미입니다. AI 도구, Claude Code, MCP 프로토콜, 프롬프트 엔지니어링, AI 개발에 대한 질문에 한국어로 명확하고 실용적으로 답변하세요. 핵심만 간결하게, 코드/커맨드가 필요하면 포함하세요.',
+            '너는 CLOID.AI의 AI 학습 도우미야. 사용자가 AI 도구, 프롬프트, 개발 패턴에 대해 질문하면 친절하고 구체적으로 답변해. 답변 시 가능하면 CLOID.AI 내의 관련 학습 콘텐츠(Learning, Labs, Skills)를 안내해. 답변은 한국어로 하되 기술 용어는 영문 병기. 답변 길이는 300자 이내로 간결하게.',
         },
         { role: 'user', content: question },
       ],

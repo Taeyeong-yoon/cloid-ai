@@ -159,8 +159,21 @@ interface TodayUpdateData {
   lab: { id: string; title: string; description: string; difficulty: string; tags: string[] } | null;
 }
 
+interface ContentCounts {
+  total: number;
+  learning: number;
+  labs: number;
+  radar: number;
+}
+
 // ── 메인 컴포넌트 ────────────────────────────────────────────
-export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateData }) {
+export default function HomeClient({
+  todayUpdate,
+  contentCounts,
+}: {
+  todayUpdate: TodayUpdateData;
+  contentCounts: ContentCounts;
+}) {
   const { t } = useTranslation();
   const { user, openLoginModal } = useAuth();
   const router = useRouter();
@@ -265,8 +278,8 @@ export default function HomeClient({ todayUpdate }: { todayUpdate: TodayUpdateDa
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             {t.home.social_proof_updated}
           </span>
-          <span>📚 {t.home.social_proof_contents}</span>
-          <span>🧪 {t.home.social_proof_labs}</span>
+          <span>📚 {contentCounts.total}개 콘텐츠</span>
+          <span>🧪 {contentCounts.labs}개 실습</span>
         </div>
 
         {/* 수준별 시작 경로 배너 */}

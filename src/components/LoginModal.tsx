@@ -25,7 +25,7 @@ export default function LoginModal() {
         className="absolute inset-0 bg-black/70 backdrop-blur-sm"
         onClick={closeLoginModal}
       />
-      <div className="relative z-10 w-full max-w-sm mx-4 bg-slate-900 border border-slate-700 rounded-2xl p-8 shadow-2xl">
+      <div className="relative z-10 w-full max-w-sm mx-4 bg-slate-900 border border-slate-700 rounded-2xl p-6 sm:p-8 shadow-2xl">
         <button
           onClick={closeLoginModal}
           className="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors"
