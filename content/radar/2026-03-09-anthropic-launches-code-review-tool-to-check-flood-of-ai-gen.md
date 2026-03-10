@@ -1,0 +1,15 @@
+---
+title: "Anthropic launches code review tool to check flood of AI-generated code - TechCrunch"
+date: "2026-03-09"
+tags:
+  - claude-code
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbnFScENmekJRVklGN1VvTmFyQVNrWjNpQ2xwWnY4NnczYU5BZkJySzkzUnZVbjF3aXdnSGJiMU5ybWpXMW9oSlJkYS11YlZVOGdRRndLM2tieXZHYkEyaUMyT2dLSFJVaHhOUm5neTlia0c5b1UyVFYydHQwakRCanJ2QWhuMDBkeVU0aEl3SWZtUVh0ZllpV3h0bGdLekFtTGYxNm45UWFaQQ?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbnFScENmekJRVklGN1VvTmFyQVNrWjNpQ2xwWnY4NnczYU5BZkJySzkzUnZVbjF3aXdnSGJiMU5ybWpXMW9oSlJkYS11YlZVOGdRRndLM2tieXZHYkEyaUMyT2dLSFJVaHhOUm5neTlia0c5b1UyVFYydHQwakRCanJ2QWhuMDBkeVU0aEl3SWZtUVh0ZllpV3h0bGdLekFtTGYxNm45UWFaQQ?oc=5' target='_b"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbnFScENmekJRVklGN1VvTmFyQVNrWjNpQ2xwWnY4NnczYU5BZkJySzkzUnZVbjF3aXdnSGJiMU5ybWpXMW9oSlJkYS11YlZVOGdRRndLM2tieXZHYkEyaUMyT2dLSFJVaHhOUm5neTlia0c5b1UyVFYydHQwakRCanJ2QWhuMDBkeVU0aEl3SWZtUVh0ZllpV3h0bGdLekFtTGYxNm45UWFaQQ?oc=5" target="_b
+
+**출처**: [https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbnFScENmekJRVklGN1VvTmFyQVNrWjNpQ2xwWnY4NnczYU5BZkJySzkzUnZVbjF3aXdnSGJiMU5ybWpXMW9oSlJkYS11YlZVOGdRRndLM2tieXZHYkEyaUMyT2dLSFJVaHhOUm5neTlia0c5b1UyVFYydHQwakRCanJ2QWhuMDBkeVU0aEl3SWZtUVh0ZllpV3h0bGdLekFtTGYxNm45UWFaQQ?oc=5](https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbnFScENmekJRVklGN1VvTmFyQVNrWjNpQ2xwWnY4NnczYU5BZkJySzkzUnZVbjF3aXdnSGJiMU5ybWpXMW9oSlJkYS11YlZVOGdRRndLM2tieXZHYkEyaUMyT2dLSFJVaHhOUm5neTlia0c5b1UyVFYydHQwakRCanJ2QWhuMDBkeVU0aEl3SWZtUVh0ZllpV3h0bGdLekFtTGYxNm45UWFaQQ?oc=5)
