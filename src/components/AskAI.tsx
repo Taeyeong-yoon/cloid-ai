@@ -107,7 +107,6 @@ export default function AskAI() {
     { level: "m", emoji: "💼", text: t.home.quick_q_m1 },
     { level: "m", emoji: "💼", text: t.home.quick_q_m2 },
     { level: "a", emoji: "🚀", text: t.home.quick_q_a1 },
-    { level: "a", emoji: "🚀", text: t.home.quick_q_a2 },
   ];
 
   async function handleAsk(q?: string) {
