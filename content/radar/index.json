@@ -1,5 +1,32 @@
 [
   {
+    "slug": "2026-03-14-claude-3-7-sonnet-extended-thinking-ga",
+    "title": "Claude 3.7 Sonnet Extended Thinking — GA 출시, 복잡한 추론 작업 정확도 40% 향상",
+    "date": "2026-03-14",
+    "tags": ["Claude", "AI Model", "Extended Thinking"],
+    "summary": "Anthropic이 Claude 3.7 Sonnet의 Extended Thinking 기능을 정식 출시했습니다. 수학, 코딩, 과학 분야 복잡한 추론에서 이전 모델 대비 40% 정확도 향상을 달성했으며, 기업용 API에서도 사용 가능합니다.",
+    "score": 95,
+    "sourceUrl": "https://www.anthropic.com/news/claude-3-7-sonnet"
+  },
+  {
+    "slug": "2026-03-13-claude-code-web-search-mcp-integration",
+    "title": "Claude Code에 실시간 웹 검색 MCP 통합 — 코딩 중 최신 문서 즉시 참조 가능",
+    "date": "2026-03-13",
+    "tags": ["Claude Code", "MCP", "Web Search"],
+    "summary": "Claude Code가 MCP(Model Context Protocol) 기반 웹 검색 기능을 공식 지원합니다. 코딩 세션 중 최신 라이브러리 문서, API 변경사항, Stack Overflow 답변을 실시간으로 참조할 수 있어 개발 생산성이 크게 향상됩니다.",
+    "score": 90,
+    "sourceUrl": "https://github.com/anthropics/claude-code"
+  },
+  {
+    "slug": "2026-03-11-openai-gpt5-mini-released-competitive-pricing",
+    "title": "OpenAI GPT-5 Mini 출시 — Claude Haiku 대비 20% 저렴한 가격으로 경쟁 가속화",
+    "date": "2026-03-11",
+    "tags": ["OpenAI", "GPT-5", "AI Model"],
+    "summary": "OpenAI가 경량 모델 GPT-5 Mini를 출시하며 소형 AI 모델 시장 경쟁이 심화되었습니다. Claude Haiku, Gemini Flash와 직접 경쟁하며, 특히 비용 효율적인 API 사용에 초점을 맞췄습니다.",
+    "score": 85,
+    "sourceUrl": "https://openai.com/blog/gpt-5-mini"
+  },
+  {
     "slug": "2026-03-04-anthropicsclaude-code-v2168",
     "title": "[anthropics/claude-code] v2.1.68",
     "date": "2026-03-04",

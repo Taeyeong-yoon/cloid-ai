@@ -23,6 +23,14 @@ const difficultyColor: Record<string, string> = {
   advanced: "text-rose-400 bg-rose-900/30 border-rose-700/50",
 };
 
+const difficultyOrder = ["beginner", "intermediate", "advanced"];
+
+const difficultyMeta: Record<string, { emoji: string; label: string }> = {
+  beginner: { emoji: "🌱", label: "입문" },
+  intermediate: { emoji: "💼", label: "중급" },
+  advanced: { emoji: "🚀", label: "고급" },
+};
+
 function getYouTubeId(url: string): string | null {
   const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^&?\s]+)/);
   return match ? match[1] : null;
@@ -225,10 +233,25 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
 export default function LabsClient({ labs }: { labs: LabItem[] }) {
   const { t } = useTranslation();
 
-  const sorted = [...labs].sort((a, b) => {
-    const order = { beginner: 0, intermediate: 1, advanced: 2 };
-    return order[a.difficulty] - order[b.difficulty];
+  // difficulty별 아코디언 열림 상태 (기본: 모두 열림)
+  const [openDifficulties, setOpenDifficulties] = useState<Record<string, boolean>>({
+    beginner: true,
+    intermediate: true,
+    advanced: true,
   });
+
+  function toggleDifficulty(difficulty: string) {
+    setOpenDifficulties((prev) => ({ ...prev, [difficulty]: !prev[difficulty] }));
+  }
+
+  // difficulty별 그룹
+  const grouped = difficultyOrder.reduce<Record<string, LabItem[]>>((acc, diff) => {
+    acc[diff] = labs.filter((lab) => lab.difficulty === diff);
+    return acc;
+  }, {});
+
+  // 각 그룹 내 순서 유지를 위한 누적 인덱스
+  let globalIndex = 0;
 
   return (
     <div>
@@ -243,10 +266,47 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
         <HTMLPreview />
       </div>
 
-      <div className="grid gap-4">
-        {sorted.map((lab, i) => (
-          <LabCard key={lab.id} lab={lab} index={i} />
-        ))}
+      {/* difficulty별 아코디언 */}
+      <div className="space-y-4">
+        {difficultyOrder.map((difficulty) => {
+          const diffLabs = grouped[difficulty] || [];
+          if (diffLabs.length === 0) return null;
+          const isOpen = openDifficulties[difficulty];
+          const meta = difficultyMeta[difficulty];
+          const startIndex = globalIndex;
+          globalIndex += diffLabs.length;
+
+          return (
+            <div key={difficulty} className="rounded-xl border border-slate-800 overflow-hidden">
+              {/* 섹션 헤더 */}
+              <button
+                onClick={() => toggleDifficulty(difficulty)}
+                className="w-full flex items-center justify-between px-5 py-3.5 bg-slate-900/60 hover:bg-slate-800/60 text-left transition-colors"
+              >
+                <span className="flex items-center gap-2.5 text-sm font-semibold text-slate-200">
+                  <span className="text-base">{meta.emoji}</span>
+                  <span>{meta.label}</span>
+                  <span className={`text-xs font-normal px-1.5 py-0.5 rounded border ${difficultyColor[difficulty]}`}>
+                    {diffLabs.length}개
+                  </span>
+                </span>
+                {isOpen
+                  ? <ChevronUp size={16} className="text-slate-500 shrink-0" />
+                  : <ChevronDown size={16} className="text-slate-500 shrink-0" />
+                }
+              </button>
+
+              {/* 랩 목록 */}
+              {isOpen && (
+                <div className="p-4 space-y-4 bg-slate-900/10">
+                  {diffLabs.map((lab, i) => (
+                    <LabCard key={lab.id} lab={lab} index={startIndex + i} />
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

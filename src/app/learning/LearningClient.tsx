@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { BookOpen, FileText, Video, Terminal, ExternalLink, ArrowLeft, Search } from "lucide-react";
+import { BookOpen, FileText, Video, Terminal, ExternalLink, ArrowLeft, Search, ChevronDown, ChevronUp } from "lucide-react";
 import type { LearningTopic, LearningResource } from "@/lib/types";
 import TagBadge from "@/components/TagBadge";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
@@ -16,6 +16,14 @@ const resourceIcon = {
   doc: FileText,
   video: Video,
   practice: Terminal,
+};
+
+const levelOrder = ["beginner", "intermediate", "advanced"];
+
+const levelMeta: Record<string, { emoji: string; label: string }> = {
+  beginner: { emoji: "🌱", label: "입문" },
+  intermediate: { emoji: "💼", label: "중급" },
+  advanced: { emoji: "🚀", label: "고급" },
 };
 
 function getYouTubeId(url: string): string | null {
@@ -63,101 +71,6 @@ function getLinkBrand(url: string): { label: string; bg: string; icon: React.Rea
   if (/vercel\.com/.test(url)) return {
     label: "Vercel", bg: "bg-black hover:bg-slate-800",
     icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg>,
-  };
-  // Stripe
-  if (/stripe\.com/.test(url)) return {
-    label: "Stripe", bg: "bg-[#635bff] hover:bg-[#4f46e5]",
-    icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.591-7.305z"/></svg>,
-  };
-  // LangChain / LangSmith
-  if (/langchain\.com/.test(url)) return {
-    label: "LangChain", bg: "bg-[#1C3A6A] hover:bg-[#162f57]",
-    icon: <svg viewBox="0 0 40 40" fill="currentColor" className="w-3 h-3"><circle cx="20" cy="20" r="20" fill="#1C3A6A"/><text x="20" y="25" textAnchor="middle" fontSize="16" fill="white" fontWeight="bold">L</text></svg>,
-  };
-  // CrewAI
-  if (/crewai\.com/.test(url)) return {
-    label: "CrewAI", bg: "bg-[#ef4444] hover:bg-[#dc2626]",
-    icon: <ExternalLink size={10} />,
-  };
-  // Cursor
-  if (/cursor\.com/.test(url)) return {
-    label: "Cursor", bg: "bg-[#1a1a1a] hover:bg-[#2a2a2a]",
-    icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>,
-  };
-  // Zapier
-  if (/zapier\.com/.test(url)) return {
-    label: "Zapier", bg: "bg-[#FF4A00] hover:bg-[#e04200]",
-    icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3"><path d="M14.924 12.003a2.922 2.922 0 0 1-2.921 2.921 2.922 2.922 0 0 1-2.922-2.921 2.922 2.922 0 0 1 2.922-2.921 2.922 2.922 0 0 1 2.921 2.921zm7.645-1.458H17.8a5.865 5.865 0 0 0-.676-1.635l3.37-3.37-2.035-2.034-3.37 3.37a5.864 5.864 0 0 0-1.634-.677V1.431h-2.916v4.768a5.864 5.864 0 0 0-1.634.677l-3.37-3.37L3.5 5.54l3.37 3.37a5.869 5.869 0 0 0-.676 1.635H1.431v2.916h4.763a5.863 5.863 0 0 0 .676 1.634L3.5 18.465l2.035 2.034 3.37-3.37a5.861 5.861 0 0 0 1.634.677v4.763h2.916V17.81a5.862 5.862 0 0 0 1.634-.677l3.37 3.37 2.035-2.034-3.37-3.37a5.868 5.868 0 0 0 .676-1.634h4.769v-2.922z"/></svg>,
-  };
-  // n8n
-  if (/n8n\.io/.test(url)) return {
-    label: "n8n", bg: "bg-[#ea4b71] hover:bg-[#d43d63]",
-    icon: <ExternalLink size={10} />,
-  };
-  // Make / Integromat
-  if (/make\.com/.test(url)) return {
-    label: "Make", bg: "bg-[#6d00cc] hover:bg-[#5a00a8]",
-    icon: <ExternalLink size={10} />,
-  };
-  // Sentry
-  if (/sentry\.io/.test(url)) return {
-    label: "Sentry", bg: "bg-[#362d59] hover:bg-[#2d2448]",
-    icon: <svg viewBox="0 0 72 66" fill="currentColor" className="w-3 h-3"><path d="M29.35.98a5.04 5.04 0 0 0-8.71 0L.59 37.13a5.04 5.04 0 0 0 4.35 7.56h7.49A38.06 38.06 0 0 1 45 8.04l-4.39 7.6A29.2 29.2 0 0 0 19.2 44.7h8.72a20.5 20.5 0 0 1 15.72-20.09l-4.4 7.61a11.74 11.74 0 0 0-3.36 22.38h25.56a5.04 5.04 0 0 0 4.35-7.56L38.05.98a5.04 5.04 0 0 0-8.7 0z"/></svg>,
-  };
-  // Python
-  if (/python\.org/.test(url)) return {
-    label: "Python", bg: "bg-[#3776ab] hover:bg-[#2d5f8a]",
-    icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05 1.07.13zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.31.33-.25.35-.19.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01.21.03zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg>,
-  };
-  // Notion
-  if (/notion\.so/.test(url)) return {
-    label: "Notion", bg: "bg-[#1a1a1a] hover:bg-[#2a2a2a]",
-    icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.934zm14.337.745c.093.42 0 .84-.42.887l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.14c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>,
-  };
-  // Microsoft / Copilot
-  if (/microsoft\.com/.test(url)) return {
-    label: "Microsoft", bg: "bg-[#0078d4] hover:bg-[#006cbf]",
-    icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3"><path d="M0 0h11.5v11.5H0zm12.5 0H24v11.5H12.5zM0 12.5h11.5V24H0zm12.5 0H24V24H12.5z"/></svg>,
-  };
-  // Canva
-  if (/canva\.com/.test(url)) return {
-    label: "Canva", bg: "bg-[#00c4cc] hover:bg-[#00adb3]",
-    icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.441 16.892c-2.102 0-5.08-1.773-6.665-3.557l.848-2.187c.742.886 3.163 3.35 5.574 3.35.886 0 1.32-.39 1.32-.928 0-1.578-6.11-1.74-6.11-5.39C11.408 6 13.077 5 15.226 5c1.822 0 3.962 1.136 5.26 2.56l-.772 2.046c-.886-.903-2.64-2.42-4.38-2.42-.654 0-1.187.28-1.187.841 0 1.45 6.226 1.668 6.226 5.408.006 2.102-1.726 3.457-3.932 3.457z"/></svg>,
-  };
-  // ElevenLabs
-  if (/elevenlabs\.io/.test(url)) return {
-    label: "ElevenLabs", bg: "bg-[#111827] hover:bg-[#1f2937]",
-    icon: <ExternalLink size={10} />,
-  };
-  // Midjourney
-  if (/midjourney\.com/.test(url)) return {
-    label: "Midjourney", bg: "bg-[#000000] hover:bg-[#1a1a1a]",
-    icon: <ExternalLink size={10} />,
-  };
-  // Ideogram
-  if (/ideogram\.ai/.test(url)) return {
-    label: "Ideogram", bg: "bg-[#6366f1] hover:bg-[#4f46e5]",
-    icon: <ExternalLink size={10} />,
-  };
-  // Perplexity
-  if (/perplexity\.ai/.test(url)) return {
-    label: "Perplexity", bg: "bg-[#20808d] hover:bg-[#1a6a75]",
-    icon: <ExternalLink size={10} />,
-  };
-  // Stable Diffusion
-  if (/stable-diffusion/.test(url)) return {
-    label: "Stable Diffusion", bg: "bg-[#7c3aed] hover:bg-[#6d28d9]",
-    icon: <ExternalLink size={10} />,
-  };
-  // Chroma
-  if (/trychroma\.com/.test(url)) return {
-    label: "Chroma", bg: "bg-[#f97316] hover:bg-[#ea6c0a]",
-    icon: <ExternalLink size={10} />,
-  };
-  // learnprompting
-  if (/learnprompting\.org/.test(url)) return {
-    label: "Learn Prompting", bg: "bg-[#2563eb] hover:bg-[#1d4ed8]",
-    icon: <ExternalLink size={10} />,
   };
   return {
     label: "바로가기", bg: "bg-slate-700 hover:bg-slate-600",
@@ -276,6 +189,17 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
   const contentRef = useRef<HTMLDivElement>(null);
   const topic = topics.find((tp) => tp.id === selectedId);
 
+  // 레벨별 아코디언 열림 상태 (기본: 모두 열림)
+  const [openLevels, setOpenLevels] = useState<Record<string, boolean>>({
+    beginner: true,
+    intermediate: true,
+    advanced: true,
+  });
+
+  function toggleLevel(level: string) {
+    setOpenLevels((prev) => ({ ...prev, [level]: !prev[level] }));
+  }
+
   function handleTopicSelect(topicId: string) {
     setSelectedId(topicId);
     if (window.innerWidth < 768) {
@@ -291,6 +215,12 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
     advanced: t.common.level_advanced,
   };
 
+  // 레벨별 토픽 그룹
+  const grouped = levelOrder.reduce<Record<string, LearningTopic[]>>((acc, level) => {
+    acc[level] = topics.filter((tp) => tp.level === level);
+    return acc;
+  }, {});
+
   return (
     <div>
       <div className="flex items-center gap-2 mb-6">
@@ -300,26 +230,66 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
 
       <div className="flex flex-col md:flex-row gap-6">
         {/* Sidebar */}
-        <div className={`md:w-64 shrink-0 space-y-2 ${selectedId ? "hidden md:block" : "block"}`}>
+        <div className={`md:w-64 shrink-0 ${selectedId ? "hidden md:block" : "block"}`}>
           <p className="text-xs text-slate-500 uppercase tracking-wider mb-3 px-1">
             {t.learning.topics_sidebar}
           </p>
-          {topics.map((tp) => (
-            <button
-              key={tp.id}
-              onClick={() => handleTopicSelect(tp.id)}
-              className={`w-full text-left px-4 py-3 rounded-lg border transition-all ${
-                selectedId === tp.id
-                  ? "bg-violet-900/40 border-violet-600 text-white"
-                  : "bg-slate-900/30 border-slate-800 text-slate-400 hover:border-slate-600 hover:text-white"
-              }`}
-            >
-              <div className="text-sm font-medium">{tp.title}</div>
-              <div className={`text-xs mt-1 inline-block px-1.5 py-0.5 rounded border ${levelColor[tp.level]}`}>
-                {levelLabel[tp.level]}
-              </div>
-            </button>
-          ))}
+
+          {/* 레벨별 아코디언 */}
+          <div className="space-y-2">
+            {levelOrder.map((level) => {
+              const levelTopics = grouped[level] || [];
+              if (levelTopics.length === 0) return null;
+              const isOpen = openLevels[level];
+              const meta = levelMeta[level];
+              const hasSelected = levelTopics.some((tp) => tp.id === selectedId);
+
+              return (
+                <div key={level} className="rounded-lg border border-slate-800 overflow-hidden">
+                  {/* 섹션 헤더 */}
+                  <button
+                    onClick={() => toggleLevel(level)}
+                    className={`w-full flex items-center justify-between px-3 py-2.5 text-left transition-colors ${
+                      hasSelected
+                        ? "bg-violet-900/20 text-white"
+                        : "bg-slate-900/50 text-slate-300 hover:bg-slate-800/60 hover:text-white"
+                    }`}
+                  >
+                    <span className="flex items-center gap-2 text-sm font-semibold">
+                      <span>{meta.emoji}</span>
+                      <span>{meta.label}</span>
+                      <span className={`text-xs font-normal px-1.5 py-0.5 rounded border ${levelColor[level]}`}>
+                        {levelTopics.length}
+                      </span>
+                    </span>
+                    {isOpen
+                      ? <ChevronUp size={14} className="text-slate-500 shrink-0" />
+                      : <ChevronDown size={14} className="text-slate-500 shrink-0" />
+                    }
+                  </button>
+
+                  {/* 토픽 목록 */}
+                  {isOpen && (
+                    <div className="py-1 space-y-0.5 bg-slate-900/20">
+                      {levelTopics.map((tp) => (
+                        <button
+                          key={tp.id}
+                          onClick={() => handleTopicSelect(tp.id)}
+                          className={`w-full text-left px-4 py-2.5 transition-all text-sm ${
+                            selectedId === tp.id
+                              ? "bg-violet-900/40 text-white border-l-2 border-violet-500"
+                              : "text-slate-400 hover:bg-slate-800/50 hover:text-white border-l-2 border-transparent"
+                          }`}
+                        >
+                          {tp.title}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* Content */}

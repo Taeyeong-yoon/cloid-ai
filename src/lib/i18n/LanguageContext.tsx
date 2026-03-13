@@ -28,14 +28,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const saved = localStorage.getItem(STORAGE_KEY) as Locale | null;
     if (saved === "en" || saved === "ko") {
       setLocaleState(saved);
-      return;
     }
-    // Browser language detection
-    const browser = navigator.language.toLowerCase();
-    if (browser.startsWith("ko")) {
-      setLocaleState("ko");
-    }
-    // else stays 'en'
+    // else: stays "en" (default)
   }, []);
 
   function setLocale(next: Locale) {

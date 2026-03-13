@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import {
   Brain,
   Radar,
@@ -169,6 +169,7 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
   const { t } = useTranslation();
   const { user, openLoginModal } = useAuth();
   const router = useRouter();
+  const pathname = usePathname();
 
   const authed = isLoggedIn || !!user;
 
@@ -210,21 +211,29 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
       {/* ── 데스크톱 (md 이상) ── */}
       <div className="hidden md:flex items-center gap-1">
         <nav className="flex items-center gap-1">
-          {links.map(({ href, label, icon: Icon, guard }) => (
-            <a
-              key={href}
-              href={href}
-              onClick={(e) => handleClick(e, href, guard)}
-              className="group flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm text-slate-400
-                hover:text-white transition-all duration-200 cursor-pointer relative
-                hover:bg-gradient-to-r hover:from-violet-900/20 hover:to-blue-900/10
-                hover:shadow-[0_0_12px_rgba(139,92,246,0.08)]"
-            >
-              <Icon size={14} className="group-hover:text-violet-400 transition-colors duration-200" />
-              <span>{label}</span>
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-3/5 h-[2px] bg-gradient-to-r from-violet-500/60 to-blue-500/40 rounded-full transition-all duration-300" />
-            </a>
-          ))}
+          {links.map(({ href, label, icon: Icon, guard }) => {
+            const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
+            return (
+              <a
+                key={href}
+                href={href}
+                onClick={(e) => handleClick(e, href, guard)}
+                className={`group flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm transition-all duration-200 cursor-pointer relative
+                  hover:bg-gradient-to-r hover:from-violet-900/20 hover:to-blue-900/10
+                  hover:shadow-[0_0_12px_rgba(139,92,246,0.08)]
+                  ${isActive
+                    ? "text-white bg-gradient-to-r from-violet-900/20 to-blue-900/10 nav-item-active"
+                    : "text-slate-400 hover:text-white"
+                  }`}
+              >
+                <Icon size={14} className={`transition-colors duration-200 ${isActive ? "text-violet-400" : "group-hover:text-violet-400"}`} />
+                <span>{label}</span>
+                {!isActive && (
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-3/5 h-[2px] bg-gradient-to-r from-violet-500/60 to-blue-500/40 rounded-full transition-all duration-300" />
+                )}
+              </a>
+            );
+          })}
         </nav>
 
         <div className="ml-2 pl-2 border-l border-slate-700 flex items-center gap-2">
@@ -232,11 +241,9 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
           <button
             onClick={() => setSearchOpen(true)}
             aria-label="검색 열기 (Ctrl+K)"
+            title="검색 (⌘K / Ctrl+K)"
             className="flex items-center justify-center w-8 h-8 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
             <Search size={16} />
-            <kbd className="hidden lg:inline-flex items-center gap-0.5 text-[10px] text-slate-600 border border-slate-700 rounded px-1 py-0.5 ml-1">
-              ⌘K
-            </kbd>
           </button>
 
           {/* 로그인 / 내 계정 */}
@@ -294,17 +301,24 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
       {open && (
         <div className="md:hidden absolute top-14 left-0 right-0 bg-[#0f1117] border-b border-slate-800 shadow-xl z-40 mobile-menu-enter">
           <nav className="flex flex-col p-3 gap-1">
-            {links.map(({ href, label, icon: Icon, guard }) => (
-              <a
-                key={href}
-                href={href}
-                onClick={(e) => handleClick(e, href, guard)}
-                className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors text-base cursor-pointer"
-              >
-                <Icon size={18} />
-                {label}
-              </a>
-            ))}
+            {links.map(({ href, label, icon: Icon, guard }) => {
+              const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
+              return (
+                <a
+                  key={href}
+                  href={href}
+                  onClick={(e) => handleClick(e, href, guard)}
+                  className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors text-base cursor-pointer ${
+                    isActive
+                      ? "text-white bg-violet-900/30 border-l-2 border-violet-500"
+                      : "text-slate-300 hover:text-white hover:bg-slate-800 border-l-2 border-transparent"
+                  }`}
+                >
+                  <Icon size={18} className={isActive ? "text-violet-400" : ""} />
+                  {label}
+                </a>
+              );
+            })}
             <div className="border-t border-slate-800 mt-1 pt-1">
               {authed ? (
                 <Link
