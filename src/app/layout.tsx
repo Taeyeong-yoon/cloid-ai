@@ -70,7 +70,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko">
+    <html lang="en">
       <head>
         {/*
           ═══ 검색엔진 등록 가이드 (수동 작업 필요) ═══

@@ -32,6 +32,9 @@ export default function LangSwitcher() {
       {/* 트리거 버튼 */}
       <button
         onClick={() => setOpen((v) => !v)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-label={`언어 선택, 현재: ${current.label}`}
         className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold
           border border-slate-600 bg-slate-800 text-slate-200
           hover:border-violet-500 hover:text-violet-300 hover:bg-violet-900/30
@@ -47,10 +50,12 @@ export default function LangSwitcher() {
 
       {/* 드롭다운 */}
       {open && (
-        <div className="absolute right-0 mt-2 w-36 rounded-xl border border-slate-700 bg-[#0f1117] shadow-2xl shadow-black/60 overflow-hidden z-[100]">
+        <div role="listbox" aria-label="언어 선택" className="absolute right-0 mt-2 w-36 rounded-xl border border-slate-700 bg-[#0f1117] shadow-2xl shadow-black/60 overflow-hidden z-[100]">
           {LANGS.map((lang) => (
             <button
               key={lang.code}
+              role="option"
+              aria-selected={locale === lang.code}
               onClick={() => {
                 setLocale(lang.code);
                 setOpen(false);

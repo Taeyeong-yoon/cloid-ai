@@ -1,0 +1,43 @@
+{
+  "id": "lab-claude-market-skill",
+  "title": "첫 번째 Claude Market 스킬 만들기",
+  "description": "Claude Market SDK를 사용하여 PDF 요약 스킬을 설계하고 출판하는 end-to-end 실습",
+  "difficulty": "advanced",
+  "duration": "45분",
+  "tags": ["Claude Market", "AI 에이전트", "ULI", "스킬 개발"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "스킬 아이디어 검증",
+      "instruction": "Claude에게 스킬 아이디어의 시장성을 검증하도록 요청합니다.",
+      "prompt": "내가 만들려는 Claude Market 스킬을 평가해줘:\n- 기능: PDF 문서 자동 요약 및 핵심 인사이트 추출\n- 대상: 법률, 금융, 연구 분야 전문가\n\n다음을 분석해줘:\n1. 시장 규모와 경쟁 현황\n2. 차별화 전략 3가지\n3. 예상 월 구독료와 수익 추정\n4. 개발 우선순위 (MVP vs 풀 버전)",
+      "expected_result": "시장 분석 리포트와 개발 로드맵",
+      "tip": "구체적인 대상 고객과 사용 케이스를 명시할수록 더 정확한 분석이 나옵니다."
+    },
+    {
+      "step": 2,
+      "title": "스킬 시스템 프롬프트 작성",
+      "instruction": "스킬의 핵심인 시스템 프롬프트를 설계합니다.",
+      "prompt": "PDF 요약 스킬의 시스템 프롬프트를 작성해줘.\n\n요구사항:\n- 문서 유형 자동 감지 (법률/금융/학술)\n- 유형별 맞춤 요약 형식\n- 핵심 수치와 날짜 강조\n- 불확실한 내용 표시\n- 출력: JSON 형식 (제목, 요약, 핵심포인트, 액션아이템)\n\n엣지 케이스 처리 방법도 포함해줘.",
+      "expected_result": "완성된 시스템 프롬프트와 출력 스키마",
+      "tip": "JSON 출력 스키마를 명시하면 다른 시스템과 통합이 쉬워집니다."
+    },
+    {
+      "step": 3,
+      "title": "보안 및 정책 검토",
+      "instruction": "Anthropic 정책 준수 여부를 검토합니다.",
+      "prompt": "내 PDF 요약 스킬이 Claude Market 출판 정책을 준수하는지 검토해줘.\n\n스킬 개요:\n- 사용자가 PDF를 업로드하면 텍스트 추출 후 Claude로 전송\n- 요약 결과만 반환, 원본 데이터 저장 없음\n- 최대 파일 크기: 10MB\n\n검토 항목:\n1. 데이터 프라이버시\n2. 저작권 이슈\n3. 보안 취약점\n4. 정책 위반 가능성\n\n문제가 있으면 수정 방법도 알려줘.",
+      "expected_result": "보안 감사 리포트와 수정 권고사항",
+      "tip": "출판 전 보안 검토는 스킬 거절을 방지하는 핵심 단계입니다."
+    }
+  ],
+  "challenge": "법률 특화 버전과 금융 특화 버전 두 가지 스킬 변형을 설계하고, 각각의 차별화 포인트를 정의하세요.",
+  "related_skills": ["claude-market-skill-builder", "uli-agent-protocol"],
+  "videos": [
+    {
+      "title": "Claude Market 스킬 개발 시작하기",
+      "search_keyword": "Claude Market skill development tutorial 2026",
+      "url": ""
+    }
+  ]
+}

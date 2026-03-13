@@ -2,10 +2,12 @@
 
 import { useState, useCallback } from "react";
 import { Code2, Eye, Download, X, Copy, Check, Maximize2, Minimize2 } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 type TabType = "html" | "css" | "js";
 
 export default function HTMLPreview() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<TabType>("html");
   const [html, setHtml] = useState("");
   const [css, setCss] = useState("");
@@ -95,13 +97,16 @@ ${html}
       <div className="flex items-center justify-between px-4 py-2.5 border-b border-amber-800/30 bg-amber-950/20">
         <div className="flex items-center gap-2">
           <Code2 size={16} className="text-amber-400" />
-          <h2 className="text-sm font-semibold text-white">코드 미리보기</h2>
+          <h2 className="text-sm font-semibold text-white">{t.labs.code_preview_title}</h2>
           <span className="text-[10px] text-amber-400 bg-amber-900/40 px-2 py-0.5 rounded-full border border-amber-700/50">
             HTML+CSS+JS
           </span>
         </div>
         <div className="flex items-center gap-1">
-          <button onClick={() => setFullscreen(v => !v)} title={fullscreen ? "축소" : "전체화면"}
+          <button
+            onClick={() => setFullscreen(v => !v)}
+            title={fullscreen ? t.labs.minimize : t.labs.fullscreen}
+            aria-label={fullscreen ? t.labs.minimize : t.labs.fullscreen}
             className="p-1.5 rounded text-slate-500 hover:text-slate-200 hover:bg-slate-700/50 transition-colors">
             {fullscreen ? <Minimize2 size={14} /> : <Maximize2 size={14} />}
           </button>
@@ -117,6 +122,7 @@ ${html}
               <div className="flex gap-1">
                 {tabs.map(tab => (
                   <button key={tab.key} onClick={() => setActiveTab(tab.key)}
+                    aria-pressed={activeTab === tab.key}
                     className={`px-3 py-1.5 sm:py-1 rounded-md text-xs font-medium transition-colors ${
                       activeTab === tab.key
                         ? "bg-amber-600 text-white"
@@ -128,12 +134,14 @@ ${html}
               </div>
               <div className="flex items-center gap-1.5">
                 <button onClick={handleCopy} disabled={!currentCode.trim()}
+                  aria-label={copied ? t.common.copied : t.common.copy}
                   className="flex items-center gap-1 text-[11px] px-2 py-2 min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 sm:py-1 rounded text-slate-500 hover:text-slate-200 hover:bg-slate-700/50 disabled:opacity-40 transition-colors">
-                  {copied ? <><Check size={11} className="text-emerald-400" /> 복사됨</> : <><Copy size={11} /> 복사</>}
+                  {copied ? <><Check size={11} className="text-emerald-400" /> {t.common.copied}</> : <><Copy size={11} /> {t.common.copy}</>}
                 </button>
                 <button onClick={handleClear} disabled={!html.trim() && !css.trim() && !js.trim()}
+                  aria-label={t.labs.clear_all}
                   className="flex items-center gap-1 text-[11px] px-2 py-2 min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 sm:py-1 rounded text-slate-500 hover:text-rose-400 hover:bg-rose-900/20 disabled:opacity-40 transition-colors">
-                  <X size={11} /> 전체 지우기
+                  <X size={11} /> {t.labs.clear_all}
                 </button>
               </div>
             </div>
@@ -144,6 +152,7 @@ ${html}
               onChange={e => setCurrentCode(e.target.value)}
               onPaste={handlePaste}
               placeholder={tabs.find(t => t.key === activeTab)?.placeholder}
+              aria-label={`${activeTab.toUpperCase()} 코드 입력`}
               className={`w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-xs font-mono placeholder-slate-700 focus:outline-none focus:border-amber-500 transition-colors resize-none ${
                 activeTab === "html" ? "text-emerald-300" : activeTab === "css" ? "text-blue-300" : "text-yellow-300"
               } ${fullscreen ? "h-[calc(100%-120px)]" : "h-36 sm:h-48"}`}
@@ -155,12 +164,13 @@ ${html}
               <button onClick={handlePreview} disabled={!html.trim() && !css.trim() && !js.trim()}
                 data-event="cta_code_preview"
                 className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 bg-amber-600 hover:bg-amber-500 disabled:bg-slate-700 disabled:text-slate-500 text-white text-xs font-medium rounded-lg transition-colors">
-                <Eye size={13} /> 미리보기 실행
+                <Eye size={13} /> {t.labs.run_preview}
               </button>
               <button onClick={handleDownload} disabled={!html.trim() && !css.trim() && !js.trim() && !preview}
+                aria-label={t.labs.download}
                 data-event="cta_code_download"
                 className="flex items-center justify-center gap-1.5 py-2 px-3 bg-slate-700 hover:bg-slate-600 disabled:opacity-40 text-slate-200 text-xs font-medium rounded-lg transition-colors">
-                <Download size={13} /> 다운로드
+                <Download size={13} /> {t.labs.download}
               </button>
             </div>
 
@@ -185,17 +195,17 @@ ${html}
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
               <span className="text-xs text-slate-400 font-medium flex items-center gap-1.5">
-                <Eye size={11} /> 실시간 미리보기
+                <Eye size={11} /> {t.labs.live_preview}
               </span>
               {preview && (
                 <button onClick={handleDownload} data-event="cta_code_download_from_preview"
                   className="flex items-center gap-1 text-[11px] px-2 py-1 rounded text-amber-500 hover:text-amber-300 hover:bg-amber-900/20 transition-colors">
-                  <Download size={11} /> HTML로 저장
+                  <Download size={11} /> {t.labs.save_as_html}
                 </button>
               )}
             </div>
             {preview ? (
-              <iframe srcDoc={preview} sandbox="allow-scripts" title="코드 미리보기"
+              <iframe srcDoc={preview} sandbox="allow-scripts" title={t.labs.code_preview_title}
                 className={`w-full rounded-lg border border-slate-600 bg-white ${
                   fullscreen ? "h-[calc(100%-60px)]" : "h-36 sm:h-48"
                 }`} />
@@ -205,8 +215,8 @@ ${html}
               }`}>
                 <Eye size={24} className="text-slate-700" />
                 <p className="text-xs text-slate-600 text-center px-4">
-                  HTML/CSS/JS를 입력하고<br />
-                  <span className="text-amber-600">미리보기 실행</span>을 클릭하세요
+                  {t.labs.preview_placeholder.split(" ").slice(0, -3).join(" ")}<br />
+                  <span className="text-amber-600">{t.labs.run_preview}</span>을 클릭하세요
                 </p>
               </div>
             )}
@@ -214,7 +224,7 @@ ${html}
         </div>
 
         <p className="mt-3 text-[10px] text-slate-600">
-          💡 HTML+CSS+JS 모두 지원 · 브라우저에서 실행되며 서버로 전송되지 않습니다 · 비용 0원
+          {t.labs.preview_footer}
         </p>
       </div>
     </div>

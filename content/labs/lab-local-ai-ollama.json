@@ -1,0 +1,43 @@
+{
+  "id": "lab-local-ai-ollama",
+  "title": "Ollama로 로컬 AI 에이전트 실행하기",
+  "description": "Ollama를 설치하고 로컬에서 Claude 호환 에이전트를 실행하는 실습",
+  "difficulty": "beginner",
+  "duration": "30분",
+  "tags": ["AI 에이전트", "실습"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "환경 설정",
+      "instruction": "이 실습을 위한 환경을 설정합니다.",
+      "prompt": "Ollama로 로컬 AI 에이전트 실행하기 실습을 시작하기 위한 환경 설정 방법을 단계별로 알려줘.\n\n포함 내용:\n1. 필요한 도구/라이브러리 설치\n2. API 키 설정\n3. 초기 테스트 방법",
+      "expected_result": "실습 환경이 정상적으로 설정된 상태",
+      "tip": "각 단계를 완료한 후 테스트를 통해 확인하세요."
+    },
+    {
+      "step": 2,
+      "title": "핵심 기능 구현",
+      "instruction": "Ollama로 로컬 AI 에이전트 실행하기 의 핵심 기능을 구현합니다.",
+      "prompt": "Ollama로 로컬 AI 에이전트 실행하기 의 핵심 기능을 구현하는 코드를 작성해줘.\n\n요구사항:\n- 실제 동작하는 완전한 코드\n- 에러 처리 포함\n- 주요 부분에 주석\n- 실행 방법 안내",
+      "expected_result": "핵심 기능이 정상 동작하는 구현체",
+      "tip": "작은 기능부터 구현하고 단계별로 확장하세요."
+    },
+    {
+      "step": 3,
+      "title": "결과 검증 및 개선",
+      "instruction": "구현된 기능을 검증하고 개선합니다.",
+      "prompt": "Ollama로 로컬 AI 에이전트 실행하기 의 결과를 검증하고 성능을 개선해줘.\n\n검증 방법:\n- 테스트 케이스 5개\n- 엣지 케이스 처리\n- 성능 측정 방법",
+      "expected_result": "검증 완료된 최적화된 구현",
+      "tip": "실제 사용 시나리오로 테스트하면 더 유용한 피드백을 얻을 수 있습니다."
+    }
+  ],
+  "challenge": "Ollama로 로컬 AI 에이전트 실행하기 를 확장하여 실제 비즈니스 문제를 해결하는 버전으로 발전시켜보세요.",
+  "related_skills": [],
+  "videos": [
+    {
+      "title": "Ollama로 로컬 AI 에이전트 실행하기 튜토리얼",
+      "search_keyword": "Ollama로 로컬 AI 에이전트 실행하기 tutorial 2026 한국어",
+      "url": ""
+    }
+  ]
+}

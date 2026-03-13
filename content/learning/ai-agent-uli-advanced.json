@@ -1,0 +1,69 @@
+{
+  "id": "ai-agent-uli-advanced",
+  "title": "AI 에이전트 ULI 심화",
+  "description": "Claude ULI와 멀티 에이전트 파이프라인, 스킬 체이닝, Claude Market 스킬 개발 등 2026년 최신 에이전트 기술을 심층 학습합니다",
+  "level": "advanced",
+  "tags": ["AI 에이전트", "ULI", "Claude Market", "스킬 체이닝", "n8n"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Anthropic 에이전트 및 도구 가이드",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/agents-and-tools",
+      "description": "Claude ULI 기반 에이전트 설계 원칙과 도구 사용 패턴"
+    },
+    {
+      "type": "doc",
+      "title": "Claude Market 스킬 개발 문서",
+      "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+      "description": "Claude Market에 스킬을 출판하고 수익화하는 방법"
+    },
+    {
+      "type": "doc",
+      "title": "스킬 체이닝 아키텍처 패턴",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/agents-and-tools/agents-overview",
+      "description": "여러 스킬을 조합하여 메가 에이전트를 구축하는 설계 패턴"
+    },
+    {
+      "type": "doc",
+      "title": "n8n + Claude 통합 가이드",
+      "url": "https://n8n.io/integrations/anthropic",
+      "description": "n8n 워크플로우에서 Claude 에이전트를 연동하는 방법"
+    },
+    {
+      "type": "video",
+      "title": "Claude Market 스킬 개발 실전",
+      "search_keyword": "Claude Market skill development 2026 tutorial",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "스킬 체이닝으로 메가 에이전트 만들기",
+      "search_keyword": "skill chaining mega agent Claude 2026 한국어",
+      "url": ""
+    },
+    {
+      "type": "video",
+      "title": "n8n 2.0 멀티 에이전트 파이프라인 구축",
+      "search_keyword": "n8n multi agent pipeline 2026 tutorial",
+      "url": ""
+    },
+    {
+      "type": "practice",
+      "title": "첫 번째 Claude Market 스킬 만들기",
+      "description": "간단한 데이터 분석 스킬을 Claude Market에 출판하는 end-to-end 실습",
+      "command": "# Claude Market SDK 설치\nnpm install @anthropic-ai/skill-sdk\n# 스킬 초기화\nnpx create-claude-skill my-first-skill"
+    },
+    {
+      "type": "practice",
+      "title": "스킬 체이닝 파이프라인 구현",
+      "description": "web_search → summarize → fact_check 체인을 구성하는 에이전트 실습",
+      "command": "pip install anthropic langchain && python skill_chain.py"
+    },
+    {
+      "type": "practice",
+      "title": "n8n + Claude 자동화 워크플로우",
+      "description": "n8n에서 Claude API를 트리거하는 완전 자동화 파이프라인 구축",
+      "command": "# n8n 로컬 실행\nnpx n8n\n# 브라우저에서 http://localhost:5678 접속"
+    }
+  ]
+}

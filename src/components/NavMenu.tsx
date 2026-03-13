@@ -67,6 +67,9 @@ function SearchModal({ onClose }: { onClose: () => void }) {
 
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-label="검색"
       className="fixed inset-0 z-[100] flex items-start justify-center pt-12 sm:pt-20 px-4 bg-black/60 backdrop-blur-sm"
       onClick={onClose}
     >
@@ -75,19 +78,20 @@ function SearchModal({ onClose }: { onClose: () => void }) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* 검색 입력 */}
-        <form onSubmit={handleSearch} className="flex items-center gap-3 p-4 border-b border-slate-800">
+        <form onSubmit={handleSearch} role="search" className="flex items-center gap-3 p-4 border-b border-slate-800">
           <Search size={18} className="text-slate-500 shrink-0" />
           <input
             ref={inputRef}
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder={t.search?.placeholder ?? "검색어 입력..."}
+            placeholder={t.search.placeholder}
             className="flex-1 bg-transparent text-slate-200 placeholder-slate-500 text-sm outline-none"
           />
           <button
             type="button"
             onClick={onClose}
+            aria-label="검색 닫기"
             className="text-slate-500 hover:text-slate-300 transition-colors"
           >
             <X size={18} />
@@ -121,17 +125,18 @@ function SearchModal({ onClose }: { onClose: () => void }) {
               <Search size={14} className="text-violet-400 shrink-0" />
               <span className="text-sm text-slate-300">
                 <span className="font-medium text-violet-300">"{query}"</span>{" "}
-                검색하기 ({SEARCH_TABS.find((t) => t.key === activeTab)?.label})
+                {t.search.search_action} ({SEARCH_TABS.find((t) => t.key === activeTab)?.label})
               </span>
             </button>
           ) : (
             <div className="space-y-3">
-              <p className="text-xs text-slate-500">{t.search?.popular ?? "인기 검색어"}</p>
+              <p className="text-xs text-slate-500">{t.search.popular}</p>
               <div className="flex flex-wrap gap-2">
                 {["Claude API", "MCP", "프롬프트", "에이전트", "RAG", "LangChain"].map((keyword) => (
                   <button
                     key={keyword}
                     onClick={() => setQuery(keyword)}
+                    aria-label={`${keyword} 검색`}
                     className="text-xs px-3 py-1.5 rounded-full border border-slate-700 text-slate-400 hover:border-violet-600 hover:text-violet-300 hover:bg-violet-900/20 transition-all"
                   >
                     {keyword}
@@ -147,7 +152,7 @@ function SearchModal({ onClose }: { onClose: () => void }) {
               onClick={handleAskAI}
               className="w-full text-xs text-violet-400 hover:text-violet-300 transition-colors text-center hover:underline"
             >
-              {t.search?.no_result_cta ?? "원하는 결과를 못 찾으셨나요? Ask AI에게 물어보세요 →"}
+              {t.search.no_result_cta}
             </button>
           </div>
         </div>
@@ -226,10 +231,12 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
           {/* 검색 아이콘 */}
           <button
             onClick={() => setSearchOpen(true)}
-            title="검색 (Ctrl+K)"
-            className="flex items-center justify-center w-8 h-8 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-          >
+            aria-label="검색 열기 (Ctrl+K)"
+            className="flex items-center justify-center w-8 h-8 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
             <Search size={16} />
+            <kbd className="hidden lg:inline-flex items-center gap-0.5 text-[10px] text-slate-600 border border-slate-700 rounded px-1 py-0.5 ml-1">
+              ⌘K
+            </kbd>
           </button>
 
           {/* 로그인 / 내 계정 */}
@@ -285,7 +292,7 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
 
       {/* ── 모바일 드롭다운 메뉴 ── */}
       {open && (
-        <div className="md:hidden absolute top-14 left-0 right-0 bg-[#0f1117] border-b border-slate-800 shadow-xl z-40">
+        <div className="md:hidden absolute top-14 left-0 right-0 bg-[#0f1117] border-b border-slate-800 shadow-xl z-40 mobile-menu-enter">
           <nav className="flex flex-col p-3 gap-1">
             {links.map(({ href, label, icon: Icon, guard }) => (
               <a

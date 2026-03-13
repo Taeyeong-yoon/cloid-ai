@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { BookOpen, FileText, Video, Terminal, ExternalLink, ArrowLeft, Search } from "lucide-react";
 import type { LearningTopic, LearningResource } from "@/lib/types";
 import TagBadge from "@/components/TagBadge";
@@ -273,7 +273,17 @@ function ResourceCard({ r }: { r: LearningResource }) {
 export default function LearningClient({ topics }: { topics: LearningTopic[] }) {
   const { t } = useTranslation();
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
   const topic = topics.find((tp) => tp.id === selectedId);
+
+  function handleTopicSelect(topicId: string) {
+    setSelectedId(topicId);
+    if (window.innerWidth < 768) {
+      setTimeout(() => {
+        contentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
+    }
+  }
 
   const levelLabel: Record<string, string> = {
     beginner: t.common.level_beginner,
@@ -297,7 +307,7 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
           {topics.map((tp) => (
             <button
               key={tp.id}
-              onClick={() => setSelectedId(tp.id)}
+              onClick={() => handleTopicSelect(tp.id)}
               className={`w-full text-left px-4 py-3 rounded-lg border transition-all ${
                 selectedId === tp.id
                   ? "bg-violet-900/40 border-violet-600 text-white"
@@ -314,7 +324,7 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
 
         {/* Content */}
         {topic && (
-          <div className="flex-1 min-w-0">
+          <div ref={contentRef} className="flex-1 min-w-0">
             <button
               onClick={() => setSelectedId(null)}
               className="md:hidden flex items-center gap-1.5 text-sm text-slate-400 hover:text-white mb-4 transition-colors"

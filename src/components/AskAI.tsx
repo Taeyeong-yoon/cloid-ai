@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { Sparkles, Send, Loader2, X } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { Sparkles, Send, Loader2, X, Copy, Check } from "lucide-react";
+import Link from "next/link";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 // ── 키워드 alias 맵: 모든 표현 → canonical key ──────────────
@@ -27,6 +28,11 @@ const KEYWORD_ALIASES: Record<string, string> = {
   "agent": "agent",
   "ai agent": "agent",
   "ai 에이전트": "agent",
+  "uli": "agent",
+  "claude market": "agent",
+  "skill chaining": "agent",
+  "claude skills": "agent",
+  "클로드 마켓": "agent",
   // RAG
   "rag": "rag",
   // LangChain
@@ -143,10 +149,12 @@ export default function AskAI() {
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [copiedAnswer, setCopiedAnswer] = useState(false);
   const [relatedContent, setRelatedContent] = useState<
     { type: string; icon: string; title: string; href: string }[]
   >([]);
   const answerRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   // 수준별 빠른 질문 6개
   const QUICK_QUESTIONS = [
@@ -178,16 +186,18 @@ export default function AskAI() {
       setAnswer(data.answer);
       // 키워드 매칭으로 관련 콘텐츠 추출
       setRelatedContent(matchContent(text));
-      setTimeout(
-        () => answerRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }),
-        100
-      );
     } catch (e) {
       setError((e as Error).message);
     } finally {
       setLoading(false);
     }
   }
+
+  useEffect(() => {
+    if (answer && answerRef.current) {
+      answerRef.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }, [answer]);
 
   return (
     <section className="rounded-2xl border border-violet-800/40 bg-gradient-to-br from-violet-950/30 to-slate-900/50 p-5 sm:p-6">
@@ -218,6 +228,7 @@ export default function AskAI() {
       {/* 입력창 */}
       <div className="flex gap-2">
         <input
+          ref={inputRef}
           type="text"
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
@@ -248,20 +259,48 @@ export default function AskAI() {
 
       {/* 답변 + 관련 콘텐츠 */}
       {answer && (
-        <div ref={answerRef} className="mt-4 p-4 rounded-xl bg-slate-900/60 border border-slate-700">
+        <div ref={answerRef} className="mt-4 p-4 rounded-xl bg-slate-900/60 border border-slate-700 animate-fade-in-up">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2 text-xs text-violet-400">
               <Sparkles size={12} />
               <span>{t.home.gemini_answer}</span>
             </div>
-            <button
-              onClick={() => { setAnswer(""); setRelatedContent([]); }}
-              className="p-1 rounded text-slate-500 hover:text-white hover:bg-slate-700 transition-colors"
-              title="답변 닫기"
-              aria-label="답변 닫기"
-            >
-              <X size={14} />
-            </button>
+            <div className="flex items-center gap-1">
+              {/* 복사 버튼 */}
+              <button
+                onClick={async () => {
+                  await navigator.clipboard.writeText(answer);
+                  setCopiedAnswer(true);
+                  setTimeout(() => setCopiedAnswer(false), 1500);
+                }}
+                aria-label="답변 복사"
+                className="flex items-center gap-1 text-xs px-2 py-1 rounded text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
+              >
+                {copiedAnswer ? <><Check size={12} className="text-emerald-400" /> 복사됨</> : <><Copy size={12} /> 복사</>}
+              </button>
+              {/* 새 질문 버튼 */}
+              <button
+                onClick={() => {
+                  setAnswer("");
+                  setRelatedContent([]);
+                  setQuestion("");
+                  inputRef.current?.focus();
+                  inputRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+                }}
+                aria-label="새 질문하기"
+                className="text-xs px-2 py-1 rounded text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
+              >
+                새 질문
+              </button>
+              <button
+                onClick={() => { setAnswer(""); setRelatedContent([]); }}
+                className="p-1 rounded text-slate-500 hover:text-white hover:bg-slate-700 transition-colors"
+                title="답변 닫기"
+                aria-label="답변 닫기"
+              >
+                <X size={14} />
+              </button>
+            </div>
           </div>
           <div className="text-sm text-slate-300 leading-relaxed whitespace-pre-wrap">{answer}</div>
 
@@ -273,7 +312,7 @@ export default function AskAI() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {relatedContent.map((item) => (
-                  <a
+                  <Link
                     key={`${item.type}-${item.title}`}
                     href={item.href}
                     data-event={`cta_ask_ai_related_${item.type.toLowerCase()}`}
@@ -289,7 +328,7 @@ export default function AskAI() {
                     <span className="text-[10px] text-violet-500 group-hover:underline">
                       {t.common.view_now}
                     </span>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

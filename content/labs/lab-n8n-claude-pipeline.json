@@ -1,0 +1,43 @@
+{
+  "id": "lab-n8n-claude-pipeline",
+  "title": "n8n + Claude 자동화 파이프라인 구축",
+  "description": "n8n에서 Claude AI를 연동하여 이메일 분류, 요약, 응답 초안 생성을 자동화하는 실습",
+  "difficulty": "intermediate",
+  "duration": "30분",
+  "tags": ["n8n", "Claude", "자동화", "워크플로우"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "n8n 워크플로우 설계",
+      "instruction": "이메일 자동화 워크플로우의 구조를 설계합니다.",
+      "prompt": "n8n으로 다음 이메일 자동화 워크플로우를 설계해줘:\n\n흐름:\n1. Gmail에서 새 이메일 수신 (트리거)\n2. Claude API로 이메일 분류 (업무/개인/스팸/긴급)\n3. 긴급 이메일만 Claude로 응답 초안 생성\n4. 초안을 Google Drive에 저장\n5. Slack으로 알림 발송\n\nn8n 노드 구성 방법과 각 노드 설정값을 상세히 알려줘.",
+      "expected_result": "n8n 워크플로우 설계도와 노드 설정 가이드",
+      "tip": "n8n의 HTTP Request 노드로 Claude API를 직접 호출할 수 있습니다."
+    },
+    {
+      "step": 2,
+      "title": "Claude API 연동 설정",
+      "instruction": "n8n에서 Claude API를 호출하는 HTTP Request 노드를 설정합니다.",
+      "prompt": "n8n의 HTTP Request 노드에서 Claude API를 호출하는 설정을 알려줘.\n\n요구사항:\n- 모델: claude-sonnet-4-6\n- 작업: 이메일 분류 (JSON 형식 응답)\n- 에러 처리: API 실패 시 재시도 3회\n- 비용 최적화: 최대 토큰 수 제한\n\n실제 JSON 요청 바디와 헤더 설정값 포함해줘.",
+      "expected_result": "Claude API 호출 설정과 응답 파싱 방법",
+      "tip": "claude-haiku 모델을 분류에, claude-sonnet을 응답 초안에 사용하면 비용을 최적화할 수 있습니다."
+    },
+    {
+      "step": 3,
+      "title": "워크플로우 테스트 및 최적화",
+      "instruction": "워크플로우를 테스트하고 성능을 개선합니다.",
+      "prompt": "n8n + Claude 이메일 자동화 워크플로우를 최적화해줘.\n\n현재 문제:\n- 분류 정확도 85% (목표: 95%)\n- 응답 초안 생성 시간 8초 (목표: 3초)\n- 월 API 비용 $50 (목표: $20 이하)\n\n각 문제에 대한 해결 방법과 구체적인 n8n 설정 변경사항 알려줘.",
+      "expected_result": "최적화된 워크플로우 설정과 비용 절감 전략",
+      "tip": "이메일 배치 처리와 캐싱을 활용하면 API 비용을 크게 줄일 수 있습니다."
+    }
+  ],
+  "challenge": "n8n 워크플로우를 확장하여 Notion 데이터베이스와 연동하고, 처리된 이메일을 자동으로 프로젝트별로 분류하여 저장하세요.",
+  "related_skills": ["n8n-automation-mastery", "ai-startup-automation"],
+  "videos": [
+    {
+      "title": "n8n Claude API 연동 튜토리얼",
+      "search_keyword": "n8n Claude API integration tutorial 2026 한국어",
+      "url": ""
+    }
+  ]
+}
