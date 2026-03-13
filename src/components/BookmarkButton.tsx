@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Bookmark, BookmarkCheck } from "lucide-react";
 import { addBookmark, removeBookmark, type BookmarkType } from "@/app/actions/bookmarks";
+import { useAuth } from "@/lib/auth/AuthContext";
 
 interface Props {
   slug: string;
@@ -13,6 +14,7 @@ interface Props {
 export default function BookmarkButton({ slug, type, initialBookmarked = false }: Props) {
   const [bookmarked, setBookmarked] = useState(initialBookmarked);
   const [loading, setLoading] = useState(false);
+  const { openLoginModal } = useAuth();
 
   async function toggle(e: React.MouseEvent) {
     e.preventDefault();
@@ -25,8 +27,8 @@ export default function BookmarkButton({ slug, type, initialBookmarked = false }
       } else {
         const result = await addBookmark(slug, type);
         if ('error' in result && result.error) {
-          // 로그인 필요 → 페이지 이동
-          window.location.href = '/login';
+          // 로그인 필요 → 모달 방식으로 통일 (NavMenu, HomeClient와 동일한 UX)
+          openLoginModal();
           return;
         }
         setBookmarked(true);
@@ -36,11 +38,14 @@ export default function BookmarkButton({ slug, type, initialBookmarked = false }
     }
   }
 
+  const label = bookmarked ? "북마크 해제" : "북마크 추가";
+
   return (
     <button
       onClick={toggle}
       disabled={loading}
-      title={bookmarked ? "북마크 해제" : "북마크"}
+      title={label}
+      aria-label={label}
       className={`p-1.5 rounded-md transition-all ${
         bookmarked
           ? "text-violet-400 hover:text-violet-300"

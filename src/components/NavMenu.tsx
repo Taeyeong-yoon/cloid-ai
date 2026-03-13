@@ -210,10 +210,14 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
               key={href}
               href={href}
               onClick={(e) => handleClick(e, href, guard)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
+              className="group flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm text-slate-400
+                hover:text-white transition-all duration-200 cursor-pointer relative
+                hover:bg-gradient-to-r hover:from-violet-900/20 hover:to-blue-900/10
+                hover:shadow-[0_0_12px_rgba(139,92,246,0.08)]"
             >
-              <Icon size={14} />
-              {label}
+              <Icon size={14} className="group-hover:text-violet-400 transition-colors duration-200" />
+              <span>{label}</span>
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-3/5 h-[2px] bg-gradient-to-r from-violet-500/60 to-blue-500/40 rounded-full transition-all duration-300" />
             </a>
           ))}
         </nav>

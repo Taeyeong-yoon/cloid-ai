@@ -152,6 +152,9 @@ function TopicTag({ tag, onClick }: { tag: string; onClick?: () => void }) {
   );
 }
 
+// ── 인기 주제 태그 ───────────────────────────────────────────
+const POPULAR_TAGS = ["Claude API", "MCP", "프롬프트", "AI 에이전트", "LangChain"];
+
 // ── 타입 정의 ───────────────────────────────────────────────
 interface TodayUpdateData {
   radar: { slug: string; title: string; summary: string; tags: string[] } | null;
@@ -197,9 +200,6 @@ export default function HomeClient({
   function handleTagClick(tag: string) {
     router.push(`/learning`);
   }
-
-  // 인기 주제 태그
-  const POPULAR_TAGS = ["Claude API", "MCP", "프롬프트", "AI 에이전트", "LangChain"];
 
   // 학습 여정 4단계
   const journey = [
@@ -257,7 +257,7 @@ export default function HomeClient({
     <div className="space-y-10">
 
       {/* ── 1. Hero ─────────────────────────────────────────── */}
-      <section className="py-4">
+      <section className="py-4 hero-glow animate-fade-in-up" style={{ animationDelay: "0ms" }}>
         <div className="flex items-center gap-2 text-violet-400 text-sm font-medium mb-3">
           <TrendingUp size={16} />
           <span>{t.home.trending_badge}</span>
@@ -332,14 +332,18 @@ export default function HomeClient({
       </section>
 
       {/* ── 2. HTML/CSS/JS 미리보기 (수준별 경로 바로 아래) ─── */}
-      <HTMLPreview />
+      <div className="animate-fade-in-up" style={{ animationDelay: "100ms" }}>
+        <HTMLPreview />
+      </div>
 
       {/* ── 3. Ask AI ────────────────────────────────────────── */}
-      <AskAI />
+      <div className="animate-fade-in-up" style={{ animationDelay: "150ms" }}>
+        <AskAI />
+      </div>
 
       {/* ── 3. 오늘의 업데이트 ───────────────────────────────── */}
       {(todayUpdate.radar || todayUpdate.learning || todayUpdate.lab) && (
-        <section>
+        <section className="animate-fade-in-up" style={{ animationDelay: "200ms" }}>
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-2">
               <Radio size={14} className="text-emerald-400" />
@@ -359,7 +363,7 @@ export default function HomeClient({
               <a
                 href="/radar"
                 data-event="cta_today_radar"
-                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-700 hover:bg-slate-800/50 transition-all min-w-[280px] sm:min-w-0 snap-start"
+                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-700 hover:bg-slate-800/50 transition-all min-w-[280px] sm:min-w-0 snap-start card-glow"
               >
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-bold text-emerald-400 bg-emerald-900/30 px-2 py-0.5 rounded-full border border-emerald-800/50">
@@ -387,7 +391,7 @@ export default function HomeClient({
               <a
                 href="/learning"
                 data-event="cta_today_learning"
-                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-blue-700 hover:bg-slate-800/50 transition-all min-w-[280px] sm:min-w-0 snap-start"
+                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-blue-700 hover:bg-slate-800/50 transition-all min-w-[280px] sm:min-w-0 snap-start card-glow"
               >
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-bold text-blue-400 bg-blue-900/30 px-2 py-0.5 rounded-full border border-blue-800/50">
@@ -405,7 +409,7 @@ export default function HomeClient({
                   ))}
                 </div>
                 <span className="text-xs text-blue-400 group-hover:underline mt-1">
-                  학습 시작 →
+                  {t.home.learning_label} →
                 </span>
               </a>
             )}
@@ -416,7 +420,7 @@ export default function HomeClient({
                 href="/labs"
                 onClick={(e) => handleGuardedClick(e, "/labs")}
                 data-event="cta_today_lab"
-                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-violet-700 hover:bg-slate-800/50 transition-all min-w-[280px] sm:min-w-0 snap-start"
+                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-violet-700 hover:bg-slate-800/50 transition-all min-w-[280px] sm:min-w-0 snap-start card-glow"
               >
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-bold text-violet-400 bg-violet-900/30 px-2 py-0.5 rounded-full border border-violet-800/50">
@@ -443,7 +447,7 @@ export default function HomeClient({
       )}
 
       {/* ── 4. 학습 여정 ─────────────────────────────────────── */}
-      <section>
+      <section className="animate-fade-in-up" style={{ animationDelay: "300ms" }}>
         <div className="mb-4">
           <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">
             🗺️ {t.home.journey_title}
@@ -459,7 +463,7 @@ export default function HomeClient({
                 href={href}
                 onClick={guard ? (e) => handleGuardedClick(e, href) : undefined}
                 data-event={event}
-                className={`group flex flex-col gap-2 p-3 sm:p-4 rounded-xl border border-slate-800 bg-slate-900/50 ${border} hover:bg-slate-800/50 transition-all cursor-pointer flex-1`}
+                className={`group flex flex-col gap-2 p-3 sm:p-4 rounded-xl border border-slate-800 bg-slate-900/50 ${border} hover:bg-slate-800/50 transition-all cursor-pointer flex-1 card-glow`}
               >
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold text-slate-500">{step}</span>
@@ -478,7 +482,7 @@ export default function HomeClient({
               {/* 화살표 (마지막 제외, md 이상에서만) */}
               {idx < 3 && (
                 <div className="hidden md:flex items-center justify-center text-slate-600 -mx-1 mt-8">
-                  <ArrowRight size={16} />
+                  <ArrowRight size={16} className="arrow-animate" />
                 </div>
               )}
             </div>

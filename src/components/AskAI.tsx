@@ -4,11 +4,63 @@ import { useState, useRef } from "react";
 import { Sparkles, Send, Loader2, X } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
-// ── 키워드 → 내부 콘텐츠 매핑 (MVP: 클라이언트 사이드) ──────
-const KEYWORD_CONTENT: Record<
-  string,
-  { type: string; icon: string; title: string; href: string }[]
-> = {
+// ── 키워드 alias 맵: 모든 표현 → canonical key ──────────────
+// 동의어/한국어/영어 변형을 canonical key 하나로 정규화
+// 새 동의어 추가 시 여기에만 추가하면 됨 (KEYWORD_CONTENT 중복 등록 불필요)
+const KEYWORD_ALIASES: Record<string, string> = {
+  // Claude
+  "claude": "claude",
+  "클로드": "claude",
+  "claude code": "claude",
+  "클로드코드": "claude",
+  "anthropic": "claude",
+  "앤스로픽": "claude",
+  // MCP
+  "mcp": "mcp",
+  // Prompt
+  "프롬프트": "prompt",
+  "prompt": "prompt",
+  "프롬프트엔지니어링": "prompt",
+  "prompt engineering": "prompt",
+  // Agent
+  "에이전트": "agent",
+  "agent": "agent",
+  "ai agent": "agent",
+  "ai 에이전트": "agent",
+  // RAG
+  "rag": "rag",
+  // LangChain
+  "langchain": "langchain",
+  "랭체인": "langchain",
+  // Cursor
+  "cursor": "cursor",
+  "커서": "cursor",
+  // Automation (n8n 포함)
+  "자동화": "automation",
+  "automation": "automation",
+  "n8n": "automation",
+  "워크플로우": "automation",
+  "workflow": "automation",
+  // Gemini
+  "gemini": "gemini",
+  "제미나이": "gemini",
+  // OpenAI / ChatGPT
+  "openai": "openai",
+  "chatgpt": "openai",
+  "챗gpt": "openai",
+  "gpt": "openai",
+  // Python
+  "python": "python",
+  "파이썬": "python",
+  // HTML
+  "html": "html",
+};
+
+// ── canonical key → 콘텐츠 매핑 ─────────────────────────────
+// 한국어/영어 쌍을 중복 등록하지 않음 - KEYWORD_ALIASES가 정규화를 담당
+type RelatedContentItem = { type: string; icon: string; title: string; href: string };
+
+const KEYWORD_CONTENT: Record<string, RelatedContentItem[]> = {
   claude: [
     { type: "Learning", icon: "📖", title: "Claude Code 마스터하기", href: "/learning?q=claude" },
     { type: "Labs", icon: "🧪", title: "Claude Code 컴포넌트 실습", href: "/labs?q=claude" },
@@ -17,19 +69,11 @@ const KEYWORD_CONTENT: Record<
     { type: "Learning", icon: "📖", title: "MCP 심화 학습", href: "/learning?q=mcp" },
     { type: "Labs", icon: "🧪", title: "MCP 파일시스템 실습", href: "/labs?q=mcp" },
   ],
-  프롬프트: [
+  prompt: [
     { type: "Learning", icon: "📖", title: "프롬프트 엔지니어링", href: "/learning?q=prompt" },
     { type: "Skills", icon: "🔧", title: "프롬프트 레시피", href: "/skills?q=prompt" },
   ],
-  prompt: [
-    { type: "Learning", icon: "📖", title: "Prompt Engineering", href: "/learning?q=prompt" },
-    { type: "Skills", icon: "🔧", title: "Prompt Recipes", href: "/skills?q=prompt" },
-  ],
   agent: [
-    { type: "Learning", icon: "📖", title: "AI 에이전트 개발", href: "/learning?q=agent" },
-    { type: "Labs", icon: "🧪", title: "챗봇 만들기 실습", href: "/labs?q=chatbot" },
-  ],
-  에이전트: [
     { type: "Learning", icon: "📖", title: "AI 에이전트 개발", href: "/learning?q=agent" },
     { type: "Labs", icon: "🧪", title: "챗봇 만들기 실습", href: "/labs?q=chatbot" },
   ],
@@ -45,13 +89,9 @@ const KEYWORD_CONTENT: Record<
     { type: "Learning", icon: "📖", title: "Cursor AI 개발", href: "/learning?q=cursor" },
     { type: "Skills", icon: "🔧", title: "Cursor 실무 패턴", href: "/skills?q=cursor" },
   ],
-  자동화: [
+  automation: [
     { type: "Learning", icon: "📖", title: "AI 자동화 학습", href: "/learning?q=automation" },
     { type: "Labs", icon: "🧪", title: "AI 이메일 자동화 실습", href: "/labs?q=email" },
-  ],
-  automation: [
-    { type: "Learning", icon: "📖", title: "AI Automation", href: "/learning?q=automation" },
-    { type: "Labs", icon: "🧪", title: "Email Automation Lab", href: "/labs?q=email" },
   ],
   gemini: [
     { type: "Learning", icon: "📖", title: "AI 도구 개요", href: "/learning?q=gemini" },
@@ -70,19 +110,27 @@ const KEYWORD_CONTENT: Record<
   ],
 };
 
-function matchContent(question: string) {
-  const q = question.toLowerCase();
-  const results: { type: string; icon: string; title: string; href: string }[] = [];
+// alias 맵 기반 정규화 매칭: 입력 → canonical key → 콘텐츠
+function matchContent(question: string): RelatedContentItem[] {
+  const q = question.toLowerCase().trim();
+  const matchedKeys = new Set<string>();
+
+  for (const [alias, canonicalKey] of Object.entries(KEYWORD_ALIASES)) {
+    if (q.includes(alias)) {
+      matchedKeys.add(canonicalKey);
+    }
+  }
+
+  const results: RelatedContentItem[] = [];
   const seen = new Set<string>();
 
-  for (const [keyword, items] of Object.entries(KEYWORD_CONTENT)) {
-    if (q.includes(keyword.toLowerCase())) {
-      for (const item of items) {
-        const key = `${item.type}-${item.title}`;
-        if (!seen.has(key)) {
-          seen.add(key);
-          results.push(item);
-        }
+  for (const key of matchedKeys) {
+    const items = KEYWORD_CONTENT[key] ?? [];
+    for (const item of items) {
+      const dedupeKey = `${item.type}-${item.title}`;
+      if (!seen.has(dedupeKey)) {
+        seen.add(dedupeKey);
+        results.push(item);
       }
     }
   }
@@ -209,7 +257,8 @@ export default function AskAI() {
             <button
               onClick={() => { setAnswer(""); setRelatedContent([]); }}
               className="p-1 rounded text-slate-500 hover:text-white hover:bg-slate-700 transition-colors"
-              title="닫기"
+              title="답변 닫기"
+              aria-label="답변 닫기"
             >
               <X size={14} />
             </button>

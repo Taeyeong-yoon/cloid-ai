@@ -20,3 +20,146 @@ body {
 :lang(en) {
   font-family: "Inter", "Noto Sans KR", system-ui, sans-serif;
 }
+
+/* ── 배경 미세 도트 그리드 패턴 ── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image: radial-gradient(circle, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+/* ── 히어로 영역 글로우 ── */
+.hero-glow {
+  position: relative;
+}
+.hero-glow::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(139, 92, 246, 0.08) 0%, rgba(139, 92, 246, 0.02) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ── 카드 호버 시 미세한 빛 테두리 효과 ── */
+.card-glow {
+  transition: all 0.3s ease;
+  position: relative;
+}
+.card-glow::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0) 0%, rgba(139, 92, 246, 0) 100%);
+  z-index: -1;
+  transition: background 0.3s ease;
+  pointer-events: none;
+}
+.card-glow:hover::after {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.08) 50%, rgba(16, 185, 129, 0.08) 100%);
+}
+
+/* ── 흐르는 빛 효과 (상단 네비게이션 하단 라인) ── */
+@keyframes light-sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+.nav-light-line {
+  position: relative;
+  overflow: hidden;
+}
+.nav-light-line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.6), rgba(59, 130, 246, 0.4), transparent);
+  animation: light-sweep 4s ease-in-out infinite;
+}
+
+/* ── 섹션 구분선 글로우 ── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.15), transparent);
+  border: none;
+  margin: 2.5rem 0;
+}
+
+/* ── 버튼 활성화 시 눌림 효과 ── */
+.btn-press:active {
+  transform: scale(0.96);
+  transition: transform 0.1s ease;
+}
+
+/* ── 네비 아이템 활성 상태 밑줄 ── */
+.nav-item-active {
+  position: relative;
+}
+.nav-item-active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.8), rgba(59, 130, 246, 0.5));
+  border-radius: 1px;
+}
+
+/* ── 스킬 레시피 카드 개선 ── */
+.skill-card {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, rgba(15, 17, 23, 0.8), rgba(30, 27, 46, 0.4));
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.skill-card:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.05), 0 8px 32px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ── 교육 탭 버튼 활성화 ── */
+.tab-active {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.15));
+  border-color: rgba(139, 92, 246, 0.5) !important;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  color: white !important;
+}
+
+/* ── 섹션 순차 등장 애니메이션 ── */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* ── 화살표 펄스 애니메이션 ── */
+@keyframes arrow-pulse {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+.arrow-animate {
+  animation: arrow-pulse 2s ease-in-out infinite;
+}
