@@ -151,8 +151,7 @@ body::before {
   }
 }
 .animate-fade-in-up {
-  animation: fade-in-up 0.5s ease-out forwards;
-  opacity: 0;
+  animation: fade-in-up 0.5s ease-out both;
 }
 
 /* ── 화살표 펄스 애니메이션 ── */
@@ -186,7 +185,7 @@ button:active:not(:disabled) {
 
 /* ── Reduced motion support ── */
 @media (prefers-reduced-motion: reduce) {
-  .animate-fade-in-up { animation: none; }
+  .animate-fade-in-up { animation: none; opacity: 1; }
   .card-glow:hover { transform: none; }
   .mobile-menu-enter { animation: none; }
 }
