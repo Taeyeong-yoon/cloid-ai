@@ -1,0 +1,15 @@
+---
+title: "Anthropic rolls out Code Review for Claude Code as it sues over Pentagon blacklist and partners with Microsoft - VentureBeat"
+date: "2026-03-09"
+tags:
+  - claude-code
+score: 94
+sourceUrl: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOaUdlZVh2a1dwcjFJb0k3aG9KNVkzd0lnUlBaTUVGcl9VZXRUWlE2bTF6UTBETDduZTFiemoyQkxWaDhzVHBqVFg3cUVXTjNleUpKYXpBQkZwZVRJbmZ2X29hYm1aNmdNVWJGTTN6MFQtWjc0LUx5dGxyOW5CMm1xNVluNmpZc3RhRFZXZVdpcFFWRVFHV1FmREJ4SEJBRW8yYVhKTnRJZ3RCN28?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMiqwFBVV95cUxOaUdlZVh2a1dwcjFJb0k3aG9KNVkzd0lnUlBaTUVGcl9VZXRUWlE2bTF6UTBETDduZTFiemoyQkxWaDhzVHBqVFg3cUVXTjNleUpKYXpBQkZwZVRJbmZ2X29hYm1aNmdNVWJGTTN6MFQtWjc0LUx5dGxyOW5CMm1xNVluNmpZc3RhRFZXZVdpcFFWRVFHV1FmREJ4SEJBRW8yYVhKTnRJZ3RCN28?oc=5' target='_"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOaUdlZVh2a1dwcjFJb0k3aG9KNVkzd0lnUlBaTUVGcl9VZXRUWlE2bTF6UTBETDduZTFiemoyQkxWaDhzVHBqVFg3cUVXTjNleUpKYXpBQkZwZVRJbmZ2X29hYm1aNmdNVWJGTTN6MFQtWjc0LUx5dGxyOW5CMm1xNVluNmpZc3RhRFZXZVdpcFFWRVFHV1FmREJ4SEJBRW8yYVhKTnRJZ3RCN28?oc=5" target="_
+
+**출처**: [https://news.google.com/rss/articles/CBMiqwFBVV95cUxOaUdlZVh2a1dwcjFJb0k3aG9KNVkzd0lnUlBaTUVGcl9VZXRUWlE2bTF6UTBETDduZTFiemoyQkxWaDhzVHBqVFg3cUVXTjNleUpKYXpBQkZwZVRJbmZ2X29hYm1aNmdNVWJGTTN6MFQtWjc0LUx5dGxyOW5CMm1xNVluNmpZc3RhRFZXZVdpcFFWRVFHV1FmREJ4SEJBRW8yYVhKTnRJZ3RCN28?oc=5](https://news.google.com/rss/articles/CBMiqwFBVV95cUxOaUdlZVh2a1dwcjFJb0k3aG9KNVkzd0lnUlBaTUVGcl9VZXRUWlE2bTF6UTBETDduZTFiemoyQkxWaDhzVHBqVFg3cUVXTjNleUpKYXpBQkZwZVRJbmZ2X29hYm1aNmdNVWJGTTN6MFQtWjc0LUx5dGxyOW5CMm1xNVluNmpZc3RhRFZXZVdpcFFWRVFHV1FmREJ4SEJBRW8yYVhKTnRJZ3RCN28?oc=5)

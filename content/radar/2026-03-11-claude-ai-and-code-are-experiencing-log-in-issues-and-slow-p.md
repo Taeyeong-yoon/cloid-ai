@@ -1,0 +1,15 @@
+---
+title: "Claude AI and Code are experiencing log in issues and slow performance [U] - 9to5Mac"
+date: "2026-03-11"
+tags:
+  - claude-code
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUk9fWUppQmRlT1dleGF0MWl3NnlvcGtBOVAyUGNTbUQ3NGZEcHhWTE13OWxGb19WZ1g0ME9iMXh5V1Q3d1dpZTFpQlI3TVRfQ0VXdjVSMUZ4cnFrU3pDU2xXb0pHU1g1M01peWlZaHV3UkU1SnFuYVlqWnlraXprb1JEdFB0VG84ZUU5ZDBBVUZCMExHVkRGWmlzSTBncENKMW4tTQ?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMipAFBVV95cUxNUk9fWUppQmRlT1dleGF0MWl3NnlvcGtBOVAyUGNTbUQ3NGZEcHhWTE13OWxGb19WZ1g0ME9iMXh5V1Q3d1dpZTFpQlI3TVRfQ0VXdjVSMUZ4cnFrU3pDU2xXb0pHU1g1M01peWlZaHV3UkU1SnFuYVlqWnlraXprb1JEdFB0VG84ZUU5ZDBBVUZCMExHVkRGWmlzSTBncENKMW4tTQ?oc=5' target='_blank'&gt"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxNUk9fWUppQmRlT1dleGF0MWl3NnlvcGtBOVAyUGNTbUQ3NGZEcHhWTE13OWxGb19WZ1g0ME9iMXh5V1Q3d1dpZTFpQlI3TVRfQ0VXdjVSMUZ4cnFrU3pDU2xXb0pHU1g1M01peWlZaHV3UkU1SnFuYVlqWnlraXprb1JEdFB0VG84ZUU5ZDBBVUZCMExHVkRGWmlzSTBncENKMW4tTQ?oc=5" target="_blank"&gt
+
+**출처**: [https://news.google.com/rss/articles/CBMipAFBVV95cUxNUk9fWUppQmRlT1dleGF0MWl3NnlvcGtBOVAyUGNTbUQ3NGZEcHhWTE13OWxGb19WZ1g0ME9iMXh5V1Q3d1dpZTFpQlI3TVRfQ0VXdjVSMUZ4cnFrU3pDU2xXb0pHU1g1M01peWlZaHV3UkU1SnFuYVlqWnlraXprb1JEdFB0VG84ZUU5ZDBBVUZCMExHVkRGWmlzSTBncENKMW4tTQ?oc=5](https://news.google.com/rss/articles/CBMipAFBVV95cUxNUk9fWUppQmRlT1dleGF0MWl3NnlvcGtBOVAyUGNTbUQ3NGZEcHhWTE13OWxGb19WZ1g0ME9iMXh5V1Q3d1dpZTFpQlI3TVRfQ0VXdjVSMUZ4cnFrU3pDU2xXb0pHU1g1M01peWlZaHV3UkU1SnFuYVlqWnlraXprb1JEdFB0VG84ZUU5ZDBBVUZCMExHVkRGWmlzSTBncENKMW4tTQ?oc=5)
