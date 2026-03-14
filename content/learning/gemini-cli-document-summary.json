@@ -29,5 +29,40 @@
       "search_keyword": "Gemini CLI document summary long context tutorial 2026",
       "url": ""
     }
+  ],
+  "quiz": [
+    {
+      "question": "What is the main strength highlighted in this lesson for Gemini CLI?",
+      "options": [
+        "Game development",
+        "Long-document summarization",
+        "Kernel compilation",
+        "Spreadsheet formatting"
+      ],
+      "answer": 1,
+      "explanation": "This lesson focuses on Gemini CLI's ability to handle long context and summarize reports and documents."
+    },
+    {
+      "question": "Why is a CLI workflow useful for document summaries?",
+      "options": [
+        "It avoids opening any files",
+        "It lets you automate repeatable summary tasks from the terminal",
+        "It guarantees perfect answers",
+        "It removes the need for prompts"
+      ],
+      "answer": 1,
+      "explanation": "CLI tools are useful because they fit into repeatable terminal workflows and scripts."
+    },
+    {
+      "question": "What does the lesson use as an example input?",
+      "options": [
+        "A running Docker container",
+        "A long PDF or report file",
+        "A Photoshop project",
+        "A SQL database backup"
+      ],
+      "answer": 1,
+      "explanation": "The example command summarizes a long report file passed with `--file`."
+    }
   ]
 }

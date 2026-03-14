@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { BookOpen, FileText, Video, Terminal, ExternalLink, ArrowLeft, Search, ChevronDown, ChevronUp } from "lucide-react";
 import type { LearningTopic, LearningResource } from "@/lib/types";
 import TagBadge from "@/components/TagBadge";
+import QuizCheck from "@/components/QuizCheck";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 const levelColor: Record<string, string> = {
@@ -343,6 +344,9 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
                   </h3>
                   {topic.resources.map((r, i) => <ResourceCard key={i} r={r} />)}
                 </div>
+                {topic.quiz && topic.quiz.length > 0 && (
+                  <QuizCheck contentId={topic.id} quiz={topic.quiz} />
+                )}
               </div>
             </div>
           </div>

@@ -29,5 +29,40 @@
       "search_keyword": "Gemini CLI multimodal image analysis tutorial 2026",
       "url": ""
     }
+  ],
+  "quiz": [
+    {
+      "question": "What does multimodal mean in the context of Gemini CLI?",
+      "options": [
+        "Only writing code",
+        "Working with text plus media like images",
+        "Using two terminals at once",
+        "Deploying to multiple servers"
+      ],
+      "answer": 1,
+      "explanation": "Multimodal analysis means the tool can work with more than plain text, such as screenshots and mixed-media files."
+    },
+    {
+      "question": "What is a practical example from this lesson?",
+      "options": [
+        "Extracting UI details from a screenshot",
+        "Running unit tests in Jest",
+        "Training a model locally",
+        "Compressing video files"
+      ],
+      "answer": 0,
+      "explanation": "The lesson shows using Gemini CLI to inspect screenshots and extract visible text and UI details."
+    },
+    {
+      "question": "Why is structured extraction useful?",
+      "options": [
+        "Because it makes outputs easier to reuse in workflows",
+        "Because it hides all input data",
+        "Because it removes the need for prompts",
+        "Because it guarantees OCR accuracy"
+      ],
+      "answer": 0,
+      "explanation": "Structured extraction helps learners reuse the output in later analysis, reports, or automation steps."
+    }
   ]
 }

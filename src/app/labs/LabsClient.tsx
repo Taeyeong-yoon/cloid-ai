@@ -17,6 +17,9 @@ import type { LabItem, LabVideo } from "@/lib/types";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 import HTMLPreview from "@/components/HTMLPreview";
 import PythonPreview from "@/components/PythonPreview";
+import CodeChallenge from "@/components/CodeChallenge";
+import StepChecklist, { type ChecklistStep } from "@/components/StepChecklist";
+import InlineTutor from "@/components/InlineTutor";
 
 const difficultyColor: Record<string, string> = {
   beginner: "text-emerald-400 bg-emerald-900/30 border-emerald-700/50",
@@ -27,9 +30,9 @@ const difficultyColor: Record<string, string> = {
 const difficultyOrder = ["beginner", "intermediate", "advanced"];
 
 const difficultyMeta: Record<string, { emoji: string; label: string }> = {
-  beginner: { emoji: "🌱", label: "입문" },
-  intermediate: { emoji: "💼", label: "중급" },
-  advanced: { emoji: "🚀", label: "고급" },
+  beginner: { emoji: "??", label: "�Թ�" },
+  intermediate: { emoji: "??", label: "�߱�" },
+  advanced: { emoji: "??", label: "����" },
 };
 
 function getYouTubeId(url: string): string | null {
@@ -115,9 +118,13 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
     setTimeout(() => setCopiedIdx(null), 1500);
   }
 
+  const interactiveChallenge =
+    typeof lab.challenge === "object" && lab.challenge && "starterCode" in lab.challenge
+      ? lab.challenge
+      : null;
+
   return (
     <div className="rounded-xl border border-slate-800 bg-slate-900/40 overflow-hidden">
-      {/* Header */}
       <div className="p-5">
         <div className="flex items-start gap-4 mb-3">
           <span className="w-8 h-8 shrink-0 rounded-full bg-violet-900/50 border border-violet-700 text-violet-300 text-sm font-bold flex items-center justify-center">
@@ -153,9 +160,26 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
         </button>
       </div>
 
-      {/* Expanded Steps */}
       {expanded && (
         <div className="border-t border-slate-800 p-5 space-y-4">
+          {lab.steps.length > 0 && (() => {
+            const checklistSteps: ChecklistStep[] = lab.steps.map((step) => ({
+              title: step.title,
+              description: step.instruction,
+              action: step.prompt ? `${t.labs.prompt_label}: ${step.prompt}` : undefined,
+              expectedResult: step.expected_result,
+              failureHint: step.tip,
+            }));
+
+            return (
+              <StepChecklist
+                contentType="lab"
+                contentId={lab.id}
+                steps={checklistSteps}
+              />
+            );
+          })()}
+
           {lab.steps.map((step, i) => (
             <div key={i} className="relative pl-6">
               <div className="absolute left-0 top-0 w-5 h-5 rounded-full bg-slate-800 border border-slate-700 text-slate-400 text-xs flex items-center justify-center">
@@ -203,8 +227,7 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
             </div>
           ))}
 
-          {/* Challenge */}
-          {lab.challenge && (
+          {typeof lab.challenge === "string" && lab.challenge && (
             <div className="mt-4 p-3 rounded-lg bg-violet-900/20 border border-violet-800/50">
               <div className="flex items-center gap-1.5 text-xs text-violet-400 font-semibold mb-1">
                 <FlaskConical size={12} />
@@ -214,7 +237,10 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
             </div>
           )}
 
-          {/* Videos */}
+          {interactiveChallenge && (
+            <CodeChallenge contentId={lab.id} challenge={interactiveChallenge} />
+          )}
+
           {lab.videos && lab.videos.length > 0 && (
             <div className="mt-4">
               <p className="text-xs text-slate-500 uppercase tracking-wider mb-2">{t.labs.videos_title}</p>
@@ -233,8 +259,6 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
 
 export default function LabsClient({ labs }: { labs: LabItem[] }) {
   const { t } = useTranslation();
-
-  // difficulty별 아코디언 열림 상태 (기본: 모두 열림)
   const [openDifficulties, setOpenDifficulties] = useState<Record<string, boolean>>({
     beginner: true,
     intermediate: true,
@@ -245,13 +269,11 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
     setOpenDifficulties((prev) => ({ ...prev, [difficulty]: !prev[difficulty] }));
   }
 
-  // difficulty별 그룹
   const grouped = difficultyOrder.reduce<Record<string, LabItem[]>>((acc, diff) => {
     acc[diff] = labs.filter((lab) => lab.difficulty === diff);
     return acc;
   }, {});
 
-  // 각 그룹 내 순서 유지를 위한 누적 인덱스
   let globalIndex = 0;
 
   return (
@@ -262,17 +284,14 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
       </div>
       <p className="text-slate-400 text-sm mb-6">{t.labs.desc}</p>
 
-      {/* ── HTML 코드 미리보기 도구 ── */}
       <div className="mb-4">
         <HTMLPreview />
       </div>
 
-      {/* ── Python 미리보기 도구 ── */}
       <div className="mb-8">
         <PythonPreview />
       </div>
 
-      {/* difficulty별 아코디언 */}
       <div className="space-y-4">
         {difficultyOrder.map((difficulty) => {
           const diffLabs = grouped[difficulty] || [];
@@ -284,7 +303,6 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
 
           return (
             <div key={difficulty} className="rounded-xl border border-slate-800 overflow-hidden">
-              {/* 섹션 헤더 */}
               <button
                 onClick={() => toggleDifficulty(difficulty)}
                 className="w-full flex items-center justify-between px-5 py-3.5 bg-slate-900/60 hover:bg-slate-800/60 text-left transition-colors"
@@ -293,16 +311,16 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
                   <span className="text-base">{meta.emoji}</span>
                   <span>{meta.label}</span>
                   <span className={`text-xs font-normal px-1.5 py-0.5 rounded border ${difficultyColor[difficulty]}`}>
-                    {diffLabs.length}개
+                    {diffLabs.length}��
                   </span>
                 </span>
-                {isOpen
-                  ? <ChevronUp size={16} className="text-slate-500 shrink-0" />
-                  : <ChevronDown size={16} className="text-slate-500 shrink-0" />
-                }
+                {isOpen ? (
+                  <ChevronUp size={16} className="text-slate-500 shrink-0" />
+                ) : (
+                  <ChevronDown size={16} className="text-slate-500 shrink-0" />
+                )}
               </button>
 
-              {/* 랩 목록 */}
               {isOpen && (
                 <div className="p-4 space-y-4 bg-slate-900/10">
                   {diffLabs.map((lab, i) => (
@@ -314,6 +332,7 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
           );
         })}
       </div>
+      <InlineTutor />
     </div>
   );
 }

@@ -31,7 +31,22 @@
       "tip": "Save the output with `> code_review.md` for sharing"
     }
   ],
-  "challenge": "Set up a git pre-push hook that automatically runs this Codex CLI review on every push and blocks the push if Critical issues are found.",
+  "challenge": {
+    "title": "Complete the TODO counter",
+    "description": "Write the missing line so the function counts TODO comments in a code string, ignoring letter case.",
+    "language": "python",
+    "starterCode": "def count_todos(code: str) -> int:\n    \"\"\"Count TODO comments in code.\"\"\"\n    ___",
+    "solution": "return code.lower().count('todo')",
+    "testCases": [
+      { "input": "count_todos('# TODO: fix bug\\n# TODO: add test')", "expected": "2" },
+      { "input": "count_todos('print(\"hello\")')", "expected": "0" },
+      { "input": "count_todos('# todo\\n# Todo\\n# TODO')", "expected": "3" }
+    ],
+    "hints": [
+      "Normalize the string before counting.",
+      "Python strings have a built-in count method."
+    ]
+  },
   "related_skills": ["codex-cli-pr-review-recipe"],
   "videos": [
     {
