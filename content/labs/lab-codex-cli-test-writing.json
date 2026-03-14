@@ -39,7 +39,23 @@
       "tip": "Add coverage to your CI/CD pipeline — coverage should never drop below your threshold"
     }
   ],
-  "challenge": "Set up a GitHub Actions workflow that runs the test suite on every PR and fails the check if coverage drops below 70% in any critical directory.",
+  "challenge": {
+    "title": "Complete the edge-case helper",
+    "description": "Fill in the missing line so the function returns True only when the value is empty-like for strings and collections.",
+    "language": "python",
+    "starterCode": "def is_empty_value(value) -> bool:\n    if value is None:\n        return True\n    ___",
+    "solution": "return value == '' or value == [] or value == {}",
+    "testCases": [
+      { "input": "is_empty_value(None)", "expected": "True" },
+      { "input": "is_empty_value('')", "expected": "True" },
+      { "input": "is_empty_value([])", "expected": "True" },
+      { "input": "is_empty_value('hello')", "expected": "False" }
+    ],
+    "hints": [
+      "The first branch already handles None.",
+      "Compare the value against a few common empty structures."
+    ]
+  },
   "related_skills": ["codex-cli-pr-review-recipe"],
   "videos": [
     {

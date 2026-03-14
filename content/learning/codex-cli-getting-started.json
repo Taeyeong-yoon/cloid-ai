@@ -29,5 +29,40 @@
       "search_keyword": "Codex CLI OpenAI getting started tutorial 2026",
       "url": ""
     }
+  ],
+  "quiz": [
+    {
+      "question": "What is the main purpose of Codex CLI?",
+      "options": [
+        "Generate videos",
+        "Read, analyze, and fix code from the terminal",
+        "Manage databases visually",
+        "Deploy websites automatically"
+      ],
+      "answer": 1,
+      "explanation": "Codex CLI is designed for code understanding, review, refactoring, and bug fixing workflows in the terminal."
+    },
+    {
+      "question": "Which package manager command installs Codex CLI globally in this lesson?",
+      "options": [
+        "pip install codex",
+        "npm install -g @openai/codex",
+        "brew install codex-cli",
+        "cargo install codex"
+      ],
+      "answer": 1,
+      "explanation": "This lesson uses the npm package `@openai/codex` and installs it globally with `npm install -g`."
+    },
+    {
+      "question": "What is a good first task after installation?",
+      "options": [
+        "Delete old source files",
+        "Review one small existing file",
+        "Deploy the whole repository",
+        "Rewrite the entire application"
+      ],
+      "answer": 1,
+      "explanation": "Starting with one small file makes it easier to verify the CLI is installed correctly and understand the review output."
+    }
   ]
 }

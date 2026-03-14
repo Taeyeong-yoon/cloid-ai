@@ -29,5 +29,40 @@
       "search_keyword": "Codex CLI refactoring legacy code unit tests tutorial 2026",
       "url": ""
     }
+  ],
+  "quiz": [
+    {
+      "question": "What is the main goal of refactoring in this lesson?",
+      "options": [
+        "Make code longer",
+        "Improve readability and structure without changing behavior",
+        "Replace all functions with AI-generated code",
+        "Avoid writing tests"
+      ],
+      "answer": 1,
+      "explanation": "Refactoring improves clarity and maintainability while keeping the code's behavior the same."
+    },
+    {
+      "question": "Why should you generate tests during a refactoring workflow?",
+      "options": [
+        "To prove the old code was useless",
+        "To check that behavior stays stable after changes",
+        "To remove the need for debugging forever",
+        "To increase bundle size"
+      ],
+      "answer": 1,
+      "explanation": "Tests protect against regressions and make refactoring safer."
+    },
+    {
+      "question": "Which type of code is usually the best first target for tests?",
+      "options": [
+        "Critical business logic and utility functions",
+        "Unused mock files",
+        "Random comments",
+        "Only CSS files"
+      ],
+      "answer": 0,
+      "explanation": "Critical logic gives the highest value because failures there affect real behavior."
+    }
   ]
 }

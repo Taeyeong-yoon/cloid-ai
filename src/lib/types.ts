@@ -19,6 +19,13 @@ export interface LearningResource {
   command?: string;
 }
 
+export interface QuizQuestion {
+  question: string;
+  options: string[];
+  answer: number;
+  explanation: string;
+}
+
 export interface LearningTopic {
   id: string;
   title: string;
@@ -26,6 +33,7 @@ export interface LearningTopic {
   level: 'beginner' | 'intermediate' | 'advanced';
   tags: string[];
   resources: LearningResource[];
+  quiz?: QuizQuestion[];
 }
 
 export interface LabStep {
@@ -43,6 +51,21 @@ export interface LabVideo {
   url: string;
 }
 
+export interface ChallengeTestCase {
+  input: string;
+  expected: string;
+}
+
+export interface CodeChallengeData {
+  title: string;
+  description: string;
+  language: 'python';
+  starterCode: string;
+  solution: string;
+  testCases: ChallengeTestCase[];
+  hints: string[];
+}
+
 export interface LabItem {
   id: string;
   title: string;
@@ -51,7 +74,7 @@ export interface LabItem {
   duration: string;
   tags: string[];
   steps: LabStep[];
-  challenge?: string;
+  challenge?: string | CodeChallengeData;
   related_skills?: string[];
   videos?: LabVideo[];
 }

@@ -29,5 +29,40 @@
       "search_keyword": "Claude Code MCP server connection tutorial 2026",
       "url": ""
     }
+  ],
+  "quiz": [
+    {
+      "question": "Why would you connect an MCP server to Claude Code?",
+      "options": [
+        "To give the agent access to external tools and data",
+        "To replace Git entirely",
+        "To disable file access",
+        "To compile TypeScript faster"
+      ],
+      "answer": 0,
+      "explanation": "MCP lets Claude Code connect to external systems like filesystems, databases, and tool servers."
+    },
+    {
+      "question": "Which example integration is used in this lesson?",
+      "options": [
+        "A video renderer",
+        "A filesystem MCP server",
+        "A mobile app simulator",
+        "A spreadsheet macro engine"
+      ],
+      "answer": 1,
+      "explanation": "The practice example adds a filesystem server so Claude Code can read and write project files."
+    },
+    {
+      "question": "What should you verify after adding an MCP server?",
+      "options": [
+        "That the agent can actually use the connected tool",
+        "That the website theme changed",
+        "That npm was uninstalled",
+        "That all commands run without prompts"
+      ],
+      "answer": 0,
+      "explanation": "An MCP setup is only useful if the agent can successfully access and use the new tool."
+    }
   ]
 }
