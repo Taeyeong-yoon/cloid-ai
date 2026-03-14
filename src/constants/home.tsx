@@ -113,6 +113,30 @@ export const AI_TOOLS: AiTool[] = [
       </svg>
     ),
   },
+  {
+    name: "Copilot",
+    url: "https://github.com/features/copilot",
+    learnTag: "copilot",
+    bg: "bg-[#24292f]",
+    desc: "GitHub Copilot",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+        <path d="M12 2a8 8 0 0 0-8 8v4.5a2.5 2.5 0 0 0 1.5 2.29V19a3 3 0 0 0 3 3h1.5v-4H8a1 1 0 0 1-1-1v-.5h10V17a1 1 0 0 1-1 1h-2v4h1.5a3 3 0 0 0 3-3v-2.21A2.5 2.5 0 0 0 20 14.5V10a8 8 0 0 0-8-8z" />
+      </svg>
+    ),
+  },
+  {
+    name: "NotebookLM",
+    url: "https://notebooklm.google.com",
+    learnTag: "notebooklm",
+    bg: "bg-[#1a73e8]",
+    desc: "Google NotebookLM",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+        <path d="M6 3.5A2.5 2.5 0 0 0 3.5 6v12A2.5 2.5 0 0 0 6 20.5h12a2.5 2.5 0 0 0 2.5-2.5V6A2.5 2.5 0 0 0 18 3.5H6zm2 3h8v1.5H8V6.5zm0 4h8V12H8v-1.5zm0 4h5V16H8v-1.5z" />
+      </svg>
+    ),
+  },
 ];
 
 export const POPULAR_TAGS = ["Claude API", "MCP", "Prompt", "AI Agent", "LangChain", "n8n"];
