@@ -155,10 +155,7 @@ export default function HeroVisual() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
+    // 장식용 비주얼 — prefers-reduced-motion 무관하게 항상 애니메이션 실행
     const dpr = window.devicePixelRatio || 1;
 
     // ── 상태 초기화 ──────────────────────────────────────
@@ -186,8 +183,9 @@ export default function HeroVisual() {
       const parent = canvas!.parentElement;
       if (!parent) return;
       const rect = parent.getBoundingClientRect();
-      state.W = rect.width;
-      state.H = rect.height;
+      // getBoundingClientRect가 0 반환 시 offsetWidth/Height fallback
+      state.W = rect.width  || parent.offsetWidth  || 340;
+      state.H = rect.height || parent.offsetHeight || 340;
       canvas!.width = state.W * dpr;
       canvas!.height = state.H * dpr;
       canvas!.style.width = `${state.W}px`;
@@ -230,7 +228,7 @@ export default function HeroVisual() {
       ctx!.fillRect(0, 0, W, H);
 
       // ③ 성장 링
-      if (!prefersReduced && Math.random() < 0.008) {
+      if (Math.random() < 0.008) {
         rings.push({
           r: 0,
           maxR: 200 + Math.random() * 80,
@@ -256,7 +254,7 @@ export default function HeroVisual() {
 
       // ④ 파티클
       for (const p of particles) {
-        if (!prefersReduced) p.update();
+        p.update();
         ctx!.beginPath();
         ctx!.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx!.fillStyle = rgba(p.color, p.life * 0.4);
@@ -292,7 +290,7 @@ export default function HeroVisual() {
       }
 
       // ⑦ 시그널
-      if (!prefersReduced && Math.random() < 0.04 && signals.length < 15) {
+      if (Math.random() < 0.04 && signals.length < 15) {
         const fromIdx = Math.floor(Math.random() * nodes.length);
         const fromNode = nodes[fromIdx];
         const candidates: number[] = [];
@@ -428,19 +426,14 @@ export default function HeroVisual() {
       ctx!.fill();
     }
 
-    // ── 애니메이션 루프 ──────────────────────────────────
-    if (prefersReduced) {
-      state.time = 5;
+    // ── 애니메이션 루프 (항상 실행) ──────────────────────
+    const loop = () => {
+      if (!state.running) return;
+      state.time += 0.016;
       draw();
-    } else {
-      const loop = () => {
-        if (!state.running) return;
-        state.time += 0.016;
-        draw();
-        animRef.current = requestAnimationFrame(loop);
-      };
       animRef.current = requestAnimationFrame(loop);
-    }
+    };
+    animRef.current = requestAnimationFrame(loop);
 
     // ── 이벤트 리스너 ────────────────────────────────────
     const onMouseMove = (e: MouseEvent) => {
