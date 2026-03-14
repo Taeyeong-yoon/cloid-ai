@@ -4,6 +4,7 @@ import { useState, useMemo, useRef, useEffect } from "react";
 import { Zap, Search, ArrowLeft, Copy, Check, X } from "lucide-react";
 import type { Skill } from "@/lib/types";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
+import InlineTutor from "@/components/InlineTutor";
 
 // ─── 난이도 설정 ───────────────────────────────────────────────
 const DIFFICULTY_CONFIG = [
@@ -383,6 +384,7 @@ export default function SkillsClient({ skills }: { skills: Skill[] }) {
           </>
         )}
       </div>
+      <InlineTutor />
     </div>
   );
 }
