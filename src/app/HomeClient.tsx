@@ -284,9 +284,9 @@ export default function HomeClient({
             <span className="flex h-6 w-6 items-center justify-center rounded-md border border-violet-800/60 bg-violet-900/40 text-sm">
               <Sparkles size={13} className="text-violet-300" />
             </span>
-            <span className="text-sm font-bold tracking-tight text-white">{t.home.journey_title}</span>
+            <span className="text-lg font-bold tracking-tight text-white sm:text-xl">{t.home.journey_title}</span>
           </h2>
-          <p className="ml-8 text-xs text-slate-500">{t.home.journey_subtitle}</p>
+          <p className="ml-8 text-sm text-slate-400 sm:text-base">{t.home.journey_subtitle}</p>
         </div>
 
         <div className="journey-grid mb-5 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
