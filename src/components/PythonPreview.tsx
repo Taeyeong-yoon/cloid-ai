@@ -3,7 +3,7 @@
 import { useState, useRef, useCallback } from "react";
 import {
   Terminal, Play, Loader2, Copy, Check, X,
-  Maximize2, Minimize2, AlertTriangle, Download,
+  Maximize2, Minimize2, AlertTriangle, Download, ExternalLink,
 } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
@@ -125,6 +125,10 @@ sys.stderr = StringIO()
     setError("");
   }, []);
 
+  const handleOpenVSCode = useCallback(() => {
+    window.location.href = "vscode://";
+  }, []);
+
   return (
     <>
       {fullscreen && (
@@ -215,14 +219,25 @@ sys.stderr = StringIO()
                 spellCheck={false}
               />
 
-              <button
-                onClick={handleRun}
-                disabled={!code.trim() || running}
-                data-event="cta_python_run"
-                className="flex items-center justify-center gap-1.5 py-2 px-3 bg-teal-600 hover:bg-teal-500 disabled:bg-slate-700 disabled:text-slate-500 text-white text-xs font-medium rounded-lg transition-colors"
-              >
-                {running ? <><Loader2 size={13} className="animate-spin" /> {t.labs.running}</> : <><Play size={13} /> {t.labs.run_python}</>}
-              </button>
+              <div className="flex gap-2">
+                <button
+                  onClick={handleRun}
+                  disabled={!code.trim() || running}
+                  data-event="cta_python_run"
+                  className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 bg-teal-600 hover:bg-teal-500 disabled:bg-slate-700 disabled:text-slate-500 text-white text-xs font-medium rounded-lg transition-colors"
+                >
+                  {running ? <><Loader2 size={13} className="animate-spin" /> {t.labs.running}</> : <><Play size={13} /> {t.labs.run_python}</>}
+                </button>
+                <button
+                  onClick={handleOpenVSCode}
+                  type="button"
+                  aria-label={t.labs.open_vscode}
+                  data-event="cta_python_open_vscode"
+                  className="flex items-center justify-center gap-1.5 py-2 px-3 border border-slate-700 bg-slate-900/70 hover:bg-slate-800 text-slate-200 text-xs font-medium rounded-lg transition-colors"
+                >
+                  <ExternalLink size={13} /> {t.labs.open_vscode}
+                </button>
+              </div>
 
               <div className="min-h-4" />
             </div>
