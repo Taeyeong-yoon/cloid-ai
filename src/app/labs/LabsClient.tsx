@@ -19,7 +19,7 @@ import HTMLPreview from "@/components/HTMLPreview";
 import PythonPreview from "@/components/PythonPreview";
 import CodeChallenge from "@/components/CodeChallenge";
 import StepChecklist, { type ChecklistStep } from "@/components/StepChecklist";
-import InlineTutor from "@/components/InlineTutor";
+import FloatingTutor from "@/components/FloatingTutor";
 
 const difficultyColor: Record<string, string> = {
   beginner: "text-emerald-400 bg-emerald-900/30 border-emerald-700/50",
@@ -101,7 +101,15 @@ function VideoCard({ v }: { v: LabVideo }) {
   );
 }
 
-function LabCard({ lab, index }: { lab: LabItem; index: number }) {
+function LabCard({
+  lab,
+  index,
+  onActivate,
+}: {
+  lab: LabItem;
+  index: number;
+  onActivate: (lab: LabItem) => void;
+}) {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
   const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
@@ -116,6 +124,14 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
     await navigator.clipboard.writeText(text);
     setCopiedIdx(idx);
     setTimeout(() => setCopiedIdx(null), 1500);
+  }
+
+  function toggleExpanded() {
+    setExpanded((current) => {
+      const next = !current;
+      if (next) onActivate(lab);
+      return next;
+    });
   }
 
   const interactiveChallenge =
@@ -151,7 +167,7 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
         <p className="text-slate-400 text-sm mb-4">{lab.description}</p>
 
         <button
-          onClick={() => setExpanded(!expanded)}
+          onClick={toggleExpanded}
           className="flex items-center gap-1.5 text-sm text-violet-400 hover:text-violet-300 transition-colors"
         >
           <Play size={13} />
@@ -259,6 +275,7 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
 
 export default function LabsClient({ labs }: { labs: LabItem[] }) {
   const { t } = useTranslation();
+  const [activeLab, setActiveLab] = useState<LabItem | null>(labs[0] ?? null);
   const [openDifficulties, setOpenDifficulties] = useState<Record<string, boolean>>({
     beginner: true,
     intermediate: true,
@@ -273,6 +290,22 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
     acc[diff] = labs.filter((lab) => lab.difficulty === diff);
     return acc;
   }, {});
+
+  const tutorTitle = activeLab?.title ?? t.labs.title;
+  const tutorSummary =
+    activeLab?.description ??
+    "Ask about the current lab, next actions, expected outputs, or likely failure points.";
+  const tutorDetails = activeLab
+    ? [
+        `Difficulty: ${activeLab.difficulty}`,
+        `Duration: ${activeLab.duration}`,
+        `Tags: ${activeLab.tags.join(", ")}`,
+        ...activeLab.steps.slice(0, 6).map(
+          (step) =>
+            `Step ${step.step}: ${step.title} | ${step.instruction}${step.expected_result ? ` | Expected: ${step.expected_result}` : ""}`
+        ),
+      ]
+    : labs.slice(0, 5).map((lab) => `${lab.title}: ${lab.description}`);
 
   let globalIndex = 0;
 
@@ -324,7 +357,12 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
               {isOpen && (
                 <div className="p-4 space-y-4 bg-slate-900/10">
                   {diffLabs.map((lab, i) => (
-                    <LabCard key={lab.id} lab={lab} index={startIndex + i} />
+                    <LabCard
+                      key={lab.id}
+                      lab={lab}
+                      index={startIndex + i}
+                      onActivate={setActiveLab}
+                    />
                   ))}
                 </div>
               )}
@@ -332,7 +370,12 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
           );
         })}
       </div>
-      <InlineTutor />
+      <FloatingTutor
+        scope="labs"
+        contextTitle={tutorTitle}
+        contextSummary={tutorSummary}
+        contextDetails={tutorDetails}
+      />
     </div>
   );
 }

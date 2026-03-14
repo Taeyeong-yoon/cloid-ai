@@ -4,7 +4,7 @@ import { useState, useMemo, useRef, useEffect } from "react";
 import { Zap, Search, ArrowLeft, Copy, Check, X } from "lucide-react";
 import type { Skill } from "@/lib/types";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
-import InlineTutor from "@/components/InlineTutor";
+import FloatingTutor from "@/components/FloatingTutor";
 
 // ─── 난이도 설정 ───────────────────────────────────────────────
 const DIFFICULTY_CONFIG = [
@@ -294,6 +294,20 @@ export default function SkillsClient({ skills }: { skills: Skill[] }) {
     setSelected((prev) => (prev?.slug === skill.slug ? null : skill));
   }
 
+  const tutorTitle = selected?.title ?? (query ? `Skills search: ${query}` : t.skills.title);
+  const tutorSummary =
+    selected?.summary ??
+    (query
+      ? `Current filtered skills count: ${filtered.length}`
+      : "Ask about the current skill recipe, implementation steps, or common mistakes.");
+  const tutorDetails = selected
+    ? [
+        `Difficulty: ${selected.difficulty}`,
+        `Tags: ${selected.tags.join(", ")}`,
+        selected.content.replace(/^---[\s\S]*?---\n?/, "").trim().slice(0, 900),
+      ]
+    : filtered.slice(0, 5).map((skill) => `${skill.title}: ${skill.summary}`);
+
   return (
     <div>
       {/* 페이지 헤더 */}
@@ -384,7 +398,12 @@ export default function SkillsClient({ skills }: { skills: Skill[] }) {
           </>
         )}
       </div>
-      <InlineTutor />
+      <FloatingTutor
+        scope="skills"
+        contextTitle={tutorTitle}
+        contextSummary={tutorSummary}
+        contextDetails={tutorDetails}
+      />
     </div>
   );
 }

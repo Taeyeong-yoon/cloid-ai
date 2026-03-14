@@ -1,28 +1,39 @@
-import OpenAI from 'openai';
-import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
+import OpenAI from "openai";
+import { NextRequest, NextResponse } from "next/server";
+import { createClient } from "@/lib/supabase/server";
 
-// ── IP당 분당 5회 제한 ─────────────────────────────────────
 const rateLimitMap = new Map<string, number[]>();
 const WINDOW_MS = 60 * 1000;
 const MAX_REQ = 5;
 
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const times = (rateLimitMap.get(ip) ?? []).filter((t) => now - t < WINDOW_MS);
-  if (times.length >= MAX_REQ) return true;
-  times.push(now);
-  rateLimitMap.set(ip, times);
-  if (rateLimitMap.size > 500) {
-    for (const [key, ts] of rateLimitMap.entries()) {
-      if (ts.every((t) => now - t >= WINDOW_MS)) rateLimitMap.delete(key);
-    }
-  }
-  return false;
+const dailyLimitMap = new Map<string, { count: number; resetAt: number }>();
+
+let dailyCount = 0;
+let dailyReset = todayKey();
+const DAILY_LIMIT = 200;
+
+function todayKey() {
+  return new Date().toISOString().slice(0, 10);
 }
 
-// ── 일일 사용자별 제한 ─────────────────────────────────────
-const dailyLimitMap = new Map<string, { count: number; resetAt: number }>();
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const times = (rateLimitMap.get(ip) ?? []).filter((time) => now - time < WINDOW_MS);
+  if (times.length >= MAX_REQ) return true;
+
+  times.push(now);
+  rateLimitMap.set(ip, times);
+
+  if (rateLimitMap.size > 500) {
+    for (const [key, values] of rateLimitMap.entries()) {
+      if (values.every((time) => now - time >= WINDOW_MS)) {
+        rateLimitMap.delete(key);
+      }
+    }
+  }
+
+  return false;
+}
 
 function checkDailyLimit(identifier: string, isLoggedIn: boolean): boolean {
   const limit = isLoggedIn ? 10 : 3;
@@ -39,97 +50,122 @@ function checkDailyLimit(identifier: string, isLoggedIn: boolean): boolean {
   return true;
 }
 
-// ── 일일 호출 카운터 (과금 보호) ──────────────────────────
-let dailyCount = 0;
-let dailyReset = todayKey();
-const DAILY_LIMIT = 200; // 하루 200회 제한 (월 ~$1.2)
-
-function todayKey() {
-  return new Date().toISOString().slice(0, 10);
-}
-
 function isDailyLimitReached(): boolean {
   const today = todayKey();
-  if (today !== dailyReset) { dailyCount = 0; dailyReset = today; }
+  if (today !== dailyReset) {
+    dailyCount = 0;
+    dailyReset = today;
+  }
+
   if (dailyCount >= DAILY_LIMIT) return true;
   dailyCount++;
   return false;
 }
 
-// ── 메인 핸들러 ────────────────────────────────────────────
 export async function POST(req: NextRequest) {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    return NextResponse.json({ error: 'API 키 미설정' }, { status: 500 });
+    return NextResponse.json({ error: "API key is not configured." }, { status: 500 });
   }
 
   const ip =
-    req.headers.get('x-forwarded-for')?.split(',')[0].trim() ??
-    req.headers.get('x-real-ip') ??
-    'unknown';
+    req.headers.get("x-forwarded-for")?.split(",")[0].trim() ??
+    req.headers.get("x-real-ip") ??
+    "unknown";
 
   if (isRateLimited(ip)) {
     return NextResponse.json(
-      { error: '요청이 너무 많습니다. 1분 후 다시 시도해주세요. (분당 5회 제한)' },
-      { status: 429 },
+      { error: "Too many requests. Please wait a minute and try again." },
+      { status: 429 }
     );
   }
 
-  // ── 로그인 여부 확인 + 사용자별 일일 제한 ─────────────────
   let userId: string | null = null;
   try {
     const supabase = await createClient();
     const { data } = await supabase.auth.getUser();
     userId = data.user?.id ?? null;
-  } catch {}
+  } catch {
+    userId = null;
+  }
 
   const identifier = userId ?? `ip:${ip}`;
-  const isLoggedIn = !!userId;
+  const isLoggedIn = Boolean(userId);
 
   if (!checkDailyLimit(identifier, isLoggedIn)) {
     const limit = isLoggedIn ? 10 : 3;
-    const errorMsg = isLoggedIn
-      ? `일일 질문 한도(${limit}회)를 초과했습니다. 내일 다시 이용해주세요.`
-      : `일일 질문 한도(${limit}회)를 초과했습니다. 로그인하면 10회까지 사용할 수 있어요!`;
-    return NextResponse.json({ error: errorMsg, requiresLogin: !isLoggedIn }, { status: 429 });
+    const error = isLoggedIn
+      ? `Daily question limit reached (${limit}). Please try again tomorrow.`
+      : `Daily question limit reached (${limit}). Sign in to use up to 10 questions per day.`;
+
+    return NextResponse.json({ error, requiresLogin: !isLoggedIn }, { status: 429 });
   }
 
   if (isDailyLimitReached()) {
     return NextResponse.json(
-      { error: '오늘 AI 질문 한도에 도달했습니다. 내일 다시 이용해주세요.' },
-      { status: 429 },
+      { error: "The site-wide AI budget for today has been reached. Please try again tomorrow." },
+      { status: 429 }
     );
   }
 
   const body = await req.json().catch(() => ({}));
-  const question = typeof body.question === 'string' ? body.question.trim() : '';
+  const question = typeof body.question === "string" ? body.question.trim() : "";
+  const context = typeof body.context === "string" ? body.context.trim().slice(0, 1500) : "";
+  const mode = body.mode === "tutor" ? "tutor" : "default";
+
   if (!question) {
-    return NextResponse.json({ error: '질문을 입력하세요' }, { status: 400 });
+    return NextResponse.json({ error: "Please enter a question." }, { status: 400 });
   }
+
   if (question.length > 500) {
-    return NextResponse.json({ error: '질문은 500자 이내로 입력해주세요' }, { status: 400 });
+    return NextResponse.json(
+      { error: "Please keep the question within 500 characters." },
+      { status: 400 }
+    );
   }
 
   try {
     const openai = new OpenAI({ apiKey });
+
+    const systemPrompt =
+      mode === "tutor"
+        ? [
+            "You are the CLOID.AI floating tutor for practical AI learning.",
+            "Help the learner continue the current skill or lab immediately.",
+            "Answer in 3-5 short sentences or 3 short bullets.",
+            "When useful, include one exact command, one code fragment, or one next action.",
+            "Use the supplied page context but keep the answer compact and low-cost.",
+          ].join(" ")
+        : [
+            "You are the CLOID.AI AI learning assistant.",
+            "Answer clearly and concretely about AI tools, prompts, and development patterns.",
+            "When useful, mention related CLOID.AI content areas such as Learning, Skills, or Labs.",
+            "Keep the answer concise.",
+          ].join(" ");
+
+    const userPrompt = context
+      ? `Page context:\n${context}\n\nUser question:\n${question}`
+      : question;
+
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      max_tokens: 500,
-      temperature: 0.7,
+      model: "gpt-4o-mini",
+      max_tokens: mode === "tutor" ? 220 : 500,
+      temperature: mode === "tutor" ? 0.4 : 0.7,
       messages: [
-        {
-          role: 'system',
-          content:
-            '너는 CLOID.AI의 AI 학습 도우미야. 사용자가 AI 도구, 프롬프트, 개발 패턴에 대해 질문하면 친절하고 구체적으로 답변해. 답변 시 가능하면 CLOID.AI 내의 관련 학습 콘텐츠(Learning, Labs, Skills)를 안내해. 답변은 한국어로 하되 기술 용어는 영문 병기. 답변 길이는 300자 이내로 간결하게.',
-        },
-        { role: 'user', content: question },
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userPrompt },
       ],
     });
 
-    const answer = completion.choices[0]?.message?.content ?? '응답을 받지 못했습니다.';
+    const answer =
+      completion.choices[0]?.message?.content?.trim() ?? "No answer was generated.";
+
     return NextResponse.json({ answer, remaining: DAILY_LIMIT - dailyCount });
-  } catch (err) {
-    console.error('OpenAI 오류:', err);
-    return NextResponse.json({ error: '응답 생성 실패. 잠시 후 다시 시도해주세요.' }, { status: 500 });
+  } catch (error) {
+    console.error("OpenAI ask route error:", error);
+    return NextResponse.json(
+      { error: "Failed to generate a response. Please try again shortly." },
+      { status: 500 }
+    );
   }
 }
