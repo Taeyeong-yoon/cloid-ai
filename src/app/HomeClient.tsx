@@ -16,6 +16,7 @@ import {
   Radio,
 } from "lucide-react";
 import AskAI from "@/components/AskAI";
+import HeroVisual from "@/components/HeroVisual";
 import DifficultyBadge from "@/components/DifficultyBadge";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 import { useAuth } from "@/lib/auth/AuthContext";
@@ -136,32 +137,45 @@ export default function HomeClient({
 
       {/* ── 1. Hero ─────────────────────────────────────────── */}
       <section className="py-4 hero-glow animate-fade-in-up" style={{ animationDelay: "0ms" }}>
-        <div className="flex items-center gap-2 text-violet-400 text-sm font-medium mb-3">
-          <TrendingUp size={16} />
-          <span>{t.home.trending_badge}</span>
-        </div>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
-          CLOID<span className="text-violet-400">.AI</span>
-        </h1>
-        <p className="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed mb-1">
-          {t.home.hero_desc}
-        </p>
-        <p className="text-slate-500 text-sm max-w-xl leading-relaxed mb-3">
-          {t.home.hero_sub_desc}
-        </p>
+        {/* 2컬럼: 좌측 텍스트 / 우측 Canvas 비주얼 */}
+        <div className="flex flex-col md:flex-row md:items-center md:gap-8 lg:gap-12">
 
-        {/* 소셜프루프 한 줄 */}
-        <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-2 sm:gap-4 mb-6 text-xs sm:text-sm text-slate-500">
-          <span className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            {t.home.social_proof_updated}
-          </span>
-          <span>📚 {t.home.content_count.replace('{n}', String(contentCounts.total))}</span>
-          <span>🧪 {t.home.lab_count.replace('{n}', String(contentCounts.labs))}</span>
+          {/* 좌측: 텍스트 영역 */}
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 text-violet-400 text-sm font-medium mb-3">
+              <TrendingUp size={16} />
+              <span>{t.home.trending_badge}</span>
+            </div>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
+              CLOID<span className="text-violet-400">.AI</span>
+            </h1>
+            <p className="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed mb-1">
+              {t.home.hero_desc}
+            </p>
+            <p className="text-slate-500 text-sm max-w-xl leading-relaxed mb-3">
+              {t.home.hero_sub_desc}
+            </p>
+
+            {/* 소셜프루프 한 줄 */}
+            <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-2 sm:gap-4 text-xs sm:text-sm text-slate-500">
+              <span className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                {t.home.social_proof_updated}
+              </span>
+              <span>📚 {t.home.content_count.replace('{n}', String(contentCounts.total))}</span>
+              <span>🧪 {t.home.lab_count.replace('{n}', String(contentCounts.labs))}</span>
+            </div>
+          </div>
+
+          {/* 우측: 뉴럴 네트워크 Canvas 비주얼 — 데스크톱 전용 */}
+          <div className="hidden md:block w-[340px] lg:w-[420px] shrink-0 h-[340px] lg:h-[400px]">
+            <HeroVisual />
+          </div>
+
         </div>
 
-        {/* 수준별 시작 경로 배너 */}
-        <div className="rounded-xl border border-slate-700 bg-slate-900/50 p-4">
+        {/* 수준별 시작 경로 배너 — 2컬럼 아래, 전체 너비 */}
+        <div className="rounded-xl border border-slate-700 bg-slate-900/50 p-4 mt-6">
           <p className="text-xs text-slate-400 mb-3">{t.home.level_start_title}</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
             <Link
