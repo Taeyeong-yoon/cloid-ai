@@ -312,41 +312,74 @@ export default function HomeClient({
       </div>
 
       <section className="rounded-xl border border-slate-700 bg-slate-900/50 p-4">
-        <h2 className="mb-3 flex items-center gap-2">
-          <span className="flex h-5 w-5 items-center justify-center rounded-md border border-blue-800/60 bg-blue-900/40">
-            <ExternalLink size={11} className="text-blue-400" />
-          </span>
-          <span className="text-sm font-bold tracking-tight text-white">{t.home.ai_tools_heading}</span>
-        </h2>
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
+        <div className="tools-section relative overflow-hidden rounded-[1.35rem] border border-slate-800/80 bg-slate-950/60 p-4 sm:p-5">
+          <div className="tools-section-bg tools-section-bg-1" />
+          <div className="tools-section-bg tools-section-bg-2" />
+          <div className="tools-section-grid" />
+
+          <div className="relative z-10 mb-4 flex items-end justify-between gap-3">
+            <div>
+              <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-cyan-400/15 bg-cyan-400/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-cyan-200">
+                <Sparkles size={11} />
+                AI Tool Matrix
+              </div>
+              <h2 className="flex items-center gap-2">
+                <span className="flex h-6 w-6 items-center justify-center rounded-md border border-blue-800/60 bg-blue-900/40">
+                  <ExternalLink size={12} className="text-blue-400" />
+                </span>
+                <span className="text-base font-bold tracking-tight text-white sm:text-lg">{t.home.ai_tools_heading}</span>
+              </h2>
+              <p className="mt-1 text-xs text-slate-400 sm:text-sm">
+                Launch the most-used AI products from one cinematic command deck.
+              </p>
+            </div>
+            <div className="hidden rounded-full border border-violet-400/15 bg-violet-500/10 px-3 py-1 text-[11px] text-violet-200 sm:block">
+              {AI_TOOLS.length} live portals
+            </div>
+          </div>
+
+          <div className="relative z-10 grid grid-cols-2 gap-3 sm:grid-cols-5">
           {AI_TOOLS.map((tool) => (
-            <div key={tool.name} className="flex flex-col items-center gap-0.5">
+            <div key={tool.name} className="flex flex-col items-center gap-1">
               <a
                 href={tool.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex w-full flex-col items-center gap-1 rounded-xl border border-slate-800 bg-slate-900/40 p-2 transition-all hover:border-slate-600 hover:bg-slate-800/60"
+                className="tools-card group relative flex w-full flex-col overflow-hidden rounded-[1.15rem] border border-slate-800/80 bg-slate-900/70 p-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/40"
                 title={tool.desc}
               >
+                <div className="tools-card-noise" />
+                <div className="tools-card-orbit" />
+                <div className="tools-card-scanline" />
                 <div
-                  className={`flex h-7 w-7 items-center justify-center rounded-lg text-white shadow-sm transition-transform duration-200 group-hover:scale-110 ${tool.bg}`}
+                  className={`tools-card-icon flex h-10 w-10 items-center justify-center rounded-xl text-white shadow-sm transition-transform duration-300 group-hover:scale-110 ${tool.bg}`}
                 >
                   {tool.icon}
                 </div>
-                <span className="text-center text-[10px] leading-tight text-slate-400 transition-colors group-hover:text-white">
-                  {tool.name}
-                </span>
+                <div className="mt-3 w-full space-y-1">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-[9px] uppercase tracking-[0.2em] text-slate-500">Portal</span>
+                    <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(74,222,128,0.6)]" />
+                  </div>
+                  <span className="block text-left text-xs font-medium leading-tight text-slate-200 transition-colors group-hover:text-white sm:text-[13px]">
+                    {tool.name}
+                  </span>
+                  <span className="block text-left text-[10px] leading-tight text-slate-500 transition-colors group-hover:text-slate-300">
+                    {tool.desc}
+                  </span>
+                </div>
               </a>
               <Link
                 href="/learning"
                 data-event={`cta_learn_tool_${tool.learnTag}`}
-                className="text-[9px] text-violet-500 transition-colors hover:text-violet-300 hover:underline"
+                className="text-[9px] text-violet-400 transition-colors hover:text-violet-200 hover:underline"
               >
                 {t.home.learn_tool}
               </Link>
             </div>
           ))}
         </div>
+      </div>
       </section>
     </div>
   );
