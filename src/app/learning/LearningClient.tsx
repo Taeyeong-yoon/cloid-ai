@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { BookOpen, FileText, Video, Terminal, ExternalLink, ArrowLeft, Search, ChevronDown, ChevronUp } from "lucide-react";
 import type { LearningTopic, LearningResource } from "@/lib/types";
 import TagBadge from "@/components/TagBadge";
@@ -200,9 +200,28 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
     setOpenLevels((prev) => ({ ...prev, [level]: !prev[level] }));
   }
 
+  // 데스크톱: 토픽 선택 시 콘텐츠 패널이 뷰포트 위에 있으면 nav 아래로 스크롤
+  const NAV_H = 56; // nav h-14
+  useEffect(() => {
+    if (!selectedId || typeof window === "undefined" || window.innerWidth < 768) return;
+    const frame = requestAnimationFrame(() => {
+      if (!contentRef.current) return;
+      const rect = contentRef.current.getBoundingClientRect();
+      if (rect.top < NAV_H) {
+        const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+        window.scrollTo({
+          top: window.scrollY + rect.top - NAV_H - 16,
+          behavior: reduceMotion ? "auto" : "smooth",
+        });
+      }
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [selectedId]);
+
   function handleTopicSelect(topicId: string) {
     setSelectedId(topicId);
-    if (window.innerWidth < 768) {
+    // 모바일: 콘텐츠 패널로 즉시 스크롤
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
       setTimeout(() => {
         contentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 50);
@@ -295,6 +314,7 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
         {/* Content */}
         {topic && (
           <div ref={contentRef} className="flex-1 min-w-0">
+            {/* 모바일 뒤로가기 버튼 (sticky 밖에 위치) */}
             <button
               onClick={() => setSelectedId(null)}
               className="md:hidden flex items-center gap-1.5 text-sm text-slate-400 hover:text-white mb-4 transition-colors"
@@ -302,24 +322,27 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
               <ArrowLeft size={16} />
               {t.learning.back_to_topics}
             </button>
-            <div className="p-5 sm:p-6 rounded-xl border border-slate-800 bg-slate-900/30">
-              <div className="flex items-start justify-between gap-4 mb-4">
-                <div>
-                  <h2 className="text-xl font-bold text-white mb-1">{topic.title}</h2>
-                  <p className="text-slate-400 text-sm">{topic.description}</p>
+            {/* 데스크톱: sticky top — nav(3.5rem) + gap(1rem) = 4.5rem */}
+            <div className="md:sticky md:top-[4.5rem]">
+              <div className="p-5 sm:p-6 rounded-xl border border-slate-800 bg-slate-900/30 md:max-h-[calc(100vh-6rem)] md:overflow-y-auto">
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <div>
+                    <h2 className="text-xl font-bold text-white mb-1">{topic.title}</h2>
+                    <p className="text-slate-400 text-sm">{topic.description}</p>
+                  </div>
+                  <span className={`text-xs px-2 py-1 rounded border shrink-0 ${levelColor[topic.level]}`}>
+                    {levelLabel[topic.level]}
+                  </span>
                 </div>
-                <span className={`text-xs px-2 py-1 rounded border shrink-0 ${levelColor[topic.level]}`}>
-                  {levelLabel[topic.level]}
-                </span>
-              </div>
-              <div className="flex flex-wrap gap-1.5 mb-6">
-                {topic.tags.map((tag) => <TagBadge key={tag} tag={tag} />)}
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">
-                  {t.learning.resources_heading}
-                </h3>
-                {topic.resources.map((r, i) => <ResourceCard key={i} r={r} />)}
+                <div className="flex flex-wrap gap-1.5 mb-6">
+                  {topic.tags.map((tag) => <TagBadge key={tag} tag={tag} />)}
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">
+                    {t.learning.resources_heading}
+                  </h3>
+                  {topic.resources.map((r, i) => <ResourceCard key={i} r={r} />)}
+                </div>
               </div>
             </div>
           </div>

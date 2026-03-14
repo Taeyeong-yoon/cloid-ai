@@ -6,10 +6,15 @@
   --foreground: #e2e8f0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Inter", "Noto Sans KR", system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
 }
 
 /* 한국어일 때 Noto Sans KR 우선 */
@@ -68,25 +73,9 @@ body::before {
   background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.08) 50%, rgba(16, 185, 129, 0.08) 100%);
 }
 
-/* ── 흐르는 빛 효과 (상단 네비게이션 하단 라인) ── */
-@keyframes light-sweep {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(200%); }
-}
+/* nav-light-line: 정적 하단 라인 (자동 스크롤 애니메이션 제거) */
 .nav-light-line {
   position: relative;
-  overflow: visible;
-}
-.nav-light-line::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.6), rgba(59, 130, 246, 0.4), transparent);
-  animation: light-sweep 4s ease-in-out infinite;
-  clip-path: inset(0 0 0 0);
 }
 
 /* ── 섹션 구분선 글로우 ── */
