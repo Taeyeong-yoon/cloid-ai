@@ -10,14 +10,8 @@ import { useTranslation } from "@/lib/i18n/LanguageContext";
 const PYODIDE_CDN = "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js";
 
 const EXAMPLES = [
-  {
-    label: "Hello World",
-    code: 'print("Hello, CLOID!")',
-  },
-  {
-    label: "List Comprehension",
-    code: "squares = [x**2 for x in range(10)]\nprint(squares)",
-  },
+  { label: "Hello World", code: 'print("Hello, CLOID!")' },
+  { label: "List Comprehension", code: "squares = [x**2 for x in range(10)]\nprint(squares)" },
   {
     label: "Fibonacci",
     code: "def fib(n):\n    a, b = 0, 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a\n\nfor i in range(10):\n    print(f\"fib({i}) = {fib(i)}\")",
@@ -38,6 +32,7 @@ export default function PythonPreview() {
   const [fullscreen, setFullscreen] = useState(false);
   const [pyodideLoading, setPyodideLoading] = useState(false);
   const [pyodideReady, setPyodideReady] = useState(false);
+  const surfaceHeightClass = fullscreen ? "flex-1 min-h-0" : "h-52 sm:h-56";
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const pyodideRef = useRef<any>(null);
@@ -75,8 +70,6 @@ export default function PythonPreview() {
     setError("");
     try {
       const pyodide = await loadPyodide();
-
-      // stdout/stderr 캡처
       pyodide.runPython(`
 import sys
 from io import StringIO
@@ -84,7 +77,6 @@ sys.stdout = StringIO()
 sys.stderr = StringIO()
       `);
 
-      // 5초 타임아웃
       const timeoutPromise = new Promise((_, reject) =>
         setTimeout(() => reject(new Error(t.labs.timeout_error)), 5000)
       );
@@ -104,7 +96,7 @@ sys.stderr = StringIO()
     } finally {
       setRunning(false);
     }
-  }, [code, running, loadPyodide, t.labs.timeout_error, t.labs.no_output]);
+  }, [code, loadPyodide, running, t.labs.no_output, t.labs.timeout_error]);
 
   const handleCopy = useCallback(async () => {
     if (!code.trim()) return;
@@ -118,14 +110,14 @@ sys.stderr = StringIO()
     const content = error ? `# Error\n${error}` : output;
     const blob = new Blob([content], { type: "text/plain; charset=utf-8" });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `cloid-python-output-${Date.now()}.txt`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = `cloid-python-output-${Date.now()}.txt`;
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
     URL.revokeObjectURL(url);
-  }, [output, error]);
+  }, [error, output]);
 
   const handleClear = useCallback(() => {
     setCode("");
@@ -136,17 +128,16 @@ sys.stderr = StringIO()
   return (
     <>
       {fullscreen && (
-        <div
-          className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm"
-          onClick={() => setFullscreen(false)}
-        />
+        <div className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm" onClick={() => setFullscreen(false)} />
       )}
-      <div className={`rounded-xl border border-teal-800/40 overflow-hidden transition-all ${
-        fullscreen
-          ? "fixed inset-4 z-50 shadow-2xl border-teal-600/60 bg-[#0f1117] flex flex-col"
-          : "bg-gradient-to-br from-teal-950/20 to-slate-900/60"
-      }`}>
-        {/* 헤더 */}
+
+      <div
+        className={`rounded-xl border border-teal-800/40 overflow-hidden transition-all ${
+          fullscreen
+            ? "fixed inset-4 z-50 shadow-2xl border-teal-600/60 bg-[#0f1117] flex flex-col"
+            : "bg-gradient-to-br from-teal-950/20 to-slate-900/60"
+        }`}
+      >
         <div className="flex items-center justify-between px-4 py-2.5 border-b border-teal-800/30 bg-teal-950/20">
           <div className="flex items-center gap-2 flex-wrap">
             <Terminal size={16} className="text-teal-400 shrink-0" />
@@ -177,31 +168,23 @@ sys.stderr = StringIO()
           </button>
         </div>
 
-        {/* 본문 */}
         <div className={`p-4 ${fullscreen ? "flex-1 flex flex-col min-h-0 overflow-hidden" : ""}`}>
-          <div className={`grid gap-3 ${
-            fullscreen
-              ? "grid-cols-2 flex-1 min-h-0"
-              : "grid-cols-1 lg:grid-cols-2"
-          }`}>
-            {/* 좌: 코드 입력 */}
-            <div className={`flex flex-col gap-2 ${fullscreen ? "min-h-0" : ""}`}>
-              {/* 예제 버튼 */}
-              <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none">
-                {EXAMPLES.map((ex) => (
-                  <button
-                    key={ex.label}
-                    onClick={() => setCode(ex.code)}
-                    disabled={running}
-                    className="shrink-0 text-xs px-3 py-1.5 rounded-full border border-slate-700 text-slate-400 hover:border-teal-600 hover:text-teal-300 hover:bg-teal-900/20 transition-all disabled:opacity-50"
-                  >
-                    {ex.label}
-                  </button>
-                ))}
-              </div>
+          <div className="mb-3 flex gap-2 overflow-x-auto pb-1 scrollbar-none">
+            {EXAMPLES.map((example) => (
+              <button
+                key={example.label}
+                onClick={() => setCode(example.code)}
+                disabled={running}
+                className="shrink-0 text-xs px-3 py-1.5 rounded-full border border-slate-700 text-slate-400 hover:border-teal-600 hover:text-teal-300 hover:bg-teal-900/20 transition-all disabled:opacity-50"
+              >
+                {example.label}
+              </button>
+            ))}
+          </div>
 
-              {/* 툴바 */}
-              <div className="flex items-center justify-between">
+          <div className={`grid gap-3 ${fullscreen ? "grid-cols-2 flex-1 min-h-0" : "grid-cols-1 lg:grid-cols-2"}`}>
+            <div className={`flex flex-col gap-2 rounded-xl border border-slate-800/70 bg-slate-950/30 p-3 ${fullscreen ? "min-h-0" : ""}`}>
+              <div className="flex min-h-9 items-center justify-between">
                 <span className="text-xs text-teal-400 font-medium">{t.labs.code_editor}</span>
                 <div className="flex items-center gap-1.5">
                   <button
@@ -210,10 +193,7 @@ sys.stderr = StringIO()
                     aria-label={copied ? t.common.copied : t.common.copy}
                     className="flex items-center gap-1 text-[11px] px-2 py-1 rounded text-slate-500 hover:text-slate-200 hover:bg-slate-700/50 disabled:opacity-40 transition-colors"
                   >
-                    {copied
-                      ? <><Check size={11} className="text-emerald-400" /> {t.common.copied}</>
-                      : <><Copy size={11} /> {t.common.copy}</>
-                    }
+                    {copied ? <><Check size={11} className="text-emerald-400" /> {t.common.copied}</> : <><Copy size={11} /> {t.common.copy}</>}
                   </button>
                   <button
                     onClick={handleClear}
@@ -231,29 +211,24 @@ sys.stderr = StringIO()
                 onChange={(e) => setCode(e.target.value)}
                 placeholder={'# Python code here\nprint("Hello, CLOID!")\n\nfor i in range(5):\n    print(f"Step {i+1}")'}
                 aria-label={t.labs.code_editor}
-                className={`w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-xs font-mono text-teal-300 placeholder-slate-700 focus:outline-none focus:border-teal-500 transition-colors resize-none ${
-                  fullscreen ? "flex-1 min-h-0" : "h-36 sm:h-48"
-                }`}
+                className={`w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-xs font-mono leading-5 text-teal-300 placeholder-slate-700 focus:outline-none focus:border-teal-500 transition-colors resize-none ${surfaceHeightClass}`}
                 spellCheck={false}
               />
 
-              {/* Python 실행 버튼 */}
               <button
                 onClick={handleRun}
                 disabled={!code.trim() || running}
                 data-event="cta_python_run"
                 className="flex items-center justify-center gap-1.5 py-2 px-3 bg-teal-600 hover:bg-teal-500 disabled:bg-slate-700 disabled:text-slate-500 text-white text-xs font-medium rounded-lg transition-colors"
               >
-                {running
-                  ? <><Loader2 size={13} className="animate-spin" /> {t.labs.running}</>
-                  : <><Play size={13} /> {t.labs.run_python}</>
-                }
+                {running ? <><Loader2 size={13} className="animate-spin" /> {t.labs.running}</> : <><Play size={13} /> {t.labs.run_python}</>}
               </button>
+
+              <div className="min-h-4" />
             </div>
 
-            {/* 우: 실행 결과 */}
-            <div className={`flex flex-col gap-2 ${fullscreen ? "min-h-0" : ""}`}>
-              <div className="flex items-center justify-between">
+            <div className={`flex flex-col gap-2 rounded-xl border border-slate-800/70 bg-slate-950/30 p-3 ${fullscreen ? "min-h-0" : ""}`}>
+              <div className="flex min-h-9 items-center justify-between">
                 <span className="text-xs text-slate-400 font-medium flex items-center gap-1.5">
                   <Terminal size={11} /> {t.labs.output}
                 </span>
@@ -268,15 +243,15 @@ sys.stderr = StringIO()
                 )}
               </div>
 
-              <div className={`w-full bg-slate-950 border rounded-lg px-3 py-2.5 text-xs font-mono overflow-auto whitespace-pre-wrap ${
-                fullscreen ? "flex-1 min-h-0" : "h-36 sm:h-48"
-              } ${
-                error
-                  ? "border-red-800/50"
-                  : output
-                    ? "border-slate-600"
-                    : "border-dashed border-slate-700"
-              }`}>
+              <div
+                className={`w-full bg-slate-950 border rounded-lg px-3 py-2.5 text-xs font-mono leading-5 overflow-auto whitespace-pre-wrap ${
+                  error
+                    ? "border-red-800/50"
+                    : output
+                      ? "border-slate-600"
+                      : "border-dashed border-slate-700"
+                } ${surfaceHeightClass}`}
+              >
                 {error ? (
                   <div className="flex items-start gap-2 text-red-400">
                     <AlertTriangle size={13} className="shrink-0 mt-0.5" />
@@ -291,6 +266,9 @@ sys.stderr = StringIO()
                   </div>
                 )}
               </div>
+
+              <div className="min-h-[40px]" />
+              <div className="min-h-4" />
             </div>
           </div>
 
