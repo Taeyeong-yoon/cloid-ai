@@ -38,11 +38,25 @@ export default async function RadarPostPage({ params }: { params: Promise<{ slug
       <div className="flex flex-wrap gap-2 mb-8">
         {post.tags.map((tag) => <TagBadge key={tag} tag={tag} />)}
       </div>
-      <div className="prose prose-invert prose-slate max-w-none">
-        <pre className="whitespace-pre-wrap text-slate-300 text-sm leading-relaxed font-sans">
-          {post.content}
-        </pre>
-      </div>
+      {post.content ? (
+        <div className="prose prose-invert prose-slate max-w-none">
+          <pre className="whitespace-pre-wrap text-slate-300 text-sm leading-relaxed font-sans">
+            {post.content}
+          </pre>
+        </div>
+      ) : post.sourceUrl ? (
+        <div className="mt-4 p-4 rounded-xl border border-slate-700 bg-slate-900/40">
+          <p className="text-sm text-slate-400 mb-3">Read the full article at the original source:</p>
+          <a
+            href={post.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 text-sm font-medium transition-colors"
+          >
+            {post.sourceUrl} →
+          </a>
+        </div>
+      ) : null}
     </article>
   );
 }

@@ -1,0 +1,33 @@
+{
+  "id": "gemini-cli-multimodal-analysis",
+  "title": "Gemini CLI: Analyzing Images and Mixed-Media Documents",
+  "description": "Use Gemini CLI's multimodal capabilities to analyze images, extract text from screenshots, and process documents containing mixed media.",
+  "level": "intermediate",
+  "tags": ["Gemini CLI", "Multimodal", "Vision"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Gemini API Multimodal Guide",
+      "url": "https://ai.google.dev/gemini-api/docs/vision",
+      "description": "How to pass images, audio, and video to Gemini models via the API"
+    },
+    {
+      "type": "doc",
+      "title": "Gemini CLI File Support",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "description": "Supported file types and how to pass media files to Gemini CLI"
+    },
+    {
+      "type": "practice",
+      "title": "Analyze a screenshot with Gemini CLI",
+      "description": "Pass an image to Gemini CLI and extract structured information from it",
+      "command": "gemini 'Describe all UI elements visible in this screenshot and list any text you can read' --file screenshot.png"
+    },
+    {
+      "type": "video",
+      "title": "Gemini CLI Multimodal Analysis Tutorial",
+      "search_keyword": "Gemini CLI multimodal image analysis tutorial 2026",
+      "url": ""
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "claude-code-mcp-connection",
+  "title": "Claude Code + MCP: Connecting External Tools to Your Agent",
+  "description": "Learn how to configure MCP servers in Claude Code to give your agent access to external tools — filesystems, databases, APIs, and more.",
+  "level": "intermediate",
+  "tags": ["Claude Code", "MCP", "Agent"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Claude Code MCP Documentation",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+      "description": "Official guide for adding and configuring MCP servers in Claude Code"
+    },
+    {
+      "type": "doc",
+      "title": "MCP Protocol Overview",
+      "url": "https://modelcontextprotocol.io/docs",
+      "description": "Understanding the Model Context Protocol — servers, clients, and tool schemas"
+    },
+    {
+      "type": "practice",
+      "title": "Add an MCP filesystem server to Claude Code",
+      "description": "Configure the MCP filesystem server and verify Claude Code can read and write files",
+      "command": "claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem /path/to/project"
+    },
+    {
+      "type": "video",
+      "title": "Claude Code MCP Integration Tutorial",
+      "search_keyword": "Claude Code MCP server connection tutorial 2026",
+      "url": ""
+    }
+  ]
+}

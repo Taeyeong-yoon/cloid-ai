@@ -1,0 +1,51 @@
+{
+  "id": "lab-gemini-cli-long-doc-pipeline",
+  "title": "[Gemini CLI] Process 100-Page Documents with Long-Context Analysis",
+  "description": "Use Gemini CLI to process a long document — extract key information, generate a summary, and answer specific questions — all in one session.",
+  "difficulty": "intermediate",
+  "duration": "30 minutes",
+  "tags": ["Gemini CLI", "Long Context", "Document"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "Install Gemini CLI and set up API key",
+      "instruction": "Install Gemini CLI and configure it with your Google AI Studio API key.",
+      "prompt": "How do I install Gemini CLI and set my GEMINI_API_KEY environment variable?",
+      "expected_result": "Gemini CLI installed and responding to commands",
+      "tip": "Get a free API key from aistudio.google.com — the free tier supports Gemini 1.5 Pro with 1M token context"
+    },
+    {
+      "step": 2,
+      "title": "Load and summarize a long document",
+      "instruction": "Feed a PDF or text document to Gemini CLI and generate a structured summary.",
+      "prompt": "Read this document and provide: 1) A 3-sentence executive summary, 2) The 5 most important points, 3) Any action items or recommendations mentioned, 4) Key data or statistics referenced.",
+      "expected_result": "A structured summary of the document with key points and data extracted",
+      "tip": "Gemini CLI handles PDFs natively — no need to convert to text first"
+    },
+    {
+      "step": 3,
+      "title": "Ask specific questions about the document",
+      "instruction": "Ask detailed questions about specific sections of the document.",
+      "prompt": "Based on the document: What is the main methodology used? Are there any caveats or limitations mentioned? What conclusions does the author draw?",
+      "expected_result": "Accurate, document-grounded answers to your questions",
+      "tip": "Ask follow-up questions in the same session — Gemini CLI maintains context within a session"
+    },
+    {
+      "step": 4,
+      "title": "Compare multiple documents",
+      "instruction": "Feed two documents to Gemini CLI and compare their content.",
+      "prompt": "I have two versions of a report. Compare them and tell me: What was added? What was removed? What changed significantly? Produce a structured diff summary.",
+      "expected_result": "A clear comparison showing differences between the two documents",
+      "tip": "Use `--file doc1.pdf --file doc2.pdf` to pass both documents in one command"
+    }
+  ],
+  "challenge": "Build a shell script that takes a folder of PDFs as input, runs Gemini CLI on each one, and outputs a single markdown file with a summary of each document.",
+  "related_skills": ["gemini-cli-competitor-analysis"],
+  "videos": [
+    {
+      "title": "Gemini CLI Long Context Document Processing",
+      "search_keyword": "Gemini CLI long context document analysis tutorial 2026",
+      "url": ""
+    }
+  ]
+}

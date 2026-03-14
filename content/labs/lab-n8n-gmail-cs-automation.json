@@ -1,0 +1,51 @@
+{
+  "id": "lab-n8n-gmail-cs-automation",
+  "title": "[n8n] Unmanned CS: Email Analysis to Custom Reply Pipeline",
+  "description": "Build an n8n workflow that reads incoming customer support emails, classifies them by type, generates personalized draft replies with Claude, and saves them as Gmail drafts.",
+  "difficulty": "intermediate",
+  "duration": "1.5 hours",
+  "tags": ["n8n", "Gmail", "Automation", "CS"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "Set up Gmail trigger",
+      "instruction": "Create an n8n workflow with a Gmail trigger that fires on new emails in your support inbox.",
+      "prompt": "How do I set up a Gmail Trigger node in n8n to watch for new emails in a specific label?",
+      "expected_result": "n8n workflow triggers automatically when a new email arrives in the configured Gmail label",
+      "tip": "Create a dedicated Gmail label like 'cs-queue' and filter your support email to it"
+    },
+    {
+      "step": 2,
+      "title": "Classify the email with Claude",
+      "instruction": "Add a Claude API call to classify the email into categories: billing, technical, feature request, complaint, or other.",
+      "prompt": "You are a customer support classifier. Read this email and respond with a JSON object: {category: 'billing|technical|feature_request|complaint|other', urgency: 'high|medium|low', summary: '1 sentence summary'}. Email: {{$json.text}}",
+      "expected_result": "Each email is classified with a category, urgency level, and summary",
+      "tip": "Use claude-haiku-4-5 for classification to keep costs low"
+    },
+    {
+      "step": 3,
+      "title": "Generate a draft reply",
+      "instruction": "Based on the classification, generate an appropriate draft reply using Claude.",
+      "prompt": "You are a professional customer support agent. Write a helpful, empathetic reply to this {{$json.category}} email. Keep it under 100 words. Be specific to their issue. Email: {{$node['Gmail Trigger'].json.text}}",
+      "expected_result": "A personalized draft reply ready for human review",
+      "tip": "Always add a human review step — never auto-send customer support replies"
+    },
+    {
+      "step": 4,
+      "title": "Save as Gmail draft",
+      "instruction": "Save the generated reply as a Gmail draft for human review before sending.",
+      "prompt": "How do I add a Gmail node in n8n to create a draft reply with the generated text?",
+      "expected_result": "Draft replies appear in Gmail drafts folder within seconds of receiving an email",
+      "tip": "Add a Slack notification node to alert your team when a new draft is ready for review"
+    }
+  ],
+  "challenge": "Add a Notion integration that logs all classified emails to a Notion database for tracking response times and common issue patterns.",
+  "related_skills": ["n8n-gmail-auto-reply"],
+  "videos": [
+    {
+      "title": "n8n Gmail Customer Support Automation",
+      "search_keyword": "n8n Gmail customer support automation Claude AI 2026",
+      "url": ""
+    }
+  ]
+}

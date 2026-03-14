@@ -1,0 +1,43 @@
+{
+  "id": "lab-n8n-human-in-the-loop-slack",
+  "title": "[n8n] Human Approval via Slack Before Agent Takes Action",
+  "description": "Build an n8n workflow that pauses before an irreversible action, sends a Slack approval request, and only proceeds when a human approves.",
+  "difficulty": "intermediate",
+  "duration": "1 hour",
+  "tags": ["n8n", "Slack", "Human in the Loop"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "Design the workflow with a pause point",
+      "instruction": "Create an n8n workflow that includes a pause point before a critical action (e.g., sending an email, posting to social media, making a payment).",
+      "prompt": "How do I add a Wait node in n8n that pauses execution until it receives an external webhook response?",
+      "expected_result": "n8n workflow with a Wait node configured to pause and wait for a webhook callback",
+      "tip": "The Wait node in n8n supports a 'On webhook call' mode — this is the key to human-in-the-loop"
+    },
+    {
+      "step": 2,
+      "title": "Send Slack approval request",
+      "instruction": "Before the Wait node, add a Slack node that sends a message with Approve/Reject action buttons.",
+      "prompt": "Send a Slack message to #approvals channel with this format:\n\n*Approval Required*\nAction: [describe the action the agent wants to take]\nDetails: [key details]\n\n[Approve] [Reject]",
+      "expected_result": "A Slack message appears with interactive Approve and Reject buttons",
+      "tip": "Use Slack's Block Kit to create interactive buttons — n8n's Slack node supports Block Kit JSON directly"
+    },
+    {
+      "step": 3,
+      "title": "Handle approval and rejection",
+      "instruction": "Connect the webhook response to an IF node that routes to the appropriate action based on the approval decision.",
+      "prompt": "How do I add an IF node after the Wait node to check if the approval was 'approved' or 'rejected' and route the workflow accordingly?",
+      "expected_result": "Workflow proceeds with the action if approved, or sends a cancellation notification if rejected",
+      "tip": "Always send a confirmation Slack message after both approval and rejection so the approver knows the workflow responded"
+    }
+  ],
+  "challenge": "Extend this pattern to a multi-level approval flow: first-level approver gets 30 minutes, then automatically escalates to a second approver if no response.",
+  "related_skills": ["n8n-rate-limit-queue"],
+  "videos": [
+    {
+      "title": "n8n Human in the Loop Slack Approval Tutorial",
+      "search_keyword": "n8n human in the loop Slack approval workflow 2026",
+      "url": ""
+    }
+  ]
+}

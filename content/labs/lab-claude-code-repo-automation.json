@@ -1,0 +1,43 @@
+{
+  "id": "lab-claude-code-repo-automation",
+  "title": "[Claude Code] Automate PR Creation and Code Review in Your Repo",
+  "description": "Use Claude Code in headless mode to automatically create pull requests and generate code review comments via the GitHub CLI.",
+  "difficulty": "intermediate",
+  "duration": "1 hour",
+  "tags": ["Claude Code", "GitHub", "Automation"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "Install and authenticate GitHub CLI",
+      "instruction": "Set up the GitHub CLI (gh) so Claude Code can interact with your repository.",
+      "prompt": "How do I install and authenticate the GitHub CLI (gh) on my machine?",
+      "expected_result": "GitHub CLI installed and authenticated with your GitHub account",
+      "tip": "Run `gh auth status` to verify authentication"
+    },
+    {
+      "step": 2,
+      "title": "Create a feature branch and make changes",
+      "instruction": "Ask Claude Code to create a new branch, make a specific improvement to your code, and commit the changes.",
+      "prompt": "Create a new branch called 'claude/improve-error-handling', find all places in the codebase where errors are swallowed or not properly handled, improve them, and commit the changes with a descriptive commit message.",
+      "expected_result": "A new git branch with committed improvements to error handling",
+      "tip": "Review Claude Code's changes with `git diff main..claude/improve-error-handling` before proceeding"
+    },
+    {
+      "step": 3,
+      "title": "Create a pull request via GitHub CLI",
+      "instruction": "Have Claude Code create a pull request with a detailed description of the changes.",
+      "prompt": "Create a pull request for the 'claude/improve-error-handling' branch. The PR title should summarize the changes and the description should list: what changed, why it's better, and how to test it. Use the GitHub CLI.",
+      "expected_result": "A pull request created on GitHub with a clear, detailed description",
+      "tip": "Check the PR at github.com/your-repo/pulls after creation"
+    }
+  ],
+  "challenge": "Set up a GitHub Actions workflow that runs this Claude Code automation on a weekly schedule to find and fix common code quality issues automatically.",
+  "related_skills": ["claude-code-bug-fix-recipe"],
+  "videos": [
+    {
+      "title": "Claude Code GitHub Automation Tutorial",
+      "search_keyword": "Claude Code GitHub CLI PR automation tutorial 2026",
+      "url": ""
+    }
+  ]
+}

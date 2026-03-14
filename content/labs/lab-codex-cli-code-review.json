@@ -1,0 +1,43 @@
+{
+  "id": "lab-codex-cli-code-review",
+  "title": "[Codex CLI] Full Code Review Workflow: Read, Analyze, Report",
+  "description": "Use Codex CLI to perform a complete code review on a sample codebase — identify issues, explain them, and generate a structured report.",
+  "difficulty": "beginner",
+  "duration": "30 minutes",
+  "tags": ["Codex CLI", "Code Review", "Workflow"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "Install Codex CLI",
+      "instruction": "Install Codex CLI and verify it works with your OpenAI API key.",
+      "prompt": "How do I install Codex CLI and configure it with my OpenAI API key?",
+      "expected_result": "Codex CLI installed and responding to commands in your terminal",
+      "tip": "Use `codex --version` to verify installation"
+    },
+    {
+      "step": 2,
+      "title": "Review a single file",
+      "instruction": "Run a code review on a JavaScript or Python file in your project.",
+      "prompt": "Review this file for bugs, security issues, and code quality improvements. Give me a numbered list of findings, each with: severity (Critical/High/Medium/Low), description, and suggested fix.",
+      "expected_result": "A numbered list of findings with severity ratings and suggested fixes",
+      "tip": "Start with a small file (under 200 lines) for your first review"
+    },
+    {
+      "step": 3,
+      "title": "Generate a full review report",
+      "instruction": "Generate a structured markdown review report for the entire pull request.",
+      "prompt": "Read all changed files in this PR diff. Generate a code review report in markdown format with sections: Summary, Critical Issues, Improvements, Positive Observations. Output only the markdown.",
+      "expected_result": "A complete markdown code review report ready to share with your team",
+      "tip": "Save the output with `> code_review.md` for sharing"
+    }
+  ],
+  "challenge": "Set up a git pre-push hook that automatically runs this Codex CLI review on every push and blocks the push if Critical issues are found.",
+  "related_skills": ["codex-cli-pr-review-recipe"],
+  "videos": [
+    {
+      "title": "Codex CLI Code Review Workflow",
+      "search_keyword": "Codex CLI code review workflow tutorial 2026",
+      "url": ""
+    }
+  ]
+}

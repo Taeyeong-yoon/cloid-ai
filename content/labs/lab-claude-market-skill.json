@@ -4,7 +4,7 @@
   "description": "Claude Market SDK를 사용하여 PDF 요약 스킬을 설계하고 출판하는 end-to-end 실습",
   "difficulty": "advanced",
   "duration": "45분",
-  "tags": ["Claude Market", "AI 에이전트", "ULI", "스킬 개발"],
+  "tags": ["Claude Market", "AI 에이전트", "CLI", "스킬 개발"],
   "steps": [
     {
       "step": 1,

@@ -1,15 +1,15 @@
 {
-  "id": "ai-agent-uli-advanced",
-  "title": "AI 에이전트 ULI 심화",
-  "description": "Claude ULI와 멀티 에이전트 파이프라인, 스킬 체이닝, Claude Market 스킬 개발 등 2026년 최신 에이전트 기술을 심층 학습합니다",
+  "id": "ai-agent-cli-advanced",
+  "title": "AI 에이전트 CLI 심화",
+  "description": "Claude Code CLI와 멀티 에이전트 파이프라인, 스킬 체이닝, Claude Market 스킬 개발 등 2026년 최신 에이전트 기술을 심층 학습합니다",
   "level": "advanced",
-  "tags": ["AI 에이전트", "ULI", "Claude Market", "스킬 체이닝", "n8n"],
+  "tags": ["AI 에이전트", "CLI", "Claude Market", "스킬 체이닝", "n8n"],
   "resources": [
     {
       "type": "doc",
       "title": "Anthropic 에이전트 및 도구 가이드",
       "url": "https://docs.anthropic.com/en/docs/build-with-claude/agents-and-tools",
-      "description": "Claude ULI 기반 에이전트 설계 원칙과 도구 사용 패턴"
+      "description": "Claude Code CLI 기반 에이전트 설계 원칙과 도구 사용 패턴"
     },
     {
       "type": "doc",

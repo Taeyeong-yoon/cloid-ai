@@ -1,0 +1,33 @@
+{
+  "id": "claude-code-claude-md-setup",
+  "title": "Claude Code: Setting Up CLAUDE.md for Your Project",
+  "description": "Learn how to create and configure a CLAUDE.md file so Claude Code understands your project's structure, conventions, and goals from the start.",
+  "level": "beginner",
+  "tags": ["Claude Code", "CLAUDE.md", "Setup"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Claude Code CLAUDE.md Guide",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/memory",
+      "description": "Official documentation on CLAUDE.md structure, supported sections, and best practices"
+    },
+    {
+      "type": "doc",
+      "title": "Claude Code Overview",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+      "description": "Introduction to Claude Code and how CLAUDE.md fits into the overall workflow"
+    },
+    {
+      "type": "practice",
+      "title": "Create a CLAUDE.md for your project",
+      "description": "Ask Claude Code to generate a CLAUDE.md based on your project structure",
+      "command": "claude 'Analyze this project and generate a CLAUDE.md with project overview, tech stack, key files, and coding conventions'"
+    },
+    {
+      "type": "video",
+      "title": "Claude Code CLAUDE.md Setup Tutorial",
+      "search_keyword": "Claude Code CLAUDE.md setup configuration tutorial 2026",
+      "url": ""
+    }
+  ]
+}

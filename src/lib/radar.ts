@@ -22,6 +22,7 @@ export function getAllRadarPosts(): RadarPost[] {
         summary: e.summary ?? e.excerpt ?? '',
         score: e.score,
         sourceUrl: e.sourceUrl,
+        category: e.category,
       }))
       .sort((a, b) => (b.score ?? 50) - (a.score ?? 50) || b.date.localeCompare(a.date));
   } catch {
@@ -30,6 +31,7 @@ export function getAllRadarPosts(): RadarPost[] {
 }
 
 export function getRadarPost(slug: string): RadarPost | null {
+  // 1. Try reading the .md file
   try {
     const filePath = path.join(radarDir, `${slug}.md`);
     const raw = fs.readFileSync(filePath, 'utf-8');
@@ -37,14 +39,35 @@ export function getRadarPost(slug: string): RadarPost | null {
     return {
       slug,
       title: data.title as string,
-      date: (data.date as string),
+      date: data.date as string,
       tags: (data.tags as string[]) ?? [],
       summary: (data.summary as string) ?? '',
       score: data.score as number | undefined,
       sourceUrl: data.sourceUrl as string | undefined,
+      category: data.category as string | undefined,
       content,
     };
   } catch {
-    return null;
+    // 2. Fall back to index.json entry
+    try {
+      const indexPath = path.join(radarDir, 'index.json');
+      const raw = fs.readFileSync(indexPath, 'utf-8');
+      const entries: IndexEntry[] = JSON.parse(raw);
+      const entry = entries.find((e) => e.slug === slug);
+      if (!entry) return null;
+      return {
+        slug: entry.slug,
+        title: entry.title,
+        date: entry.date,
+        tags: entry.tags ?? [],
+        summary: entry.summary ?? entry.excerpt ?? '',
+        score: entry.score,
+        sourceUrl: entry.sourceUrl,
+        category: entry.category,
+        content: '',
+      };
+    } catch {
+      return null;
+    }
   }
 }

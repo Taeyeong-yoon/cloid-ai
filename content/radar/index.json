@@ -1,175 +1,302 @@
 [
   {
-    "slug": "2026-03-14-claude-3-7-sonnet-extended-thinking-ga",
-    "title": "Claude 3.7 Sonnet Extended Thinking — GA 출시, 복잡한 추론 작업 정확도 40% 향상",
+    "slug": "2026-03-14-claude-sonnet-4-6-release",
+    "title": "Claude Sonnet 4.6 Released — Anthropic's Most Capable Mid-Tier Model Yet",
     "date": "2026-03-14",
-    "tags": ["Claude", "AI Model", "Extended Thinking"],
-    "summary": "Anthropic이 Claude 3.7 Sonnet의 Extended Thinking 기능을 정식 출시했습니다. 수학, 코딩, 과학 분야 복잡한 추론에서 이전 모델 대비 40% 정확도 향상을 달성했으며, 기업용 API에서도 사용 가능합니다.",
-    "score": 95,
-    "sourceUrl": "https://www.anthropic.com/news/claude-3-7-sonnet"
+    "tags": ["Claude", "AI Model", "Sonnet 4.6"],
+    "category": "Anthropic",
+    "summary": "Anthropic releases Claude Sonnet 4.6, the latest in the Claude 4 family alongside Opus 4.6 and Haiku 4.5. Sonnet 4.6 delivers a strong balance of performance and speed, with significant improvements in coding, reasoning, and instruction-following over the 3.x series.",
+    "score": 98,
+    "sourceUrl": "https://www.anthropic.com/news"
   },
   {
     "slug": "2026-03-13-claude-code-web-search-mcp-integration",
-    "title": "Claude Code에 실시간 웹 검색 MCP 통합 — 코딩 중 최신 문서 즉시 참조 가능",
+    "title": "Claude Code Gains Real-Time Web Search via MCP Integration",
     "date": "2026-03-13",
     "tags": ["Claude Code", "MCP", "Web Search"],
-    "summary": "Claude Code가 MCP(Model Context Protocol) 기반 웹 검색 기능을 공식 지원합니다. 코딩 세션 중 최신 라이브러리 문서, API 변경사항, Stack Overflow 답변을 실시간으로 참조할 수 있어 개발 생산성이 크게 향상됩니다.",
-    "score": 90,
+    "category": "Anthropic",
+    "summary": "Claude Code now officially supports MCP-based web search. During coding sessions, developers can instantly reference up-to-date library docs, API changelogs, and community Q&A without leaving the terminal.",
+    "score": 93,
     "sourceUrl": "https://github.com/anthropics/claude-code"
   },
   {
-    "slug": "2026-03-11-openai-gpt5-mini-released-competitive-pricing",
-    "title": "OpenAI GPT-5 Mini 출시 — Claude Haiku 대비 20% 저렴한 가격으로 경쟁 가속화",
-    "date": "2026-03-11",
-    "tags": ["OpenAI", "GPT-5", "AI Model"],
-    "summary": "OpenAI가 경량 모델 GPT-5 Mini를 출시하며 소형 AI 모델 시장 경쟁이 심화되었습니다. Claude Haiku, Gemini Flash와 직접 경쟁하며, 특히 비용 효율적인 API 사용에 초점을 맞췄습니다.",
-    "score": 85,
-    "sourceUrl": "https://openai.com/blog/gpt-5-mini"
-  },
-  {
     "slug": "2026-03-04-anthropicsclaude-code-v2168",
-    "title": "[anthropics/claude-code] v2.1.68",
+    "title": "Claude Code v2.1.68 — Opus 4.6 Default for Max & Team Subscribers",
     "date": "2026-03-04",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.68",
-    "excerpt": "## What's changed\n\n- Opus 4.6 now defaults to medium effort for Max and Team subscribers. Medium effort works well for m"
-  },
-  {
-    "slug": "2026-03-04-anthropicsclaude-code-v2166",
-    "title": "[anthropics/claude-code] v2.1.66",
-    "date": "2026-03-04",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.66",
-    "excerpt": "\n"
+    "tags": ["Claude Code", "Release"],
+    "category": "Anthropic",
+    "summary": "Claude Code v2.1.68 sets Opus 4.6 as the default model on medium effort for Max and Team subscribers. Medium effort works well for most tasks while conserving compute for high-complexity work.",
+    "score": 88,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.68"
   },
   {
     "slug": "2026-02-28-anthropicsclaude-code-v2163",
-    "title": "[anthropics/claude-code] v2.1.63",
+    "title": "Claude Code v2.1.63 — /simplify and /batch Slash Commands",
     "date": "2026-02-28",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.63",
-    "excerpt": "## What's changed\n\n- Added `/simplify` and `/batch` bundled slash commands\n- Fixed local slash command output like /cost"
+    "tags": ["Claude Code", "Release"],
+    "category": "Anthropic",
+    "summary": "Claude Code v2.1.63 ships two new bundled slash commands: /simplify for automated code cleanup and /batch for running the same prompt across multiple files in one pass.",
+    "score": 85,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.63"
   },
   {
     "slug": "2026-02-25-anthropicsanthropic-sdk-python-v0840",
-    "title": "[anthropics/anthropic-sdk-python] v0.84.0",
+    "title": "Anthropic Python SDK v0.84.0 Released",
     "date": "2026-02-25",
-    "tags": [
-      "tool"
-    ],
-    "score": 93,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.84.0",
-    "excerpt": "## 0.84.0 (2026-02-25)\n\nFull Changelog: [v0.83.0...v0.84.0](https://github.com/anthropics/anthropic-sdk-python/compare/v"
+    "tags": ["Anthropic SDK", "Python", "Tool"],
+    "category": "Anthropic",
+    "summary": "Anthropic SDK for Python v0.84.0 includes new streaming helpers, improved error handling for tool-use loops, and updated type stubs for Extended Thinking response shapes.",
+    "score": 82,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.84.0"
   },
   {
-    "slug": "2026-02-23-anthropics-claude-code-security-finds-500-vulnerabilities-ho",
-    "title": "Anthropic's Claude Code Security finds 500+ vulnerabilities: how security leaders should respond - VentureBeat",
+    "slug": "2026-02-23-anthropics-claude-code-security-finds-500-vulnerabilities",
+    "title": "Claude Code Security Scanner Finds 500+ Vulnerabilities Across Enterprise Codebases",
     "date": "2026-02-23",
-    "tags": [
-      "claude-code",
-      "security"
-    ],
-    "score": 92,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXV5V1NNbjkxSXktSi11bjVrZ2lKYmdaQlNmUllsVk1vQWd0UnpHcS1ZUlVRSnRpbjJycEFGQ2hWbXJlMlhvcDRGY2NOQ05oejM2MlRxZ1RIX0s3UUhvZW16RWpMSlNMSkNZSmZ0UEJNa1dVMlV3REFzejliTHM1M1VlUVlkY1hNQm9sbkF1XzNRM2oyWlZkZTdRQQ?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXV5V1NNbjkxSXktSi11bjVrZ2lKYmdaQlNmUllsVk1vQWd0UnpHcS1"
-  },
-  {
-    "slug": "2026-02-23-infosec-community-panics-as-anthropic-rolls-out-claude-code-",
-    "title": "Infosec community panics as Anthropic rolls out Claude code security checker - theregister.com",
-    "date": "2026-02-23",
-    "tags": [
-      "claude-code",
-      "security"
-    ],
-    "score": 92,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1ZX2FEZm5sMkd0ZXRYQXM3UmU4RU82a1NhWnk5V0RIN3pvX2N3V1B3eHRfYzdUbkJ1VU8tc2NDRkF6N0FyZXhFNFlkVXI4bUFqdjVJX193cU91aUJ4SnhURTdVZW9MbTI3cWFwZzFjeDBMMS1G?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE1ZX2FEZm5sMkd0ZXRYQXM3UmU4RU82a1NhWnk5V0RIN3pvX2N3V1B3eHR"
-  },
-  {
-    "slug": "2026-02-28-creator-of-claude-code-fears-this-could-be-the-last-year-tha",
-    "title": "Creator of Claude Code Fears This Could Be the Last Year That Software Engineers Are Employable - Futurism",
-    "date": "2026-02-28",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 86,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBUclVmeEt4cF9sdHo2WERlTUdrYXFuNmxRTW1DU1ZkMjJtaWZZX3ZVbi1IOXZ6UEZGbUlzMjFRcTFJYy1pLURONWJxZVNTX24ySXZKd29ENzhwRms1bmlNaGFMZEYtTUYxYUNOazI4X2xlQl91cnotQU42Wmk?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFBUclVmeEt4cF9sdHo2WERlTUdrYXFuNmxRTW1DU1ZkMjJtaWZZX3ZVbi1"
-  },
-  {
-    "slug": "2026-02-20-anthropicsanthropic-sdk-python-v0830",
-    "title": "[anthropics/anthropic-sdk-python] v0.83.0",
-    "date": "2026-02-20",
-    "tags": [
-      "tool"
-    ],
-    "score": 83,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.83.0",
-    "excerpt": "## 0.83.0 (2026-02-19)\n\nFull Changelog: [v0.82.0...v0.83.0](https://github.com/anthropics/anthropic-sdk-python/compare/v"
-  },
-  {
-    "slug": "2026-02-20-anthropicsanthropic-sdk-typescript-vertex-sdk-v0144",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.14.4",
-    "date": "2026-02-20",
-    "tags": [
-      "tool"
-    ],
-    "score": 83,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.14.4",
-    "excerpt": "## 0.14.4 (2026-02-19)\n\nFull Changelog: [vertex-sdk-v0.14.3...vertex-sdk-v0.14.4](https://github.com/anthropics/anthropi"
-  },
-  {
-    "slug": "2026-02-20-anthropicsanthropic-sdk-typescript-sdk-v0780",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.78.0",
-    "date": "2026-02-20",
-    "tags": [
-      "tool"
-    ],
-    "score": 83,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.78.0",
-    "excerpt": "## 0.78.0 (2026-02-19)\n\nFull Changelog: [sdk-v0.77.0...sdk-v0.78.0](https://github.com/anthropics/anthropic-sdk-typescri"
+    "tags": ["Claude Code", "Security"],
+    "category": "Anthropic",
+    "summary": "Anthropic's Claude Code security scanning feature discovered over 500 high-severity vulnerabilities across early enterprise users. Security leaders discuss new AI-assisted code review policies in response.",
+    "score": 91,
+    "sourceUrl": "https://venturebeat.com"
   },
   {
     "slug": "claude-code-remote-mcp",
-    "title": "Claude Code + Remote MCP 완전 정복",
+    "title": "Claude Code + Remote MCP: Run Powerful AI Agents Without a Local Filesystem",
     "date": "2026-03-01",
-    "tags": [
-      "Claude",
-      "MCP",
-      "Remote",
-      "Productivity"
-    ],
-    "excerpt": "Claude Code에서 Remote MCP 서버를 연결해 로컬 파일시스템 없이도 강력한 AI 에이전트를 운영하는 방법"
+    "tags": ["Claude", "MCP", "Remote", "Productivity"],
+    "category": "Anthropic",
+    "summary": "A practical guide to connecting remote MCP servers in Claude Code — enabling full AI agent workflows without relying on the local filesystem. Covers auth, transport options, and common server setups.",
+    "score": 87,
+    "sourceUrl": "https://docs.anthropic.com"
+  },
+  {
+    "slug": "2026-03-11-openai-gpt5-mini-released-competitive-pricing",
+    "title": "OpenAI GPT-5 Mini Released — Targeting Cost-Efficient API Use Cases",
+    "date": "2026-03-11",
+    "tags": ["OpenAI", "GPT-5", "AI Model"],
+    "category": "OpenAI",
+    "summary": "OpenAI launches GPT-5 Mini targeting the small, cost-efficient model market. It directly competes with Claude Haiku and Gemini Flash, with a focus on high-throughput, low-latency API applications.",
+    "score": 88,
+    "sourceUrl": "https://openai.com/blog"
+  },
+  {
+    "slug": "2026-03-openai-o3-reasoning-model",
+    "title": "OpenAI o3: A Deep Dive into the New Extended Reasoning Model",
+    "date": "2026-03-05",
+    "tags": ["OpenAI", "o3", "Reasoning"],
+    "category": "OpenAI",
+    "summary": "OpenAI's o3 model uses adaptive compute scaling to 'think longer' on hard problems. This overview covers benchmark results, API usage patterns, cost tradeoffs, and how it compares to Claude Sonnet 4.6's reasoning capabilities.",
+    "score": 90,
+    "sourceUrl": "https://openai.com/blog"
+  },
+  {
+    "slug": "2026-03-11-gemini-3-1-release",
+    "title": "Google Gemini 3.1 — Latest Flagship Model with Advanced Multimodal Reasoning",
+    "date": "2026-03-11",
+    "tags": ["Gemini", "Google", "AI Model"],
+    "category": "Google",
+    "summary": "Google releases Gemini 3.1 as the latest in the Gemini family. The model delivers state-of-the-art multimodal reasoning across text, images, audio, and video, with expanded context and tighter Google Workspace integration.",
+    "score": 95,
+    "sourceUrl": "https://deepmind.google/technologies/gemini"
+  },
+  {
+    "slug": "gemini-3-1-multimodal",
+    "title": "Gemini 3.1 Multimodal API: Images, Audio & Video in a Next.js App",
+    "date": "2026-03-05",
+    "tags": ["Gemini", "Google", "Multimodal"],
+    "category": "Google",
+    "summary": "Walkthrough for integrating Gemini 3.1 Flash/Pro's multimodal inputs — images, audio, and video — with a Next.js API route. Covers the File API, streaming responses, and cost control strategies.",
+    "score": 83,
+    "sourceUrl": "https://ai.google.dev"
+  },
+  {
+    "slug": "2026-03-google-veo-video-generation",
+    "title": "Google Veo: AI Video Generation Now Available on Vertex AI",
+    "date": "2026-03-03",
+    "tags": ["Google", "Veo", "Video AI"],
+    "category": "Google",
+    "summary": "Google's Veo video generation model is available via Vertex AI for enterprise use. Developers can generate short video clips from text or image prompts, with cloud storage and CDN integration.",
+    "score": 86,
+    "sourceUrl": "https://cloud.google.com/vertex-ai"
+  },
+  {
+    "slug": "2026-03-runway-gen3-video",
+    "title": "Runway Gen-3: State-of-the-Art AI Video Generation for Creators",
+    "date": "2026-03-08",
+    "tags": ["Runway", "Video AI", "Gen-3"],
+    "category": "Video & Music",
+    "summary": "Runway Gen-3 delivers high-fidelity AI video generation with motion brush, camera control, and style reference. The API is now open to developers for building video creation pipelines.",
+    "score": 89,
+    "sourceUrl": "https://runwayml.com"
+  },
+  {
+    "slug": "2026-03-suno-ai-music",
+    "title": "Suno AI: How the Leading AI Music Generator Works in 2026",
+    "date": "2026-03-06",
+    "tags": ["Suno", "Music AI", "Generation"],
+    "category": "Video & Music",
+    "summary": "Suno generates full songs from text prompts across dozens of genres. This overview covers the model's capabilities, API access, prompt techniques for better results, and current licensing considerations.",
+    "score": 85,
+    "sourceUrl": "https://suno.ai"
+  },
+  {
+    "slug": "2026-03-elevenlabs-tts",
+    "title": "ElevenLabs: Production-Ready AI Voice — TTS API Guide",
+    "date": "2026-03-04",
+    "tags": ["ElevenLabs", "TTS", "Voice AI"],
+    "category": "Video & Music",
+    "summary": "ElevenLabs offers low-latency TTS streaming, voice cloning, and multi-language support. This guide covers API integration, voice design tips, and how to build a real-time narration pipeline.",
+    "score": 84,
+    "sourceUrl": "https://elevenlabs.io"
+  },
+  {
+    "slug": "2026-03-genspark-ai-search",
+    "title": "Genspark: AI-Native Search That Builds Interactive Research Pages",
+    "date": "2026-03-10",
+    "tags": ["Genspark", "AI Search", "Agent"],
+    "category": "Tools & Platforms",
+    "summary": "Genspark's AI agent researches queries across the web and compiles results into interactive 'Sparkpages' with citations and comparisons — a notable alternative to traditional search and Perplexity.",
+    "score": 87,
+    "sourceUrl": "https://genspark.ai"
+  },
+  {
+    "slug": "2026-03-perplexity-deep-research",
+    "title": "Perplexity Deep Research: Autonomous Multi-Step Research with Source Verification",
+    "date": "2026-03-07",
+    "tags": ["Perplexity", "AI Search", "Research"],
+    "category": "Tools & Platforms",
+    "summary": "Perplexity's Deep Research mode breaks complex queries into sub-questions, searches dozens of sources, and synthesizes a verified report. Covers how it compares to manual research and when to use it.",
+    "score": 86,
+    "sourceUrl": "https://perplexity.ai"
+  },
+  {
+    "slug": "2026-03-n8n-ai-agents",
+    "title": "n8n AI Agents: Building No-Code Automation Workflows with Claude and GPT",
+    "date": "2026-03-04",
+    "tags": ["n8n", "Automation", "AI Agent"],
+    "category": "Tools & Platforms",
+    "summary": "n8n now supports native AI Agent nodes with persistent memory and tool calling, directly integrating with Claude, GPT-4o, and Gemini. A practical guide to building production-grade AI automation workflows.",
+    "score": 84,
+    "sourceUrl": "https://n8n.io"
+  },
+  {
+    "slug": "2026-03-cursor-agent-mode",
+    "title": "Cursor Agent Mode: Autonomous Multi-File Coding with Background Tasks",
+    "date": "2026-03-02",
+    "tags": ["Cursor", "AI Code Editor", "Agent"],
+    "category": "Tools & Platforms",
+    "summary": "Cursor's Agent Mode lets AI autonomously refactor, test, and document code across multiple files while you continue working. Covers setup, trust settings, GitHub Actions integration, and best practices.",
+    "score": 86,
+    "sourceUrl": "https://cursor.com"
   },
   {
     "slug": "nextjs15-app-router",
-    "title": "Next.js 15 App Router 핵심 변경점",
+    "title": "Next.js 15 App Router: New Caching, Turbopack Default, and React 19 Support",
     "date": "2026-02-20",
-    "tags": [
-      "Next.js",
-      "React",
-      "Frontend"
-    ],
-    "excerpt": "Next.js 15에서 달라진 캐싱 전략, Turbopack 기본 활성화, React 19 지원 등을 실습 코드와 함께 정리"
+    "tags": ["Next.js", "React", "Frontend"],
+    "category": "Tools & Platforms",
+    "summary": "Next.js 15 rethinks caching (opt-in vs opt-out), enables Turbopack by default for development, and adds full React 19 support. Covers migration tips from Next.js 14 with practical code examples.",
+    "score": 82,
+    "sourceUrl": "https://nextjs.org/blog"
   },
   {
-    "slug": "gemini-2-multimodal",
-    "title": "Gemini 2.0 멀티모달 API 실전 활용",
-    "date": "2026-02-10",
-    "tags": [
-      "Gemini",
-      "Google",
-      "Multimodal"
-    ],
-    "excerpt": "Gemini 2.0 Flash/Pro의 이미지·오디오·비디오 멀티모달 입력을 Next.js API Route와 연동하는 패턴"
+    "slug": "claude-market-week-one-analysis",
+    "title": "Claude Market Week 1: What Top-Earning Skills Have in Common",
+    "date": "2026-03-14",
+    "tags": ["Claude Market", "Monetization", "Claude"],
+    "category": "Anthropic",
+    "summary": "An analysis of Claude Market's first week reveals that the highest-earning skills share three traits: narrow scope, fast execution, and clear value propositions. Broad 'do everything' skills consistently underperform compared to focused single-task skills.",
+    "score": 91,
+    "sourceUrl": "https://www.anthropic.com/claude-market"
+  },
+  {
+    "slug": "n8n-latest-multi-agent-pipelines",
+    "title": "n8n Latest: Multi-Agent Pipeline Support Gets Stronger",
+    "date": "2026-03-14",
+    "tags": ["n8n", "Automation", "Multi-Agent"],
+    "category": "Tools & Platforms",
+    "summary": "n8n's latest release adds native support for chaining multiple AI agents in a single workflow, with shared memory nodes and cross-agent data passing. This makes complex automation that previously required custom code achievable in the no-code editor.",
+    "score": 88,
+    "sourceUrl": "https://n8n.io/blog"
+  },
+  {
+    "slug": "youtube-trend-n8n-claude-startup-automation",
+    "title": "Trending: 'I Automated My Entire Startup with n8n + Claude'",
+    "date": "2026-03-13",
+    "tags": ["n8n", "Claude", "Automation", "Trend"],
+    "category": "Tools & Platforms",
+    "summary": "A viral YouTube series documenting how a solo founder replaced five operational roles with n8n workflows powered by Claude. The series covers email handling, customer support, social publishing, and invoice processing — each as a standalone automation.",
+    "score": 86,
+    "sourceUrl": "https://youtube.com"
+  },
+  {
+    "slug": "codex-cli-code-review-workflow",
+    "title": "Codex CLI: How Developers Are Using It for Daily Code Review",
+    "date": "2026-03-12",
+    "tags": ["Codex CLI", "Code Review", "Developer Tools"],
+    "category": "Tools & Platforms",
+    "summary": "Codex CLI, OpenAI's terminal-based coding assistant, is gaining traction as a daily code review tool. Developers pipe diff output directly to Codex for instant explanations, security checks, and refactor suggestions — without leaving the terminal.",
+    "score": 85,
+    "sourceUrl": "https://github.com/openai/codex"
+  },
+  {
+    "slug": "gemini-cli-long-context-analysis",
+    "title": "Gemini CLI: Long-Context Document Analysis in Practice",
+    "date": "2026-03-11",
+    "tags": ["Gemini CLI", "Long Context", "Document Analysis"],
+    "category": "Google",
+    "summary": "Gemini CLI leverages Gemini 3.1's extended context window to analyze large documents from the command line. Developers are using it to summarize lengthy PDFs, cross-reference multiple reports, and extract structured data from unstructured sources.",
+    "score": 84,
+    "sourceUrl": "https://github.com/google-gemini/gemini-cli"
+  },
+  {
+    "slug": "claude-code-mcp-agent-workflow",
+    "title": "Claude Code + MCP: Building Agent Workflows Without Extra Infrastructure",
+    "date": "2026-03-10",
+    "tags": ["Claude Code", "MCP", "Agent"],
+    "category": "Anthropic",
+    "summary": "A practical guide to using Claude Code's native MCP integration to build complete agent workflows — reading files, calling APIs, and writing results — without deploying separate server infrastructure. Covers CLAUDE.md setup and tool-chaining patterns.",
+    "score": 89,
+    "sourceUrl": "https://docs.anthropic.com"
+  },
+  {
+    "slug": "skill-chaining-mega-agent",
+    "title": "Skill Chaining: Building Complex Agents by Linking Claude Skills",
+    "date": "2026-03-09",
+    "tags": ["Claude Market", "Skill Chaining", "Agent"],
+    "category": "Anthropic",
+    "summary": "Skill chaining lets you combine multiple focused Claude Market skills into a larger workflow. This overview explains how to design skills with compatible input/output schemas and demonstrates a research-to-report pipeline built from three chained skills.",
+    "score": 87,
+    "sourceUrl": "https://www.anthropic.com/claude-market"
+  },
+  {
+    "slug": "n8n-human-in-the-loop-approval",
+    "title": "n8n Human-in-the-Loop: Getting Slack Approval Before Agent Acts",
+    "date": "2026-03-08",
+    "tags": ["n8n", "Human in the Loop", "Slack"],
+    "category": "Tools & Platforms",
+    "summary": "This n8n pattern pauses an AI automation and sends a Slack message requesting human approval before the agent takes an irreversible action. A practical safeguard for workflows that send emails, post content, or make financial changes.",
+    "score": 85,
+    "sourceUrl": "https://docs.n8n.io"
+  },
+  {
+    "slug": "claude-market-rejection-patterns",
+    "title": "Why Skills Get Rejected from Claude Market: 3 Common Patterns",
+    "date": "2026-03-07",
+    "tags": ["Claude Market", "Security", "Claude Skills"],
+    "category": "Anthropic",
+    "summary": "Anthropic's review team has identified three recurring reasons skills fail Claude Market review: insufficient input validation, ambiguous capability claims, and missing error handling for edge cases. Skill developers share fixes that led to successful resubmissions.",
+    "score": 83,
+    "sourceUrl": "https://www.anthropic.com/claude-market"
+  },
+  {
+    "slug": "enterprise-claude-code-adoption",
+    "title": "Enterprise Teams Adopting Claude Code as Primary Dev Tool",
+    "date": "2026-03-06",
+    "tags": ["Claude Code", "Enterprise", "Developer Tools"],
+    "category": "Anthropic",
+    "summary": "A growing number of engineering teams at mid-to-large companies are standardizing on Claude Code for code review, documentation, and feature development. Teams report faster onboarding for new engineers and fewer review cycles per PR when Claude Code is part of the workflow.",
+    "score": 86,
+    "sourceUrl": "https://www.anthropic.com"
   }
 ]

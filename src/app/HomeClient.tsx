@@ -164,7 +164,7 @@ export default function HomeClient({
         <div className="rounded-xl border border-slate-700 bg-slate-900/50 p-4">
           <p className="text-xs text-slate-400 mb-3">{t.home.level_start_title}</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-            <a
+            <Link
               href="/learning?level=beginner"
               data-event="cta_level_beginner"
               className="flex items-center gap-3 p-3 rounded-lg border border-slate-700 hover:border-green-700 hover:bg-green-900/10 transition-all group"
@@ -176,8 +176,8 @@ export default function HomeClient({
                 </div>
                 <div className="text-xs text-slate-500">{t.home.level_beginner_sub}</div>
               </div>
-            </a>
-            <a
+            </Link>
+            <Link
               href="/skills?level=intermediate"
               onClick={(e) => handleGuardedClick(e, "/skills?level=intermediate")}
               data-event="cta_level_intermediate"
@@ -190,8 +190,8 @@ export default function HomeClient({
                 </div>
                 <div className="text-xs text-slate-500">{t.home.level_intermediate_sub}</div>
               </div>
-            </a>
-            <a
+            </Link>
+            <Link
               href="/labs?level=advanced"
               onClick={(e) => handleGuardedClick(e, "/labs?level=advanced")}
               data-event="cta_level_advanced"
@@ -204,7 +204,7 @@ export default function HomeClient({
                 </div>
                 <div className="text-xs text-slate-500">{t.home.level_advanced_sub}</div>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -232,13 +232,13 @@ export default function HomeClient({
               {t.home.today_update_view_all} →
             </Link>
           </div>
-          <div className="flex sm:grid sm:grid-cols-3 gap-3 overflow-x-auto pb-2 snap-x snap-mandatory">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {/* Radar 카드 */}
             {todayUpdate.radar && (
-              <a
+              <Link
                 href="/radar"
                 data-event="cta_today_radar"
-                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-700 hover:bg-slate-800/50 transition-all min-w-[280px] sm:min-w-0 snap-start card-glow"
+                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-700 hover:bg-slate-800/50 transition-all card-glow"
               >
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-bold text-emerald-400 bg-emerald-900/30 px-2 py-0.5 rounded-full border border-emerald-800/50">
@@ -258,15 +258,15 @@ export default function HomeClient({
                 <span className="text-xs text-emerald-400 group-hover:underline mt-1">
                   {t.home.radar_label} →
                 </span>
-              </a>
+              </Link>
             )}
 
-            {/* Learning 카드 - 비로그인 개방 (작업 8) */}
+            {/* Learning 카드 */}
             {todayUpdate.learning && (
-              <a
+              <Link
                 href="/learning"
                 data-event="cta_today_learning"
-                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-blue-700 hover:bg-slate-800/50 transition-all min-w-[280px] sm:min-w-0 snap-start card-glow"
+                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-blue-700 hover:bg-slate-800/50 transition-all card-glow"
               >
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-bold text-blue-400 bg-blue-900/30 px-2 py-0.5 rounded-full border border-blue-800/50">
@@ -286,16 +286,16 @@ export default function HomeClient({
                 <span className="text-xs text-blue-400 group-hover:underline mt-1">
                   {t.home.learning_label} →
                 </span>
-              </a>
+              </Link>
             )}
 
             {/* Labs 카드 */}
             {todayUpdate.lab && (
-              <a
+              <Link
                 href="/labs"
                 onClick={(e) => handleGuardedClick(e, "/labs")}
                 data-event="cta_today_lab"
-                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-violet-700 hover:bg-slate-800/50 transition-all min-w-[280px] sm:min-w-0 snap-start card-glow"
+                className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-violet-700 hover:bg-slate-800/50 transition-all card-glow"
               >
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-bold text-violet-400 bg-violet-900/30 px-2 py-0.5 rounded-full border border-violet-800/50">
@@ -315,7 +315,7 @@ export default function HomeClient({
                 <span className="text-xs text-violet-400 group-hover:underline mt-1">
                   {t.home.lab_start}
                 </span>
-              </a>
+              </Link>
             )}
           </div>
         </section>
@@ -337,14 +337,14 @@ export default function HomeClient({
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
           {journey.map(({ step, href, label, icon: Icon, color, border, desc, cta, event, guard }, idx) => (
             <div key={href} className="flex flex-col sm:flex-row md:flex-col items-stretch gap-2">
-              <a
+              <Link
                 href={href}
                 onClick={guard ? (e) => handleGuardedClick(e, href) : undefined}
                 data-event={event}
                 className={`group flex flex-col gap-2 p-3 sm:p-4 rounded-xl border border-slate-800 bg-slate-900/50 ${border} hover:bg-slate-800/50 transition-all cursor-pointer flex-1 card-glow`}
               >
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-slate-500 group-hover:text-violet-400 transition-colors">{step}</span>
+                  <span className="text-xs font-bold text-slate-500 group-hover:text-violet-400 transition-colors duration-200">{step}</span>
                   <Icon size={18} className={color} />
                 </div>
                 <div>
@@ -356,7 +356,7 @@ export default function HomeClient({
                 <span className={`text-xs ${color} group-hover:underline mt-auto`}>
                   {cta}
                 </span>
-              </a>
+              </Link>
               {/* 화살표 (마지막 제외, md 이상에서만) */}
               {idx < 3 && (
                 <div className="hidden md:flex items-center justify-center text-slate-600 -mx-1 mt-8">
@@ -419,7 +419,7 @@ export default function HomeClient({
                 data-event="cta_login_banner_login"
                 className="text-xs text-slate-400 hover:text-slate-200 transition-colors"
               >
-                {t.home.login_banner_have_account} <Link href="#" className="text-violet-400 hover:underline">{t.common.login}</Link>
+                {t.home.login_banner_have_account} <button onClick={openLoginModal} className="text-violet-400 hover:underline">{t.common.login}</button>
               </button>
             </div>
           </section>

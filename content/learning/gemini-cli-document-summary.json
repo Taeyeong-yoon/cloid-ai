@@ -1,0 +1,33 @@
+{
+  "id": "gemini-cli-document-summary",
+  "title": "Gemini CLI: Summarizing Long Documents and Reports",
+  "description": "Use Gemini CLI's long-context capabilities to summarize lengthy PDFs, reports, and documents directly from the command line.",
+  "level": "beginner",
+  "tags": ["Gemini CLI", "Document", "Summary"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Gemini CLI Repository",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "description": "Installation and usage guide for the Gemini CLI tool"
+    },
+    {
+      "type": "doc",
+      "title": "Google AI Studio",
+      "url": "https://aistudio.google.com",
+      "description": "Get a Gemini API key to use with Gemini CLI"
+    },
+    {
+      "type": "practice",
+      "title": "Summarize a document with Gemini CLI",
+      "description": "Install Gemini CLI and summarize a long document in one command",
+      "command": "npm install -g @google/gemini-cli && gemini 'Summarize the key points of this document' --file report.pdf"
+    },
+    {
+      "type": "video",
+      "title": "Gemini CLI Document Analysis Tutorial",
+      "search_keyword": "Gemini CLI document summary long context tutorial 2026",
+      "url": ""
+    }
+  ]
+}

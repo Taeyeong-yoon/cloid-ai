@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Sparkles, Send, Loader2, X, Copy, Check } from "lucide-react";
+import { Sparkles, Send, Loader2, X, Copy, Check, RotateCcw } from "lucide-react";
 import Link from "next/link";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
@@ -16,6 +16,8 @@ const KEYWORD_ALIASES: Record<string, string> = {
   "클로드코드": "claude",
   "anthropic": "claude",
   "앤스로픽": "claude",
+  "codex": "claude",
+  "codex cli": "claude",
   // MCP
   "mcp": "mcp",
   // Prompt
@@ -29,6 +31,9 @@ const KEYWORD_ALIASES: Record<string, string> = {
   "ai agent": "agent",
   "ai 에이전트": "agent",
   "uli": "agent",
+  "cli": "agent",
+  "cli agent": "agent",
+  "cli 에이전트": "agent",
   "claude market": "agent",
   "skill chaining": "agent",
   "claude skills": "agent",
@@ -50,6 +55,8 @@ const KEYWORD_ALIASES: Record<string, string> = {
   // Gemini
   "gemini": "gemini",
   "제미나이": "gemini",
+  "gemini cli": "gemini",
+  "제미나이 cli": "gemini",
   // OpenAI / ChatGPT
   "openai": "openai",
   "chatgpt": "openai",
@@ -68,51 +75,52 @@ type RelatedContentItem = { type: string; icon: string; title: string; href: str
 
 const KEYWORD_CONTENT: Record<string, RelatedContentItem[]> = {
   claude: [
-    { type: "Learning", icon: "📖", title: "Claude Code 마스터하기", href: "/learning?q=claude" },
-    { type: "Labs", icon: "🧪", title: "Claude Code 컴포넌트 실습", href: "/labs?q=claude" },
+    { type: "Learning", icon: "📖", title: "Master Claude Code", href: "/learning?q=claude" },
+    { type: "Learning", icon: "📖", title: "Getting Started with Codex CLI", href: "/learning?q=codex" },
+    { type: "Labs", icon: "🧪", title: "Claude Code Component Lab", href: "/labs?q=claude" },
   ],
   mcp: [
-    { type: "Learning", icon: "📖", title: "MCP 심화 학습", href: "/learning?q=mcp" },
-    { type: "Labs", icon: "🧪", title: "MCP 파일시스템 실습", href: "/labs?q=mcp" },
+    { type: "Learning", icon: "📖", title: "MCP Deep Dive", href: "/learning?q=mcp" },
+    { type: "Labs", icon: "🧪", title: "MCP Filesystem Lab", href: "/labs?q=mcp" },
   ],
   prompt: [
-    { type: "Learning", icon: "📖", title: "프롬프트 엔지니어링", href: "/learning?q=prompt" },
-    { type: "Skills", icon: "🔧", title: "프롬프트 레시피", href: "/skills?q=prompt" },
+    { type: "Learning", icon: "📖", title: "Prompt Engineering", href: "/learning?q=prompt" },
+    { type: "Skills", icon: "🔧", title: "Prompt Recipes", href: "/skills?q=prompt" },
   ],
   agent: [
-    { type: "Learning", icon: "📖", title: "AI 에이전트 개발", href: "/learning?q=agent" },
-    { type: "Labs", icon: "🧪", title: "챗봇 만들기 실습", href: "/labs?q=chatbot" },
+    { type: "Learning", icon: "📖", title: "AI Agent Development", href: "/learning?q=agent" },
+    { type: "Labs", icon: "🧪", title: "Build a Chatbot Lab", href: "/labs?q=chatbot" },
   ],
   rag: [
-    { type: "Learning", icon: "📖", title: "RAG 시스템 구축", href: "/learning?q=rag" },
-    { type: "Labs", icon: "🧪", title: "데이터 시각화 실습", href: "/labs?q=data" },
+    { type: "Learning", icon: "📖", title: "Build a RAG System", href: "/learning?q=rag" },
+    { type: "Labs", icon: "🧪", title: "Data Visualization Lab", href: "/labs?q=data" },
   ],
   langchain: [
-    { type: "Learning", icon: "📖", title: "RAG 시스템 학습", href: "/learning?q=rag" },
-    { type: "Labs", icon: "🧪", title: "API 연동 실습", href: "/labs?q=api" },
+    { type: "Learning", icon: "📖", title: "RAG System Learning", href: "/learning?q=rag" },
+    { type: "Labs", icon: "🧪", title: "API Integration Lab", href: "/labs?q=api" },
   ],
   cursor: [
-    { type: "Learning", icon: "📖", title: "Cursor AI 개발", href: "/learning?q=cursor" },
-    { type: "Skills", icon: "🔧", title: "Cursor 실무 패턴", href: "/skills?q=cursor" },
+    { type: "Learning", icon: "📖", title: "Cursor AI Development", href: "/learning?q=cursor" },
+    { type: "Skills", icon: "🔧", title: "Cursor Productivity Patterns", href: "/skills?q=cursor" },
   ],
   automation: [
-    { type: "Learning", icon: "📖", title: "AI 자동화 학습", href: "/learning?q=automation" },
-    { type: "Labs", icon: "🧪", title: "AI 이메일 자동화 실습", href: "/labs?q=email" },
+    { type: "Learning", icon: "📖", title: "AI Automation Learning", href: "/learning?q=automation" },
+    { type: "Labs", icon: "🧪", title: "AI Email Automation Lab", href: "/labs?q=email" },
   ],
   gemini: [
-    { type: "Learning", icon: "📖", title: "AI 도구 개요", href: "/learning?q=gemini" },
-    { type: "Labs", icon: "🧪", title: "Gemini 스트리밍 실습", href: "/labs?q=gemini" },
+    { type: "Learning", icon: "📖", title: "AI Tools Overview", href: "/learning?q=gemini" },
+    { type: "Labs", icon: "🧪", title: "Gemini Streaming Lab", href: "/labs?q=gemini" },
   ],
   openai: [
-    { type: "Learning", icon: "📖", title: "ChatGPT 마스터", href: "/learning?q=chatgpt" },
-    { type: "Skills", icon: "🔧", title: "OpenAI 프롬프트", href: "/skills?q=openai" },
+    { type: "Learning", icon: "📖", title: "Master ChatGPT", href: "/learning?q=chatgpt" },
+    { type: "Skills", icon: "🔧", title: "OpenAI Prompt Patterns", href: "/skills?q=openai" },
   ],
   python: [
-    { type: "Learning", icon: "📖", title: "Python AI 기초", href: "/learning?q=python" },
-    { type: "Labs", icon: "🧪", title: "API 연동 실습", href: "/labs?q=api" },
+    { type: "Learning", icon: "📖", title: "Python AI Basics", href: "/learning?q=python" },
+    { type: "Labs", icon: "🧪", title: "API Integration Lab", href: "/labs?q=api" },
   ],
   html: [
-    { type: "Labs", icon: "🧪", title: "HTML 앱 만들기 실습", href: "/labs?q=html" },
+    { type: "Labs", icon: "🧪", title: "Build an HTML App Lab", href: "/labs?q=html" },
   ],
 };
 
@@ -273,12 +281,13 @@ export default function AskAI() {
                   setCopiedAnswer(true);
                   setTimeout(() => setCopiedAnswer(false), 1500);
                 }}
-                aria-label="답변 복사"
+                aria-label={t.home.copy_answer}
                 className="flex items-center gap-1 text-xs px-2 py-1 rounded text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
               >
-                {copiedAnswer ? <><Check size={12} className="text-emerald-400" /> 복사됨</> : <><Copy size={12} /> 복사</>}
+                {copiedAnswer ? <><Check size={12} className="text-emerald-400" /> {t.common.copied}</> : <><Copy size={12} /> {t.common.copy}</>}
               </button>
-              {/* 새 질문 버튼 */}
+              <span className="w-px h-4 bg-slate-700" />
+              {/* New question button */}
               <button
                 onClick={() => {
                   setAnswer("");
@@ -287,16 +296,16 @@ export default function AskAI() {
                   inputRef.current?.focus();
                   inputRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
                 }}
-                aria-label="새 질문하기"
-                className="text-xs px-2 py-1 rounded text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
+                aria-label={t.home.new_question}
+                className="flex items-center gap-1 text-xs px-2 py-1 rounded text-slate-400 hover:text-violet-300 hover:bg-slate-700 transition-colors"
               >
-                새 질문
+                <RotateCcw size={12} /> {t.home.new_question}
               </button>
               <button
                 onClick={() => { setAnswer(""); setRelatedContent([]); }}
                 className="p-1 rounded text-slate-500 hover:text-white hover:bg-slate-700 transition-colors"
-                title="답변 닫기"
-                aria-label="답변 닫기"
+                title={t.home.close_answer}
+                aria-label={t.home.close_answer}
               >
                 <X size={14} />
               </button>

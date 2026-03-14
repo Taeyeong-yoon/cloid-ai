@@ -1,0 +1,51 @@
+{
+  "id": "lab-codex-cli-test-writing",
+  "title": "[Codex CLI] Write Unit Tests for an Existing Codebase",
+  "description": "Use Codex CLI to systematically generate comprehensive unit tests for an existing codebase with no test coverage.",
+  "difficulty": "advanced",
+  "duration": "1.5 hours",
+  "tags": ["Codex CLI", "Testing", "Unit Test"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "Audit current test coverage",
+      "instruction": "Use Codex CLI to identify which files and functions have no test coverage.",
+      "prompt": "Analyze this codebase and identify: 1) Which files have no corresponding test files, 2) Which functions in tested files are not covered by any test, 3) Which functions are most critical and should be tested first. Rank by importance.",
+      "expected_result": "A prioritized list of untested functions and files",
+      "tip": "Focus on business logic and utility functions first — skip UI components for the first pass"
+    },
+    {
+      "step": 2,
+      "title": "Generate tests for critical functions",
+      "instruction": "Generate unit tests for the highest-priority untested functions.",
+      "prompt": "Write comprehensive unit tests for [function name] using [Jest/Vitest/pytest]. Include: happy path, edge cases (empty input, null, max values), error cases (invalid input, exceptions), and any async behavior. Use existing test file style from the project.",
+      "expected_result": "Complete unit tests covering all identified scenarios",
+      "tip": "Run the tests immediately after generation: `npm test` or `pytest` — fix any failures before moving on"
+    },
+    {
+      "step": 3,
+      "title": "Generate integration tests",
+      "instruction": "Generate integration tests for the main user flows in the application.",
+      "prompt": "Write integration tests for the main user flows: [list 2-3 key flows]. Tests should test the complete path from input to output, mocking only external services (APIs, databases). Use the project's existing test infrastructure.",
+      "expected_result": "Integration tests covering the critical user flows",
+      "tip": "Integration tests are more valuable than unit tests for catching real bugs — prioritize them on core flows"
+    },
+    {
+      "step": 4,
+      "title": "Set up coverage reporting",
+      "instruction": "Configure code coverage reporting so you can track test coverage progress.",
+      "prompt": "Add code coverage configuration to this project. Set a minimum coverage threshold of 70% for critical files. Show me the current coverage after adding the new tests.",
+      "expected_result": "Coverage report showing current coverage percentage and a configuration that enforces minimum thresholds",
+      "tip": "Add coverage to your CI/CD pipeline — coverage should never drop below your threshold"
+    }
+  ],
+  "challenge": "Set up a GitHub Actions workflow that runs the test suite on every PR and fails the check if coverage drops below 70% in any critical directory.",
+  "related_skills": ["codex-cli-pr-review-recipe"],
+  "videos": [
+    {
+      "title": "Codex CLI Unit Test Generation Tutorial",
+      "search_keyword": "Codex CLI unit test generation coverage tutorial 2026",
+      "url": ""
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "lab-claude-code-mcp-filesystem",
+  "title": "[Claude Code] MCP Filesystem: Read and Write Files via Agent",
+  "description": "Set up the MCP filesystem server in Claude Code and build an agent that reads project files, analyzes them, and writes output files autonomously.",
+  "difficulty": "beginner",
+  "duration": "45 minutes",
+  "tags": ["Claude Code", "MCP", "Filesystem"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "Add the MCP filesystem server",
+      "instruction": "Configure the MCP filesystem server so Claude Code can read and write files in your project directory.",
+      "prompt": "How do I add the MCP filesystem server to Claude Code? Give me the exact command.",
+      "expected_result": "MCP filesystem server running and connected to Claude Code",
+      "tip": "Run `claude mcp list` to verify the server is active"
+    },
+    {
+      "step": 2,
+      "title": "Read and analyze files",
+      "instruction": "Ask Claude Code to read all files in a directory and produce a summary.",
+      "prompt": "Read all TypeScript files in the /src directory. For each file, tell me: what it does, its dependencies, and any potential improvements.",
+      "expected_result": "A structured analysis of all TypeScript files in the directory",
+      "tip": "Try this on a real project directory — the more context, the better the analysis"
+    },
+    {
+      "step": 3,
+      "title": "Write an output file",
+      "instruction": "Have Claude Code write its analysis to a new markdown file.",
+      "prompt": "Write the analysis from the previous step to a file called PROJECT_ANALYSIS.md. Use clear headings for each file.",
+      "expected_result": "A PROJECT_ANALYSIS.md file created in your project directory",
+      "tip": "Check the file after creation with `cat PROJECT_ANALYSIS.md`"
+    }
+  ],
+  "challenge": "Build a Claude Code automation that monitors a /drafts folder, reads each markdown draft, improves the writing, and saves the improved version to /published — all in a single session.",
+  "related_skills": ["claude-code-bug-fix-recipe"],
+  "videos": [
+    {
+      "title": "Claude Code MCP Filesystem Tutorial",
+      "search_keyword": "Claude Code MCP filesystem server tutorial 2026",
+      "url": ""
+    }
+  ]
+}

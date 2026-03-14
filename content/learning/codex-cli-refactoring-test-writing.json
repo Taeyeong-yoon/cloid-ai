@@ -1,0 +1,33 @@
+{
+  "id": "codex-cli-refactoring-test-writing",
+  "title": "Codex CLI: Refactoring Legacy Code and Writing Tests",
+  "description": "Use Codex CLI to systematically refactor legacy code, improve readability, and auto-generate unit tests for existing functions.",
+  "level": "intermediate",
+  "tags": ["Codex CLI", "Refactoring", "Testing"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Codex CLI Advanced Usage",
+      "url": "https://github.com/openai/codex#advanced-usage",
+      "description": "Multi-turn sessions, file context, and automation patterns for Codex CLI"
+    },
+    {
+      "type": "doc",
+      "title": "OpenAI Prompt Engineering Guide",
+      "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+      "description": "Techniques for writing effective prompts for code transformation tasks"
+    },
+    {
+      "type": "practice",
+      "title": "Refactor a legacy function with Codex CLI",
+      "description": "Use Codex CLI to refactor a complex function and generate its unit tests in one session",
+      "command": "codex 'Refactor this function to use async/await, add JSDoc comments, and generate Jest unit tests for all edge cases' --file legacy.js"
+    },
+    {
+      "type": "video",
+      "title": "Codex CLI Refactoring and Testing Workflow",
+      "search_keyword": "Codex CLI refactoring legacy code unit tests tutorial 2026",
+      "url": ""
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "n8n-webhook-basics",
+  "title": "n8n Webhook Basics: Triggering Workflows from External Events",
+  "description": "Learn how to set up webhook triggers in n8n so external apps, APIs, and services can automatically start your automation workflows.",
+  "level": "beginner",
+  "tags": ["n8n", "Webhook", "Automation"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "n8n Webhook Node Documentation",
+      "url": "https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.webhook/",
+      "description": "Official docs on setting up and configuring webhook triggers in n8n"
+    },
+    {
+      "type": "doc",
+      "title": "n8n Getting Started Guide",
+      "url": "https://docs.n8n.io/getting-started/",
+      "description": "Introduction to n8n workflows, nodes, and the automation interface"
+    },
+    {
+      "type": "practice",
+      "title": "Create a webhook-triggered workflow",
+      "description": "Set up a webhook in n8n and test it by sending a POST request with curl",
+      "command": "curl -X POST https://your-n8n-instance.com/webhook/test-webhook -H 'Content-Type: application/json' -d '{\"event\": \"test\", \"data\": \"hello\"}'"
+    },
+    {
+      "type": "video",
+      "title": "n8n Webhook Tutorial for Beginners",
+      "search_keyword": "n8n webhook trigger tutorial beginner 2026",
+      "url": ""
+    }
+  ]
+}

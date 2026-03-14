@@ -7,6 +7,7 @@ export interface RadarPost {
   score?: number;
   sourceUrl?: string;
   content?: string;
+  category?: string;
 }
 
 export interface LearningResource {

@@ -1,0 +1,33 @@
+{
+  "id": "n8n-error-handling-self-healing",
+  "title": "n8n Error Handling: Building Self-Healing Automation Pipelines",
+  "description": "Learn advanced n8n error handling patterns — retry logic, fallback branches, error notifications, and self-healing workflows that recover from failures automatically.",
+  "level": "advanced",
+  "tags": ["n8n", "Error Handling", "Self-Healing"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "n8n Error Handling Documentation",
+      "url": "https://docs.n8n.io/flow-logic/error-handling/",
+      "description": "Official guide to error workflows, retry settings, and error trigger nodes in n8n"
+    },
+    {
+      "type": "doc",
+      "title": "n8n Retry and Wait Nodes",
+      "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.wait/",
+      "description": "Using Wait nodes and retry configurations for resilient workflow design"
+    },
+    {
+      "type": "practice",
+      "title": "Build an error notification + retry workflow",
+      "description": "Create an n8n error workflow that retries failed steps and sends a Slack alert after 3 failures",
+      "command": "# In n8n: Set Error Workflow in workflow settings → Add Error Trigger node → Connect IF node (retries < 3) → Retry OR send Slack alert"
+    },
+    {
+      "type": "video",
+      "title": "n8n Advanced Error Handling Tutorial",
+      "search_keyword": "n8n error handling retry self-healing workflow advanced 2026",
+      "url": ""
+    }
+  ]
+}

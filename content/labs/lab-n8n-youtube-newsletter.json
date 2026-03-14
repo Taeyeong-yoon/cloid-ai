@@ -1,0 +1,43 @@
+{
+  "id": "lab-n8n-youtube-newsletter",
+  "title": "[n8n] Daily YouTube Trends to Newsletter Auto-Publishing",
+  "description": "Build an n8n automation that fetches trending YouTube videos in your niche daily, summarizes them with Claude, and publishes a newsletter to Substack or Notion.",
+  "difficulty": "intermediate",
+  "duration": "2 hours",
+  "tags": ["n8n", "YouTube", "Content Automation"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "Fetch YouTube trending videos via RSS",
+      "instruction": "Set up a daily schedule trigger that fetches the latest videos from your target YouTube channels.",
+      "prompt": "How do I set up n8n to fetch YouTube channel RSS feeds daily and extract the latest 5 video titles, descriptions, and URLs?",
+      "expected_result": "n8n workflow that retrieves the 5 most recent videos from your configured channels each day",
+      "tip": "Use multiple HTTP Request nodes with different channel IDs to monitor multiple channels at once"
+    },
+    {
+      "step": 2,
+      "title": "Summarize videos with Claude",
+      "instruction": "For each video, fetch the transcript and generate a newsletter-style summary with Claude.",
+      "prompt": "You are a newsletter writer for an AI/tech audience. Read this YouTube video transcript and write a 3-sentence newsletter summary that: captures the key insight, explains why it matters, and ends with 'Watch here: [URL]'. Keep it engaging and specific.",
+      "expected_result": "A newsletter-ready summary for each video, with the key insight and a link",
+      "tip": "Use claude-haiku-4-5 to keep daily costs under $0.10"
+    },
+    {
+      "step": 3,
+      "title": "Format and publish the newsletter",
+      "instruction": "Combine all summaries into a formatted newsletter and publish it.",
+      "prompt": "Combine these video summaries into a daily newsletter. Format: Header with today's date and 'Today's Top AI Videos', then each summary as a numbered section. End with a one-line closing remark.",
+      "expected_result": "A formatted daily newsletter with multiple video summaries",
+      "tip": "For Substack: use their API or email integration. For Notion: use the Notion node in n8n."
+    }
+  ],
+  "challenge": "Add a quality filter step: before publishing, run each summary through Claude and ask it to rate the video's quality (1-5). Only include videos rated 4 or higher in the newsletter.",
+  "related_skills": ["n8n-youtube-summary-pipeline"],
+  "videos": [
+    {
+      "title": "n8n YouTube Newsletter Automation Tutorial",
+      "search_keyword": "n8n YouTube newsletter automation content pipeline 2026",
+      "url": ""
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "n8n-multi-agent-state-management",
+  "title": "n8n Multi-Agent State Management: Keeping Memory Across Steps",
+  "description": "Learn how to share state and memory between multiple AI agent nodes in an n8n workflow so each step has context from previous actions.",
+  "level": "intermediate",
+  "tags": ["n8n", "State Management", "Multi-Agent"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "n8n AI Agent Node Documentation",
+      "url": "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/",
+      "description": "Official docs on the n8n AI Agent node, memory configuration, and tool connections"
+    },
+    {
+      "type": "doc",
+      "title": "n8n Memory Nodes",
+      "url": "https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/",
+      "description": "Overview of buffer memory, window memory, and other state management nodes in n8n"
+    },
+    {
+      "type": "practice",
+      "title": "Build a stateful multi-agent workflow",
+      "description": "Create an n8n workflow where Agent A researches a topic and Agent B writes a report using Agent A's findings",
+      "command": "# In n8n UI: Add AI Agent node → Connect Window Buffer Memory → Add second AI Agent node → Pass $json.output from first agent"
+    },
+    {
+      "type": "video",
+      "title": "n8n Multi-Agent State Management Tutorial",
+      "search_keyword": "n8n multi-agent memory state management workflow 2026",
+      "url": ""
+    }
+  ]
+}

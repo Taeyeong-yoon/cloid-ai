@@ -19,23 +19,28 @@ import { useTranslation } from "@/lib/i18n/LanguageContext";
 import { useAuth } from "@/lib/auth/AuthContext";
 import LangSwitcher from "./LangSwitcher";
 
-// ── 검색 섹션 탭 ─────────────────────────────────────────────
 const SEARCH_TABS = [
-  { key: "all",      label: "전체",    href: (q: string) => `/learning?q=${encodeURIComponent(q)}` },
-  { key: "radar",    label: "Radar",   href: (q: string) => `/radar?q=${encodeURIComponent(q)}` },
-  { key: "learning", label: "Learning",href: (q: string) => `/learning?q=${encodeURIComponent(q)}` },
-  { key: "skills",   label: "Skills",  href: (q: string) => `/skills?q=${encodeURIComponent(q)}` },
-  { key: "labs",     label: "Labs",    href: (q: string) => `/labs?q=${encodeURIComponent(q)}` },
-];
+  { key: "all", labelKey: "tab_all", href: (q: string) => `/learning?q=${encodeURIComponent(q)}` },
+  { key: "radar", labelKey: "tab_radar", href: (q: string) => `/radar?q=${encodeURIComponent(q)}` },
+  { key: "learning", labelKey: "tab_learning", href: (q: string) => `/learning?q=${encodeURIComponent(q)}` },
+  { key: "skills", labelKey: "tab_skills", href: (q: string) => `/skills?q=${encodeURIComponent(q)}` },
+  { key: "labs", labelKey: "tab_labs", href: (q: string) => `/labs?q=${encodeURIComponent(q)}` },
+] as const;
 
-// ── 검색 모달 ────────────────────────────────────────────────
 function SearchModal({ onClose }: { onClose: () => void }) {
   const { t } = useTranslation();
   const { user, openLoginModal } = useAuth();
   const router = useRouter();
   const [query, setQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("all");
+  const [activeTab, setActiveTab] = useState<(typeof SEARCH_TABS)[number]["key"]>("all");
   const inputRef = useRef<HTMLInputElement>(null);
+  const popularKeywords = t.search.popular_keywords as string[];
+
+  function getTabLabel(tabKey: (typeof SEARCH_TABS)[number]["key"]) {
+    const tab = SEARCH_TABS.find((item) => item.key === tabKey);
+    if (!tab) return "";
+    return (t.search as Record<string, string>)[tab.labelKey] ?? tab.key;
+  }
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -49,7 +54,7 @@ function SearchModal({ onClose }: { onClose: () => void }) {
   function handleSearch(e: React.FormEvent) {
     e.preventDefault();
     if (!query.trim()) return;
-    const tab = SEARCH_TABS.find((t) => t.key === activeTab) ?? SEARCH_TABS[0];
+    const tab = SEARCH_TABS.find((item) => item.key === activeTab) ?? SEARCH_TABS[0];
     const dest = tab.href(query.trim());
     onClose();
     if (!user) {
@@ -61,7 +66,6 @@ function SearchModal({ onClose }: { onClose: () => void }) {
 
   function handleAskAI() {
     onClose();
-    // 홈으로 이동 후 Ask AI 섹션 포커스
     router.push("/");
   }
 
@@ -69,7 +73,7 @@ function SearchModal({ onClose }: { onClose: () => void }) {
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="검색"
+      aria-label={t.search.title}
       className="fixed inset-0 z-[100] flex items-start justify-center pt-12 sm:pt-20 px-4 bg-black/60 backdrop-blur-sm"
       onClick={onClose}
     >
@@ -77,7 +81,6 @@ function SearchModal({ onClose }: { onClose: () => void }) {
         className="w-full max-w-xl bg-[#0f1117] border border-slate-700 rounded-2xl shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* 검색 입력 */}
         <form onSubmit={handleSearch} role="search" className="flex items-center gap-3 p-4 border-b border-slate-800">
           <Search size={18} className="text-slate-500 shrink-0" />
           <input
@@ -91,14 +94,13 @@ function SearchModal({ onClose }: { onClose: () => void }) {
           <button
             type="button"
             onClick={onClose}
-            aria-label="검색 닫기"
+            aria-label={t.search.close_search}
             className="text-slate-500 hover:text-slate-300 transition-colors"
           >
             <X size={18} />
           </button>
         </form>
 
-        {/* 섹션 탭 */}
         <div className="flex gap-1 p-3 border-b border-slate-800 overflow-x-auto">
           {SEARCH_TABS.map((tab) => (
             <button
@@ -110,12 +112,11 @@ function SearchModal({ onClose }: { onClose: () => void }) {
                   : "text-slate-400 hover:text-white hover:bg-slate-800"
               }`}
             >
-              {tab.label}
+              {getTabLabel(tab.key)}
             </button>
           ))}
         </div>
 
-        {/* 본문 */}
         <div className="p-4">
           {query.trim() ? (
             <button
@@ -125,18 +126,18 @@ function SearchModal({ onClose }: { onClose: () => void }) {
               <Search size={14} className="text-violet-400 shrink-0" />
               <span className="text-sm text-slate-300">
                 <span className="font-medium text-violet-300">"{query}"</span>{" "}
-                {t.search.search_action} ({SEARCH_TABS.find((t) => t.key === activeTab)?.label})
+                {t.search.search_action} ({getTabLabel(activeTab)})
               </span>
             </button>
           ) : (
             <div className="space-y-3">
               <p className="text-xs text-slate-500">{t.search.popular}</p>
               <div className="flex flex-wrap gap-2">
-                {["Claude API", "MCP", "프롬프트", "에이전트", "RAG", "LangChain"].map((keyword) => (
+                {popularKeywords.map((keyword) => (
                   <button
                     key={keyword}
                     onClick={() => setQuery(keyword)}
-                    aria-label={`${keyword} 검색`}
+                    aria-label={`${keyword} ${t.search.search_action}`}
                     className="text-xs px-3 py-1.5 rounded-full border border-slate-700 text-slate-400 hover:border-violet-600 hover:text-violet-300 hover:bg-violet-900/20 transition-all"
                   >
                     {keyword}
@@ -146,7 +147,6 @@ function SearchModal({ onClose }: { onClose: () => void }) {
             </div>
           )}
 
-          {/* Ask AI 연결 */}
           <div className="mt-3 pt-3 border-t border-slate-800">
             <button
               onClick={handleAskAI}
@@ -161,7 +161,6 @@ function SearchModal({ onClose }: { onClose: () => void }) {
   );
 }
 
-// ── 메인 컴포넌트 ─────────────────────────────────────────────
 export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
   const [open, setOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -174,11 +173,11 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
   const authed = isLoggedIn || !!user;
 
   const links = [
-    { href: "/",        label: t.nav.home,     icon: Brain,        guard: false },
-    { href: "/radar",   label: t.nav.radar,    icon: Radar,        guard: false },
-    { href: "/learning",label: t.nav.learning, icon: BookOpen,     guard: false },
-    { href: "/skills",  label: t.nav.skills,   icon: Zap,          guard: true  },
-    { href: "/labs",    label: t.nav.labs,     icon: FlaskConical, guard: true  },
+    { href: "/", label: t.nav.home, icon: Brain, guard: false },
+    { href: "/radar", label: t.nav.radar, icon: Radar, guard: false },
+    { href: "/learning", label: t.nav.learning, icon: BookOpen, guard: false },
+    { href: "/skills", label: t.nav.skills, icon: Zap, guard: true },
+    { href: "/labs", label: t.nav.labs, icon: FlaskConical, guard: true },
   ];
 
   function handleClick(e: React.MouseEvent, href: string, guard: boolean) {
@@ -191,10 +190,9 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
     }
   }
 
-  // 키보드 단축키: Ctrl+K 또는 Cmd+K로 검색 열기
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
         setSearchOpen(true);
       }
@@ -205,16 +203,14 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
 
   return (
     <>
-      {/* ── 검색 모달 ── */}
       {searchOpen && <SearchModal onClose={() => setSearchOpen(false)} />}
 
-      {/* ── 데스크톱 (md 이상) ── */}
       <div className="hidden md:flex items-center gap-1">
         <nav className="flex items-center gap-1">
           {links.map(({ href, label, icon: Icon, guard }) => {
             const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
             return (
-              <a
+              <Link
                 key={href}
                 href={href}
                 onClick={(e) => handleClick(e, href, guard)}
@@ -231,22 +227,24 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
                 {!isActive && (
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-3/5 h-[2px] bg-gradient-to-r from-violet-500/60 to-blue-500/40 rounded-full transition-all duration-300" />
                 )}
-              </a>
+              </Link>
             );
           })}
         </nav>
 
         <div className="ml-2 pl-2 border-l border-slate-700 flex items-center gap-2">
-          {/* 검색 아이콘 */}
           <button
             onClick={() => setSearchOpen(true)}
-            aria-label="검색 열기 (Ctrl+K)"
-            title="검색 (⌘K / Ctrl+K)"
-            className="flex items-center justify-center w-8 h-8 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
+            aria-label={t.search.open_search}
+            title={t.search.open_search}
+            className="flex items-center gap-1.5 px-2 h-8 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+          >
             <Search size={16} />
+            <kbd className="hidden lg:inline text-[10px] px-1 py-0.5 rounded border border-slate-700 text-slate-500 font-mono leading-none">
+              {t.search.shortcut_key}
+            </kbd>
           </button>
 
-          {/* 로그인 / 내 계정 */}
           {authed ? (
             <Link
               href="/account"
@@ -266,10 +264,9 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
                 <LogIn size={14} />
                 {t.common.login}
               </button>
-              {/* 로그인 혜택 툴팁 */}
               {loginTooltipVisible && (
                 <div className="absolute right-0 top-full mt-2 w-64 p-3 rounded-xl border border-slate-700 bg-[#0f1117] shadow-xl z-50 text-xs text-slate-300 leading-relaxed">
-                  {t.home.login_tooltip ?? "로그인하면: 학습 진도 저장 · 북마크 · 맞춤 추천 · 실습 기록 관리"}
+                  {t.home.login_tooltip}
                 </div>
               )}
             </div>
@@ -278,33 +275,31 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
         </div>
       </div>
 
-      {/* ── 모바일 (md 미만): 검색 + 언어 + 햄버거 ── */}
       <div className="flex md:hidden items-center gap-2">
         <button
           onClick={() => setSearchOpen(true)}
           className="p-2 text-slate-400 hover:text-white transition-colors"
-          aria-label="검색"
+          aria-label={t.common.search}
         >
           <Search size={20} />
         </button>
         <LangSwitcher />
         <button
           className="p-2 text-slate-400 hover:text-white transition-colors"
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => setOpen((value) => !value)}
           aria-label={t.common.open_menu}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* ── 모바일 드롭다운 메뉴 ── */}
       {open && (
         <div className="md:hidden absolute top-14 left-0 right-0 bg-[#0f1117] border-b border-slate-800 shadow-xl z-40 mobile-menu-enter">
           <nav className="flex flex-col p-3 gap-1">
             {links.map(({ href, label, icon: Icon, guard }) => {
               const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
               return (
-                <a
+                <Link
                   key={href}
                   href={href}
                   onClick={(e) => handleClick(e, href, guard)}
@@ -316,7 +311,7 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
                 >
                   <Icon size={18} className={isActive ? "text-violet-400" : ""} />
                   {label}
-                </a>
+                </Link>
               );
             })}
             <div className="border-t border-slate-800 mt-1 pt-1">

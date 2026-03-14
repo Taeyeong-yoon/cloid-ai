@@ -1,0 +1,33 @@
+{
+  "id": "codex-cli-getting-started",
+  "title": "Getting Started with Codex CLI: Code Reading and Bug Fixing",
+  "description": "Learn how to install and use OpenAI's Codex CLI to read codebases, understand unfamiliar code, and fix bugs — all from the terminal.",
+  "level": "beginner",
+  "tags": ["Codex CLI", "Beginner", "Code"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Codex CLI Official Repository",
+      "url": "https://github.com/openai/codex",
+      "description": "Installation guide, configuration options, and usage examples for Codex CLI"
+    },
+    {
+      "type": "doc",
+      "title": "OpenAI API Documentation",
+      "url": "https://platform.openai.com/docs",
+      "description": "API key setup and model configuration for Codex CLI"
+    },
+    {
+      "type": "practice",
+      "title": "Install Codex CLI and review a file",
+      "description": "Install Codex CLI via npm and run your first code review on an existing file",
+      "command": "npm install -g @openai/codex && codex review src/index.js"
+    },
+    {
+      "type": "video",
+      "title": "Codex CLI Getting Started Tutorial",
+      "search_keyword": "Codex CLI OpenAI getting started tutorial 2026",
+      "url": ""
+    }
+  ]
+}

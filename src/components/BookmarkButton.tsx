@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Bookmark, BookmarkCheck } from "lucide-react";
 import { addBookmark, removeBookmark, type BookmarkType } from "@/app/actions/bookmarks";
 import { useAuth } from "@/lib/auth/AuthContext";
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 interface Props {
   slug: string;
@@ -15,6 +16,7 @@ export default function BookmarkButton({ slug, type, initialBookmarked = false }
   const [bookmarked, setBookmarked] = useState(initialBookmarked);
   const [loading, setLoading] = useState(false);
   const { openLoginModal } = useAuth();
+  const { t } = useTranslation();
 
   async function toggle(e: React.MouseEvent) {
     e.preventDefault();
@@ -38,7 +40,7 @@ export default function BookmarkButton({ slug, type, initialBookmarked = false }
     }
   }
 
-  const label = bookmarked ? "북마크 해제" : "북마크 추가";
+  const label = bookmarked ? t.common.bookmark_remove : t.common.bookmark_add;
 
   return (
     <button

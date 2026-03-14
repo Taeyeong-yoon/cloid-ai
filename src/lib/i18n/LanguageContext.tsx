@@ -21,15 +21,24 @@ const LanguageContext = createContext<LanguageContextValue>({
   t: translations.en,
 });
 
+// localStorage 우선, 없으면 브라우저 언어 감지 (ko → Korean, else → English)
+function getInitialLocale(): Locale {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY) as Locale | null;
+    if (saved === "en" || saved === "ko") return saved;
+    if (typeof navigator !== "undefined" && navigator.language.startsWith("ko")) return "ko";
+  } catch {
+    // localStorage unavailable (SSR / private mode)
+  }
+  return "en";
+}
+
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>("en");
 
   useEffect(() => {
-    const saved = localStorage.getItem(STORAGE_KEY) as Locale | null;
-    if (saved === "en" || saved === "ko") {
-      setLocaleState(saved);
-    }
-    // else: stays "en" (default)
+    const detected = getInitialLocale();
+    setLocaleState(detected);
   }, []);
 
   function setLocale(next: Locale) {

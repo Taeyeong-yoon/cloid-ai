@@ -190,3 +190,12 @@ button:active:not(:disabled) {
   .card-glow:hover { transform: none; }
   .mobile-menu-enter { animation: none; }
 }
+
+/* ── Hide scrollbar utility ── */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

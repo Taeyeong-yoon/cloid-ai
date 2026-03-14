@@ -1,0 +1,51 @@
+{
+  "id": "lab-claude-market-skill-publish",
+  "title": "[Claude Market] Build and Publish a Paid Claude Skill End-to-End",
+  "description": "Build a production-quality Claude Market skill from scratch — design, write the system prompt, test edge cases, set pricing, and submit for review.",
+  "difficulty": "advanced",
+  "duration": "2 hours",
+  "tags": ["Claude Market", "Claude Skills", "Monetization"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "Choose your skill niche",
+      "instruction": "Identify a specific, high-value skill that can be delivered consistently by Claude.",
+      "prompt": "Help me brainstorm 10 potential Claude Market skill ideas based on [your professional background or area of expertise]. For each idea, evaluate: How specific is the task? How consistent will the output be? What would users pay for this? Rank the top 3.",
+      "expected_result": "A ranked list of 3 viable skill ideas with market potential assessment",
+      "tip": "The best-selling skills solve a specific problem that professionals face repeatedly"
+    },
+    {
+      "step": 2,
+      "title": "Write and refine the system prompt",
+      "instruction": "Write a system prompt that produces consistent, high-quality output for your chosen skill.",
+      "prompt": "I want to build a Claude Market skill that [describe skill]. Write a system prompt that: defines the role precisely, specifies exact output format, handles edge cases, and includes validation rules. Then test it with 3 different inputs to verify consistency.",
+      "expected_result": "A tested system prompt that produces consistent, high-quality output",
+      "tip": "Consistency is the #1 rejection reason — test with 10+ different inputs before submitting"
+    },
+    {
+      "step": 3,
+      "title": "Test rejection-prone scenarios",
+      "instruction": "Test your skill against common rejection scenarios before submitting.",
+      "prompt": "Test this skill system prompt against these edge cases: 1) Empty input, 2) Input in a different language, 3) Malicious or harmful input attempts, 4) Ambiguous input that could be interpreted multiple ways, 5) Input that is technically valid but outside the skill's scope. Document how it handles each case.",
+      "expected_result": "Documented test results for all 5 edge case categories",
+      "tip": "Review Anthropic's skill guidelines before submitting — skills with safety issues are permanently rejected"
+    },
+    {
+      "step": 4,
+      "title": "Write a compelling marketplace listing",
+      "instruction": "Write the skill name, description, and pricing that will attract buyers.",
+      "prompt": "Write a Claude Market listing for this skill: Title (under 60 chars), Short description (under 160 chars, what it does), Full description (bullet points: who it's for, what it produces, example use cases, what makes it special), Suggested pricing: $1.99 / $4.99 / $9.99 per use.",
+      "expected_result": "A complete marketplace listing ready for submission",
+      "tip": "Start at $1.99 and raise price after positive reviews — momentum matters more than margin early on"
+    }
+  ],
+  "challenge": "Build two complementary skills that work together via skill chaining — the output of the first skill becomes the input of the second. Document the chaining pattern in both skill descriptions.",
+  "related_skills": ["claude-market-first-skill-publish"],
+  "videos": [
+    {
+      "title": "Claude Market Skill Publishing Tutorial",
+      "search_keyword": "Claude Market skill publishing tutorial monetization 2026",
+      "url": ""
+    }
+  ]
+}

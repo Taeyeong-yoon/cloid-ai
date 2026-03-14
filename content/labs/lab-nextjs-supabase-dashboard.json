@@ -1,0 +1,51 @@
+{
+  "id": "lab-nextjs-supabase-dashboard",
+  "title": "[Full Stack] Next.js 15 + Supabase Real-Time Usage Dashboard",
+  "description": "Build a real-time usage analytics dashboard using Next.js 15 App Router and Supabase — covering SSR data fetching, real-time subscriptions, and row-level security.",
+  "difficulty": "advanced",
+  "duration": "3 hours",
+  "tags": ["Next.js", "Supabase", "Dashboard", "Full Stack"],
+  "steps": [
+    {
+      "step": 1,
+      "title": "Set up Next.js 15 + Supabase project",
+      "instruction": "Create a new Next.js 15 project with Supabase integration.",
+      "prompt": "Create a new Next.js 15 project with TypeScript, Tailwind CSS, and Supabase integration. Include: Supabase client setup for both server and client components, environment variable configuration, and a basic layout with auth context.",
+      "expected_result": "A running Next.js 15 app with Supabase client configured for both SSR and client-side use",
+      "tip": "Use `npx create-next-app@latest` and select TypeScript + Tailwind. Then install `@supabase/ssr` for Next.js 15 compatibility."
+    },
+    {
+      "step": 2,
+      "title": "Create the Supabase schema",
+      "instruction": "Design and create the database schema for the usage analytics dashboard.",
+      "prompt": "Create a Supabase migration for a usage analytics table that tracks: user_id, event_type (page_view, feature_used, api_call), metadata (JSONB), timestamp, and session_id. Include indexes for fast queries and RLS policies.",
+      "expected_result": "A Supabase migration file that creates the analytics table with proper indexes and RLS",
+      "tip": "JSONB for metadata allows flexible event tracking without schema changes for new event types"
+    },
+    {
+      "step": 3,
+      "title": "Build SSR dashboard page",
+      "instruction": "Create the main dashboard page using Next.js 15 Server Components to fetch and display usage data.",
+      "prompt": "Build a Next.js 15 Server Component dashboard page that: fetches today's usage stats from Supabase (total events, unique users, most used features), displays them in stat cards, and shows a table of the last 10 events. Use Tailwind for styling.",
+      "expected_result": "A server-rendered dashboard page showing live usage statistics",
+      "tip": "Use `createServerClient` from `@supabase/ssr` in Server Components — never use the browser client on the server"
+    },
+    {
+      "step": 4,
+      "title": "Add real-time updates",
+      "instruction": "Add a client component that subscribes to Supabase real-time and updates the dashboard live.",
+      "prompt": "Create a Next.js 15 Client Component that subscribes to the analytics table using Supabase real-time. When a new event arrives, update a live counter and add it to a recent events list without page refresh.",
+      "expected_result": "The dashboard updates in real-time as new events are recorded, without page reloads",
+      "tip": "Wrap the real-time component in a Suspense boundary so SSR content loads first"
+    }
+  ],
+  "challenge": "Add authentication so users can only see their own usage data. Implement a shareable public dashboard URL using a signed URL pattern that grants read-only access to specific data.",
+  "related_skills": ["claude-code-supabase-memory"],
+  "videos": [
+    {
+      "title": "Next.js 15 Supabase Real-Time Dashboard Tutorial",
+      "search_keyword": "Next.js 15 Supabase real-time dashboard tutorial 2026",
+      "url": ""
+    }
+  ]
+}

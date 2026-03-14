@@ -1,0 +1,33 @@
+{
+  "id": "claude-code-headless-repository-automation",
+  "title": "Claude Code Headless: Automating Repository Tasks Without UI",
+  "description": "Use Claude Code in headless (non-interactive) mode to automate repository tasks like PR creation, changelog generation, and code reviews in CI/CD pipelines.",
+  "level": "advanced",
+  "tags": ["Claude Code", "Headless", "Automation"],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Claude Code Headless Mode",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference",
+      "description": "CLI flags for running Claude Code non-interactively with --print and --no-interactive options"
+    },
+    {
+      "type": "doc",
+      "title": "Claude Code GitHub Actions Integration",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/github-actions",
+      "description": "Setting up Claude Code in GitHub Actions for automated code review and PR workflows"
+    },
+    {
+      "type": "practice",
+      "title": "Run Claude Code headless in a shell script",
+      "description": "Use Claude Code's --print flag to automate a changelog generation task",
+      "command": "claude --print 'Read the git log for the last 7 days and generate a CHANGELOG.md entry in Keep a Changelog format' > CHANGELOG_DRAFT.md"
+    },
+    {
+      "type": "video",
+      "title": "Claude Code CI/CD Automation Tutorial",
+      "search_keyword": "Claude Code headless automation CI CD GitHub Actions 2026",
+      "url": ""
+    }
+  ]
+}
