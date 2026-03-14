@@ -1,10 +1,64 @@
 "use client";
 
-import { useState, useCallback } from "react";
-import { Code2, Eye, Download, X, Copy, Check, Maximize2, Minimize2 } from "lucide-react";
+import { useState, useCallback, useEffect } from "react";
+import { Code2, Eye, Download, X, Copy, Check, Maximize2, Minimize2, AlertTriangle } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 type TabType = "html" | "css" | "js";
+
+// ── 문법 검증 함수 ───────────────────────────────────────────
+
+function validateHTML(code: string): string | null {
+  if (!code.trim()) return null;
+  try {
+    const selfClosing = new Set([
+      "area","base","br","col","embed","hr","img","input",
+      "link","meta","param","source","track","wbr",
+    ]);
+    const openTags = code.match(/<([a-zA-Z][a-zA-Z0-9]*)\b[^>]*(?<!\/)>/g) || [];
+    const closeTags = code.match(/<\/([a-zA-Z][a-zA-Z0-9]*)\s*>/g) || [];
+    const stack: string[] = [];
+    for (const tag of openTags) {
+      const name = tag.match(/<([a-zA-Z][a-zA-Z0-9]*)/)?.[1]?.toLowerCase();
+      if (name && !selfClosing.has(name)) stack.push(name);
+    }
+    for (const tag of closeTags) {
+      const name = tag.match(/<\/([a-zA-Z][a-zA-Z0-9]*)/)?.[1]?.toLowerCase();
+      if (name) {
+        const idx = stack.lastIndexOf(name);
+        if (idx !== -1) stack.splice(idx, 1);
+      }
+    }
+    if (stack.length > 0) return `Unclosed tag(s): <${stack.join(">, <")}>`;
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+function validateCSS(code: string): string | null {
+  if (!code.trim()) return null;
+  try {
+    const opens = (code.match(/{/g) || []).length;
+    const closes = (code.match(/}/g) || []).length;
+    if (opens !== closes) return `Mismatched braces: ${opens} opening, ${closes} closing`;
+    return null;
+  } catch (e) {
+    return (e as Error).message?.slice(0, 120) || "CSS syntax error";
+  }
+}
+
+function validateJS(code: string): string | null {
+  if (!code.trim()) return null;
+  try {
+    new Function(code);
+    return null;
+  } catch (e) {
+    return (e as SyntaxError).message?.slice(0, 120) || "JavaScript syntax error";
+  }
+}
+
+// ── 컴포넌트 ─────────────────────────────────────────────────
 
 export default function HTMLPreview() {
   const { t } = useTranslation();
@@ -15,6 +69,7 @@ export default function HTMLPreview() {
   const [preview, setPreview] = useState("");
   const [copied, setCopied] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
+  const [syntaxError, setSyntaxError] = useState<string | null>(null);
 
   const currentCode = activeTab === "html" ? html : activeTab === "css" ? css : js;
   const setCurrentCode = activeTab === "html" ? setHtml : activeTab === "css" ? setCss : setJs;
@@ -24,6 +79,18 @@ export default function HTMLPreview() {
       : activeTab === "css"
         ? t.labs.css_input_aria
         : t.labs.js_input_aria;
+
+  // 문법 오류 디바운스 검증
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      let error: string | null = null;
+      if (activeTab === "html") error = validateHTML(html);
+      else if (activeTab === "css") error = validateCSS(css);
+      else error = validateJS(js);
+      setSyntaxError(error);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [html, css, js, activeTab]);
 
   const buildDocument = useCallback(() => {
     return `<!DOCTYPE html>
@@ -71,6 +138,7 @@ ${html}
     setCss("");
     setJs("");
     setPreview("");
+    setSyntaxError(null);
   }, []);
 
   const handlePaste = useCallback((e: React.ClipboardEvent<HTMLTextAreaElement>) => {
@@ -91,9 +159,10 @@ ${html}
       {fullscreen && (
         <div className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm" onClick={() => setFullscreen(false)} />
       )}
+      {/* (A) fullscreen 시 flex flex-col 추가 */}
       <div className={`rounded-xl border border-amber-800/40 overflow-hidden transition-all ${
         fullscreen
-          ? "fixed inset-4 z-50 shadow-2xl border-amber-600/60 bg-[#0f1117]"
+          ? "fixed inset-4 z-50 shadow-2xl border-amber-600/60 bg-[#0f1117] flex flex-col"
           : "bg-gradient-to-br from-amber-950/20 to-slate-900/60"
       }`}>
         <div className="flex items-center justify-between px-4 py-2.5 border-b border-amber-800/30 bg-amber-950/20">
@@ -114,9 +183,17 @@ ${html}
           </button>
         </div>
 
-        <div className="p-4">
-          <div className={`grid gap-3 ${fullscreen ? "grid-cols-2" : "grid-cols-1 lg:grid-cols-2"}`}>
-            <div className="flex flex-col gap-2">
+        {/* (B) fullscreen 시 flex-1 flex flex-col */}
+        <div className={`p-4 ${fullscreen ? "flex-1 flex flex-col min-h-0 overflow-hidden" : ""}`}>
+          {/* (C) fullscreen 시 flex-1 min-h-0 */}
+          <div className={`grid gap-3 ${
+            fullscreen
+              ? "grid-cols-2 flex-1 min-h-0"
+              : "grid-cols-1 lg:grid-cols-2"
+          }`}>
+            {/* 좌: 코드 입력 */}
+            {/* (D) fullscreen 시 min-h-0 */}
+            <div className={`flex flex-col gap-2 ${fullscreen ? "min-h-0" : ""}`}>
               <div className="flex items-center justify-between">
                 <div className="flex gap-1">
                   {tabs.map((tab) => (
@@ -154,6 +231,7 @@ ${html}
                 </div>
               </div>
 
+              {/* (E) fullscreen 시 flex-1 min-h-0 */}
               <textarea
                 value={currentCode}
                 onChange={(e) => setCurrentCode(e.target.value)}
@@ -162,9 +240,17 @@ ${html}
                 aria-label={inputAriaLabel}
                 className={`w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-xs font-mono placeholder-slate-700 focus:outline-none focus:border-amber-500 transition-colors resize-none ${
                   activeTab === "html" ? "text-emerald-300" : activeTab === "css" ? "text-blue-300" : "text-yellow-300"
-                } ${fullscreen ? "h-[calc(100%-120px)]" : "h-36 sm:h-48"}`}
+                } ${fullscreen ? "flex-1 min-h-0" : "h-36 sm:h-48"}`}
                 spellCheck={false}
               />
+
+              {/* 문법 오류 표시 */}
+              {syntaxError && (
+                <div className="flex items-start gap-2 px-3 py-2 rounded-lg bg-red-950/40 border border-red-800/50 text-red-400 text-xs animate-fade-in-up">
+                  <AlertTriangle size={14} className="shrink-0 mt-0.5 text-red-500" />
+                  <span className="break-all leading-relaxed">{syntaxError}</span>
+                </div>
+              )}
 
               <div className="flex gap-2">
                 <button
@@ -200,7 +286,9 @@ ${html}
               </div>
             </div>
 
-            <div className="flex flex-col gap-2">
+            {/* 우: 프리뷰 */}
+            {/* (F) fullscreen 시 min-h-0 */}
+            <div className={`flex flex-col gap-2 ${fullscreen ? "min-h-0" : ""}`}>
               <div className="flex items-center justify-between">
                 <span className="text-xs text-slate-400 font-medium flex items-center gap-1.5">
                   <Eye size={11} /> {t.labs.live_preview}
@@ -221,12 +309,12 @@ ${html}
                   sandbox="allow-scripts"
                   title={t.labs.code_preview_title}
                   className={`w-full rounded-lg border border-slate-600 bg-white ${
-                    fullscreen ? "h-[calc(100%-60px)]" : "h-36 sm:h-48"
+                    fullscreen ? "flex-1 min-h-0" : "h-36 sm:h-48"
                   }`}
                 />
               ) : (
                 <div className={`w-full rounded-lg border border-dashed border-slate-700 bg-slate-950/50 flex flex-col items-center justify-center gap-2 ${
-                  fullscreen ? "h-[calc(100%-60px)]" : "h-36 sm:h-48"
+                  fullscreen ? "flex-1 min-h-0" : "h-36 sm:h-48"
                 }`}>
                   <Eye size={24} className="text-slate-700" />
                   <p className="text-xs text-slate-600 text-center px-4">{t.labs.preview_empty_hint}</p>
@@ -235,7 +323,8 @@ ${html}
             </div>
           </div>
 
-          <p className="mt-3 text-[10px] text-slate-600">{t.labs.preview_footer}</p>
+          {/* (G) fullscreen 시 여백 축소 */}
+          <p className={`text-[10px] text-slate-600 ${fullscreen ? "mt-1" : "mt-3"}`}>{t.labs.preview_footer}</p>
         </div>
       </div>
     </>

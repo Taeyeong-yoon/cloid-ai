@@ -16,6 +16,7 @@ import {
 import type { LabItem, LabVideo } from "@/lib/types";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 import HTMLPreview from "@/components/HTMLPreview";
+import PythonPreview from "@/components/PythonPreview";
 
 const difficultyColor: Record<string, string> = {
   beginner: "text-emerald-400 bg-emerald-900/30 border-emerald-700/50",
@@ -261,9 +262,14 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
       </div>
       <p className="text-slate-400 text-sm mb-6">{t.labs.desc}</p>
 
-      {/* ── HTML 코드 미리보기 도구 (고정 최상단) ── */}
-      <div className="mb-8">
+      {/* ── HTML 코드 미리보기 도구 ── */}
+      <div className="mb-4">
         <HTMLPreview />
+      </div>
+
+      {/* ── Python 미리보기 도구 ── */}
+      <div className="mb-8">
+        <PythonPreview />
       </div>
 
       {/* difficulty별 아코디언 */}

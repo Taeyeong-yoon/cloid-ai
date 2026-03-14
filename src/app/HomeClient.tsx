@@ -19,7 +19,6 @@ import AskAI from "@/components/AskAI";
 import HeroVisual from "@/components/HeroVisual";
 import DifficultyBadge from "@/components/DifficultyBadge";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
-import { useAuth } from "@/lib/auth/AuthContext";
 import { AI_TOOLS, POPULAR_TAGS } from "@/constants/home";
 
 // ── 주제 태그 컴포넌트 ───────────────────────────────────────
@@ -57,24 +56,13 @@ export default function HomeClient({
   contentCounts: ContentCounts;
 }) {
   const { t } = useTranslation();
-  const { user, openLoginModal } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
 
+  // searchParams 사용 유지 (라우팅 목적)
   useEffect(() => {
-    if (searchParams.get("auth") === "required") {
-      openLoginModal();
-    }
-  }, [searchParams, openLoginModal]);
-
-  function handleGuardedClick(e: React.MouseEvent, href: string) {
-    e.preventDefault();
-    if (!user) {
-      openLoginModal();
-    } else {
-      router.push(href);
-    }
-  }
+    void searchParams;
+  }, [searchParams]);
 
   function handleTagClick(tag: string) {
     router.push(`/learning?q=${encodeURIComponent(tag)}`);
@@ -193,7 +181,6 @@ export default function HomeClient({
             </Link>
             <Link
               href="/skills?level=intermediate"
-              onClick={(e) => handleGuardedClick(e, "/skills?level=intermediate")}
               data-event="cta_level_intermediate"
               className="flex items-center gap-3 p-3 rounded-lg border border-slate-700 hover:border-amber-700 hover:bg-amber-900/10 transition-all group"
             >
@@ -207,7 +194,6 @@ export default function HomeClient({
             </Link>
             <Link
               href="/labs?level=advanced"
-              onClick={(e) => handleGuardedClick(e, "/labs?level=advanced")}
               data-event="cta_level_advanced"
               className="flex items-center gap-3 p-3 rounded-lg border border-slate-700 hover:border-violet-700 hover:bg-violet-900/10 transition-all group"
             >
@@ -307,7 +293,6 @@ export default function HomeClient({
             {todayUpdate.lab && (
               <Link
                 href="/labs"
-                onClick={(e) => handleGuardedClick(e, "/labs")}
                 data-event="cta_today_lab"
                 className="group flex flex-col gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-violet-700 hover:bg-slate-800/50 transition-all card-glow"
               >
@@ -349,11 +334,10 @@ export default function HomeClient({
 
         {/* 4단계 흐름 */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
-          {journey.map(({ step, href, label, icon: Icon, color, border, desc, cta, event, guard }, idx) => (
+          {journey.map(({ step, href, label, icon: Icon, color, border, desc, cta, event }, idx) => (
             <div key={href} className="flex flex-col sm:flex-row md:flex-col items-stretch gap-2">
               <Link
                 href={href}
-                onClick={guard ? (e) => handleGuardedClick(e, href) : undefined}
                 data-event={event}
                 className={`group flex flex-col gap-2 p-3 sm:p-4 rounded-xl border border-slate-800 bg-slate-900/50 ${border} hover:bg-slate-800/50 transition-all cursor-pointer flex-1 card-glow`}
               >
@@ -399,122 +383,42 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* ── 5+6. 로그인/이어보기 + AI 도구 바로가기 (나란히) ── */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
-
-        {/* 왼쪽: 로그인 유도 / 이어보기 */}
-        {!user ? (
-          <section className="rounded-xl border border-slate-700 bg-slate-900/50 p-4 h-full">
-            <p className="text-sm font-semibold text-white mb-2">
-              🎯 {t.home.login_banner_title}
-            </p>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-1 mb-3">
-              {[
-                t.home.login_banner_feat1,
-                t.home.login_banner_feat2,
-                t.home.login_banner_feat3,
-                t.home.login_banner_feat4,
-              ].map((feat) => (
-                <span key={feat} className="text-xs text-slate-400 flex items-center gap-1">
-                  <span className="text-green-400">✅</span> {feat}
+      {/* ── AI 도구 바로가기 ── */}
+      <section className="rounded-xl border border-slate-700 bg-slate-900/50 p-4">
+        <h2 className="flex items-center gap-2 mb-3">
+          <span className="flex items-center justify-center w-5 h-5 rounded-md bg-blue-900/40 border border-blue-800/60">
+            <ExternalLink size={11} className="text-blue-400" />
+          </span>
+          <span className="text-sm font-bold text-white tracking-tight">{t.home.ai_tools_heading}</span>
+        </h2>
+        <div className="grid grid-cols-4 gap-2">
+          {AI_TOOLS.map((tool) => (
+            <div key={tool.name} className="flex flex-col items-center gap-0.5">
+              <a
+                href={tool.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center gap-1 p-2 rounded-xl border border-slate-800 hover:border-slate-600 bg-slate-900/40 hover:bg-slate-800/60 transition-all w-full"
+                title={tool.desc}
+              >
+                <div className={`w-7 h-7 rounded-lg ${tool.bg} flex items-center justify-center text-white shadow-sm transition-transform group-hover:scale-110 duration-200`}>
+                  {tool.icon}
+                </div>
+                <span className="text-[10px] text-slate-400 group-hover:text-white transition-colors text-center leading-tight">
+                  {tool.name}
                 </span>
-              ))}
-            </div>
-            <div className="flex items-center gap-3">
-              <button
-                onClick={openLoginModal}
-                data-event="cta_login_banner_signup"
-                className="px-4 py-2 bg-violet-600 hover:bg-violet-500 text-white text-sm font-medium rounded-lg transition-colors"
+              </a>
+              <Link
+                href="/learning"
+                data-event={`cta_learn_tool_${tool.learnTag}`}
+                className="text-[9px] text-violet-500 hover:text-violet-300 transition-colors hover:underline"
               >
-                {t.home.login_banner_cta} →
-              </button>
-              <button
-                onClick={openLoginModal}
-                data-event="cta_login_banner_login"
-                className="text-xs text-slate-400 hover:text-slate-200 transition-colors"
-              >
-                {t.home.login_banner_have_account} <button onClick={openLoginModal} className="text-violet-400 hover:underline">{t.common.login}</button>
-              </button>
+                {t.home.learn_tool}
+              </Link>
             </div>
-          </section>
-        ) : (
-          <section className="rounded-xl border border-slate-700 bg-slate-900/50 p-4 h-full">
-            <p className="text-sm font-semibold text-white mb-3">👋 {t.home.welcome_back}</p>
-            <div className="space-y-2">
-              <div className="flex items-center justify-between p-3 rounded-lg bg-slate-800/50 border border-slate-700">
-                <div className="flex items-center gap-2 min-w-0">
-                  <BookOpen size={14} className="text-blue-400 shrink-0" />
-                  <span className="text-xs text-slate-400 shrink-0">{t.home.continue_reading}:</span>
-                  <span className="text-xs text-slate-200 truncate">
-                    {todayUpdate.learning?.title ?? t.home.no_content_yet}
-                  </span>
-                </div>
-                <Link
-                  href="/learning"
-                  data-event="cta_welcome_continue_reading"
-                  className="text-xs text-violet-400 hover:text-violet-300 hover:underline transition-colors shrink-0 ml-2"
-                >
-                  {t.home.continue_btn} →
-                </Link>
-              </div>
-              <div className="flex items-center justify-between p-3 rounded-lg bg-slate-800/50 border border-slate-700">
-                <div className="flex items-center gap-2 min-w-0">
-                  <FlaskConical size={14} className="text-violet-400 shrink-0" />
-                  <span className="text-xs text-slate-400 shrink-0">{t.home.continue_lab}:</span>
-                  <span className="text-xs text-slate-200 truncate">
-                    {todayUpdate.lab?.title ?? t.home.no_content_yet}
-                  </span>
-                </div>
-                <Link
-                  href="/labs"
-                  data-event="cta_welcome_continue_lab"
-                  className="text-xs text-violet-400 hover:text-violet-300 hover:underline transition-colors shrink-0 ml-2"
-                >
-                  {t.home.continue_btn} →
-                </Link>
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* 오른쪽: AI 도구 바로가기 (4열 2행) */}
-        <section className="rounded-xl border border-slate-700 bg-slate-900/50 p-4">
-          <h2 className="flex items-center gap-2 mb-3">
-            <span className="flex items-center justify-center w-5 h-5 rounded-md bg-blue-900/40 border border-blue-800/60">
-              <ExternalLink size={11} className="text-blue-400" />
-            </span>
-            <span className="text-sm font-bold text-white tracking-tight">{t.home.ai_tools_heading}</span>
-          </h2>
-          <div className="grid grid-cols-4 gap-2">
-            {AI_TOOLS.map((tool) => (
-              <div key={tool.name} className="flex flex-col items-center gap-0.5">
-                <a
-                  href={tool.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex flex-col items-center gap-1 p-2 rounded-xl border border-slate-800 hover:border-slate-600 bg-slate-900/40 hover:bg-slate-800/60 transition-all w-full"
-                  title={tool.desc}
-                >
-                  <div className={`w-7 h-7 rounded-lg ${tool.bg} flex items-center justify-center text-white shadow-sm transition-transform group-hover:scale-110 duration-200`}>
-                    {tool.icon}
-                  </div>
-                  <span className="text-[10px] text-slate-400 group-hover:text-white transition-colors text-center leading-tight">
-                    {tool.name}
-                  </span>
-                </a>
-                <Link
-                  href="/learning"
-                  data-event={`cta_learn_tool_${tool.learnTag}`}
-                  className="text-[9px] text-violet-500 hover:text-violet-300 transition-colors hover:underline"
-                >
-                  {t.home.learn_tool}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </section>
-
-      </div>
+          ))}
+        </div>
+      </section>
 
 
     </div>
