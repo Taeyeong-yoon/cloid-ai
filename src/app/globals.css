@@ -188,3 +188,462 @@ button:active:not(:disabled) {
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
+
+.journey-card {
+  min-height: 100%;
+}
+
+.journey-card-hero {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.journey-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.1rem 1.1rem 1.2rem;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.18), rgba(2, 6, 23, 0.46)),
+    rgba(2, 6, 23, 0.55);
+}
+
+.journey-card-step,
+.journey-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border-width: 1px;
+}
+
+.journey-card-step {
+  min-width: 2.5rem;
+  padding: 0.32rem 0.6rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #e2e8f0;
+}
+
+.journey-card-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.journey-hero {
+  position: absolute;
+  inset: 0;
+}
+
+.journey-hero-surface {
+  background-color: rgba(15, 23, 42, 0.92);
+}
+
+.journey-hero-surface-radar {
+  background:
+    radial-gradient(circle at 28% 32%, rgba(16, 185, 129, 0.18), transparent 32%),
+    radial-gradient(circle at 78% 26%, rgba(34, 211, 238, 0.16), transparent 28%),
+    linear-gradient(180deg, rgba(6, 11, 27, 0.7), rgba(5, 10, 20, 0.98));
+}
+
+.journey-hero-surface-learning {
+  background:
+    radial-gradient(circle at 75% 22%, rgba(56, 189, 248, 0.16), transparent 28%),
+    radial-gradient(circle at 24% 72%, rgba(129, 140, 248, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(7, 14, 32, 0.72), rgba(5, 10, 22, 0.98));
+}
+
+.journey-hero-surface-skills {
+  background:
+    radial-gradient(circle at 24% 30%, rgba(245, 158, 11, 0.2), transparent 30%),
+    radial-gradient(circle at 80% 26%, rgba(96, 165, 250, 0.14), transparent 26%),
+    linear-gradient(180deg, rgba(18, 12, 30, 0.72), rgba(11, 9, 18, 0.98));
+}
+
+.journey-hero-surface-labs {
+  background:
+    radial-gradient(circle at 24% 18%, rgba(217, 70, 239, 0.18), transparent 28%),
+    radial-gradient(circle at 78% 74%, rgba(45, 212, 191, 0.14), transparent 30%),
+    linear-gradient(180deg, rgba(17, 10, 30, 0.74), rgba(10, 6, 20, 0.98));
+}
+
+.journey-radar-grid,
+.journey-learning-map,
+.journey-lab-grid {
+  position: absolute;
+  inset: 1rem;
+  border-radius: 1.2rem;
+  opacity: 0.35;
+}
+
+.journey-radar-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.journey-radar-ring,
+.journey-radar-sweep {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+}
+
+.journey-radar-ring {
+  border: 1px solid rgba(94, 234, 212, 0.18);
+}
+
+.journey-radar-ring-1 {
+  width: 84px;
+  height: 84px;
+}
+
+.journey-radar-ring-2 {
+  width: 148px;
+  height: 148px;
+}
+
+.journey-radar-ring-3 {
+  width: 214px;
+  height: 214px;
+}
+
+.journey-radar-sweep {
+  width: 214px;
+  height: 214px;
+  background: conic-gradient(from 15deg, rgba(45, 212, 191, 0.22), transparent 22%, transparent 100%);
+  filter: blur(0.5px);
+  animation: journey-sweep 6s linear infinite;
+}
+
+.journey-radar-node,
+.journey-learning-node,
+.journey-lab-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.journey-radar-node {
+  background: #5eead4;
+  box-shadow: 0 0 0 6px rgba(45, 212, 191, 0.08), 0 0 18px rgba(45, 212, 191, 0.28);
+}
+
+.journey-radar-node-1 {
+  left: 24%;
+  top: 38%;
+}
+
+.journey-radar-node-2 {
+  right: 26%;
+  top: 28%;
+}
+
+.journey-radar-node-3 {
+  right: 31%;
+  bottom: 24%;
+}
+
+.journey-learning-map {
+  background-image:
+    linear-gradient(125deg, rgba(125, 211, 252, 0.16), rgba(125, 211, 252, 0) 34%),
+    linear-gradient(180deg, rgba(59, 130, 246, 0.08), transparent);
+}
+
+.journey-learning-map::before,
+.journey-learning-map::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, rgba(125, 211, 252, 0.18), rgba(167, 139, 250, 0.2));
+}
+
+.journey-learning-map::before {
+  left: 22%;
+  top: 37%;
+  width: 52%;
+  height: 1px;
+}
+
+.journey-learning-map::after {
+  left: 50%;
+  top: 26%;
+  width: 1px;
+  height: 48%;
+}
+
+.journey-learning-panel {
+  position: absolute;
+  border: 1px solid rgba(125, 211, 252, 0.12);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.6), rgba(30, 41, 59, 0.28));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+}
+
+.journey-learning-panel-1 {
+  left: 13%;
+  top: 20%;
+  width: 92px;
+  height: 54px;
+  border-radius: 18px;
+}
+
+.journey-learning-panel-2 {
+  right: 12%;
+  top: 22%;
+  width: 84px;
+  height: 48px;
+  border-radius: 16px;
+}
+
+.journey-learning-panel-3 {
+  left: 34%;
+  bottom: 17%;
+  width: 118px;
+  height: 56px;
+  border-radius: 18px;
+}
+
+.journey-learning-node {
+  background: #7dd3fc;
+  box-shadow: 0 0 18px rgba(125, 211, 252, 0.28);
+}
+
+.journey-learning-node-a {
+  left: 18%;
+  top: 44%;
+}
+
+.journey-learning-node-b {
+  left: 47%;
+  top: 24%;
+}
+
+.journey-learning-node-c {
+  right: 17%;
+  top: 45%;
+}
+
+.journey-learning-node-d {
+  left: 47%;
+  bottom: 18%;
+}
+
+.journey-skills-lane {
+  position: absolute;
+  left: 11%;
+  right: 11%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0), rgba(245, 158, 11, 0.24), rgba(96, 165, 250, 0));
+}
+
+.journey-skills-lane-1 {
+  top: 34%;
+}
+
+.journey-skills-lane-2 {
+  top: 63%;
+}
+
+.journey-skill-tile,
+.journey-skill-chip,
+.journey-lab-window {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.journey-skill-tile {
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(38, 38, 48, 0.8), rgba(17, 24, 39, 0.45));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.journey-skill-tile-a {
+  left: 12%;
+  top: 18%;
+  width: 84px;
+  height: 84px;
+}
+
+.journey-skill-tile-b {
+  left: 42%;
+  top: 32%;
+  width: 96px;
+  height: 62px;
+}
+
+.journey-skill-tile-c {
+  right: 10%;
+  bottom: 18%;
+  width: 90px;
+  height: 72px;
+}
+
+.journey-skill-chip {
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.12);
+  box-shadow: 0 0 18px rgba(245, 158, 11, 0.08);
+}
+
+.journey-skill-chip-1 {
+  left: 18%;
+  top: 58%;
+  width: 64px;
+  height: 20px;
+}
+
+.journey-skill-chip-2 {
+  right: 22%;
+  top: 18%;
+  width: 48px;
+  height: 20px;
+}
+
+.journey-skill-chip-3 {
+  right: 13%;
+  top: 50%;
+  width: 58px;
+  height: 20px;
+}
+
+.journey-lab-grid {
+  background-image:
+    linear-gradient(rgba(217, 70, 239, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(217, 70, 239, 0.08) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.journey-lab-window {
+  background: linear-gradient(180deg, rgba(24, 24, 39, 0.78), rgba(24, 24, 39, 0.32));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.journey-lab-window::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 34px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(226, 232, 240, 0.18);
+}
+
+.journey-lab-window-1 {
+  left: 12%;
+  top: 19%;
+  width: 120px;
+  height: 72px;
+  border-radius: 18px;
+}
+
+.journey-lab-window-2 {
+  right: 12%;
+  top: 30%;
+  width: 92px;
+  height: 62px;
+  border-radius: 18px;
+}
+
+.journey-lab-window-3 {
+  left: 30%;
+  bottom: 14%;
+  width: 132px;
+  height: 68px;
+  border-radius: 18px;
+}
+
+.journey-lab-signal {
+  position: absolute;
+  left: 19%;
+  right: 19%;
+  bottom: 24%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(45, 212, 191, 0), rgba(45, 212, 191, 0.46), rgba(217, 70, 239, 0));
+  box-shadow: 0 0 20px rgba(217, 70, 239, 0.16);
+}
+
+.journey-lab-dot {
+  background: #e879f9;
+  box-shadow: 0 0 18px rgba(232, 121, 249, 0.25);
+}
+
+.journey-lab-dot-1 {
+  left: 24%;
+  bottom: 22%;
+}
+
+.journey-lab-dot-2 {
+  right: 24%;
+  bottom: 22%;
+}
+
+@keyframes journey-sweep {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .journey-card:hover .journey-learning-panel-1,
+  .journey-card:hover .journey-learning-panel-3 {
+    transform: translateY(-3px);
+  }
+
+  .journey-card:hover .journey-skill-chip {
+    transform: translateX(2px);
+    box-shadow: 0 0 24px rgba(245, 158, 11, 0.15);
+  }
+
+  .journey-card:hover .journey-lab-signal {
+    filter: brightness(1.2);
+  }
+
+  .journey-card:hover .journey-radar-node,
+  .journey-card:hover .journey-learning-node,
+  .journey-card:hover .journey-lab-dot {
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-radar-sweep {
+    animation: none;
+  }
+
+  .journey-card * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .journey-card-hero {
+    min-height: 170px;
+  }
+
+  .journey-card-content {
+    padding: 1rem;
+  }
+
+  .journey-learning-panel-3 {
+    left: 26%;
+    width: 102px;
+  }
+
+  .journey-lab-window-3 {
+    left: 25%;
+    width: 118px;
+  }
+}

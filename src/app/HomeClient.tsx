@@ -1,16 +1,18 @@
 "use client";
 
 import { useEffect } from "react";
+import type { ComponentType } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
-  BookOpen,
-  Zap,
-  FlaskConical,
   ArrowRight,
-  TrendingUp,
+  BookOpen,
   ExternalLink,
+  FlaskConical,
   Radio,
+  Sparkles,
+  TrendingUp,
+  Zap,
 } from "lucide-react";
 import AskAI from "@/components/AskAI";
 import HeroVisual from "@/components/HeroVisual";
@@ -28,6 +30,8 @@ function TopicTag({ tag, onClick }: { tag: string; onClick?: () => void }) {
   );
 }
 
+type JourneyCardKey = "radar" | "learning" | "skills" | "labs";
+
 interface TodayUpdateData {
   radar: { slug: string; title: string; summary: string; tags: string[] } | null;
   learning: { id: string; title: string; description: string; level: string; tags: string[] } | null;
@@ -39,6 +43,126 @@ interface ContentCounts {
   learning: number;
   labs: number;
   radar: number;
+}
+
+interface JourneyCardConfig {
+  key: JourneyCardKey;
+  step: string;
+  href: string;
+  label: string;
+  icon: ComponentType<{ size?: number; className?: string }>;
+  desc: string;
+  cta: string;
+  event: string;
+  accentText: string;
+  borderHover: string;
+  badgeClass: string;
+  heroClass: string;
+}
+
+function JourneyHero({ variant }: { variant: JourneyCardKey }) {
+  if (variant === "radar") {
+    return (
+      <div className="journey-hero journey-hero-radar">
+        <div className="journey-radar-grid" />
+        <div className="journey-radar-ring journey-radar-ring-1" />
+        <div className="journey-radar-ring journey-radar-ring-2" />
+        <div className="journey-radar-ring journey-radar-ring-3" />
+        <div className="journey-radar-sweep" />
+        <div className="journey-radar-node journey-radar-node-1" />
+        <div className="journey-radar-node journey-radar-node-2" />
+        <div className="journey-radar-node journey-radar-node-3" />
+      </div>
+    );
+  }
+
+  if (variant === "learning") {
+    return (
+      <div className="journey-hero journey-hero-learning">
+        <div className="journey-learning-map" />
+        <div className="journey-learning-panel journey-learning-panel-1" />
+        <div className="journey-learning-panel journey-learning-panel-2" />
+        <div className="journey-learning-panel journey-learning-panel-3" />
+        <div className="journey-learning-node journey-learning-node-a" />
+        <div className="journey-learning-node journey-learning-node-b" />
+        <div className="journey-learning-node journey-learning-node-c" />
+        <div className="journey-learning-node journey-learning-node-d" />
+      </div>
+    );
+  }
+
+  if (variant === "skills") {
+    return (
+      <div className="journey-hero journey-hero-skills">
+        <div className="journey-skills-lane journey-skills-lane-1" />
+        <div className="journey-skills-lane journey-skills-lane-2" />
+        <div className="journey-skill-tile journey-skill-tile-a" />
+        <div className="journey-skill-tile journey-skill-tile-b" />
+        <div className="journey-skill-tile journey-skill-tile-c" />
+        <div className="journey-skill-chip journey-skill-chip-1" />
+        <div className="journey-skill-chip journey-skill-chip-2" />
+        <div className="journey-skill-chip journey-skill-chip-3" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="journey-hero journey-hero-labs">
+      <div className="journey-lab-grid" />
+      <div className="journey-lab-window journey-lab-window-1" />
+      <div className="journey-lab-window journey-lab-window-2" />
+      <div className="journey-lab-window journey-lab-window-3" />
+      <div className="journey-lab-signal" />
+      <div className="journey-lab-dot journey-lab-dot-1" />
+      <div className="journey-lab-dot journey-lab-dot-2" />
+    </div>
+  );
+}
+
+function JourneyFeatureCard({
+  keyName,
+  step,
+  href,
+  label,
+  icon: Icon,
+  desc,
+  cta,
+  event,
+  accentText,
+  borderHover,
+  badgeClass,
+  heroClass,
+}: JourneyCardConfig & { keyName: JourneyCardKey }) {
+  return (
+    <Link
+      href={href}
+      data-event={event}
+      className={`journey-card group flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-slate-800/90 bg-slate-950/60 transition-all duration-300 ${borderHover}`}
+    >
+      <div className={`journey-card-hero ${heroClass}`}>
+        <JourneyHero variant={keyName} />
+      </div>
+      <div className="journey-card-content">
+        <div className="mb-3 flex items-center justify-between gap-3">
+          <span className={`journey-card-step ${badgeClass}`}>{step}</span>
+          <div className={`journey-card-icon ${badgeClass}`}>
+            <Icon size={17} className={accentText} />
+          </div>
+        </div>
+        <div className="space-y-2">
+          <h3 className="text-base font-semibold tracking-tight text-white">{label}</h3>
+          <p className="text-sm leading-6 text-slate-400">{desc}</p>
+        </div>
+        <div className="mt-5 flex items-center gap-2 text-sm font-medium">
+          <span className={accentText}>{cta}</span>
+          <ArrowRight
+            size={15}
+            className={`transition-transform duration-300 motion-safe:group-hover:translate-x-1 ${accentText}`}
+          />
+        </div>
+      </div>
+    </Link>
+  );
 }
 
 export default function HomeClient({
@@ -60,50 +184,62 @@ export default function HomeClient({
     router.push(`/learning?q=${encodeURIComponent(tag)}`);
   }
 
-  const journey = [
+  const journey: JourneyCardConfig[] = [
     {
+      key: "radar",
       step: "01",
       href: "/radar",
       label: t.home.radar_label,
       icon: Radio,
-      color: "text-emerald-400",
-      border: "hover:border-emerald-700",
       desc: t.home.journey_radar_desc,
-      cta: `${t.home.radar_label} ->`,
+      cta: t.home.radar_label,
       event: "cta_journey_radar",
+      accentText: "text-emerald-300",
+      borderHover: "hover:border-emerald-500/60 hover:shadow-[0_18px_48px_rgba(16,185,129,0.12)]",
+      badgeClass: "border-emerald-500/25 bg-emerald-500/10",
+      heroClass: "journey-hero-surface journey-hero-surface-radar",
     },
     {
+      key: "learning",
       step: "02",
       href: "/learning",
       label: t.home.learning_label,
       icon: BookOpen,
-      color: "text-blue-400",
-      border: "hover:border-blue-700",
       desc: t.home.journey_learning_desc,
-      cta: `${t.home.learning_label} ->`,
+      cta: t.home.learning_label,
       event: "cta_journey_learning",
+      accentText: "text-sky-300",
+      borderHover: "hover:border-sky-500/60 hover:shadow-[0_18px_48px_rgba(56,189,248,0.12)]",
+      badgeClass: "border-sky-500/25 bg-sky-500/10",
+      heroClass: "journey-hero-surface journey-hero-surface-learning",
     },
     {
+      key: "skills",
       step: "03",
       href: "/skills",
       label: t.home.skills_label,
       icon: Zap,
-      color: "text-amber-400",
-      border: "hover:border-amber-700",
       desc: t.home.journey_skills_desc,
-      cta: `${t.home.skills_label} ->`,
+      cta: t.home.skills_label,
       event: "cta_journey_skills",
+      accentText: "text-amber-300",
+      borderHover: "hover:border-amber-500/60 hover:shadow-[0_18px_48px_rgba(245,158,11,0.12)]",
+      badgeClass: "border-amber-500/25 bg-amber-500/10",
+      heroClass: "journey-hero-surface journey-hero-surface-skills",
     },
     {
+      key: "labs",
       step: "04",
       href: "/labs",
       label: t.home.labs_label,
       icon: FlaskConical,
-      color: "text-violet-400",
-      border: "hover:border-violet-700",
       desc: t.home.journey_labs_desc,
-      cta: `${t.home.labs_label} ->`,
+      cta: t.home.labs_label,
       event: "cta_journey_labs",
+      accentText: "text-fuchsia-300",
+      borderHover: "hover:border-fuchsia-500/60 hover:shadow-[0_18px_48px_rgba(217,70,239,0.12)]",
+      badgeClass: "border-fuchsia-500/25 bg-fuchsia-500/10",
+      heroClass: "journey-hero-surface journey-hero-surface-labs",
     },
   ];
 
@@ -146,40 +282,17 @@ export default function HomeClient({
         <div className="mb-4">
           <h2 className="mb-1 flex items-center gap-2">
             <span className="flex h-6 w-6 items-center justify-center rounded-md border border-violet-800/60 bg-violet-900/40 text-sm">
-              🗺️
+              <Sparkles size={13} className="text-violet-300" />
             </span>
             <span className="text-sm font-bold tracking-tight text-white">{t.home.journey_title}</span>
           </h2>
           <p className="ml-8 text-xs text-slate-500">{t.home.journey_subtitle}</p>
         </div>
 
-        <div className="mb-5 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {journey.map(({ step, href, label, icon: Icon, color, border, desc, cta, event }, idx) => (
-            <div key={href} className="flex flex-col items-stretch gap-2 sm:flex-row md:flex-col">
-              <Link
-                href={href}
-                data-event={event}
-                className={`card-glow group flex flex-1 cursor-pointer flex-col gap-2 rounded-xl border border-slate-800 bg-slate-900/50 p-3 transition-all hover:bg-slate-800/50 sm:p-4 ${border}`}
-              >
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-slate-500 transition-colors duration-200 group-hover:text-violet-400">
-                    {step}
-                  </span>
-                  <Icon size={18} className={color} />
-                </div>
-                <div>
-                  <div className="text-sm font-medium leading-snug text-white transition-colors group-hover:text-violet-300">
-                    {label}
-                  </div>
-                  <div className="mt-0.5 text-xs text-slate-500">{desc}</div>
-                </div>
-                <span className={`mt-auto text-xs ${color} group-hover:underline`}>{cta}</span>
-              </Link>
-              {idx < 3 && (
-                <div className="arrow-animate -mx-1 mt-8 hidden items-center justify-center text-slate-600 md:flex">
-                  <ArrowRight size={16} />
-                </div>
-              )}
+        <div className="journey-grid mb-5 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {journey.map((item) => (
+            <div key={item.href} className="h-full">
+              <JourneyFeatureCard keyName={item.key} {...item} />
             </div>
           ))}
         </div>
