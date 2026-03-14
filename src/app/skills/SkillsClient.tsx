@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import { Zap, Search, ArrowLeft, Copy, Check, X } from "lucide-react";
 import type { Skill } from "@/lib/types";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
@@ -178,7 +178,19 @@ function SkillCard({ skill, selected, onClick }: { skill: Skill; selected: boole
 }
 
 // ─── 상세 패널 ────────────────────────────────────────────────
-function SkillDetail({ skill, onClose }: { skill: Skill; onClose: () => void }) {
+// NAV_H: nav h-14 = 3.5rem = 56px, PANEL_GAP: 1rem gap below nav
+const NAV_H = 56;
+const PANEL_GAP = 16;
+
+function SkillDetail({
+  skill,
+  onClose,
+  stickyRef,
+}: {
+  skill: Skill;
+  onClose: () => void;
+  stickyRef?: React.RefObject<HTMLDivElement | null>;
+}) {
   const diff = DIFFICULTY_CONFIG.find((d) => d.key === skill.difficulty) ?? DIFFICULTY_CONFIG[1];
   const { t } = useTranslation();
   const diffLabel: Record<string, string> = { beginner: t.common.level_beginner, intermediate: t.common.level_intermediate, advanced: t.common.level_advanced };
@@ -188,7 +200,8 @@ function SkillDetail({ skill, onClose }: { skill: Skill; onClose: () => void }) 
 
   return (
     <div className="flex-1 min-w-0">
-      <div className="sticky top-4">
+      {/* sticky top: nav(3.5rem) + gap(1rem) = 4.5rem */}
+      <div ref={stickyRef} className="sticky top-[4.5rem]">
         <div className="rounded-2xl border border-slate-800 bg-slate-900/50 overflow-hidden">
           {/* 헤더 */}
           <div className="px-6 py-5 border-b border-slate-800 bg-slate-900/80">
@@ -216,8 +229,8 @@ function SkillDetail({ skill, onClose }: { skill: Skill; onClose: () => void }) 
             </div>
           </div>
 
-          {/* 본문 */}
-          <div className="px-6 py-5 max-h-[calc(100vh-220px)] overflow-y-auto">
+          {/* 본문: 패널 내부만 스크롤 (sticky top + 헤더 높이 확보) */}
+          <div className="px-6 py-5 max-h-[calc(100vh-14rem)] overflow-y-auto">
             <MarkdownContent raw={content} />
           </div>
         </div>
@@ -232,6 +245,28 @@ export default function SkillsClient({ skills }: { skills: Skill[] }) {
   const [query, setQuery] = useState("");
   const [difficulty, setDifficulty] = useState<DifficultyKey>("all");
   const [selected, setSelected] = useState<Skill | null>(null);
+  const detailRef = useRef<HTMLDivElement>(null);
+
+  // 카드 선택 시 상세 패널이 뷰포트 위에 있으면 nav 바로 아래로 스크롤
+  useEffect(() => {
+    if (!selected || typeof window === "undefined" || window.innerWidth < 768) return;
+
+    const frame = requestAnimationFrame(() => {
+      if (!detailRef.current) return;
+      const rect = detailRef.current.getBoundingClientRect();
+      // sticky가 아직 적용되지 않았거나 패널 상단이 nav 아래에 없는 경우
+      if (rect.top < NAV_H) {
+        const reduceMotion =
+          window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+        window.scrollTo({
+          top: window.scrollY + rect.top - NAV_H - PANEL_GAP,
+          behavior: reduceMotion ? "auto" : "smooth",
+        });
+      }
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [selected?.slug]);
 
   const counts = useMemo(() => ({
     all: skills.length,
@@ -343,8 +378,8 @@ export default function SkillsClient({ skills }: { skills: Skill[] }) {
               <SkillDetail skill={selected} onClose={() => setSelected(null)} />
             </div>
 
-            {/* 데스크톱: 사이드 패널 */}
-            <SkillDetail skill={selected} onClose={() => setSelected(null)} />
+            {/* 데스크톱: 사이드 패널 (sticky + auto-scroll) */}
+            <SkillDetail skill={selected} onClose={() => setSelected(null)} stickyRef={detailRef} />
           </>
         )}
       </div>
