@@ -30,9 +30,9 @@ const difficultyColor: Record<string, string> = {
 const difficultyOrder = ["beginner", "intermediate", "advanced"];
 
 const difficultyMeta: Record<string, { emoji: string; label: string }> = {
-  beginner: { emoji: "??", label: "ÀÔ¹®" },
-  intermediate: { emoji: "??", label: "Áß±Þ" },
-  advanced: { emoji: "??", label: "°í±Þ" },
+  beginner: { emoji: "ðŸŒ±", label: "ìž…ë¬¸" },
+  intermediate: { emoji: "ðŸ’¼", label: "ì¤‘ê¸‰" },
+  advanced: { emoji: "ðŸš€", label: "ê³ ê¸‰" },
 };
 
 function getYouTubeId(url: string): string | null {
@@ -311,7 +311,7 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
                   <span className="text-base">{meta.emoji}</span>
                   <span>{meta.label}</span>
                   <span className={`text-xs font-normal px-1.5 py-0.5 rounded border ${difficultyColor[difficulty]}`}>
-                    {diffLabs.length}°³
+                    {diffLabs.length}ê°œ
                   </span>
                 </span>
                 {isOpen ? (
