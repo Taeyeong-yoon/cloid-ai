@@ -5,6 +5,7 @@ import { BookOpen, FileText, Video, Terminal, ExternalLink, ArrowLeft, Search, C
 import type { LearningTopic, LearningResource } from "@/lib/types";
 import TagBadge from "@/components/TagBadge";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
+import InlineTutor from "@/components/InlineTutor";
 
 const levelColor: Record<string, string> = {
   beginner: "text-emerald-400 bg-emerald-900/30 border-emerald-700/50",
@@ -354,6 +355,7 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
           </div>
         )}
       </div>
+      <InlineTutor />
     </div>
   );
 }

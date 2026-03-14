@@ -17,6 +17,8 @@ import type { LabItem, LabVideo } from "@/lib/types";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 import HTMLPreview from "@/components/HTMLPreview";
 import PythonPreview from "@/components/PythonPreview";
+import StepChecklist, { type ChecklistStep } from "@/components/StepChecklist";
+import InlineTutor from "@/components/InlineTutor";
 
 const difficultyColor: Record<string, string> = {
   beginner: "text-emerald-400 bg-emerald-900/30 border-emerald-700/50",
@@ -156,6 +158,26 @@ function LabCard({ lab, index }: { lab: LabItem; index: number }) {
       {/* Expanded Steps */}
       {expanded && (
         <div className="border-t border-slate-800 p-5 space-y-4">
+          {/* 인터랙티브 체크리스트 */}
+          {lab.steps && lab.steps.length > 0 && (() => {
+            const checklistSteps: ChecklistStep[] = lab.steps.map((s) => ({
+              title: s.title,
+              description: s.instruction,
+              action: s.prompt ? s.prompt.slice(0, 200) + (s.prompt.length > 200 ? "..." : "") : undefined,
+              expectedResult: s.expected_result,
+              failureHint: s.tip,
+            }));
+            return (
+              <div className="mb-2">
+                <StepChecklist
+                  contentType="lab"
+                  contentId={lab.id}
+                  steps={checklistSteps}
+                />
+              </div>
+            );
+          })()}
+
           {lab.steps.map((step, i) => (
             <div key={i} className="relative pl-6">
               <div className="absolute left-0 top-0 w-5 h-5 rounded-full bg-slate-800 border border-slate-700 text-slate-400 text-xs flex items-center justify-center">
@@ -314,6 +336,7 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
           );
         })}
       </div>
+      <InlineTutor />
     </div>
   );
 }
