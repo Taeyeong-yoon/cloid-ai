@@ -206,11 +206,10 @@ function LabCard({
 
               {step.prompt && (
                 <div className="mb-2">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs text-slate-500 uppercase tracking-wider">{t.labs.prompt_label}</span>
+                  <div className="mb-1 flex flex-col items-start gap-2">
                     <button
                       onClick={() => copyPrompt(step.prompt!, i)}
-                      className="flex items-center gap-1 text-xs text-slate-500 hover:text-slate-300 transition-colors"
+                      className="flex items-center gap-1 rounded-md border border-slate-700 bg-slate-900 px-2 py-1 text-xs text-slate-400 transition-colors hover:border-slate-600 hover:text-slate-200"
                     >
                       {copiedIdx === i ? (
                         <><Check size={11} className="text-emerald-400" /> {t.common.copied}</>
@@ -218,6 +217,7 @@ function LabCard({
                         <><Copy size={11} /> {t.common.copy}</>
                       )}
                     </button>
+                    <span className="text-xs uppercase tracking-wider text-slate-500">{t.labs.prompt_label}</span>
                   </div>
                   <div className="bg-slate-950 border border-slate-800 rounded-lg px-3 py-2">
                     <code className="text-xs font-mono text-emerald-300 whitespace-pre-wrap break-words">

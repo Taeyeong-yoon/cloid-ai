@@ -134,6 +134,9 @@ export async function POST(req: NextRequest) {
             "Help the learner continue the current skill or lab immediately.",
             "If the user pastes a command, code snippet, or setup step, answer with the likely result, output, or behavior first.",
             "Only after that, add a short note about what it means or what to check next.",
+            "If the user asks you to make or write something such as an Excel format, worksheet, template, prompt, checklist, email, script, or table, generate the actual deliverable first.",
+            "In creation requests, do not spend the answer explaining how to ask better before showing the result.",
+            "When possible, structure the deliverable so the learner can copy it immediately.",
             "Prefer 3-5 short sentences or up to 4 short bullets.",
             "When useful, include one exact command, one code fragment, or one expected output line.",
             "Do not default to generic how-to advice if the user is clearly asking about the result of a command.",
@@ -152,8 +155,8 @@ export async function POST(req: NextRequest) {
 
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
-      max_tokens: mode === "tutor" ? 220 : 500,
-      temperature: mode === "tutor" ? 0.4 : 0.7,
+      max_tokens: mode === "tutor" ? 380 : 500,
+      temperature: mode === "tutor" ? 0.45 : 0.7,
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt },

@@ -197,16 +197,17 @@ export default function FloatingTutor({
 
   useEffect(() => {
     function handlePointerMove(event: PointerEvent) {
-      if (!dragStartRef.current) return;
+      const dragState = dragStartRef.current;
+      if (!dragState) return;
 
-      const dx = event.clientX - dragStartRef.current.pointerX;
-      const dy = event.clientY - dragStartRef.current.pointerY;
+      const dx = event.clientX - dragState.pointerX;
+      const dy = event.clientY - dragState.pointerY;
 
       setFrame((current) =>
         clampFrame({
           ...current,
-          x: dragStartRef.current!.originX + dx,
-          y: dragStartRef.current!.originY + dy,
+          x: dragState.originX + dx,
+          y: dragState.originY + dy,
         })
       );
     }
