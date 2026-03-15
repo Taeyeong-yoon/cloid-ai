@@ -25,6 +25,14 @@ export const metadata: Metadata = {
   creator: "CLOID.AI",
   publisher: "CLOID.AI",
   metadataBase: new URL("https://cloid.ai"),
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.svg",
+  },
+  manifest: "/manifest.json",
   alternates: {
     canonical: "https://cloid.ai",
     languages: { ko: "https://cloid.ai", en: "https://cloid.ai" },
@@ -73,6 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <meta name="theme-color" content="#8B5CF6" />
         {/*
           ═══ 검색엔진 등록 가이드 (수동 작업 필요) ═══
 
