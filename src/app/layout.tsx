@@ -27,10 +27,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://cloid.ai"),
   icons: {
     icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico", sizes: "any" },
     ],
-    shortcut: "/favicon.svg",
+    shortcut: "/icon.svg",
   },
   manifest: "/manifest.json",
   alternates: {
