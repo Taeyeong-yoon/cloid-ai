@@ -1,241 +1,166 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useState, useCallback } from "react";
 import {
-  AlertTriangle,
   Check,
   ClipboardPaste,
-  Loader2,
-  RotateCcw,
+  Copy,
+  ExternalLink,
   Sparkles,
-  ThumbsDown,
-  ThumbsUp,
+  RotateCcw,
 } from "lucide-react";
 import type { EvaluationConfig } from "@/lib/types";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
-interface ParsedFeedback {
-  score: "pass" | "partial" | "fail";
-  summary: string;
-  details?: string[];
-  nextStep?: string;
-}
-
-function safeParseFeedback(raw: string): ParsedFeedback | null {
-  try {
-    const jsonMatch = raw.match(/\{[\s\S]*\}/);
-    const parsed = JSON.parse(jsonMatch ? jsonMatch[0] : raw) as ParsedFeedback;
-    if (!parsed || !parsed.score || !parsed.summary) return null;
-    return parsed;
-  } catch {
-    return null;
-  }
-}
+const LLM_LINKS = [
+  { label: "ChatGPT", url: "https://chat.openai.com/", color: "text-emerald-400 border-emerald-800/50 hover:border-emerald-600 hover:bg-emerald-950/30" },
+  { label: "Gemini", url: "https://gemini.google.com/", color: "text-blue-400 border-blue-800/50 hover:border-blue-600 hover:bg-blue-950/30" },
+  { label: "Claude", url: "https://claude.ai/", color: "text-amber-400 border-amber-800/50 hover:border-amber-600 hover:bg-amber-950/30" },
+];
 
 export default function ResultEvaluator({
-  contentId,
   evaluation,
 }: {
   contentId: string;
   evaluation: EvaluationConfig;
 }) {
   const { t } = useTranslation();
-  const [userResult, setUserResult] = useState("");
-  const [feedback, setFeedback] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [score, setScore] = useState<"pass" | "partial" | "fail" | null>(null);
+  const [checked, setChecked] = useState<Set<number>>(new Set());
+  const [copied, setCopied] = useState(false);
 
-  const parsedFeedback = useMemo(() => safeParseFeedback(feedback), [feedback]);
+  const allDone = checked.size === evaluation.successCriteria.length;
 
-  const handleEvaluate = useCallback(async () => {
-    if (!userResult.trim() || loading) return;
+  function toggleCriterion(index: number) {
+    setChecked((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
+    });
+  }
 
-    setLoading(true);
-    setFeedback("");
-    setError("");
-    setScore(null);
+  const buildEvalPrompt = useCallback(() => {
+    const lines = [
+      evaluation.context,
+      "",
+      `${t.evaluator.criteria}:`,
+      ...evaluation.successCriteria.map((c) => `• ${c}`),
+      "",
+      ...(evaluation.commonMistakes?.length
+        ? [`Common mistakes to avoid:`, ...evaluation.commonMistakes.map((m) => `• ${m}`), ""]
+        : []),
+      "My result: (paste your result below)",
+    ];
+    return lines.join("\n");
+  }, [evaluation, t.evaluator.criteria]);
 
+  async function handleCopy() {
     try {
-      const context = [
-        `Content ID: ${contentId}`,
-        `Lesson context: ${evaluation.context}`,
-        `Success criteria: ${evaluation.successCriteria.join(" | ")}`,
-        `Common mistakes: ${evaluation.commonMistakes.join(" | ")}`,
-        "Learner result:",
-        userResult.trim().slice(0, 1200),
-      ].join("\n");
+      await navigator.clipboard.writeText(buildEvalPrompt());
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch { /* ignore */ }
+  }
 
-      const question =
-        "Evaluate the learner result and return strict JSON with score, summary, details, nextStep.";
-
-      const res = await fetch("/api/ask", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          question,
-          context,
-          mode: "tutor",
-        }),
-      });
-
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || t.common.error_occurred);
-
-      const answer = typeof data.answer === "string" ? data.answer : "";
-      const parsed = safeParseFeedback(answer);
-
-      if (parsed) {
-        setScore(parsed.score);
-        setFeedback(JSON.stringify(parsed));
-      } else {
-        setScore("partial");
-        setFeedback(answer);
-      }
-    } catch (e) {
-      setError((e as Error).message || t.common.error_occurred);
-    } finally {
-      setLoading(false);
-    }
-  }, [contentId, evaluation, loading, t.common.error_occurred, userResult]);
-
-  const reset = useCallback(() => {
-    setUserResult("");
-    setFeedback("");
-    setError("");
-    setScore(null);
-  }, []);
-
-  const scoreLabel =
-    score === "pass"
-      ? t.evaluator.pass
-      : score === "partial"
-        ? t.evaluator.partial
-        : score === "fail"
-          ? t.evaluator.fail
-          : null;
+  function handleReset() {
+    setChecked(new Set());
+    setCopied(false);
+  }
 
   return (
     <div className="mt-5 rounded-xl border border-indigo-800/40 bg-gradient-to-br from-indigo-950/20 to-slate-900/50 p-5">
+      {/* 헤더 */}
       <div className="mb-4 flex items-center gap-2">
         <ClipboardPaste size={18} className="text-indigo-400" />
         <h3 className="text-sm font-semibold text-white">{t.evaluator.title}</h3>
-        <span className="rounded-full border border-indigo-700/50 bg-indigo-900/40 px-2 py-0.5 text-[10px] text-indigo-300">
-          AI Review
+        <span className="ml-auto rounded-full border border-indigo-700/50 bg-indigo-900/40 px-2 py-0.5 text-[10px] text-indigo-300">
+          {t.evaluator.self_check}
         </span>
       </div>
 
-      <p className="mb-3 text-xs leading-relaxed text-slate-400">{evaluation.prompt}</p>
+      {/* 설명 */}
+      <p className="mb-4 text-xs leading-relaxed text-slate-400">{evaluation.prompt}</p>
 
-      <textarea
-        value={userResult}
-        onChange={(e) => setUserResult(e.target.value)}
-        placeholder={t.evaluator.placeholder}
-        className="h-32 w-full resize-none rounded-lg border border-slate-700 bg-slate-950 px-3 py-2.5 text-xs font-mono text-slate-200 placeholder-slate-700 transition-colors focus:border-indigo-500 focus:outline-none"
-        spellCheck={false}
-      />
-
-      <div className="mb-3 mt-3">
-        <p className="mb-1.5 text-[10px] text-slate-500">{t.evaluator.criteria}:</p>
-        <div className="flex flex-wrap gap-1.5">
-          {evaluation.successCriteria.map((criterion, index) => (
-            <span
-              key={`${criterion}-${index}`}
-              className="rounded-full border border-slate-700 bg-slate-800/50 px-2 py-0.5 text-[10px] text-slate-400"
-            >
-              {criterion}
+      {/* 성공 기준 체크박스 */}
+      <div className="mb-4 space-y-2">
+        <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
+          {t.evaluator.criteria}
+        </p>
+        {evaluation.successCriteria.map((criterion, index) => (
+          <button
+            key={`${criterion}-${index}`}
+            onClick={() => toggleCriterion(index)}
+            className={`w-full flex items-start gap-3 rounded-lg border px-3 py-2.5 text-xs text-left transition-all ${
+              checked.has(index)
+                ? "border-emerald-700/60 bg-emerald-950/20 text-emerald-300"
+                : "border-slate-700 bg-slate-800/30 text-slate-300 hover:border-slate-600 hover:bg-slate-800/50"
+            }`}
+          >
+            <span className={`mt-0.5 shrink-0 w-4 h-4 rounded border flex items-center justify-center transition-all ${
+              checked.has(index)
+                ? "border-emerald-500 bg-emerald-600"
+                : "border-slate-600"
+            }`}>
+              {checked.has(index) && <Check size={10} className="text-white" />}
             </span>
-          ))}
-        </div>
+            <span className="leading-relaxed">{criterion}</span>
+          </button>
+        ))}
       </div>
 
-      <div className="flex gap-2">
+      {/* 완료 메시지 */}
+      {allDone && (
+        <div className="mb-4 flex items-center gap-2 rounded-lg border border-emerald-700/50 bg-emerald-950/20 px-3 py-2.5">
+          <Sparkles size={14} className="text-emerald-400 shrink-0" />
+          <p className="text-xs font-medium text-emerald-300">{t.evaluator.all_done}</p>
+        </div>
+      )}
+
+      {/* AI 평가 프롬프트 복사 */}
+      <div className="border-t border-slate-700/50 pt-4 space-y-3">
+        <p className="text-[10px] text-slate-500">{t.evaluator.copy_hint}</p>
+
         <button
-          onClick={handleEvaluate}
-          disabled={!userResult.trim() || loading}
-          className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-indigo-600 py-2.5 text-sm font-medium text-white transition-colors hover:bg-indigo-500 disabled:bg-slate-700 disabled:text-slate-500"
+          onClick={handleCopy}
+          className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium transition-all ${
+            copied
+              ? "bg-emerald-800/40 border border-emerald-700 text-emerald-300"
+              : "bg-indigo-600 hover:bg-indigo-500 text-white"
+          }`}
         >
-          {loading ? (
-            <>
-              <Loader2 size={14} className="animate-spin" />
-              {t.evaluator.evaluating}
-            </>
+          {copied ? (
+            <><Check size={14} /> {t.common.copied}</>
           ) : (
-            <>
-              <Sparkles size={14} />
-              {t.evaluator.evaluate}
-            </>
+            <><Copy size={14} /> {t.evaluator.copy_prompt}</>
           )}
         </button>
-        {feedback && (
-          <button
-            onClick={reset}
-            className="flex items-center gap-1 rounded-lg border border-slate-700 px-3 text-xs text-slate-400 transition-colors hover:text-slate-200"
-          >
-            <RotateCcw size={12} />
-            {t.evaluator.try_again}
-          </button>
-        )}
-      </div>
 
-      {error && (
-        <p className="mt-3 rounded-lg border border-rose-800/50 bg-rose-950/20 px-3 py-2 text-xs text-rose-400">
-          {error}
-        </p>
-      )}
+        {/* LLM 바로가기 */}
+        <div className="flex gap-2 flex-wrap">
+          {LLM_LINKS.map((llm) => (
+            <a
+              key={llm.label}
+              href={llm.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-medium transition-all bg-slate-900/50 ${llm.color}`}
+            >
+              <ExternalLink size={11} />
+              {llm.label}
+            </a>
+          ))}
 
-      {feedback && (
-        <div className="mt-4 border-t border-slate-700/50 pt-4">
-          {parsedFeedback ? (
-            <div className="space-y-3 animate-fade-in-up">
-              <div
-                className={`flex items-center gap-2 rounded-lg border px-4 py-3 ${
-                  parsedFeedback.score === "pass"
-                    ? "border-emerald-800/50 bg-emerald-950/30 text-emerald-400"
-                    : parsedFeedback.score === "partial"
-                      ? "border-amber-800/50 bg-amber-950/30 text-amber-400"
-                      : "border-red-800/50 bg-red-950/30 text-red-400"
-                }`}
-              >
-                {parsedFeedback.score === "pass" ? (
-                  <ThumbsUp size={16} />
-                ) : parsedFeedback.score === "partial" ? (
-                  <AlertTriangle size={16} />
-                ) : (
-                  <ThumbsDown size={16} />
-                )}
-                <div className="min-w-0">
-                  {scoreLabel && <p className="text-[10px] uppercase tracking-[0.18em] opacity-80">{scoreLabel}</p>}
-                  <span className="text-sm font-medium">{parsedFeedback.summary}</span>
-                </div>
-              </div>
-
-              {parsedFeedback.details && parsedFeedback.details.length > 0 && (
-                <div className="space-y-1.5">
-                  {parsedFeedback.details.map((detail, index) => (
-                    <div key={`${detail}-${index}`} className="flex items-start gap-2 text-xs text-slate-300">
-                      <Check size={12} className="mt-0.5 shrink-0 text-slate-500" />
-                      <span>{detail}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {parsedFeedback.nextStep && (
-                <div className="flex items-start gap-2 rounded-lg border border-violet-800/40 bg-violet-950/30 p-3">
-                  <Sparkles size={14} className="mt-0.5 shrink-0 text-violet-400" />
-                  <div>
-                    <span className="text-[10px] font-bold uppercase text-violet-400">{t.evaluator.next_step}</span>
-                    <p className="mt-0.5 text-xs text-slate-300">{parsedFeedback.nextStep}</p>
-                  </div>
-                </div>
-              )}
-            </div>
-          ) : (
-            <div className="whitespace-pre-wrap text-sm leading-relaxed text-slate-300">{feedback}</div>
+          {checked.size > 0 && (
+            <button
+              onClick={handleReset}
+              className="ml-auto flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-slate-700 text-xs text-slate-500 hover:text-slate-300 transition-colors"
+            >
+              <RotateCcw size={11} />
+              {t.evaluator.try_again}
+            </button>
           )}
         </div>
-      )}
+      </div>
     </div>
   );
 }

@@ -3,15 +3,20 @@
 import { useState, useCallback, useEffect } from "react";
 import {
   Sparkles,
-  Play,
-  Loader2,
+  Copy,
   Check,
   ChevronRight,
   RotateCcw,
-  AlertCircle,
+  ExternalLink,
 } from "lucide-react";
 import type { PracticePrompt } from "@/lib/types";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
+
+const LLM_LINKS = [
+  { label: "ChatGPT", url: "https://chat.openai.com/", color: "text-emerald-400 border-emerald-800/50 hover:border-emerald-600 hover:bg-emerald-950/30" },
+  { label: "Gemini", url: "https://gemini.google.com/", color: "text-blue-400 border-blue-800/50 hover:border-blue-600 hover:bg-blue-950/30" },
+  { label: "Claude", url: "https://claude.ai/", color: "text-amber-400 border-amber-800/50 hover:border-amber-600 hover:bg-amber-950/30" },
+];
 
 interface PracticeChatProps {
   contentId: string;
@@ -22,12 +27,9 @@ export default function PracticeChat({ contentId, practices }: PracticeChatProps
   const { t } = useTranslation();
   const [activePractice, setActivePractice] = useState(0);
   const [prompt, setPrompt] = useState(practices[0]?.prompt ?? "");
-  const [response, setResponse] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [copied, setCopied] = useState(false);
   const [completed, setCompleted] = useState<Set<number>>(new Set());
 
-  // 완료 상태 복원
   useEffect(() => {
     try {
       const key = `cloid-practice:${contentId}`;
@@ -39,35 +41,23 @@ export default function PracticeChat({ contentId, practices }: PracticeChatProps
   function handleTabChange(index: number) {
     setActivePractice(index);
     setPrompt(practices[index].prompt);
-    setResponse("");
-    setError("");
+    setCopied(false);
   }
 
-  async function handleRun() {
-    if (!prompt.trim() || loading) return;
-    setLoading(true);
-    setResponse("");
-    setError("");
+  async function handleCopy() {
+    if (!prompt.trim()) return;
     try {
-      const res = await fetch("/api/practice", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error ?? "Request failed");
-      setResponse(data.answer);
-    } catch (e) {
-      setError((e as Error).message);
-    } finally {
-      setLoading(false);
+      await navigator.clipboard.writeText(prompt.trim());
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // fallback: select textarea
     }
   }
 
   const handleReset = useCallback(() => {
     setPrompt(practices[activePractice].prompt);
-    setResponse("");
-    setError("");
+    setCopied(false);
   }, [activePractice, practices]);
 
   function handleMarkComplete() {
@@ -76,8 +66,7 @@ export default function PracticeChat({ contentId, practices }: PracticeChatProps
       next.add(activePractice);
       try {
         const key = `cloid-practice:${contentId}`;
-        const saved = Array.from(next);
-        localStorage.setItem(key, JSON.stringify(saved));
+        localStorage.setItem(key, JSON.stringify(Array.from(next)));
       } catch { /* ignore */ }
       return next;
     });
@@ -148,69 +137,70 @@ export default function PracticeChat({ contentId, practices }: PracticeChatProps
           )}
         </div>
 
-        {/* 실행 버튼 */}
+        {/* 복사 버튼 */}
         <button
-          onClick={handleRun}
-          disabled={loading || !prompt.trim()}
+          onClick={handleCopy}
+          disabled={!prompt.trim()}
           className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium transition-all ${
-            loading || !prompt.trim()
+            copied
+              ? "bg-emerald-800/40 border border-emerald-700 text-emerald-300"
+              : !prompt.trim()
               ? "bg-slate-700 text-slate-500 cursor-not-allowed"
               : "bg-violet-600 hover:bg-violet-500 text-white"
           }`}
         >
-          {loading ? (
-            <><Loader2 size={14} className="animate-spin" /> {t.practice.running}</>
+          {copied ? (
+            <><Check size={14} /> {t.common.copied}</>
           ) : (
-            <><Play size={14} fill="currentColor" /> {t.practice.run}</>
+            <><Copy size={14} /> {t.practice.copy_prompt}</>
           )}
         </button>
 
-        {/* 에러 */}
-        {error && (
-          <div className="flex items-start gap-2 p-3 rounded-lg bg-rose-950/30 border border-rose-800/50 text-xs text-rose-400">
-            <AlertCircle size={13} className="shrink-0 mt-0.5" />
-            <span>{error}</span>
+        {/* LLM 바로가기 */}
+        <div className="space-y-1.5">
+          <p className="text-[10px] text-slate-500">{t.practice.copy_hint}</p>
+          <div className="flex gap-2 flex-wrap">
+            {LLM_LINKS.map((llm) => (
+              <a
+                key={llm.label}
+                href={llm.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-medium transition-all bg-slate-900/50 ${llm.color}`}
+              >
+                <ExternalLink size={11} />
+                {llm.label}
+              </a>
+            ))}
           </div>
-        )}
+        </div>
 
-        {/* AI 응답 */}
-        {response && (
-          <div className="rounded-lg border border-slate-700 bg-slate-950 p-3">
-            <p className="text-[10px] font-bold text-violet-400 uppercase tracking-wider mb-2">
-              {t.practice.response}
-            </p>
-            <p className="text-sm text-slate-200 leading-relaxed whitespace-pre-wrap">{response}</p>
-
-            {/* followUp */}
-            {current.followUp && (
-              <div className="mt-3 pt-3 border-t border-slate-800 flex items-start gap-2">
-                <Sparkles size={12} className="text-amber-400 shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-[10px] font-bold text-amber-400 uppercase tracking-wider mb-1">
-                    {t.practice.follow_up}
-                  </p>
-                  <p className="text-xs text-slate-300">{current.followUp}</p>
-                </div>
-              </div>
-            )}
+        {/* followUp — 복사 후 표시 */}
+        {copied && current.followUp && (
+          <div className="rounded-lg border border-amber-800/40 bg-amber-950/20 p-3 flex items-start gap-2 animate-fade-in-up">
+            <Sparkles size={12} className="text-amber-400 shrink-0 mt-0.5" />
+            <div>
+              <p className="text-[10px] font-bold text-amber-400 uppercase tracking-wider mb-1">
+                {t.practice.follow_up}
+              </p>
+              <p className="text-xs text-slate-300">{current.followUp}</p>
+            </div>
           </div>
         )}
 
         {/* 완료 버튼 */}
-        {(response || isDone) && (
-          <button
-            onClick={handleMarkComplete}
-            disabled={isDone}
-            className={`w-full flex items-center justify-center gap-2 py-2 rounded-lg text-xs font-medium transition-all ${
-              isDone
-                ? "bg-emerald-900/30 border border-emerald-700/50 text-emerald-400 cursor-default"
-                : "bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700"
-            }`}
-          >
-            <Check size={12} />
-            {isDone ? t.practice.completed : t.practice.mark_complete}
-          </button>
-        )}
+        <button
+          onClick={handleMarkComplete}
+          disabled={isDone}
+          className={`w-full flex items-center justify-center gap-2 py-2 rounded-lg text-xs font-medium transition-all ${
+            isDone
+              ? "bg-emerald-900/30 border border-emerald-700/50 text-emerald-400 cursor-default"
+              : "bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700"
+          }`}
+        >
+          <Check size={12} />
+          {isDone ? t.practice.completed : t.practice.mark_complete}
+        </button>
       </div>
     </div>
   );
