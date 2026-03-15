@@ -113,5 +113,19 @@
       "prompt": "What are some official and community resources available for understanding the MCP protocol?",
       "followUp": "Select one resource and summarize its key insights."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"MCP (Model Context Protocol) 마스터\". AI 에이전트의 컨텍스트를 확장하는 MCP 프로토콜 이해와 서버 구축",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

@@ -67,5 +67,19 @@
       "prompt": "Run a test using your PDF summary skill on a sample PDF document and provide feedback on the output.",
       "followUp": "Experiment with different types of PDFs to see how the skill performs."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"첫 번째 Claude Market 스킬 만들기\". Claude Market SDK를 사용하여 PDF 요약 스킬을 설계하고 출판하는 end-to-end 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

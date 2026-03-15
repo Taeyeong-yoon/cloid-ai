@@ -1,11 +1,39 @@
 ---
-steps: [{"title":"Automate Email Writing","description":"Learn to automate email writing using AI prompts.","action":"Provide the AI with the email situation details as specified in the practice section.","expectedResult":"Receive a well-structured email draft that you can send.","failureHint":"Ensure you include all context details like recipient, reason, and tone."},{"title":"Structure Meeting Notes","description":"Use AI to organize your rough meeting notes into a structured format.","action":"Paste your rough notes into the AI prompt as shown in the practice section.","expectedResult":"Get a clean summary of the meeting, including decisions and action items.","failureHint":"Make sure your notes are clear enough for the AI to understand."},{"title":"Create Personalized Prompt Templates","description":"Develop your own AI prompt templates for daily tasks.","action":"Draft at least three unique prompt templates based on your daily needs.","expectedResult":"Have three effective prompt templates ready for future use.","failureHint":"Think about repetitive tasks you encounter and how to frame them for AI."}]
----
----
-title: "AI로 일상생활 자동화하기 — 이메일, 일정, 메모 정리"
-tags: ["AI 활용", "생산성", "자동화", "초보자"]
-difficulty: "beginner"
-summary: "이메일 작성, 일정 관리, 메모 정리를 AI로 10배 빠르게 처리하는 실용 가이드"
+title: 'AI로 일상생활 자동화하기 — 이메일, 일정, 메모 정리'
+tags:
+  - AI 활용
+  - 생산성
+  - 자동화
+  - 초보자
+difficulty: beginner
+summary: '이메일 작성, 일정 관리, 메모 정리를 AI로 10배 빠르게 처리하는 실용 가이드'
+steps:
+  - title: Automate Email Writing
+    description: Learn to use AI for drafting emails.
+    action: Provide the AI with the scenario for the email you need to write.
+    expectedResult: Receive a well-structured email draft that fits your scenario.
+    failureHint: >-
+      Ensure you include all necessary details like recipient, purpose, and
+      tone.
+  - title: Structure Meeting Notes
+    description: Organize your meeting notes using AI.
+    action: Paste your rough meeting notes into the AI prompt for structuring.
+    expectedResult: 'Get a neatly organized summary, decisions made, and action items.'
+    failureHint: Make sure your notes are clear and complete for better structuring.
+  - title: Create Prompt Templates
+    description: Develop your own AI prompt templates for future use.
+    action: Draft at least three prompt templates based on your common tasks.
+    expectedResult: Have three customizable prompt templates ready for quick access.
+    failureHint: Refer to the provided examples for inspiration on structure.
+  - title: Prioritize Daily Tasks
+    description: Use AI to prioritize your daily tasks effectively.
+    action: >-
+      List your tasks and ask the AI to prioritize them based on urgency and
+      importance.
+    expectedResult: Receive a prioritized task list with estimated time for each task.
+    failureHint: >-
+      Be specific about the criteria for prioritization you want the AI to
+      consider.
 ---
 
 ## 🎯 학습 목표

@@ -66,5 +66,19 @@
       "prompt": "What is the best way to display real-time data streamed from the Gemini API on a Next.js page?",
       "followUp": "Experiment with different UI components to enhance the data display."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"Gemini API 스트리밍 응답 구현\". Gemini 2.0 Flash API를 사용해 실시간 스트리밍 응답을 Next.js에 구현하는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

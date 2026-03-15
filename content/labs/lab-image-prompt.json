@@ -67,5 +67,19 @@
       "prompt": "Generate an image of a bustling futuristic city with flying cars and neon lights at night.",
       "followUp": "Modify the cityscape by changing the time of day or adding more elements like parks."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"AI 이미지 프롬프트 실험실\". DALL-E 3 또는 Midjourney에서 같은 주제를 다양한 프롬프트로 실험하며 AI 이미지 생성 원리를 익히는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

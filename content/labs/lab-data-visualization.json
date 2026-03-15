@@ -67,5 +67,19 @@
       "prompt": "Visualize the following CSV data as a line chart: [paste your CSV data here].",
       "followUp": "Modify the data points to see how it affects the chart."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"AI로 데이터 시각화하기\". CSV 데이터를 Claude에게 붙여넣고, Chart.js를 사용한 인터랙티브 차트를 자동 생성하는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

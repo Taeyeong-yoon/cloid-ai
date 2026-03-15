@@ -67,5 +67,19 @@
       "prompt": "Draft a response to this email: 'Thank you for your feedback on the project. I will make the necessary adjustments.'",
       "followUp": "Modify the email context and create a new response draft."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"n8n + Claude 자동화 파이프라인 구축\". n8n에서 Claude AI를 연동하여 이메일 분류, 요약, 응답 초안 생성을 자동화하는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

@@ -1,9 +1,41 @@
 ---
-title: "스킬 체이닝 패턴 — 복합 에이전트 설계"
-tags: ["스킬 체이닝","AI 에이전트","아키텍처"]
-difficulty: "advanced"
-summary: "여러 AI 스킬을 연결하여 복잡한 워크플로우를 자동화하는 스킬 체이닝 패턴"
-steps: [{"title":"Identify AI Skills","description":"Determine which AI skills you want to chain together.","action":"List at least three AI skills relevant to your workflow.","expectedResult":"You have a clear list of AI skills to use.","failureHint":"Consider the tasks you want to automate and which skills can help."},{"title":"Define Workflow Structure","description":"Outline the sequence in which the AI skills will interact.","action":"Create a flowchart or diagram showing the order of skill execution.","expectedResult":"You have a visual representation of your workflow.","failureHint":"Review the purpose of each skill to ensure logical sequencing."},{"title":"Implement Skill Chaining","description":"Connect the identified skills in your chosen platform.","action":"Use the platform's interface to link the skills according to your workflow.","expectedResult":"The skills are successfully chained together in the system.","failureHint":"Check the platform's documentation for guidance on linking skills."},{"title":"Test the Workflow","description":"Ensure the skill chain operates as intended.","action":"Run a test scenario to see if the workflow executes correctly.","expectedResult":"The workflow completes without errors and produces the expected outcome.","failureHint":"Debug any issues by checking the individual skills' outputs."},{"title":"Optimize and Iterate","description":"Refine the workflow based on test results.","action":"Make adjustments to improve efficiency or effectiveness.","expectedResult":"The workflow is optimized for better performance.","failureHint":"Consider feedback from users or the results of your tests for improvements."}]
+title: 스킬 체이닝 패턴 — 복합 에이전트 설계
+tags:
+  - 스킬 체이닝
+  - AI 에이전트
+  - 아키텍처
+difficulty: advanced
+summary: 여러 AI 스킬을 연결하여 복잡한 워크플로우를 자동화하는 스킬 체이닝 패턴
+steps:
+  - title: Identify AI Skills
+    description: Determine which AI skills you want to chain together.
+    action: List at least three AI skills relevant to your workflow.
+    expectedResult: You have a clear list of AI skills to use.
+    failureHint: Consider the tasks you want to automate and which skills can help.
+  - title: Define Workflow Structure
+    description: Outline the sequence in which the AI skills will interact.
+    action: Create a flowchart or diagram showing the order of skill execution.
+    expectedResult: You have a visual representation of your workflow.
+    failureHint: Review the purpose of each skill to ensure logical sequencing.
+  - title: Implement Skill Chaining
+    description: Connect the identified skills in your chosen platform.
+    action: >-
+      Use the platform's interface to link the skills according to your
+      workflow.
+    expectedResult: The skills are successfully chained together in the system.
+    failureHint: Check the platform's documentation for guidance on linking skills.
+  - title: Test the Workflow
+    description: Ensure the skill chain operates as intended.
+    action: Run a test scenario to see if the workflow executes correctly.
+    expectedResult: The workflow completes without errors and produces the expected outcome.
+    failureHint: Debug any issues by checking the individual skills' outputs.
+  - title: Optimize and Iterate
+    description: Refine the workflow based on test results.
+    action: Make adjustments to improve efficiency or effectiveness.
+    expectedResult: The workflow is optimized for better performance.
+    failureHint: >-
+      Consider feedback from users or the results of your tests for
+      improvements.
 ---
 
 ## 🎯 학습 목표

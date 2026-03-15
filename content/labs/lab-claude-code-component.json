@@ -66,5 +66,19 @@
       "prompt": "Generate a form component in Next.js with fields for name, email, and a submit button using Claude Code.",
       "followUp": "Modify the form to include validation for the email field."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"Claude Code로 컴포넌트 자동 생성\". Next.js 프로젝트에서 Claude Code를 사용해 UI 컴포넌트를 자동으로 생성하고 테스트하는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

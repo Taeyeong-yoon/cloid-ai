@@ -92,5 +92,19 @@
       "prompt": "What are the steps to create a Telegram bot and link it with OpenClaw?",
       "followUp": "Ask how to add more features to the Telegram bot for enhanced functionality."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"OpenClaw + 텔레그램으로 AI 비서 만들기\". OpenClaw를 설치하고 Claude API와 텔레그램 봇을 연동해 24시간 동작하는 나만의 AI 에이전트를 구축하는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

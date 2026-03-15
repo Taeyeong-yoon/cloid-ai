@@ -1,11 +1,53 @@
 ---
-steps: [{"title":"Access DALL-E","description":"Get familiar with DALL-E as an AI image generation tool.","action":"Visit ChatGPT and log in.","expectedResult":"You are logged into ChatGPT and ready to use DALL-E.","failureHint":"If you can't log in, check your internet connection or reset your password."},{"title":"Create First Image with DALL-E","description":"Generate your first image using a prompt in DALL-E.","action":"Input the provided prompt about a woman working in a café.","codeSnippet":"Generate an image with the prompt: 'A woman in her 30s working on a laptop in a modern café, warm colors, cozy and productive atmosphere, afternoon sunlight coming through the window.'","expectedResult":"DALL-E generates an image based on your prompt.","failureHint":"If the image doesn't look right, refine your prompt for clarity."},{"title":"Access Ideogram","description":"Get familiar with Ideogram as another AI image generation tool.","action":"Go to Ideogram.ai and create an account if necessary.","expectedResult":"You are on the Ideogram platform ready to create images.","failureHint":"If you encounter issues, ensure your browser is updated or try a different one."},{"title":"Create Image with Ideogram","description":"Generate an image with text using Ideogram.","action":"Use the provided prompt for a minimalist poster design.","codeSnippet":"Create an image with the prompt: 'A minimalist poster design with the text \"Think Different\" in bold sans-serif font, white text on dark navy background, clean and modern style, centered composition.'","expectedResult":"Ideogram generates a text-inclusive image.","failureHint":"If the output is not as expected, adjust the prompt for more detail."},{"title":"Compare Results","description":"Analyze the images generated from both tools.","action":"Review and note what you like and dislike about each image.","expectedResult":"You have a clear comparison of the strengths and weaknesses of DALL-E and Ideogram.","failureHint":"If you're unsure, focus on specific elements like style, accuracy, and overall appeal."}]
----
----
-title: "AI 이미지 생성 입문 — DALL-E, Midjourney, Ideogram 비교"
-tags: ["이미지 생성", "DALL-E", "Midjourney", "Ideogram", "AI 아트"]
-difficulty: "beginner"
-summary: "대표 AI 이미지 생성 도구 3가지를 비교하고 바로 써먹는 프롬프트 가이드"
+title: 'AI 이미지 생성 입문 — DALL-E, Midjourney, Ideogram 비교'
+tags:
+  - 이미지 생성
+  - DALL-E
+  - Midjourney
+  - Ideogram
+  - AI 아트
+difficulty: beginner
+summary: 대표 AI 이미지 생성 도구 3가지를 비교하고 바로 써먹는 프롬프트 가이드
+steps:
+  - title: Compare AI Image Generators
+    description: 'Understand the differences between DALL-E, Midjourney, and Ideogram.'
+    action: Review the comparison table provided in the content.
+    expectedResult: >-
+      You can explain the key features and differences of each AI image
+      generator.
+    failureHint: Revisit the comparison table for clarity.
+  - title: Create an Image with DALL-E
+    description: Generate your first image using DALL-E.
+    action: Access ChatGPT and input the provided DALL-E prompt.
+    codeSnippet: >-
+      Generate an image with the prompt: 'A 30s woman working on a laptop in a
+      modern cafe, warm colors, cozy and productive atmosphere, afternoon
+      sunlight.'
+    expectedResult: You receive an image that matches the prompt description.
+    failureHint: Try rephrasing the prompt for better results.
+  - title: Generate Text-Included Image with Ideogram
+    description: Create an image that includes text using Ideogram.
+    action: Visit Ideogram.ai and use the provided prompt to generate an image.
+    codeSnippet: >-
+      A minimalist poster design with the text 'Think Different' in bold
+      sans-serif font, white text on dark navy background, clean and modern
+      style, centered composition.
+    expectedResult: You obtain an accurate image with the specified text.
+    failureHint: Ensure the prompt is entered correctly and try again.
+  - title: Experiment with Prompt Templates
+    description: Practice using prompt templates to create various images.
+    action: Select one of the provided prompt templates and fill in the details.
+    expectedResult: You create a unique image based on the filled prompt template.
+    failureHint: 'If results are not satisfactory, adjust the details in the template.'
+  - title: Complete the Challenge
+    description: Apply what you've learned by generating images across different tools.
+    action: >-
+      Create images on DALL-E, Ideogram, and another tool of your choice using
+      the same theme.
+    expectedResult: You have three images from different tools along with your observations.
+    failureHint: >-
+      If you encounter issues, refer back to the tool's guidance on prompt
+      creation.
 ---
 
 ## 🎯 학습 목표

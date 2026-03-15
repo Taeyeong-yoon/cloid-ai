@@ -63,5 +63,19 @@
       "prompt": "Update your agent to handle unrecognized commands by responding with 'I'm sorry, I didn't understand that.'",
       "followUp": "Experiment by adding specific responses for common misunderstandings."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"CLI 에이전트 프로토콜 실습\". Claude Code CLI를 사용하여 표준 에이전트를 구현하는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

@@ -1,11 +1,41 @@
 ---
-steps: [{"title":"Learn AI Prompt Patterns","description":"Understand the structure of prompts to request Excel formulas from AI.","action":"Review and practice the prompt examples provided in the content.","expectedResult":"You can confidently create your own prompts for generating Excel formulas.","failureHint":"If unsure, refer back to the prompt templates for guidance."},{"title":"Generate a Simple Formula","description":"Use AI to create a basic Excel formula for summing values based on conditions.","action":"Input the provided prompt for summing sales for the 'Sales Team' into AI.","expectedResult":"Receive a correct Excel formula along with explanations of each argument.","failureHint":"Check if you clearly described the data structure in your prompt."},{"title":"Debug an Existing Formula","description":"Learn how to ask AI to diagnose and fix errors in your Excel formulas.","action":"Use the debugging prompt to analyze a provided VLOOKUP formula with an error.","expectedResult":"Get a corrected formula and an explanation of the error.","failureHint":"Ensure you provide all necessary context about the error in your prompt."},{"title":"Automate a Manual Task","description":"Identify a manual Excel task and automate it using AI-generated formulas.","action":"Select one repetitive Excel task, generate a formula via AI, and apply it.","expectedResult":"Successfully automate the task and save time in your workflow.","failureHint":"If the formula doesn't work, revisit the prompt and ensure the data structure is correctly described."}]
----
----
-title: "AI로 엑셀 수식 자동 생성하기"
-tags: ["엑셀", "수식", "자동화", "업무 효율"]
-difficulty: "beginner"
-summary: "엑셀 수식을 모르는 비전문가도 AI로 복잡한 수식을 즉시 생성하는 실전 가이드"
+title: AI로 엑셀 수식 자동 생성하기
+tags:
+  - 엑셀
+  - 수식
+  - 자동화
+  - 업무 효율
+difficulty: beginner
+summary: 엑셀 수식을 모르는 비전문가도 AI로 복잡한 수식을 즉시 생성하는 실전 가이드
+steps:
+  - title: Learn AI Prompt Patterns
+    description: Understand how to effectively request Excel formulas from AI.
+    action: Study the provided prompt examples and identify key components.
+    expectedResult: You can create your own prompts for generating Excel formulas.
+    failureHint: 'If confused, refer back to the examples for structure.'
+  - title: Generate a SUMIF Formula
+    description: Use AI to create a SUMIF formula based on a given scenario.
+    action: Input the provided SUMIF prompt into ChatGPT or Claude.
+    expectedResult: >-
+      Receive a complete SUMIF formula along with explanations for each
+      argument.
+    failureHint: Ensure you clearly describe your data structure in the prompt.
+  - title: Debug an Excel Formula
+    description: Learn how to request debugging assistance for an Excel formula.
+    action: >-
+      Use the provided debugging prompt to identify and fix an error in a
+      formula.
+    expectedResult: Get a corrected version of the formula along with the error explanation.
+    failureHint: Check that your error description is specific and detailed.
+  - title: Automate a Manual Task
+    description: Apply AI-generated formulas to automate a task you currently do manually.
+    action: >-
+      Select a manual Excel task, generate a formula using AI, and apply it to
+      your spreadsheet.
+    expectedResult: 'Complete the task automatically with the formula, saving time.'
+    failureHint: >-
+      If the formula doesn't work, double-check the structure and context you
+      provided.
 ---
 
 ## 🎯 학습 목표

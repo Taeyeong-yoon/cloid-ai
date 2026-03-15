@@ -62,5 +62,19 @@
       "prompt": "Review the current n8n workflow and suggest improvements to reduce execution time.",
       "followUp": "Modify the workflow to include a batch processing feature for handling multiple leads at once."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"AI 자동화 마이크로 스타트업 설계\". n8n + Claude로 최소 유지 관리 자동화 비즈니스 모델을 설계하고 구현하는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

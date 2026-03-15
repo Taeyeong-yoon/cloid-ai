@@ -65,5 +65,19 @@
       "prompt": "Use the GitHub CLI to list all open pull requests in my GitHub repository using Claude Code.",
       "followUp": "Experiment by filtering the list to show only PRs from a specific user."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"[Claude Code] Automate PR Creation and Code Review in Your Repo\". Use Claude Code in headless mode to automatically create pull requests and generate code review comments via the GitHub CLI.",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

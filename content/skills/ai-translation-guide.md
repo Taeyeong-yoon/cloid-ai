@@ -1,11 +1,54 @@
 ---
-steps: [{"title":"Understand Context-Based Translation","description":"Learn the difference between simple and context-based translation.","action":"Read the section on AI translation strengths and summarize the key differences.","expectedResult":"You can explain how AI translation improves upon traditional methods.","failureHint":"Revisit the section comparing Google translation and AI translation."},{"title":"Practice Business Email Translation","description":"Apply your knowledge by translating a business email.","action":"Translate the provided Korean email into formal English, considering the context and tone.","expectedResult":"A well-structured business email in English that maintains professionalism.","failureHint":"Review examples of formal business communication in English."},{"title":"Conduct Translation Quality Comparison","description":"Experiment with different translation styles.","action":"Translate the given sentence in three different ways: literal, natural expression, and advertising style.","expectedResult":"Three distinct translations with explanations of their contexts.","failureHint":"Analyze each translation's purpose and audience to refine your approach."},{"title":"Create a Localization Prompt","description":"Learn how to localize content for a specific market.","action":"Use the localization prompt template to adapt a Korean marketing phrase for the U.S. market.","expectedResult":"A localized marketing phrase that resonates with American consumers.","failureHint":"Research cultural nuances in American advertising to enhance your localization."},{"title":"Review Common Mistakes","description":"Avoid frequent pitfalls in AI translation.","action":"Read through the common mistakes section and write down strategies to avoid them.","expectedResult":"A personal checklist to ensure effective and accurate translation requests.","failureHint":"Reflect on past translation experiences to identify areas for improvement."}]
----
----
-title: "AI 번역 200% 활용법 — 단순 번역을 넘어서"
-tags: ["번역", "영어", "다국어", "AI 활용"]
-difficulty: "beginner"
-summary: "맥락 번역·톤 지정·현지화까지, 구글 번역을 뛰어넘는 AI 번역 완전 가이드"
+title: AI 번역 200% 활용법 — 단순 번역을 넘어서
+tags:
+  - 번역
+  - 영어
+  - 다국어
+  - AI 활용
+difficulty: beginner
+summary: '맥락 번역·톤 지정·현지화까지, 구글 번역을 뛰어넘는 AI 번역 완전 가이드'
+steps:
+  - title: Understand Context-Based Translation
+    description: >-
+      Learn the difference between simple translation and context-based
+      translation.
+    action: >-
+      Read the section on AI translation strengths and compare it with Google
+      Translate.
+    expectedResult: You can articulate how AI translation understands context and tone.
+    failureHint: Review examples of context-based translations provided in the content.
+  - title: Practice Business Email Translation
+    description: >-
+      Apply your knowledge by translating a business email with specific tone
+      and context.
+    action: >-
+      Translate the provided Korean email into formal English suitable for a
+      first-time contact.
+    expectedResult: A well-translated email that reflects appropriate tone and context.
+    failureHint: Refer to the tone guidelines and cultural considerations in the content.
+  - title: Conduct Translation Quality Comparison
+    description: Experiment with translating the same sentence in different styles.
+    action: >-
+      Translate the given sentence into three different styles: literal,
+      natural, and advertising.
+    expectedResult: Three distinct translations with explanations of their suitability.
+    failureHint: Analyze each translation's tone and context to determine effectiveness.
+  - title: Utilize Translation Prompt Templates
+    description: Learn to create effective translation prompts for AI.
+    action: >-
+      Fill in one of the provided prompt templates with your own content and
+      context.
+    expectedResult: A customized prompt ready for use in AI translation.
+    failureHint: Check the examples for structure and required information.
+  - title: Complete the Translation Challenge
+    description: Apply everything you've learned in a real-world scenario.
+    action: >-
+      Select a document to translate, create a draft, and refine it using AI
+      tools.
+    expectedResult: >-
+      A high-quality translation ready for use, with a comparison to Google
+      Translate results.
+    failureHint: 'If you encounter issues, review the common mistakes section for guidance.'
 ---
 
 ## 🎯 학습 목표

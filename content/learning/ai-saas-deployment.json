@@ -121,5 +121,19 @@
       "prompt": "Describe the steps to integrate Sentry with a Next.js application for real-time error tracking.",
       "followUp": "Test the integration by intentionally causing an error in your app."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"AI SaaS 배포와 운영\". Next.js + Supabase + Vercel로 AI SaaS를 프로덕션에 배포하고, 모니터링·확장·수익화까지 운영하는 실전 과정",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

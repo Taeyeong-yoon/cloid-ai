@@ -62,5 +62,19 @@
       "prompt": "Identify potential opportunities for new features in Claude Market skills based on user needs.",
       "followUp": "Experiment with different user demographics to see how opportunities change."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"Claude Market 스킬 성능 분석\". Claude Market 스킬의 사용 패턴을 분석하고 개선 기회를 발굴하는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

@@ -1,11 +1,81 @@
 ---
-steps: [{"title":"Request AI to Generate ToDo App","description":"Learn how to ask AI for code to create a functional ToDo app.","action":"Input the provided prompt into Claude or ChatGPT to generate the HTML, CSS, and JavaScript code for a ToDo app.","codeSnippet":"HTML, CSS, JavaScript를 사용해서 ToDo 앱을 만들어주세요. 요구사항: - 파일 하나 (index.html)로 완성 - 할 일 추가 (입력창 + 버튼) - 할 일 완료 체크 (체크박스 클릭 시 취소선) - 할 일 삭제 버튼 - 새로고침해도 목록 유지 (localStorage 사용) - 디자인: 깔끔하고 모던하게, 보라색 계열 색상 - 초보자도 이해할 수 있도록 코드에 한국어 주석 달아주세요.","expectedResult":"You receive a complete code for a ToDo app.","failureHint":"If you don't receive code, try rephrasing your request for clarity."},{"title":"Save and Run the Generated Code","description":"Execute the generated code to see the ToDo app in action.","action":"Copy the generated code and paste it into a text editor, then save it as 'todo.html' and double-click to open in a browser.","expectedResult":"The ToDo app opens in your browser, functioning as intended.","failureHint":"If the app doesn't open, ensure you saved the file with the correct .html extension."},{"title":"Add Features to the ToDo App","description":"Enhance the functionality of your ToDo app by requesting additional features from AI.","action":"Input the prompt for adding new features to the existing ToDo app into Claude or ChatGPT.","codeSnippet":"위에서 만든 ToDo 앱에 아래 기능을 추가해주세요: 추가 기능: 1. 할 일에 우선순위 설정 (높음/보통/낮음) + 색상 구분 2. 완료된 항목 일괄 삭제 버튼 3. 전체/미완료/완료 필터 탭 기존 코드 전체를 수정된 버전으로 다시 출력해주세요.","expectedResult":"You receive an updated version of the ToDo app code with new features.","failureHint":"If the response is unclear, specify which features you want to prioritize."},{"title":"Implement and Test New Features","description":"Integrate the new features into your ToDo app and test their functionality.","action":"Replace the existing code in 'todo.html' with the updated code provided by AI and refresh the browser.","expectedResult":"The ToDo app now includes the new features and functions correctly.","failureHint":"If features are not working, check for any syntax errors in the code."},{"title":"Debugging with AI","description":"Learn to troubleshoot errors by communicating effectively with AI.","action":"If you encounter errors, copy the error message and relevant code, then ask AI for help with debugging.","codeSnippet":"아래 코드를 실행했더니 에러가 납니다. 에러 메시지: [에러 복사 붙여넣기] 코드: [문제 코드] 브라우저: [크롬/파이어폭스 등] 원인을 찾아 수정한 전체 코드를 주세요.","expectedResult":"AI provides a corrected version of your code that resolves the errors.","failureHint":"If AI does not understand the issue, try to provide more context or simplify your request."}]
----
----
-title: "AI로 코딩하기 — 비개발자도 웹앱 만드는 법"
-tags: ["코딩", "웹개발", "HTML", "CSS", "JavaScript", "비개발자"]
-difficulty: "intermediate"
-summary: "코딩 지식 없이도 AI로 실제 동작하는 웹앱을 만드는 단계별 실전 가이드"
+title: AI로 코딩하기 — 비개발자도 웹앱 만드는 법
+tags:
+  - 코딩
+  - 웹개발
+  - HTML
+  - CSS
+  - JavaScript
+  - 비개발자
+difficulty: intermediate
+summary: 코딩 지식 없이도 AI로 실제 동작하는 웹앱을 만드는 단계별 실전 가이드
+steps:
+  - title: Create Your ToDo App
+    description: You will generate a basic ToDo app using AI.
+    action: >-
+      Input the provided prompt into Claude or ChatGPT to generate the HTML,
+      CSS, and JavaScript code for a ToDo app.
+    codeSnippet: |-
+      HTML, CSS, JavaScript를 사용해서 ToDo 앱을 만들어주세요.
+
+      요구사항:
+      - 파일 하나 (index.html)로 완성
+      - 할 일 추가 (입력창 + 버튼)
+      - 할 일 완료 체크 (체크박스 클릭 시 취소선)
+      - 할 일 삭제 버튼
+      - 새로고침해도 목록 유지 (localStorage 사용)
+      - 디자인: 깔끔하고 모던하게, 보라색 계열 색상
+
+      초보자도 이해할 수 있도록 코드에 한국어 주석 달아주세요.
+    expectedResult: You receive a complete code snippet for the ToDo app.
+    failureHint: 'If the AI doesn''t respond with code, rephrase your request for clarity.'
+  - title: Save and Run the App
+    description: You will save the generated code and run the app in your browser.
+    action: >-
+      Copy the generated code into a text editor, save it as 'todo.html', and
+      double-click the file to open it in your browser.
+    expectedResult: The ToDo app should open and function in your browser.
+    failureHint: 'If the app doesn''t work, check for any missing elements in the code.'
+  - title: Add New Features
+    description: You will enhance the ToDo app by adding new functionalities.
+    action: >-
+      Input the provided prompt into Claude or ChatGPT to request additional
+      features for your ToDo app.
+    codeSnippet: |-
+      위에서 만든 ToDo 앱에 아래 기능을 추가해주세요:
+
+      추가 기능:
+      1. 할 일에 우선순위 설정 (높음/보통/낮음) + 색상 구분
+      2. 완료된 항목 일괄 삭제 버튼
+      3. 전체/미완료/완료 필터 탭
+
+      기존 코드 전체를 수정된 버전으로 다시 출력해주세요.
+    expectedResult: You receive an updated version of the ToDo app code with new features.
+    failureHint: >-
+      If the AI doesn't provide the updated code, clarify your request for
+      specific features.
+  - title: Implement and Test New Features
+    description: You will implement the new features and test them in your app.
+    action: >-
+      Copy the updated code into your 'todo.html' file, save it, and refresh the
+      browser to see the changes.
+    expectedResult: The ToDo app now includes the new features and functions correctly.
+    failureHint: 'If features are not working, review the code for any errors or omissions.'
+  - title: Debugging Issues
+    description: You will learn to debug errors by communicating with AI.
+    action: >-
+      If you encounter any errors, copy the error message and the relevant code,
+      then ask the AI for help in fixing it.
+    codeSnippet: |-
+      아래 코드를 실행했더니 에러가 납니다.
+
+      에러 메시지: [에러 복사 붙여넣기]
+      코드: [문제 코드]
+      브라우저: [크롬/파이어폭스 등]
+
+      원인을 찾아 수정한 전체 코드를 주세요.
+    expectedResult: You receive a corrected version of your code that resolves the issues.
+    failureHint: 'If the AI doesn''t help, try to describe the problem in more detail.'
 ---
 
 ## 🎯 학습 목표

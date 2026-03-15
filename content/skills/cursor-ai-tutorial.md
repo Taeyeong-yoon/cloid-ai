@@ -1,11 +1,46 @@
 ---
-steps: [{"title":"Install Cursor","description":"Download and install the Cursor AI editor.","action":"Go to cursor.com and download the Cursor application.","expectedResult":"Cursor is successfully installed on your machine.","failureHint":"Check your internet connection or try downloading from a different browser."},{"title":"Import VS Code Settings","description":"Import your existing VS Code settings if you're a previous user.","action":"Open Cursor and navigate to Settings → Import VS Code settings.","expectedResult":"Your previous VS Code settings are successfully imported into Cursor.","failureHint":"Ensure that you have a valid VS Code settings file."},{"title":"Create a New Project","description":"Set up a new Next.js project for the to-do app.","action":"Open the terminal in Cursor and run: npx create-next-app@latest todo-app --typescript --tailwind --app","codeSnippet":"npx create-next-app@latest todo-app --typescript --tailwind --app","expectedResult":"A new Next.js project named 'todo-app' is created.","failureHint":"Make sure you have Node.js installed and updated."},{"title":"Use Composer to Generate App Structure","description":"Utilize the Composer feature to create the necessary file structure for the to-do app.","action":"Press Ctrl+I and provide the app structure request as described.","expectedResult":"The specified files and structure for the to-do app are created.","failureHint":"Ensure your request is clear and matches the required format."},{"title":"Run the Application","description":"Start the development server to test the application.","action":"In the terminal, run: npm run dev and access localhost:3000 in your browser.","codeSnippet":"npm run dev","expectedResult":"The to-do app is running and accessible in your web browser.","failureHint":"Check for any errors in the terminal and ensure all dependencies are installed."}]
----
----
-title: "Cursor AI 완전 정복 — 설치부터 프로젝트 완성까지"
-tags: ["Cursor", "AI 코딩", "IDE", "개발 도구"]
-difficulty: "intermediate"
-summary: "Cursor AI 에디터 설치·설정부터 실제 투두앱 완성까지, AI 코딩 에디터 실전 가이드"
+title: Cursor AI 완전 정복 — 설치부터 프로젝트 완성까지
+tags:
+  - Cursor
+  - AI 코딩
+  - IDE
+  - 개발 도구
+difficulty: intermediate
+summary: 'Cursor AI 에디터 설치·설정부터 실제 투두앱 완성까지, AI 코딩 에디터 실전 가이드'
+steps:
+  - title: Install Cursor
+    description: Download and install the Cursor AI editor.
+    action: 'Go to cursor.com, download the Cursor application, and install it.'
+    expectedResult: Cursor is successfully installed on your machine.
+    failureHint: Ensure your internet connection is stable and try reloading the page.
+  - title: Import VS Code Settings (Optional)
+    description: Import your existing VS Code settings if you are a previous user.
+    action: 'Open Cursor and navigate to Settings, then import your VS Code settings.'
+    expectedResult: Your VS Code settings are now available in Cursor.
+    failureHint: Check the settings file format and ensure it is compatible.
+  - title: Create a New Project
+    description: Set up your first project in Cursor.
+    action: >-
+      Open the terminal (Ctrl+`) and run 'npx create-next-app@latest todo-app
+      --typescript --tailwind --app'.
+    codeSnippet: npx create-next-app@latest todo-app --typescript --tailwind --app
+    expectedResult: A new Next.js project named 'todo-app' is created.
+    failureHint: Ensure Node.js is installed and updated on your system.
+  - title: Build Todo App Structure
+    description: Use Composer to generate the structure for your Todo app.
+    action: Press Ctrl+I and provide the structure request for the Todo app.
+    expectedResult: The file structure for the Todo app is created as specified.
+    failureHint: >-
+      Make sure to clearly define the required features and file structure in
+      your request.
+  - title: Run Your Application
+    description: Start the development server to test your Todo app.
+    action: Run 'npm run dev' in the terminal.
+    codeSnippet: npm run dev
+    expectedResult: >-
+      The development server starts, and you can access your app at
+      localhost:3000.
+    failureHint: Check for any errors in the terminal and resolve them before trying again.
 ---
 
 ## 🎯 학습 목표

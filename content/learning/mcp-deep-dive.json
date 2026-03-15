@@ -120,5 +120,19 @@
       "prompt": "Set up the official filesystem MCP server and connect it to Claude Desktop to read and write files.",
       "followUp": "Experiment with adding a command to list all files in a specific directory."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"MCP 프로토콜 심화\". Model Context Protocol의 내부 아키텍처, 커스텀 서버 구축, 프로덕션 배포까지 MCP를 완전히 마스터하는 고급 과정",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

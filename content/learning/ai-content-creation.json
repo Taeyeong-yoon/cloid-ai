@@ -120,5 +120,19 @@
       "prompt": "Convert the following text into a natural-sounding AI voice narration: 'Welcome to our channel where we explore the latest in AI technology.'",
       "followUp": "Try using a different tone or style for the narration."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"AI 콘텐츠 제작 파이프라인\". 블로그·유튜브·SNS·뉴스레터를 AI로 제작하는 End-to-End 파이프라인 구축 실전 과정",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

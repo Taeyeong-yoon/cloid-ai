@@ -68,5 +68,19 @@
       "prompt": "How do I set up a route handler for the Gemini API in my Next.js app?",
       "followUp": "Modify the route to handle different query parameters."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"AI API 연동 실습\". OpenAI, Claude, Gemini API를 Next.js에 연동하고 라우트 핸들러를 구현하는 고급 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

@@ -1,11 +1,39 @@
 ---
-steps: [{"title":"Understand the Difference","description":"Learn the difference between vague and specific prompts.","action":"Read the provided examples of bad and good prompts.","expectedResult":"You can explain how specific prompts yield better responses from AI.","failureHint":"Revisit the examples and identify key elements in the good prompts."},{"title":"Practice Writing Prompts","description":"Create your own prompts using the four essential elements.","action":"Draft a prompt that includes role, goal, format, and constraints.","expectedResult":"You have a well-structured prompt ready for AI.","failureHint":"Check if you have included all four elements in your prompt."},{"title":"Experiment with AI Responses","description":"Test your prompt with an AI model to see the output.","action":"Input your crafted prompt into ChatGPT or Claude.","expectedResult":"You receive a response that aligns with your expectations.","failureHint":"Adjust your prompt based on the response and try again."},{"title":"Refine Your Prompt","description":"Learn to guide AI responses through feedback.","action":"Take the output from the AI and ask for specific modifications.","expectedResult":"You successfully receive a revised response that meets your needs.","failureHint":"Be clear about what changes you want in your request."},{"title":"Challenge Yourself","description":"Apply your knowledge by creating a new prompt.","action":"Choose a topic you are interested in and write a good prompt for it.","expectedResult":"You have a new, effective prompt that you can test with AI.","failureHint":"Refer back to the checklist of the four essential elements if needed."}]
----
----
-title: "프롬프트 작성법 기초 — 좋은 질문이 좋은 답을 만든다"
-tags: ["프롬프트", "AI 기초", "ChatGPT", "Claude"]
-difficulty: "beginner"
-summary: "나쁜 프롬프트 vs 좋은 프롬프트 비교로 배우는 AI 질문법 기초"
+title: 프롬프트 작성법 기초 — 좋은 질문이 좋은 답을 만든다
+tags:
+  - 프롬프트
+  - AI 기초
+  - ChatGPT
+  - Claude
+difficulty: beginner
+summary: 나쁜 프롬프트 vs 좋은 프롬프트 비교로 배우는 AI 질문법 기초
+steps:
+  - title: Understand Prompt Quality
+    description: Learn the four essential elements of a good prompt.
+    action: >-
+      Read the section on the four elements of prompt quality: Role, Goal,
+      Format, and Constraint.
+    expectedResult: You can explain the differences between vague and specific prompts.
+    failureHint: Revisit the definitions of each element if you are unsure.
+  - title: Compare Bad vs Good Prompts
+    description: Experiment with prompts to see the difference in responses.
+    action: >-
+      Input the bad prompt and the good prompt into ChatGPT or Claude and
+      compare the results.
+    expectedResult: You can see a significant difference in the quality of AI responses.
+    failureHint: Try rephrasing the prompts for clarity if results are unclear.
+  - title: Create Your Own Prompt
+    description: Apply what you've learned by crafting your own effective prompt.
+    action: >-
+      Write a prompt using the four elements: Role, Goal, Format, and
+      Constraint.
+    expectedResult: You have a well-structured prompt ready to use with AI.
+    failureHint: Check if you included all four elements if your prompt feels incomplete.
+  - title: Request AI Feedback
+    description: Learn how to refine your AI interactions.
+    action: Use your crafted prompt with AI and ask for feedback on its effectiveness.
+    expectedResult: You receive actionable suggestions to improve your prompt.
+    failureHint: Revise your prompt based on the feedback received.
 ---
 
 ## 🎯 학습 목표

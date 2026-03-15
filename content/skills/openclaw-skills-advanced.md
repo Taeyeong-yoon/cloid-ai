@@ -1,9 +1,53 @@
 ---
-title: "OpenClaw 스킬 개발 — 나만의 AI 에이전트 능력 만들기"
-tags: ["OpenClaw","스킬 개발","AI 에이전트","자동화","ClawHub"]
-difficulty: "advanced"
-summary: "OpenClaw 커스텀 스킬을 마크다운으로 직접 작성하고, ClawHub에 배포하는 고급 에이전트 개발 과정"
-steps: [{"title":"Understand OpenClaw Skill Structure","description":"Learn the basic structure and components of an OpenClaw skill.","action":"Review the provided markdown structure of an OpenClaw skill and identify each component.","expectedResult":"You can explain the purpose of each section in the skill structure.","failureHint":"Revisit the 'OpenClaw Skill Structure' section for clarification."},{"title":"Create a Custom Skill","description":"Write your own OpenClaw skill using markdown.","action":"Draft a markdown file for a skill that provides daily briefings in Korean.","codeSnippet":"Copy the provided 'daily-briefing-ko' markdown structure and modify it as needed.","expectedResult":"You have a markdown file ready for your custom skill.","failureHint":"Ensure you follow the markdown format exactly as shown in the example."},{"title":"Install the Skill Locally","description":"Add your custom skill to your local OpenClaw workspace.","action":"Run the command to copy your skill file into the OpenClaw skills directory.","codeSnippet":"cp daily-briefing-ko.md ~/.openclaw/skills/","expectedResult":"Your skill is successfully added to the local skills list.","failureHint":"Check the file path and ensure the command was entered correctly."},{"title":"Test the Skill","description":"Run your custom skill to verify it works as intended.","action":"Execute the command to run your skill immediately.","codeSnippet":"openclaw skills run daily-briefing-ko","expectedResult":"Your skill runs without errors and produces the expected output.","failureHint":"Review the skill's markdown for errors if it does not run correctly."},{"title":"Publish the Skill to ClawHub","description":"Deploy your skill to the ClawHub for others to use.","action":"Login to ClawHub and publish your skill with the necessary parameters.","codeSnippet":"openclaw hub publish daily-briefing-ko.md --category 'productivity' --language 'ko' --tags 'calendar,briefing,korean'","expectedResult":"Your skill is successfully published and available on ClawHub.","failureHint":"Ensure you have a ClawHub account and that you are logged in before publishing."}]
+title: OpenClaw 스킬 개발 — 나만의 AI 에이전트 능력 만들기
+tags:
+  - OpenClaw
+  - 스킬 개발
+  - AI 에이전트
+  - 자동화
+  - ClawHub
+difficulty: advanced
+summary: 'OpenClaw 커스텀 스킬을 마크다운으로 직접 작성하고, ClawHub에 배포하는 고급 에이전트 개발 과정'
+steps:
+  - title: Understand OpenClaw Skill Structure
+    description: Learn the basic structure and components of an OpenClaw skill.
+    action: >-
+      Review the provided markdown structure of an OpenClaw skill and identify
+      each component.
+    expectedResult: You can explain the purpose of each section in the skill structure.
+    failureHint: Revisit the 'OpenClaw Skill Structure' section for clarification.
+  - title: Create a Custom Skill
+    description: Write your own OpenClaw skill using markdown.
+    action: Draft a markdown file for a skill that provides daily briefings in Korean.
+    codeSnippet: >-
+      Copy the provided 'daily-briefing-ko' markdown structure and modify it as
+      needed.
+    expectedResult: You have a markdown file ready for your custom skill.
+    failureHint: Ensure you follow the markdown format exactly as shown in the example.
+  - title: Install the Skill Locally
+    description: Add your custom skill to your local OpenClaw workspace.
+    action: >-
+      Run the command to copy your skill file into the OpenClaw skills
+      directory.
+    codeSnippet: cp daily-briefing-ko.md ~/.openclaw/skills/
+    expectedResult: Your skill is successfully added to the local skills list.
+    failureHint: Check the file path and ensure the command was entered correctly.
+  - title: Test the Skill
+    description: Run your custom skill to verify it works as intended.
+    action: Execute the command to run your skill immediately.
+    codeSnippet: openclaw skills run daily-briefing-ko
+    expectedResult: Your skill runs without errors and produces the expected output.
+    failureHint: Review the skill's markdown for errors if it does not run correctly.
+  - title: Publish the Skill to ClawHub
+    description: Deploy your skill to the ClawHub for others to use.
+    action: Login to ClawHub and publish your skill with the necessary parameters.
+    codeSnippet: >-
+      openclaw hub publish daily-briefing-ko.md --category 'productivity'
+      --language 'ko' --tags 'calendar,briefing,korean'
+    expectedResult: Your skill is successfully published and available on ClawHub.
+    failureHint: >-
+      Ensure you have a ClawHub account and that you are logged in before
+      publishing.
 ---
 
 ## 🎯 학습 목표

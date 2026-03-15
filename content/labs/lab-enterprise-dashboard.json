@@ -62,5 +62,19 @@
       "prompt": "What trends can you identify in our monthly sales over the past year?",
       "followUp": "Experiment by asking about trends in a specific product line."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"Claude 기반 AI 대시보드 구축\". 데이터를 자연어로 쿼리하는 Claude 기반 비즈니스 인텔리전스 대시보드 구축 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

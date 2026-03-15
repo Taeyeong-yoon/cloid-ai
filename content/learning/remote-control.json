@@ -113,5 +113,19 @@
       "prompt": "How can I set up an AI agent to perform daily backups at a specific time?",
       "followUp": "Modify the schedule to include weekly reports on backup status."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"AI 원격 제어 & 자동화\". AI를 활용해 서버, CI/CD, 클라우드 인프라를 자동으로 제어하는 방법",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

@@ -133,5 +133,19 @@
       "prompt": "What steps do I need to follow to create a GitHub Issues notification skill in markdown and test it locally?",
       "followUp": "Deploy your skill to ClawHub and monitor its performance."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"OpenClaw 완전 정복\". 220,000+ GitHub 스타의 오픈소스 AI 에이전트 OpenClaw로 Claude + 텔레그램을 연동해 24시간 나만의 AI 비서를 구축하고, ClawHub 커스텀 스킬까지 직접 만드는 2026년 최신 과정",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

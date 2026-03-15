@@ -67,5 +67,19 @@
       "prompt": "Fetch and display a list of users from an API in your Next.js app.",
       "followUp": "Modify the API endpoint to fetch posts instead of users."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"Claude Code로 웹사이트 만들기\". Claude Code 에이전트 모드로 처음부터 끝까지 Next.js 웹사이트를 자율 구현하는 고급 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

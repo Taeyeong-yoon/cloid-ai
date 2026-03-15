@@ -67,5 +67,19 @@
       "prompt": "How can I express my career goals in my self-introduction effectively?",
       "followUp": "Modify the goals to reflect both short-term and long-term aspirations."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"첫 ChatGPT 대화: 자기소개서 만들기\". ChatGPT와의 첫 대화로 나만의 자기소개서를 단계별로 완성하는 입문 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

@@ -1,11 +1,52 @@
 ---
-steps: [{"title":"Load PDF Files","description":"This step prepares your PDF files for processing.","action":"Use Python to load multiple PDF files into your script.","expectedResult":"All specified PDF files are successfully loaded into the program.","failureHint":"Check the file paths and ensure the files are accessible."},{"title":"Chunk the Documents","description":"This step breaks down the loaded documents into manageable chunks.","action":"Implement a chunking strategy with a size of 500 tokens and an overlap of 50 tokens.","expectedResult":"Documents are divided into chunks as specified, ready for embedding.","failureHint":"Verify that the chunking function handles the document structure correctly."},{"title":"Embed the Chunks","description":"This step converts text chunks into embeddings for vector storage.","action":"Use the OpenAI text-embedding-3-small model to embed the document chunks.","expectedResult":"All document chunks are successfully converted into embeddings and stored in a variable.","failureHint":"Ensure the OpenAI API is correctly integrated and that you have valid API keys."},{"title":"Store Embeddings in VectorDB","description":"This step saves the embeddings into a local Chroma vector database.","action":"Store the embeddings along with their metadata in the Chroma database.","expectedResult":"Embeddings are successfully saved in the Chroma vector database.","failureHint":"Check the database connection and ensure the schema is correctly defined."},{"title":"Implement Similarity Search","description":"This step allows you to retrieve relevant document chunks based on user queries.","action":"Set up a similarity search using cosine similarity to find the top 5 relevant chunks.","expectedResult":"The program returns the top 5 relevant document chunks based on the user's query.","failureHint":"Ensure the similarity search function is correctly implemented and the embeddings are accessible."}]
----
----
-title: "RAG 시스템 구현하기 — 나만의 데이터로 AI 답변받기"
-tags: ["RAG", "벡터DB", "임베딩", "LangChain", "Supabase"]
-difficulty: "advanced"
-summary: "벡터DB + 임베딩 + 검색 파이프라인으로 나만의 문서 기반 AI 질의응답 시스템을 구축하는 실전 가이드"
+title: RAG 시스템 구현하기 — 나만의 데이터로 AI 답변받기
+tags:
+  - RAG
+  - 벡터DB
+  - 임베딩
+  - LangChain
+  - Supabase
+difficulty: advanced
+summary: 벡터DB + 임베딩 + 검색 파이프라인으로 나만의 문서 기반 AI 질의응답 시스템을 구축하는 실전 가이드
+steps:
+  - title: Load PDF Files
+    description: Load multiple PDF files for processing.
+    action: Use the `pypdf` library to load your PDF documents.
+    codeSnippet: |-
+      from pypdf import PdfReader
+      reader = PdfReader('your_file.pdf')
+    expectedResult: PDF files are successfully loaded and ready for chunking.
+    failureHint: Check if the file path is correct and if the `pypdf` library is installed.
+  - title: Chunk the Documents
+    description: Break the loaded documents into manageable chunks.
+    action: Implement a chunking strategy with 500 tokens and 50-token overlap.
+    codeSnippet: 'chunks = chunk_documents(reader.pages, chunk_size=500, overlap=50)'
+    expectedResult: Documents are divided into chunks based on the specified parameters.
+    failureHint: Ensure the chunking function is correctly defined and handles overlaps.
+  - title: Embed the Chunks
+    description: Convert the text chunks into embeddings.
+    action: Use the OpenAI embedding model to generate embeddings for each chunk.
+    codeSnippet: 'embeddings = get_embeddings(chunks, model=''text-embedding-3-small'')'
+    expectedResult: Each chunk is now represented as a vector in the embedding space.
+    failureHint: Verify the embedding model is accessible and the input format is correct.
+  - title: Store in Vector Database
+    description: Save the embeddings into a local vector database.
+    action: Use Chroma to store the embeddings along with metadata.
+    codeSnippet: 'store_embeddings_in_chroma(embeddings, metadata)'
+    expectedResult: Embeddings are successfully stored in the vector database.
+    failureHint: >-
+      Check the connection to the Chroma database and ensure the storage
+      function is implemented.
+  - title: Implement Query Handling
+    description: Set up the query handling mechanism to retrieve answers.
+    action: >-
+      Write a function that embeds user queries and retrieves relevant chunks
+      from the vector database.
+    codeSnippet: 'results = search_vector_db(user_query, db, top_k=5)'
+    expectedResult: Relevant document chunks are retrieved based on the user's query.
+    failureHint: >-
+      Ensure the search function is correctly querying the vector database and
+      handling embeddings.
 ---
 
 ## 🎯 학습 목표

@@ -88,5 +88,19 @@
       "prompt": "Upload an image to Gemini CLI and extract its metadata, including dimensions and file type.",
       "followUp": "Test with images of different formats and sizes to see how the metadata varies."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"Gemini CLI: Analyzing Images and Mixed-Media Documents\". Use Gemini CLI's multimodal capabilities to analyze images, extract text from screenshots, and process documents containing mixed media.",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

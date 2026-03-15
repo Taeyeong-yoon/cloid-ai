@@ -1,11 +1,44 @@
 ---
-steps: [{"title":"XML Tag Structuring","description":"Learn to structure context using XML tags for better communication with Claude.","action":"Create a prompt using XML tags to define a role, task, and output format.","codeSnippet":"<role>\nYou are a senior full-stack engineer with 10 years of experience.\nConsider security, performance, and readability during code reviews.\n</role>\n<task>Review the code below and provide improvement suggestions.</task>\n<code language=\"javascript\">\nasync function getUser(id) {\n  const res = await fetch('/api/user/' + id);\n  const data = res.json();\n  return data;\n}\n</code>\n<output_format>\n1. Bugs/Errors (high priority)\n2. Security vulnerabilities\n3. Performance improvements\n4. Readability enhancements\nEach item should include the issue + corrected code.\n</output_format>","expectedResult":"A structured prompt that Claude can understand and respond to accurately.","failureHint":"Try simplifying your XML structure if Claude does not respond correctly."},{"title":"Prompt Chaining","description":"Break down complex tasks into a chain of prompts for better results.","action":"Implement a three-step prompt chain using the provided structure.","codeSnippet":"<task>Analyze</task>\n<input>\n[Text/Data to analyze]\n</input>\n<instruction>\nExtract 3 key themes and their core reasons from the content. Output in JSON format.\n</instruction>","expectedResult":"A coherent analysis that leads to a summary document in the next step.","failureHint":"Ensure each step of the chain is clear and follows logically from the previous one."},{"title":"Role and Constraints Setting","description":"Set roles and constraints to guide Claude's responses effectively.","action":"Define a role and constraints for a specific task using XML format.","codeSnippet":"<role>\nYou are a [expert role].\n[Key characteristics of the role]\n</role>\n<constraints>\n- Must include: [mandatory elements]\n- Exclude: [prohibited items]\n- Language: Korean\n- Length: [limit]\n</constraints>\n<task>[Task details]</task>","expectedResult":"A clear directive for Claude that aligns with your expectations.","failureHint":"Review the constraints to ensure they are not too restrictive."}]
----
----
-title: "Claude 고급 프롬프트 패턴 — XML 태그, 시스템 프롬프트, 체이닝"
-tags: ["Claude", "프롬프트 엔지니어링", "XML", "체이닝"]
-difficulty: "intermediate"
-summary: "Claude에서 XML 구조화·시스템 프롬프트·프롬프트 체이닝을 활용해 전문가급 결과를 얻는 패턴"
+title: 'Claude 고급 프롬프트 패턴 — XML 태그, 시스템 프롬프트, 체이닝'
+tags:
+  - Claude
+  - 프롬프트 엔지니어링
+  - XML
+  - 체이닝
+difficulty: intermediate
+summary: Claude에서 XML 구조화·시스템 프롬프트·프롬프트 체이닝을 활용해 전문가급 결과를 얻는 패턴
+steps:
+  - title: Structure Context with XML Tags
+    description: Learn how to use XML tags to provide structured context to Claude.
+    action: 'Create a prompt using XML tags to define a role, task, and output format.'
+    codeSnippet: |-
+      <role>...</role>
+      <task>...</task>
+      <code language="javascript">...</code>
+      <output_format>...</output_format>
+    expectedResult: Claude understands the context clearly and responds appropriately.
+    failureHint: Check if all XML tags are properly closed and structured.
+  - title: Analyze a Complex Task
+    description: Break down a complex task into manageable parts using prompt chaining.
+    action: >-
+      Write a prompt to analyze a given text and extract key themes in JSON
+      format.
+    codeSnippet: |-
+      <task>Analyze</task>
+      <input>...</input>
+      <instruction>...</instruction>
+    expectedResult: Claude provides a JSON output with key themes and supporting evidence.
+    failureHint: Ensure the input text is clear and the instruction is specific.
+  - title: Create an Executive Summary
+    description: Utilize the previous analysis to generate a concise executive summary.
+    action: Use the output from the analysis step as input to create a summary.
+    codeSnippet: |-
+      <previous_result>...</previous_result>
+      <task>Write a one-page summary...</task>
+    expectedResult: >-
+      Claude generates a well-structured executive summary based on the
+      analysis.
+    failureHint: Verify that the previous result is correctly referenced.
 ---
 
 ## 🎯 학습 목표

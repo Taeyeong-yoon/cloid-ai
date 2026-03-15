@@ -67,5 +67,19 @@
       "prompt": "Develop a mini HTML app that shows the current weather for a specified city.",
       "followUp": "Experiment by adding a feature to show the forecast for the next three days."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"AI로 HTML 미니앱 만들기\". Claude에게 요구사항을 말하면 단일 HTML 파일로 동작하는 미니앱을 만드는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

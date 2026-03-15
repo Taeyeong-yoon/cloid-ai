@@ -62,5 +62,19 @@
       "prompt": "Generate a report that outlines the effects of climate change on agriculture, including recommendations for farmers.",
       "followUp": "Try changing the focus of the report to include economic impacts or adaptation strategies."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"스킬 체이닝으로 메가 에이전트 만들기\". 여러 Claude 스킬을 연결하여 복잡한 연구-분석-보고 파이프라인을 구축하는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

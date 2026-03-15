@@ -68,5 +68,19 @@
       "prompt": "What steps do I need to follow to enable monitoring for my Next.js app on Vercel?",
       "followUp": "Try adjusting the monitoring settings and check the performance metrics."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"AI 앱 Vercel에 배포하기\". Next.js AI 앱을 Vercel에 프로덕션 배포하고, 환경변수·도메인·모니터링을 설정하는 고급 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

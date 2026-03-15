@@ -120,5 +120,19 @@
       "prompt": "Show how to set up Git for version control in your Claude Code project and commit your changes.",
       "followUp": "Experiment with branching and merging in your Git setup."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"Claude Code 마스터\". Claude Code의 에이전트 모드, CLAUDE.md 설정, Git 통합, 멀티파일 작업까지 전문가 수준으로 활용하는 심화 과정",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

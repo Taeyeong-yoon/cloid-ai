@@ -1,11 +1,51 @@
 ---
-steps: [{"title":"Create a ChatGPT Account","description":"This step helps you set up your ChatGPT account.","action":"Visit `chat.openai.com` and click on the [Sign up] button. Follow the prompts to create your account.","expectedResult":"You have successfully created your ChatGPT account and are logged in.","failureHint":"If you encounter issues, check your email for a verification link or try using a different browser."},{"title":"Log In to ChatGPT","description":"This step ensures you can access your account.","action":"Enter your credentials on the ChatGPT login page and click 'Log in'.","expectedResult":"You see the ChatGPT interface with the conversation history on the left.","failureHint":"If login fails, ensure your username and password are correct or reset your password."},{"title":"Send Your First Message","description":"This step introduces you to interacting with ChatGPT.","action":"Type the prompt: 'Hello! I'm a beginner using ChatGPT. Can you explain 5 things you can help me with?' and press Enter.","expectedResult":"You receive a response from ChatGPT outlining five tasks it can assist with.","failureHint":"If you don't receive a response, check your internet connection or try reloading the page."},{"title":"Engage in a Follow-Up Conversation","description":"This step teaches you how to continue the dialogue effectively.","action":"After receiving the initial response, type: 'Which of the 5 things is most commonly used by office workers? Please explain why.' and press Enter.","expectedResult":"ChatGPT provides a follow-up answer, demonstrating how to keep the conversation going.","failureHint":"If the response is not satisfactory, ask for clarification or a more detailed explanation."},{"title":"Practice with Prompts","description":"This step encourages you to utilize various prompts for better results.","action":"Try using one of the provided prompt templates to ask ChatGPT about a topic of your choice.","expectedResult":"You receive a tailored response based on the prompt you used, enhancing your interaction skills.","failureHint":"If the response is not what you expected, refine your prompt for clarity and specificity."}]
----
----
-title: "ChatGPT 처음 시작하기 — 회원가입부터 첫 대화까지"
-tags: ["ChatGPT", "AI 기초", "초보자"]
-difficulty: "beginner"
-summary: "ChatGPT 계정 만들고 첫 대화를 성공적으로 마치는 완전 초보자 가이드"
+title: ChatGPT 처음 시작하기 — 회원가입부터 첫 대화까지
+tags:
+  - ChatGPT
+  - AI 기초
+  - 초보자
+difficulty: beginner
+summary: ChatGPT 계정 만들고 첫 대화를 성공적으로 마치는 완전 초보자 가이드
+steps:
+  - title: Create Your ChatGPT Account
+    description: This step allows you to set up your ChatGPT account.
+    action: >-
+      Visit `chat.openai.com` and click on the [Sign up] button. Choose to sign
+      up using your email or Google/Apple account.
+    expectedResult: You successfully initiate the account creation process.
+    failureHint: Ensure you have a valid email or Google/Apple account ready.
+  - title: Verify Your Email
+    description: This step ensures your email is verified for account security.
+    action: Check your email for a verification link and click on it.
+    expectedResult: >-
+      Your email is verified, and you can proceed to complete your account
+      setup.
+    failureHint: >-
+      If you don't see the email, check your spam folder or request a new
+      verification email.
+  - title: Log In to ChatGPT
+    description: This step gets you into your ChatGPT account.
+    action: Enter your credentials to log in to your new ChatGPT account.
+    expectedResult: You are logged in and can see the ChatGPT interface.
+    failureHint: 'If you can''t log in, double-check your email and password for accuracy.'
+  - title: Send Your First Message
+    description: This step allows you to interact with ChatGPT.
+    action: >-
+      Type the prompt: 'Hello! I'm a beginner using ChatGPT. Can you explain
+      five things you can help with?' in the message input box and hit Enter.
+    expectedResult: 'You receive a response from ChatGPT, indicating successful interaction.'
+    failureHint: 'If you don''t receive a response, ensure you are connected to the internet.'
+  - title: Continue the Conversation
+    description: This step teaches you how to keep the dialogue going.
+    action: >-
+      Follow up with the prompt: 'From the five things you mentioned, which one
+      is most commonly used by professionals? Please explain why.'
+    expectedResult: >-
+      You receive another response, demonstrating the ability to continue the
+      conversation.
+    failureHint: >-
+      If the response is not satisfactory, try rephrasing your follow-up
+      question.
 ---
 
 ## 🎯 학습 목표

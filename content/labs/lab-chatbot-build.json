@@ -67,5 +67,19 @@
       "prompt": "Simulate a user asking your chatbot for advice on learning programming languages.",
       "followUp": "Change the user's question to see how the chatbot adapts its advice."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"나만의 AI 챗봇 만들기\". Claude API를 활용해 특정 페르소나를 가진 나만의 AI 챗봇을 HTML 단일 파일로 구현하는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

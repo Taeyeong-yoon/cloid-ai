@@ -126,5 +126,19 @@
       "prompt": "Build a workflow that triggers the Claude API to analyze data and return insights automatically.",
       "followUp": "Add an email notification step to inform you when the analysis is complete."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"AI 에이전트 CLI 심화\". Claude Code CLI와 멀티 에이전트 파이프라인, 스킬 체이닝, Claude Market 스킬 개발 등 2026년 최신 에이전트 기술을 심층 학습합니다",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

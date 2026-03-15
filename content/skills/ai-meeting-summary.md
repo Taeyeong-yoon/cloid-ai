@@ -1,11 +1,63 @@
 ---
-steps: [{"title":"Convert Meeting Recording to Text","description":"Use Whisper API to transcribe the meeting audio file into text.","action":"Write Python code to convert the MP3/MP4 audio file to a text file using Whisper API.","codeSnippet":"import openai; # Your Whisper code here","expectedResult":"You will have a text file with the meeting transcription including timestamps.","failureHint":"Ensure your API key is set correctly and the audio file format is supported."},{"title":"Structure Meeting Minutes","description":"Organize the transcribed text into a structured meeting minutes format.","action":"Use the provided template to format the transcribed text into structured meeting minutes.","expectedResult":"You will have a well-organized document that includes meeting details, summaries, and action items.","failureHint":"Refer to the template for guidance on what information to include."},{"title":"Extract Action Items","description":"Identify and list action items from the meeting minutes.","action":"Review the structured meeting minutes and extract action items using the provided format.","expectedResult":"You will have a clear list of action items assigned to specific individuals with deadlines.","failureHint":"Look for explicit tasks mentioned in the meeting minutes to identify action items."},{"title":"Draft Follow-Up Email","description":"Create a follow-up email based on the meeting minutes.","action":"Use the follow-up email template to draft a message for all attendees summarizing key points and action items.","expectedResult":"You will have a professional follow-up email ready to send to the meeting participants.","failureHint":"Ensure to include all key decisions and remind participants of their action items."}]
----
----
-title: "AI로 회의록 자동 정리 — 녹음부터 액션아이템까지"
-tags: ["회의록", "자동화", "Whisper", "생산성", "업무 효율"]
-difficulty: "intermediate"
-summary: "회의 녹음 → Whisper 텍스트 변환 → AI 회의록 정리까지, 회의 후처리를 자동화하는 완전 가이드"
+title: AI로 회의록 자동 정리 — 녹음부터 액션아이템까지
+tags:
+  - 회의록
+  - 자동화
+  - Whisper
+  - 생산성
+  - 업무 효율
+difficulty: intermediate
+summary: '회의 녹음 → Whisper 텍스트 변환 → AI 회의록 정리까지, 회의 후처리를 자동화하는 완전 가이드'
+steps:
+  - title: Record Meeting Audio
+    description: Capture the audio of your meeting for transcription.
+    action: >-
+      Use a recording device or software to record the meeting in MP3 or MP4
+      format.
+    expectedResult: You have a clear audio recording of the meeting.
+    failureHint: >-
+      Check if the recording device is functioning properly and the audio
+      quality is acceptable.
+  - title: Convert Audio to Text with Whisper API
+    description: Transform the recorded audio into text format.
+    action: >-
+      Run the provided Python code to send the audio file to the Whisper API for
+      transcription.
+    codeSnippet: |-
+      import openai
+
+      # Your Whisper API code here
+    expectedResult: >-
+      You receive a text file containing the transcribed meeting audio with
+      timestamps.
+    failureHint: >-
+      Ensure your API key is set correctly and the audio file is within size
+      limits.
+  - title: Create Structured Meeting Notes
+    description: Organize the transcribed text into a formal meeting summary.
+    action: >-
+      Use the provided template to structure the meeting notes based on the
+      transcribed text.
+    expectedResult: >-
+      You have a well-organized document summarizing the meeting with key
+      details.
+    failureHint: Double-check the transcribed text for accuracy and completeness.
+  - title: Extract Action Items
+    description: Identify and list action items from the meeting notes.
+    action: >-
+      Use the action item extraction template to pull out tasks and assign
+      responsibilities.
+    expectedResult: You have a clear list of action items with assigned persons and deadlines.
+    failureHint: >-
+      Review the meeting notes carefully to ensure all action items are
+      captured.
+  - title: Draft Follow-Up Email
+    description: Prepare a follow-up email for meeting participants.
+    action: >-
+      Utilize the follow-up email template to draft an email summarizing the
+      meeting outcomes and action items.
+    expectedResult: You have a professional follow-up email ready to send to participants.
+    failureHint: Make sure to personalize the email and check for clarity and tone.
 ---
 
 ## 🎯 학습 목표

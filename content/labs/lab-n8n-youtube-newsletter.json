@@ -65,5 +65,19 @@
       "prompt": "Draft a newsletter for Substack using the following summaries: [insert summaries].",
       "followUp": "Modify the draft to include a personal introduction or conclusion."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"[n8n] Daily YouTube Trends to Newsletter Auto-Publishing\". Build an n8n automation that fetches trending YouTube videos in your niche daily, summarizes them with Claude, and publishes a newsletter to Substack or Notion.",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

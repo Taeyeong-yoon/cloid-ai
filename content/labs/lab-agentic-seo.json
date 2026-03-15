@@ -62,5 +62,19 @@
       "prompt": "Analyze the SEO strategy of 'example.com' and identify their top-performing keywords.",
       "followUp": "Change the competitor's URL to another site and see how the analysis differs."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"AI 기반 SEO 자동화 실습\". Claude 에이전트로 키워드 분석, 콘텐츠 최적화, 경쟁사 분석을 자동화하는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

@@ -74,5 +74,19 @@
       "prompt": "Draft a response for the email: 'Can you provide an update on my support ticket?' and outline how to save it in Gmail.",
       "followUp": "Modify the response structure and check if it affects the saving process."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"[n8n] Unmanned CS: Email Analysis to Custom Reply Pipeline\". Build an n8n workflow that reads incoming customer support emails, classifies them by type, generates personalized draft replies with Claude, and saves them as Gmail drafts.",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

@@ -1,11 +1,61 @@
 ---
-steps: [{"title":"Create a Blog Outline","description":"Generate an engaging outline for your blog post.","action":"Request an outline with 5 sections for the topic 'Focus Maintenance Tips from 3 Years of Working from Home'. Include subheadings and a brief description for each section.","expectedResult":"You will have a structured outline that keeps readers engaged.","failureHint":"If you struggle, think about the main points you want to cover and ask for a simpler outline."},{"title":"Write the Introduction","description":"Craft a compelling introduction based on your outline.","action":"Using the outline, write an introduction that presents a relatable problem, includes a personal experience, and states what readers will gain from the post.","expectedResult":"A captivating introduction of around 150 characters that draws readers in.","failureHint":"If you're stuck, focus on a personal anecdote related to the topic to start."},{"title":"Generate Social Media Content","description":"Create content for multiple social media platforms from a single idea.","action":"Use the idea 'Using AI Cuts Work Time in Half' to generate an Instagram caption, a LinkedIn post, and a Twitter thread.","expectedResult":"You will have tailored content for three different platforms that effectively communicates your message.","failureHint":"If you find it challenging, simplify your idea and focus on one platform at a time."},{"title":"Compile Writing Templates","description":"Gather your frequently used writing prompts into a personal collection.","action":"Identify and save your favorite writing templates for blogs, social media, and emails.","expectedResult":"A personalized collection of templates that you can easily access for future writing.","failureHint":"If you can't decide which templates to keep, choose the ones you've used successfully before."},{"title":"Edit for Personal Voice","description":"Refine AI-generated drafts to reflect your unique voice.","action":"Review your AI-generated content and replace any AI-like phrases with your own style.","expectedResult":"A polished draft that feels authentic and personal.","failureHint":"If editing feels overwhelming, focus on a few sentences at a time to make it manageable."}]
----
----
-title: "AI로 글쓰기 — 블로그, SNS, 이메일을 10배 빠르게"
-tags: ["글쓰기", "콘텐츠 제작", "블로그", "SNS", "이메일"]
-difficulty: "beginner"
-summary: "블로그부터 SNS 캡션까지, 용도별 AI 글쓰기 프롬프트 템플릿 완전 가이드"
+title: 'AI로 글쓰기 — 블로그, SNS, 이메일을 10배 빠르게'
+tags:
+  - 글쓰기
+  - 콘텐츠 제작
+  - 블로그
+  - SNS
+  - 이메일
+difficulty: beginner
+summary: '블로그부터 SNS 캡션까지, 용도별 AI 글쓰기 프롬프트 템플릿 완전 가이드'
+steps:
+  - title: Create an Outline
+    description: Establish a structured outline for your blog post.
+    action: >-
+      Generate a 5-section outline for the topic 'Focus Maintenance Tips from 3
+      Years of Remote Work'. Include subheadings and a brief description for
+      each section.
+    expectedResult: A clear and engaging outline that guides your writing.
+    failureHint: >-
+      If you struggle, think about common challenges in remote work that could
+      be addressed in each section.
+  - title: Write the Introduction
+    description: Draft an engaging introduction for your blog post.
+    action: >-
+      Write an introduction based on the outline, starting with a relatable
+      problem, including a personal experience, and ending with what readers
+      will gain from the article.
+    expectedResult: A compelling introduction around 150 words that hooks the reader.
+    failureHint: 'If stuck, revisit your outline and focus on the reader’s pain points.'
+  - title: Draft Social Media Content
+    description: Quickly create content for multiple social media platforms.
+    action: >-
+      Using the idea 'AI reduces work time by half', create an Instagram
+      caption, a LinkedIn post, and a Twitter thread.
+    expectedResult: Three distinct pieces of social media content tailored for each platform.
+    failureHint: >-
+      If you find it hard, consider the audience and tone specific to each
+      platform.
+  - title: Edit for Personal Voice
+    description: Refine the AI-generated draft to reflect your unique voice.
+    action: >-
+      Review the AI-generated content and modify it to remove any AI-like
+      phrases, ensuring it sounds like you.
+    expectedResult: A polished draft that maintains your personal style and voice.
+    failureHint: >-
+      If you’re unsure, read the draft aloud to identify parts that don’t sound
+      like you.
+  - title: Compile Writing Templates
+    description: Create a collection of writing prompts for future use.
+    action: >-
+      Select and save your favorite writing prompts from the provided templates
+      for blog posts, social media, and emails.
+    expectedResult: >-
+      A personalized collection of writing templates ready for your next
+      projects.
+    failureHint: >-
+      If you’re uncertain, think about the types of content you frequently
+      create and choose prompts that suit those needs.
 ---
 
 ## 🎯 학습 목표

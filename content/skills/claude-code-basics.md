@@ -1,11 +1,37 @@
 ---
-steps: [{"title":"Install Claude Code","description":"Set up Claude Code on your system.","action":"Run the command 'npm install -g @anthropic-ai/claude-code' in your terminal.","codeSnippet":"npm install -g @anthropic-ai/claude-code","expectedResult":"Claude Code is installed successfully without errors.","failureHint":"Ensure you have Node.js 18+ installed."},{"title":"Set Up API Key","description":"Configure your API key for Claude Code.","action":"Set your API key using 'export ANTHROPIC_API_KEY=your_api_key' in the terminal.","codeSnippet":"export ANTHROPIC_API_KEY=sk-ant-...","expectedResult":"API key is set in the environment variables.","failureHint":"Check if the API key is correctly copied and try again."},{"title":"Start Claude Code","description":"Begin using Claude Code in your project directory.","action":"Navigate to your project folder and run 'claude'.","codeSnippet":"cd my-project && claude","expectedResult":"Claude Code starts, and you can interact with it.","failureHint":"If it doesn't start, check your installation and API key setup."},{"title":"Delegate a Task","description":"Use Claude Code to add a feature to your project.","action":"Type a command to add a user authentication feature.","codeSnippet":"> Add user authentication with JWT for /api/auth/login and /api/auth/register.","expectedResult":"Claude Code autonomously implements the requested feature.","failureHint":"Ensure your project structure is compatible with the task."}]
----
----
-title: "Claude Code 입문 — 터미널에서 AI와 코딩하기"
-tags: ["Claude Code", "터미널", "AI 코딩", "Anthropic"]
-difficulty: "advanced"
-summary: "Claude Code 설치·설정부터 첫 프로젝트까지, 터미널 기반 AI 코딩 에이전트 완전 입문 가이드"
+title: Claude Code 입문 — 터미널에서 AI와 코딩하기
+tags:
+  - Claude Code
+  - 터미널
+  - AI 코딩
+  - Anthropic
+difficulty: advanced
+summary: 'Claude Code 설치·설정부터 첫 프로젝트까지, 터미널 기반 AI 코딩 에이전트 완전 입문 가이드'
+steps:
+  - title: Install Claude Code
+    description: Set up the Claude Code environment on your terminal.
+    action: 'Run the command: npm install -g @anthropic-ai/claude-code'
+    expectedResult: Claude Code is installed successfully without errors.
+    failureHint: Ensure you have Node.js 18+ installed.
+  - title: Set Up API Key
+    description: Integrate your API key for Claude Code to function.
+    action: >-
+      Set the API key using export ANTHROPIC_API_KEY=your_api_key or run claude
+      to input it.
+    expectedResult: 'API key is set, and Claude Code prompts for interaction.'
+    failureHint: Check the API key format and ensure it's valid.
+  - title: Start Claude Code
+    description: Initiate Claude Code in your project directory.
+    action: Navigate to your project folder and run claude.
+    expectedResult: 'Claude Code starts, ready for commands.'
+    failureHint: Ensure you are in the correct project directory.
+  - title: Delegate a Task in Agent Mode
+    description: Assign a task for Claude Code to perform autonomously.
+    action: >-
+      Type a command like: 'Add user authentication with JWT for /api/auth/login
+      and /api/auth/register.'
+    expectedResult: Claude Code autonomously generates the required code and tests.
+    failureHint: 'If it doesn''t work, refine your command for clarity.'
 ---
 
 ## 🎯 학습 목표

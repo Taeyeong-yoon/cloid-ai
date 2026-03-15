@@ -66,5 +66,19 @@
       "prompt": "Can you provide an Excel VLOOKUP formula to find the price of a product in column B based on its name in column A?",
       "followUp": "Change the range to include an additional column for discounts and see how it affects the lookup."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"AI로 엑셀 수식 생성하기\". Claude에게 원하는 엑셀 기능을 설명하면 수식을 자동으로 생성하고 오류를 해결하는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

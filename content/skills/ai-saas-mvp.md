@@ -1,11 +1,76 @@
 ---
-steps: [{"title":"Initialize Project","description":"Set up the Next.js project with necessary dependencies.","action":"Run the command to create a new Next.js app and install required packages.","codeSnippet":"npx create-next-app@latest my-ai-saas --typescript --tailwind --app --src-dir && cd my-ai-saas && npm install @anthropic-ai/sdk @supabase/supabase-js @supabase/ssr","expectedResult":"A new Next.js project is created with TypeScript and Tailwind CSS installed.","failureHint":"Ensure Node.js is installed and you have internet access."},{"title":"Delegate Project Design to Claude Code","description":"Automate the project structure creation using Claude Code.","action":"Provide a description and core features to Claude Code for generating the project structure.","codeSnippet":"This Next.js project should be an AI SaaS MVP. Service description: [Your service description]. Core features: 1. Login/Signup (Supabase Auth) 2. AI processing feature: [Specific AI feature description] 3. Save and retrieve result history.","expectedResult":"Claude Code generates the necessary file structure and core files.","failureHint":"Check if Claude Code is functioning and properly integrated."},{"title":"Design Supabase Database Schema","description":"Create the database schema for your AI SaaS MVP.","action":"Request Claude Code to design the Supabase database schema.","codeSnippet":"Design the Supabase database schema for the AI SaaS. Required tables: profiles, ai_results, usage_logs.","expectedResult":"A detailed database schema is generated with RLS policies and optimized indexes.","failureHint":"Review the schema requirements to ensure they are correctly specified."},{"title":"Implement API Route for AI Functionality","description":"Create an API route to handle AI requests.","action":"Generate the API route code to accept user inputs and process them.","codeSnippet":"Create API route in app/api/generate/route.ts that handles POST requests, checks authentication, and calls Claude API.","expectedResult":"The API route is created and ready to handle requests with proper error handling.","failureHint":"Check for any syntax errors or issues with the API integration."},{"title":"Build the Main Dashboard Component","description":"Create the main dashboard interface for user interaction.","action":"Develop the dashboard component layout and functionality.","codeSnippet":"Create the dashboard page in app/dashboard/page.tsx with an input form and result display.","expectedResult":"The dashboard is functional, displaying user input and AI results.","failureHint":"Ensure React components are properly structured and styled."}]
----
----
-title: "AI SaaS MVP 만들기 — 아이디어에서 배포까지 하루 만에"
-tags: ["SaaS", "MVP", "Next.js", "Claude Code", "Vercel", "Supabase"]
-difficulty: "advanced"
-summary: "Claude Code + Next.js + Supabase + Vercel 스택으로 AI 기능이 있는 SaaS MVP를 하루 만에 배포하는 완전 가이드"
+title: AI SaaS MVP 만들기 — 아이디어에서 배포까지 하루 만에
+tags:
+  - SaaS
+  - MVP
+  - Next.js
+  - Claude Code
+  - Vercel
+  - Supabase
+difficulty: advanced
+summary: >-
+  Claude Code + Next.js + Supabase + Vercel 스택으로 AI 기능이 있는 SaaS MVP를 하루 만에 배포하는
+  완전 가이드
+steps:
+  - title: Initialize Project
+    description: Set up the initial project structure for your AI SaaS MVP.
+    action: >-
+      Run the command: npx create-next-app@latest my-ai-saas --typescript
+      --tailwind --app --src-dir and install necessary packages.
+    codeSnippet: npm install @anthropic-ai/sdk @supabase/supabase-js @supabase/ssr
+    expectedResult: >-
+      A new Next.js project is created with TypeScript and Tailwind CSS, ready
+      for development.
+    failureHint: >-
+      Ensure you have Node.js installed and check for any errors in the
+      terminal.
+  - title: Delegate Design to Claude Code
+    description: Automate the project setup by delegating the design to Claude Code.
+    action: >-
+      Provide a clear service description and core features to Claude Code for
+      generating the initial structure.
+    expectedResult: >-
+      Claude Code generates the necessary files and structure for user
+      authentication, AI features, and history storage.
+    failureHint: >-
+      Make sure your service description is concise and clear for Claude to
+      understand.
+  - title: Design Database Schema
+    description: >-
+      Create a database schema for user profiles, AI requests, and usage
+      tracking.
+    action: >-
+      Request Claude Code to design the Supabase database schema with specified
+      tables and requirements.
+    expectedResult: >-
+      A well-defined database schema is generated, including necessary tables
+      and RLS policies.
+    failureHint: Double-check the requirements you provided to ensure they are complete.
+  - title: Create API Route for AI Functionality
+    description: Set up an API route to handle AI requests and responses.
+    action: >-
+      Write the API route code in app/api/generate/route.ts to handle user input
+      and integrate with Claude API.
+    codeSnippet: // Add your API route code here
+    expectedResult: >-
+      An API route is created that successfully processes requests, checks user
+      limits, and streams responses.
+    failureHint: >-
+      Review the API route structure and ensure all dependencies are imported
+      correctly.
+  - title: Build Authentication Flow
+    description: >-
+      Implement a complete authentication system for user login and
+      registration.
+    action: >-
+      Create the necessary files for login, signup, and middleware to manage
+      protected routes.
+    expectedResult: >-
+      A fully functional authentication system that allows users to sign up, log
+      in, and manage sessions.
+    failureHint: >-
+      Check for any issues in the middleware logic or authentication functions
+      if something isn't working.
 ---
 
 ## 🎯 학습 목표

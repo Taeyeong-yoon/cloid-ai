@@ -67,5 +67,19 @@
       "prompt": "Draft a follow-up email to a new contact met at a networking event, expressing interest in collaboration.",
       "followUp": "Change the email to include a specific proposal for collaboration."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"AI로 비즈니스 이메일 작성하기\". Claude를 활용해 상황별 비즈니스 이메일을 빠르고 전문적으로 작성하는 실습",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

@@ -74,5 +74,19 @@
       "prompt": "How can I set up row-level security in Supabase to restrict access to usage data based on user roles?",
       "followUp": "Modify the security rules to allow admin users to see all data."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"[Full Stack] Next.js 15 + Supabase Real-Time Usage Dashboard\". Build a real-time usage analytics dashboard using Next.js 15 App Router and Supabase — covering SSR data fetching, real-time subscriptions, and row-level security.",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

@@ -73,5 +73,19 @@
       "prompt": "What are the key challenges mentioned in the 100-page document regarding electric vehicles?",
       "followUp": "Change the question to focus on solutions or future trends discussed in the document."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"[Gemini CLI] Process 100-Page Documents with Long-Context Analysis\". Use Gemini CLI to process a long document — extract key information, generate a summary, and answer specific questions — all in one session.",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

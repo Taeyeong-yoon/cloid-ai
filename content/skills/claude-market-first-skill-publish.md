@@ -1,11 +1,46 @@
 ---
-steps: [{"title":"Define Your Skill","description":"Identify a specific task your skill will perform.","action":"Choose a focused skill idea, avoiding broad concepts.","expectedResult":"A clear and concise skill idea that is not too broad.","failureHint":"If unsure, think of specific tasks that solve a problem."},{"title":"Write the System Prompt","description":"Create a system prompt that outlines the skill's functionality.","action":"Draft the system prompt using the provided template.","codeSnippet":"You are a specialized assistant for [specific task].\n\nInput: The user will provide [describe input format].\n\nOutput: Always return [describe output format].\n\nRules:\n- [constraint 1]\n- [constraint 2]\n- If input is unclear, ask ONE clarifying question before proceeding.","expectedResult":"A complete system prompt that clearly defines inputs, outputs, and rules.","failureHint":"Refer to examples of good skill ideas for guidance."},{"title":"Test Edge Cases","description":"Ensure your skill handles various types of input correctly.","action":"Run tests on different input scenarios as specified.","expectedResult":"Your skill performs correctly across all tested edge cases.","failureHint":"If it fails any test, revise your system prompt or logic."},{"title":"Submit to Claude Market","description":"Publish your skill for review on Claude Market.","action":"Go to claude.ai/market, create your skill, and fill in the required details.","expectedResult":"Your skill is submitted successfully and awaits review.","failureHint":"Double-check all fields for completeness and clarity before submission."}]
----
----
-title: "Publish Your First Claude Skill to Claude Market in 5 Minutes"
-tags: ["Claude Market", "Claude Skills", "Beginner"]
-difficulty: "beginner"
-summary: "A minimal recipe for creating and publishing a Claude Market skill — from idea to live listing"
+title: Publish Your First Claude Skill to Claude Market in 5 Minutes
+tags:
+  - Claude Market
+  - Claude Skills
+  - Beginner
+difficulty: beginner
+summary: >-
+  A minimal recipe for creating and publishing a Claude Market skill — from idea
+  to live listing
+steps:
+  - title: Define Your Skill
+    description: Identify a specific task for your Claude skill.
+    action: >-
+      Choose a focused skill idea, such as 'Convert meeting notes to action
+      items.'
+    expectedResult: You have a clear and narrow skill idea that is likely to be accepted.
+    failureHint: 'If your idea is too broad, refine it to focus on a specific task.'
+  - title: Write the System Prompt
+    description: Create a system prompt that outlines how your skill will function.
+    action: >-
+      Draft a system prompt using the provided template, filling in the specific
+      task and input/output formats.
+    expectedResult: You have a complete system prompt ready for testing.
+    failureHint: >-
+      If you’re unsure about the format, refer to examples of successful
+      prompts.
+  - title: Test Edge Cases
+    description: Ensure your skill handles various input scenarios effectively.
+    action: >-
+      Run tests with empty input, different languages, long input, and incorrect
+      formats.
+    expectedResult: Your skill performs correctly across all tested scenarios without errors.
+    failureHint: 'If it fails any test, adjust the system prompt or rules accordingly.'
+  - title: Submit to Claude Market
+    description: Publish your skill for review on Claude Market.
+    action: >-
+      Navigate to claude.ai/market, create your skill, fill in the required
+      fields, and submit.
+    expectedResult: Your skill is submitted and awaits review by the Claude Market team.
+    failureHint: >-
+      If submission fails, double-check all required fields and ensure your
+      skill meets guidelines.
 ---
 
 ## 🎯 Goal

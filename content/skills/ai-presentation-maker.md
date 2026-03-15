@@ -1,11 +1,49 @@
 ---
-steps: [{"title":"Planning Phase","description":"Define the purpose, audience, and key message for your presentation.","action":"Use the provided prompt to outline the core message and story structure.","expectedResult":"A clear 1-sentence core message and a structured outline for your presentation.","failureHint":"If unsure, ask for examples of core messages for similar topics."},{"title":"Content Generation Phase","description":"Create the content for each slide based on your outline.","action":"Utilize the content generation prompt to develop titles, bullet points, and speaker notes for each slide.","expectedResult":"Complete slide content including titles, bullet points, and notes for all slides.","failureHint":"If stuck, try breaking down each slide into smaller components for clarity."},{"title":"Refinement Phase","description":"Optimize titles, bullet points, and speaker notes for clarity and impact.","action":"Request assistance to shorten bullet points and enhance titles using the provided templates.","expectedResult":"Concise and impactful slide titles and bullet points ready for presentation.","failureHint":"If titles feel bland, brainstorm synonyms or alternative phrases to make them more engaging."},{"title":"Finalization Phase","description":"Transfer your content to a presentation tool and rehearse.","action":"Create your slides in Canva, PowerPoint, or Google Slides and practice your presentation.","expectedResult":"A complete presentation ready for delivery, with practiced delivery.","failureHint":"If you have trouble with design, look for templates that match your presentation style."}]
----
----
-title: "AI로 발표자료 10분 만에 만들기"
-tags: ["발표자료", "PPT", "기획", "프레젠테이션"]
-difficulty: "beginner"
-summary: "기획→구성→디자인 단계별 AI 프롬프트 체인으로 발표자료를 10분 만에 완성하는 가이드"
+title: AI로 발표자료 10분 만에 만들기
+tags:
+  - 발표자료
+  - PPT
+  - 기획
+  - 프레젠테이션
+difficulty: beginner
+summary: 기획→구성→디자인 단계별 AI 프롬프트 체인으로 발표자료를 10분 만에 완성하는 가이드
+steps:
+  - title: Planning Phase
+    description: Establish the story structure and key messages for the presentation.
+    action: >-
+      Fill out the planning prompt with your presentation topic, audience,
+      purpose, time, and desired slide count.
+    expectedResult: 'You have a clear core message, a three-act structure, and a slide outline.'
+    failureHint: >-
+      If unsure about the core message, ask AI for the top three questions your
+      audience might have.
+  - title: Content Creation Phase
+    description: Generate the content for each slide based on the outline.
+    action: >-
+      Use the content creation prompt to detail each slide's title, bullet
+      points, speaker notes, and visual elements.
+    expectedResult: 'You have complete content for each slide, ready for design.'
+    failureHint: >-
+      If the bullet points are too long, request AI to shorten them to under 15
+      characters.
+  - title: Design Phase
+    description: Transfer the generated content into a presentation tool.
+    action: >-
+      Create slides in Canva, PowerPoint, or Google Slides using the generated
+      content.
+    expectedResult: >-
+      You have 10 completed slides that are visually appealing and aligned with
+      your content.
+    failureHint: >-
+      If design feels overwhelming, use templates available in your presentation
+      tool to simplify the process.
+  - title: Rehearsal Phase
+    description: Practice delivering your presentation.
+    action: 'Conduct a rehearsal of your presentation, focusing on timing and flow.'
+    expectedResult: You feel confident and prepared to present your material.
+    failureHint: >-
+      If you struggle with timing, adjust your content to ensure you stay within
+      the allocated time.
 ---
 
 ## 🎯 학습 목표

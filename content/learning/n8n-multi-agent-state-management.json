@@ -88,5 +88,19 @@
       "prompt": "Create an n8n workflow where Agent A collects user preferences and Agent B uses this data to recommend products. How does state sharing improve the interaction?",
       "followUp": "Add conditions based on user preferences to enhance recommendations."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"n8n Multi-Agent State Management: Keeping Memory Across Steps\". Learn how to share state and memory between multiple AI agent nodes in an n8n workflow so each step has context from previous actions.",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

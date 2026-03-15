@@ -88,5 +88,19 @@
       "prompt": "Design an n8n workflow that automatically recovers from a failure by using a Wait node before retrying the failed step.",
       "followUp": "Experiment with different Wait times and observe the impact on the workflow's performance."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"n8n Error Handling: Building Self-Healing Automation Pipelines\". Learn advanced n8n error handling patterns — retry logic, fallback branches, error notifications, and self-healing workflows that recover from failures automatically.",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

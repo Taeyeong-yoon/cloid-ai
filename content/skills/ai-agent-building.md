@@ -1,11 +1,46 @@
 ---
-steps: [{"title":"Install Required Libraries","description":"Set up the necessary Python libraries for building AI agents.","action":"Run the command `pip install langchain langchain-anthropic langchain-community` in your terminal.","expectedResult":"The libraries are successfully installed without any errors.","failureHint":"Check your internet connection and ensure that Python and pip are installed correctly."},{"title":"Create a Single Agent with LangChain","description":"Build a single AI agent that uses LangChain to perform web searches.","action":"Implement the provided code snippet to create a web search agent using DuckDuckGo.","codeSnippet":"LangChain with Claude API for web search agent.","expectedResult":"The agent can take user questions, search for information, and generate answers.","failureHint":"Review the code for syntax errors and ensure the API keys are valid."},{"title":"Set Up CrewAI for Multi-Agent Collaboration","description":"Design a multi-agent system using CrewAI for collaborative content creation.","action":"Write the code to create a Researcher and Writer agent as per the provided specifications.","codeSnippet":"CrewAI code for the Researcher and Writer agents.","expectedResult":"The two agents work together to produce a blog post based on research.","failureHint":"Check the roles and task assignments to ensure they are correctly defined."},{"title":"Test the Agents","description":"Run tests to verify the functionality of both the single and multi-agent systems.","action":"Execute the agents and provide sample inputs to observe their outputs.","expectedResult":"Both agents respond correctly to inputs and achieve their respective goals.","failureHint":"Debug any discrepancies in the output by checking the logic and API responses."}]
----
----
-title: "AI 에이전트 만들기 — 자율적으로 일하는 AI 구축"
-tags: ["AI 에이전트", "LangChain", "CrewAI", "자동화", "Python"]
-difficulty: "advanced"
-summary: "LangChain과 CrewAI로 자율적으로 목표를 달성하는 AI 에이전트를 설계하고 구축하는 실전 가이드"
+title: AI 에이전트 만들기 — 자율적으로 일하는 AI 구축
+tags:
+  - AI 에이전트
+  - LangChain
+  - CrewAI
+  - 자동화
+  - Python
+difficulty: advanced
+summary: LangChain과 CrewAI로 자율적으로 목표를 달성하는 AI 에이전트를 설계하고 구축하는 실전 가이드
+steps:
+  - title: Install Required Libraries
+    description: Set up the necessary libraries for building AI agents.
+    action: >-
+      Run the command `pip install langchain langchain-anthropic
+      langchain-community` in your terminal.
+    expectedResult: The libraries are installed without errors.
+    failureHint: Check your Python environment and ensure you have pip installed.
+  - title: Create a LangChain Agent
+    description: Build a single agent using LangChain to perform web searches.
+    action: >-
+      Implement the provided code for the Claude-based research agent using the
+      DuckDuckGoSearchTool.
+    codeSnippet: code for the research agent
+    expectedResult: >-
+      The agent is able to accept user questions and return summarized search
+      results.
+    failureHint: Verify that the API keys and configurations are correct.
+  - title: Set Up CrewAI Multi-Agent System
+    description: Design a collaborative system with multiple agents using CrewAI.
+    action: >-
+      Create the two agents (Researcher and Writer) as described and implement
+      their tasks.
+    codeSnippet: code for the multi-agent system
+    expectedResult: >-
+      The system successfully generates a blog post based on the researcher's
+      findings.
+    failureHint: Check the roles and tasks assigned to each agent for correctness.
+  - title: Test the Agents
+    description: Run the agents to ensure they function as expected.
+    action: Execute the LangChain agent and the CrewAI system to see their outputs.
+    expectedResult: Both agents produce the expected results without errors.
+    failureHint: Look for error messages in the console to troubleshoot.
 ---
 
 ## 🎯 학습 목표

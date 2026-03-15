@@ -65,5 +65,19 @@
       "prompt": "Update your n8n workflow to take a different action if the Slack approval is rejected.",
       "followUp": "Explore adding logging features for approval outcomes."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"[n8n] Human Approval via Slack Before Agent Takes Action\". Build an n8n workflow that pauses before an irreversible action, sends a Slack approval request, and only proceeds when a human approves.",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

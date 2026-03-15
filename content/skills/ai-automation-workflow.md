@@ -1,11 +1,39 @@
 ---
-steps: [{"title":"Set Up Gmail Trigger","description":"Configure the trigger to start the workflow when a new email is received.","action":"In Zapier, select the Gmail app and set the trigger to 'New Email'. Optionally, filter by specific labels or senders.","expectedResult":"The Gmail trigger is successfully set up and ready to capture new emails.","failureHint":"Ensure your Gmail account is connected to Zapier and you have the necessary permissions."},{"title":"Integrate ChatGPT","description":"Link ChatGPT to analyze the email content.","action":"In the Zapier action step, select ChatGPT and input the provided prompt to classify the email.","expectedResult":"ChatGPT processes the email and generates a structured JSON output.","failureHint":"Check the prompt syntax and ensure that all dynamic fields are correctly inserted."},{"title":"Save Data to Notion","description":"Create a new page in Notion with the data received from ChatGPT.","action":"Parse the JSON output from ChatGPT and set up the Notion action to create a new page with the relevant information.","expectedResult":"A new page is created in Notion with the categorized email data.","failureHint":"Verify that the Notion database is correctly set up and that the fields match the JSON output."}]
----
----
-title: "AI 자동화 워크플로 구축 — Zapier + ChatGPT 연동"
-tags: ["자동화", "Zapier", "워크플로", "ChatGPT", "노코드"]
-difficulty: "intermediate"
-summary: "Zapier와 ChatGPT를 연동해 반복 업무를 완전 자동화하는 3가지 실무 시나리오"
+title: AI 자동화 워크플로 구축 — Zapier + ChatGPT 연동
+tags:
+  - 자동화
+  - Zapier
+  - 워크플로
+  - ChatGPT
+  - 노코드
+difficulty: intermediate
+summary: Zapier와 ChatGPT를 연동해 반복 업무를 완전 자동화하는 3가지 실무 시나리오
+steps:
+  - title: Set Up Gmail Trigger
+    description: Configure Zapier to trigger when a new email is received.
+    action: Select the Gmail app in Zapier and set up the 'New Email' trigger.
+    expectedResult: >-
+      The trigger is configured to capture new emails, with optional filters for
+      specific labels or senders.
+    failureHint: Check if Gmail is properly connected and permissions are granted.
+  - title: Integrate ChatGPT
+    description: Connect ChatGPT to analyze the email content.
+    action: >-
+      Input the provided prompt into the ChatGPT action in Zapier, using dynamic
+      fields for email subject and body.
+    expectedResult: ChatGPT processes the email and outputs a structured JSON classification.
+    failureHint: >-
+      Ensure the prompt is correctly formatted and that the ChatGPT app is
+      connected.
+  - title: Store Data in Notion
+    description: Save the analyzed data into a Notion database.
+    action: >-
+      Parse the JSON output from ChatGPT and create a new page in Notion with
+      the relevant information.
+    expectedResult: A new page is created in Notion with the categorized email data.
+    failureHint: >-
+      Verify that the Notion database is set up correctly and that the
+      integration is authorized.
 ---
 
 ## 🎯 학습 목표

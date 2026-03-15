@@ -88,5 +88,19 @@
       "prompt": "Explain how to view the response from the webhook after sending a POST request in n8n.",
       "followUp": "Experiment by changing the response format in n8n and observe the differences."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"n8n Webhook Basics: Triggering Workflows from External Events\". Learn how to set up webhook triggers in n8n so external apps, APIs, and services can automatically start your automation workflows.",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

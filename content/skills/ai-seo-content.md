@@ -1,11 +1,53 @@
 ---
-steps: [{"title":"Conduct Keyword Research","description":"Identify target and related keywords for SEO content.","action":"Use an SEO tool to find one main keyword with high search volume and low competition, along with 10 LSI keywords.","expectedResult":"A list of one main keyword and ten related keywords.","failureHint":"If you can't find suitable keywords, try adjusting your search parameters or using different tools."},{"title":"Design Content Structure","description":"Create an outline that aligns with search intent.","action":"Draft an SEO-optimized structure including 3 title options and a table of contents with 5 H2 headings and 2 H3 subheadings under each.","expectedResult":"A clear outline ready for content creation.","failureHint":"If you're unsure about the structure, review similar high-ranking articles for inspiration."},{"title":"Generate Content Draft","description":"Create the main body of the content using AI.","action":"Input the content structure into an AI tool and generate the text for each section, ensuring to include the main keyword and LSI keywords.","expectedResult":"A complete draft of the SEO content.","failureHint":"If the draft isn't coherent, refine your prompts to the AI for better context."},{"title":"Optimize for SEO","description":"Enhance the content for better search engine ranking.","action":"Add meta tags, internal links, and ensure compliance with E-E-A-T principles.","expectedResult":"SEO-optimized content ready for publication.","failureHint":"If unsure about optimization, use SEO checklists or tools to evaluate your content."}]
----
----
-title: "AI로 SEO 콘텐츠 작성하기 — 검색 1페이지 노리기"
-tags: ["SEO", "콘텐츠 마케팅", "블로그", "검색 최적화"]
-difficulty: "intermediate"
-summary: "키워드 리서치부터 구조 설계·작성·최적화까지, AI로 검색 상위 노출 콘텐츠를 만드는 완전 가이드"
+title: AI로 SEO 콘텐츠 작성하기 — 검색 1페이지 노리기
+tags:
+  - SEO
+  - 콘텐츠 마케팅
+  - 블로그
+  - 검색 최적화
+difficulty: intermediate
+summary: '키워드 리서치부터 구조 설계·작성·최적화까지, AI로 검색 상위 노출 콘텐츠를 만드는 완전 가이드'
+steps:
+  - title: Keyword Research
+    description: Identify target keywords and related keywords for your content.
+    action: >-
+      Use AI tools to generate one main keyword and ten LSI keywords related to
+      your topic.
+    expectedResult: >-
+      You have a list of one main keyword and ten LSI keywords ready for content
+      creation.
+    failureHint: >-
+      If you can't find suitable keywords, try adjusting your topic or using
+      different AI tools.
+  - title: Content Structure Design
+    description: Create a structured outline for your SEO content.
+    action: >-
+      Draft an outline including an SEO optimized title, five H2 headings, and
+      subheadings (H3) under each H2.
+    expectedResult: You have a clear content structure that aligns with search intent.
+    failureHint: >-
+      If the structure doesn't flow well, revisit your main keyword and adjust
+      the headings accordingly.
+  - title: Draft Content
+    description: Generate the first draft of your content using AI.
+    action: >-
+      Input your outline into an AI tool to create a draft for each section,
+      ensuring to include your main keyword and LSI keywords.
+    expectedResult: >-
+      You have a complete draft that includes all necessary keywords and follows
+      your outline.
+    failureHint: >-
+      If the draft lacks coherence, refine your outline or provide more detailed
+      prompts to the AI.
+  - title: SEO Optimization
+    description: Enhance your content for better SEO performance.
+    action: >-
+      Add meta tags, internal links, and ensure E-E-A-T principles are applied
+      throughout the content.
+    expectedResult: 'Your content is fully optimized for SEO, ready for publication.'
+    failureHint: >-
+      If unsure about optimization, review SEO best practices or consult SEO
+      resources for guidance.
 ---
 
 ## 🎯 학습 목표

@@ -1,11 +1,49 @@
 ---
-steps: [{"title":"Describe the Bug","description":"Clearly articulate the symptoms of the bug.","action":"Use Claude Code to describe the bug in detail, including symptoms, expected behavior, and any error messages.","codeSnippet":"claude 'I have a bug in my application. Here are the symptoms:\n- [describe what is happening]\n- [describe what should happen instead]\n- [paste the error message or logs]\n\nRead the relevant files and identify the root cause.'","expectedResult":"Claude Code identifies the root cause of the bug.","failureHint":"Ensure you provide enough detail about the bug and include the full error message."},{"title":"Get a Fix with Explanation","description":"Obtain a solution to the bug along with an explanation.","action":"Ask Claude Code to provide a fix for the identified bug and explain the changes made.","codeSnippet":"claude 'Fix the bug you identified. Explain:\n1. What was wrong\n2. Why it was wrong\n3. What your fix does differently\n4. Any edge cases your fix handles'","expectedResult":"Receive a clear explanation of the bug and the fix.","failureHint":"If the explanation is unclear, ask for more details about specific parts of the fix."},{"title":"Add a Regression Test","description":"Create a unit test to prevent the bug from reoccurring.","action":"Request Claude Code to write a unit test that would have caught the bug before it reached production.","codeSnippet":"claude 'Write a unit test that would have caught this bug before it reached production. Use the existing test framework in this project.'","expectedResult":"A unit test is generated that effectively tests for the previously identified bug.","failureHint":"Ensure the test aligns with the existing framework used in your project."}]
----
----
-title: "Claude Code: Find and Fix Bugs in 5 Minutes"
-tags: ["Claude Code", "Bug Fix", "Recipe"]
-difficulty: "beginner"
-summary: "A step-by-step recipe for using Claude Code to locate, diagnose, and fix bugs quickly"
+title: 'Claude Code: Find and Fix Bugs in 5 Minutes'
+tags:
+  - Claude Code
+  - Bug Fix
+  - Recipe
+difficulty: beginner
+summary: >-
+  A step-by-step recipe for using Claude Code to locate, diagnose, and fix bugs
+  quickly
+steps:
+  - title: Describe the Bug
+    description: Clearly articulate the symptoms of the bug.
+    action: Use the provided template to describe the bug to Claude Code.
+    codeSnippet: |-
+      claude 'I have a bug in my application. Here are the symptoms:
+      - [describe what is happening]
+      - [describe what should happen instead]
+      - [paste the error message or logs]
+
+      Read the relevant files and identify the root cause.'
+    expectedResult: Claude Code identifies the root cause of the bug.
+    failureHint: >-
+      Ensure you provide detailed symptoms and error messages for better
+      diagnosis.
+  - title: Get a Fix with Explanation
+    description: Obtain a fix for the identified bug along with an explanation.
+    action: Request a fix from Claude Code using the explanation template.
+    codeSnippet: |-
+      claude 'Fix the bug you identified. Explain:
+      1. What was wrong
+      2. Why it was wrong
+      3. What your fix does differently
+      4. Any edge cases your fix handles'
+    expectedResult: Receive a detailed explanation of the fix and the changes made.
+    failureHint: 'If the explanation is unclear, ask for clarification on specific points.'
+  - title: Add a Regression Test
+    description: Create a unit test to prevent future occurrences of the bug.
+    action: Instruct Claude Code to write a unit test for the bug.
+    codeSnippet: >-
+      claude 'Write a unit test that would have caught this bug before it
+      reached production. Use the existing test framework in this project.'
+    expectedResult: A unit test is generated that successfully checks for the bug.
+    failureHint: >-
+      If the test does not compile, check for compatibility with your existing
+      test framework.
 ---
 
 ## 🎯 Goal

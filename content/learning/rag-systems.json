@@ -120,5 +120,19 @@
       "prompt": "Enable the pgvector extension in Supabase and create a vector column to store embeddings from the sentence 'Data-driven decisions enhance business outcomes.'",
       "followUp": "Insert multiple embeddings and perform a similarity search to find the closest match."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"RAG 시스템 구축\". 벡터 임베딩·Chroma·Supabase pgvector를 활용해 나만의 데이터로 AI 질의응답 시스템을 처음부터 구축하는 실전 과정",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

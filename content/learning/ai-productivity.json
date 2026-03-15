@@ -120,5 +120,19 @@
       "prompt": "Generate a daily task list from these items: 'Prepare presentation, attend team meeting, review budget proposal.'",
       "followUp": "Add priorities or deadlines to see how the task list changes."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"AI로 업무 생산성 10배 높이기\". 이메일·문서·회의·데이터 정리까지, 반복 업무를 AI로 자동화해 하루 2시간을 돌려받는 실전 가이드",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

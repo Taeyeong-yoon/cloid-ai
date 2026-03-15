@@ -1,11 +1,50 @@
 ---
-steps: [{"title":"Add a Wait Node","description":"Introduce a delay between API calls to respect rate limits.","action":"Insert a **Wait** node after each API call and set it to wait for 1 second.","expectedResult":"The workflow pauses for 1 second after each API call, preventing immediate retries.","failureHint":"Ensure the Wait node is correctly placed after the API call."},{"title":"Implement SplitInBatches","description":"Batch large datasets to process them in manageable sizes.","action":"Use **SplitInBatches** to divide your input into batches of 10, followed by a Wait node for spacing.","expectedResult":"The input of 100 items is processed in 10 batches, with a 2-second wait after each batch.","failureHint":"Check the batch size and ensure the Wait node is included after the API processing."},{"title":"Handle Rate Limit Errors","description":"Manage API responses that indicate rate limits have been exceeded.","action":"Add an **IF** node to check for HTTP status code 429 after the API call.","expectedResult":"If a 429 status code is detected, the workflow waits for 60 seconds before retrying the same item.","failureHint":"Verify the condition in the IF node is set correctly to capture 429 errors."},{"title":"Log Failed Items","description":"Capture and log any failed API requests for future review.","action":"Add a **Set** node to store failed items and send them to a Google Sheet or Supabase table.","expectedResult":"Failed API requests are logged for later analysis and troubleshooting.","failureHint":"Ensure the Set node is configured to capture the necessary data fields."}]
----
----
-title: "n8n Queue Setup: Bypass API Rate Limits Gracefully"
-tags: ["n8n", "Rate Limit", "Queue"]
-difficulty: "advanced"
-summary: "Build an n8n queue system that batches and spaces API calls to respect rate limits without losing any requests"
+title: 'n8n Queue Setup: Bypass API Rate Limits Gracefully'
+tags:
+  - n8n
+  - Rate Limit
+  - Queue
+difficulty: advanced
+summary: >-
+  Build an n8n queue system that batches and spaces API calls to respect rate
+  limits without losing any requests
+steps:
+  - title: Add a Wait Node
+    description: Insert a Wait node to control the timing of API calls.
+    action: Add a Wait node after each API call and set the wait time to 1 second.
+    expectedResult: API calls are spaced out to respect rate limits.
+    failureHint: Ensure the wait time matches the API's rate limit requirements.
+  - title: Implement SplitInBatches
+    description: Use SplitInBatches to manage large datasets effectively.
+    action: >-
+      Configure SplitInBatches to process items in batches of 10, followed by a
+      Wait node set to 2 seconds.
+    expectedResult: >-
+      The workflow processes items in manageable batches without exceeding rate
+      limits.
+    failureHint: >-
+      Check the batch size and wait time to ensure they align with the API rate
+      limit.
+  - title: Handle Rate Limit Errors
+    description: Add logic to handle API rate limit errors gracefully.
+    action: >-
+      Insert an IF node to check for HTTP status 429 and set up a Wait node to
+      retry after 60 seconds if true.
+    expectedResult: >-
+      The workflow retries failed API calls after the specified wait time
+      without losing requests.
+    failureHint: >-
+      Verify the condition in the IF node is correctly checking for the 429
+      status code.
+  - title: Log Failed Items
+    description: Capture and log any failed API calls for later review.
+    action: >-
+      Add a Set node to record failed items and write them to a Google Sheet or
+      Supabase table.
+    expectedResult: >-
+      All failed API requests are logged for manual review, ensuring no data is
+      lost.
+    failureHint: Ensure the logging destination is correctly configured and accessible.
 ---
 
 ## 🎯 Goal

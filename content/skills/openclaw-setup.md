@@ -1,9 +1,53 @@
 ---
-title: "OpenClaw 완전 정복 — Claude + 텔레그램으로 나만의 AI 비서 만들기"
-tags: ["OpenClaw","Claude","Telegram","AI 에이전트","자동화"]
-difficulty: "intermediate"
-summary: "220,000+ GitHub 스타를 기록한 오픈소스 AI 에이전트 OpenClaw를 설치하고, Claude와 텔레그램을 연동해 24시간 나만의 AI 비서를 운영하는 방법"
-steps: [{"title":"Install OpenClaw","description":"Set up OpenClaw on your local machine.","action":"Run the command 'npm install -g openclaw' to install OpenClaw.","codeSnippet":"npm install -g openclaw","expectedResult":"OpenClaw is installed successfully without errors.","failureHint":"Ensure Node.js 20+ is installed and try again."},{"title":"Configure OpenClaw","description":"Complete the onboarding process for OpenClaw.","action":"Execute 'openclaw onboard --install-daemon' and follow the prompts.","codeSnippet":"openclaw onboard --install-daemon","expectedResult":"Onboarding completes and a local server is set up.","failureHint":"Check for any error messages during onboarding and resolve them."},{"title":"Create Telegram Bot","description":"Set up a new Telegram bot using BotFather.","action":"Chat with @BotFather on Telegram and create a new bot to obtain the API token.","expectedResult":"You receive an HTTP API token for your new bot.","failureHint":"If you encounter issues, ensure you followed the steps correctly with BotFather."},{"title":"Connect OpenClaw to Telegram","description":"Link your Telegram bot to OpenClaw.","action":"Run 'openclaw config set telegram.token YOUR_BOT_TOKEN' to set your bot token.","codeSnippet":"openclaw config set telegram.token YOUR_BOT_TOKEN","expectedResult":"The Telegram token is set successfully in OpenClaw.","failureHint":"Double-check that you copied the token correctly from BotFather."},{"title":"Start OpenClaw","description":"Run OpenClaw in the background as a daemon.","action":"Execute 'openclaw start --daemon' to start the process.","codeSnippet":"openclaw start --daemon","expectedResult":"OpenClaw is running in the background and ready to respond to Telegram messages.","failureHint":"If it fails to start, check your configuration and logs for errors."}]
+title: OpenClaw 완전 정복 — Claude + 텔레그램으로 나만의 AI 비서 만들기
+tags:
+  - OpenClaw
+  - Claude
+  - Telegram
+  - AI 에이전트
+  - 자동화
+difficulty: intermediate
+summary: >-
+  220,000+ GitHub 스타를 기록한 오픈소스 AI 에이전트 OpenClaw를 설치하고, Claude와 텔레그램을 연동해 24시간
+  나만의 AI 비서를 운영하는 방법
+steps:
+  - title: Install OpenClaw
+    description: This step achieves the installation of OpenClaw on your local machine.
+    action: Run the command 'npm install -g openclaw' to install OpenClaw.
+    codeSnippet: npm install -g openclaw
+    expectedResult: OpenClaw is installed successfully without errors.
+    failureHint: Ensure Node.js 20+ is installed and try again.
+  - title: Configure OpenClaw
+    description: This step completes the onboarding process for OpenClaw.
+    action: Execute 'openclaw onboard --install-daemon' and follow the prompts.
+    codeSnippet: openclaw onboard --install-daemon
+    expectedResult: Onboarding completes and a local server is set up.
+    failureHint: Check for any error messages during onboarding and resolve them.
+  - title: Create Telegram Bot
+    description: This step sets up a new Telegram bot using BotFather.
+    action: >-
+      Chat with @BotFather on Telegram and create a new bot to obtain the API
+      token.
+    expectedResult: You receive an HTTP API token for your new bot.
+    failureHint: >-
+      If you encounter issues, ensure you followed the steps correctly with
+      BotFather.
+  - title: Connect OpenClaw to Telegram
+    description: This step links your Telegram bot to OpenClaw.
+    action: >-
+      Run 'openclaw config set telegram.token YOUR_BOT_TOKEN' to set your bot
+      token.
+    codeSnippet: openclaw config set telegram.token YOUR_BOT_TOKEN
+    expectedResult: The Telegram token is set successfully in OpenClaw.
+    failureHint: Double-check that you copied the token correctly from BotFather.
+  - title: Start OpenClaw
+    description: This step runs OpenClaw in the background as a daemon.
+    action: Execute 'openclaw start --daemon' to start the process.
+    codeSnippet: openclaw start --daemon
+    expectedResult: >-
+      OpenClaw is running in the background and ready to respond to Telegram
+      messages.
+    failureHint: 'If it fails to start, check your configuration and logs for errors.'
 ---
 
 ## 🎯 학습 목표

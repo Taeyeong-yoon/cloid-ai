@@ -1,11 +1,40 @@
 ---
-steps: [{"title":"Upload CSV File to ChatGPT","description":"Begin the data analysis process by uploading your CSV file to ChatGPT.","action":"Upload your CSV file using the ChatGPT interface.","expectedResult":"The CSV file is successfully uploaded and ready for analysis.","failureHint":"Ensure your file is in the correct CSV format and try uploading again."},{"title":"Request Basic Data Analysis","description":"Ask ChatGPT to analyze the uploaded CSV file for basic statistics.","action":"Use the provided prompt to request analysis: 'Please analyze the attached CSV file.'","expectedResult":"ChatGPT provides a summary of data structure, basic statistics, and insights.","failureHint":"If you don't receive a response, double-check your prompt and ensure the file is uploaded."},{"title":"Generate Python Code for Further Analysis","description":"Request Python code from Claude for more detailed analysis of your data.","action":"Provide Claude with your CSV structure and analysis requirements as outlined.","expectedResult":"Claude generates a Python code snippet tailored to your analysis needs.","failureHint":"If the code is not generated, ensure your request is clear and includes all necessary details."},{"title":"Run Python Code in Google Colab","description":"Execute the generated Python code in Google Colab to visualize your data.","action":"Copy the generated code into a Google Colab notebook and run it.","expectedResult":"The code runs successfully, producing the desired visualizations and insights.","failureHint":"Check for any errors in the code and ensure all required libraries are installed."}]
----
----
-title: "AI로 데이터 분석하기 — CSV 파일 던지고 인사이트 얻기"
-tags: ["데이터 분석", "CSV", "ChatGPT", "Python", "시각화"]
-difficulty: "intermediate"
-summary: "CSV 파일 업로드부터 인사이트 도출까지, 코딩 없이 AI로 데이터를 분석하는 실전 가이드"
+title: AI로 데이터 분석하기 — CSV 파일 던지고 인사이트 얻기
+tags:
+  - 데이터 분석
+  - CSV
+  - ChatGPT
+  - Python
+  - 시각화
+difficulty: intermediate
+summary: 'CSV 파일 업로드부터 인사이트 도출까지, 코딩 없이 AI로 데이터를 분석하는 실전 가이드'
+steps:
+  - title: Upload CSV File
+    description: Initiate the data analysis process by uploading your CSV file.
+    action: Upload your CSV file to ChatGPT or Claude.
+    expectedResult: The file is successfully uploaded and ready for analysis.
+    failureHint: Ensure the file format is correct and try uploading again.
+  - title: Request Basic Data Analysis
+    description: Ask the AI to perform a basic statistical analysis of the uploaded data.
+    action: Use the provided prompt to request an analysis of the CSV file.
+    expectedResult: 'Receive a summary of the data structure, basic statistics, and insights.'
+    failureHint: Check the prompt for clarity and ensure the file is still accessible.
+  - title: Generate Python Analysis Code
+    description: Request Python code for deeper analysis of the data.
+    action: >-
+      Use the provided prompt to ask Claude for Python code tailored to your CSV
+      structure.
+    expectedResult: Obtain Python code that can be run in Google Colab for further analysis.
+    failureHint: >-
+      Verify that the data structure in your request matches the actual CSV
+      file.
+  - title: Run Python Code in Google Colab
+    description: Execute the generated Python code to visualize and analyze the data.
+    action: Copy the generated code into a Google Colab notebook and run it.
+    expectedResult: Visualizations and analysis results are produced based on your CSV data.
+    failureHint: >-
+      Check for any errors in the code and ensure all necessary libraries are
+      installed.
 ---
 
 ## 🎯 학습 목표

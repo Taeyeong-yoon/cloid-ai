@@ -65,5 +65,19 @@
       "prompt": "Create an agent that analyzes project file data and writes the results to a new output file.",
       "followUp": "Experiment with different output formats for the results."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"[Claude Code] MCP Filesystem: Read and Write Files via Agent\". Set up the MCP filesystem server in Claude Code and build an agent that reads project files, analyzes them, and writes output files autonomously.",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }

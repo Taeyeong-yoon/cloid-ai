@@ -88,5 +88,19 @@
       "prompt": "Configure a GitHub Action to run Claude Code for automated code review on every pull request.",
       "followUp": "Modify the action to include specific checks or comments during the review process."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"Claude Code Headless: Automating Repository Tasks Without UI\". Use Claude Code in headless (non-interactive) mode to automate repository tasks like PR creation, changelog generation, and code reviews in CI/CD pipelines.",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

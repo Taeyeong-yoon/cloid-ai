@@ -120,5 +120,19 @@
       "prompt": "Use the AI features in a VS Code-based editor to write a simple function in Python.",
       "followUp": "Modify the function and see how the AI suggests improvements."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your output, command result, or notes here and AI will evaluate whether your learning result matches the lesson goal.",
+    "context": "This learning topic is \"2026 주요 AI 도구 총정리\". ChatGPT, Claude, Gemini, Cursor, Perplexity 등 2026년 필수 AI 도구를 카테고리별로 비교 정리",
+    "successCriteria": [
+      "The learner completed a concrete practice step",
+      "The result matches the main lesson objective",
+      "The learner can explain or verify what happened"
+    ],
+    "commonMistakes": [
+      "Only reading the lesson without trying the practice step",
+      "Posting an incomplete command or partial result",
+      "Confusing setup issues with the lesson outcome"
+    ]
+  }
 }

@@ -73,5 +73,19 @@
       "prompt": "Suggest a pricing model for your Claude skill, considering value and competition.",
       "followUp": "Adjust the pricing based on potential user feedback or market trends."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your lab output, generated code, or error log here and AI will evaluate whether the lab is progressing correctly.",
+    "context": "This lab is \"[Claude Market] Build and Publish a Paid Claude Skill End-to-End\". Build a production-quality Claude Market skill from scratch — design, write the system prompt, test edge cases, set pricing, and submit for review.",
+    "successCriteria": [
+      "The learner completed the main lab step",
+      "The output is concrete enough to inspect",
+      "The result shows progress toward a working implementation"
+    ],
+    "commonMistakes": [
+      "Skipping verification after generating code",
+      "Not including the real output or error message",
+      "Stopping after setup without testing the actual task"
+    ]
+  }
 }
