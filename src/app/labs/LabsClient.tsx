@@ -20,8 +20,10 @@ import { useTranslation } from "@/lib/i18n/LanguageContext";
 import HTMLPreview from "@/components/HTMLPreview";
 import PythonPreview from "@/components/PythonPreview";
 import CodeChallenge from "@/components/CodeChallenge";
+import ResultEvaluator from "@/components/ResultEvaluator";
 import StepChecklist, { type ChecklistStep } from "@/components/StepChecklist";
 import FloatingTutor from "@/components/FloatingTutor";
+import PracticeChat from "@/components/PracticeChat";
 
 const difficultyColor: Record<string, string> = {
   beginner: "text-emerald-400 bg-emerald-900/30 border-emerald-700/50",
@@ -257,6 +259,14 @@ function LabCard({
 
           {interactiveChallenge && (
             <CodeChallenge contentId={lab.id} challenge={interactiveChallenge} />
+          )}
+
+          {lab.evaluation && (
+            <ResultEvaluator contentId={lab.id} evaluation={lab.evaluation} />
+          )}
+
+          {lab.practicePrompts && lab.practicePrompts.length > 0 && (
+            <PracticeChat contentId={lab.id} practices={lab.practicePrompts} />
           )}
 
           {lab.videos && lab.videos.length > 0 && (

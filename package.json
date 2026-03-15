@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "add-evaluation": "tsx scripts/add-evaluation.ts",
+    "validate-content": "tsx scripts/validate-content.ts",
+    "prebuild": "tsx scripts/validate-content.ts || node -e \"process.exit(0)\"",
     "build": "next build",
     "start": "next start",
     "radar:update": "tsx scripts/update_radar.ts",

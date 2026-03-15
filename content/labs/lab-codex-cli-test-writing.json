@@ -63,5 +63,19 @@
       "search_keyword": "Codex CLI unit test generation coverage tutorial 2026",
       "url": ""
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your generated tests, coverage output, or failing test logs here and AI will evaluate your testing progress.",
+    "context": "This lab focuses on using Codex CLI to audit coverage, write unit tests, add integration tests, and configure coverage thresholds.",
+    "successCriteria": [
+      "Tests were generated for important uncovered logic",
+      "The learner ran the tests or coverage report",
+      "The output shows useful coverage or failure information to act on"
+    ],
+    "commonMistakes": [
+      "Generating tests without running them",
+      "Covering only trivial helpers and ignoring key flows",
+      "Adding coverage config without checking the real report output"
+    ]
+  }
 }

@@ -5,8 +5,10 @@ import { BookOpen, FileText, Video, Terminal, ExternalLink, ArrowLeft, Search, C
 import type { LearningTopic, LearningResource } from "@/lib/types";
 import TagBadge from "@/components/TagBadge";
 import QuizCheck from "@/components/QuizCheck";
+import ResultEvaluator from "@/components/ResultEvaluator";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 import InlineTutor from "@/components/InlineTutor";
+import PracticeChat from "@/components/PracticeChat";
 
 const levelColor: Record<string, string> = {
   beginner: "text-emerald-400 bg-emerald-900/30 border-emerald-700/50",
@@ -345,8 +347,14 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
                   </h3>
                   {topic.resources.map((r, i) => <ResourceCard key={i} r={r} />)}
                 </div>
+                {topic.practicePrompts && topic.practicePrompts.length > 0 && (
+                  <PracticeChat contentId={topic.id} practices={topic.practicePrompts} />
+                )}
                 {topic.quiz && topic.quiz.length > 0 && (
                   <QuizCheck contentId={topic.id} quiz={topic.quiz} />
+                )}
+                {topic.evaluation && (
+                  <ResultEvaluator contentId={topic.id} evaluation={topic.evaluation} />
                 )}
               </div>
             </div>

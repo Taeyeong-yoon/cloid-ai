@@ -54,5 +54,19 @@
       "search_keyword": "Codex CLI code review workflow tutorial 2026",
       "url": ""
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your review output, markdown report, or terminal result here and AI will evaluate the quality of your Codex CLI review workflow.",
+    "context": "This lab teaches a full Codex CLI code review workflow: install, review a file, then generate a structured report.",
+    "successCriteria": [
+      "The learner produced actual review findings",
+      "Severity or prioritization is clear",
+      "The final report is structured and actionable"
+    ],
+    "commonMistakes": [
+      "Only summarizing the file without concrete findings",
+      "Missing severity levels or suggested fixes",
+      "Generating a report before validating single-file review quality"
+    ]
+  }
 }

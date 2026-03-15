@@ -64,5 +64,19 @@
       "answer": 0,
       "explanation": "An MCP setup is only useful if the agent can successfully access and use the new tool."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your MCP setup output, command result, or error message here and AI will evaluate whether your Claude Code connection is working.",
+    "context": "This lesson teaches connecting a filesystem MCP server to Claude Code and verifying tool access.",
+    "successCriteria": [
+      "MCP server added successfully",
+      "Claude Code can see or use the filesystem tool",
+      "No unresolved permission or configuration errors remain"
+    ],
+    "commonMistakes": [
+      "Wrong project path passed to the filesystem server",
+      "Tool added but not tested with a real read or write action",
+      "Permissions or runtime errors ignored after setup"
+    ]
+  }
 }

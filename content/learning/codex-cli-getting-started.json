@@ -64,5 +64,19 @@
       "answer": 1,
       "explanation": "Starting with one small file makes it easier to verify the CLI is installed correctly and understand the review output."
     }
-  ]
+  ],
+  "evaluation": {
+    "prompt": "Paste your Codex CLI output, install log, or review result here and AI will check whether you are on the right track.",
+    "context": "This lesson is about getting Codex CLI installed and using it to review one small file successfully from the terminal.",
+    "successCriteria": [
+      "Codex CLI installed correctly",
+      "The learner can run a review command",
+      "The output shows usable findings or analysis"
+    ],
+    "commonMistakes": [
+      "CLI not installed globally or not found in PATH",
+      "API key not configured before first run",
+      "Trying to review too large a codebase on the first attempt"
+    ]
+  }
 }

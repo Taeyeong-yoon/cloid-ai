@@ -26,6 +26,20 @@ export interface QuizQuestion {
   explanation: string;
 }
 
+export interface EvaluationConfig {
+  prompt: string;
+  context: string;
+  successCriteria: string[];
+  commonMistakes: string[];
+}
+
+export interface PracticePrompt {
+  label: string;
+  instruction: string;
+  prompt: string;
+  followUp?: string;
+}
+
 export interface LearningTopic {
   id: string;
   title: string;
@@ -34,6 +48,8 @@ export interface LearningTopic {
   tags: string[];
   resources: LearningResource[];
   quiz?: QuizQuestion[];
+  evaluation?: EvaluationConfig;
+  practicePrompts?: PracticePrompt[];
 }
 
 export interface LabStep {
@@ -77,6 +93,8 @@ export interface LabItem {
   challenge?: string | CodeChallengeData;
   related_skills?: string[];
   videos?: LabVideo[];
+  evaluation?: EvaluationConfig;
+  practicePrompts?: PracticePrompt[];
 }
 
 export interface Skill {
