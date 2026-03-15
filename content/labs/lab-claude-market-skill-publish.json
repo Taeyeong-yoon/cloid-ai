@@ -4,7 +4,11 @@
   "description": "Build a production-quality Claude Market skill from scratch — design, write the system prompt, test edge cases, set pricing, and submit for review.",
   "difficulty": "advanced",
   "duration": "2 hours",
-  "tags": ["Claude Market", "Claude Skills", "Monetization"],
+  "tags": [
+    "Claude Market",
+    "Claude Skills",
+    "Monetization"
+  ],
   "steps": [
     {
       "step": 1,
@@ -40,12 +44,34 @@
     }
   ],
   "challenge": "Build two complementary skills that work together via skill chaining — the output of the first skill becomes the input of the second. Document the chaining pattern in both skill descriptions.",
-  "related_skills": ["claude-market-first-skill-publish"],
+  "related_skills": [
+    "claude-market-first-skill-publish"
+  ],
   "videos": [
     {
       "title": "Claude Market Skill Publishing Tutorial",
       "search_keyword": "Claude Market skill publishing tutorial monetization 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Design Skill Concept",
+      "instruction": "Create a concept for your Claude skill.",
+      "prompt": "Describe a unique skill idea for Claude that solves a specific problem.",
+      "followUp": "Modify the idea to target a different audience or problem."
+    },
+    {
+      "label": "Write System Prompt",
+      "instruction": "Draft the system prompt for your skill.",
+      "prompt": "Write a system prompt for your Claude skill that clearly outlines its purpose and capabilities.",
+      "followUp": "Experiment with different tones or styles in your prompt."
+    },
+    {
+      "label": "Set Pricing Strategy",
+      "instruction": "Determine the pricing for your skill.",
+      "prompt": "Suggest a pricing model for your Claude skill, considering value and competition.",
+      "followUp": "Adjust the pricing based on potential user feedback or market trends."
     }
   ]
 }

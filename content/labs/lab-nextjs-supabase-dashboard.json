@@ -4,7 +4,12 @@
   "description": "Build a real-time usage analytics dashboard using Next.js 15 App Router and Supabase — covering SSR data fetching, real-time subscriptions, and row-level security.",
   "difficulty": "advanced",
   "duration": "3 hours",
-  "tags": ["Next.js", "Supabase", "Dashboard", "Full Stack"],
+  "tags": [
+    "Next.js",
+    "Supabase",
+    "Dashboard",
+    "Full Stack"
+  ],
   "steps": [
     {
       "step": 1,
@@ -40,12 +45,34 @@
     }
   ],
   "challenge": "Add authentication so users can only see their own usage data. Implement a shareable public dashboard URL using a signed URL pattern that grants read-only access to specific data.",
-  "related_skills": ["claude-code-supabase-memory"],
+  "related_skills": [
+    "claude-code-supabase-memory"
+  ],
   "videos": [
     {
       "title": "Next.js 15 Supabase Real-Time Dashboard Tutorial",
       "search_keyword": "Next.js 15 Supabase real-time dashboard tutorial 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "SSR Data Fetching",
+      "instruction": "Implement server-side rendering for your dashboard.",
+      "prompt": "How do I implement SSR in my Next.js 15 app to fetch usage data from Supabase?",
+      "followUp": "Try modifying the query to filter data based on user roles."
+    },
+    {
+      "label": "Real-Time Subscriptions",
+      "instruction": "Set up a real-time subscription for usage data.",
+      "prompt": "What are the steps to create a real-time subscription to usage data in Supabase with Next.js 15?",
+      "followUp": "Experiment by adding a feature to display notifications for new data."
+    },
+    {
+      "label": "Row-Level Security",
+      "instruction": "Implement row-level security in Supabase.",
+      "prompt": "How can I set up row-level security in Supabase to restrict access to usage data based on user roles?",
+      "followUp": "Modify the security rules to allow admin users to see all data."
     }
   ]
 }

@@ -4,7 +4,12 @@
   "description": "Build an n8n workflow that reads incoming customer support emails, classifies them by type, generates personalized draft replies with Claude, and saves them as Gmail drafts.",
   "difficulty": "intermediate",
   "duration": "1.5 hours",
-  "tags": ["n8n", "Gmail", "Automation", "CS"],
+  "tags": [
+    "n8n",
+    "Gmail",
+    "Automation",
+    "CS"
+  ],
   "steps": [
     {
       "step": 1,
@@ -40,12 +45,34 @@
     }
   ],
   "challenge": "Add a Notion integration that logs all classified emails to a Notion database for tracking response times and common issue patterns.",
-  "related_skills": ["n8n-gmail-auto-reply"],
+  "related_skills": [
+    "n8n-gmail-auto-reply"
+  ],
   "videos": [
     {
       "title": "n8n Gmail Customer Support Automation",
       "search_keyword": "n8n Gmail customer support automation Claude AI 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Email Classification",
+      "instruction": "Classify a sample email.",
+      "prompt": "Analyze the following email and classify it as 'Technical Support', 'Billing Inquiry', or 'General Question': 'I need help with my account login.'",
+      "followUp": "Try classifying a different email with a unique query."
+    },
+    {
+      "label": "Generate Reply",
+      "instruction": "Create a draft reply using Claude.",
+      "prompt": "Generate a personalized draft reply for the email: 'I am having issues with my recent order.'",
+      "followUp": "Change the email content and see how the reply varies."
+    },
+    {
+      "label": "Save as Draft",
+      "instruction": "Simulate saving a draft.",
+      "prompt": "Draft a response for the email: 'Can you provide an update on my support ticket?' and outline how to save it in Gmail.",
+      "followUp": "Modify the response structure and check if it affects the saving process."
     }
   ]
 }

@@ -4,7 +4,10 @@
   "description": "n8n + Claude로 최소 유지 관리 자동화 비즈니스 모델을 설계하고 구현하는 실습",
   "difficulty": "advanced",
   "duration": "30분",
-  "tags": ["AI 에이전트", "실습"],
+  "tags": [
+    "AI 에이전트",
+    "실습"
+  ],
   "steps": [
     {
       "step": 1,
@@ -38,6 +41,26 @@
       "title": "AI 자동화 마이크로 스타트업 설계 튜토리얼",
       "search_keyword": "AI 자동화 마이크로 스타트업 설계 tutorial 2026 한국어",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Design Automation Workflow",
+      "instruction": "Create an automation workflow using n8n.",
+      "prompt": "Generate a basic n8n workflow that triggers an email when a new lead is added to a CRM.",
+      "followUp": "Try adding a filter to send emails only to leads from a specific source."
+    },
+    {
+      "label": "Integrate Claude AI",
+      "instruction": "Implement Claude AI in your workflow.",
+      "prompt": "Integrate Claude AI to analyze customer feedback and categorize it into positive, negative, or neutral.",
+      "followUp": "Experiment by changing the categorization criteria to include 'suggestions' as a category."
+    },
+    {
+      "label": "Optimize Automation Process",
+      "instruction": "Optimize your existing automation for better performance.",
+      "prompt": "Review the current n8n workflow and suggest improvements to reduce execution time.",
+      "followUp": "Modify the workflow to include a batch processing feature for handling multiple leads at once."
     }
   ]
 }

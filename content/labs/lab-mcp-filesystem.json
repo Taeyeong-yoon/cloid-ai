@@ -4,7 +4,11 @@
   "description": "로컬 파일시스템에 접근하는 MCP 서버를 Claude Desktop에 연결하고 파일 읽기/쓰기를 실습",
   "difficulty": "intermediate",
   "duration": "30분",
-  "tags": ["MCP", "Claude Desktop", "파일시스템"],
+  "tags": [
+    "MCP",
+    "Claude Desktop",
+    "파일시스템"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +36,34 @@
     }
   ],
   "challenge": "MCP를 통해 Claude에게 새 텍스트 파일을 만들게 하고, 그 파일에 내용을 추가해보세요.",
-  "related_skills": ["mcp-server-setup"],
+  "related_skills": [
+    "mcp-server-setup"
+  ],
   "videos": [
     {
       "title": "MCP 파일시스템 서버 연결 실습",
       "search_keyword": "MCP filesystem 서버 Claude Desktop 연결 실습 한국어",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Connect to MCP Server",
+      "instruction": "Establish a connection to the MCP server.",
+      "prompt": "Connect to the MCP server on Claude Desktop and confirm the connection status.",
+      "followUp": "Try reconnecting with different parameters to see how it affects the connection."
+    },
+    {
+      "label": "Read a File",
+      "instruction": "Read a file from the local filesystem through the MCP server.",
+      "prompt": "Read the contents of 'example.txt' from the local filesystem using the MCP server.",
+      "followUp": "Modify the file name to read a different file and observe the changes."
+    },
+    {
+      "label": "Write to a File",
+      "instruction": "Write data to a file on the local filesystem via the MCP server.",
+      "prompt": "Write 'Hello, MCP Server!' to 'output.txt' on the local filesystem using the MCP server.",
+      "followUp": "Change the text being written and the file name to experiment with different outputs."
     }
   ]
 }

@@ -4,7 +4,10 @@
   "description": "여러 Claude 스킬을 연결하여 복잡한 연구-분석-보고 파이프라인을 구축하는 실습",
   "difficulty": "advanced",
   "duration": "30분",
-  "tags": ["AI 에이전트", "실습"],
+  "tags": [
+    "AI 에이전트",
+    "실습"
+  ],
   "steps": [
     {
       "step": 1,
@@ -38,6 +41,26 @@
       "title": "스킬 체이닝으로 메가 에이전트 만들기 튜토리얼",
       "search_keyword": "스킬 체이닝으로 메가 에이전트 만들기 tutorial 2026 한국어",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Combine Skills for Research",
+      "instruction": "Connect multiple Claude skills to gather data.",
+      "prompt": "Use Claude to research the impact of climate change on agriculture in three different regions.",
+      "followUp": "Try modifying the regions or adding specific crops to see how the results change."
+    },
+    {
+      "label": "Analyze Data Outputs",
+      "instruction": "Analyze the data retrieved from your research.",
+      "prompt": "Analyze the data you gathered about climate change's impact on agriculture and summarize the key findings.",
+      "followUp": "Experiment with asking for more detailed analysis on specific regions or crops."
+    },
+    {
+      "label": "Generate a Report",
+      "instruction": "Create a report based on your analysis.",
+      "prompt": "Generate a report that outlines the effects of climate change on agriculture, including recommendations for farmers.",
+      "followUp": "Try changing the focus of the report to include economic impacts or adaptation strategies."
     }
   ]
 }

@@ -4,7 +4,13 @@
   "description": "OpenClaw를 설치하고 Claude API와 텔레그램 봇을 연동해 24시간 동작하는 나만의 AI 에이전트를 구축하는 실습",
   "difficulty": "intermediate",
   "duration": "45분",
-  "tags": ["OpenClaw", "Claude", "Telegram", "AI 에이전트", "자동화"],
+  "tags": [
+    "OpenClaw",
+    "Claude",
+    "Telegram",
+    "AI 에이전트",
+    "자동화"
+  ],
   "steps": [
     {
       "step": 1,
@@ -56,12 +62,35 @@
     }
   ],
   "challenge": "Claude Code와 OpenClaw를 연동해서, 텔레그램으로 'PR 리뷰해줘 [GitHub URL]'라고 보내면 Claude Code가 코드를 분석하고 리뷰 결과를 텔레그램으로 돌려주는 자동화를 구성해보세요.",
-  "related_skills": ["openclaw-setup", "openclaw-skills-advanced"],
+  "related_skills": [
+    "openclaw-setup",
+    "openclaw-skills-advanced"
+  ],
   "videos": [
     {
       "title": "OpenClaw + 텔레그램 AI 비서 만들기 풀 가이드",
       "search_keyword": "OpenClaw 텔레그램 Claude AI 에이전트 설치 한국어 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Install OpenClaw",
+      "instruction": "Guide the AI to help install OpenClaw.",
+      "prompt": "Please provide the steps to install OpenClaw on my system.",
+      "followUp": "Try asking about troubleshooting common installation issues."
+    },
+    {
+      "label": "Connect Claude API",
+      "instruction": "Ask the AI to connect Claude API with OpenClaw.",
+      "prompt": "How do I integrate Claude API with OpenClaw for my AI assistant?",
+      "followUp": "Experiment by asking how to customize the API settings for better responses."
+    },
+    {
+      "label": "Set Up Telegram Bot",
+      "instruction": "Inquire about setting up a Telegram bot for your AI assistant.",
+      "prompt": "What are the steps to create a Telegram bot and link it with OpenClaw?",
+      "followUp": "Ask how to add more features to the Telegram bot for enhanced functionality."
     }
   ]
 }

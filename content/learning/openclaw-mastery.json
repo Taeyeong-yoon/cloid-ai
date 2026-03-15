@@ -3,7 +3,14 @@
   "title": "OpenClaw 완전 정복",
   "description": "220,000+ GitHub 스타의 오픈소스 AI 에이전트 OpenClaw로 Claude + 텔레그램을 연동해 24시간 나만의 AI 비서를 구축하고, ClawHub 커스텀 스킬까지 직접 만드는 2026년 최신 과정",
   "level": "intermediate",
-  "tags": ["OpenClaw", "Claude", "Telegram", "AI 에이전트", "자동화", "ClawHub"],
+  "tags": [
+    "OpenClaw",
+    "Claude",
+    "Telegram",
+    "AI 에이전트",
+    "자동화",
+    "ClawHub"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -70,6 +77,61 @@
       "title": "커스텀 스킬 작성 및 배포",
       "description": "GitHub Issues 알림 스킬을 직접 마크다운으로 작성하고 로컬 테스트 후 ClawHub에 배포합니다.",
       "command": "openclaw skills validate my-skill.md && openclaw hub publish my-skill.md --category productivity"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of the OpenClaw platform?",
+      "options": [
+        "To create a personal AI assistant using Claude and Telegram",
+        "To develop video games using AI",
+        "To manage social media accounts automatically",
+        "To provide cloud storage solutions"
+      ],
+      "answer": 0,
+      "explanation": "OpenClaw is designed to integrate Claude with Telegram to build a personal AI assistant."
+    },
+    {
+      "question": "Which programming environment is required to install OpenClaw?",
+      "options": [
+        "Node.js 20+",
+        "Python 3.8",
+        "Java 11",
+        "Ruby on Rails"
+      ],
+      "answer": 0,
+      "explanation": "OpenClaw requires Node.js 20+ for installation and operation."
+    },
+    {
+      "question": "What feature does ClawHub provide for users?",
+      "options": [
+        "A platform for searching, installing, and deploying community skills",
+        "A marketplace for buying AI agents",
+        "An online course for learning programming languages",
+        "A forum for discussing AI ethics"
+      ],
+      "answer": 0,
+      "explanation": "ClawHub is a platform that allows users to search, install, and deploy community skills."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Install OpenClaw",
+      "instruction": "Guide the AI to help you install OpenClaw.",
+      "prompt": "How do I install OpenClaw on a Node.js 20+ environment?",
+      "followUp": "Try connecting Claude API with Telegram after installation."
+    },
+    {
+      "label": "Create Daily Briefing Skill",
+      "instruction": "Set up a daily briefing skill using ClawHub.",
+      "prompt": "How can I install the daily-briefing skill on ClawHub for automatic morning updates?",
+      "followUp": "Experiment by customizing the briefing content."
+    },
+    {
+      "label": "GitHub Issues Notification",
+      "instruction": "Develop a skill for GitHub Issues notifications.",
+      "prompt": "What steps do I need to follow to create a GitHub Issues notification skill in markdown and test it locally?",
+      "followUp": "Deploy your skill to ClawHub and monitor its performance."
     }
   ]
 }

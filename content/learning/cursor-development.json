@@ -3,7 +3,12 @@
   "title": "Cursor AI 개발 실전",
   "description": "AI 코드 에디터 Cursor의 Chat·Composer·Tab 자동완성을 실무 프로젝트에 적용하는 단계별 실전 과정",
   "level": "intermediate",
-  "tags": ["Cursor", "AI 코딩", "VS Code", "개발 도구"],
+  "tags": [
+    "Cursor",
+    "AI 코딩",
+    "VS Code",
+    "개발 도구"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +63,61 @@
       "title": ".cursorrules 파일 설정",
       "description": "프로젝트 루트에 .cursorrules를 만들고 코딩 스타일, 사용 기술, 금지 패턴을 정의해서 AI 일관성 높이기",
       "command": "프로젝트 루트 → .cursorrules 파일 생성 → 'TypeScript 필수, any 금지, 함수형 컴포넌트만, 한국어 주석' 등 규칙 작성"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the purpose of the .cursorrules file in a project?",
+      "options": [
+        "To define coding style, technologies used, and prohibited patterns",
+        "To store user preferences for the Cursor editor",
+        "To save project files in a specific format",
+        "To create backups of the project automatically"
+      ],
+      "answer": 0,
+      "explanation": "The .cursorrules file is used to define coding style, technologies, and prohibited patterns to enhance AI consistency in the project."
+    },
+    {
+      "question": "Which shortcut opens the Composer feature in Cursor?",
+      "options": [
+        "Ctrl+I",
+        "Alt+C",
+        "Shift+E",
+        "Cmd+N"
+      ],
+      "answer": 0,
+      "explanation": "Ctrl+I is the shortcut to open the Composer feature in Cursor, allowing users to generate code using natural language commands."
+    },
+    {
+      "question": "What does the Composer feature allow you to do?",
+      "options": [
+        "Edit multiple files simultaneously",
+        "Compile code into executable files",
+        "Generate a Next.js + Tailwind to-do app from natural language commands",
+        "Debug existing code errors"
+      ],
+      "answer": 2,
+      "explanation": "The Composer feature allows users to generate a Next.js + Tailwind to-do app from natural language commands, streamlining the coding process."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Create a Todo App",
+      "instruction": "Generate a basic Next.js Todo app using natural language.",
+      "prompt": "Use Ctrl+I to open Composer and create a Next.js Todo app with Tailwind CSS.",
+      "followUp": "Add a feature to filter completed tasks."
+    },
+    {
+      "label": "Set Coding Rules",
+      "instruction": "Define coding rules for a project using .cursorrules.",
+      "prompt": "Create a .cursorrules file to set coding style, technologies, and prohibited patterns for your project.",
+      "followUp": "Adjust the rules to include specific naming conventions."
+    },
+    {
+      "label": "Explore Community Tips",
+      "instruction": "Find and apply a community tip for using Cursor effectively.",
+      "prompt": "Search for Cursor community tips and implement one to enhance your coding workflow.",
+      "followUp": "Share your own tip based on your experience with Cursor."
     }
   ]
 }

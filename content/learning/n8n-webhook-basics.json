@@ -3,7 +3,11 @@
   "title": "n8n Webhook Basics: Triggering Workflows from External Events",
   "description": "Learn how to set up webhook triggers in n8n so external apps, APIs, and services can automatically start your automation workflows.",
   "level": "beginner",
-  "tags": ["n8n", "Webhook", "Automation"],
+  "tags": [
+    "n8n",
+    "Webhook",
+    "Automation"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -28,6 +32,61 @@
       "title": "n8n Webhook Tutorial for Beginners",
       "search_keyword": "n8n webhook trigger tutorial beginner 2026",
       "url": ""
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of setting up a webhook in n8n?",
+      "options": [
+        "To manually trigger workflows from the n8n interface",
+        "To allow external apps and services to automatically trigger workflows",
+        "To create new nodes within an existing workflow",
+        "To visualize workflow performance metrics"
+      ],
+      "answer": 1,
+      "explanation": "Webhooks are designed to enable external applications to trigger workflows automatically, streamlining the automation process."
+    },
+    {
+      "question": "Which HTTP method is commonly used to test a webhook in n8n?",
+      "options": [
+        "GET",
+        "PUT",
+        "POST",
+        "DELETE"
+      ],
+      "answer": 2,
+      "explanation": "The POST method is typically used to send data to a webhook, allowing you to test its functionality in n8n."
+    },
+    {
+      "question": "What is the role of nodes in n8n workflows?",
+      "options": [
+        "To serve as triggers for external applications",
+        "To represent individual steps that perform specific tasks",
+        "To store data permanently within n8n",
+        "To connect to the internet for external API calls"
+      ],
+      "answer": 1,
+      "explanation": "Nodes in n8n represent individual operations or tasks that can be executed as part of a workflow."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Set Up Webhook",
+      "instruction": "Create a webhook in n8n.",
+      "prompt": "Guide me through the steps to set up a webhook trigger in n8n for my automation workflow.",
+      "followUp": "Try testing the webhook by sending a POST request using curl."
+    },
+    {
+      "label": "Test Webhook with Curl",
+      "instruction": "Send a test request to your webhook.",
+      "prompt": "Show me how to use curl to send a POST request to the webhook I just created in n8n.",
+      "followUp": "Modify the POST request to include JSON data and see how n8n handles it."
+    },
+    {
+      "label": "Explore Webhook Responses",
+      "instruction": "Check the response from your webhook.",
+      "prompt": "Explain how to view the response from the webhook after sending a POST request in n8n.",
+      "followUp": "Experiment by changing the response format in n8n and observe the differences."
     }
   ]
 }

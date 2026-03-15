@@ -4,7 +4,11 @@
   "description": "Use Codex CLI to systematically generate comprehensive unit tests for an existing codebase with no test coverage.",
   "difficulty": "advanced",
   "duration": "1.5 hours",
-  "tags": ["Codex CLI", "Testing", "Unit Test"],
+  "tags": [
+    "Codex CLI",
+    "Testing",
+    "Unit Test"
+  ],
   "steps": [
     {
       "step": 1,
@@ -46,17 +50,31 @@
     "starterCode": "def is_empty_value(value) -> bool:\n    if value is None:\n        return True\n    ___",
     "solution": "return value == '' or value == [] or value == {}",
     "testCases": [
-      { "input": "is_empty_value(None)", "expected": "True" },
-      { "input": "is_empty_value('')", "expected": "True" },
-      { "input": "is_empty_value([])", "expected": "True" },
-      { "input": "is_empty_value('hello')", "expected": "False" }
+      {
+        "input": "is_empty_value(None)",
+        "expected": "True"
+      },
+      {
+        "input": "is_empty_value('')",
+        "expected": "True"
+      },
+      {
+        "input": "is_empty_value([])",
+        "expected": "True"
+      },
+      {
+        "input": "is_empty_value('hello')",
+        "expected": "False"
+      }
     ],
     "hints": [
       "The first branch already handles None.",
       "Compare the value against a few common empty structures."
     ]
   },
-  "related_skills": ["codex-cli-pr-review-recipe"],
+  "related_skills": [
+    "codex-cli-pr-review-recipe"
+  ],
   "videos": [
     {
       "title": "Codex CLI Unit Test Generation Tutorial",
@@ -77,5 +95,25 @@
       "Covering only trivial helpers and ignoring key flows",
       "Adding coverage config without checking the real report output"
     ]
-  }
+  },
+  "practicePrompts": [
+    {
+      "label": "Generate Unit Tests",
+      "instruction": "Create unit tests for a sample function.",
+      "prompt": "Use Codex CLI to generate unit tests for the function 'calculateSum(a, b)' in the provided codebase.",
+      "followUp": "Try adding more functions to generate tests for."
+    },
+    {
+      "label": "Test Coverage Report",
+      "instruction": "Check the test coverage of the codebase.",
+      "prompt": "Use Codex CLI to analyze the test coverage of the existing codebase after generating unit tests.",
+      "followUp": "Explore how to improve coverage by adding more tests."
+    },
+    {
+      "label": "Refactor Tests",
+      "instruction": "Refactor generated tests for better readability.",
+      "prompt": "Use Codex CLI to refactor the generated unit tests for the 'calculateSum' function to enhance readability.",
+      "followUp": "Experiment with different naming conventions for the test cases."
+    }
+  ]
 }

@@ -4,7 +4,12 @@
   "description": "Claude에게 요구사항을 말하면 단일 HTML 파일로 동작하는 미니앱을 만드는 실습",
   "difficulty": "intermediate",
   "duration": "30분",
-  "tags": ["HTML", "JavaScript", "Claude", "웹앱"],
+  "tags": [
+    "HTML",
+    "JavaScript",
+    "Claude",
+    "웹앱"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +37,35 @@
     }
   ],
   "challenge": "포모도로 기법으로 작업 25분 → 휴식 5분을 자동으로 전환하는 완전한 포모도로 타이머로 업그레이드해보세요.",
-  "related_skills": ["ai-code-generation", "claude-prompt-patterns"],
+  "related_skills": [
+    "ai-code-generation",
+    "claude-prompt-patterns"
+  ],
   "videos": [
     {
       "title": "AI로 HTML 앱 만들기 실전",
       "search_keyword": "AI Claude HTML JavaScript 앱 만들기 실전 한국어 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Create a Simple Calculator",
+      "instruction": "Ask Claude to build a basic calculator app.",
+      "prompt": "Create a mini HTML app that functions as a simple calculator with addition and subtraction.",
+      "followUp": "Try adding multiplication and division functionalities to the app."
+    },
+    {
+      "label": "Design a To-Do List",
+      "instruction": "Request a to-do list application from Claude.",
+      "prompt": "Make a mini HTML app that allows users to add and remove tasks from a to-do list.",
+      "followUp": "Modify the app to save the tasks in local storage."
+    },
+    {
+      "label": "Build a Weather App",
+      "instruction": "Inquire about a weather display app.",
+      "prompt": "Develop a mini HTML app that shows the current weather for a specified city.",
+      "followUp": "Experiment by adding a feature to show the forecast for the next three days."
     }
   ]
 }

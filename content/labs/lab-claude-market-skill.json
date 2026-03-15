@@ -4,7 +4,12 @@
   "description": "Claude Market SDK를 사용하여 PDF 요약 스킬을 설계하고 출판하는 end-to-end 실습",
   "difficulty": "advanced",
   "duration": "45분",
-  "tags": ["Claude Market", "AI 에이전트", "CLI", "스킬 개발"],
+  "tags": [
+    "Claude Market",
+    "AI 에이전트",
+    "CLI",
+    "스킬 개발"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +37,35 @@
     }
   ],
   "challenge": "법률 특화 버전과 금융 특화 버전 두 가지 스킬 변형을 설계하고, 각각의 차별화 포인트를 정의하세요.",
-  "related_skills": ["claude-market-skill-builder", "uli-agent-protocol"],
+  "related_skills": [
+    "claude-market-skill-builder",
+    "uli-agent-protocol"
+  ],
   "videos": [
     {
       "title": "Claude Market 스킬 개발 시작하기",
       "search_keyword": "Claude Market skill development tutorial 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Create PDF Summary Skill",
+      "instruction": "Design a skill to summarize PDF documents.",
+      "prompt": "Using Claude Market SDK, create a skill that summarizes a PDF document provided by the user.",
+      "followUp": "Try adding more features, like keyword extraction or sentiment analysis."
+    },
+    {
+      "label": "Publish Your Skill",
+      "instruction": "Publish the skill you created.",
+      "prompt": "Publish the PDF summary skill you designed using Claude Market SDK, ensuring all necessary metadata is included.",
+      "followUp": "Modify the skill's description to make it more appealing to users."
+    },
+    {
+      "label": "Test Skill Functionality",
+      "instruction": "Test the skill with a sample PDF.",
+      "prompt": "Run a test using your PDF summary skill on a sample PDF document and provide feedback on the output.",
+      "followUp": "Experiment with different types of PDFs to see how the skill performs."
     }
   ]
 }

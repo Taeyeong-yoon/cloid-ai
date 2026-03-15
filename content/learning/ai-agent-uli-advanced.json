@@ -3,7 +3,13 @@
   "title": "AI 에이전트 CLI 심화",
   "description": "Claude Code CLI와 멀티 에이전트 파이프라인, 스킬 체이닝, Claude Market 스킬 개발 등 2026년 최신 에이전트 기술을 심층 학습합니다",
   "level": "advanced",
-  "tags": ["AI 에이전트", "CLI", "Claude Market", "스킬 체이닝", "n8n"],
+  "tags": [
+    "AI 에이전트",
+    "CLI",
+    "Claude Market",
+    "스킬 체이닝",
+    "n8n"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -64,6 +70,61 @@
       "title": "n8n + Claude 자동화 워크플로우",
       "description": "n8n에서 Claude API를 트리거하는 완전 자동화 파이프라인 구축",
       "command": "# n8n 로컬 실행\nnpx n8n\n# 브라우저에서 http://localhost:5678 접속"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary focus of the Claude Code CLI in agent design?",
+      "options": [
+        "Multi-agent pipeline integration",
+        "Basic coding principles",
+        "Data visualization techniques",
+        "User interface design"
+      ],
+      "answer": 0,
+      "explanation": "The Claude Code CLI emphasizes multi-agent pipeline integration as a key aspect of agent design."
+    },
+    {
+      "question": "How can skills be monetized in the Claude Market?",
+      "options": [
+        "By offering free trials only",
+        "Through publishing and selling skills",
+        "By creating tutorials for skills",
+        "By limiting access to skills"
+      ],
+      "answer": 1,
+      "explanation": "Skills can be monetized in the Claude Market by publishing and selling them to users."
+    },
+    {
+      "question": "What is a key benefit of skill chaining in building mega agents?",
+      "options": [
+        "Improves user interface design",
+        "Allows for complex task automation",
+        "Reduces the need for data analysis",
+        "Simplifies skill creation process"
+      ],
+      "answer": 1,
+      "explanation": "Skill chaining enables the combination of multiple skills to automate complex tasks effectively."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Build a Basic Agent",
+      "instruction": "Create a simple agent using Claude Code CLI.",
+      "prompt": "Design an agent that takes user input and returns a greeting message.",
+      "followUp": "Try adding a feature that responds to different user names."
+    },
+    {
+      "label": "Skill Chaining Exercise",
+      "instruction": "Implement a skill chain with Claude.",
+      "prompt": "Create an agent that performs a web search, summarizes the results, and fact-checks one claim.",
+      "followUp": "Experiment with different search queries to see how the agent performs."
+    },
+    {
+      "label": "Automate with n8n",
+      "instruction": "Set up an automation pipeline in n8n.",
+      "prompt": "Build a workflow that triggers the Claude API to analyze data and return insights automatically.",
+      "followUp": "Add an email notification step to inform you when the analysis is complete."
     }
   ]
 }

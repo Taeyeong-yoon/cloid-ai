@@ -4,7 +4,12 @@
   "description": "Gemini 2.0 Flash API를 사용해 실시간 스트리밍 응답을 Next.js에 구현하는 실습",
   "difficulty": "intermediate",
   "duration": "1시간",
-  "tags": ["Gemini", "Next.js", "API", "스트리밍"],
+  "tags": [
+    "Gemini",
+    "Next.js",
+    "API",
+    "스트리밍"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +37,34 @@
     }
   ],
   "challenge": "스트리밍 응답을 화면에 타이핑 애니메이션처럼 표시하는 UI 컴포넌트를 만들어보세요.",
-  "related_skills": ["ai-code-generation"],
+  "related_skills": [
+    "ai-code-generation"
+  ],
   "videos": [
     {
       "title": "Gemini API 스트리밍 Next.js 구현",
       "search_keyword": "Gemini API 스트리밍 Next.js 구현 한국어 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Initialize Streaming API",
+      "instruction": "Set up the Gemini 2.0 Flash API for streaming.",
+      "prompt": "How do I initialize the Gemini 2.0 Flash API for real-time streaming in Next.js?",
+      "followUp": "Try adding error handling to your initialization code."
+    },
+    {
+      "label": "Implement Streaming Response",
+      "instruction": "Create a function to handle streaming responses.",
+      "prompt": "Can you show me how to implement a function that processes streaming responses from the Gemini API in Next.js?",
+      "followUp": "Modify the function to filter responses based on specific criteria."
+    },
+    {
+      "label": "Display Streamed Data",
+      "instruction": "Render the streamed data on a Next.js page.",
+      "prompt": "What is the best way to display real-time data streamed from the Gemini API on a Next.js page?",
+      "followUp": "Experiment with different UI components to enhance the data display."
     }
   ]
 }

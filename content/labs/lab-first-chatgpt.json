@@ -4,7 +4,12 @@
   "description": "ChatGPT와의 첫 대화로 나만의 자기소개서를 단계별로 완성하는 입문 실습",
   "difficulty": "beginner",
   "duration": "10분",
-  "tags": ["ChatGPT", "자기소개서", "글쓰기", "프롬프트"],
+  "tags": [
+    "ChatGPT",
+    "자기소개서",
+    "글쓰기",
+    "프롬프트"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +37,35 @@
     }
   ],
   "challenge": "완성된 자기소개서를 영어로도 번역해달라고 요청해보세요.",
-  "related_skills": ["prompt-basics", "ai-writing-assistant"],
+  "related_skills": [
+    "prompt-basics",
+    "ai-writing-assistant"
+  ],
   "videos": [
     {
       "title": "ChatGPT로 자기소개서 쓰기 실전",
       "search_keyword": "ChatGPT 자기소개서 쓰기 실전 한국어 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Create Introduction",
+      "instruction": "Generate a personal introduction for your resume.",
+      "prompt": "Help me write a brief introduction for my resume highlighting my skills and experiences.",
+      "followUp": "Try adding more specific details about your skills."
+    },
+    {
+      "label": "Highlight Achievements",
+      "instruction": "List your top achievements to include in your self-introduction.",
+      "prompt": "What are some key achievements I can mention in my self-introduction?",
+      "followUp": "Experiment by adding different types of achievements."
+    },
+    {
+      "label": "Define Goals",
+      "instruction": "Articulate your career goals in your self-introduction.",
+      "prompt": "How can I express my career goals in my self-introduction effectively?",
+      "followUp": "Modify the goals to reflect both short-term and long-term aspirations."
     }
   ]
 }

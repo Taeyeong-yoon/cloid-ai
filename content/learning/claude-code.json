@@ -58,5 +58,60 @@
       "description": "프로젝트 지침 파일 CLAUDE.md를 작성해 일관된 코딩 스타일 유지",
       "command": "claude \"Create a CLAUDE.md for this project with coding conventions\""
     }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of Claude Code as described in the guide?",
+      "options": [
+        "To create advanced AI models",
+        "To assist with coding tasks",
+        "To develop video games",
+        "To manage databases"
+      ],
+      "answer": 1,
+      "explanation": "Claude Code is designed as an AI coding agent to assist users with coding tasks, making programming easier."
+    },
+    {
+      "question": "Which of the following is NOT mentioned as a feature of Claude Code?",
+      "options": [
+        "Shortcut keys to improve productivity",
+        "Open-source repository access",
+        "Built-in debugging tools",
+        "Project guideline file creation"
+      ],
+      "answer": 2,
+      "explanation": "The guide mentions shortcut keys, open-source access, and project guideline files but does not mention built-in debugging tools."
+    },
+    {
+      "question": "What is one of the learning outcomes of using Claude Code according to the tutorial?",
+      "options": [
+        "Building a mobile application",
+        "Creating a TODO app from scratch",
+        "Learning advanced machine learning techniques",
+        "Developing video editing software"
+      ],
+      "answer": 1,
+      "explanation": "The tutorial emphasizes creating a TODO app from scratch as a fundamental skill to be learned using Claude Code."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Setup Claude Code",
+      "instruction": "Guide the AI to help you install Claude Code.",
+      "prompt": "Can you provide step-by-step instructions to install Claude Code on my machine?",
+      "followUp": "Try asking how to configure advanced settings after installation."
+    },
+    {
+      "label": "Create a TODO App",
+      "instruction": "Use Claude Code to build a basic application.",
+      "prompt": "Help me create a simple TODO app using Claude Code. What are the essential features I should include?",
+      "followUp": "Ask for ways to enhance the app with additional functionalities."
+    },
+    {
+      "label": "Write CLAUDE.md",
+      "instruction": "Learn to maintain coding style consistency.",
+      "prompt": "Can you help me draft a project guideline file named CLAUDE.md to ensure a consistent coding style?",
+      "followUp": "Experiment with asking for examples of coding styles to include in the document."
+    }
   ]
 }

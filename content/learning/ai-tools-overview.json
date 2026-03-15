@@ -3,7 +3,13 @@
   "title": "2026 주요 AI 도구 총정리",
   "description": "ChatGPT, Claude, Gemini, Cursor, Perplexity 등 2026년 필수 AI 도구를 카테고리별로 비교 정리",
   "level": "beginner",
-  "tags": ["AI 도구", "ChatGPT", "Claude", "Gemini", "Perplexity"],
+  "tags": [
+    "AI 도구",
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "Perplexity"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +64,61 @@
       "title": "Perplexity로 실시간 정보 검색하기",
       "description": "Perplexity.ai에서 최신 뉴스나 정보가 필요한 질문을 하고 출처 링크와 함께 답변 받기",
       "command": "perplexity.ai → '2026년 AI 시장 최신 트렌드는?' 입력 후 출처 확인"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which AI tool is known for its strong capabilities in document analysis, coding, and creative writing?",
+      "options": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity"
+      ],
+      "answer": 1,
+      "explanation": "Claude, developed by Anthropic, is specifically noted for its strengths in analyzing long documents, coding, and creative tasks."
+    },
+    {
+      "question": "What feature distinguishes Google's Gemini from other AI tools?",
+      "options": [
+        "Real-time web search integration",
+        "Multimodal capabilities",
+        "Code editing in VS Code",
+        "Focus on news and information retrieval"
+      ],
+      "answer": 1,
+      "explanation": "Gemini is characterized by its multimodal capabilities and integration with Google Workspace, setting it apart from other tools."
+    },
+    {
+      "question": "How does Perplexity.ai provide answers to user queries?",
+      "options": [
+        "By generating creative content",
+        "Through real-time web search with source links",
+        "By editing code within a text editor",
+        "By analyzing complex questions across multiple platforms"
+      ],
+      "answer": 1,
+      "explanation": "Perplexity.ai is designed to provide answers based on real-time web searches and includes source links for the information provided."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Compare AI Responses",
+      "instruction": "Analyze how different AIs respond to the same question.",
+      "prompt": "Ask ChatGPT, Claude, and Gemini the same complex question and compare their answers.",
+      "followUp": "Try asking a simpler question to see how the responses differ."
+    },
+    {
+      "label": "Use Perplexity.ai",
+      "instruction": "Get the latest information using an AI tool.",
+      "prompt": "Ask Perplexity.ai about the latest news on AI tools and include the source links in your query.",
+      "followUp": "Ask a follow-up question to see how it expands on the topic."
+    },
+    {
+      "label": "Explore Code Editing",
+      "instruction": "Test an AI integrated development environment.",
+      "prompt": "Use the AI features in a VS Code-based editor to write a simple function in Python.",
+      "followUp": "Modify the function and see how the AI suggests improvements."
     }
   ]
 }

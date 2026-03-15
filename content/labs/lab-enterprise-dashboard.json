@@ -4,7 +4,10 @@
   "description": "데이터를 자연어로 쿼리하는 Claude 기반 비즈니스 인텔리전스 대시보드 구축 실습",
   "difficulty": "advanced",
   "duration": "30분",
-  "tags": ["AI 에이전트", "실습"],
+  "tags": [
+    "AI 에이전트",
+    "실습"
+  ],
   "steps": [
     {
       "step": 1,
@@ -38,6 +41,26 @@
       "title": "Claude 기반 AI 대시보드 구축 튜토리얼",
       "search_keyword": "Claude 기반 AI 대시보드 구축 tutorial 2026 한국어",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Query Sales Data",
+      "instruction": "Ask Claude to retrieve sales figures.",
+      "prompt": "What were the total sales figures for the last quarter?",
+      "followUp": "Try asking for sales data by region or product category."
+    },
+    {
+      "label": "Customer Insights",
+      "instruction": "Request information about customer demographics.",
+      "prompt": "Can you provide insights on our customer demographics for this year?",
+      "followUp": "Modify the query to focus on a specific age group or location."
+    },
+    {
+      "label": "Trend Analysis",
+      "instruction": "Analyze trends in your data.",
+      "prompt": "What trends can you identify in our monthly sales over the past year?",
+      "followUp": "Experiment by asking about trends in a specific product line."
     }
   ]
 }

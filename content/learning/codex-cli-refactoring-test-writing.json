@@ -3,7 +3,11 @@
   "title": "Codex CLI: Refactoring Legacy Code and Writing Tests",
   "description": "Use Codex CLI to systematically refactor legacy code, improve readability, and auto-generate unit tests for existing functions.",
   "level": "intermediate",
-  "tags": ["Codex CLI", "Refactoring", "Testing"],
+  "tags": [
+    "Codex CLI",
+    "Refactoring",
+    "Testing"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -63,6 +67,26 @@
       ],
       "answer": 0,
       "explanation": "Critical logic gives the highest value because failures there affect real behavior."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Refactor a Function",
+      "instruction": "Refactor a complex function for better readability.",
+      "prompt": "Refactor the following function to improve its readability: function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length; i++) { total += items[i].price; } return total; }",
+      "followUp": "Now, generate unit tests for the refactored function."
+    },
+    {
+      "label": "Auto-generate Tests",
+      "instruction": "Create unit tests for an existing function.",
+      "prompt": "Generate unit tests for the following function: function greet(name) { return 'Hello, ' + name + '!'; }",
+      "followUp": "Modify the function to handle empty names and regenerate the tests."
+    },
+    {
+      "label": "Combine Refactor and Test",
+      "instruction": "Refactor a function and generate tests in one go.",
+      "prompt": "Refactor and generate tests for this function: function findMax(arr) { let max = arr[0]; for (let i = 1; i < arr.length; i++) { if (arr[i] > max) { max = arr[i]; } } return max; }",
+      "followUp": "Try adding error handling for empty arrays and test again."
     }
   ]
 }

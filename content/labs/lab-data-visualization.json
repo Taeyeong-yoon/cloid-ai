@@ -4,7 +4,12 @@
   "description": "CSV 데이터를 Claude에게 붙여넣고, Chart.js를 사용한 인터랙티브 차트를 자동 생성하는 실습",
   "difficulty": "intermediate",
   "duration": "30분",
-  "tags": ["데이터", "Chart.js", "시각화", "Claude"],
+  "tags": [
+    "데이터",
+    "Chart.js",
+    "시각화",
+    "Claude"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +37,35 @@
     }
   ],
   "challenge": "실제 본인의 가계부 데이터나 업무 데이터를 붙여넣고 의미 있는 인사이트를 도출하는 대시보드를 만들어보세요.",
-  "related_skills": ["ai-data-analysis", "ai-code-generation"],
+  "related_skills": [
+    "ai-data-analysis",
+    "ai-code-generation"
+  ],
   "videos": [
     {
       "title": "AI로 데이터 시각화 대시보드 만들기",
       "search_keyword": "AI Chart.js 데이터 시각화 대시보드 만들기 한국어 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Generate Bar Chart",
+      "instruction": "Paste your CSV data to create a bar chart.",
+      "prompt": "Please generate an interactive bar chart using the following CSV data: [paste your CSV data here].",
+      "followUp": "Try changing the chart type to a line chart instead."
+    },
+    {
+      "label": "Create Pie Chart",
+      "instruction": "Use your CSV data to create a pie chart.",
+      "prompt": "Create an interactive pie chart from this CSV data: [paste your CSV data here].",
+      "followUp": "Experiment by adding more data categories to your CSV."
+    },
+    {
+      "label": "Line Chart Visualization",
+      "instruction": "Visualize your data with a line chart.",
+      "prompt": "Visualize the following CSV data as a line chart: [paste your CSV data here].",
+      "followUp": "Modify the data points to see how it affects the chart."
     }
   ]
 }

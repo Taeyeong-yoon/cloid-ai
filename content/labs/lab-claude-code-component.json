@@ -4,7 +4,12 @@
   "description": "Next.js 프로젝트에서 Claude Code를 사용해 UI 컴포넌트를 자동으로 생성하고 테스트하는 실습",
   "difficulty": "beginner",
   "duration": "30분",
-  "tags": ["Claude Code", "Next.js", "TypeScript", "Tailwind"],
+  "tags": [
+    "Claude Code",
+    "Next.js",
+    "TypeScript",
+    "Tailwind"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +37,34 @@
     }
   ],
   "challenge": "생성된 Card 컴포넌트를 사용해 3개의 카드를 보여주는 CardGrid 컴포넌트도 만들어보세요.",
-  "related_skills": ["claude-code-basics"],
+  "related_skills": [
+    "claude-code-basics"
+  ],
   "videos": [
     {
       "title": "Claude Code 컴포넌트 자동 생성 실습",
       "search_keyword": "Claude Code Next.js 컴포넌트 자동 생성 실습 한국어",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Generate Button Component",
+      "instruction": "Create a simple button component using Claude Code.",
+      "prompt": "Generate a reusable button component in Next.js using Claude Code with props for label and onClick.",
+      "followUp": "Change the button style and add an icon to see how it affects the output."
+    },
+    {
+      "label": "Create Card Layout",
+      "instruction": "Develop a card component layout using Claude Code.",
+      "prompt": "Use Claude Code to create a card component in Next.js that displays an image, title, and description.",
+      "followUp": "Experiment by adding a footer section with action buttons."
+    },
+    {
+      "label": "Implement Form Component",
+      "instruction": "Build a form component using Claude Code.",
+      "prompt": "Generate a form component in Next.js with fields for name, email, and a submit button using Claude Code.",
+      "followUp": "Modify the form to include validation for the email field."
     }
   ]
 }

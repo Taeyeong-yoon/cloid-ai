@@ -4,7 +4,11 @@
   "description": "Use Claude Code in headless mode to automatically create pull requests and generate code review comments via the GitHub CLI.",
   "difficulty": "intermediate",
   "duration": "1 hour",
-  "tags": ["Claude Code", "GitHub", "Automation"],
+  "tags": [
+    "Claude Code",
+    "GitHub",
+    "Automation"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +36,34 @@
     }
   ],
   "challenge": "Set up a GitHub Actions workflow that runs this Claude Code automation on a weekly schedule to find and fix common code quality issues automatically.",
-  "related_skills": ["claude-code-bug-fix-recipe"],
+  "related_skills": [
+    "claude-code-bug-fix-recipe"
+  ],
   "videos": [
     {
       "title": "Claude Code GitHub Automation Tutorial",
       "search_keyword": "Claude Code GitHub CLI PR automation tutorial 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Create Pull Request",
+      "instruction": "Automate a pull request creation using Claude Code.",
+      "prompt": "Use Claude Code in headless mode to create a pull request for the 'feature-branch' in my GitHub repository.",
+      "followUp": "Try changing the branch name to see how it affects the pull request."
+    },
+    {
+      "label": "Generate Code Review",
+      "instruction": "Generate code review comments for your latest commit.",
+      "prompt": "Ask Claude Code to generate code review comments for the latest commit on the 'main' branch of my GitHub repo.",
+      "followUp": "Modify the prompt to review a specific file instead of the latest commit."
+    },
+    {
+      "label": "List Open PRs",
+      "instruction": "Retrieve a list of open pull requests in your repository.",
+      "prompt": "Use the GitHub CLI to list all open pull requests in my GitHub repository using Claude Code.",
+      "followUp": "Experiment by filtering the list to show only PRs from a specific user."
     }
   ]
 }

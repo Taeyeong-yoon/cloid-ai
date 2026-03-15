@@ -3,7 +3,11 @@
   "title": "n8n Multi-Agent State Management: Keeping Memory Across Steps",
   "description": "Learn how to share state and memory between multiple AI agent nodes in an n8n workflow so each step has context from previous actions.",
   "level": "intermediate",
-  "tags": ["n8n", "State Management", "Multi-Agent"],
+  "tags": [
+    "n8n",
+    "State Management",
+    "Multi-Agent"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -28,6 +32,61 @@
       "title": "n8n Multi-Agent State Management Tutorial",
       "search_keyword": "n8n multi-agent memory state management workflow 2026",
       "url": ""
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of sharing state and memory between AI agent nodes in an n8n workflow?",
+      "options": [
+        "To ensure each agent can operate independently without context",
+        "To allow each step to have context from previous actions",
+        "To increase the processing speed of each agent",
+        "To eliminate the need for agent connections"
+      ],
+      "answer": 1,
+      "explanation": "Sharing state and memory allows each step to build on the context of previous actions, enhancing the workflow's coherence."
+    },
+    {
+      "question": "Which memory configuration type is NOT mentioned in the n8n documentation?",
+      "options": [
+        "Buffer memory",
+        "Window memory",
+        "Stack memory",
+        "State management nodes"
+      ],
+      "answer": 2,
+      "explanation": "Stack memory is not mentioned in the context of n8n's memory configuration types, while buffer and window memory are."
+    },
+    {
+      "question": "In an n8n workflow, if Agent A researches a topic, what is Agent B's role?",
+      "options": [
+        "To conduct a similar research task",
+        "To write a report using Agent A's findings",
+        "To analyze the data collected by Agent A",
+        "To present the findings to a human user"
+      ],
+      "answer": 1,
+      "explanation": "Agent B's role is to utilize the findings from Agent A's research to write a report, demonstrating the sharing of context."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Research and Report",
+      "instruction": "Create a workflow for two agents.",
+      "prompt": "Agent A, research the benefits of renewable energy. Agent B, summarize Agent A's findings in a report.",
+      "followUp": "Try adding a third agent to edit the report based on feedback."
+    },
+    {
+      "label": "Memory Configuration Test",
+      "instruction": "Experiment with different memory types.",
+      "prompt": "Set up an n8n workflow with buffer memory for Agent A to store data from previous steps. How does it affect Agent B's output?",
+      "followUp": "Switch to window memory and compare the results."
+    },
+    {
+      "label": "State Sharing Challenge",
+      "instruction": "Implement state sharing between agents.",
+      "prompt": "Create an n8n workflow where Agent A collects user preferences and Agent B uses this data to recommend products. How does state sharing improve the interaction?",
+      "followUp": "Add conditions based on user preferences to enhance recommendations."
     }
   ]
 }

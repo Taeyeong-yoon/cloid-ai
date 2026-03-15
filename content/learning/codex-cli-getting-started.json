@@ -3,7 +3,11 @@
   "title": "Getting Started with Codex CLI: Code Reading and Bug Fixing",
   "description": "Learn how to install and use OpenAI's Codex CLI to read codebases, understand unfamiliar code, and fix bugs — all from the terminal.",
   "level": "beginner",
-  "tags": ["Codex CLI", "Beginner", "Code"],
+  "tags": [
+    "Codex CLI",
+    "Beginner",
+    "Code"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -78,5 +82,25 @@
       "API key not configured before first run",
       "Trying to review too large a codebase on the first attempt"
     ]
-  }
+  },
+  "practicePrompts": [
+    {
+      "label": "Install Codex CLI",
+      "instruction": "Guide the AI to install Codex CLI.",
+      "prompt": "How do I install OpenAI's Codex CLI using npm?",
+      "followUp": "Try configuring your API key for Codex CLI."
+    },
+    {
+      "label": "Run Code Review",
+      "instruction": "Ask the AI to help you review code.",
+      "prompt": "Can you show me how to run a code review on a specific file using Codex CLI?",
+      "followUp": "Experiment with reviewing a different file or codebase."
+    },
+    {
+      "label": "Fix a Bug",
+      "instruction": "Get help in fixing a code bug.",
+      "prompt": "What steps should I take to fix a bug in my code using Codex CLI?",
+      "followUp": "Try identifying another bug in a different code snippet."
+    }
+  ]
 }

@@ -4,7 +4,12 @@
   "description": "Claude에게 원하는 엑셀 기능을 설명하면 수식을 자동으로 생성하고 오류를 해결하는 실습",
   "difficulty": "beginner",
   "duration": "10분",
-  "tags": ["엑셀", "수식", "업무자동화", "Claude"],
+  "tags": [
+    "엑셀",
+    "수식",
+    "업무자동화",
+    "Claude"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +37,34 @@
     }
   ],
   "challenge": "매달 지출 내역에서 카테고리별 합계와 비율을 자동으로 계산하는 수식 세트를 만들어보세요.",
-  "related_skills": ["ai-excel-automation"],
+  "related_skills": [
+    "ai-excel-automation"
+  ],
   "videos": [
     {
       "title": "AI로 엑셀 수식 자동 생성",
       "search_keyword": "AI 엑셀 수식 자동 생성 ChatGPT Claude 한국어 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Basic SUM Formula",
+      "instruction": "Ask Claude to create a SUM formula.",
+      "prompt": "Can you generate an Excel formula to sum the values in cells A1 to A10?",
+      "followUp": "Try asking for a SUM formula with a condition, like summing only if values are greater than 10."
+    },
+    {
+      "label": "IF Statement Creation",
+      "instruction": "Request an IF statement from Claude.",
+      "prompt": "Please create an Excel IF formula that checks if the value in cell B1 is greater than 100 and returns 'Pass' or 'Fail'.",
+      "followUp": "Modify the condition to check for less than or equal to 50 and see how the formula changes."
+    },
+    {
+      "label": "VLOOKUP Function",
+      "instruction": "Get a VLOOKUP function from Claude.",
+      "prompt": "Can you provide an Excel VLOOKUP formula to find the price of a product in column B based on its name in column A?",
+      "followUp": "Change the range to include an additional column for discounts and see how it affects the lookup."
     }
   ]
 }

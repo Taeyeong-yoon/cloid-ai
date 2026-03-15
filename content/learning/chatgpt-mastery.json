@@ -3,7 +3,12 @@
   "title": "ChatGPT 완전 활용법",
   "description": "회원가입부터 고급 기능까지, ChatGPT를 업무와 일상에서 200% 활용하는 완전 가이드",
   "level": "beginner",
-  "tags": ["ChatGPT", "OpenAI", "GPT-5.2", "생산성"],
+  "tags": [
+    "ChatGPT",
+    "OpenAI",
+    "GPT-5.2",
+    "생산성"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +63,61 @@
       "title": "이미지 분석 + 데이터 분석 실습",
       "description": "사진이나 PDF를 업로드해서 내용 요약, 데이터 분석, 그래프 생성 등 멀티모달 기능 체험",
       "command": "ChatGPT에 엑셀/CSV 파일 업로드 후 '이 데이터를 분석하고 주요 인사이트 3가지를 알려줘' 입력"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is one way to eliminate repetitive explanations in ChatGPT?",
+      "options": [
+        "By using random prompts each time",
+        "By setting custom instructions that include personal information",
+        "By changing the language settings frequently",
+        "By only using the basic features"
+      ],
+      "answer": 1,
+      "explanation": "Setting custom instructions that include personal information helps to tailor responses and eliminate repetitive explanations."
+    },
+    {
+      "question": "What feature of the latest GPT-5.2 model allows users to work with various types of content?",
+      "options": [
+        "Text-only responses",
+        "Multimodal capabilities",
+        "Voice recognition",
+        "Limited functionality"
+      ],
+      "answer": 1,
+      "explanation": "The multimodal capabilities of GPT-5.2 allow users to interact with both text and visual content, enhancing the overall experience."
+    },
+    {
+      "question": "How can users create and share their own version of ChatGPT?",
+      "options": [
+        "By uploading their own code",
+        "By customizing the settings and sharing the configurations",
+        "By only using the default settings",
+        "By contacting customer support"
+      ],
+      "answer": 1,
+      "explanation": "Users can create and share their own version of ChatGPT by customizing the settings to fit their needs and sharing those configurations."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Custom Instructions Setup",
+      "instruction": "Set up custom instructions for your ChatGPT.",
+      "prompt": "Create custom instructions for ChatGPT that reflect your profession and preferred communication style.",
+      "followUp": "Try modifying the instructions to see how the responses change."
+    },
+    {
+      "label": "Multimodal Features Test",
+      "instruction": "Explore the multimodal capabilities of ChatGPT.",
+      "prompt": "Upload a PDF document and ask ChatGPT to summarize its key points.",
+      "followUp": "Experiment with asking for specific data analysis from the same document."
+    },
+    {
+      "label": "Creating Your GPT",
+      "instruction": "Create your own version of ChatGPT.",
+      "prompt": "Design a custom GPT that specializes in providing travel advice.",
+      "followUp": "Share your custom GPT with a friend and ask for their feedback."
     }
   ]
 }

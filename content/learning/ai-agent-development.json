@@ -3,7 +3,13 @@
   "title": "AI 에이전트 개발",
   "description": "LangChain·CrewAI·Anthropic Agent SDK로 자율적으로 목표를 달성하는 AI 에이전트를 설계하고 배포하는 실전 과정",
   "level": "advanced",
-  "tags": ["AI 에이전트", "LangChain", "CrewAI", "Python", "자율 AI"],
+  "tags": [
+    "AI 에이전트",
+    "LangChain",
+    "CrewAI",
+    "Python",
+    "자율 AI"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +64,61 @@
       "title": "CrewAI 리서치-작가 팀 구성",
       "description": "리서처 에이전트가 정보를 수집하고 작가 에이전트가 블로그를 작성하는 2인 크루 구성 실습",
       "command": "pip install crewai && python -c 'from crewai import Agent, Task, Crew ...'"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of using LangChain in AI agent development?",
+      "options": [
+        "To implement ReAct and Plan-and-Execute agent patterns",
+        "To create a user interface for agents",
+        "To manage databases for agents",
+        "To analyze user data for marketing purposes"
+      ],
+      "answer": 0,
+      "explanation": "LangChain is specifically used to implement ReAct and Plan-and-Execute agent patterns in AI development."
+    },
+    {
+      "question": "Which framework is designed for multi-agent collaboration?",
+      "options": [
+        "LangChain",
+        "CrewAI",
+        "Anthropic Agent SDK",
+        "LangSmith"
+      ],
+      "answer": 1,
+      "explanation": "CrewAI is the framework specifically designed for facilitating multi-agent collaboration."
+    },
+    {
+      "question": "What is the function of the LangSmith platform in AI agent development?",
+      "options": [
+        "To deploy agents to production environments",
+        "To track, debug, and evaluate agent execution",
+        "To provide training data for machine learning models",
+        "To generate marketing content for agents"
+      ],
+      "answer": 1,
+      "explanation": "LangSmith is used for tracking, debugging, and evaluating the execution of AI agents."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Implement ReAct Agent",
+      "instruction": "Create a ReAct agent using LangChain.",
+      "prompt": "Design a ReAct agent that can answer trivia questions using LangChain.",
+      "followUp": "Try adding a feature for the agent to learn from user feedback."
+    },
+    {
+      "label": "Multi-Agent Collaboration",
+      "instruction": "Set up a CrewAI collaboration.",
+      "prompt": "Build a two-agent crew where one agent gathers data and the other writes a summary.",
+      "followUp": "Experiment with adding a third agent for editing the summary."
+    },
+    {
+      "label": "Search Tool Integration",
+      "instruction": "Integrate DuckDuckGo with LangChain.",
+      "prompt": "Create a ReAct agent that uses DuckDuckGo to fetch information and provide it to the user.",
+      "followUp": "Enhance the agent to filter results based on user preferences."
     }
   ]
 }

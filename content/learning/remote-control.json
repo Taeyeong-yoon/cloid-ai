@@ -58,5 +58,60 @@
       "description": "매일 정해진 시간에 AI 에이전트가 작업을 수행하도록 자동화",
       "command": "claude --print \"Summarize today's repo changes\" | mail -s 'Daily AI Summary' you@example.com"
     }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of using AI in server and cloud infrastructure management?",
+      "options": [
+        "To enhance manual coding practices",
+        "To automate control and management processes",
+        "To eliminate the need for servers",
+        "To increase the number of servers required"
+      ],
+      "answer": 1,
+      "explanation": "The primary purpose of using AI in server and cloud infrastructure management is to automate control and management processes, making them more efficient."
+    },
+    {
+      "question": "How does the integration of GitHub Webhook and Claude API contribute to automation?",
+      "options": [
+        "It allows for manual code reviews",
+        "It helps in creating an automated code review system",
+        "It eliminates the need for version control",
+        "It increases the complexity of code deployment"
+      ],
+      "answer": 1,
+      "explanation": "The integration of GitHub Webhook and Claude API helps in creating an automated code review system, streamlining the development process."
+    },
+    {
+      "question": "What is a potential benefit of using node-Red for controlling devices like Sonoff?",
+      "options": [
+        "It requires extensive programming knowledge",
+        "It simplifies the automation of device control",
+        "It is only usable within a local network",
+        "It does not support integration with other tools"
+      ],
+      "answer": 1,
+      "explanation": "Using node-Red simplifies the automation of device control, making it accessible for users with varying levels of programming knowledge."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Automate CI Pipeline",
+      "instruction": "Use AI to automate a CI pipeline.",
+      "prompt": "How can I use Claude Code to automate the testing phase in my CI pipeline?",
+      "followUp": "Try integrating a notification system for build failures."
+    },
+    {
+      "label": "Control Server Remotely",
+      "instruction": "Implement remote control of a server using AI.",
+      "prompt": "What steps do I need to take to control my server using Discord and AI?",
+      "followUp": "Experiment with adding voice commands for server control."
+    },
+    {
+      "label": "Set Up Automated Tasks",
+      "instruction": "Create a schedule for automated tasks using AI.",
+      "prompt": "How can I set up an AI agent to perform daily backups at a specific time?",
+      "followUp": "Modify the schedule to include weekly reports on backup status."
+    }
   ]
 }

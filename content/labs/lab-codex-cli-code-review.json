@@ -4,7 +4,11 @@
   "description": "Use Codex CLI to perform a complete code review on a sample codebase — identify issues, explain them, and generate a structured report.",
   "difficulty": "beginner",
   "duration": "30 minutes",
-  "tags": ["Codex CLI", "Code Review", "Workflow"],
+  "tags": [
+    "Codex CLI",
+    "Code Review",
+    "Workflow"
+  ],
   "steps": [
     {
       "step": 1,
@@ -38,16 +42,27 @@
     "starterCode": "def count_todos(code: str) -> int:\n    \"\"\"Count TODO comments in code.\"\"\"\n    ___",
     "solution": "return code.lower().count('todo')",
     "testCases": [
-      { "input": "count_todos('# TODO: fix bug\\n# TODO: add test')", "expected": "2" },
-      { "input": "count_todos('print(\"hello\")')", "expected": "0" },
-      { "input": "count_todos('# todo\\n# Todo\\n# TODO')", "expected": "3" }
+      {
+        "input": "count_todos('# TODO: fix bug\\n# TODO: add test')",
+        "expected": "2"
+      },
+      {
+        "input": "count_todos('print(\"hello\")')",
+        "expected": "0"
+      },
+      {
+        "input": "count_todos('# todo\\n# Todo\\n# TODO')",
+        "expected": "3"
+      }
     ],
     "hints": [
       "Normalize the string before counting.",
       "Python strings have a built-in count method."
     ]
   },
-  "related_skills": ["codex-cli-pr-review-recipe"],
+  "related_skills": [
+    "codex-cli-pr-review-recipe"
+  ],
   "videos": [
     {
       "title": "Codex CLI Code Review Workflow",
@@ -68,5 +83,25 @@
       "Missing severity levels or suggested fixes",
       "Generating a report before validating single-file review quality"
     ]
-  }
+  },
+  "practicePrompts": [
+    {
+      "label": "Identify Code Issues",
+      "instruction": "Run a code review to find issues in the sample codebase.",
+      "prompt": "Use Codex CLI to analyze the sample codebase and identify any potential issues.",
+      "followUp": "Try explaining one of the identified issues in detail."
+    },
+    {
+      "label": "Generate Code Report",
+      "instruction": "Create a structured report based on your findings.",
+      "prompt": "Generate a structured report summarizing the issues found in the code review using Codex CLI.",
+      "followUp": "Modify the report format to include suggestions for fixing the issues."
+    },
+    {
+      "label": "Explain Code Problems",
+      "instruction": "Explain the issues detected in the code.",
+      "prompt": "Explain the top three issues found in the sample codebase during the Codex CLI review.",
+      "followUp": "Choose one issue and suggest an alternative coding approach."
+    }
+  ]
 }

@@ -4,7 +4,13 @@
   "description": "OpenAI, Claude, Gemini API를 Next.js에 연동하고 라우트 핸들러를 구현하는 고급 실습",
   "difficulty": "advanced",
   "duration": "1시간",
-  "tags": ["API", "Next.js", "OpenAI", "Claude", "Gemini"],
+  "tags": [
+    "API",
+    "Next.js",
+    "OpenAI",
+    "Claude",
+    "Gemini"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +38,35 @@
     }
   ],
   "challenge": "Rate limiting(분당 10회 제한)과 사용자별 API 키 관리 기능을 추가해보세요.",
-  "related_skills": ["ai-agent-building", "rag-implementation"],
+  "related_skills": [
+    "ai-agent-building",
+    "rag-implementation"
+  ],
   "videos": [
     {
       "title": "Next.js AI API 연동 실전",
       "search_keyword": "Next.js AI API 연동 OpenAI Claude Gemini 실전 한국어 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Connect OpenAI API",
+      "instruction": "Set up the OpenAI API in your Next.js project.",
+      "prompt": "Show me how to integrate the OpenAI API in a Next.js application.",
+      "followUp": "Try adding error handling to the API integration."
+    },
+    {
+      "label": "Implement Claude API",
+      "instruction": "Integrate the Claude API into your Next.js application.",
+      "prompt": "Guide me through the steps to connect the Claude API in Next.js.",
+      "followUp": "Experiment by changing the request parameters for different outputs."
+    },
+    {
+      "label": "Gemini API Routing",
+      "instruction": "Create a route handler for the Gemini API in Next.js.",
+      "prompt": "How do I set up a route handler for the Gemini API in my Next.js app?",
+      "followUp": "Modify the route to handle different query parameters."
     }
   ]
 }

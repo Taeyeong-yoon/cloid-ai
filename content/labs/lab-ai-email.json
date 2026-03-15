@@ -4,7 +4,12 @@
   "description": "Claude를 활용해 상황별 비즈니스 이메일을 빠르고 전문적으로 작성하는 실습",
   "difficulty": "beginner",
   "duration": "10분",
-  "tags": ["Claude", "이메일", "비즈니스", "글쓰기"],
+  "tags": [
+    "Claude",
+    "이메일",
+    "비즈니스",
+    "글쓰기"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +37,35 @@
     }
   ],
   "challenge": "클레임(불만) 이메일, 사과 이메일, 제안서 이메일 각각 하나씩 만들어보세요.",
-  "related_skills": ["ai-writing-assistant", "prompt-basics"],
+  "related_skills": [
+    "ai-writing-assistant",
+    "prompt-basics"
+  ],
   "videos": [
     {
       "title": "AI로 비즈니스 이메일 작성하기",
       "search_keyword": "AI Claude 비즈니스 이메일 작성 실전 한국어 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Meeting Request Email",
+      "instruction": "Draft an email to request a meeting.",
+      "prompt": "Write a professional email requesting a meeting with a client to discuss project updates.",
+      "followUp": "Try changing the meeting topic to a budget review."
+    },
+    {
+      "label": "Apology Email",
+      "instruction": "Compose an email to apologize for a delay.",
+      "prompt": "Create a business email apologizing for the delay in delivering the project and offering a new timeline.",
+      "followUp": "Modify the email to include a discount offer for the inconvenience."
+    },
+    {
+      "label": "Follow-Up Email",
+      "instruction": "Write a follow-up email after a networking event.",
+      "prompt": "Draft a follow-up email to a new contact met at a networking event, expressing interest in collaboration.",
+      "followUp": "Change the email to include a specific proposal for collaboration."
     }
   ]
 }

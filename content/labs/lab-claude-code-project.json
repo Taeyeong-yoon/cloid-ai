@@ -4,7 +4,12 @@
   "description": "Claude Code 에이전트 모드로 처음부터 끝까지 Next.js 웹사이트를 자율 구현하는 고급 실습",
   "difficulty": "advanced",
   "duration": "1시간",
-  "tags": ["Claude Code", "Next.js", "에이전트", "풀스택"],
+  "tags": [
+    "Claude Code",
+    "Next.js",
+    "에이전트",
+    "풀스택"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +37,35 @@
     }
   ],
   "challenge": "Supabase를 연동해서 방문자가 프로젝트에 좋아요를 누를 수 있는 기능을 추가해보세요.",
-  "related_skills": ["claude-code-basics", "mcp-server-setup"],
+  "related_skills": [
+    "claude-code-basics",
+    "mcp-server-setup"
+  ],
   "videos": [
     {
       "title": "Claude Code로 웹사이트 처음부터 만들기",
       "search_keyword": "Claude Code 웹사이트 Next.js 에이전트 모드 실전 한국어 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Create a Next.js Page",
+      "instruction": "Generate a basic Next.js page structure.",
+      "prompt": "Create a simple Next.js page with a title and a welcome message.",
+      "followUp": "Try adding a navigation bar to the page."
+    },
+    {
+      "label": "Add a Component",
+      "instruction": "Implement a reusable component in your Next.js app.",
+      "prompt": "Create a reusable button component in Next.js that accepts props for text and color.",
+      "followUp": "Experiment by adding different styles to the button."
+    },
+    {
+      "label": "Fetch Data",
+      "instruction": "Implement data fetching in a Next.js page.",
+      "prompt": "Fetch and display a list of users from an API in your Next.js app.",
+      "followUp": "Modify the API endpoint to fetch posts instead of users."
     }
   ]
 }

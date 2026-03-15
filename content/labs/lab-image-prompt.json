@@ -4,7 +4,12 @@
   "description": "DALL-E 3 또는 Midjourney에서 같은 주제를 다양한 프롬프트로 실험하며 AI 이미지 생성 원리를 익히는 실습",
   "difficulty": "beginner",
   "duration": "30분",
-  "tags": ["DALL-E", "이미지 생성", "프롬프트", "Midjourney"],
+  "tags": [
+    "DALL-E",
+    "이미지 생성",
+    "프롬프트",
+    "Midjourney"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +37,35 @@
     }
   ],
   "challenge": "동일한 주제를 5가지 다른 스타일(사진, 수채화, 픽셀 아트, 3D 렌더, 만화)로 만들어보세요.",
-  "related_skills": ["ai-image-creation", "prompt-basics"],
+  "related_skills": [
+    "ai-image-creation",
+    "prompt-basics"
+  ],
   "videos": [
     {
       "title": "AI 이미지 프롬프트 완벽 가이드",
       "search_keyword": "DALL-E Midjourney 이미지 프롬프트 작성법 한국어 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Nature Scene Experiment",
+      "instruction": "Create an AI-generated image of a forest.",
+      "prompt": "Generate an image of a lush green forest with sunlight filtering through the trees.",
+      "followUp": "Try adding animals or changing the time of day for a different scene."
+    },
+    {
+      "label": "Fantasy Character Design",
+      "instruction": "Design a unique fantasy character.",
+      "prompt": "Create an image of a dragon with shimmering scales and large wings, flying over a castle.",
+      "followUp": "Experiment with different colors or environments for the dragon."
+    },
+    {
+      "label": "Urban Landscape Variation",
+      "instruction": "Visualize a futuristic city.",
+      "prompt": "Generate an image of a bustling futuristic city with flying cars and neon lights at night.",
+      "followUp": "Modify the cityscape by changing the time of day or adding more elements like parks."
     }
   ]
 }

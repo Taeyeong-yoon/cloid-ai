@@ -4,7 +4,12 @@
   "description": "Claude API를 활용해 특정 페르소나를 가진 나만의 AI 챗봇을 HTML 단일 파일로 구현하는 실습",
   "difficulty": "intermediate",
   "duration": "1시간",
-  "tags": ["Claude API", "챗봇", "JavaScript", "API"],
+  "tags": [
+    "Claude API",
+    "챗봇",
+    "JavaScript",
+    "API"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +37,35 @@
     }
   ],
   "challenge": "챗봇에 이미지 첨부 기능을 추가해서 재료 사진을 보내면 레시피를 추천하는 기능을 구현해보세요.",
-  "related_skills": ["claude-prompt-patterns", "ai-code-generation"],
+  "related_skills": [
+    "claude-prompt-patterns",
+    "ai-code-generation"
+  ],
   "videos": [
     {
       "title": "Claude API로 챗봇 만들기 실전",
       "search_keyword": "Claude API 챗봇 만들기 JavaScript 한국어 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Create a Chatbot Persona",
+      "instruction": "Define a unique persona for your chatbot.",
+      "prompt": "Create a chatbot persona that is friendly and knowledgeable about technology.",
+      "followUp": "Try changing the personality traits and see how it affects the chatbot's responses."
+    },
+    {
+      "label": "Design Chatbot Response",
+      "instruction": "Craft a response for your chatbot.",
+      "prompt": "Write a response for your chatbot when a user asks about the latest AI trends.",
+      "followUp": "Modify the response to include more technical details or a casual tone."
+    },
+    {
+      "label": "Implement User Interaction",
+      "instruction": "Set up a user interaction scenario.",
+      "prompt": "Simulate a user asking your chatbot for advice on learning programming languages.",
+      "followUp": "Change the user's question to see how the chatbot adapts its advice."
     }
   ]
 }

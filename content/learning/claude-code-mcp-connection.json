@@ -3,7 +3,11 @@
   "title": "Claude Code + MCP: Connecting External Tools to Your Agent",
   "description": "Learn how to configure MCP servers in Claude Code to give your agent access to external tools — filesystems, databases, APIs, and more.",
   "level": "intermediate",
-  "tags": ["Claude Code", "MCP", "Agent"],
+  "tags": [
+    "Claude Code",
+    "MCP",
+    "Agent"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -78,5 +82,25 @@
       "Tool added but not tested with a real read or write action",
       "Permissions or runtime errors ignored after setup"
     ]
-  }
+  },
+  "practicePrompts": [
+    {
+      "label": "Configure MCP Server",
+      "instruction": "Set up an MCP server in Claude Code.",
+      "prompt": "How do I configure an MCP server in Claude Code to connect to an external API?",
+      "followUp": "Try adding a new tool schema for a database connection."
+    },
+    {
+      "label": "Test File Access",
+      "instruction": "Verify file read/write capabilities.",
+      "prompt": "What steps do I take to ensure Claude Code can read and write files in the MCP filesystem server?",
+      "followUp": "Attempt to create a new file and write data to it using the MCP server."
+    },
+    {
+      "label": "Understand Tool Schemas",
+      "instruction": "Explore tool schema definitions.",
+      "prompt": "Can you explain the role of tool schemas in the Model Context Protocol?",
+      "followUp": "Experiment by modifying a tool schema to include additional parameters."
+    }
+  ]
 }

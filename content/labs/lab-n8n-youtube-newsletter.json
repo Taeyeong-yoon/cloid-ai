@@ -4,7 +4,11 @@
   "description": "Build an n8n automation that fetches trending YouTube videos in your niche daily, summarizes them with Claude, and publishes a newsletter to Substack or Notion.",
   "difficulty": "intermediate",
   "duration": "2 hours",
-  "tags": ["n8n", "YouTube", "Content Automation"],
+  "tags": [
+    "n8n",
+    "YouTube",
+    "Content Automation"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +36,34 @@
     }
   ],
   "challenge": "Add a quality filter step: before publishing, run each summary through Claude and ask it to rate the video's quality (1-5). Only include videos rated 4 or higher in the newsletter.",
-  "related_skills": ["n8n-youtube-summary-pipeline"],
+  "related_skills": [
+    "n8n-youtube-summary-pipeline"
+  ],
   "videos": [
     {
       "title": "n8n YouTube Newsletter Automation Tutorial",
       "search_keyword": "n8n YouTube newsletter automation content pipeline 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Fetch YouTube Trends",
+      "instruction": "Retrieve the latest trending YouTube videos in your niche.",
+      "prompt": "Fetch the top trending YouTube videos in the cooking niche for today.",
+      "followUp": "Try changing the niche to technology and see what trends appear."
+    },
+    {
+      "label": "Summarize Videos with Claude",
+      "instruction": "Summarize the fetched YouTube videos using Claude.",
+      "prompt": "Summarize the following YouTube videos: [list of video titles].",
+      "followUp": "Experiment with different summarization styles, like bullet points or paragraphs."
+    },
+    {
+      "label": "Publish to Substack",
+      "instruction": "Create a newsletter draft from the summaries and prepare it for Substack.",
+      "prompt": "Draft a newsletter for Substack using the following summaries: [insert summaries].",
+      "followUp": "Modify the draft to include a personal introduction or conclusion."
     }
   ]
 }

@@ -4,7 +4,12 @@
   "description": "n8n에서 Claude AI를 연동하여 이메일 분류, 요약, 응답 초안 생성을 자동화하는 실습",
   "difficulty": "intermediate",
   "duration": "30분",
-  "tags": ["n8n", "Claude", "자동화", "워크플로우"],
+  "tags": [
+    "n8n",
+    "Claude",
+    "자동화",
+    "워크플로우"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +37,35 @@
     }
   ],
   "challenge": "n8n 워크플로우를 확장하여 Notion 데이터베이스와 연동하고, 처리된 이메일을 자동으로 프로젝트별로 분류하여 저장하세요.",
-  "related_skills": ["n8n-automation-mastery", "ai-startup-automation"],
+  "related_skills": [
+    "n8n-automation-mastery",
+    "ai-startup-automation"
+  ],
   "videos": [
     {
       "title": "n8n Claude API 연동 튜토리얼",
       "search_keyword": "n8n Claude API integration tutorial 2026 한국어",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Email Classification",
+      "instruction": "Classify the given email into categories.",
+      "prompt": "Classify this email: 'Dear team, we need to discuss the project updates and deadlines.'",
+      "followUp": "Try classifying a different email and see how the AI responds."
+    },
+    {
+      "label": "Email Summarization",
+      "instruction": "Summarize the content of the email provided.",
+      "prompt": "Summarize this email: 'Hi everyone, I wanted to remind you about the meeting scheduled for Friday at 10 AM to discuss our quarterly goals.'",
+      "followUp": "Change the email content and summarize again to compare results."
+    },
+    {
+      "label": "Drafting Responses",
+      "instruction": "Generate a response draft for the email.",
+      "prompt": "Draft a response to this email: 'Thank you for your feedback on the project. I will make the necessary adjustments.'",
+      "followUp": "Modify the email context and create a new response draft."
     }
   ]
 }

@@ -4,7 +4,11 @@
   "description": "Build an n8n workflow that pauses before an irreversible action, sends a Slack approval request, and only proceeds when a human approves.",
   "difficulty": "intermediate",
   "duration": "1 hour",
-  "tags": ["n8n", "Slack", "Human in the Loop"],
+  "tags": [
+    "n8n",
+    "Slack",
+    "Human in the Loop"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +36,34 @@
     }
   ],
   "challenge": "Extend this pattern to a multi-level approval flow: first-level approver gets 30 minutes, then automatically escalates to a second approver if no response.",
-  "related_skills": ["n8n-rate-limit-queue"],
+  "related_skills": [
+    "n8n-rate-limit-queue"
+  ],
   "videos": [
     {
       "title": "n8n Human in the Loop Slack Approval Tutorial",
       "search_keyword": "n8n human in the loop Slack approval workflow 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Create Approval Workflow",
+      "instruction": "Build a basic n8n workflow for human approval.",
+      "prompt": "Create an n8n workflow that sends a Slack message asking for approval before proceeding with an irreversible action.",
+      "followUp": "Try adding a timeout feature to the approval request."
+    },
+    {
+      "label": "Integrate Slack Notifications",
+      "instruction": "Add Slack notifications to your workflow.",
+      "prompt": "Modify your n8n workflow to send a Slack notification when the action is approved by a human.",
+      "followUp": "Experiment with customizing the Slack message format."
+    },
+    {
+      "label": "Handle Rejections",
+      "instruction": "Implement rejection handling in your workflow.",
+      "prompt": "Update your n8n workflow to take a different action if the Slack approval is rejected.",
+      "followUp": "Explore adding logging features for approval outcomes."
     }
   ]
 }

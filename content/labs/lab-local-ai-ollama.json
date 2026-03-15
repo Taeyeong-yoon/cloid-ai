@@ -4,7 +4,10 @@
   "description": "Ollama를 설치하고 로컬에서 Claude 호환 에이전트를 실행하는 실습",
   "difficulty": "beginner",
   "duration": "30분",
-  "tags": ["AI 에이전트", "실습"],
+  "tags": [
+    "AI 에이전트",
+    "실습"
+  ],
   "steps": [
     {
       "step": 1,
@@ -38,6 +41,26 @@
       "title": "Ollama로 로컬 AI 에이전트 실행하기 튜토리얼",
       "search_keyword": "Ollama로 로컬 AI 에이전트 실행하기 tutorial 2026 한국어",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Install Ollama",
+      "instruction": "Guide the learner to install Ollama on their local machine.",
+      "prompt": "Provide the steps to install Ollama on my local machine.",
+      "followUp": "Try installing a different version of Ollama and share the steps."
+    },
+    {
+      "label": "Run Claude Agent",
+      "instruction": "Instruct the learner to run a Claude compatible agent using Ollama.",
+      "prompt": "How do I run a Claude compatible agent with Ollama?",
+      "followUp": "Experiment by changing the agent's parameters and observe the differences."
+    },
+    {
+      "label": "Test Agent Response",
+      "instruction": "Ask the learner to test the response of the Claude agent.",
+      "prompt": "Ask the Claude agent a question about local AI capabilities.",
+      "followUp": "Modify the question to see how the agent's responses change."
     }
   ]
 }

@@ -3,7 +3,11 @@
   "title": "Claude Code Headless: Automating Repository Tasks Without UI",
   "description": "Use Claude Code in headless (non-interactive) mode to automate repository tasks like PR creation, changelog generation, and code reviews in CI/CD pipelines.",
   "level": "advanced",
-  "tags": ["Claude Code", "Headless", "Automation"],
+  "tags": [
+    "Claude Code",
+    "Headless",
+    "Automation"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -28,6 +32,61 @@
       "title": "Claude Code CI/CD Automation Tutorial",
       "search_keyword": "Claude Code headless automation CI CD GitHub Actions 2026",
       "url": ""
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of using Claude Code in headless mode?",
+      "options": [
+        "To automate repository tasks without a user interface",
+        "To create interactive user interfaces for developers",
+        "To enhance the visual representation of code changes",
+        "To manually review pull requests"
+      ],
+      "answer": 0,
+      "explanation": "Claude Code in headless mode is designed to automate repository tasks like PR creation and changelog generation without requiring a user interface."
+    },
+    {
+      "question": "Which CLI flag is used to run Claude Code in non-interactive mode?",
+      "options": [
+        "--no-interactive",
+        "--interactive",
+        "--run-synchronously",
+        "--verbose"
+      ],
+      "answer": 0,
+      "explanation": "The --no-interactive flag is specifically used to run Claude Code in a non-interactive manner."
+    },
+    {
+      "question": "How can Claude Code assist in CI/CD pipelines?",
+      "options": [
+        "By generating changelogs and conducting code reviews automatically",
+        "By creating visual dashboards for project management",
+        "By allowing manual intervention for every code change",
+        "By only handling deployment tasks"
+      ],
+      "answer": 0,
+      "explanation": "Claude Code can automate tasks like changelog generation and code reviews, which are essential in CI/CD pipelines."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Automate PR Creation",
+      "instruction": "Simulate creating a pull request using Claude Code in headless mode.",
+      "prompt": "Use Claude Code with --no-interactive to create a pull request for the 'feature-branch' into 'main'.",
+      "followUp": "Try adding a title and description to the PR using the --print flag."
+    },
+    {
+      "label": "Generate Changelog",
+      "instruction": "Automate the generation of a changelog using Claude Code.",
+      "prompt": "Run Claude Code with --print to generate a changelog for the last three commits in the repository.",
+      "followUp": "Experiment by changing the number of commits to include in the changelog."
+    },
+    {
+      "label": "Set Up Code Review",
+      "instruction": "Set up automated code reviews in GitHub Actions using Claude Code.",
+      "prompt": "Configure a GitHub Action to run Claude Code for automated code review on every pull request.",
+      "followUp": "Modify the action to include specific checks or comments during the review process."
     }
   ]
 }

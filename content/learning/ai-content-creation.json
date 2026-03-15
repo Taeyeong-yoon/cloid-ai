@@ -3,7 +3,13 @@
   "title": "AI 콘텐츠 제작 파이프라인",
   "description": "블로그·유튜브·SNS·뉴스레터를 AI로 제작하는 End-to-End 파이프라인 구축 실전 과정",
   "level": "intermediate",
-  "tags": ["콘텐츠 제작", "블로그", "유튜브", "SNS", "SEO"],
+  "tags": [
+    "콘텐츠 제작",
+    "블로그",
+    "유튜브",
+    "SNS",
+    "SEO"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +64,61 @@
       "title": "SEO 최적화 블로그 포스트 파이프라인",
       "description": "키워드 리서치 → 목차 → 본문 → 메타 디스크립션 → 내부 링크 전략까지 AI와 함께 완전한 SEO 포스트 완성",
       "command": "claude '키워드: AI 업무 자동화. 1) 검색 의도 분석 2) SEO 목차 3) 본문 2000자 4) 메타 디스크립션 순서로 작성해줘'"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary focus of the AI content creation pipeline described in the course?",
+      "options": [
+        "Creating AI-generated content for various platforms",
+        "Developing advanced AI algorithms",
+        "Building a social media marketing strategy",
+        "Designing traditional marketing materials"
+      ],
+      "answer": 0,
+      "explanation": "The course focuses on building an End-to-End pipeline for creating AI-generated content for platforms like blogs, YouTube, and social media."
+    },
+    {
+      "question": "Which tool is mentioned for designing images and videos using AI?",
+      "options": [
+        "Canva Magic Studio",
+        "Adobe Photoshop",
+        "Final Cut Pro",
+        "Microsoft Paint"
+      ],
+      "answer": 0,
+      "explanation": "Canva Magic Studio is specifically mentioned as a tool for design, image, and video creation using AI."
+    },
+    {
+      "question": "What is the purpose of the multi-format practice mentioned in the content?",
+      "options": [
+        "To convert a single insight into various content formats",
+        "To develop a comprehensive marketing plan",
+        "To analyze competitor content strategies",
+        "To create a database of AI tools"
+      ],
+      "answer": 0,
+      "explanation": "The multi-format practice is intended to transform a single core insight into scripts for different platforms such as blogs and social media."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Create Blog Outline",
+      "instruction": "Generate a blog post outline based on a keyword.",
+      "prompt": "Create a detailed outline for a blog post about 'The Benefits of AI in Content Creation'.",
+      "followUp": "Now write the introduction section of the blog post."
+    },
+    {
+      "label": "Design a Social Media Post",
+      "instruction": "Use AI to design a social media post.",
+      "prompt": "Generate a catchy Instagram post caption for a new AI tool that enhances productivity.",
+      "followUp": "Create a visual concept for the post using Canva Magic Studio."
+    },
+    {
+      "label": "Convert Text to Speech",
+      "instruction": "Transform a written script into an audio format.",
+      "prompt": "Convert the following text into a natural-sounding AI voice narration: 'Welcome to our channel where we explore the latest in AI technology.'",
+      "followUp": "Try using a different tone or style for the narration."
     }
   ]
 }

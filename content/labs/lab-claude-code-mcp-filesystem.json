@@ -4,7 +4,11 @@
   "description": "Set up the MCP filesystem server in Claude Code and build an agent that reads project files, analyzes them, and writes output files autonomously.",
   "difficulty": "beginner",
   "duration": "45 minutes",
-  "tags": ["Claude Code", "MCP", "Filesystem"],
+  "tags": [
+    "Claude Code",
+    "MCP",
+    "Filesystem"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +36,34 @@
     }
   ],
   "challenge": "Build a Claude Code automation that monitors a /drafts folder, reads each markdown draft, improves the writing, and saves the improved version to /published — all in a single session.",
-  "related_skills": ["claude-code-bug-fix-recipe"],
+  "related_skills": [
+    "claude-code-bug-fix-recipe"
+  ],
   "videos": [
     {
       "title": "Claude Code MCP Filesystem Tutorial",
       "search_keyword": "Claude Code MCP filesystem server tutorial 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Set Up MCP Server",
+      "instruction": "Initialize the MCP filesystem server in Claude Code.",
+      "prompt": "Set up the MCP filesystem server in Claude Code and ensure it is running correctly.",
+      "followUp": "Try adding different configurations to the server setup."
+    },
+    {
+      "label": "Read Project Files",
+      "instruction": "Create an agent to read a project file.",
+      "prompt": "Build an agent that reads the contents of a specified project file in the MCP filesystem.",
+      "followUp": "Modify the agent to read multiple files and summarize their contents."
+    },
+    {
+      "label": "Write Output Files",
+      "instruction": "Develop an agent that writes results to a file.",
+      "prompt": "Create an agent that analyzes project file data and writes the results to a new output file.",
+      "followUp": "Experiment with different output formats for the results."
     }
   ]
 }

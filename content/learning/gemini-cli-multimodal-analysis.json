@@ -3,7 +3,11 @@
   "title": "Gemini CLI: Analyzing Images and Mixed-Media Documents",
   "description": "Use Gemini CLI's multimodal capabilities to analyze images, extract text from screenshots, and process documents containing mixed media.",
   "level": "intermediate",
-  "tags": ["Gemini CLI", "Multimodal", "Vision"],
+  "tags": [
+    "Gemini CLI",
+    "Multimodal",
+    "Vision"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -63,6 +67,26 @@
       ],
       "answer": 0,
       "explanation": "Structured extraction helps learners reuse the output in later analysis, reports, or automation steps."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Extract Text from Image",
+      "instruction": "Use Gemini CLI to extract text from an image.",
+      "prompt": "Pass an image of a document to Gemini CLI and extract the text content from it.",
+      "followUp": "Try passing a different image with mixed media elements."
+    },
+    {
+      "label": "Analyze Mixed Media",
+      "instruction": "Analyze a mixed media document using Gemini CLI.",
+      "prompt": "Provide a mixed media document to Gemini CLI and analyze its contents for structured information.",
+      "followUp": "Experiment with a document that has varying layouts and formats."
+    },
+    {
+      "label": "Image Metadata Extraction",
+      "instruction": "Extract metadata from an image file.",
+      "prompt": "Upload an image to Gemini CLI and extract its metadata, including dimensions and file type.",
+      "followUp": "Test with images of different formats and sizes to see how the metadata varies."
     }
   ]
 }

@@ -4,7 +4,11 @@
   "description": "Claude Code CLI를 사용하여 표준 에이전트를 구현하는 실습",
   "difficulty": "advanced",
   "duration": "30분",
-  "tags": ["AI 에이전트", "CLI", "실습"],
+  "tags": [
+    "AI 에이전트",
+    "CLI",
+    "실습"
+  ],
   "steps": [
     {
       "step": 1,
@@ -38,6 +42,26 @@
       "title": "CLI 에이전트 프로토콜 실습 튜토리얼",
       "search_keyword": "Claude Code CLI agent protocol tutorial 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Implement Basic Agent",
+      "instruction": "Create a simple agent using Claude Code CLI.",
+      "prompt": "Using Claude Code CLI, write a basic agent that greets users when they start a conversation.",
+      "followUp": "Modify the greeting message to include the current date and time."
+    },
+    {
+      "label": "Add Functionality",
+      "instruction": "Enhance the agent with a new feature.",
+      "prompt": "Add a feature to your agent that responds to 'What's the weather like?' with a generic weather response.",
+      "followUp": "Change the response to include a random weather condition from a predefined list."
+    },
+    {
+      "label": "Error Handling",
+      "instruction": "Implement error handling in your agent.",
+      "prompt": "Update your agent to handle unrecognized commands by responding with 'I'm sorry, I didn't understand that.'",
+      "followUp": "Experiment by adding specific responses for common misunderstandings."
     }
   ]
 }

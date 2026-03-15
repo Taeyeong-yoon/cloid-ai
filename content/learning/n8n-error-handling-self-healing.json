@@ -3,7 +3,11 @@
   "title": "n8n Error Handling: Building Self-Healing Automation Pipelines",
   "description": "Learn advanced n8n error handling patterns — retry logic, fallback branches, error notifications, and self-healing workflows that recover from failures automatically.",
   "level": "advanced",
-  "tags": ["n8n", "Error Handling", "Self-Healing"],
+  "tags": [
+    "n8n",
+    "Error Handling",
+    "Self-Healing"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -28,6 +32,61 @@
       "title": "n8n Advanced Error Handling Tutorial",
       "search_keyword": "n8n error handling retry self-healing workflow advanced 2026",
       "url": ""
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the purpose of retry logic in n8n error handling?",
+      "options": [
+        "To automatically attempt a failed step again",
+        "To permanently skip failed steps",
+        "To notify users of all errors immediately",
+        "To log errors without taking any action"
+      ],
+      "answer": 0,
+      "explanation": "Retry logic is designed to automatically attempt a failed step again, increasing the chances of successful execution."
+    },
+    {
+      "question": "How can fallback branches be utilized in an n8n workflow?",
+      "options": [
+        "To redirect the workflow to an alternative path after a failure",
+        "To create a loop that continuously retries the same step",
+        "To send notifications for every single step completion",
+        "To enhance the performance of successful steps"
+      ],
+      "answer": 0,
+      "explanation": "Fallback branches allow the workflow to redirect to an alternative path after a failure, providing a way to handle errors gracefully."
+    },
+    {
+      "question": "What is a key benefit of using self-healing workflows in n8n?",
+      "options": [
+        "They recover from failures automatically without user intervention",
+        "They require constant monitoring by users",
+        "They can only run successfully once",
+        "They are designed to fail more gracefully"
+      ],
+      "answer": 0,
+      "explanation": "Self-healing workflows are designed to recover from failures automatically, reducing the need for user intervention and ensuring smoother operations."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Create Retry Logic",
+      "instruction": "Design a workflow that retries failed steps.",
+      "prompt": "Create an n8n workflow that implements retry logic for a failed HTTP request, setting it to retry 3 times.",
+      "followUp": "Add a fallback branch that sends an email notification after the retries fail."
+    },
+    {
+      "label": "Implement Error Notifications",
+      "instruction": "Set up alert notifications for errors.",
+      "prompt": "Build an n8n workflow that sends a Slack notification if a step fails after 3 retries.",
+      "followUp": "Modify the workflow to log the error details in a Google Sheet."
+    },
+    {
+      "label": "Self-Healing Workflow",
+      "instruction": "Create a self-healing automation.",
+      "prompt": "Design an n8n workflow that automatically recovers from a failure by using a Wait node before retrying the failed step.",
+      "followUp": "Experiment with different Wait times and observe the impact on the workflow's performance."
     }
   ]
 }

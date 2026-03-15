@@ -3,7 +3,13 @@
   "title": "MCP 프로토콜 심화",
   "description": "Model Context Protocol의 내부 아키텍처, 커스텀 서버 구축, 프로덕션 배포까지 MCP를 완전히 마스터하는 고급 과정",
   "level": "advanced",
-  "tags": ["MCP", "TypeScript", "AI 도구", "서버", "프로토콜"],
+  "tags": [
+    "MCP",
+    "TypeScript",
+    "AI 도구",
+    "서버",
+    "프로토콜"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +64,61 @@
       "title": "로컬 파일시스템 MCP 서버 연결",
       "description": "공식 filesystem MCP 서버를 Claude Desktop에 연결해서 Claude가 내 파일을 읽고 쓰는 경험 실습",
       "command": "npx @modelcontextprotocol/server-filesystem ~/Desktop"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of the Model Context Protocol (MCP)?",
+      "options": [
+        "To facilitate communication between different software applications",
+        "To store large amounts of data in a cloud environment",
+        "To create graphical user interfaces for applications",
+        "To enhance the performance of local servers"
+      ],
+      "answer": 0,
+      "explanation": "The MCP is designed to facilitate communication between different software applications, enabling them to share context and data effectively."
+    },
+    {
+      "question": "Which programming language is primarily used for developing MCP servers and clients according to the official SDK?",
+      "options": [
+        "Python",
+        "Java",
+        "TypeScript",
+        "Ruby"
+      ],
+      "answer": 2,
+      "explanation": "The official SDK for developing MCP servers and clients is based on TypeScript, which is specifically mentioned in the learning content."
+    },
+    {
+      "question": "What is one of the practical implementations of MCP mentioned in the course content?",
+      "options": [
+        "Creating a mobile application interface",
+        "Connecting an MCP server to the OpenWeatherMap API",
+        "Developing a new programming language",
+        "Building a database management system"
+      ],
+      "answer": 1,
+      "explanation": "One of the practical implementations mentioned is wrapping the OpenWeatherMap API with an MCP server using TypeScript."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Create MCP Server",
+      "instruction": "Build a simple MCP server using TypeScript.",
+      "prompt": "Create a basic MCP server in TypeScript that can handle simple messages.",
+      "followUp": "Add a feature to log incoming messages to the console."
+    },
+    {
+      "label": "Connect to OpenWeatherMap",
+      "instruction": "Wrap the OpenWeatherMap API in an MCP server.",
+      "prompt": "Develop an MCP server in TypeScript that connects to the OpenWeatherMap API and retrieves weather data.",
+      "followUp": "Modify the server to respond with weather data based on user input."
+    },
+    {
+      "label": "File System Integration",
+      "instruction": "Connect the official filesystem MCP server to Claude Desktop.",
+      "prompt": "Set up the official filesystem MCP server and connect it to Claude Desktop to read and write files.",
+      "followUp": "Experiment with adding a command to list all files in a specific directory."
     }
   ]
 }

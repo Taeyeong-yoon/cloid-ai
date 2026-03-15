@@ -3,7 +3,13 @@
   "title": "AI 자동화 워크플로",
   "description": "Zapier·Make·n8n과 AI를 연동해서 이메일·소셜미디어·데이터 처리를 완전 자동화하는 실전 과정",
   "level": "intermediate",
-  "tags": ["자동화", "Zapier", "Make", "n8n", "노코드"],
+  "tags": [
+    "자동화",
+    "Zapier",
+    "Make",
+    "n8n",
+    "노코드"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +64,61 @@
       "title": "구글 폼 응답 → AI 분석 → 슬랙 알림",
       "description": "고객 피드백 폼 응답이 들어오면 AI가 감정분석·우선순위를 판단하고 슬랙 채널에 요약 알림을 보내는 자동화",
       "command": "Zapier → Google Forms(Trigger) → OpenAI(감정분석) → Slack(Send Message)"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of integrating AI with tools like Zapier, Make, and n8n?",
+      "options": [
+        "To create manual workflows for data processing",
+        "To automate email, social media, and data processing tasks",
+        "To increase the complexity of automation tasks",
+        "To eliminate the use of APIs in automation"
+      ],
+      "answer": 1,
+      "explanation": "The primary purpose is to automate tasks such as email, social media, and data processing, making workflows more efficient."
+    },
+    {
+      "question": "In a Zapier automation, what is the role of ChatGPT when integrated with Gmail?",
+      "options": [
+        "To send emails directly to users",
+        "To categorize and prioritize emails based on their content",
+        "To delete unwanted emails automatically",
+        "To create new email accounts"
+      ],
+      "answer": 1,
+      "explanation": "ChatGPT is used to categorize and prioritize emails based on their content, enhancing the workflow efficiency."
+    },
+    {
+      "question": "What does the n8n AI/LangChain node guide primarily assist users with?",
+      "options": [
+        "Creating complex coding scripts",
+        "Integrating AI functionalities into automation workflows",
+        "Designing user interfaces for applications",
+        "Managing user data privacy"
+      ],
+      "answer": 1,
+      "explanation": "The n8n AI/LangChain node guide assists users in integrating AI functionalities into their automation workflows."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Zapier Email Automation",
+      "instruction": "Set up an automation to categorize emails using AI.",
+      "prompt": "Create a Zap that triggers on new Gmail emails, sends the content to ChatGPT for categorization, and saves the result to a Notion database.",
+      "followUp": "Try adding a filter to only process emails from a specific sender."
+    },
+    {
+      "label": "Feedback Analysis Automation",
+      "instruction": "Automate customer feedback analysis and notifications.",
+      "prompt": "Design an automation that triggers when a new response is submitted to a feedback form, analyzes sentiment with AI, and sends a summary alert to a Slack channel.",
+      "followUp": "Experiment with different sentiment analysis models to see how results vary."
+    },
+    {
+      "label": "n8n AI Workflow",
+      "instruction": "Create a workflow using n8n to process data.",
+      "prompt": "Build an n8n workflow that retrieves data from an API, processes it with an AI node, and outputs the results to a Google Sheets document.",
+      "followUp": "Add a condition to filter the data before sending it to Google Sheets."
     }
   ]
 }

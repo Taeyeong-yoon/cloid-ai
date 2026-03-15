@@ -4,7 +4,13 @@
   "description": "Next.js AI 앱을 Vercel에 프로덕션 배포하고, 환경변수·도메인·모니터링을 설정하는 고급 실습",
   "difficulty": "advanced",
   "duration": "1시간",
-  "tags": ["Vercel", "배포", "Next.js", "DevOps", "프로덕션"],
+  "tags": [
+    "Vercel",
+    "배포",
+    "Next.js",
+    "DevOps",
+    "프로덕션"
+  ],
   "steps": [
     {
       "step": 1,
@@ -32,12 +38,35 @@
     }
   ],
   "challenge": "GitHub Actions로 PR이 생성될 때마다 자동으로 Preview 배포가 되고, main 브랜치 머지 시 프로덕션에 자동 배포되는 CI/CD 파이프라인을 구성해보세요.",
-  "related_skills": ["ai-saas-mvp", "claude-code-basics"],
+  "related_skills": [
+    "ai-saas-mvp",
+    "claude-code-basics"
+  ],
   "videos": [
     {
       "title": "Next.js Vercel 배포 완벽 가이드",
       "search_keyword": "Next.js Vercel 배포 커스텀 도메인 환경변수 한국어 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Deploy Next.js App",
+      "instruction": "Deploy your Next.js AI app to Vercel.",
+      "prompt": "Guide me through deploying my Next.js AI app to Vercel for production.",
+      "followUp": "Try changing the deployment settings and see how it affects the app."
+    },
+    {
+      "label": "Set Environment Variables",
+      "instruction": "Configure environment variables for your app.",
+      "prompt": "How do I set up environment variables for my Next.js app on Vercel?",
+      "followUp": "Experiment by adding new variables and observe their impact on the app."
+    },
+    {
+      "label": "Monitor App Performance",
+      "instruction": "Set up monitoring for your deployed app.",
+      "prompt": "What steps do I need to follow to enable monitoring for my Next.js app on Vercel?",
+      "followUp": "Try adjusting the monitoring settings and check the performance metrics."
     }
   ]
 }

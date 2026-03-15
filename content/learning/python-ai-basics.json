@@ -3,7 +3,13 @@
   "title": "Python + AI 기초",
   "description": "파이썬 기초부터 OpenAI·Anthropic API 연동까지, AI 개발을 위한 Python 입문 실전 과정",
   "level": "intermediate",
-  "tags": ["Python", "API", "OpenAI", "Anthropic", "개발"],
+  "tags": [
+    "Python",
+    "API",
+    "OpenAI",
+    "Anthropic",
+    "개발"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +64,61 @@
       "title": "스트리밍 챗봇 만들기",
       "description": "Claude API의 스트리밍 기능을 활용해 터미널에서 대화할 수 있는 간단한 챗봇 Python 스크립트 작성",
       "command": "claude '스트리밍을 지원하는 Claude API 챗봇 Python 코드를 작성해줘. 대화 히스토리 유지, 종료는 quit 입력'"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of the Python + AI course?",
+      "options": [
+        "To teach advanced machine learning algorithms",
+        "To provide a practical introduction to Python for AI development",
+        "To explore hardware requirements for AI applications",
+        "To focus solely on data visualization techniques"
+      ],
+      "answer": 1,
+      "explanation": "The course aims to provide a practical introduction to Python specifically for AI development."
+    },
+    {
+      "question": "Which environment allows you to run Python directly in the browser?",
+      "options": [
+        "Google Colab",
+        "Jupyter Notebook",
+        "Visual Studio Code",
+        "PyCharm"
+      ],
+      "answer": 0,
+      "explanation": "Google Colab is a free environment that allows users to run Python directly in the browser."
+    },
+    {
+      "question": "What functionality does the Claude API offer for chatbot development?",
+      "options": [
+        "Image recognition",
+        "Streaming conversation capabilities",
+        "Data analysis",
+        "Web scraping"
+      ],
+      "answer": 1,
+      "explanation": "The Claude API provides streaming conversation capabilities, which can be utilized in chatbot development."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Call Claude API",
+      "instruction": "Write a Python function to call the Claude API.",
+      "prompt": "Create a Python function that sends a request to the Claude API and prints the response.",
+      "followUp": "Modify the function to handle errors and print a user-friendly message."
+    },
+    {
+      "label": "OpenAI Library Usage",
+      "instruction": "Use the OpenAI Python library to generate text.",
+      "prompt": "Write a script that uses the OpenAI library to generate a short story based on a given prompt.",
+      "followUp": "Change the prompt and observe how the story changes with different inputs."
+    },
+    {
+      "label": "Build a Simple Chatbot",
+      "instruction": "Create a simple chatbot using Claude API's streaming feature.",
+      "prompt": "Write a Python script that uses the Claude API to create a chatbot that can respond to user queries in real-time.",
+      "followUp": "Enhance the chatbot by adding a command to terminate the conversation gracefully."
     }
   ]
 }

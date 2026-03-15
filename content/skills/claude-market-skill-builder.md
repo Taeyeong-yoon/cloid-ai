@@ -1,8 +1,9 @@
 ---
 title: "Claude Market 스킬 빌더 — 수익화 AI 스킬 설계"
-tags: ["Claude Market", "AI 에이전트", "ULI", "스킬 체이닝", "수익화"]
+tags: ["Claude Market","AI 에이전트","ULI","스킬 체이닝","수익화"]
 difficulty: "advanced"
 summary: "Claude Market에서 수익을 창출하는 AI 스킬을 설계, 구현, 출판하는 완전 가이드"
+steps: [{"title":"Understand Claude Market Skill Architecture","description":"Gain a solid understanding of the architecture of skills in Claude Market.","action":"Review the documentation on Claude Market skill types and their architecture.","expectedResult":"You can explain the different types of skills and their use cases.","failureHint":"Revisit the documentation if you have difficulty explaining the concepts."},{"title":"Identify Marketable Skill Ideas","description":"Discover and validate potential skill ideas that could generate revenue.","action":"Analyze current top skills to identify pain points and gaps in the market.","expectedResult":"List at least three viable skill ideas along with their potential monthly revenue.","failureHint":"Consider exploring different industries if you can't find suitable ideas."},{"title":"Design Skill Chaining","description":"Create a skill chain that automates a business process.","action":"Outline the structure of the skill chain including input, processing, validation, and formatting skills.","expectedResult":"A detailed design document that includes input/output schemas and error handling strategies.","failureHint":"Refer to examples of existing skill chains for inspiration."},{"title":"Publish the Skill","description":"Prepare and publish your skill on Claude Market.","action":"Follow the publishing guidelines to submit your skill for review.","expectedResult":"Your skill is successfully published and available for users to subscribe.","failureHint":"Check for any compliance issues or missing documentation if the submission fails."}]
 ---
 
 ## 🎯 학습 목표

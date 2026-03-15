@@ -3,7 +3,13 @@
   "title": "RAG 시스템 구축",
   "description": "벡터 임베딩·Chroma·Supabase pgvector를 활용해 나만의 데이터로 AI 질의응답 시스템을 처음부터 구축하는 실전 과정",
   "level": "advanced",
-  "tags": ["RAG", "벡터DB", "임베딩", "LangChain", "Supabase"],
+  "tags": [
+    "RAG",
+    "벡터DB",
+    "임베딩",
+    "LangChain",
+    "Supabase"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +64,61 @@
       "title": "Supabase 벡터 DB 연동 RAG",
       "description": "Supabase에 pgvector 확장을 활성화하고 문서 임베딩을 저장한 뒤 유사도 검색으로 RAG를 구성하는 실습",
       "command": "-- Supabase SQL Editor\nCREATE EXTENSION vector;\nCREATE TABLE docs (id bigserial, content text, embedding vector(1536));"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of using vector embeddings in building a RAG system?",
+      "options": [
+        "To store large datasets efficiently",
+        "To convert text into a numerical format for similarity search",
+        "To generate random text responses",
+        "To enhance the visual representation of data"
+      ],
+      "answer": 1,
+      "explanation": "Vector embeddings convert text into a numerical format that allows for efficient similarity search in AI systems."
+    },
+    {
+      "question": "Which tool is specifically mentioned for storing and retrieving embeddings in the RAG system?",
+      "options": [
+        "MongoDB",
+        "Chroma",
+        "MySQL",
+        "Django"
+      ],
+      "answer": 1,
+      "explanation": "Chroma is highlighted as an open-source vector database for storing and retrieving embeddings in the RAG system."
+    },
+    {
+      "question": "What is the role of Supabase pgvector in the RAG system?",
+      "options": [
+        "To create new text documents",
+        "To enable similarity searches on document embeddings",
+        "To visualize data trends",
+        "To manage user authentication"
+      ],
+      "answer": 1,
+      "explanation": "Supabase pgvector is used to enable similarity searches on document embeddings, which is essential for the RAG system."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Vector Embedding Basics",
+      "instruction": "Convert a simple sentence into a vector.",
+      "prompt": "Use the text-embedding-3-small model to convert the sentence 'AI is transforming education' into a vector.",
+      "followUp": "Try converting a longer paragraph and see how the vector changes."
+    },
+    {
+      "label": "Chroma Database Usage",
+      "instruction": "Store and retrieve an embedded document.",
+      "prompt": "Chunk the sentence 'Learning AI can be challenging but rewarding' into smaller parts, embed them, and save them in Chroma. Then query for the part that discusses challenges.",
+      "followUp": "Experiment with different chunk sizes and observe the retrieval results."
+    },
+    {
+      "label": "Supabase Integration",
+      "instruction": "Set up a vector column in Supabase.",
+      "prompt": "Enable the pgvector extension in Supabase and create a vector column to store embeddings from the sentence 'Data-driven decisions enhance business outcomes.'",
+      "followUp": "Insert multiple embeddings and perform a similarity search to find the closest match."
     }
   ]
 }

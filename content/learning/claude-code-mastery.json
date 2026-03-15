@@ -3,7 +3,13 @@
   "title": "Claude Code 마스터",
   "description": "Claude Code의 에이전트 모드, CLAUDE.md 설정, Git 통합, 멀티파일 작업까지 전문가 수준으로 활용하는 심화 과정",
   "level": "advanced",
-  "tags": ["Claude Code", "Anthropic", "AI 에이전트", "터미널", "Git"],
+  "tags": [
+    "Claude Code",
+    "Anthropic",
+    "AI 에이전트",
+    "터미널",
+    "Git"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +64,61 @@
       "title": "에이전트 모드로 전체 기능 구현 위임",
       "description": "Claude Code에게 인증 기능 전체(로그인·회원가입·JWT·미들웨어)를 한 번의 요청으로 자율 구현시키는 실습",
       "command": "claude '이 Next.js 프로젝트에 Supabase Auth로 이메일 로그인·회원가입·세션 미들웨어를 완전히 구현해줘. 테스트도 작성해줘'"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the purpose of the CLAUDE.md file in a project?",
+      "options": [
+        "To define the project's technology stack and coding rules",
+        "To store all source code files",
+        "To manage user authentication",
+        "To track issues and bugs"
+      ],
+      "answer": 0,
+      "explanation": "The CLAUDE.md file is used to define the technology stack, coding rules, and other important project guidelines."
+    },
+    {
+      "question": "How can Claude Code extend its functionalities?",
+      "options": [
+        "By connecting to an MCP server",
+        "By integrating with third-party libraries only",
+        "By using only local files",
+        "By disabling the agent mode"
+      ],
+      "answer": 0,
+      "explanation": "Claude Code can extend its functionalities by connecting to an MCP server, allowing for greater tool integration."
+    },
+    {
+      "question": "What feature allows Claude Code to autonomously implement user authentication?",
+      "options": [
+        "A single request for all authentication functionalities",
+        "Manual coding of each authentication method",
+        "Using external authentication services only",
+        "Disabling middleware support"
+      ],
+      "answer": 0,
+      "explanation": "Claude Code can autonomously implement user authentication features like login and signup through a single request."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Agent Mode Exploration",
+      "instruction": "Explore the capabilities of Claude Code's agent mode.",
+      "prompt": "Demonstrate how to use the agent mode in Claude Code to generate a simple web application.",
+      "followUp": "Try adding a feature that allows user authentication."
+    },
+    {
+      "label": "CLAUDE.md Setup",
+      "instruction": "Create a CLAUDE.md file for your project.",
+      "prompt": "Draft a CLAUDE.md file that outlines your project's tech stack and coding guidelines.",
+      "followUp": "Expand the CLAUDE.md to include common commands and prohibited practices."
+    },
+    {
+      "label": "Git Integration Practice",
+      "instruction": "Integrate Git with your Claude Code project.",
+      "prompt": "Show how to set up Git for version control in your Claude Code project and commit your changes.",
+      "followUp": "Experiment with branching and merging in your Git setup."
     }
   ]
 }

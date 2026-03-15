@@ -3,7 +3,11 @@
   "title": "Claude Code: Setting Up CLAUDE.md for Your Project",
   "description": "Learn how to create and configure a CLAUDE.md file so Claude Code understands your project's structure, conventions, and goals from the start.",
   "level": "beginner",
-  "tags": ["Claude Code", "CLAUDE.md", "Setup"],
+  "tags": [
+    "Claude Code",
+    "CLAUDE.md",
+    "Setup"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -28,6 +32,61 @@
       "title": "Claude Code CLAUDE.md Setup Tutorial",
       "search_keyword": "Claude Code CLAUDE.md setup configuration tutorial 2026",
       "url": ""
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of a CLAUDE.md file?",
+      "options": [
+        "To document the project's budget and financial projections",
+        "To provide Claude Code with an understanding of the project's structure, conventions, and goals",
+        "To list all the contributors to the project",
+        "To serve as a marketing tool for the project"
+      ],
+      "answer": 1,
+      "explanation": "The CLAUDE.md file is specifically designed to help Claude Code understand the project's structure, conventions, and goals."
+    },
+    {
+      "question": "Which of the following is a recommended practice when creating a CLAUDE.md file?",
+      "options": [
+        "Including only the project's name and version number",
+        "Using clear and concise language to describe the project's goals",
+        "Making the file as lengthy as possible to cover all details",
+        "Avoiding any structure or formatting"
+      ],
+      "answer": 1,
+      "explanation": "Using clear and concise language to describe the project's goals is a best practice for creating an effective CLAUDE.md file."
+    },
+    {
+      "question": "How can you generate a CLAUDE.md file based on your project structure?",
+      "options": [
+        "By manually writing it without any guidelines",
+        "By asking Claude Code to generate it for you",
+        "By copying a CLAUDE.md file from another project without modifications",
+        "By using a random text generator to fill it with content"
+      ],
+      "answer": 1,
+      "explanation": "You can ask Claude Code to generate a CLAUDE.md file based on your project's structure, which ensures it aligns with your specific needs."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Generate CLAUDE.md",
+      "instruction": "Create a basic CLAUDE.md file for your project.",
+      "prompt": "Generate a CLAUDE.md file for a web development project that includes sections for installation, usage, and contributing.",
+      "followUp": "Add a section for project goals and re-generate the CLAUDE.md."
+    },
+    {
+      "label": "Customize Sections",
+      "instruction": "Modify the CLAUDE.md structure.",
+      "prompt": "Modify the CLAUDE.md file to include a section for FAQs and examples for a mobile app project.",
+      "followUp": "Try to add a section that specifies coding conventions used in your project."
+    },
+    {
+      "label": "Best Practices",
+      "instruction": "Learn about best practices for CLAUDE.md.",
+      "prompt": "List the best practices for writing a CLAUDE.md file for a data science project.",
+      "followUp": "Research and incorporate any additional sections that could improve clarity."
     }
   ]
 }

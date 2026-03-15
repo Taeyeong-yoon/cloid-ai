@@ -3,7 +3,11 @@
   "title": "Gemini CLI: Summarizing Long Documents and Reports",
   "description": "Use Gemini CLI's long-context capabilities to summarize lengthy PDFs, reports, and documents directly from the command line.",
   "level": "beginner",
-  "tags": ["Gemini CLI", "Document", "Summary"],
+  "tags": [
+    "Gemini CLI",
+    "Document",
+    "Summary"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -63,6 +67,26 @@
       ],
       "answer": 1,
       "explanation": "The example command summarizes a long report file passed with `--file`."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Summarize a PDF",
+      "instruction": "Use Gemini CLI to summarize a PDF document.",
+      "prompt": "Summarize the contents of a lengthy PDF using the Gemini CLI tool.",
+      "followUp": "Try summarizing a different PDF with varying lengths."
+    },
+    {
+      "label": "Summarize a Report",
+      "instruction": "Summarize a long report using Gemini CLI.",
+      "prompt": "Use Gemini CLI to create a summary of a detailed report about climate change.",
+      "followUp": "Experiment with summarizing a report from another field, like finance."
+    },
+    {
+      "label": "Test Long Context",
+      "instruction": "Test the long-context capabilities of Gemini CLI.",
+      "prompt": "Summarize a lengthy document that exceeds the typical character limit for summaries.",
+      "followUp": "Try adjusting the parameters for the summary length and observe the changes."
     }
   ]
 }

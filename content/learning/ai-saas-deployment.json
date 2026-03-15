@@ -3,7 +3,14 @@
   "title": "AI SaaS 배포와 운영",
   "description": "Next.js + Supabase + Vercel로 AI SaaS를 프로덕션에 배포하고, 모니터링·확장·수익화까지 운영하는 실전 과정",
   "level": "advanced",
-  "tags": ["SaaS", "배포", "Vercel", "Supabase", "운영", "모니터링"],
+  "tags": [
+    "SaaS",
+    "배포",
+    "Vercel",
+    "Supabase",
+    "운영",
+    "모니터링"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +65,61 @@
       "title": "Stripe 구독 결제 + Supabase 플랜 연동",
       "description": "Stripe Checkout으로 결제를 받고, Webhook으로 Supabase 사용자의 플랜을 자동으로 업그레이드하는 실습",
       "command": "stripe listen --forward-to localhost:3000/api/webhooks/stripe"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of using Vercel in the deployment of an AI SaaS application?",
+      "options": [
+        "To manage user subscriptions",
+        "To connect to a database",
+        "To deploy and host the application",
+        "To create a payment gateway"
+      ],
+      "answer": 2,
+      "explanation": "Vercel is primarily used for deploying and hosting applications, making it easier to manage production environments."
+    },
+    {
+      "question": "Why is it important to set up RLS (Row Level Security) in Supabase before going to production?",
+      "options": [
+        "To enhance application performance",
+        "To ensure data security and access control",
+        "To simplify the deployment process",
+        "To connect to external APIs"
+      ],
+      "answer": 1,
+      "explanation": "RLS is crucial for securing data access and ensuring that users can only access data they are authorized to see."
+    },
+    {
+      "question": "What role does Stripe Billing play in the operation of an AI SaaS application?",
+      "options": [
+        "It manages the database connections",
+        "It handles user authentication",
+        "It facilitates subscription payments and plan management",
+        "It monitors application performance"
+      ],
+      "answer": 2,
+      "explanation": "Stripe Billing is specifically designed to manage subscription payments and user plan upgrades, which are essential for monetizing the SaaS application."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Deploy Next.js on Vercel",
+      "instruction": "Deploy a Next.js application using Vercel.",
+      "prompt": "Guide me through deploying a Next.js app on Vercel and connecting it to a custom domain.",
+      "followUp": "Try adding environment variables to your deployment."
+    },
+    {
+      "label": "Set Up Stripe Billing",
+      "instruction": "Integrate Stripe for subscription management.",
+      "prompt": "Explain how to set up Stripe Checkout for subscription payments in my AI SaaS application.",
+      "followUp": "Implement a webhook to automatically upgrade user plans in Supabase."
+    },
+    {
+      "label": "Monitor Errors with Sentry",
+      "instruction": "Integrate Sentry for error tracking.",
+      "prompt": "Describe the steps to integrate Sentry with a Next.js application for real-time error tracking.",
+      "followUp": "Test the integration by intentionally causing an error in your app."
     }
   ]
 }

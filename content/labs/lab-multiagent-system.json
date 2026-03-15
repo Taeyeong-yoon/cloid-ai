@@ -4,7 +4,10 @@
   "description": "여러 역할의 AI 에이전트가 협력하여 복잡한 프로젝트를 완수하는 시스템 구축",
   "difficulty": "advanced",
   "duration": "30분",
-  "tags": ["AI 에이전트", "실습"],
+  "tags": [
+    "AI 에이전트",
+    "실습"
+  ],
   "steps": [
     {
       "step": 1,
@@ -38,6 +41,26 @@
       "title": "멀티 에이전트 협업 시스템 구축 튜토리얼",
       "search_keyword": "멀티 에이전트 협업 시스템 구축 tutorial 2026 한국어",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Define Agent Roles",
+      "instruction": "Identify different roles for AI agents in a project.",
+      "prompt": "List five distinct roles that AI agents could play in a collaborative project.",
+      "followUp": "Try adding more roles or combining existing ones to see how it affects collaboration."
+    },
+    {
+      "label": "Simulate Agent Interaction",
+      "instruction": "Create a dialogue between two AI agents.",
+      "prompt": "Generate a conversation between an AI project manager and an AI developer discussing project deadlines.",
+      "followUp": "Change the roles or the project topic to observe different interaction dynamics."
+    },
+    {
+      "label": "Evaluate Collaboration",
+      "instruction": "Assess the effectiveness of agent collaboration.",
+      "prompt": "Describe how two AI agents can work together to solve a complex problem, highlighting their strengths.",
+      "followUp": "Modify the problem or the agents' strengths to see how it impacts their collaboration."
     }
   ]
 }

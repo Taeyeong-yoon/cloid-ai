@@ -3,7 +3,12 @@
   "title": "프롬프트 엔지니어링 기초",
   "description": "AI에서 최고의 결과를 끌어내는 프롬프트 작성 원칙과 실전 패턴을 단계별로 학습",
   "level": "beginner",
-  "tags": ["프롬프트", "ChatGPT", "Claude", "AI 기초"],
+  "tags": [
+    "프롬프트",
+    "ChatGPT",
+    "Claude",
+    "AI 기초"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +63,61 @@
       "title": "Few-shot 프롬프트 실습",
       "description": "예시를 2~3개 제공하고 AI가 패턴을 학습해 원하는 형식의 결과를 생성하는 실습",
       "command": "claude \"입력: '사과' → 출력: '빨간 과일'. 입력: '바나나' → 출력: '노란 과일'. 입력: '포도' → 출력:\""
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary goal of prompt engineering?",
+      "options": [
+        "To generate random responses from AI",
+        "To create prompts that yield the best results from AI",
+        "To limit the capabilities of AI",
+        "To confuse the AI with complex questions"
+      ],
+      "answer": 1,
+      "explanation": "The primary goal of prompt engineering is to create prompts that yield the best results from AI."
+    },
+    {
+      "question": "Which of the following is NOT a principle of effective prompt writing?",
+      "options": [
+        "Clarity in the question",
+        "Adding context to the prompt",
+        "Using vague language",
+        "Defining the role of the AI"
+      ],
+      "answer": 2,
+      "explanation": "Using vague language is not a principle of effective prompt writing, as clarity is essential for good results."
+    },
+    {
+      "question": "What should be included in a prompt to improve its effectiveness?",
+      "options": [
+        "Only the main question",
+        "Ambiguous terms",
+        "Role, purpose, format, and constraints",
+        "Multiple unrelated questions"
+      ],
+      "answer": 2,
+      "explanation": "Including role, purpose, format, and constraints in a prompt helps improve its effectiveness and clarity."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Improve a Prompt",
+      "instruction": "Refine a vague question into a clear prompt.",
+      "prompt": "What are the benefits of exercise?",
+      "followUp": "Add a specific role and format to get a more detailed response."
+    },
+    {
+      "label": "Create a Template",
+      "instruction": "Design a prompt template for a specific task.",
+      "prompt": "Generate a weekly meal plan for a vegetarian diet.",
+      "followUp": "Try changing the diet type to keto and see how the response varies."
+    },
+    {
+      "label": "Role Play Scenario",
+      "instruction": "Use a role to guide the AI's response.",
+      "prompt": "As a fitness coach, explain how to start a workout routine.",
+      "followUp": "Change the role to a nutritionist and ask for dietary advice."
     }
   ]
 }

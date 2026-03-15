@@ -4,7 +4,10 @@
   "description": "Claude Market 스킬의 사용 패턴을 분석하고 개선 기회를 발굴하는 실습",
   "difficulty": "intermediate",
   "duration": "30분",
-  "tags": ["AI 에이전트", "실습"],
+  "tags": [
+    "AI 에이전트",
+    "실습"
+  ],
   "steps": [
     {
       "step": 1,
@@ -38,6 +41,26 @@
       "title": "Claude Market 스킬 성능 분석 튜토리얼",
       "search_keyword": "Claude Market 스킬 성능 분석 tutorial 2026 한국어",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Analyze Usage Patterns",
+      "instruction": "Identify key usage trends in Claude Market skills.",
+      "prompt": "Analyze the usage patterns of Claude Market skills over the last month.",
+      "followUp": "Try to compare these patterns with previous months to identify changes."
+    },
+    {
+      "label": "Suggest Improvements",
+      "instruction": "Propose enhancements for Claude Market skills.",
+      "prompt": "Based on the usage analysis, suggest three improvements for Claude Market skills.",
+      "followUp": "Revise your suggestions by considering user feedback from the last quarter."
+    },
+    {
+      "label": "Identify Opportunities",
+      "instruction": "Find new opportunities for skill development.",
+      "prompt": "Identify potential opportunities for new features in Claude Market skills based on user needs.",
+      "followUp": "Experiment with different user demographics to see how opportunities change."
     }
   ]
 }

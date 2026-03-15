@@ -3,7 +3,13 @@
   "title": "AI로 업무 생산성 10배 높이기",
   "description": "이메일·문서·회의·데이터 정리까지, 반복 업무를 AI로 자동화해 하루 2시간을 돌려받는 실전 가이드",
   "level": "beginner",
-  "tags": ["생산성", "자동화", "업무 효율", "이메일", "문서"],
+  "tags": [
+    "생산성",
+    "자동화",
+    "업무 효율",
+    "이메일",
+    "문서"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +64,61 @@
       "title": "회의 후 액션아이템 자동 추출",
       "description": "회의 메모나 녹취록을 붙여넣으면 AI가 결정사항·담당자·기한을 표로 정리하는 실습",
       "command": "claude \"[회의 메모 붙여넣기] → 결정사항, 담당자, 기한을 표로 정리해줘\""
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is one benefit of automating repetitive tasks with AI according to the guide?",
+      "options": [
+        "It allows for more complex manual tasks.",
+        "It can increase productivity by saving time.",
+        "It requires more human oversight.",
+        "It eliminates the need for any software."
+      ],
+      "answer": 1,
+      "explanation": "Automating repetitive tasks with AI can significantly increase productivity by freeing up time for more important tasks."
+    },
+    {
+      "question": "Which tool is mentioned for summarizing documents and drafting in Notion?",
+      "options": [
+        "Google Docs",
+        "Microsoft Word",
+        "Notion's built-in AI",
+        "Slack"
+      ],
+      "answer": 2,
+      "explanation": "Notion's built-in AI is specifically designed to assist with summarizing documents and drafting content."
+    },
+    {
+      "question": "How can Zapier and ChatGPT be utilized according to the content?",
+      "options": [
+        "For manual data entry tasks.",
+        "To automate workflows between different applications.",
+        "To create presentations in PowerPoint.",
+        "For social media management only."
+      ],
+      "answer": 1,
+      "explanation": "Zapier and ChatGPT can be integrated to automate workflows, enhancing efficiency across applications."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Email Summary Automation",
+      "instruction": "Summarize an email using AI.",
+      "prompt": "Summarize the following email: 'Dear team, we have a meeting scheduled for Monday to discuss project updates and deadlines. Please prepare your reports.'",
+      "followUp": "Try summarizing a longer email or adding specific points to include."
+    },
+    {
+      "label": "Meeting Notes Extraction",
+      "instruction": "Extract key decisions from meeting notes.",
+      "prompt": "Extract key decisions, responsible persons, and deadlines from these notes: 'We decided to launch the project by next month. John will handle the marketing, and Sarah will manage the budget.'",
+      "followUp": "Experiment with more complex meeting notes or ask for a different format."
+    },
+    {
+      "label": "Daily Task Organizer",
+      "instruction": "Create a daily task list with AI.",
+      "prompt": "Generate a daily task list from these items: 'Prepare presentation, attend team meeting, review budget proposal.'",
+      "followUp": "Add priorities or deadlines to see how the task list changes."
     }
   ]
 }

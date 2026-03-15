@@ -3,7 +3,12 @@
   "title": "Claude 심화 활용",
   "description": "XML 태그, 시스템 프롬프트, 프롬프트 체이닝, Projects 기능까지 Claude를 전문가처럼 활용하는 심화 과정",
   "level": "intermediate",
-  "tags": ["Claude", "XML", "시스템 프롬프트", "프롬프트 체이닝"],
+  "tags": [
+    "Claude",
+    "XML",
+    "시스템 프롬프트",
+    "프롬프트 체이닝"
+  ],
   "resources": [
     {
       "type": "doc",
@@ -58,6 +63,61 @@
       "title": "3단계 프롬프트 체이닝",
       "description": "분석 → 요약 → 이메일 작성 순서로 이전 결과를 다음 프롬프트에 활용하는 체이닝 실습",
       "command": "1단계: '분석해줘' → 2단계: '위 결과를 3줄로 요약해줘' → 3단계: '위 요약으로 임원 보고 이메일 작성해줘'"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary purpose of using XML tags in Claude?",
+      "options": [
+        "To format text for visual appeal",
+        "To structure prompts for better clarity",
+        "To create random outputs",
+        "To limit the functionality of Claude"
+      ],
+      "answer": 1,
+      "explanation": "XML tags are used to structure prompts, making them clearer and more effective in guiding Claude's responses."
+    },
+    {
+      "question": "What is a key feature of prompt chaining in Claude?",
+      "options": [
+        "It allows for the creation of standalone prompts",
+        "It enables the use of previous outputs as inputs for new prompts",
+        "It restricts the use of advanced templates",
+        "It simplifies the prompt creation process"
+      ],
+      "answer": 1,
+      "explanation": "Prompt chaining allows the outputs from one prompt to inform and enhance the inputs of subsequent prompts, creating a more cohesive interaction."
+    },
+    {
+      "question": "Which of the following is NOT a function of the system prompt in Claude?",
+      "options": [
+        "Setting Claude's persona",
+        "Defining behavioral rules",
+        "Providing random topic suggestions",
+        "Customizing the interaction style"
+      ],
+      "answer": 2,
+      "explanation": "The system prompt is used to set Claude's persona and behavioral rules, but it does not provide random topic suggestions."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "XML Tag Practice",
+      "instruction": "Create a structured prompt using XML tags.",
+      "prompt": "<role>Assistant</role><task>Summarize the benefits of AI in education.</task><context>Focus on accessibility and personalization.</context><output_format>Bullet points</output_format>",
+      "followUp": "Now create a similar prompt without XML tags and compare the outputs."
+    },
+    {
+      "label": "Prompt Chaining Exercise",
+      "instruction": "Chain prompts to analyze and summarize a text.",
+      "prompt": "Analyze the following text: 'AI technology is transforming industries by enhancing efficiency and innovation.' Then summarize it in one sentence.",
+      "followUp": "Use the summary to draft a professional email to a colleague about AI's impact."
+    },
+    {
+      "label": "System Prompt Setup",
+      "instruction": "Set up a system prompt to define Claude's persona.",
+      "prompt": "Create a system prompt that makes Claude a friendly and informative tutor specializing in technology.",
+      "followUp": "Experiment by changing Claude's persona to a critical analyst and observe the differences in responses."
     }
   ]
 }

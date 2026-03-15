@@ -4,7 +4,11 @@
   "description": "Use Gemini CLI to process a long document — extract key information, generate a summary, and answer specific questions — all in one session.",
   "difficulty": "intermediate",
   "duration": "30 minutes",
-  "tags": ["Gemini CLI", "Long Context", "Document"],
+  "tags": [
+    "Gemini CLI",
+    "Long Context",
+    "Document"
+  ],
   "steps": [
     {
       "step": 1,
@@ -40,12 +44,34 @@
     }
   ],
   "challenge": "Build a shell script that takes a folder of PDFs as input, runs Gemini CLI on each one, and outputs a single markdown file with a summary of each document.",
-  "related_skills": ["gemini-cli-competitor-analysis"],
+  "related_skills": [
+    "gemini-cli-competitor-analysis"
+  ],
   "videos": [
     {
       "title": "Gemini CLI Long Context Document Processing",
       "search_keyword": "Gemini CLI long context document analysis tutorial 2026",
       "url": ""
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "Extract Key Information",
+      "instruction": "Extract important details from a long document.",
+      "prompt": "Using Gemini CLI, extract key information from this 100-page document about climate change.",
+      "followUp": "Try asking for different types of key information, like statistics or quotes."
+    },
+    {
+      "label": "Generate Summary",
+      "instruction": "Summarize the main points of a lengthy document.",
+      "prompt": "Generate a concise summary of the main points from this 100-page document on renewable energy.",
+      "followUp": "Modify the prompt to request a summary focusing on specific sections or themes."
+    },
+    {
+      "label": "Answer Specific Questions",
+      "instruction": "Ask specific questions based on the document content.",
+      "prompt": "What are the key challenges mentioned in the 100-page document regarding electric vehicles?",
+      "followUp": "Change the question to focus on solutions or future trends discussed in the document."
     }
   ]
 }
