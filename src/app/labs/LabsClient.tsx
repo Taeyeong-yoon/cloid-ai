@@ -12,6 +12,8 @@ import {
   Target,
   Clock,
   Search,
+  Code2,
+  Terminal,
 } from "lucide-react";
 import type { LabItem, LabVideo } from "@/lib/types";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
@@ -276,6 +278,7 @@ function LabCard({
 export default function LabsClient({ labs }: { labs: LabItem[] }) {
   const { t } = useTranslation();
   const [activeLab, setActiveLab] = useState<LabItem | null>(labs[0] ?? null);
+  const [activeTool, setActiveTool] = useState<"html" | "python" | null>(null);
   const [openDifficulties, setOpenDifficulties] = useState<Record<string, boolean>>({
     beginner: true,
     intermediate: true,
@@ -317,12 +320,70 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
       </div>
       <p className="text-slate-400 text-sm mb-6">{t.labs.desc}</p>
 
-      <div className="mb-4">
-        <HTMLPreview />
-      </div>
+      <div className="mb-8 rounded-2xl border border-slate-800 bg-slate-950/55 p-3 sm:p-4">
+        <div className="mb-3 flex items-center justify-between gap-3 border-b border-slate-800/80 pb-3">
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-violet-300/80">AI Labs Tools</p>
+            <p className="mt-1 text-xs text-slate-400">Open a browser-based tool only when you need it and keep the lab list in focus.</p>
+          </div>
+          <span className="hidden rounded-full border border-slate-700 bg-slate-900 px-2.5 py-1 text-[11px] text-slate-400 sm:inline-flex">
+            2 interactive tools
+          </span>
+        </div>
 
-      <div className="mb-8">
-        <PythonPreview />
+        <div className="grid gap-3 md:grid-cols-2">
+          <button
+            type="button"
+            onClick={() => setActiveTool((current) => (current === "html" ? null : "html"))}
+            className={`lab-tool-launcher text-left ${activeTool === "html" ? "lab-tool-launcher-active" : ""}`}
+          >
+            <span className="lab-tool-launcher-icon bg-amber-500/15 text-amber-300 border-amber-500/20">
+              <Code2 size={16} />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="flex items-center gap-2">
+                <span className="text-sm font-semibold text-white">{t.labs.code_preview_title}</span>
+                <span className="rounded-full border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.18em] text-amber-200">
+                  HTML
+                </span>
+              </span>
+              <span className="mt-1 block text-xs text-slate-400">Preview HTML, CSS, and JS with fullscreen and download kept intact.</span>
+            </span>
+            <span className="lab-tool-launcher-cta">{activeTool === "html" ? t.labs.collapse : "Open"}</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveTool((current) => (current === "python" ? null : "python"))}
+            className={`lab-tool-launcher text-left ${activeTool === "python" ? "lab-tool-launcher-active" : ""}`}
+          >
+            <span className="lab-tool-launcher-icon bg-teal-500/15 text-teal-300 border-teal-500/20">
+              <Terminal size={16} />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="flex items-center gap-2">
+                <span className="text-sm font-semibold text-white">{t.labs.python_title}</span>
+                <span className="rounded-full border border-teal-500/20 bg-teal-500/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.18em] text-teal-200">
+                  Python
+                </span>
+              </span>
+              <span className="mt-1 block text-xs text-slate-400">Run Python in-browser and keep the existing full view and VS Code open actions.</span>
+            </span>
+            <span className="lab-tool-launcher-cta">{activeTool === "python" ? t.labs.collapse : "Open"}</span>
+          </button>
+        </div>
+
+        {activeTool === "html" && (
+          <div className="mt-4">
+            <HTMLPreview />
+          </div>
+        )}
+
+        {activeTool === "python" && (
+          <div className="mt-4">
+            <PythonPreview />
+          </div>
+        )}
       </div>
 
       <div className="space-y-4">

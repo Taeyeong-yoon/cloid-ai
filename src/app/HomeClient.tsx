@@ -338,14 +338,14 @@ export default function HomeClient({
             </div>
           </div>
 
-          <div className="relative z-10 grid grid-cols-2 gap-3 sm:grid-cols-5">
+        <div className="relative z-10 grid grid-cols-2 gap-3 sm:grid-cols-5">
           {AI_TOOLS.map((tool) => (
             <div key={tool.name} className="flex flex-col items-center gap-1">
               <a
                 href={tool.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="tools-card group relative flex w-full flex-col overflow-hidden rounded-[1.15rem] border border-slate-800/80 bg-slate-900/70 p-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/40"
+                className="tools-card group relative flex w-full items-center gap-3 overflow-hidden rounded-[1.15rem] border border-slate-800/80 bg-slate-900/70 p-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/40"
                 title={tool.desc}
               >
                 <div className="tools-card-noise" />
@@ -356,17 +356,19 @@ export default function HomeClient({
                 >
                   {tool.icon}
                 </div>
-                <div className="mt-3 w-full space-y-1">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-[9px] uppercase tracking-[0.2em] text-slate-500">Portal</span>
-                    <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(74,222,128,0.6)]" />
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="min-w-0">
+                      <span className="block text-[9px] uppercase tracking-[0.2em] text-slate-500">Portal</span>
+                      <span className="mt-1 block truncate text-left text-xs font-medium leading-tight text-slate-200 transition-colors group-hover:text-white sm:text-[13px]">
+                        {tool.name}
+                      </span>
+                      <span className="mt-1 block truncate text-left text-[10px] leading-tight text-slate-500 transition-colors group-hover:text-slate-300">
+                        {tool.desc}
+                      </span>
+                    </div>
+                    <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(74,222,128,0.6)]" />
                   </div>
-                  <span className="block text-left text-xs font-medium leading-tight text-slate-200 transition-colors group-hover:text-white sm:text-[13px]">
-                    {tool.name}
-                  </span>
-                  <span className="block text-left text-[10px] leading-tight text-slate-500 transition-colors group-hover:text-slate-300">
-                    {tool.desc}
-                  </span>
                 </div>
               </a>
               <Link
