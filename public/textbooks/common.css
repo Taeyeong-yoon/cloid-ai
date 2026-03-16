@@ -175,13 +175,12 @@ button {
 }
 
 .hero-title {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 800;
   letter-spacing: -0.05em;
-  line-height: 1.06;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  line-height: 1.12;
+  color: #eef2ff;
+  text-shadow: 0 0 24px rgba(139, 92, 246, 0.12);
   margin-bottom: 10px;
 }
 
@@ -731,7 +730,7 @@ button {
   }
 
   .hero-title {
-    font-size: 1.74rem;
+    font-size: 1.4rem;
   }
 
   .section {

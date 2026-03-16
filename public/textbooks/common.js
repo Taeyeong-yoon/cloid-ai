@@ -7,7 +7,7 @@
   const progressBar = document.getElementById("progressBarTop");
   const localeButtons = Array.from(document.querySelectorAll(".lang-btn"));
   let currentSection = "hero";
-  let locale = localStorage.getItem(`${bookId}:locale`) || "ko";
+  let locale = localStorage.getItem(`${bookId}:locale`) || "en";
 
   function setProgress() {
     if (!progressBar || sections.length === 0) return;

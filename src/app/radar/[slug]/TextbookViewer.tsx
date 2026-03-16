@@ -9,7 +9,7 @@ import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 export default function TextbookViewer({ textbook }: { textbook: Textbook }) {
   const { locale } = useTranslation();
-  const [fullscreen, setFullscreen] = useState(false);
+  const [fullscreen, setFullscreen] = useState(true);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const contentSrc = useMemo(() => `/textbooks/${textbook.htmlFile}`, [textbook.htmlFile]);
 
