@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCP Protocol Interactive Lab</title>
+  <link rel="stylesheet" href="/textbooks/common.css" />
+</head>
+<body data-book-id="mcp-learning">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-badge"></div>
+        <div class="brand-copy">
+          <small>CLOID.AI Textbook</small>
+          <strong>MCP Protocol Interactive Lab</strong>
+        </div>
+      </div>
+      <div class="toolbar">
+        <button class="tool-btn" data-scroll-target="overview">Overview</button>
+        <button class="tool-btn" data-scroll-target="compare">Compare</button>
+        <button class="tool-btn" data-scroll-target="roadmap">Roadmap</button>
+        <button class="tool-btn" data-scroll-target="quiz">Quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-shell">
+    <div class="hero" data-track-section id="hero">
+      <section class="hero-copy">
+        <div class="eyebrow">Protocol · Connector · Tooling</div>
+        <h1>MCP를 “API 키”가 아니라 “AI와 도구 사이의 표준 연결”로 이해하기</h1>
+        <p>
+          이 교재는 MCP를 처음 접하는 학습자가 가장 자주 헷갈리는 지점을 먼저 정리합니다.
+          MCP 서버, 클라이언트, 설정 파일, 외부 API 키의 역할을 분리해서 보고, Codex CLI와 Claude Code에서
+          어떤 식으로 연결 감각이 생기는지 인터랙티브 흐름으로 따라갑니다.
+        </p>
+        <div class="hero-actions">
+          <button class="primary-btn" data-scroll-target="overview">핵심 개념부터 보기</button>
+          <button class="secondary-btn" data-scroll-target="lab">실습 흐름 보기</button>
+        </div>
+        <div class="hero-meta">
+          <span class="meta-chip">11 sections</span>
+          <span class="meta-chip">45 min</span>
+          <span class="meta-chip">Beginner → Applied</span>
+        </div>
+      </section>
+
+      <aside class="hero-panel">
+        <div class="hero-orbit one"></div>
+        <div class="hero-orbit two"></div>
+        <div class="hero-orbit three"></div>
+        <div class="hero-core"></div>
+        <div class="hero-callout">
+          <div class="callout-box">
+            <strong>오해 1</strong>
+            <p>API 키만 있으면 MCP가 붙는다고 생각하기 쉽지만, 실제로는 서버와 설정이 먼저입니다.</p>
+          </div>
+          <div class="callout-box">
+            <strong>오해 2</strong>
+            <p>MCP는 하나의 앱이 아니라, AI가 외부 도구를 표준 방식으로 쓰게 하는 연결 규격입니다.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="progress-strip" data-track-section id="overview">
+      <div class="progress-step">
+        <small>01</small>
+        <strong>Client</strong>
+        <span>Claude Code나 다른 AI 클라이언트가 도구를 요청합니다.</span>
+      </div>
+      <div class="progress-step">
+        <small>02</small>
+        <strong>MCP Server</strong>
+        <span>파일, GitHub, API 같은 기능을 표준 인터페이스로 노출합니다.</span>
+      </div>
+      <div class="progress-step">
+        <small>03</small>
+        <strong>Config</strong>
+        <span>어떤 서버를 어떤 명령으로 붙일지 등록합니다.</span>
+      </div>
+      <div class="progress-step">
+        <small>04</small>
+        <strong>Credentials</strong>
+        <span>필요한 경우에만 API 키나 OAuth가 도구 뒤에 붙습니다.</span>
+      </div>
+    </section>
+
+    <div class="content-grid">
+      <div class="stack">
+        <section class="section-panel" data-track-section>
+          <div class="section-head">
+            <span class="section-kicker">Core Model</span>
+            <h2>MCP의 최소 구조</h2>
+            <p>가장 먼저 이해해야 할 것은 “AI가 곧바로 외부 세계를 만지는 것이 아니라, 중간에 표준화된 서버 층이 있다”는 점입니다.</p>
+          </div>
+          <div class="card-grid two">
+            <article class="card">
+              <h3>AI Client</h3>
+              <p>Codex CLI, Claude Code 같은 도구가 사용자 요청을 받아서 도구 사용을 계획합니다.</p>
+            </article>
+            <article class="card">
+              <h3>MCP Server</h3>
+              <p>파일 읽기/쓰기, 이슈 조회, 외부 API 호출 같은 기능을 표준 방식으로 제공합니다.</p>
+            </article>
+            <article class="card">
+              <h3>Config</h3>
+              <p>어떤 MCP 서버를 어떤 명령으로 띄울지, 어디에서 접근할지를 연결합니다.</p>
+            </article>
+            <article class="card">
+              <h3>Credential</h3>
+              <p>GitHub, Drive, 영상 API처럼 외부 서비스가 필요할 때만 키나 토큰이 도구 뒤에 숨어 있습니다.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-panel" id="compare" data-track-section>
+          <div class="section-head">
+            <span class="section-kicker">Compare</span>
+            <h2>API 호출과 MCP 연결의 차이</h2>
+            <p>둘 다 외부 기능을 쓰는 것 같지만, 사용 방식과 학습 포인트가 다릅니다.</p>
+          </div>
+          <div class="compare-tabs" data-compare-group="mcp">
+            <button class="pill" data-compare-tab="api">API Key만 있을 때</button>
+            <button class="pill" data-compare-tab="mcp">MCP를 붙였을 때</button>
+            <button class="pill" data-compare-tab="edu">교육 관점</button>
+          </div>
+          <div class="compare-panel active card" data-compare-panel="mcp" data-compare-key="api">
+            <h3>API Key만 있을 때</h3>
+            <ul>
+              <li>HTTP 호출 코드를 직접 써야 합니다.</li>
+              <li>AI는 키를 알아도 그 자체로 도구를 쓸 수 없습니다.</li>
+              <li>학습자는 “연결 구조”보다 “요청 코드”에 먼저 갇히기 쉽습니다.</li>
+            </ul>
+          </div>
+          <div class="compare-panel card" data-compare-panel="mcp" data-compare-key="mcp">
+            <h3>MCP를 붙였을 때</h3>
+            <ul>
+              <li>AI는 도구 목록과 입력 스키마를 보고 사용할 수 있습니다.</li>
+              <li>도구 실행 방식이 표준화되어 있어 연결 감각이 빨리 잡힙니다.</li>
+              <li>파일 시스템, GitHub, 커스텀 API를 같은 구조로 다룰 수 있습니다.</li>
+            </ul>
+          </div>
+          <div class="compare-panel card" data-compare-panel="mcp" data-compare-key="edu">
+            <h3>교육 관점</h3>
+            <ul>
+              <li>처음에는 <strong>filesystem MCP</strong>처럼 키가 필요 없는 도구가 가장 좋습니다.</li>
+              <li>그 다음 GitHub나 Google 계열처럼 인증이 필요한 도구로 확장합니다.</li>
+              <li>영상 생성 API 같은 고비용 도구는 마지막 단계에 붙이는 편이 안전합니다.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section-panel" data-track-section>
+          <div class="section-head">
+            <span class="section-kicker">Personas</span>
+            <h2>세 명의 관점으로 보기</h2>
+            <p>같은 구조를 다르게 설명하면 훨씬 빨리 이해됩니다.</p>
+          </div>
+          <div class="people-grid">
+            <article class="person-card">
+              <div class="person-role">Teacher</div>
+              <h3>교사 관점</h3>
+              <p>학생에게 “AI가 파일을 읽고 정리하는 과정”을 보이려면 MCP가 좋은 설명 도구가 됩니다.</p>
+            </article>
+            <article class="person-card">
+              <div class="person-role">Engineer</div>
+              <h3>개발자 관점</h3>
+              <p>여러 API를 제각각 붙이는 대신, 표준 인터페이스로 관리 포인트를 줄이는 장점이 있습니다.</p>
+            </article>
+            <article class="person-card">
+              <div class="person-role">Operator</div>
+              <h3>운영자 관점</h3>
+              <p>권한, 로깅, 도구 범위 통제를 한 레이어에서 다루기 쉬워집니다.</p>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <div class="stack">
+        <section class="section-panel" id="roadmap" data-track-section>
+          <div class="section-head">
+            <span class="section-kicker">Roadmap</span>
+            <h2>초보자를 위한 MCP 학습 순서</h2>
+            <p>아래 순서를 따라가면 “키만 있으면 된다”는 오해를 피하고 구조부터 익힐 수 있습니다.</p>
+          </div>
+          <div class="roadmap-list">
+            <label class="roadmap-item" data-roadmap-item="1">
+              <input type="checkbox" />
+              <div>
+                <strong>filesystem MCP 먼저 보기</strong>
+                <span>키 없이 파일 읽기/쓰기 개념을 이해합니다.</span>
+              </div>
+            </label>
+            <label class="roadmap-item" data-roadmap-item="2">
+              <input type="checkbox" />
+              <div>
+                <strong>클라이언트와 서버 역할 구분</strong>
+                <span>Claude Code가 무엇을 하고 MCP 서버가 무엇을 하는지 말로 설명해봅니다.</span>
+              </div>
+            </label>
+            <label class="roadmap-item" data-roadmap-item="3">
+              <input type="checkbox" />
+              <div>
+                <strong>설정 파일 읽기</strong>
+                <span>어떤 명령으로 도구가 붙는지 config를 살펴봅니다.</span>
+              </div>
+            </label>
+            <label class="roadmap-item" data-roadmap-item="4">
+              <input type="checkbox" />
+              <div>
+                <strong>인증이 필요한 도구로 확장</strong>
+                <span>GitHub나 Drive처럼 인증이 필요한 도구를 뒤늦게 붙입니다.</span>
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <section class="section-panel" data-track-section>
+          <div class="section-head">
+            <span class="section-kicker">Decision</span>
+            <h2>API 키는 언제 필요한가</h2>
+            <p>MCP를 공부할 때 이 질문을 제일 많이 합니다. 답은 “항상 필요한 건 아니다”입니다.</p>
+          </div>
+          <div class="decision-grid">
+            <div class="decision-row">
+              <div class="decision-box">
+                <h3>키가 필요 없는 경우</h3>
+                <ul>
+                  <li>로컬 파일 시스템 접근</li>
+                  <li>단순 계산기, 로컬 유틸리티</li>
+                  <li>이미 로컬 자원만 쓰는 도구</li>
+                </ul>
+              </div>
+              <div class="decision-box">
+                <h3>키가 필요한 경우</h3>
+                <ul>
+                  <li>GitHub API 호출</li>
+                  <li>Google Drive/Docs 접근</li>
+                  <li>영상 생성 API, 지도 API, DB SaaS</li>
+                </ul>
+              </div>
+            </div>
+            <pre class="code-block">AI Client
+  └─ calls MCP tool
+        └─ MCP server decides how to execute
+              ├─ local file tool → no API key
+              └─ external SaaS tool → API key or OAuth</pre>
+          </div>
+        </section>
+
+        <section class="section-panel" id="lab" data-track-section>
+          <div class="section-head">
+            <span class="section-kicker">Practice</span>
+            <h2>Codex CLI + MCP 실습 흐름 예시</h2>
+            <p>실제 연결은 환경마다 다르지만, 학습 흐름은 이 순서로 잡으면 됩니다.</p>
+          </div>
+          <div class="card">
+            <ol>
+              <li>filesystem MCP를 먼저 붙여서 AI가 현재 작업 폴더를 읽게 합니다.</li>
+              <li>Codex CLI에서 파일 구조를 요약하게 시킵니다.</li>
+              <li>간단한 교육용 결과물 하나를 생성합니다. 예: 수학 문제지, 영어 단어 카드.</li>
+              <li>그 다음에만 GitHub나 Google 도구처럼 외부 인증형 MCP를 붙입니다.</li>
+            </ol>
+            <pre class="code-block">Goal: let AI read local content safely
+
+1. Attach filesystem MCP
+2. Ask the client to summarize folder structure
+3. Create one small output
+4. Review permissions before adding external APIs</pre>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="content-grid" style="margin-top: 22px;">
+      <section class="quiz-card" id="quiz" data-track-section data-quiz>
+        <div class="section-head">
+          <span class="section-kicker">Quiz</span>
+          <h2>핵심 이해 점검</h2>
+          <p>설명만 읽고 끝내지 말고, 구조를 머릿속에 다시 세워보세요.</p>
+        </div>
+        <div class="quiz-list">
+          <div class="quiz-item" data-answer="b">
+            <h3>1. MCP를 가장 정확하게 설명한 것은?</h3>
+            <label><input type="radio" name="q1" value="a" /> API 키를 저장하는 방식</label>
+            <label><input type="radio" name="q1" value="b" /> AI가 도구를 표준 방식으로 쓰게 하는 연결 구조</label>
+            <label><input type="radio" name="q1" value="c" /> 오직 영상 생성용 플러그인</label>
+          </div>
+          <div class="quiz-item" data-answer="a">
+            <h3>2. 가장 먼저 해보기 좋은 MCP는?</h3>
+            <label><input type="radio" name="q2" value="a" /> filesystem MCP</label>
+            <label><input type="radio" name="q2" value="b" /> 고비용 영상 생성 API MCP</label>
+            <label><input type="radio" name="q2" value="c" /> OAuth가 필요한 문서 서비스부터</label>
+          </div>
+          <div class="quiz-item" data-answer="c">
+            <h3>3. API 키가 필요한 시점은?</h3>
+            <label><input type="radio" name="q3" value="a" /> MCP라는 단어를 배우는 즉시</label>
+            <label><input type="radio" name="q3" value="b" /> 언제나 무조건</label>
+            <label><input type="radio" name="q3" value="c" /> 외부 SaaS API를 실제로 호출하는 도구를 붙일 때</label>
+          </div>
+        </div>
+        <div class="memo-actions">
+          <button class="primary-btn" type="button" data-quiz-submit>채점하기</button>
+          <div class="quiz-result" data-quiz-result></div>
+        </div>
+      </section>
+
+      <aside class="stack">
+        <section class="memo-card" data-track-section>
+          <div class="section-head">
+            <span class="section-kicker">Memo</span>
+            <h2>내 언어로 다시 쓰기</h2>
+            <p>“MCP는 API 키가 아니라 ____이다” 문장을 직접 채우면 이해가 빨라집니다.</p>
+          </div>
+          <textarea data-memo placeholder="여기에 나만의 설명을 적어두세요."></textarea>
+          <div class="memo-actions">
+            <button class="secondary-btn" type="button" data-memo-save data-label="Save note">Save note</button>
+            <button class="secondary-btn" type="button" data-memo-copy data-label="Copy note">Copy note</button>
+            <button class="ghost-btn" type="button" data-memo-reset>Reset</button>
+          </div>
+        </section>
+
+        <section class="section-panel" data-track-section>
+          <div class="section-head">
+            <span class="section-kicker">Glossary</span>
+            <h2>용어 사전</h2>
+          </div>
+          <input class="glossary-search" data-glossary-search placeholder="용어 검색" />
+          <div data-glossary-item class="glossary-item">
+            <strong>MCP Client</strong>
+            <span>도구를 요청하고 사용하는 AI 측 애플리케이션입니다.</span>
+          </div>
+          <div data-glossary-item class="glossary-item">
+            <strong>MCP Server</strong>
+            <span>도구 목록과 실행 인터페이스를 표준 방식으로 노출하는 서버입니다.</span>
+          </div>
+          <div data-glossary-item class="glossary-item">
+            <strong>Credential</strong>
+            <span>외부 API를 실제로 호출할 때 필요한 키, 토큰, OAuth 자격입니다.</span>
+          </div>
+          <div data-glossary-item class="glossary-item">
+            <strong>filesystem MCP</strong>
+            <span>로컬 파일과 폴더를 읽고 쓰게 해주는 가장 쉬운 입문형 도구입니다.</span>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <div class="footer-note">CLOID.AI interactive textbook · MCP foundations for practical tool learning</div>
+  </div>
+
+  <div data-progress style="position:fixed;left:0;top:0;height:3px;width:8%;background:linear-gradient(90deg,#8b5cf6,#22d3ee);z-index:60;"></div>
+  <script src="/textbooks/common.js"></script>
+</body>
+</html>

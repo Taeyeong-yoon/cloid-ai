@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import {
   Brain,
-  Radar,
   BookOpen,
   Zap,
   FlaskConical,
@@ -165,16 +164,17 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
   const [open, setOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [loginTooltipVisible, setLoginTooltipVisible] = useState(false);
-  const { t } = useTranslation();
+  const { locale, t } = useTranslation();
   const { user, openLoginModal } = useAuth();
   const router = useRouter();
   const pathname = usePathname();
 
   const authed = isLoggedIn || !!user;
+  const textbookLabel = locale === "ko" ? "교재" : "Textbook";
 
   const links = [
     { href: "/", label: t.nav.home, icon: Brain, guard: false },
-    { href: "/radar", label: t.nav.radar, icon: Radar, guard: false },
+    { href: "/radar", label: textbookLabel, icon: BookOpen, guard: false },
     { href: "/learning", label: t.nav.learning, icon: BookOpen, guard: false },
     { href: "/skills", label: t.nav.skills, icon: Zap, guard: true },
     { href: "/labs", label: t.nav.labs, icon: FlaskConical, guard: true },

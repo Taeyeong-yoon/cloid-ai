@@ -1,62 +1,48 @@
 import type { Metadata } from "next";
-import { getRadarPost, getAllRadarPosts } from "@/lib/radar";
-import { formatDate } from "@/lib/utils";
 import { notFound } from "next/navigation";
-import TagBadge from "@/components/TagBadge";
-import RadarBackLink from "./RadarBackLink";
+import { TEXTBOOKS } from "@/constants/textbooks";
+import TextbookViewer from "./TextbookViewer";
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export function generateStaticParams() {
+  return TEXTBOOKS.filter((item) => item.ready).map((item) => ({ slug: item.id }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
-  const post = getRadarPost(slug);
-  if (!post) return {};
+  const textbook = TEXTBOOKS.find((item) => item.id === slug && item.ready);
+
+  if (!textbook) {
+    return {
+      title: "Textbook Not Found | CLOID.AI",
+    };
+  }
+
   return {
-    title: `${post.title} – CLOID.AI Radar`,
-    description: post.summary || "AI 트렌드 상세 분석 – CLOID.AI",
+    title: `${textbook.titleEn} | CLOID.AI`,
+    description: textbook.descriptionEn,
     openGraph: {
-      title: post.title,
-      description: post.summary,
-      url: `https://cloid.ai/radar/${slug}`,
+      title: `${textbook.titleEn} | CLOID.AI`,
+      description: textbook.descriptionEn,
+      url: `https://cloid.ai/radar/${textbook.id}`,
     },
   };
 }
 
-export async function generateStaticParams() {
-  return getAllRadarPosts().map((p) => ({ slug: p.slug }));
-}
-
-export default async function RadarPostPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function RadarDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
-  const post = getRadarPost(slug);
-  if (!post) notFound();
+  const textbook = TEXTBOOKS.find((item) => item.id === slug && item.ready);
 
-  return (
-    <article className="max-w-3xl mx-auto">
-      <RadarBackLink />
-      <div className="text-sm text-slate-500 mb-2">{formatDate(post.date)}</div>
-      <h1 className="text-3xl font-bold text-white mb-4">{post.title}</h1>
-      <p className="text-slate-400 text-lg mb-4">{post.summary}</p>
-      <div className="flex flex-wrap gap-2 mb-8">
-        {post.tags.map((tag) => <TagBadge key={tag} tag={tag} />)}
-      </div>
-      {post.content ? (
-        <div className="prose prose-invert prose-slate max-w-none">
-          <pre className="whitespace-pre-wrap text-slate-300 text-sm leading-relaxed font-sans">
-            {post.content}
-          </pre>
-        </div>
-      ) : post.sourceUrl ? (
-        <div className="mt-4 p-4 rounded-xl border border-slate-700 bg-slate-900/40">
-          <p className="text-sm text-slate-400 mb-3">Read the full article at the original source:</p>
-          <a
-            href={post.sourceUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 text-sm font-medium transition-colors"
-          >
-            {post.sourceUrl} →
-          </a>
-        </div>
-      ) : null}
-    </article>
-  );
+  if (!textbook) {
+    notFound();
+  }
+
+  return <TextbookViewer textbook={textbook} />;
 }

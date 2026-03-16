@@ -9,7 +9,6 @@ import {
   BookOpen,
   ExternalLink,
   FlaskConical,
-  Radio,
   Sparkles,
   TrendingUp,
   Zap,
@@ -172,7 +171,7 @@ export default function HomeClient({
   todayUpdate: TodayUpdateData;
   contentCounts: ContentCounts;
 }) {
-  const { t } = useTranslation();
+  const { locale, t } = useTranslation();
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -189,10 +188,13 @@ export default function HomeClient({
       key: "radar",
       step: "01",
       href: "/radar",
-      label: t.home.radar_label,
-      icon: Radio,
-      desc: t.home.journey_radar_desc,
-      cta: t.home.radar_label,
+      label: locale === "ko" ? "인터랙티브 교재" : "Interactive Textbooks",
+      icon: BookOpen,
+      desc:
+        locale === "ko"
+          ? "MCP, Marketplace, Prompt, Cowork 주제를 카드형 교재로 깊게 학습합니다"
+          : "Study MCP, marketplace, prompt, and cowork topics through immersive interactive textbooks",
+      cta: locale === "ko" ? "교재 열기" : "Open textbooks",
       event: "cta_journey_radar",
       accentText: "text-emerald-300",
       borderHover: "hover:border-emerald-500/60 hover:shadow-[0_18px_48px_rgba(16,185,129,0.12)]",
@@ -298,7 +300,7 @@ export default function HomeClient({
         </div>
 
         <div className="border-t border-slate-800 pt-4">
-          <p className="mb-2 text-xs text-slate-500">🏷️ {t.home.popular_topics}</p>
+          <p className="mb-2 text-xs text-slate-500"># {t.home.popular_topics}</p>
           <div className="flex flex-wrap gap-2">
             {POPULAR_TAGS.map((tag) => (
               <TopicTag key={tag} tag={tag} onClick={() => handleTagClick(tag)} />
