@@ -617,14 +617,14 @@ button:active:not(:disabled) {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .journey-radar-sweep {
-    animation: none;
-  }
-
-  .journey-card * {
+  .journey-card *:not(.journey-radar-sweep) {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .journey-radar-sweep {
+    animation: journey-sweep 6s linear infinite !important;
   }
 }
 
