@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowLeft, Maximize2, Minimize2 } from "lucide-react";
-import { useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import TextbookIcon from "@/components/TextbookIcon";
 import type { Textbook } from "@/constants/textbooks";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
@@ -10,11 +10,27 @@ import { useTranslation } from "@/lib/i18n/LanguageContext";
 export default function TextbookViewer({ textbook }: { textbook: Textbook }) {
   const { locale } = useTranslation();
   const [fullscreen, setFullscreen] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const contentSrc = useMemo(() => `/textbooks/${textbook.htmlFile}`, [textbook.htmlFile]);
 
   const listLabel = locale === "ko" ? "교재 목록" : "Textbook list";
   const fullscreenLabel = locale === "ko" ? "전체 화면" : "Fullscreen";
   const exitFullscreenLabel = locale === "ko" ? "전체 화면 종료" : "Exit fullscreen";
   const title = locale === "ko" ? textbook.title : textbook.titleEn;
+
+  function handleFrameLoad() {
+    const frame = iframeRef.current;
+    if (!frame) return;
+
+    try {
+      const currentPath = frame.contentWindow?.location.pathname;
+      if (currentPath && !currentPath.startsWith("/textbooks/")) {
+        frame.src = contentSrc;
+      }
+    } catch {
+      frame.src = contentSrc;
+    }
+  }
 
   return (
     <>
@@ -45,9 +61,11 @@ export default function TextbookViewer({ textbook }: { textbook: Textbook }) {
           </button>
         </div>
         <iframe
-          src={`/textbooks/${textbook.htmlFile}`}
+          ref={iframeRef}
+          src={contentSrc}
           title={title}
           sandbox="allow-scripts allow-same-origin"
+          onLoad={handleFrameLoad}
           className={fullscreen ? "h-full w-full flex-1 border-0" : "min-h-[72vh] w-full rounded-2xl border border-slate-800 bg-black"}
         />
       </div>
