@@ -10,6 +10,7 @@ import { useTranslation } from "@/lib/i18n/LanguageContext";
 export default function TextbookClient() {
   const { locale } = useTranslation();
   const [priority, setPriority] = useState<1 | 2 | 3 | 0>(0);
+  const featured = TEXTBOOKS.filter((item) => item.ready);
 
   const filtered = useMemo(
     () => (priority === 0 ? TEXTBOOKS : TEXTBOOKS.filter((item) => item.priority === priority)),
@@ -26,6 +27,11 @@ export default function TextbookClient() {
   const allLabel = locale === "ko" ? "전체" : "All";
   const openLabel = locale === "ko" ? "교재 열기" : "Open textbook";
   const soonLabel = locale === "ko" ? "준비 중" : "Coming soon";
+  const featuredTitle = locale === "ko" ? "바로 시작할 수 있는 대표 교재" : "Featured textbooks ready now";
+  const featuredSub =
+    locale === "ko"
+      ? "지금 바로 눌러 볼 수 있는 2개의 인터랙티브 교재를 제일 위에 두었습니다."
+      : "The two live interactive textbooks are pinned at the very top for immediate access.";
   const sectionLabel = locale === "ko" ? "섹션" : "sections";
   const minuteLabel = locale === "ko" ? "분" : "min";
 
@@ -43,6 +49,41 @@ export default function TextbookClient() {
       </section>
 
       <section className="rounded-2xl border border-slate-800 bg-slate-950/50 p-4 sm:p-5">
+        <div className="mb-6 rounded-[1.4rem] border border-violet-500/18 bg-[linear-gradient(180deg,rgba(15,23,42,0.75),rgba(7,11,20,0.92))] p-4 sm:p-5">
+          <div className="mb-4">
+            <h2 className="text-lg font-semibold tracking-tight text-white">{featuredTitle}</h2>
+            <p className="mt-1 text-sm leading-6 text-slate-400">{featuredSub}</p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {featured.map((textbook) => {
+              const title = locale === "ko" ? textbook.title : textbook.titleEn;
+              const description = locale === "ko" ? textbook.description : textbook.descriptionEn;
+              return (
+                <Link
+                  key={textbook.id}
+                  href={`/radar/${textbook.id}`}
+                  className="group rounded-[1.25rem] border border-slate-800 bg-slate-950/70 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/40 hover:bg-slate-900/70"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-2xl border border-slate-800 bg-slate-950/80 p-2">
+                      <TextbookIcon icon={textbook.icon} accentColor={textbook.accentColor} size={70} />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="mb-2 flex items-center gap-2">
+                        <span className="rounded-full border border-violet-500/25 bg-violet-500/10 px-2.5 py-1 text-[11px] text-violet-200">
+                          {openLabel}
+                        </span>
+                      </div>
+                      <h3 className="text-base font-semibold text-white">{title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-slate-400">{description}</p>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+
         <div className="mb-4 flex flex-wrap items-center gap-3">
           <div className="flex items-center gap-2 text-sm font-medium text-slate-200">
             <Filter size={15} className="text-violet-300" />

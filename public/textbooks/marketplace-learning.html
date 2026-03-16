@@ -7,334 +7,291 @@
   <link rel="stylesheet" href="/textbooks/common.css" />
 </head>
 <body data-book-id="marketplace-learning">
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">
-        <div class="brand-badge"></div>
-        <div class="brand-copy">
-          <small>CLOID.AI Textbook</small>
+  <div id="progressBarTop"></div>
+
+  <div class="featured-launchers">
+    <div class="sec-tag">Featured textbooks</div>
+    <div class="double-grid">
+      <a class="launcher-card" href="/radar/mcp-learning">
+        <div>
+          <strong>MCP Protocol Interactive Lab</strong>
+          <p>MCP 구조와 첫 실습 흐름을 배우는 대표 교재</p>
+        </div>
+        <span class="btn btn-secondary">Open</span>
+      </a>
+      <a class="launcher-card" href="/radar/marketplace-learning">
+        <div>
           <strong>Marketplace Interactive Lab</strong>
+          <p>Skill, Plugin, Cowork 조합의 역할을 배우는 대표 교재</p>
         </div>
-      </div>
-      <div class="toolbar">
-        <button class="tool-btn" data-scroll-target="entry">Entry</button>
-        <button class="tool-btn" data-scroll-target="roles">Roles</button>
-        <button class="tool-btn" data-scroll-target="design">Design</button>
-        <button class="tool-btn" data-scroll-target="quiz">Quiz</button>
-      </div>
+        <span class="btn btn-secondary">Open</span>
+      </a>
     </div>
   </div>
 
-  <div class="page-shell">
-    <div class="hero" data-track-section id="entry">
-      <section class="hero-copy">
-        <div class="eyebrow">Marketplace · Skill · Plugin · Cowork</div>
-        <h1>Marketplace를 “앱 목록”이 아니라 “학습과 작업을 연결하는 조합 시스템”으로 보기</h1>
-        <p>
-          Marketplace를 배우는 목적은 기능 이름을 외우는 것이 아닙니다. 어떤 문제를 어떤 skill, plugin,
-          cowork 조합으로 풀지 판단하는 감각을 만드는 것입니다. 이 교재는 그 판단 흐름을 디자인 중심으로 설명합니다.
+  <nav id="topNav">
+    <span class="nav-logo">
+      <span class="nav-orb"></span>
+      <span data-ko="Marketplace 학습실" data-en="Marketplace Learning Lab">Marketplace 학습실</span>
+    </span>
+    <button class="nav-btn active" data-section="hero" data-ko="홈" data-en="Home">홈</button>
+    <button class="nav-btn" data-section="roles" data-ko="역할구조" data-en="Roles">역할구조</button>
+    <button class="nav-btn" data-section="compare" data-ko="Skill 비교" data-en="Compare">Skill 비교</button>
+    <button class="nav-btn" data-section="patterns" data-ko="패턴" data-en="Patterns">패턴</button>
+    <button class="nav-btn" data-section="doctors" data-ko="관점" data-en="Perspectives">관점</button>
+    <button class="nav-btn" data-section="roadmap" data-ko="로드맵" data-en="Roadmap">로드맵</button>
+    <button class="nav-btn" data-section="site" data-ko="사이트적용" data-en="Apply">사이트적용</button>
+    <button class="nav-btn" data-section="quiz" data-ko="퀴즈" data-en="Quiz">퀴즈</button>
+    <button class="nav-btn" data-section="glossary" data-ko="용어사전" data-en="Glossary">용어사전</button>
+    <button class="nav-btn" data-section="memo" data-ko="복사메모" data-en="Memo">복사메모</button>
+    <span class="nav-spacer"></span>
+    <button class="lang-btn active" data-locale="ko">한글</button>
+    <button class="lang-btn" data-locale="en">English</button>
+  </nav>
+
+  <div class="section active" id="sec-hero">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-title" data-ko="Marketplace 인터랙티브 학습실" data-en="Marketplace Interactive Learning Lab">Marketplace 인터랙티브 학습실</div>
+        <p class="hero-sub" data-ko="Marketplace를 단순한 기능 목록이 아니라, Skill과 Plugin과 Cowork가 어떻게 조합되는지 배우는 작업 설계 관점으로 설명합니다. 이 교재도 reference처럼 상단 버튼으로 섹션을 전환하며 보게 만들었습니다." data-en="This textbook explains Marketplace not as a simple feature list, but as a work-design system where skills, plugins, and cowork combine. Like the reference, it uses top buttons for section-based navigation.">
+          Marketplace를 단순한 기능 목록이 아니라, Skill과 Plugin과 Cowork가 어떻게 조합되는지 배우는 작업 설계 관점으로 설명합니다. 이 교재도 reference처럼 상단 버튼으로 섹션을 전환하며 보게 만들었습니다.
         </p>
-        <div class="hero-actions">
-          <button class="primary-btn" data-scroll-target="roles">역할 구조 보기</button>
-          <button class="secondary-btn" data-scroll-target="design">설계 원칙 보기</button>
+        <div class="hero-btns">
+          <button class="btn btn-primary" data-start-section="roles" data-ko="역할 구조 보기" data-en="See roles">역할 구조 보기</button>
+          <button class="btn btn-secondary" data-start-section="site" data-ko="사이트 적용 보기" data-en="See site usage">사이트 적용 보기</button>
         </div>
-        <div class="hero-meta">
-          <span class="meta-chip">10 sections</span>
-          <span class="meta-chip">50 min</span>
-          <span class="meta-chip">Product + Workflow Lens</span>
+
+        <div class="diag-box">
+          <h3 data-ko="Marketplace를 배울 때 흔한 문제" data-en="Common problems when learning Marketplace">Marketplace를 배울 때 흔한 문제</h3>
+          <div class="diag-item" data-ko="Skill과 Plugin의 역할을 섞어서 이해하기" data-en="Mixing up the roles of skills and plugins">Skill과 Plugin의 역할을 섞어서 이해하기</div>
+          <div class="diag-item" data-ko="기능 수만 많으면 좋다고 생각하기" data-en="Thinking more features automatically means better design">기능 수만 많으면 좋다고 생각하기</div>
+          <div class="diag-item" data-ko="사용자가 왜 이 조합을 써야 하는지 설명하지 못하기" data-en="Failing to explain why a user should use a specific combination">사용자가 왜 이 조합을 써야 하는지 설명하지 못하기</div>
         </div>
-      </section>
-
-      <aside class="hero-panel">
-        <div class="hero-orbit one"></div>
-        <div class="hero-orbit two"></div>
-        <div class="hero-orbit three"></div>
-        <div class="hero-core"></div>
-        <div class="hero-callout">
-          <div class="callout-box">
-            <strong>Skill</strong>
-            <p>반복되는 지시와 문맥을 재사용 가능한 레이어로 만든 것입니다.</p>
-          </div>
-          <div class="callout-box">
-            <strong>Plugin / Tool</strong>
-            <p>외부 행동을 실제로 일으키는 실행 지점입니다. 검색, 문서, 파일, 데이터가 여기에 들어옵니다.</p>
-          </div>
-        </div>
-      </aside>
-    </div>
-
-    <section class="progress-strip" data-track-section>
-      <div class="progress-step">
-        <small>01</small>
-        <strong>Prompt Layer</strong>
-        <span>무엇을 시킬지 규정합니다.</span>
-      </div>
-      <div class="progress-step">
-        <small>02</small>
-        <strong>Skill Layer</strong>
-        <span>반복 문맥을 재사용 가능한 묶음으로 정리합니다.</span>
-      </div>
-      <div class="progress-step">
-        <small>03</small>
-        <strong>Tool Layer</strong>
-        <span>검색, 문서, 파일, API 같은 외부 행동이 연결됩니다.</span>
-      </div>
-      <div class="progress-step">
-        <small>04</small>
-        <strong>Workflow Layer</strong>
-        <span>여러 skill과 tool이 한 작업 흐름으로 묶입니다.</span>
-      </div>
-    </section>
-
-    <div class="content-grid">
-      <div class="stack">
-        <section class="section-panel" id="roles" data-track-section>
-          <div class="section-head">
-            <span class="section-kicker">Roles</span>
-            <h2>세 역할로 나눠서 이해하기</h2>
-            <p>Marketplace를 도구 카탈로그처럼 보지 말고, 역할 분담 구조로 보면 훨씬 선명해집니다.</p>
-          </div>
-          <div class="people-grid">
-            <article class="person-card">
-              <div class="person-role">Curator</div>
-              <h3>큐레이터</h3>
-              <p>어떤 skill과 tool을 묶어야 특정 작업이 빨라지는지 설계합니다.</p>
-            </article>
-            <article class="person-card">
-              <div class="person-role">Builder</div>
-              <h3>빌더</h3>
-              <p>실제 템플릿, 워크플로, 프롬프트 레이어를 만듭니다.</p>
-            </article>
-            <article class="person-card">
-              <div class="person-role">Operator</div>
-              <h3>운영자</h3>
-              <p>권한, 비용, 실패 지점을 보고 어떤 기능을 열고 닫을지 결정합니다.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section-panel" data-track-section>
-          <div class="section-head">
-            <span class="section-kicker">Compare</span>
-            <h2>Skill, Plugin, Cowork의 차이</h2>
-            <p>이 셋을 섞어 부르면 설계가 흐려집니다. 목적별로 나눠보세요.</p>
-          </div>
-          <div class="compare-tabs" data-compare-group="marketplace">
-            <button class="pill" data-compare-tab="skill">Skill</button>
-            <button class="pill" data-compare-tab="plugin">Plugin / Tool</button>
-            <button class="pill" data-compare-tab="cowork">Cowork</button>
-          </div>
-          <div class="compare-panel active card" data-compare-panel="marketplace" data-compare-key="skill">
-            <h3>Skill</h3>
-            <p>지식, 톤, 절차, 주의점 같은 문맥을 재사용하는 계층입니다. “어떻게 생각할지”를 고정합니다.</p>
-          </div>
-          <div class="compare-panel card" data-compare-panel="marketplace" data-compare-key="plugin">
-            <h3>Plugin / Tool</h3>
-            <p>검색, 파일, 문서, API처럼 실제 행동을 일으키는 계층입니다. “무엇을 할지”를 실행합니다.</p>
-          </div>
-          <div class="compare-panel card" data-compare-panel="marketplace" data-compare-key="cowork">
-            <h3>Cowork</h3>
-            <p>여러 역할 또는 전문 에이전트를 작업 흐름 안에서 협업하게 만드는 계층입니다. “누가 어떻게 나눠서 할지”를 정합니다.</p>
-          </div>
-        </section>
-
-        <section class="section-panel" id="design" data-track-section>
-          <div class="section-head">
-            <span class="section-kicker">Design Principles</span>
-            <h2>좋은 Marketplace 설계 원칙</h2>
-            <p>이 원칙은 교육 사이트, 팀 도구, 내부 허브에도 그대로 적용됩니다.</p>
-          </div>
-          <div class="card-grid two">
-            <article class="card">
-              <h3>하나의 job to be done</h3>
-              <p>하나의 skill은 “무엇이든 도와줌”이 아니라, 한 가지 문제를 빠르게 푸는 쪽이 좋습니다.</p>
-            </article>
-            <article class="card">
-              <h3>문맥과 실행 분리</h3>
-              <p>Skill은 사고 프레임, Plugin은 실행 수단으로 나누면 유지보수가 편해집니다.</p>
-            </article>
-            <article class="card">
-              <h3>권한 최소화</h3>
-              <p>강력한 툴일수록 기본은 닫아두고, 필요한 맥락에서만 열어야 합니다.</p>
-            </article>
-            <article class="card">
-              <h3>학습 가능한 인터페이스</h3>
-              <p>사용자는 “이 조합이 왜 필요한지”를 이해할 수 있어야 다시 씁니다.</p>
-            </article>
-          </div>
-        </section>
       </div>
 
-      <div class="stack">
-        <section class="section-panel" data-track-section>
-          <div class="section-head">
-            <span class="section-kicker">Roadmap</span>
-            <h2>Marketplace 실습 순서</h2>
-            <p>기능을 다 넣는 것보다 조합 원리를 먼저 배우는 편이 낫습니다.</p>
-          </div>
-          <div class="roadmap-list">
-            <label class="roadmap-item" data-roadmap-item="1">
-              <input type="checkbox" />
-              <div>
-                <strong>수동 프롬프트 하나 만들기</strong>
-                <span>먼저 사람 손으로 쓸 수 있는 기본 프롬프트를 만듭니다.</span>
-              </div>
-            </label>
-            <label class="roadmap-item" data-roadmap-item="2">
-              <input type="checkbox" />
-              <div>
-                <strong>Skill로 고정하기</strong>
-                <span>반복되는 문맥, 톤, 규칙을 skill 형태로 묶습니다.</span>
-              </div>
-            </label>
-            <label class="roadmap-item" data-roadmap-item="3">
-              <input type="checkbox" />
-              <div>
-                <strong>Plugin 연결하기</strong>
-                <span>문서, 검색, 파일 중 필요한 실행 계층만 연결합니다.</span>
-              </div>
-            </label>
-            <label class="roadmap-item" data-roadmap-item="4">
-              <input type="checkbox" />
-              <div>
-                <strong>Cowork 조합 만들기</strong>
-                <span>전문 역할을 가진 에이전트를 분업 구조로 붙입니다.</span>
-              </div>
-            </label>
-          </div>
-        </section>
-
-        <section class="section-panel" data-track-section>
-          <div class="section-head">
-            <span class="section-kicker">Applied Example</span>
-            <h2>교육 사이트에 적용하면</h2>
-            <p>CLOID.AI 같은 학습 사이트에 붙일 때는 아래처럼 나뉩니다.</p>
-          </div>
-          <div class="decision-grid">
-            <div class="decision-row">
-              <div class="decision-box">
-                <h3>Skill</h3>
-                <ul>
-                  <li>초보자 눈높이 설명</li>
-                  <li>실습형 답변 형식</li>
-                  <li>실패 복구 우선 답변</li>
-                </ul>
-              </div>
-              <div class="decision-box">
-                <h3>Tool</h3>
-                <ul>
-                  <li>문서 검색</li>
-                  <li>파일 읽기/쓰기</li>
-                  <li>코드 실행 또는 외부 자료 연결</li>
-                </ul>
-              </div>
+      <div class="hero-panel">
+        <div class="hero-system">
+          <div class="hero-ring"></div>
+          <div class="hero-ring-2"></div>
+          <div class="hero-ring-3"></div>
+          <div class="hero-core"></div>
+          <div class="signal a"></div>
+          <div class="signal b"></div>
+          <div class="hero-side-note">
+            <div class="note-chip">
+              <strong data-ko="핵심 문장" data-en="Core sentence">핵심 문장</strong>
+              <p data-ko="좋은 Marketplace는 기능 목록이 아니라, 문제 해결 조합을 명확히 보여주는 구조입니다." data-en="A good marketplace is not a feature list. It is a structure that clearly shows problem-solving combinations.">좋은 Marketplace는 기능 목록이 아니라, 문제 해결 조합을 명확히 보여주는 구조입니다.</p>
             </div>
-            <pre class="code-block">Prompt → Skill → Tool → Workflow
-
-Example:
-교육 질문 입력
-  → "초보자용 교재 스타일" skill 적용
-  → 내부 문서 검색 tool 호출
-  → 필요한 경우 파일/예제 생성
-  → 결과를 단계형 튜터 UX로 반환</pre>
+            <div class="note-chip">
+              <strong data-ko="설계 원칙" data-en="Design principle">설계 원칙</strong>
+              <p data-ko="하나의 Skill은 하나의 job to be done을 더 잘 해결해야 합니다." data-en="One skill should make one job-to-be-done clearly better.">하나의 Skill은 하나의 job to be done을 더 잘 해결해야 합니다.</p>
+            </div>
           </div>
-        </section>
-
-        <section class="section-panel" data-track-section>
-          <div class="section-head">
-            <span class="section-kicker">Failure Points</span>
-            <h2>실패가 자주 나는 지점</h2>
-            <p>도구가 많아질수록 “왜 안 되는지”가 흐려집니다. 아래를 먼저 점검하세요.</p>
-          </div>
-          <div class="card">
-            <ul>
-              <li>Skill과 Plugin의 책임이 섞여 있음</li>
-              <li>권한이 너무 넓어서 운영자가 불안해함</li>
-              <li>사용자가 어떤 조합을 써야 하는지 알 수 없음</li>
-              <li>좋은 결과 대신 설명만 계속 나와서 체감 가치가 떨어짐</li>
-            </ul>
-          </div>
-        </section>
+        </div>
       </div>
     </div>
-
-    <div class="content-grid" style="margin-top: 22px;">
-      <section class="quiz-card" id="quiz" data-track-section data-quiz>
-        <div class="section-head">
-          <span class="section-kicker">Quiz</span>
-          <h2>Marketplace 감각 점검</h2>
-        </div>
-        <div class="quiz-list">
-          <div class="quiz-item" data-answer="b">
-            <h3>1. Skill의 핵심 역할은?</h3>
-            <label><input type="radio" name="mq1" value="a" /> 파일 업로드 버튼 만들기</label>
-            <label><input type="radio" name="mq1" value="b" /> 반복 문맥과 사고 틀을 재사용 가능하게 만들기</label>
-            <label><input type="radio" name="mq1" value="c" /> 결제 페이지 구축</label>
-          </div>
-          <div class="quiz-item" data-answer="c">
-            <h3>2. Plugin / Tool의 역할은?</h3>
-            <label><input type="radio" name="mq2" value="a" /> 브랜드 슬로건 정하기</label>
-            <label><input type="radio" name="mq2" value="b" /> 학습자 감정 분석만 하기</label>
-            <label><input type="radio" name="mq2" value="c" /> 외부 행동이나 실행을 실제로 일으키기</label>
-          </div>
-          <div class="quiz-item" data-answer="a">
-            <h3>3. 좋은 Marketplace 설계는?</h3>
-            <label><input type="radio" name="mq3" value="a" /> 하나의 문제를 빠르게 해결하는 조합부터 만든다</label>
-            <label><input type="radio" name="mq3" value="b" /> 처음부터 모든 툴을 다 연다</label>
-            <label><input type="radio" name="mq3" value="c" /> 설명 없이 기능 수만 늘린다</label>
-          </div>
-        </div>
-        <div class="memo-actions">
-          <button class="primary-btn" type="button" data-quiz-submit>채점하기</button>
-          <div class="quiz-result" data-quiz-result></div>
-        </div>
-      </section>
-
-      <aside class="stack">
-        <section class="memo-card" data-track-section>
-          <div class="section-head">
-            <span class="section-kicker">Note</span>
-            <h2>내 서비스에 적용해 보기</h2>
-            <p>“우리 서비스의 첫 번째 skill은 어떤 문제를 해결해야 하는가?”를 써보세요.</p>
-          </div>
-          <textarea data-memo placeholder="예: 학습자가 실습 단계에서 막힐 때 다음 행동 하나만 제안하는 tutor skill"></textarea>
-          <div class="memo-actions">
-            <button class="secondary-btn" type="button" data-memo-save data-label="Save note">Save note</button>
-            <button class="secondary-btn" type="button" data-memo-copy data-label="Copy note">Copy note</button>
-            <button class="ghost-btn" type="button" data-memo-reset>Reset</button>
-          </div>
-        </section>
-
-        <section class="section-panel" data-track-section>
-          <div class="section-head">
-            <span class="section-kicker">Glossary</span>
-            <h2>용어 사전</h2>
-          </div>
-          <input class="glossary-search" data-glossary-search placeholder="용어 검색" />
-          <div data-glossary-item class="glossary-item">
-            <strong>Marketplace</strong>
-            <span>기능 모음을 나열하는 곳이 아니라, 작업 조합을 전달하는 유통 층입니다.</span>
-          </div>
-          <div data-glossary-item class="glossary-item">
-            <strong>Skill</strong>
-            <span>반복 문맥과 규칙을 재사용 가능한 템플릿으로 정리한 계층입니다.</span>
-          </div>
-          <div data-glossary-item class="glossary-item">
-            <strong>Plugin / Tool</strong>
-            <span>외부 행동을 실제로 일으키는 실행 계층입니다.</span>
-          </div>
-          <div data-glossary-item class="glossary-item">
-            <strong>Cowork</strong>
-            <span>역할이 다른 에이전트나 도구를 분업 구조로 묶는 방식입니다.</span>
-          </div>
-        </section>
-      </aside>
-    </div>
-
-    <div class="footer-note">CLOID.AI interactive textbook · marketplace thinking for practical AI systems</div>
   </div>
 
-  <div data-progress style="position:fixed;left:0;top:0;height:3px;width:8%;background:linear-gradient(90deg,#8b5cf6,#fbbf24);z-index:60;"></div>
+  <div class="section" id="sec-roles">
+    <div class="sec-tag">Section A</div>
+    <h2 class="sec-h" data-ko="Marketplace의 역할 구조" data-en="Marketplace role structure">Marketplace의 역할 구조</h2>
+    <p class="sec-sub" data-ko="먼저 세 층으로 나눠야 혼동이 줄어듭니다." data-en="Separating it into three layers reduces confusion.">먼저 세 층으로 나눠야 혼동이 줄어듭니다.</p>
+
+    <div class="card-grid card-grid-3">
+      <div class="card concept-card" data-concept="skill">
+        <div class="concept-icon">S</div>
+        <div class="concept-label" data-ko="Skill" data-en="Skill">Skill</div>
+        <div class="concept-brief" data-ko="문맥과 사고 틀 재사용" data-en="Reuse context and reasoning frames">문맥과 사고 틀 재사용</div>
+      </div>
+      <div class="card concept-card" data-concept="plugin">
+        <div class="concept-icon">P</div>
+        <div class="concept-label" data-ko="Plugin / Tool" data-en="Plugin / Tool">Plugin / Tool</div>
+        <div class="concept-brief" data-ko="실제 외부 행동 실행" data-en="Execute real external actions">실제 외부 행동 실행</div>
+      </div>
+      <div class="card concept-card" data-concept="cowork">
+        <div class="concept-icon">C</div>
+        <div class="concept-label" data-ko="Cowork" data-en="Cowork">Cowork</div>
+        <div class="concept-brief" data-ko="역할 분업과 조합 설계" data-en="Design collaboration and division of roles">역할 분업과 조합 설계</div>
+      </div>
+    </div>
+
+    <div class="concept-detail" data-concept-detail="skill">
+      <strong data-ko="Skill" data-en="Skill">Skill</strong>
+      <p data-ko="반복되는 톤, 절차, 주의점, 설명 스타일을 하나의 재사용 레이어로 묶습니다." data-en="A skill packages repeated tone, procedure, guardrails, and explanation style into a reusable layer.">반복되는 톤, 절차, 주의점, 설명 스타일을 하나의 재사용 레이어로 묶습니다.</p>
+    </div>
+    <div class="concept-detail hidden-locale" data-concept-detail="plugin">
+      <strong data-ko="Plugin / Tool" data-en="Plugin / Tool">Plugin / Tool</strong>
+      <p data-ko="검색, 문서, 파일, 외부 API처럼 실제 행동을 일으키는 실행 계층입니다." data-en="This is the execution layer that performs real actions such as search, docs, file operations, or external APIs.">검색, 문서, 파일, 외부 API처럼 실제 행동을 일으키는 실행 계층입니다.</p>
+    </div>
+    <div class="concept-detail hidden-locale" data-concept-detail="cowork">
+      <strong data-ko="Cowork" data-en="Cowork">Cowork</strong>
+      <p data-ko="한 명의 AI가 다 하는 대신, 역할이 다른 전문 흐름을 협업 구조로 묶는 개념입니다." data-en="Cowork combines specialized roles into a collaboration structure instead of forcing one AI flow to do everything.">한 명의 AI가 다 하는 대신, 역할이 다른 전문 흐름을 협업 구조로 묶는 개념입니다.</p>
+    </div>
+  </div>
+
+  <div class="section" id="sec-compare">
+    <div class="sec-tag">Section B</div>
+    <h2 class="sec-h" data-ko="Skill, Plugin, Cowork 비교" data-en="Compare skill, plugin, and cowork">Skill, Plugin, Cowork 비교</h2>
+    <p class="sec-sub" data-ko="무엇을 저장하고, 무엇을 실행하고, 무엇을 조합하는지 나눠서 보세요." data-en="Separate what stores context, what executes actions, and what orchestrates collaboration.">무엇을 저장하고, 무엇을 실행하고, 무엇을 조합하는지 나눠서 보세요.</p>
+
+    <div class="compare-wrap">
+      <div class="compare-side">
+        <h3 data-ko="Skill" data-en="Skill">Skill</h3>
+        <ul>
+          <li data-ko="설명 방식과 규칙을 고정" data-en="Locks in explanation style and rules">설명 방식과 규칙을 고정</li>
+          <li data-ko="같은 작업을 다시 쓸 때 강함" data-en="Strong for repeated use of the same kind of work">같은 작업을 다시 쓸 때 강함</li>
+        </ul>
+      </div>
+      <div class="compare-side">
+        <h3 data-ko="Plugin / Tool" data-en="Plugin / Tool">Plugin / Tool</h3>
+        <ul>
+          <li data-ko="실제 외부 행동 실행" data-en="Executes real external actions">실제 외부 행동 실행</li>
+          <li data-ko="검색, 파일, 문서, API 연결" data-en="Connects search, files, docs, and APIs">검색, 파일, 문서, API 연결</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3 data-ko="Cowork는 왜 따로 봐야 하나?" data-en="Why should cowork be treated separately?">Cowork는 왜 따로 봐야 하나?</h3>
+      <p data-ko="Cowork는 하나의 기능이 아니라 역할 배치입니다. 어떤 skill과 tool을 어떤 순서와 분업 구조로 조합할지 결정하는 상위 흐름입니다." data-en="Cowork is not just one feature. It is a higher-order arrangement that decides how skills and tools are combined through roles and sequence.">Cowork는 하나의 기능이 아니라 역할 배치입니다. 어떤 skill과 tool을 어떤 순서와 분업 구조로 조합할지 결정하는 상위 흐름입니다.</p>
+    </div>
+  </div>
+
+  <div class="section" id="sec-patterns">
+    <div class="sec-tag">Section C</div>
+    <h2 class="sec-h" data-ko="좋은 Marketplace 패턴" data-en="Good marketplace patterns">좋은 Marketplace 패턴</h2>
+    <p class="sec-sub" data-ko="기능 수보다 설계 원리가 더 중요합니다." data-en="Design principles matter more than raw feature count.">기능 수보다 설계 원리가 더 중요합니다.</p>
+
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <h3 data-ko="하나의 job to be done" data-en="One job to be done">하나의 job to be done</h3>
+        <p data-ko="좋은 skill은 “무엇이든 해줌”이 아니라, 한 가지 문제를 명확하게 더 잘 해결합니다." data-en="A good skill does not do everything. It makes one job clearly better.">좋은 skill은 “무엇이든 해줌”이 아니라, 한 가지 문제를 명확하게 더 잘 해결합니다.</p>
+      </div>
+      <div class="card">
+        <h3 data-ko="문맥과 실행 분리" data-en="Separate context and execution">문맥과 실행 분리</h3>
+        <p data-ko="Skill은 사고 프레임, Tool은 실행 수단으로 나누면 유지보수가 쉬워집니다." data-en="Maintenance becomes easier when skills hold reasoning frames and tools handle execution.">Skill은 사고 프레임, Tool은 실행 수단으로 나누면 유지보수가 쉬워집니다.</p>
+      </div>
+      <div class="card">
+        <h3 data-ko="권한 최소화" data-en="Minimal permissions">권한 최소화</h3>
+        <p data-ko="처음부터 모든 도구를 열지 말고, 필요한 흐름에만 점진적으로 붙입니다." data-en="Do not open every tool from the beginning. Attach only what is needed, gradually.">처음부터 모든 도구를 열지 말고, 필요한 흐름에만 점진적으로 붙입니다.</p>
+      </div>
+      <div class="card">
+        <h3 data-ko="사용자 이해 가능성" data-en="User legibility">사용자 이해 가능성</h3>
+        <p data-ko="사용자는 왜 이 조합을 써야 하는지 이해해야 계속 사용합니다." data-en="Users keep using a combination only when they understand why it exists.">사용자는 왜 이 조합을 써야 하는지 이해해야 계속 사용합니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-doctors">
+    <div class="sec-tag">Section D</div>
+    <h2 class="sec-h" data-ko="세 관점 패널" data-en="Three-point perspective panel">세 관점 패널</h2>
+    <p class="sec-sub" data-ko="같은 구조를 보는 관점이 다르면 강조점도 달라집니다." data-en="Different viewpoints emphasize different things in the same structure.">같은 구조를 보는 관점이 다르면 강조점도 달라집니다.</p>
+
+    <div class="doctor-grid">
+      <div class="doctor-card" data-doctor="builder"><div class="doctor-role">Builder</div><h3 data-ko="빌더" data-en="Builder">빌더</h3><p data-ko="무엇을 조합할지 설계" data-en="Design the combination">무엇을 조합할지 설계</p></div>
+      <div class="doctor-card" data-doctor="operator"><div class="doctor-role">Operator</div><h3 data-ko="운영자" data-en="Operator">운영자</h3><p data-ko="권한과 비용을 관리" data-en="Manage permissions and cost">권한과 비용을 관리</p></div>
+      <div class="doctor-card" data-doctor="learner"><div class="doctor-role">Learner</div><h3 data-ko="학습자" data-en="Learner">학습자</h3><p data-ko="이 조합이 왜 필요한지 이해" data-en="Understand why the combination matters">이 조합이 왜 필요한지 이해</p></div>
+    </div>
+
+    <div class="doctor-detail" data-doctor-detail="builder">
+      <strong data-ko="빌더 관점" data-en="Builder view">빌더 관점</strong>
+      <p data-ko="좋은 Marketplace는 기능 나열이 아니라, 사용자의 문제를 푸는 템플릿 세트를 설계하는 작업입니다." data-en="A good marketplace is not a feature inventory. It is a designed set of templates that solves user problems.">좋은 Marketplace는 기능 나열이 아니라, 사용자의 문제를 푸는 템플릿 세트를 설계하는 작업입니다.</p>
+    </div>
+    <div class="doctor-detail hidden-locale" data-doctor-detail="operator">
+      <strong data-ko="운영자 관점" data-en="Operator view">운영자 관점</strong>
+      <p data-ko="어떤 skill과 tool을 기본으로 열어둘지, 비용과 권한은 어디까지 허용할지 결정해야 합니다." data-en="The operator must decide which skills and tools are enabled by default, and how far permissions and cost should go.">어떤 skill과 tool을 기본으로 열어둘지, 비용과 권한은 어디까지 허용할지 결정해야 합니다.</p>
+    </div>
+    <div class="doctor-detail hidden-locale" data-doctor-detail="learner">
+      <strong data-ko="학습자 관점" data-en="Learner view">학습자 관점</strong>
+      <p data-ko="이 조합을 왜 써야 하는지 납득되지 않으면, 기능이 많아도 다시 열지 않습니다." data-en="If learners do not understand why a combination exists, they will not come back to it even if it is powerful.">이 조합을 왜 써야 하는지 납득되지 않으면, 기능이 많아도 다시 열지 않습니다.</p>
+    </div>
+  </div>
+
+  <div class="section" id="sec-roadmap">
+    <div class="sec-tag">Section E</div>
+    <h2 class="sec-h" data-ko="실습 순서 로드맵" data-en="Practice roadmap">실습 순서 로드맵</h2>
+    <p class="sec-sub" data-ko="기능을 많이 넣기 전에, 조합 원리를 익히는 쪽이 더 중요합니다." data-en="Before adding more features, it is more important to learn the combination logic.">기능을 많이 넣기 전에, 조합 원리를 익히는 쪽이 더 중요합니다.</p>
+
+    <div class="roadmap-card">
+      <label class="roadmap-row" data-roadmap="1"><input type="checkbox" /><div><strong data-ko="수동 프롬프트부터 만들기" data-en="Start with a manual prompt">수동 프롬프트부터 만들기</strong><p data-ko="먼저 사람 손으로도 쓸 수 있는 흐름을 만든다." data-en="First create a flow that works even manually.">먼저 사람 손으로도 쓸 수 있는 흐름을 만든다.</p></div></label>
+      <label class="roadmap-row" data-roadmap="2"><input type="checkbox" /><div><strong data-ko="Skill로 고정" data-en="Package it as a skill">Skill로 고정</strong><p data-ko="반복되는 설명 톤과 구조를 묶는다." data-en="Bundle repeated explanation style and structure.">반복되는 설명 톤과 구조를 묶는다.</p></div></label>
+      <label class="roadmap-row" data-roadmap="3"><input type="checkbox" /><div><strong data-ko="Tool 붙이기" data-en="Attach a tool">Tool 붙이기</strong><p data-ko="정말 필요한 실행 수단만 연결한다." data-en="Attach only the execution layer that is truly needed.">정말 필요한 실행 수단만 연결한다.</p></div></label>
+      <label class="roadmap-row" data-roadmap="4"><input type="checkbox" /><div><strong data-ko="Cowork 구성" data-en="Build cowork flow">Cowork 구성</strong><p data-ko="역할이 다를 때만 분업 구조로 확장한다." data-en="Expand to collaboration only when different roles are genuinely useful.">역할이 다를 때만 분업 구조로 확장한다.</p></div></label>
+    </div>
+  </div>
+
+  <div class="section" id="sec-site">
+    <div class="sec-tag">Section F</div>
+    <h2 class="sec-h" data-ko="교육 사이트 적용 예시" data-en="Applying it to an education site">교육 사이트 적용 예시</h2>
+    <p class="sec-sub" data-ko="CLOID.AI 같은 사이트에 붙이면 아래처럼 해석할 수 있습니다." data-en="For a site like CLOID.AI, the layers can be interpreted like this.">CLOID.AI 같은 사이트에 붙이면 아래처럼 해석할 수 있습니다.</p>
+
+    <div class="pipe-diagram">
+      <div class="pipe-node">
+        <strong>Prompt</strong>
+        <span data-ko="학습 질문 입력" data-en="Learning question input">학습 질문 입력</span>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node">
+        <strong>Skill</strong>
+        <span data-ko="초보자형 교재 설명 방식" data-en="Beginner-friendly textbook explanation mode">초보자형 교재 설명 방식</span>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node">
+        <strong>Tool</strong>
+        <span data-ko="문서 검색, 예제 파일, 코드 실행" data-en="Doc search, example files, code execution">문서 검색, 예제 파일, 코드 실행</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-quiz" data-quiz>
+    <div class="sec-tag">Section G</div>
+    <h2 class="sec-h" data-ko="퀴즈 / 자기점검" data-en="Quiz / self-check">퀴즈 / 자기점검</h2>
+    <p class="sec-sub" data-ko="핵심 역할 구분만 정확하면 절반은 잡은 것입니다." data-en="If you can separate the core roles correctly, you already understand the main idea.">핵심 역할 구분만 정확하면 절반은 잡은 것입니다.</p>
+    <div class="quiz-box" data-answer="b">
+      <h3 data-ko="1. Skill의 핵심 역할은?" data-en="1. What is the core role of a skill?">1. Skill의 핵심 역할은?</h3>
+      <label class="quiz-option"><input type="radio" name="p1" value="a" /> <span data-ko="결제 처리" data-en="Payment processing">결제 처리</span></label>
+      <label class="quiz-option"><input type="radio" name="p1" value="b" /> <span data-ko="반복 문맥과 사고 틀 재사용" data-en="Reusing repeated context and reasoning frames">반복 문맥과 사고 틀 재사용</span></label>
+      <label class="quiz-option"><input type="radio" name="p1" value="c" /> <span data-ko="무조건 외부 API 실행" data-en="Always executing external APIs">무조건 외부 API 실행</span></label>
+    </div>
+    <div class="quiz-box" data-answer="c" style="margin-top:12px;">
+      <h3 data-ko="2. Tool의 역할은?" data-en="2. What is the role of a tool?">2. Tool의 역할은?</h3>
+      <label class="quiz-option"><input type="radio" name="p2" value="a" /> <span data-ko="브랜드 슬로건 만들기" data-en="Creating a brand slogan">브랜드 슬로건 만들기</span></label>
+      <label class="quiz-option"><input type="radio" name="p2" value="b" /> <span data-ko="문맥만 저장" data-en="Only storing context">문맥만 저장</span></label>
+      <label class="quiz-option"><input type="radio" name="p2" value="c" /> <span data-ko="실제 외부 행동 실행" data-en="Executing real external actions">실제 외부 행동 실행</span></label>
+    </div>
+    <div class="memo-actions">
+      <button class="btn btn-primary" data-quiz-submit data-ko="채점하기" data-en="Check answers">채점하기</button>
+      <div class="quiz-result" data-quiz-result></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-glossary">
+    <div class="sec-tag">Section H</div>
+    <h2 class="sec-h" data-ko="용어사전" data-en="Glossary">용어사전</h2>
+    <p class="sec-sub" data-ko="필요할 때 빠르게 다시 보세요." data-en="Quickly revisit the terms when needed.">필요할 때 빠르게 다시 보세요.</p>
+    <div class="glossary-box">
+      <input class="glossary-search" data-glossary-search data-ko-placeholder="용어 검색" data-en-placeholder="Search terms" placeholder="용어 검색" />
+      <div class="glossary-item" data-glossary-item><strong>Skill</strong><p data-ko="반복 문맥과 규칙을 재사용 가능한 형태로 묶는 계층" data-en="A layer that packages repeated context and rules into reusable form">반복 문맥과 규칙을 재사용 가능한 형태로 묶는 계층</p></div>
+      <div class="glossary-item" data-glossary-item><strong>Plugin / Tool</strong><p data-ko="실제 외부 행동을 일으키는 실행 계층" data-en="The execution layer that performs real external actions">실제 외부 행동을 일으키는 실행 계층</p></div>
+      <div class="glossary-item" data-glossary-item><strong>Cowork</strong><p data-ko="역할이 다른 흐름을 협업 구조로 묶는 방식" data-en="A way of combining specialized roles into a collaboration structure">역할이 다른 흐름을 협업 구조로 묶는 방식</p></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-memo">
+    <div class="sec-tag">Section I</div>
+    <h2 class="sec-h" data-ko="복사용 메모 / 실행 체크리스트" data-en="Copy memo / action checklist">복사용 메모 / 실행 체크리스트</h2>
+    <p class="sec-sub" data-ko="우리 서비스의 첫 Skill은 어떤 문제를 해결해야 하는지 적어보세요." data-en="Write down what problem the first skill in your service should solve.">우리 서비스의 첫 Skill은 어떤 문제를 해결해야 하는지 적어보세요.</p>
+    <div class="memo-box">
+      <textarea data-memo data-ko-placeholder="예: 학습자가 실습 단계에서 막힐 때 다음 행동 하나만 제안하는 tutor skill" data-en-placeholder="Example: a tutor skill that suggests only the next action when a learner gets stuck in a lab" placeholder="예: 학습자가 실습 단계에서 막힐 때 다음 행동 하나만 제안하는 tutor skill"></textarea>
+      <div class="memo-actions">
+        <button class="btn btn-secondary" data-memo-save data-ko="저장" data-en="Save">저장</button>
+        <button class="btn btn-secondary" data-memo-copy data-ko="복사" data-en="Copy">복사</button>
+        <button class="btn btn-secondary" data-memo-reset data-ko="초기화" data-en="Reset">초기화</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note" data-ko="CLOID.AI interactive textbook · Marketplace patterns" data-en="CLOID.AI interactive textbook · Marketplace patterns">CLOID.AI interactive textbook · Marketplace patterns</div>
   <script src="/textbooks/common.js"></script>
 </body>
 </html>

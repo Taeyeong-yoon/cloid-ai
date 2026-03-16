@@ -1,85 +1,134 @@
 (function () {
-  const root = document.documentElement;
-  const storagePrefix = document.body.dataset.bookId || "textbook";
+  const body = document.body;
+  const bookId = body.dataset.bookId || "textbook";
+  const stateKey = `${bookId}:state`;
+  const sections = Array.from(document.querySelectorAll(".section"));
+  const navButtons = Array.from(document.querySelectorAll(".nav-btn[data-section]"));
+  const progressBar = document.getElementById("progressBarTop");
+  const localeButtons = Array.from(document.querySelectorAll(".lang-btn"));
+  let currentSection = "hero";
+  let locale = localStorage.getItem(`${bookId}:locale`) || "ko";
 
-  document.querySelectorAll("[data-scroll-target]").forEach((button) => {
+  function setProgress() {
+    if (!progressBar || sections.length === 0) return;
+    const index = Math.max(
+      0,
+      sections.findIndex((section) => section.id === `sec-${currentSection}`),
+    );
+    const ratio = Math.max(0.08, (index + 1) / sections.length);
+    progressBar.style.width = `${ratio * 100}%`;
+  }
+
+  function saveState(extra) {
+    const state = {
+      section: currentSection,
+      locale,
+      ...(extra || {}),
+    };
+    localStorage.setItem(stateKey, JSON.stringify(state));
+  }
+
+  function goSec(id) {
+    sections.forEach((section) => section.classList.toggle("active", section.id === `sec-${id}`));
+    navButtons.forEach((button) => button.classList.toggle("active", button.dataset.section === id));
+    currentSection = id;
+    setProgress();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    saveState();
+  }
+
+  window.goSec = goSec;
+
+  navButtons.forEach((button) => {
+    button.addEventListener("click", () => goSec(button.dataset.section));
+  });
+
+  document.querySelectorAll("[data-start-section]").forEach((button) => {
+    button.addEventListener("click", () => goSec(button.dataset.startSection));
+  });
+
+  document.querySelectorAll("[data-concept]").forEach((card) => {
+    card.addEventListener("click", () => {
+      const key = card.dataset.concept;
+      document.querySelectorAll("[data-concept]").forEach((node) => node.classList.toggle("selected", node === card));
+      document.querySelectorAll("[data-concept-detail]").forEach((detail) => {
+        detail.classList.toggle("hidden-locale", detail.dataset.conceptDetail !== key);
+      });
+    });
+  });
+
+  document.querySelectorAll("[data-doctor]").forEach((card) => {
+    card.addEventListener("click", () => {
+      const key = card.dataset.doctor;
+      document.querySelectorAll("[data-doctor]").forEach((node) => node.classList.toggle("selected", node === card));
+      document.querySelectorAll("[data-doctor-detail]").forEach((detail) => {
+        detail.classList.toggle("hidden-locale", detail.dataset.doctorDetail !== key);
+      });
+    });
+  });
+
+  document.querySelectorAll("[data-toggle]").forEach((button) => {
     button.addEventListener("click", () => {
-      const target = document.getElementById(button.dataset.scrollTarget || "");
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      const target = document.getElementById(button.dataset.toggle || "");
+      if (!target) return;
+      target.classList.toggle("open");
     });
   });
 
-  document.querySelectorAll("[data-compare-group]").forEach((group) => {
-    const buttons = group.querySelectorAll("[data-compare-tab]");
-    const panels = document.querySelectorAll(`[data-compare-panel="${group.dataset.compareGroup}"]`);
-
-    function activate(key) {
-      buttons.forEach((button) => button.classList.toggle("active", button.dataset.compareTab === key));
-      panels.forEach((panel) => panel.classList.toggle("active", panel.dataset.compareKey === key));
-    }
-
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => activate(button.dataset.compareTab));
-    });
-
-    if (buttons[0]) {
-      activate(buttons[0].dataset.compareTab);
-    }
-  });
-
-  document.querySelectorAll("[data-roadmap-item]").forEach((item) => {
-    const checkbox = item.querySelector('input[type="checkbox"]');
-    const key = `${storagePrefix}:roadmap:${item.dataset.roadmapItem}`;
+  document.querySelectorAll("[data-roadmap]").forEach((row) => {
+    const checkbox = row.querySelector('input[type="checkbox"]');
+    const key = `${bookId}:check:${row.dataset.roadmap}`;
     if (!checkbox) return;
-
     const saved = localStorage.getItem(key) === "1";
     checkbox.checked = saved;
-    item.classList.toggle("completed", saved);
-
+    row.classList.toggle("done", saved);
     checkbox.addEventListener("change", () => {
       localStorage.setItem(key, checkbox.checked ? "1" : "0");
-      item.classList.toggle("completed", checkbox.checked);
+      row.classList.toggle("done", checkbox.checked);
     });
   });
 
-  const memo = document.querySelector("[data-memo]");
-  const memoCopy = document.querySelector("[data-memo-copy]");
-  const memoSave = document.querySelector("[data-memo-save]");
-  const memoReset = document.querySelector("[data-memo-reset]");
-  const memoKey = `${storagePrefix}:memo`;
+  const quizRoot = document.querySelector("[data-quiz]");
+  if (quizRoot) {
+    const result = quizRoot.querySelector("[data-quiz-result]");
+    quizRoot.querySelector("[data-quiz-submit]")?.addEventListener("click", () => {
+      const items = quizRoot.querySelectorAll("[data-answer]");
+      let score = 0;
+      items.forEach((item) => {
+        const selected = item.querySelector('input[type="radio"]:checked');
+        if (selected && selected.value === item.dataset.answer) score += 1;
+      });
+      if (result) result.textContent = `${score} / ${items.length}`;
+    });
+  }
 
+  const memo = document.querySelector("[data-memo]");
+  const memoKey = `${bookId}:memo`;
   if (memo) {
     memo.value = localStorage.getItem(memoKey) || "";
-  }
-
-  if (memoSave && memo) {
-    memoSave.addEventListener("click", () => {
+    document.querySelector("[data-memo-save]")?.addEventListener("click", (event) => {
       localStorage.setItem(memoKey, memo.value);
-      memoSave.textContent = "Saved";
+      const button = event.currentTarget;
+      const original = button.textContent;
+      button.textContent = locale === "ko" ? "저장됨" : "Saved";
       setTimeout(() => {
-        memoSave.textContent = memoSave.dataset.label || "Save note";
-      }, 1200);
+        button.textContent = original;
+      }, 1000);
     });
-  }
-
-  if (memoCopy && memo) {
-    memoCopy.addEventListener("click", async () => {
+    document.querySelector("[data-memo-copy]")?.addEventListener("click", async (event) => {
+      const button = event.currentTarget;
+      const original = button.textContent;
       try {
         await navigator.clipboard.writeText(memo.value);
-        memoCopy.textContent = "Copied";
-        setTimeout(() => {
-          memoCopy.textContent = memoCopy.dataset.label || "Copy note";
-        }, 1200);
+        button.textContent = locale === "ko" ? "복사됨" : "Copied";
       } catch (_error) {
-        memoCopy.textContent = "Copy failed";
+        button.textContent = locale === "ko" ? "실패" : "Failed";
       }
+      setTimeout(() => {
+        button.textContent = original;
+      }, 1000);
     });
-  }
-
-  if (memoReset && memo) {
-    memoReset.addEventListener("click", () => {
+    document.querySelector("[data-memo-reset]")?.addEventListener("click", () => {
       memo.value = "";
       localStorage.removeItem(memoKey);
     });
@@ -90,52 +139,40 @@
     glossarySearch.addEventListener("input", (event) => {
       const query = event.target.value.trim().toLowerCase();
       document.querySelectorAll("[data-glossary-item]").forEach((item) => {
-        const content = item.textContent.toLowerCase();
-        item.hidden = query ? !content.includes(query) : false;
+        item.hidden = query ? !item.textContent.toLowerCase().includes(query) : false;
       });
     });
   }
 
-  const quizRoot = document.querySelector("[data-quiz]");
-  if (quizRoot) {
-    const submit = quizRoot.querySelector("[data-quiz-submit]");
-    const result = quizRoot.querySelector("[data-quiz-result]");
-    submit?.addEventListener("click", () => {
-      const items = quizRoot.querySelectorAll("[data-answer]");
-      let score = 0;
-      items.forEach((item) => {
-        const selected = item.querySelector('input[type="radio"]:checked');
-        const expected = item.dataset.answer;
-        if (selected && selected.value === expected) {
-          score += 1;
-        }
-      });
-      if (result) {
-        result.textContent = `${score} / ${items.length}`;
-      }
+  function applyLocale(nextLocale) {
+    locale = nextLocale;
+    document.querySelectorAll("[data-ko]").forEach((node) => {
+      node.innerHTML = locale === "ko" ? node.dataset.ko : node.dataset.en;
     });
+    document.querySelectorAll("[data-ko-placeholder]").forEach((node) => {
+      node.placeholder = locale === "ko" ? node.dataset.koPlaceholder : node.dataset.enPlaceholder;
+    });
+    localeButtons.forEach((button) => button.classList.toggle("active", button.dataset.locale === locale));
+    saveState();
   }
 
-  const progress = document.querySelector("[data-progress]");
-  if (progress) {
-    const sections = Array.from(document.querySelectorAll("[data-track-section]"));
-    const updateProgress = () => {
-      const viewportMiddle = window.scrollY + window.innerHeight * 0.35;
-      let current = 0;
-      sections.forEach((section, index) => {
-        if (section.offsetTop <= viewportMiddle) current = index + 1;
-      });
-      const ratio = sections.length ? Math.max(0.08, current / sections.length) : 0;
-      progress.style.width = `${ratio * 100}%`;
-    };
-    window.addEventListener("scroll", updateProgress, { passive: true });
-    updateProgress();
-  }
-
-  document.querySelectorAll("[data-theme-accent]").forEach((node) => {
-    const accent = node.getAttribute("data-theme-accent");
-    if (accent) {
-      root.style.setProperty("--theme-accent", accent);
-    }
+  localeButtons.forEach((button) => {
+    button.addEventListener("click", () => applyLocale(button.dataset.locale));
   });
+
+  try {
+    const savedState = JSON.parse(localStorage.getItem(stateKey) || "{}");
+    if (savedState.section) currentSection = savedState.section;
+    if (savedState.locale) locale = savedState.locale;
+  } catch (_error) {
+    currentSection = "hero";
+  }
+
+  applyLocale(locale);
+  goSec(currentSection);
+
+  const defaultConcept = document.querySelector("[data-concept]");
+  if (defaultConcept) defaultConcept.click();
+  const defaultDoctor = document.querySelector("[data-doctor]");
+  if (defaultDoctor) defaultDoctor.click();
 })();
