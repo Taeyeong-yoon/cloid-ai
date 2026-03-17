@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { BookOpen, Clock3, Filter, Sparkles } from "lucide-react";
@@ -21,17 +21,17 @@ export default function TextbookClient() {
   const heading = locale === "ko" ? "인터랙티브 교재" : "Interactive Textbooks";
   const subheading =
     locale === "ko"
-      ? "읽기만 하는 자료가 아니라, 개념 카드·비교 패널·퀴즈·메모·실습 흐름이 한 화면 안에서 이어지는 교재 시스템입니다."
+      ? "읽기만 하는 자료가 아니라, 개념 카드와 비교, 퀴즈, 메모, 실습 흐름이 한 화면에서 이어지는 교재 시스템입니다."
       : "A textbook system where concept cards, comparisons, quizzes, notes, and practice flow together in one guided screen.";
   const filterLabel = locale === "ko" ? "우선순위" : "Priority";
   const allLabel = locale === "ko" ? "전체" : "All";
   const openLabel = locale === "ko" ? "교재 열기" : "Open textbook";
   const soonLabel = locale === "ko" ? "준비 중" : "Coming soon";
-  const featuredTitle = locale === "ko" ? "바로 시작할 수 있는 대표 교재" : "Featured textbooks ready now";
+  const featuredTitle = locale === "ko" ? "지금 바로 볼 수 있는 핵심 교재" : "Featured textbooks ready now";
   const featuredSub =
     locale === "ko"
-      ? "지금 바로 눌러 볼 수 있는 2개의 인터랙티브 교재를 제일 위에 두었습니다."
-      : "The two live interactive textbooks are pinned at the very top for immediate access.";
+      ? "실행 가능한 인터랙티브 교재를 가장 위에 고정해서 바로 들어갈 수 있게 했습니다."
+      : "The live interactive textbooks are pinned at the top so learners can jump in immediately.";
   const sectionLabel = locale === "ko" ? "섹션" : "sections";
   const minuteLabel = locale === "ko" ? "분" : "min";
 
@@ -40,7 +40,7 @@ export default function TextbookClient() {
       <section className="rounded-[1.75rem] border border-slate-800/80 bg-[radial-gradient(circle_at_top,rgba(139,92,246,0.16),transparent_30%),linear-gradient(180deg,rgba(15,23,42,0.92),rgba(2,6,23,0.94))] p-6 sm:p-8">
         <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-violet-200">
           <Sparkles size={12} />
-          {locale === "ko" ? "AI Textbook System" : "AI Textbook System"}
+          AI Textbook System
         </div>
         <div className="max-w-3xl space-y-3">
           <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">{heading}</h1>

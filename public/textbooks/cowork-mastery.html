@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cowork Mastery</title>
+  <link rel="stylesheet" href="/textbooks/common.css" />
+</head>
+<body data-book-id="cowork-mastery">
+  <div id="progressBarTop"></div>
+
+  <nav id="topNav">
+    <span class="nav-logo">
+      <span class="nav-orb"></span>
+      <span data-ko="Cowork 학습실" data-en="Cowork Mastery">Cowork Mastery</span>
+    </span>
+    <button class="nav-btn active" data-section="hero" data-ko="홈" data-en="Home">Home</button>
+    <button class="nav-btn" data-section="model" data-ko="구조" data-en="Model">Model</button>
+    <button class="nav-btn" data-section="compare" data-ko="비교" data-en="Compare">Compare</button>
+    <button class="nav-btn" data-section="roles" data-ko="역할" data-en="Roles">Roles</button>
+    <button class="nav-btn" data-section="roadmap" data-ko="로드맵" data-en="Roadmap">Roadmap</button>
+    <button class="nav-btn" data-section="lab" data-ko="실습" data-en="Lab">Lab</button>
+    <button class="nav-btn" data-section="governance" data-ko="운영" data-en="Governance">Governance</button>
+    <button class="nav-btn" data-section="quiz" data-ko="퀴즈" data-en="Quiz">Quiz</button>
+    <button class="nav-btn" data-section="glossary" data-ko="용어사전" data-en="Glossary">Glossary</button>
+    <button class="nav-btn" data-section="memo" data-ko="메모" data-en="Memo">Memo</button>
+    <span class="nav-spacer"></span>
+    <button class="lang-btn" data-locale="ko">한글</button>
+    <button class="lang-btn active" data-locale="en">English</button>
+  </nav>
+
+  <div class="section active" id="sec-hero">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-title" data-ko="Cowork 실전 정복" data-en="Cowork Mastery">Cowork Mastery</div>
+        <p
+          class="hero-sub"
+          data-ko="Cowork는 단순히 여러 에이전트를 묶는 기능이 아니라, 역할 분담과 책임 경계를 설계하는 작업입니다. 이 교재는 skill, plugin, cowork 흐름을 실제 작업 조합 관점에서 정리합니다."
+          data-en="Cowork is not just multiple agents in one screen. It is a way to design role split, responsibility boundaries, and handoff logic. This textbook organizes cowork, skill, and plugin flow from a practical work-composition perspective."
+        >
+          Cowork is not just multiple agents in one screen. It is a way to design role split, responsibility boundaries, and handoff logic. This textbook organizes cowork, skill, and plugin flow from a practical work-composition perspective.
+        </p>
+        <div class="hero-btns">
+          <button class="btn btn-primary" data-start-section="model" data-ko="구조 보기" data-en="See the model">See the model</button>
+          <button class="btn btn-secondary" data-start-section="lab" data-ko="실습 보기" data-en="Open the lab">Open the lab</button>
+        </div>
+        <div class="diag-box">
+          <h3 data-ko="Cowork에서 흔한 오해" data-en="Common cowork mistakes">Common cowork mistakes</h3>
+          <div class="diag-item" data-ko="에이전트 수를 늘리면 자동으로 성능이 좋아진다고 믿기" data-en="Believing more agents automatically means better performance">Believing more agents automatically means better performance</div>
+          <div class="diag-item" data-ko="역할 경계 없이 모든 에이전트에게 같은 일을 맡기기" data-en="Giving every agent the same job without role boundaries">Giving every agent the same job without role boundaries</div>
+          <div class="diag-item" data-ko="handoff와 검수 단계를 생략한 채 바로 실행 흐름으로 가기" data-en="Skipping handoff and review stages and jumping straight to execution">Skipping handoff and review stages and jumping straight to execution</div>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-system">
+          <div class="hero-ring"></div>
+          <div class="hero-ring-2"></div>
+          <div class="hero-ring-3"></div>
+          <div class="hero-core"></div>
+          <div class="signal a"></div>
+          <div class="signal b"></div>
+          <div class="hero-side-note">
+            <div class="note-chip">
+              <strong data-ko="핵심 문장" data-en="Core sentence">Core sentence</strong>
+              <p data-ko="좋은 cowork는 ‘여럿이 일한다’가 아니라 ‘누가 무엇을 언제 넘길지 명확하다’입니다." data-en="Good cowork is not just many agents working. It is clarity about who does what, and when the baton gets passed.">Good cowork is not just many agents working. It is clarity about who does what, and when the baton gets passed.</p>
+            </div>
+            <div class="note-chip">
+              <strong data-ko="핵심 기준" data-en="Primary criteria">Primary criteria</strong>
+              <p data-ko="분업 이유, handoff 규칙, 검수 책임이 명확하지 않으면 cowork는 오히려 느려집니다." data-en="If the split reason, handoff rules, and review ownership are unclear, cowork usually makes the workflow slower.">If the split reason, handoff rules, and review ownership are unclear, cowork usually makes the workflow slower.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-model">
+    <div class="sec-tag">Section A</div>
+    <h2 class="sec-h" data-ko="Cowork 기본 구조" data-en="Cowork base model">Cowork base model</h2>
+    <p class="sec-sub" data-ko="Cowork를 설계할 때는 역할, handoff, 검수 3축으로 보면 가장 명확합니다." data-en="Cowork becomes easier to reason about when you model it through three axes: roles, handoff, and review.">Cowork becomes easier to reason about when you model it through three axes: roles, handoff, and review.</p>
+    <div class="card-grid card-grid-3">
+      <div class="card concept-card" data-concept="roles">
+        <div class="concept-icon">R</div>
+        <div class="concept-label" data-ko="역할 분리" data-en="Role split">Role split</div>
+        <div class="concept-brief" data-ko="누가 무엇을 맡는가" data-en="Who owns which job">Who owns which job</div>
+      </div>
+      <div class="card concept-card" data-concept="handoff">
+        <div class="concept-icon">H</div>
+        <div class="concept-label" data-ko="handoff" data-en="Handoff">Handoff</div>
+        <div class="concept-brief" data-ko="결과를 어떤 형식으로 넘기는가" data-en="How outputs are passed forward">How outputs are passed forward</div>
+      </div>
+      <div class="card concept-card" data-concept="review">
+        <div class="concept-icon">Q</div>
+        <div class="concept-label" data-ko="검수" data-en="Review">Review</div>
+        <div class="concept-brief" data-ko="누가 결과를 확인하고 승인하는가" data-en="Who validates and approves the work">Who validates and approves the work</div>
+      </div>
+    </div>
+
+    <div class="concept-detail" data-concept-detail="roles">
+      <strong data-ko="역할 분리" data-en="Role split">Role split</strong>
+      <p data-ko="research, drafting, editing, checking처럼 각 에이전트의 전문성과 책임을 나누는 단계입니다." data-en="This is where you split responsibility across specialists such as research, drafting, editing, or checking.">This is where you split responsibility across specialists such as research, drafting, editing, or checking.</p>
+    </div>
+    <div class="concept-detail hidden-locale" data-concept-detail="handoff">
+      <strong data-ko="handoff" data-en="Handoff">Handoff</strong>
+      <p data-ko="다음 역할에게 무엇을, 어떤 구조와 기준으로 넘길지 정의해야 cowork가 깨지지 않습니다." data-en="Cowork stays reliable only when the next role receives the right output in the right structure with the right criteria.">Cowork stays reliable only when the next role receives the right output in the right structure with the right criteria.</p>
+    </div>
+    <div class="concept-detail hidden-locale" data-concept-detail="review">
+      <strong data-ko="검수" data-en="Review">Review</strong>
+      <p data-ko="최종 출력 전 품질 기준을 누가 점검하는지 정하지 않으면, 분업은 빨라져도 품질은 흔들립니다." data-en="If nobody owns quality review before final output, the system may move faster while producing weaker results.">If nobody owns quality review before final output, the system may move faster while producing weaker results.</p>
+    </div>
+  </div>
+
+  <div class="section" id="sec-compare">
+    <div class="sec-tag">Section B</div>
+    <h2 class="sec-h" data-ko="단일 에이전트 vs Cowork" data-en="Single agent vs cowork">Single agent vs cowork</h2>
+    <p class="sec-sub" data-ko="언제 cowork가 필요하고, 언제 한 명으로 충분한지 구분하는 감각이 중요합니다." data-en="The key is knowing when cowork is needed and when a single agent is enough.">The key is knowing when cowork is needed and when a single agent is enough.</p>
+    <div class="compare-wrap">
+      <div class="compare-side good">
+        <h3 data-ko="단일 에이전트가 유리한 경우" data-en="When one agent is better">When one agent is better</h3>
+        <ul>
+          <li data-ko="작업이 짧고 결과물이 단일 문서일 때" data-en="When the task is short and ends as one document">When the task is short and ends as one document</li>
+          <li data-ko="역할 간 handoff가 오히려 비용일 때" data-en="When handoff overhead is more expensive than the work itself">When handoff overhead is more expensive than the work itself</li>
+          <li data-ko="검수 단계가 단순할 때" data-en="When review is simple">When review is simple</li>
+        </ul>
+      </div>
+      <div class="compare-side bad">
+        <h3 data-ko="Cowork가 필요한 경우" data-en="When cowork is better">When cowork is better</h3>
+        <ul>
+          <li data-ko="조사, 작성, 검수의 성격이 분명히 다를 때" data-en="When research, drafting, and review are clearly different kinds of work">When research, drafting, and review are clearly different kinds of work</li>
+          <li data-ko="중간 산출물을 기준형식으로 넘겨야 할 때" data-en="When intermediate outputs need structured handoff">When intermediate outputs need structured handoff</li>
+          <li data-ko="품질 기준이 다층적일 때" data-en="When quality criteria have multiple layers">When quality criteria have multiple layers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-roles">
+    <div class="sec-tag">Section C</div>
+    <h2 class="sec-h" data-ko="세 역할 패널" data-en="Three-role panel">Three-role panel</h2>
+    <p class="sec-sub" data-ko="교재형 협업 구조에서는 아래 세 역할이 가장 자주 나옵니다." data-en="For textbook-style collaboration, these three roles appear most often.">For textbook-style collaboration, these three roles appear most often.</p>
+    <div class="doctor-grid">
+      <div class="doctor-card" data-doctor="research"><div class="doctor-role">Research</div><h3 data-ko="리서처" data-en="Researcher">Researcher</h3><p data-ko="자료와 사례를 수집" data-en="Collects sources and cases">Collects sources and cases</p></div>
+      <div class="doctor-card" data-doctor="builder"><div class="doctor-role">Builder</div><h3 data-ko="빌더" data-en="Builder">Builder</h3><p data-ko="교재 구조와 흐름을 설계" data-en="Designs the textbook structure and flow">Designs the textbook structure and flow</p></div>
+      <div class="doctor-card" data-doctor="reviewer"><div class="doctor-role">Review</div><h3 data-ko="리뷰어" data-en="Reviewer">Reviewer</h3><p data-ko="설명 품질과 정확도를 점검" data-en="Checks quality and accuracy">Checks quality and accuracy</p></div>
+    </div>
+
+    <div class="doctor-detail" data-doctor-detail="research">
+      <strong data-ko="리서처 역할" data-en="Researcher role">Researcher role</strong>
+      <p data-ko="조사 역할은 raw material을 모으는 데 집중합니다. 설명까지 다 하려 들면 cowork의 장점이 흐려집니다." data-en="The research role should focus on collecting raw material. If it also tries to do the explanation work, the value of cowork gets blurred.">The research role should focus on collecting raw material. If it also tries to do the explanation work, the value of cowork gets blurred.</p>
+    </div>
+    <div class="doctor-detail hidden-locale" data-doctor-detail="builder">
+      <strong data-ko="빌더 역할" data-en="Builder role">Builder role</strong>
+      <p data-ko="빌더는 자료를 학습 순서와 인터랙션 구조로 바꿉니다. 즉, 정보가 아니라 흐름을 설계합니다." data-en="The builder turns collected material into learning order and interaction structure. It designs flow, not just content.">The builder turns collected material into learning order and interaction structure. It designs flow, not just content.</p>
+    </div>
+    <div class="doctor-detail hidden-locale" data-doctor-detail="reviewer">
+      <strong data-ko="리뷰어 역할" data-en="Reviewer role">Reviewer role</strong>
+      <p data-ko="리뷰어는 정확성, 난이도, 표현 품질을 마지막에 점검합니다. 이 단계가 빠지면 cowork 결과물은 쉽게 분산됩니다." data-en="The reviewer checks accuracy, difficulty level, and communication quality at the end. Without this role, cowork output tends to drift.">The reviewer checks accuracy, difficulty level, and communication quality at the end. Without this role, cowork output tends to drift.</p>
+    </div>
+  </div>
+
+  <div class="section" id="sec-roadmap">
+    <div class="sec-tag">Section D</div>
+    <h2 class="sec-h" data-ko="Cowork 설계 로드맵" data-en="Cowork design roadmap">Cowork design roadmap</h2>
+    <p class="sec-sub" data-ko="분업은 나누는 것이 아니라 연결하는 일입니다. 아래 순서가 안전합니다." data-en="Cowork is not only about splitting work. It is about connecting it well. This sequence is the safest start.">Cowork is not only about splitting work. It is about connecting it well. This sequence is the safest start.</p>
+    <div class="roadmap-card">
+      <label class="roadmap-row" data-roadmap="1"><input type="checkbox" /><div><strong data-ko="최종 산출물부터 정하기" data-en="Define the final output first">Define the final output first</strong><p data-ko="무엇을 만들어야 하는지 먼저 선명해야 역할을 나눌 수 있습니다." data-en="Role splitting becomes easier only when the final output is clear.">Role splitting becomes easier only when the final output is clear.</p></div></label>
+      <label class="roadmap-row" data-roadmap="2"><input type="checkbox" /><div><strong data-ko="중간 handoff 형식 정하기" data-en="Define handoff format">Define handoff format</strong><p data-ko="각 역할이 다음 역할에게 어떤 구조로 넘길지 먼저 정합니다." data-en="Define how each role passes its work to the next one.">Define how each role passes its work to the next one.</p></div></label>
+      <label class="roadmap-row" data-roadmap="3"><input type="checkbox" /><div><strong data-ko="검수 기준 만들기" data-en="Create review criteria">Create review criteria</strong><p data-ko="속도보다 품질을 붙잡아 주는 기준이 필요합니다." data-en="You need review criteria that protect quality, not just speed.">You need review criteria that protect quality, not just speed.</p></div></label>
+      <label class="roadmap-row" data-roadmap="4"><input type="checkbox" /><div><strong data-ko="작은 시나리오부터 운영" data-en="Start with a small scenario">Start with a small scenario</strong><p data-ko="처음부터 대규모 협업을 만들지 말고 작은 흐름으로 검증합니다." data-en="Do not start with a giant collaboration. Validate it with a small scenario first.">Do not start with a giant collaboration. Validate it with a small scenario first.</p></div></label>
+    </div>
+  </div>
+
+  <div class="section" id="sec-lab">
+    <div class="sec-tag">Section E</div>
+    <h2 class="sec-h" data-ko="첫 실습: 교재 제작용 Cowork" data-en="First lab: cowork for textbook production">First lab: cowork for textbook production</h2>
+    <p class="sec-sub" data-ko="아래처럼 세 역할로 나누면 교재 제작 흐름을 바로 체감할 수 있습니다." data-en="A three-role split like the one below lets you feel cowork immediately in textbook production.">A three-role split like the one below lets you feel cowork immediately in textbook production.</p>
+    <div class="card">
+      <ol>
+        <li data-ko="Researcher가 자료, 사례, 핵심 포인트를 모은다." data-en="The researcher collects source material, cases, and core points.">The researcher collects source material, cases, and core points.</li>
+        <li data-ko="Builder가 이를 섹션 구조, 퀴즈, 메모 흐름으로 바꾼다." data-en="The builder turns them into section structure, quiz flow, and memo flow.">The builder turns them into section structure, quiz flow, and memo flow.</li>
+        <li data-ko="Reviewer가 난이도와 설명 품질을 점검한다." data-en="The reviewer checks difficulty level and explanation quality.">The reviewer checks difficulty level and explanation quality.</li>
+        <li data-ko="최종적으로 하나의 교재 HTML로 묶는다." data-en="Finally, combine the work into one textbook HTML.">Finally, combine the work into one textbook HTML.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="section" id="sec-governance">
+    <div class="sec-tag">Section F</div>
+    <h2 class="sec-h" data-ko="운영과 통제" data-en="Governance and control">Governance and control</h2>
+    <p class="sec-sub" data-ko="Cowork는 기능보다 통제가 중요합니다." data-en="Cowork is governed more by control than by raw feature count.">Cowork is governed more by control than by raw feature count.</p>
+    <div class="compare-wrap">
+      <div class="card">
+        <h3 data-ko="반드시 명시할 것" data-en="Must be explicit">Must be explicit</h3>
+        <ul>
+          <li data-ko="각 역할의 입력과 출력" data-en="Input and output of each role">Input and output of each role</li>
+          <li data-ko="handoff 시점" data-en="Handoff timing">Handoff timing</li>
+          <li data-ko="최종 검수 책임" data-en="Final review ownership">Final review ownership</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 data-ko="피해야 할 것" data-en="What to avoid">What to avoid</h3>
+        <ul>
+          <li data-ko="모든 역할의 책임 중첩" data-en="Overlapping responsibility across all roles">Overlapping responsibility across all roles</li>
+          <li data-ko="검수 없는 자동 직행" data-en="Direct auto-execution without review">Direct auto-execution without review</li>
+          <li data-ko="분업 이유가 없는 다중 에이전트" data-en="Multi-agent design without a clear split reason">Multi-agent design without a clear split reason</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-quiz" data-quiz>
+    <div class="sec-tag">Section G</div>
+    <h2 class="sec-h" data-ko="퀴즈 / 자기점검" data-en="Quiz / self-check">Quiz / self-check</h2>
+    <p class="sec-sub" data-ko="Cowork의 핵심은 역할 수가 아니라 handoff 품질입니다." data-en="The core of cowork is not the number of agents, but the quality of the handoff.">The core of cowork is not the number of agents, but the quality of the handoff.</p>
+    <div class="quiz-box" data-answer="c">
+      <h3 data-ko="1. 좋은 cowork의 핵심은?" data-en="1. What is the core of good cowork?">1. What is the core of good cowork?</h3>
+      <label class="quiz-option"><input type="radio" name="c1" value="a" /> <span data-ko="에이전트 수를 많이 늘리는 것" data-en="Increasing the number of agents">Increasing the number of agents</span></label>
+      <label class="quiz-option"><input type="radio" name="c1" value="b" /> <span data-ko="기능 이름을 많이 붙이는 것" data-en="Adding many feature labels">Adding many feature labels</span></label>
+      <label class="quiz-option"><input type="radio" name="c1" value="c" /> <span data-ko="역할 경계와 handoff 구조를 명확히 하는 것" data-en="Clarifying role boundaries and handoff structure">Clarifying role boundaries and handoff structure</span></label>
+    </div>
+    <div class="quiz-box" data-answer="a" style="margin-top:12px;">
+      <h3 data-ko="2. 가장 안전한 시작 방식은?" data-en="2. What is the safest way to start?">2. What is the safest way to start?</h3>
+      <label class="quiz-option"><input type="radio" name="c2" value="a" /> <span data-ko="작은 시나리오와 작은 분업으로 검증" data-en="Validate with a small scenario and small role split">Validate with a small scenario and small role split</span></label>
+      <label class="quiz-option"><input type="radio" name="c2" value="b" /> <span data-ko="처음부터 다섯 역할 이상으로 확장" data-en="Expand to five or more roles immediately">Expand to five or more roles immediately</span></label>
+      <label class="quiz-option"><input type="radio" name="c2" value="c" /> <span data-ko="검수 단계 없이 바로 출력" data-en="Skip review and jump directly to output">Skip review and jump directly to output</span></label>
+    </div>
+    <div class="memo-actions">
+      <button class="btn btn-primary" data-quiz-submit data-ko="채점하기" data-en="Check answers">Check answers</button>
+      <div class="quiz-result" data-quiz-result></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-glossary">
+    <div class="sec-tag">Section H</div>
+    <h2 class="sec-h" data-ko="용어사전" data-en="Glossary">Glossary</h2>
+    <p class="sec-sub" data-ko="Cowork를 설명할 때 자주 쓰는 용어를 정리했습니다." data-en="Here are the most common terms used when designing cowork systems.">Here are the most common terms used when designing cowork systems.</p>
+    <div class="glossary-box">
+      <input class="glossary-search" data-glossary-search data-ko-placeholder="용어 검색" data-en-placeholder="Search terms" placeholder="Search terms" />
+      <div class="glossary-item" data-glossary-item><strong>Role split</strong><p data-ko="작업을 전문 역할 단위로 나누는 것" data-en="Splitting work into specialized roles">Splitting work into specialized roles</p></div>
+      <div class="glossary-item" data-glossary-item><strong>Handoff</strong><p data-ko="한 역할의 결과를 다음 역할에게 넘기는 규칙" data-en="The rule for passing output from one role to the next">The rule for passing output from one role to the next</p></div>
+      <div class="glossary-item" data-glossary-item><strong>Review gate</strong><p data-ko="최종 출력 전 검수 책임이 작동하는 지점" data-en="The checkpoint where review ownership is applied before final output">The checkpoint where review ownership is applied before final output</p></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-memo">
+    <div class="sec-tag">Section I</div>
+    <h2 class="sec-h" data-ko="메모 / 설계 초안" data-en="Memo / design draft">Memo / design draft</h2>
+    <p class="sec-sub" data-ko="내가 만들 cowork 흐름의 역할, handoff, review 기준을 써보세요." data-en="Write down the roles, handoff rules, and review criteria for the cowork flow you want to build.">Write down the roles, handoff rules, and review criteria for the cowork flow you want to build.</p>
+    <div class="memo-box">
+      <textarea data-memo data-ko-placeholder="예: Researcher → Builder → Reviewer 구조, 각 단계 handoff는 markdown outline으로 고정" data-en-placeholder="Example: Researcher → Builder → Reviewer, with handoff fixed as markdown outline" placeholder="Example: Researcher → Builder → Reviewer, with handoff fixed as markdown outline"></textarea>
+      <div class="memo-actions">
+        <button class="btn btn-secondary" data-memo-save data-ko="저장" data-en="Save">Save</button>
+        <button class="btn btn-secondary" data-memo-copy data-ko="복사" data-en="Copy">Copy</button>
+        <button class="btn btn-secondary" data-memo-reset data-ko="초기화" data-en="Reset">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note" data-ko="CLOID.AI interactive textbook · Cowork design and role orchestration" data-en="CLOID.AI interactive textbook · Cowork design and role orchestration">CLOID.AI interactive textbook · Cowork design and role orchestration</div>
+  <script src="/textbooks/common.js"></script>
+</body>
+</html>
