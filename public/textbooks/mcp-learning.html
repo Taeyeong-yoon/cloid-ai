@@ -1042,43 +1042,7 @@ function init() {
 }
 init();
 </script>
-<script>
-(function () {
-  const lang = new URLSearchParams(window.location.search).get("lang") || "en";
-  const target = lang === "ko" ? "ko" : "en";
-  function setCookie(value) {
-    document.cookie = `googtrans=/ko/${value};path=/`;
-    document.cookie = `googtrans=/ko/${value};path=/;domain=${location.hostname}`;
-  }
-  if (target === "ko") {
-    setCookie("ko");
-    return;
-  }
-  setCookie("en");
-  const holder = document.createElement("div");
-  holder.id = "google_translate_element";
-  holder.style.display = "none";
-  document.body.appendChild(holder);
-  window.googleTranslateElementInit = function () {
-    new google.translate.TranslateElement({ pageLanguage: "ko", includedLanguages: "en,ko", autoDisplay: false }, "google_translate_element");
-    let tries = 0;
-    const timer = setInterval(() => {
-      const combo = document.querySelector(".goog-te-combo");
-      if (combo) {
-        combo.value = "en";
-        combo.dispatchEvent(new Event("change"));
-        clearInterval(timer);
-      }
-      tries += 1;
-      if (tries > 40) clearInterval(timer);
-    }, 250);
-  };
-  const script = document.createElement("script");
-  script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-  script.async = true;
-  document.head.appendChild(script);
-})();
-</script>
 </body>
 </html>
+
 
