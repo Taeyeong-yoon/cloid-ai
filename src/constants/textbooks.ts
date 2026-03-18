@@ -15,10 +15,12 @@
     | "emerald"
     | "indigo"
     | "rose"
-    | "fuchsia"
-    | "orange"
-    | "cyan";
+  | "fuchsia"
+  | "orange"
+  | "cyan";
   htmlFile?: string;
+  htmlFileEn?: string;
+  htmlFileKo?: string;
   sections: number;
   estimatedMinutes: number;
   tags: string[];
@@ -51,6 +53,8 @@ export const TEXTBOOKS: Textbook[] = [
     icon: "prompt",
     accentColor: "violet",
     htmlFile: "prompt-engineering.html",
+    htmlFileEn: "prompt-engineering-en.html",
+    htmlFileKo: "prompt-engineering.html",
     sections: 10,
     estimatedMinutes: 40,
     tags: ["Prompt", "Few-shot", "Output"],
@@ -66,6 +70,8 @@ export const TEXTBOOKS: Textbook[] = [
     icon: "terminal",
     accentColor: "teal",
     htmlFile: "claude-code-intro.html",
+    htmlFileEn: "claude-code-intro-en.html",
+    htmlFileKo: "claude-code-intro.html",
     sections: 10,
     estimatedMinutes: 35,
     tags: ["Claude Code", "CLI", "Automation"],
@@ -180,6 +186,8 @@ export const TEXTBOOKS: Textbook[] = [
     icon: "mcp",
     accentColor: "cyan",
     htmlFile: "mcp-learning.html",
+    htmlFileEn: "mcp-learning-en.html",
+    htmlFileKo: "mcp-learning.html",
     sections: 11,
     estimatedMinutes: 45,
     tags: ["MCP", "Protocol", "Connector"],
@@ -195,6 +203,8 @@ export const TEXTBOOKS: Textbook[] = [
     icon: "marketplace",
     accentColor: "amber",
     htmlFile: "marketplace-learning.html",
+    htmlFileEn: "marketplace-learning-en.html",
+    htmlFileKo: "marketplace-learning.html",
     sections: 10,
     estimatedMinutes: 50,
     tags: ["Marketplace", "Skill", "Plugin", "Cowork"],

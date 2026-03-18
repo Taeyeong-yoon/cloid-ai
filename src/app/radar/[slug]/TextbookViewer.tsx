@@ -10,8 +10,16 @@ import { useTranslation } from "@/lib/i18n/LanguageContext";
 export default function TextbookViewer({ textbook }: { textbook: Textbook }) {
   const { locale } = useTranslation();
   const [fullscreen, setFullscreen] = useState(true);
+  const [contentLocale, setContentLocale] = useState<"en" | "ko">("en");
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const contentSrc = useMemo(() => `/textbooks/${textbook.htmlFile}`, [textbook.htmlFile]);
+  const contentSrc = useMemo(() => {
+    const file =
+      contentLocale === "ko"
+        ? textbook.htmlFileKo || textbook.htmlFile
+        : textbook.htmlFileEn || textbook.htmlFile;
+
+    return file ? `/textbooks/${file}` : "";
+  }, [contentLocale, textbook.htmlFile, textbook.htmlFileEn, textbook.htmlFileKo]);
 
   const listLabel = locale === "ko" ? "교재 목록" : "Textbook list";
   const fullscreenLabel = locale === "ko" ? "전체 화면" : "Fullscreen";
@@ -51,16 +59,37 @@ export default function TextbookViewer({ textbook }: { textbook: Textbook }) {
               <h1 className="truncate text-sm font-semibold text-white sm:text-base">{title}</h1>
             </div>
           </div>
-          <button
-            onClick={() => setFullscreen((value) => !value)}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-700 bg-slate-900/80 text-slate-300 transition-colors hover:text-white"
-            title={fullscreen ? exitFullscreenLabel : fullscreenLabel}
-            aria-label={fullscreen ? exitFullscreenLabel : fullscreenLabel}
-          >
-            {fullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
-          </button>
+          <div className="flex items-center gap-2">
+            <div className="inline-flex rounded-lg border border-slate-700 bg-slate-900/80 p-1">
+              <button
+                onClick={() => setContentLocale("en")}
+                className={`rounded-md px-3 py-1.5 text-xs font-medium transition-colors ${
+                  contentLocale === "en" ? "bg-violet-500 text-white" : "text-slate-300 hover:text-white"
+                }`}
+              >
+                English
+              </button>
+              <button
+                onClick={() => setContentLocale("ko")}
+                className={`rounded-md px-3 py-1.5 text-xs font-medium transition-colors ${
+                  contentLocale === "ko" ? "bg-violet-500 text-white" : "text-slate-300 hover:text-white"
+                }`}
+              >
+                한글
+              </button>
+            </div>
+            <button
+              onClick={() => setFullscreen((value) => !value)}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-700 bg-slate-900/80 text-slate-300 transition-colors hover:text-white"
+              title={fullscreen ? exitFullscreenLabel : fullscreenLabel}
+              aria-label={fullscreen ? exitFullscreenLabel : fullscreenLabel}
+            >
+              {fullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+            </button>
+          </div>
         </div>
         <iframe
+          key={contentSrc}
           ref={iframeRef}
           src={contentSrc}
           title={title}
