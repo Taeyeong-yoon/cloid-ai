@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude Code ?낅Ц ?숈뒿??</title>
+<title>Claude Code 입문 학습실</title>
 <style>
 :root {
   --bg: #0e1117;
@@ -68,7 +68,7 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 .diag-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:28px;}
 .diag-box h3{font-size:1rem;color:var(--accent4);margin-bottom:12px;}
 .diag-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;color:var(--text2);font-size:0.9rem;}
-.diag-item::before{content:'??;flex-shrink:0;}
+.diag-item::before{content:'⚡';flex-shrink:0;}
 
 .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:var(--transition);}
 .card:hover{border-color:rgba(88,166,255,0.3);box-shadow:var(--shadow-sm);}
@@ -123,7 +123,7 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 .dr-panel h4{margin:14px 0 8px;font-size:0.92rem;}
 .dr-list{list-style:none;padding:0;}
 .dr-list li{padding:6px 0;font-size:0.88rem;color:var(--text2);display:flex;gap:8px;align-items:flex-start;}
-.dr-list li::before{content:'??;color:var(--accent);flex-shrink:0;}
+.dr-list li::before{content:'→';color:var(--accent);flex-shrink:0;}
 .dr-next{margin-top:16px;padding:12px;background:var(--bg3);border-radius:var(--radius-sm);font-size:0.85rem;color:var(--text2);}
 
 .roadmap{position:relative;padding-left:28px;margin:20px 0;}
@@ -213,45 +213,45 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 <div id="progressBarTop" style="width:0%"></div>
 <nav id="topNav">
   <span class="nav-logo">$ claude</span>
-  <button class="nav-btn active" onclick="goSec('hero')">??</button>
-  <button class="nav-btn" onclick="goSec('what')">?뺤껜</button>
-  <button class="nav-btn" onclick="goSec('compare')">鍮꾧탳??</button>
-  <button class="nav-btn" onclick="goSec('scenario')">?쒕굹由ъ삤</button>
-  <button class="nav-btn" onclick="goSec('vibe')">諛붿씠釉뚯퐫??</button>
-  <button class="nav-btn" onclick="goSec('features')">?듭떖湲곕뒫</button>
-  <button class="nav-btn" onclick="goSec('slash')">?щ옒?쒕챸??</button>
+  <button class="nav-btn active" onclick="goSec('hero')">홈</button>
+  <button class="nav-btn" onclick="goSec('what')">정체</button>
+  <button class="nav-btn" onclick="goSec('compare')">비교표</button>
+  <button class="nav-btn" onclick="goSec('scenario')">시나리오</button>
+  <button class="nav-btn" onclick="goSec('vibe')">바이브코딩</button>
+  <button class="nav-btn" onclick="goSec('features')">핵심기능</button>
+  <button class="nav-btn" onclick="goSec('slash')">슬래시명령</button>
   <button class="nav-btn" onclick="goSec('claudemd')">CLAUDE.md</button>
-  <button class="nav-btn" onclick="goSec('doctors')">5諛뺤궗</button>
-  <button class="nav-btn" onclick="goSec('roadmap')">濡쒕뱶留?</button>
-  <button class="nav-btn" onclick="goSec('lab')">泥レ떎??</button>
-  <button class="nav-btn" onclick="goSec('quiz')">?댁쫰</button>
-  <button class="nav-btn" onclick="goSec('glossary')">?⑹뼱</button>
-  <button class="nav-btn" onclick="goSec('memo')">硫붾え</button>
+  <button class="nav-btn" onclick="goSec('doctors')">5박사</button>
+  <button class="nav-btn" onclick="goSec('roadmap')">로드맵</button>
+  <button class="nav-btn" onclick="goSec('lab')">첫실습</button>
+  <button class="nav-btn" onclick="goSec('quiz')">퀴즈</button>
+  <button class="nav-btn" onclick="goSec('glossary')">용어</button>
+  <button class="nav-btn" onclick="goSec('memo')">메모</button>
 </nav>
 
 <!-- HERO -->
 <div class="section active" id="sec-hero">
   <div style="padding-top:20px;">
-    <div class="hero-title">Claude Code ?낅Ц ?숈뒿??</div>
-    <p class="hero-sub">Chat/Cowork/Claude Code 李⑥씠, 諛붿씠釉?肄붾뵫, ?щ옒??紐낅졊, CLAUDE.md源뚯?.<br>5紐낆쓽 諛뺤궗 ?먯씠?꾪듃媛 ?④퍡 媛瑜댁퀜 ?쒕┰?덈떎.</p>
+    <div class="hero-title">Claude Code 입문 학습실</div>
+    <p class="hero-sub">Chat/Cowork/Claude Code 차이, 바이브 코딩, 슬래시 명령, CLAUDE.md까지.<br>5명의 박사 에이전트가 함께 가르쳐 드립니다.</p>
     <div class="hero-btns">
-      <button class="btn btn-primary" onclick="goSec('what')">諛붾줈 ?쒖옉?섍린</button>
-      <button class="btn btn-secondary" onclick="goSec('doctors')">5紐?諛뺤궗?먭쾶 諛곗슦湲?</button>
-      <button class="btn btn-secondary" onclick="goSec('vibe')">諛붿씠釉뚯퐫?⑸???蹂닿린</button>
+      <button class="btn btn-primary" onclick="goSec('what')">바로 시작하기</button>
+      <button class="btn btn-secondary" onclick="goSec('doctors')">5명 박사에게 배우기</button>
+      <button class="btn btn-secondary" onclick="goSec('vibe')">바이브코딩부터 보기</button>
     </div>
     <div class="progress-summary">
-      <span class="progress-text" id="progressLabel">?숈뒿 吏꾪뻾瑜?0%</span>
+      <span class="progress-text" id="progressLabel">학습 진행률 0%</span>
       <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
     </div>
     <div class="diag-box">
-      <h3>?뱀떆 ?대윴 ?곹깭?멸???</h3>
-      <div class="diag-item">Claude Code媛 萸붿? 紐⑤Ⅸ??</div>
-      <div class="diag-item">Chat怨?Claude Code??李⑥씠瑜?紐⑤Ⅸ??</div>
-      <div class="diag-item">?곕??먯씠 萸붿????꾨뒗??Claude Code媛 ?대뼸寃??묐룞?섎뒗吏 紐⑤Ⅸ??</div>
-      <div class="diag-item">"諛붿씠釉?肄붾뵫"???대낫怨??띕떎</div>
-      <div class="diag-item">?ㅽ궗/?뚮윭洹몄씤/?쒕툕?먯씠?꾪듃媛 沅곴툑?섎떎</div>
+      <h3>혹시 이런 상태인가요?</h3>
+      <div class="diag-item">Claude Code가 뭔지 모른다</div>
+      <div class="diag-item">Chat과 Claude Code의 차이를 모른다</div>
+      <div class="diag-item">터미널이 뭔지는 아는데 Claude Code가 어떻게 작동하는지 모른다</div>
+      <div class="diag-item">"바이브 코딩"을 해보고 싶다</div>
+      <div class="diag-item">스킬/플러그인/서브에이전트가 궁금하다</div>
       <div style="margin-top:16px;padding:14px;background:rgba(88,166,255,0.06);border-radius:var(--radius-sm);border-left:3px solid var(--accent);">
-        <p style="font-size:0.88rem;color:var(--text2);">?섎굹?쇰룄 ?대떦?섎㈃ ???숈뒿?ㅼ씠 ?꾩????⑸땲?? ?뺤껜(A)遺???쒖꽌?濡??곕씪媛?몄슂.</p>
+        <p style="font-size:0.88rem;color:var(--text2);">하나라도 해당되면 이 학습실이 도움이 됩니다. 정체(A)부터 순서대로 따라가세요.</p>
       </div>
     </div>
   </div>
@@ -259,278 +259,278 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 
 <!-- WHAT IS -->
 <div class="section" id="sec-what">
-  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--dr1);">?뵶 Dr. Identity</div>
-  <h2 class="sec-h">Claude Code? 臾댁뾿?멸??</h2>
-  <p class="sec-sub">?곕??먯뿉???묐룞?섎뒗 AI 肄붾뵫 ?먯씠?꾪듃. 媛숈? Claude?몃뜲 ?섍꼍怨?沅뚰븳???ㅻ쫭?덈떎.</p>
+  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--dr1);">🔴 Dr. Identity</div>
+  <h2 class="sec-h">Claude Code란 무엇인가?</h2>
+  <p class="sec-sub">터미널에서 작동하는 AI 코딩 에이전트. 같은 Claude인데 환경과 권한이 다릅니다.</p>
   <div class="card-grid card-grid-3" id="whatGrid"></div>
   <div class="concept-detail" id="whatDetail"></div>
-  <div class="highlight-box">?뵎 Chat? ??? Cowork? ?꾩엫, Code???묒뾽?대떎</div>
+  <div class="highlight-box">🔑 Chat은 대화, Cowork은 위임, Code는 협업이다</div>
 </div>
 
 <!-- COMPARE TABLE -->
 <div class="section" id="sec-compare">
-  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--dr2);">?윟 Dr. Environment</div>
+  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--dr2);">🟢 Dr. Environment</div>
   <h2 class="sec-h">Chat vs Cowork vs Claude Code</h2>
-  <p class="sec-sub">??媛吏 紐⑤뱶???듭떖 李⑥씠瑜??쒕늿??鍮꾧탳?섏꽭??</p>
+  <p class="sec-sub">세 가지 모드의 핵심 차이를 한눈에 비교하세요.</p>
   <div style="overflow-x:auto;" id="compareTableWrap"></div>
 </div>
 
 <!-- SCENARIOS -->
 <div class="section" id="sec-scenario">
-  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--dr2);">?윟 Dr. Environment</div>
-  <h2 class="sec-h">媛숈? ?붿껌, ?ㅻⅨ 寃곌낵</h2>
-  <p class="sec-sub">4媛吏 ?쒕굹由ъ삤?먯꽌 Chat/Cowork/Claude Code媛 ?대뼸寃??ㅻⅤ寃??숈옉?섎뒗吏 鍮꾧탳?⑸땲??</p>
+  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--dr2);">🟢 Dr. Environment</div>
+  <h2 class="sec-h">같은 요청, 다른 결과</h2>
+  <p class="sec-sub">4가지 시나리오에서 Chat/Cowork/Claude Code가 어떻게 다르게 동작하는지 비교합니다.</p>
   <div class="tabs" id="scTabs"></div>
   <div id="scContent"></div>
 </div>
 
 <!-- VIBE CODING -->
 <div class="section" id="sec-vibe">
-  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--dr3);">?윞 Dr. Vibe</div>
-  <h2 class="sec-h">鍮꾧컻諛쒖옄瑜??꾪븳 諛붿씠釉?肄붾뵫</h2>
-  <p class="sec-sub">肄붾뵫??紐곕씪???⑸땲?? ?먰븯??寃껋쓣 ?먯뿰?대줈 ?ㅻ챸?섎㈃ Claude Code媛 留뚮뱾??以띾땲??</p>
+  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--dr3);">🟡 Dr. Vibe</div>
+  <h2 class="sec-h">비개발자를 위한 바이브 코딩</h2>
+  <p class="sec-sub">코딩을 몰라도 됩니다. 원하는 것을 자연어로 설명하면 Claude Code가 만들어 줍니다.</p>
   <div id="vibeWrap"></div>
-  <div class="warn-box">?뮕 泥섏쓬??媛꾨떒???뚯씪 ?묒뾽遺???쒖옉?섏꽭?? ?먯쭊?곸쑝濡?蹂듭옟???꾨줈?앺듃濡??뺤옣?섎㈃ ?⑸땲??</div>
+  <div class="warn-box">💡 처음엔 간단한 파일 작업부터 시작하세요. 점진적으로 복잡한 프로젝트로 확장하면 됩니다.</div>
 </div>
 
 <!-- FEATURES -->
 <div class="section" id="sec-features">
-  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--dr4);">?뵷 Dr. Power</div>
-  <h2 class="sec-h">?듭떖 湲곕뒫 6媛吏</h2>
-  <p class="sec-sub">移대뱶瑜??대┃?섎㈃ ?곸꽭 ?ㅻ챸???섑??⑸땲??</p>
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--dr4);">🔵 Dr. Power</div>
+  <h2 class="sec-h">핵심 기능 6가지</h2>
+  <p class="sec-sub">카드를 클릭하면 상세 설명이 나타납니다.</p>
   <div class="card-grid card-grid-3" id="featGrid"></div>
   <div class="concept-detail" id="featDetail"></div>
 </div>
 
 <!-- SLASH COMMANDS -->
 <div class="section" id="sec-slash">
-  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--dr4);">?뵷 Dr. Power</div>
-  <h2 class="sec-h">?щ옒??紐낅졊 ?덊띁?곗뒪</h2>
-  <p class="sec-sub">Claude Code?먯꽌 ?먯＜ ?곕뒗 10媛吏 ?щ옒??紐낅졊?낅땲??</p>
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--dr4);">🔵 Dr. Power</div>
+  <h2 class="sec-h">슬래시 명령 레퍼런스</h2>
+  <p class="sec-sub">Claude Code에서 자주 쓰는 10가지 슬래시 명령입니다.</p>
   <div class="slash-grid" id="slashWrap"></div>
 </div>
 
 <!-- CLAUDE.md -->
 <div class="section" id="sec-claudemd">
-  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--dr4);">?뵷 Dr. Power</div>
-  <h2 class="sec-h">CLAUDE.md ?꾩쟾 媛?대뱶</h2>
-  <p class="sec-sub">CLAUDE.md??AI?먭쾶 二쇰뒗 "?꾨줈?앺듃 ?ㅻ챸???낅땲??</p>
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--dr4);">🔵 Dr. Power</div>
+  <h2 class="sec-h">CLAUDE.md 완전 가이드</h2>
+  <p class="sec-sub">CLAUDE.md는 AI에게 주는 "프로젝트 설명서"입니다.</p>
   <div id="claudemdWrap"></div>
 </div>
 
 <!-- DOCTORS -->
 <div class="section" id="sec-doctors">
-  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--accent4);">?뱀뀡 H</div>
-  <h2 class="sec-h">5紐?諛뺤궗 ?⑤꼸</h2>
-  <p class="sec-sub">媛?諛뺤궗瑜??대┃?섎㈃ ?꾨Ц ?곸뿭, ?ㅽ빐 援먯젙, ?ㅼ쿇 ?됰룞??諛붾앸땲??</p>
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--accent4);">섹션 H</div>
+  <h2 class="sec-h">5명 박사 패널</h2>
+  <p class="sec-sub">각 박사를 클릭하면 전문 영역, 오해 교정, 실천 행동이 바뀝니다.</p>
   <div class="card-grid card-grid-5" id="drGrid"></div>
   <div class="dr-panel" id="drPanel"></div>
 </div>
 
 <!-- ROADMAP -->
 <div class="section" id="sec-roadmap">
-  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--accent);">?뱀뀡 I</div>
-  <h2 class="sec-h">?④퀎蹂??숈뒿 濡쒕뱶留?</h2>
-  <p class="sec-sub">6?④퀎瑜??쒖꽌?濡??곕씪媛?몄슂.</p>
+  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--accent);">섹션 I</div>
+  <h2 class="sec-h">단계별 학습 로드맵</h2>
+  <p class="sec-sub">6단계를 순서대로 따라가세요.</p>
   <div class="roadmap" id="roadmapWrap"></div>
 </div>
 
 <!-- LAB -->
 <div class="section" id="sec-lab">
-  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--dr5);">?윢 Dr. Practice</div>
-  <h2 class="sec-h">泥??ㅼ뒿 ?ㅽ뿕??</h2>
-  <p class="sec-sub">?ㅼ튂遺??泥??깃났源뚯? 5?④퀎瑜??곕씪媛?몄슂.</p>
-  <div class="highlight-box" style="font-size:1rem;">?렞 紐⑺몴: ?곕??먯뿉??claude瑜??ㅽ뻾?섍퀬, 泥?踰덉㎏ ?묒뾽???깃났?쒕떎</div>
+  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--dr5);">🟣 Dr. Practice</div>
+  <h2 class="sec-h">첫 실습 실험실</h2>
+  <p class="sec-sub">설치부터 첫 성공까지 5단계를 따라가세요.</p>
+  <div class="highlight-box" style="font-size:1rem;">🎯 목표: 터미널에서 claude를 실행하고, 첫 번째 작업을 성공한다</div>
   <div class="tabs" id="labTabs"></div>
   <div id="labContent"></div>
-  <h3 style="font-size:1.05rem;margin:24px 0 10px;">??泥??ㅼ뒿 泥댄겕由ъ뒪??</h3>
+  <h3 style="font-size:1.05rem;margin:24px 0 10px;">✅ 첫 실습 체크리스트</h3>
   <ul class="checklist" id="labChecklist"></ul>
 </div>
 
 <!-- QUIZ -->
 <div class="section" id="sec-quiz">
-  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--accent3);">?뱀뀡 K</div>
-  <h2 class="sec-h">?댁쫰 / ?먭린?먭?</h2>
-  <p class="sec-sub">13臾명빆?쇰줈 ?댄빐?꾨? ?뺤씤?섏꽭??</p>
+  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--accent3);">섹션 K</div>
+  <h2 class="sec-h">퀴즈 / 자기점검</h2>
+  <p class="sec-sub">13문항으로 이해도를 확인하세요.</p>
   <div id="quizWrap"></div>
   <div style="text-align:center;margin-top:16px;">
-    <button class="btn btn-primary" onclick="scoreQuiz()">梨꾩젏?섍린</button>
-    <button class="btn btn-secondary" onclick="resetQuiz()">?ㅼ떆 ?湲?</button>
+    <button class="btn btn-primary" onclick="scoreQuiz()">채점하기</button>
+    <button class="btn btn-secondary" onclick="resetQuiz()">다시 풀기</button>
   </div>
   <div class="quiz-score" id="quizScore" style="display:none;"></div>
 </div>
 
 <!-- GLOSSARY -->
 <div class="section" id="sec-glossary">
-  <div class="sec-tag" style="background:rgba(121,192,255,0.12);color:var(--accent6);">?뱀뀡 L</div>
-  <h2 class="sec-h">?⑹뼱?ъ쟾</h2>
-  <p class="sec-sub">?대┃?섎㈃ ?뺤쓽媛 ?섑??⑸땲??</p>
-  <input class="glossary-search" placeholder="?⑹뼱 寃??.." oninput="filterGlossary(this.value)">
+  <div class="sec-tag" style="background:rgba(121,192,255,0.12);color:var(--accent6);">섹션 L</div>
+  <h2 class="sec-h">용어사전</h2>
+  <p class="sec-sub">클릭하면 정의가 나타납니다.</p>
+  <input class="glossary-search" placeholder="용어 검색..." oninput="filterGlossary(this.value)">
   <div id="glossaryList"></div>
 </div>
 
 <!-- MEMO -->
 <div class="section" id="sec-memo">
-  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--accent2);">?뱀뀡 M</div>
-  <h2 class="sec-h">蹂듭궗??硫붾え</h2>
-  <p class="sec-sub">?듭떖 ?뺣━, 泥댄겕由ъ뒪?? 移섑듃?쒗듃瑜?蹂듭궗?섏꽭??</p>
+  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--accent2);">섹션 M</div>
+  <h2 class="sec-h">복사용 메모</h2>
+  <p class="sec-sub">핵심 정리, 체크리스트, 치트시트를 복사하세요.</p>
   <div id="memoWrap"></div>
 </div>
 
 <script>
 // ============ DATA ============
 const whatData = [
-  {icon:'?뮲',label:'?곕???AI ?먯씠?꾪듃',brief:'CLI?먯꽌 ?ㅽ뻾',title:'?곕???湲곕컲 AI ?먯씠?꾪듃',desc:'Claude Code????釉뚮씪?곗?媛 ?꾨땶 ?곕??먯뿉???숈옉?⑸땲?? ?뚯씪 ?쒖뒪?쒖뿉 吏곸젒 ?묎렐?섍퀬, npm/pip/git ??紐⑤뱺 CLI ?꾧뎄瑜??쒖슜?????덉뒿?덈떎.',extra:'Chat??"????쇰㈃, Claude Code??"?묒뾽 媛쒕컻"?낅땲??'},
-  {icon:'?쩃',label:'?묒뾽 紐⑤뱶',brief:'??????꾩엫 ???묒뾽',title:'Chat/Cowork/Code??李⑥씠',desc:'Chat: 吏덈Ц?섎㈃ ?듭쓣 以띾땲??(???. Cowork: ?묒뾽???꾩엫?섎㈃ ?뚯븘??泥섎━?⑸땲??(GUI). Claude Code: ?곕??먯뿉???④퍡 肄붾뱶瑜??쎄퀬, ?섏젙?섍퀬, ?ㅽ뻾?⑸땲??(CLI ?묒뾽).',extra:'媛숈? Claude 紐⑤뜽?댁?留??뚯씪 ?섏젙 沅뚰븳, ???ㅽ뻾 沅뚰븳 ???먯쑉?깆씠 ?ㅻ쫭?덈떎.'},
-  {icon:'??',label:'鍮꾧컻諛쒖옄??媛??,brief:'諛붿씠釉?肄붾뵫',title:'媛쒕컻?먮쭔???꾧뎄媛 ?꾨땲??,desc:'"?대윴 ?뱀궗?댄듃 留뚮뱾?댁쨾", "???대뜑??CSV瑜??⑹퀜以? 媛숈? ?먯뿰???붿껌留뚯쑝濡?Claude Code媛 肄붾뱶瑜??앹꽦?섍퀬 ?ㅽ뻾?⑸땲??',extra:'?닿쾬??諛붾줈 "諛붿씠釉?肄붾뵫". 媛쒕컻 寃쏀뿕 ?놁뼱???꾩씠?붿뼱瑜??꾩떎濡?留뚮뱾 ???덉뒿?덈떎.'}
+  {icon:'💻',label:'터미널 AI 에이전트',brief:'CLI에서 실행',title:'터미널 기반 AI 에이전트',desc:'Claude Code는 웹 브라우저가 아닌 터미널에서 동작합니다. 파일 시스템에 직접 접근하고, npm/pip/git 등 모든 CLI 도구를 활용할 수 있습니다.',extra:'Chat이 "대화"라면, Claude Code는 "협업 개발"입니다.'},
+  {icon:'🤝',label:'협업 모드',brief:'대화 → 위임 → 협업',title:'Chat/Cowork/Code의 차이',desc:'Chat: 질문하면 답을 줍니다 (대화). Cowork: 작업을 위임하면 알아서 처리합니다 (GUI). Claude Code: 터미널에서 함께 코드를 읽고, 수정하고, 실행합니다 (CLI 협업).',extra:'같은 Claude 모델이지만 파일 수정 권한, 셸 실행 권한 등 자율성이 다릅니다.'},
+  {icon:'🚀',label:'비개발자도 가능',brief:'바이브 코딩',title:'개발자만의 도구가 아니다',desc:'"이런 웹사이트 만들어줘", "이 폴더의 CSV를 합쳐줘" 같은 자연어 요청만으로 Claude Code가 코드를 생성하고 실행합니다.',extra:'이것이 바로 "바이브 코딩". 개발 경험 없어도 아이디어를 현실로 만들 수 있습니다.'}
 ];
 
 const compareTableData = [
-  ['?ㅽ뻾 ?섍꼍','??釉뚮씪?곗?','?곗뒪?ы넲 ??(GUI)','?곕???(CLI)'],
-  ['?듭떖 紐⑤뱶','???(Q&A)','?묒뾽 ?꾩엫','?묒뾽 媛쒕컻'],
-  ['?뚯씪 ?묎렐','?낅줈?쒕쭔','吏???대뜑','?꾩껜 ?뚯씪 ?쒖뒪??],
-  ['??紐낅졊 ?ㅽ뻾','??,'?쒗븳??,'???꾩껜'],
-  ['Git ?듯빀','??,'?쒗븳??,'???꾩쟾 ?듯빀'],
-  ['?쒕툕?먯씠?꾪듃','??,'??,'??fork/蹂묐젹'],
-  ['?ㅽ궗/?뚮윭洹몄씤','?쇰?','??怨듭쑀 援ъ“','??+ 怨좉툒 湲곕뒫'],
-  ['????ъ슜??,'紐⑤뱺 ?ъ슜??,'鍮꾧컻諛쒖옄 以묒떖','媛쒕컻??+ 諛붿씠釉뚯퐫??],
-  ['諛섎났 ?먮룞??,'??,'?쒗븳??,'??/loop, cron'],
-  ['沅뚰븳 愿由?,'湲곕낯','湲곕낯','allowed-tools, ?먮룞?뱀씤']
+  ['실행 환경','웹 브라우저','데스크톱 앱 (GUI)','터미널 (CLI)'],
+  ['핵심 모드','대화 (Q&A)','작업 위임','협업 개발'],
+  ['파일 접근','업로드만','지정 폴더','전체 파일 시스템'],
+  ['셸 명령 실행','❌','제한적','✅ 전체'],
+  ['Git 통합','❌','제한적','✅ 완전 통합'],
+  ['서브에이전트','❌','❌','✅ fork/병렬'],
+  ['스킬/플러그인','일부','✅ 공유 구조','✅ + 고급 기능'],
+  ['대상 사용자','모든 사용자','비개발자 중심','개발자 + 바이브코더'],
+  ['반복 자동화','❌','제한적','✅ /loop, cron'],
+  ['권한 관리','기본','기본','allowed-tools, 자동승인']
 ];
 
 const scenarioData = [
-  {title:'?뱚 CSV ?뚯씪 ?⑹튂湲?,chat:'Python 肄붾뱶瑜??뚮젮?쒕┫寃뚯슂. 蹂듭궗?댁꽌 ?ㅽ뻾?섏꽭??',cowork:'吏???대뜑??CSV瑜?李얠븘 ?⑹묩?덈떎. 寃곌낵瑜???ν빀?덈떎.',code:'?꾩옱 ?붾젆?좊━ CSV ?먮룞 ?먯깋 ??pandas濡??⑹튂湲???merged.csv ?????"?⑹낀?듬땲?? 珥?1,234?? 蹂닿퀬. 紐⑤뱺 怨쇱젙???곕??먯뿉???먮룞 ?ㅽ뻾.'},
-  {title:'?맀 踰꾧렇 李얠븘 怨좎튂湲?,chat:'肄붾뱶瑜?遺숈뿬?ｌ뼱 二쇱떆硫?遺꾩꽍?⑸땲?? (?뚯씪 ?묎렐 遺덇?)',cowork:'吏???뚯씪???댁뼱 遺꾩꽍, ?섏젙 ?쒖븞. (GUI?먯꽌 ?뱀씤 ?꾩슂)',code:'?꾨줈?앺듃 ?꾩껜 ?먯깋 ??踰꾧렇 ?먯씤 ?뚯븙 ??吏곸젒 ?섏젙 ???뚯뒪???ㅽ뻾 ??git commit. 紐⑤뱺 怨쇱젙???먮룞.'},
-  {title:'?뙋 ?뱀궗?댄듃 留뚮뱾湲?,chat:'HTML/CSS/JS 肄붾뱶瑜??뚮젮?쒕┰?덈떎. 蹂듭궗?댁꽌 ??ν븯?몄슂.',cowork:'?뚯씪???앹꽦?섍퀬 湲곕낯 援ъ“瑜?留뚮벊?덈떎.',code:'?꾨줈?앺듃 ?대뜑 ?앹꽦 ???뚯씪 ?묒꽦 ??濡쒖뺄 ?쒕쾭 ?ㅽ뻾 ??釉뚮씪?곗? ?뺤씤 ???섏젙 ?붿껌 ??利됱떆 諛섏쁺.'},
-  {title:'?뱤 ?곗씠??遺꾩꽍 + 李⑦듃',chat:'遺꾩꽍 諛⑸쾿怨?肄붾뱶瑜??ㅻ챸?⑸땲?? ?ㅽ뻾? 吏곸젒.',cowork:'?낅줈?쒕맂 ?뚯씪??遺꾩꽍?섍퀬 寃곌낵瑜?蹂댁뿬以띾땲??',code:'?곗씠???뚯씪 ?쎄린 ??pandas 遺꾩꽍 ??李⑦듃 ?앹꽦 ??PNG ?????"遺꾩꽍 ?꾨즺. 李⑦듃??output/???덉뒿?덈떎" 蹂닿퀬.'}
+  {title:'📁 CSV 파일 합치기',chat:'Python 코드를 알려드릴게요. 복사해서 실행하세요.',cowork:'지정 폴더의 CSV를 찾아 합칩니다. 결과를 저장합니다.',code:'현재 디렉토리 CSV 자동 탐색 → pandas로 합치기 → merged.csv 저장 → "합쳤습니다. 총 1,234행" 보고. 모든 과정이 터미널에서 자동 실행.'},
+  {title:'🐛 버그 찾아 고치기',chat:'코드를 붙여넣어 주시면 분석합니다. (파일 접근 불가)',cowork:'지정 파일을 열어 분석, 수정 제안. (GUI에서 승인 필요)',code:'프로젝트 전체 탐색 → 버그 원인 파악 → 직접 수정 → 테스트 실행 → git commit. 모든 과정이 자동.'},
+  {title:'🌐 웹사이트 만들기',chat:'HTML/CSS/JS 코드를 알려드립니다. 복사해서 저장하세요.',cowork:'파일을 생성하고 기본 구조를 만듭니다.',code:'프로젝트 폴더 생성 → 파일 작성 → 로컬 서버 실행 → 브라우저 확인 → 수정 요청 시 즉시 반영.'},
+  {title:'📊 데이터 분석 + 차트',chat:'분석 방법과 코드를 설명합니다. 실행은 직접.',cowork:'업로드된 파일을 분석하고 결과를 보여줍니다.',code:'데이터 파일 읽기 → pandas 분석 → 차트 생성 → PNG 저장 → "분석 완료. 차트는 output/에 있습니다" 보고.'}
 ];
 
 const vibeData = [
-  {title:'?벑 ????愿由???,prompt:'"???쇱쓣 異붽??섍퀬, ?꾨즺 泥댄겕?섍퀬, ??젣?????덈뒗 媛꾨떒?????깆쓣 留뚮뱾?댁쨾. ?덉걶 ?붿옄?몄쑝濡?"',result:'HTML/CSS/JS ?뚯씪 ?앹꽦 ??濡쒖뺄 ?쒕쾭 ?ㅽ뻾 ??釉뚮씪?곗??먯꽌 諛붾줈 ?ъ슜 媛??},
-  {title:'?뱚 ?대뜑 ?먮룞 ?뺣━',prompt:'"Downloads ?대뜑瑜??뺤옣?먮퀎濡?遺꾨쪟?댁쨾.\n?대?吏??Images/, 臾몄꽌??Documents/, ?섎㉧吏??Others/濡?"',result:'Python ?ㅽ겕由쏀듃 ?묒꽦 + 利됱떆 ?ㅽ뻾 ???뚯씪???먮룞 遺꾨쪟??},
-  {title:'?뱤 ?묒? ?곗씠??蹂??,prompt:'"??CSV?먯꽌 2024???곗씠?곕쭔 ?꾪꽣留곹빐???붾퀎 ?⑷퀎瑜?援ы븯怨????묒?濡???ν빐以?"',result:'pandas濡?泥섎━ ??.xlsx ?뚯씪 ???},
-  {title:'?뼹截??대?吏 ?쇨큵 泥섎━',prompt:'"photos ?대뜑??紐⑤뱺 ?대?吏瑜?800px濡?由ъ궗?댁쫰?섍퀬 ?뚯씪紐낆뿉 ?좎쭨 異붽??댁쨾."',result:'Pillow濡??대?吏 泥섎━ ??resized/ ?대뜑?????},
-  {title:'?뱷 留덊겕?ㅼ슫 釉붾줈洹?,prompt:'"留덊겕?ㅼ슫 湲곗닠 釉붾줈洹몄슜 ?뺤쟻 ?ъ씠?몃? 留뚮뱾?댁쨾. ?ъ뒪??紐⑸줉, 媛쒕퀎 ?섏씠吏, ?ㅽ겕 紐⑤뱶 吏??"',result:'?뺤쟻 ?ъ씠???앹꽦湲?援ъ텞 ??釉붾줈洹??꾨줈?앺듃 ?꾩꽦'},
-  {title:'?봽 諛섎났 蹂닿퀬???먮룞??,prompt:'"留ㅼ＜ ?붿슂??data/??理쒖떊 CSV瑜??쎌뼱???붿빟 蹂닿퀬?쒕? 留덊겕?ㅼ슫?쇰줈 留뚮뱶???ㅽ겕由쏀듃瑜?留뚮뱾?댁쨾."',result:'Python ?ㅽ겕由쏀듃 + cron ?ㅼ젙 ?덈궡 ???먮룞???꾩꽦'}
+  {title:'📱 할 일 관리 앱',prompt:'"할 일을 추가하고, 완료 체크하고, 삭제할 수 있는 간단한 웹 앱을 만들어줘. 예쁜 디자인으로."',result:'HTML/CSS/JS 파일 생성 → 로컬 서버 실행 → 브라우저에서 바로 사용 가능'},
+  {title:'📁 폴더 자동 정리',prompt:'"Downloads 폴더를 확장자별로 분류해줘.\n이미지는 Images/, 문서는 Documents/, 나머지는 Others/로."',result:'Python 스크립트 작성 + 즉시 실행 → 파일이 자동 분류됨'},
+  {title:'📊 엑셀 데이터 변환',prompt:'"이 CSV에서 2024년 데이터만 필터링해서 월별 합계를 구하고 새 엑셀로 저장해줘."',result:'pandas로 처리 → .xlsx 파일 저장'},
+  {title:'🖼️ 이미지 일괄 처리',prompt:'"photos 폴더의 모든 이미지를 800px로 리사이즈하고 파일명에 날짜 추가해줘."',result:'Pillow로 이미지 처리 → resized/ 폴더에 저장'},
+  {title:'📝 마크다운 블로그',prompt:'"마크다운 기술 블로그용 정적 사이트를 만들어줘. 포스트 목록, 개별 페이지, 다크 모드 지원."',result:'정적 사이트 생성기 구축 → 블로그 프로젝트 완성'},
+  {title:'🔄 반복 보고서 자동화',prompt:'"매주 월요일 data/의 최신 CSV를 읽어서 요약 보고서를 마크다운으로 만드는 스크립트를 만들어줘."',result:'Python 스크립트 + cron 설정 안내 → 자동화 완성'}
 ];
 
 const featData = [
-  {icon:'?⑨툘',label:'?щ옒??紐낅졊',brief:'鍮좊Ⅸ ?쒖뼱',title:'?щ옒??紐낅졊',desc:'/help, /plan, /review, /compact ??10媛吏 ?댁긽??紐낅졊?쇰줈 Claude Code瑜?鍮좊Ⅴ寃??쒖뼱?⑸땲??',extra:'?먯＜ ?곕뒗 ?뚰겕?뚮줈瑜??⑥텞?ㅼ쿂???쒖슜 媛??'},
-  {icon:'?뱞',label:'CLAUDE.md',brief:'?꾨줈?앺듃 ?ㅻ챸??,title:'CLAUDE.md',desc:'?꾨줈?앺듃 猷⑦듃???먮㈃ 留?????쒖옉 ??Claude Code媛 ?쎌뒿?덈떎. 肄붾뵫 ?ㅽ??? 援ъ“, 湲덉??ы빆 ?깆쓣 ?곸뼱?먮㈃ ?쇨????묒뾽??媛??',extra:'/init?쇰줈 ?먮룞 ?앹꽦 媛??'},
-  {icon:'?뵆',label:'?ㅽ궗/?뚮윭洹몄씤',brief:'湲곕뒫 ?뺤옣',title:'?ㅽ궗 & ?뚮윭洹몄씤',desc:'?ㅽ궗: ?뱀젙 ?묒뾽???뱁솕???꾨＼?꾪듃+?꾧뎄 議고빀. ?뚮윭洹몄씤: ?몃? ?쒕퉬???곌껐. CLI?먯꽌留?媛?ν븳 怨좉툒 湲곕뒫??異붽??⑸땲??',extra:'?뚯씪 ?쒖뒪??吏곸젒 ?묎렐, ??紐낅졊 ?ㅽ뻾 沅뚰븳 ??'},
-  {icon:'??',label:'?쒕툕?먯씠?꾪듃',brief:'蹂묐젹 泥섎━',title:'?쒕툕?먯씠?꾪듃',desc:'Claude Code媛 ?쒕툕?먯씠?꾪듃瑜?fork?섏뿬 蹂묐젹濡??묒뾽?????덉뒿?덈떎. ?? "?꾨줎?몄? 諛깆뿏?쒕? ?숈떆??媛쒕컻?댁쨾"',extra:'git worktree瑜??쒖슜???낅┰ 釉뚮옖移??묒뾽??媛??'},
-  {icon:'?봺',label:'/loop & cron',brief:'諛섎났 ?먮룞??,title:'/loop & cron',desc:'/loop: ?뱀젙 議곌굔 留뚯”源뚯? 諛섎났. cron: ?쒓컙 湲곕컲 ?먮룞 ?ㅽ뻾.',extra:'?? "留ㅼ씪 ?ㅼ쟾 9?쒖뿉 ?뚯뒪???ㅽ뻾?섍퀬 ?щ옓?쇰줈 寃곌낵 ?꾩넚"'},
-  {icon:'?뵏',label:'沅뚰븳 愿由?,brief:'?몃????쒖뼱',title:'沅뚰븳 愿由?,desc:'allowed-tools: ?ъ슜 媛?ν븳 ?꾧뎄 ?쒗븳. ?먮룞 ?뱀씤: ?좊ː?섎뒗 ?묒뾽? ?뺤씤 ?놁씠 ?먮룞 ?ㅽ뻾.',extra:'?덉쟾怨??몄쓽 ?ъ씠??洹좏삎???ㅼ젙.'}
+  {icon:'⌨️',label:'슬래시 명령',brief:'빠른 제어',title:'슬래시 명령',desc:'/help, /plan, /review, /compact 등 10가지 이상의 명령으로 Claude Code를 빠르게 제어합니다.',extra:'자주 쓰는 워크플로를 단축키처럼 활용 가능.'},
+  {icon:'📄',label:'CLAUDE.md',brief:'프로젝트 설명서',title:'CLAUDE.md',desc:'프로젝트 루트에 두면 매 대화 시작 시 Claude Code가 읽습니다. 코딩 스타일, 구조, 금지사항 등을 적어두면 일관된 협업이 가능.',extra:'/init으로 자동 생성 가능.'},
+  {icon:'🔌',label:'스킬/플러그인',brief:'기능 확장',title:'스킬 & 플러그인',desc:'스킬: 특정 작업에 특화된 프롬프트+도구 조합. 플러그인: 외부 서비스 연결. CLI에서만 가능한 고급 기능이 추가됩니다.',extra:'파일 시스템 직접 접근, 셸 명령 실행 권한 등.'},
+  {icon:'🔀',label:'서브에이전트',brief:'병렬 처리',title:'서브에이전트',desc:'Claude Code가 서브에이전트를 fork하여 병렬로 작업할 수 있습니다. 예: "프론트와 백엔드를 동시에 개발해줘"',extra:'git worktree를 활용한 독립 브랜치 작업도 가능.'},
+  {icon:'🔁',label:'/loop & cron',brief:'반복 자동화',title:'/loop & cron',desc:'/loop: 특정 조건 만족까지 반복. cron: 시간 기반 자동 실행.',extra:'예: "매일 오전 9시에 테스트 실행하고 슬랙으로 결과 전송"'},
+  {icon:'🔒',label:'권한 관리',brief:'세밀한 제어',title:'권한 관리',desc:'allowed-tools: 사용 가능한 도구 제한. 자동 승인: 신뢰하는 작업은 확인 없이 자동 실행.',extra:'안전과 편의 사이의 균형을 설정.'}
 ];
 
 const slashData = [
-  {cmd:'/help',desc:'?ъ슜 媛?ν븳 紐낅졊怨??꾩?留??쒖떆',use:'泥섏쓬 ?쒖옉????},
-  {cmd:'/plan',desc:'?꾩옱 ?묒뾽??????ㅽ뻾 怨꾪쉷 ?섎┰',use:'蹂듭옟???묒뾽 ??諛⑺뼢 ?뺤씤'},
-  {cmd:'/review',desc:'?꾩옱 蹂寃쎌궗??git diff) 寃??,use:'而ㅻ컠 ??肄붾뱶 ?덉쭏 ?뺤씤'},
-  {cmd:'/compact',desc:'???湲곕줉 ?붿빟, 而⑦뀓?ㅽ듃 ?덉빟',use:'??붽? 湲몄뼱??留λ씫???먮┫ ??},
-  {cmd:'/clear',desc:'???湲곕줉 ?꾩쟾 珥덇린??,use:'?덈줈???묒뾽 ?쒖옉 ??},
-  {cmd:'/cost',desc:'?좏겙 ?ъ슜?됯낵 鍮꾩슜 ?쒖떆',use:'鍮꾩슜 愿由? ?ъ슜???뺤씤'},
-  {cmd:'/doctor',desc:'?섍꼍 臾몄젣 吏꾨떒',use:'?ㅼ튂 ??臾몄젣媛 ?덉쓣 ??},
-  {cmd:'/init',desc:'CLAUDE.md ?먮룞 ?앹꽦',use:'???꾨줈?앺듃 ?쒖옉 ??},
-  {cmd:'/status',desc:'?꾩옱 ?묒뾽 ?곹깭 ?쒖떆',use:'吏꾪뻾 以묒씤 ?묒뾽 ?뺤씤'},
-  {cmd:'/config',desc:'?ㅼ젙 ?뺤씤 諛?蹂寃?,use:'沅뚰븳, 紐⑤뜽 ???ㅼ젙 蹂寃?}
+  {cmd:'/help',desc:'사용 가능한 명령과 도움말 표시',use:'처음 시작할 때'},
+  {cmd:'/plan',desc:'현재 작업에 대한 실행 계획 수립',use:'복잡한 작업 전 방향 확인'},
+  {cmd:'/review',desc:'현재 변경사항(git diff) 검토',use:'커밋 전 코드 품질 확인'},
+  {cmd:'/compact',desc:'대화 기록 요약, 컨텍스트 절약',use:'대화가 길어져 맥락이 흐릴 때'},
+  {cmd:'/clear',desc:'대화 기록 완전 초기화',use:'새로운 작업 시작 시'},
+  {cmd:'/cost',desc:'토큰 사용량과 비용 표시',use:'비용 관리, 사용량 확인'},
+  {cmd:'/doctor',desc:'환경 문제 진단',use:'설치 후 문제가 있을 때'},
+  {cmd:'/init',desc:'CLAUDE.md 자동 생성',use:'새 프로젝트 시작 시'},
+  {cmd:'/status',desc:'현재 작업 상태 표시',use:'진행 중인 작업 확인'},
+  {cmd:'/config',desc:'설정 확인 및 변경',use:'권한, 모델 등 설정 변경'}
 ];
 
 const claudemdData = [
-  {title:'?뱦 CLAUDE.md????븷',text:'CLAUDE.md???꾨줈?앺듃 猷⑦듃???먮뒗 ?띿뒪???뚯씪?낅땲??\nClaude Code??????쒖옉 ?????뚯씪???먮룞?쇰줈 ?쎌뒿?덈떎.\n\n??븷:\n???꾨줈?앺듃 援ъ“? 湲곗닠 ?ㅽ깮 ?ㅻ챸\n??肄붾뵫 而⑤깽?섍낵 洹쒖튃 ?뺤쓽\n??湲덉? ?ы빆(?섏? 留먯븘????寃? 紐낆떆\n???먯＜ ?곕뒗 紐낅졊???ㅽ겕由쏀듃 ?덈궡'},
-  {title:'?뱷 ?덉떆 1: ???꾨줈?앺듃',code:'# ?꾨줈?앺듃 媛쒖슂\nReact + TypeScript 湲곕컲 ??쒕낫??n\n# 湲곗닠 ?ㅽ깮\n- Frontend: React 18, TypeScript, Tailwind CSS\n- Backend: Node.js, Express\n- DB: PostgreSQL\n\n# 肄붾뵫 洹쒖튃\n- ?⑥닔??而댄룷?뚰듃留??ъ슜 (class 湲덉?)\n- 蹂?섎챸? camelCase, ?뚯씪紐낆? kebab-case\n- any ????ъ슜 湲덉?\n\n# 湲덉? ?ы빆\n- console.log瑜?而ㅻ컠?섏? 留?寃?n- ?몃씪???ㅽ????ъ슜 湲덉?\n- ?뚯뒪???놁씠 PR 湲덉?\n\n# ?좎슜??紐낅졊\n- npm run dev: 媛쒕컻 ?쒕쾭\n- npm test: ?뚯뒪???ㅽ뻾'},
-  {title:'?뱷 ?덉떆 2: ?곗씠??遺꾩꽍 ?꾨줈?앺듃',code:'# ?꾨줈?앺듃 媛쒖슂\n留덉????곗씠??遺꾩꽍 ?뚯씠?꾨씪??n\n# ?섍꼍\n- Python 3.11, pandas, matplotlib\n- ?곗씠?? data/ ?대뜑??CSV\n- 寃곌낵: output/ ?대뜑?????n\n# 洹쒖튃\n- ?먮낯 ?곗씠???섏젙 湲덉?\n- 紐⑤뱺 遺꾩꽍???좎쭨 ?꾪꽣 ?ы븿\n- 李⑦듃???쒓? ?고듃(NanumGothic) ?ъ슜\n- 寃곌낵 ?뚯씪紐? YYYYMMDD_遺꾩꽍紐?csv\n\n# 二쇱쓽\n- 媛쒖씤?뺣낫 而щ읆? 留덉뒪??泥섎━\n- ?몃? API ?몄텧 湲덉?'}
+  {title:'📌 CLAUDE.md의 역할',text:'CLAUDE.md는 프로젝트 루트에 두는 텍스트 파일입니다.\nClaude Code는 대화 시작 시 이 파일을 자동으로 읽습니다.\n\n역할:\n• 프로젝트 구조와 기술 스택 설명\n• 코딩 컨벤션과 규칙 정의\n• 금지 사항(하지 말아야 할 것) 명시\n• 자주 쓰는 명령어/스크립트 안내'},
+  {title:'📝 예시 1: 웹 프로젝트',code:'# 프로젝트 개요\nReact + TypeScript 기반 대시보드\n\n# 기술 스택\n- Frontend: React 18, TypeScript, Tailwind CSS\n- Backend: Node.js, Express\n- DB: PostgreSQL\n\n# 코딩 규칙\n- 함수형 컴포넌트만 사용 (class 금지)\n- 변수명은 camelCase, 파일명은 kebab-case\n- any 타입 사용 금지\n\n# 금지 사항\n- console.log를 커밋하지 말 것\n- 인라인 스타일 사용 금지\n- 테스트 없이 PR 금지\n\n# 유용한 명령\n- npm run dev: 개발 서버\n- npm test: 테스트 실행'},
+  {title:'📝 예시 2: 데이터 분석 프로젝트',code:'# 프로젝트 개요\n마케팅 데이터 분석 파이프라인\n\n# 환경\n- Python 3.11, pandas, matplotlib\n- 데이터: data/ 폴더의 CSV\n- 결과: output/ 폴더에 저장\n\n# 규칙\n- 원본 데이터 수정 금지\n- 모든 분석에 날짜 필터 포함\n- 차트는 한글 폰트(NanumGothic) 사용\n- 결과 파일명: YYYYMMDD_분석명.csv\n\n# 주의\n- 개인정보 컬럼은 마스킹 처리\n- 외부 API 호출 금지'}
 ];
 
 const drColors = ['var(--dr1)','var(--dr2)','var(--dr3)','var(--dr4)','var(--dr5)'];
 const drInfo = [
-  {emoji:'?뵶',name:'Dr. Identity',role:'?뺤껜??諛뺤궗',color:drColors[0],q:'Claude Code媛 萸먭퀬 ???곕뒗媛?',
-   summary:['Claude Code???곕??먯뿉???묐룞?섎뒗 AI 肄붾뵫 ?먯씠?꾪듃??,'媛숈? Claude 紐⑤뜽?댁?留??ㅽ뻾 ?섍꼍怨?沅뚰븳???ㅻⅤ??,'?뚯씪 ?쒖뒪???묎렐, ??紐낅졊 ?ㅽ뻾, git ?듯빀???듭떖 李⑤퀎?먯씠??],
-   miscon:['媛쒕컻?먮쭔 ?????덈떎 ??諛붿씠釉?肄붾뵫?쇰줈 鍮꾧컻諛쒖옄???쒖슜 媛??,'Chat???곸쐞 踰꾩쟾?대떎 ???ㅻⅨ 紐⑤뱶?대ŉ, 媛곴컖 ?μ젏???덈떎','?꾪뿕?섎떎 ??沅뚰븳 愿由щ줈 ?덉쟾?섍쾶 ?ъ슜 媛??],
-   actions:['?곕??먯쓣 ?댁뼱 Claude Code瑜?吏곸젒 ?ㅽ뻾??蹂댁꽭??,'媛꾨떒???뚯씪 ?묒뾽遺???쒖옉?섏꽭??,'Chat?쇰줈 ?섎뜕 ?묒뾽 ?섎굹瑜?Claude Code濡??대낫?몄슂'],
-   next:'?뺤껜瑜??댄빐?덈떎硫??섍꼍 諛뺤궗(Dr. Environment)?먭쾶 ?대룞?섏꽭??'},
-  {emoji:'?윟',name:'Dr. Environment',role:'?섍꼍 諛뺤궗',color:drColors[1],q:'Chat/Cowork/Code?????ㅻⅨ媛?',
-   summary:['Chat? ??? Cowork? ?꾩엫, Claude Code???묒뾽?대떎','??紐⑤뱶 紐⑤몢 媛숈? Claude 紐⑤뜽???ъ슜?쒕떎','?ㅽ뻾 ?섍꼍(??GUI/CLI)???곕씪 ?????덈뒗 寃껋씠 ?щ씪吏꾨떎'],
-   miscon:['?섎굹留??곕㈃ ?쒕떎 ???곹솴???곕씪 ?곹빀??紐⑤뱶媛 ?ㅻⅤ??,'Cowork怨?Claude Code??媛숇떎 ??GUI vs CLI, 沅뚰븳 踰붿쐞媛 ?ㅻⅤ??,'Claude Code媛 ??긽 理쒖꽑?대떎 ??媛꾨떒??吏덈Ц? Chat????鍮좊Ⅴ??],
-   actions:['媛숈? ?묒뾽??Chat怨?Claude Code濡?媛곴컖 ?대낫?몄슂','鍮꾧탳?쒖뿉??10媛吏 李⑥씠瑜??뺤씤?섏꽭??,'?묒뾽 ?좏삎蹂꾨줈 ?곹빀??紐⑤뱶瑜??뺣━??蹂댁꽭??],
-   next:'?섍꼍 李⑥씠瑜??댄빐?덈떎硫?諛붿씠釉뚯퐫??諛뺤궗(Dr. Vibe)?먭쾶 ?대룞?섏꽭??'},
-  {emoji:'?윞',name:'Dr. Vibe',role:'諛붿씠釉뚯퐫??諛뺤궗',color:drColors[2],q:'鍮꾧컻諛쒖옄???????덈뒗 寃껋??',
-   summary:['諛붿씠釉?肄붾뵫? ?먯뿰?대줈 肄붾뵫?섎뒗 寃껋씠??,'肄붾뵫 吏???놁씠???? ?ㅽ겕由쏀듃, ?먮룞?붾? 留뚮뱾 ???덈떎','泥섏쓬??媛꾨떒???뚯씪 ?묒뾽遺???쒖옉?섎뒗 寃껋쓣 異붿쿇?쒕떎'],
-   miscon:['肄붾뵫???뚯븘???쒕떎 ???먯뿰?대쭔?쇰줈 異⑸텇?섎떎','寃곌낵臾??덉쭏????떎 ??援ъ껜?곸쑝濡??ㅻ챸?섎㈃ ?꾨Ц媛 ?섏??대떎','??踰덉뿉 ?꾩꽦?댁빞 ?쒕떎 ????뷀븯硫??먯쭊?곸쑝濡?媛쒖꽑?섎씪'],
-   actions:['"?대윴 ??留뚮뱾?댁쨾"瑜???踰??쒕룄??蹂댁꽭??,'?뚯씪 ?먮룞?붾? 吏곸젒 ?대낫?몄슂','寃곌낵媛 留덉쓬?????ㅻ㈃ 異붽? ?붿껌???섏꽭??],
-   next:'諛붿씠釉?肄붾뵫???대뇬?ㅻ㈃ 湲곕뒫 諛뺤궗(Dr. Power)?먭쾶 ?대룞?섏꽭??'},
-  {emoji:'?뵷',name:'Dr. Power',role:'湲곕뒫 諛뺤궗',color:drColors[3],q:'?듭떖 湲곕뒫? 臾댁뾿?멸??',
-   summary:['?щ옒??紐낅졊? Claude Code??鍮좊Ⅸ ?쒖뼱 ?섎떒?대떎','CLAUDE.md???꾨줈?앺듃??"?ㅻ챸??濡? ?쇨????묒뾽???듭떖?대떎','?쒕툕?먯씠?꾪듃? /loop濡?蹂듭옟???묒뾽???먮룞?뷀븷 ???덈떎'],
-   miscon:['?щ옒??紐낅졊?????몄썙???쒕떎 ??/help濡??몄젣???뺤씤 媛??,'CLAUDE.md???좏깮?ы빆?대떎 ???놁쑝硫?留ㅻ쾲 留λ씫??諛섎났?댁빞 ?쒕떎','?쒕툕?먯씠?꾪듃???대졄????"?????묒뾽???숈떆???댁쨾"?쇨퀬 ?섎㈃ ?쒕떎'],
-   actions:['/help瑜??ㅽ뻾?댁꽌 紐낅졊 紐⑸줉???뺤씤?섏꽭??,'/init?쇰줈 CLAUDE.md瑜??먮룞 ?앹꽦??蹂댁꽭??,'媛꾨떒??/plan???ㅽ뻾??蹂댁꽭??],
-   next:'湲곕뒫???듯삍?ㅻ㈃ ?ㅼ뒿 諛뺤궗(Dr. Practice)?먭쾶 ?대룞?섏꽭??'},
-  {emoji:'?윢',name:'Dr. Practice',role:'?ㅼ뒿 諛뺤궗',color:drColors[4],q:'?대뼸寃?泥??깃났???대걣?대궡?붽??',
-   summary:['?ㅼ튂?믪껀 ?ㅽ뻾?믨린蹂?紐낅졊?묬LAUDE.md?믪뒪???쒖쑝濡?吏꾪뻾?섎씪','泥섏쓬??媛꾨떒???뚯씪 ?묒뾽遺???쒖옉?섎씪','?ㅼ닔瑜??먮젮?뚰븯吏 留덈씪 ??git?쇰줈 ?몄젣???섎룎由????덈떎'],
-   miscon:['?ㅼ튂媛 ?대졄????怨듭떇 臾몄꽌瑜??곕씪媛硫?5遺??덉뿉 ?꾨즺','?ㅼ닔?섎㈃ ?곗씪?쒕떎 ??git?쇰줈 ?몄젣???섎룎由????덈떎','??踰덉뿉 ???꾨줈?앺듃瑜??댁빞 ?쒕떎 ???묒? 寃껊????먯쭊?곸쑝濡?],
-   actions:['?ㅻ뒛 ?뱀옣 ?ㅼ튂?댁꽌 ?ㅽ뻾??蹂댁꽭??,'湲곗〈 ?꾨줈?앺듃?먯꽌 /init???ㅽ뻾??蹂댁꽭??,'留ㅼ씪 ?섎굹???덈줈???щ옒??紐낅졊???ъ슜??蹂댁꽭??],
-   next:'紐⑤뱺 諛뺤궗??媛?대뱶瑜?留덉낀?듬땲?? ?댁쫰濡??먭린?먭????섍굅??蹂듭궗 硫붾え瑜??쒖슜?섏꽭??'}
+  {emoji:'🔴',name:'Dr. Identity',role:'정체성 박사',color:drColors[0],q:'Claude Code가 뭐고 왜 쓰는가?',
+   summary:['Claude Code는 터미널에서 작동하는 AI 코딩 에이전트다','같은 Claude 모델이지만 실행 환경과 권한이 다르다','파일 시스템 접근, 셸 명령 실행, git 통합이 핵심 차별점이다'],
+   miscon:['개발자만 쓸 수 있다 → 바이브 코딩으로 비개발자도 활용 가능','Chat의 상위 버전이다 → 다른 모드이며, 각각 장점이 있다','위험하다 → 권한 관리로 안전하게 사용 가능'],
+   actions:['터미널을 열어 Claude Code를 직접 실행해 보세요','간단한 파일 작업부터 시작하세요','Chat으로 하던 작업 하나를 Claude Code로 해보세요'],
+   next:'정체를 이해했다면 환경 박사(Dr. Environment)에게 이동하세요.'},
+  {emoji:'🟢',name:'Dr. Environment',role:'환경 박사',color:drColors[1],q:'Chat/Cowork/Code는 왜 다른가?',
+   summary:['Chat은 대화, Cowork은 위임, Claude Code는 협업이다','세 모드 모두 같은 Claude 모델을 사용한다','실행 환경(웹/GUI/CLI)에 따라 할 수 있는 것이 달라진다'],
+   miscon:['하나만 쓰면 된다 → 상황에 따라 적합한 모드가 다르다','Cowork과 Claude Code는 같다 → GUI vs CLI, 권한 범위가 다르다','Claude Code가 항상 최선이다 → 간단한 질문은 Chat이 더 빠르다'],
+   actions:['같은 작업을 Chat과 Claude Code로 각각 해보세요','비교표에서 10가지 차이를 확인하세요','작업 유형별로 적합한 모드를 정리해 보세요'],
+   next:'환경 차이를 이해했다면 바이브코딩 박사(Dr. Vibe)에게 이동하세요.'},
+  {emoji:'🟡',name:'Dr. Vibe',role:'바이브코딩 박사',color:drColors[2],q:'비개발자도 할 수 있는 것은?',
+   summary:['바이브 코딩은 자연어로 코딩하는 것이다','코딩 지식 없이도 앱, 스크립트, 자동화를 만들 수 있다','처음엔 간단한 파일 작업부터 시작하는 것을 추천한다'],
+   miscon:['코딩을 알아야 한다 → 자연어만으로 충분하다','결과물 품질이 낮다 → 구체적으로 설명하면 전문가 수준이다','한 번에 완성해야 한다 → 대화하며 점진적으로 개선하라'],
+   actions:['"이런 앱 만들어줘"를 한 번 시도해 보세요','파일 자동화를 직접 해보세요','결과가 마음에 안 들면 추가 요청을 하세요'],
+   next:'바이브 코딩을 해봤다면 기능 박사(Dr. Power)에게 이동하세요.'},
+  {emoji:'🔵',name:'Dr. Power',role:'기능 박사',color:drColors[3],q:'핵심 기능은 무엇인가?',
+   summary:['슬래시 명령은 Claude Code의 빠른 제어 수단이다','CLAUDE.md는 프로젝트의 "설명서"로, 일관된 협업의 핵심이다','서브에이전트와 /loop로 복잡한 작업을 자동화할 수 있다'],
+   miscon:['슬래시 명령을 다 외워야 한다 → /help로 언제든 확인 가능','CLAUDE.md는 선택사항이다 → 없으면 매번 맥락을 반복해야 한다','서브에이전트는 어렵다 → "이 두 작업을 동시에 해줘"라고 하면 된다'],
+   actions:['/help를 실행해서 명령 목록을 확인하세요','/init으로 CLAUDE.md를 자동 생성해 보세요','간단한 /plan을 실행해 보세요'],
+   next:'기능을 익혔다면 실습 박사(Dr. Practice)에게 이동하세요.'},
+  {emoji:'🟣',name:'Dr. Practice',role:'실습 박사',color:drColors[4],q:'어떻게 첫 성공을 이끌어내는가?',
+   summary:['설치→첫 실행→기본 명령→CLAUDE.md→스킬 순으로 진행하라','처음엔 간단한 파일 작업부터 시작하라','실수를 두려워하지 마라 — git으로 언제든 되돌릴 수 있다'],
+   miscon:['설치가 어렵다 → 공식 문서를 따라가면 5분 안에 완료','실수하면 큰일난다 → git으로 언제든 되돌릴 수 있다','한 번에 큰 프로젝트를 해야 한다 → 작은 것부터 점진적으로'],
+   actions:['오늘 당장 설치해서 실행해 보세요','기존 프로젝트에서 /init을 실행해 보세요','매일 하나씩 새로운 슬래시 명령을 사용해 보세요'],
+   next:'모든 박사의 가이드를 마쳤습니다. 퀴즈로 자기점검을 하거나 복사 메모를 활용하세요!'}
 ];
 
 const roadmapData = [
-  {title:'1?④퀎: 媛쒕뀗 ?댄빐',goal:'Claude Code媛 萸붿?, Chat/Cowork怨??대뼸寃??ㅻⅨ吏 ?댄빐',prep:'?뺤껜/鍮꾧탳???뱀뀡 ?숈뒿',success:'??紐⑤뱶??李⑥씠瑜??ㅻ챸?????덈떎',checkpoint:'Claude Code???듭떖 李⑤퀎??3媛吏瑜?留먰븷 ???덈뒗媛?'},
-  {title:'2?④퀎: ?ㅼ튂',goal:'怨듭떇 臾몄꽌瑜?李멸퀬?섏뿬 ?ㅼ튂',prep:'Node.js ?ㅼ튂 ?뺤씤',success:'?곕??먯뿉??claude 紐낅졊???ㅽ뻾?쒕떎',checkpoint:'/doctor濡??섍꼍 吏꾨떒???듦낵?섎뒗媛?'},
-  {title:'3?④퀎: 泥??ㅽ뻾',goal:'湲곕낯 紐낅졊 ?뺤씤 諛?媛꾨떒???붿껌',prep:'2?④퀎 ?꾨즺',success:'/help濡?紐낅졊 紐⑸줉???뺤씤?덈떎',checkpoint:'媛꾨떒???뚯씪 ?묒뾽???깃났?덈뒗媛?'},
-  {title:'4?④퀎: 湲곕낯 ?묒뾽',goal:'?뚯씪 泥섎━, 肄붾뱶 ?앹꽦, ?곗씠??遺꾩꽍',prep:'3?④퀎 ?꾨즺',success:'諛붿씠釉?肄붾뵫?쇰줈 理쒖냼 1媛??꾨줈?앺듃瑜?留뚮뱾?덈떎',checkpoint:'??뷀븯硫??먯쭊??媛쒖꽑???대뇬?붽??'},
-  {title:'5?④퀎: CLAUDE.md',goal:'?꾨줈?앺듃??CLAUDE.md ?앹꽦 諛??쒖슜',prep:'4?④퀎 ?꾨즺',success:'/init?쇰줈 ?앹꽦 ??而ㅼ뒪?곕쭏?댁쫰?덈떎',checkpoint:'肄붾뵫 洹쒖튃怨?湲덉??ы빆??諛섏쁺?섏뿀?붽??'},
-  {title:'6?④퀎: ?ㅽ궗 & ?먮룞??,goal:'?ㅽ궗/?뚮윭洹몄씤 ?쒖슜, ?쒕툕?먯씠?꾪듃 ?쒕룄',prep:'5?④퀎 ?꾨즺',success:'理쒖냼 1媛??ㅽ궗???ъ슜?섍굅??留뚮뱾?덈떎',checkpoint:'諛섎났 ?묒뾽???먮룞?뷀뻽?붽??'}
+  {title:'1단계: 개념 이해',goal:'Claude Code가 뭔지, Chat/Cowork과 어떻게 다른지 이해',prep:'정체/비교표 섹션 학습',success:'세 모드의 차이를 설명할 수 있다',checkpoint:'Claude Code의 핵심 차별점 3가지를 말할 수 있는가?'},
+  {title:'2단계: 설치',goal:'공식 문서를 참고하여 설치',prep:'Node.js 설치 확인',success:'터미널에서 claude 명령이 실행된다',checkpoint:'/doctor로 환경 진단이 통과하는가?'},
+  {title:'3단계: 첫 실행',goal:'기본 명령 확인 및 간단한 요청',prep:'2단계 완료',success:'/help로 명령 목록을 확인했다',checkpoint:'간단한 파일 작업을 성공했는가?'},
+  {title:'4단계: 기본 작업',goal:'파일 처리, 코드 생성, 데이터 분석',prep:'3단계 완료',success:'바이브 코딩으로 최소 1개 프로젝트를 만들었다',checkpoint:'대화하며 점진적 개선을 해봤는가?'},
+  {title:'5단계: CLAUDE.md',goal:'프로젝트에 CLAUDE.md 생성 및 활용',prep:'4단계 완료',success:'/init으로 생성 후 커스터마이즈했다',checkpoint:'코딩 규칙과 금지사항이 반영되었는가?'},
+  {title:'6단계: 스킬 & 자동화',goal:'스킬/플러그인 활용, 서브에이전트 시도',prep:'5단계 완료',success:'최소 1개 스킬을 사용하거나 만들었다',checkpoint:'반복 작업을 자동화했는가?'}
 ];
 
 const labSteps = [
-  {title:'STEP 1: ?ㅼ튂?섍린',steps:['怨듭떇 臾몄꽌(docs.anthropic.com)瑜??뺤씤?⑸땲??,'Node.js媛 ?ㅼ튂?섏뼱 ?덈뒗吏 ?뺤씤?⑸땲??,'?곕??먯뿉???ㅼ튂 紐낅졊???ㅽ뻾?⑸땲??,'?몄쬆(API ???먮뒗 濡쒓렇?????꾨즺?⑸땲??,'?뮕 援ъ껜???ㅼ튂 紐낅졊? OS???곕씪 ?ㅻⅤ誘濡?怨듭떇 臾몄꽌瑜?李몄“?섏꽭??]},
-  {title:'STEP 2: 泥??ㅽ뻾',steps:['?곕??먯쓣 ?닿퀬 claude瑜??낅젰?⑸땲??,'?섏쁺 硫붿떆吏? ?꾩옱 ?붾젆?좊━瑜??뺤씤?⑸땲??,'?ъ슜 媛?ν븳 湲곕낯 紐낅졊???뺤씤?⑸땲??,'?뮕 ?꾨줈?앺듃 ?대뜑?먯꽌 ?쒖옉?섎뒗 寃껋쓣 異붿쿇?⑸땲??]},
-  {title:'STEP 3: 湲곕낯 紐낅졊 泥댄뿕',steps:['/help ??紐낅졊 紐⑸줉 ?뺤씤','/doctor ???섍꼍 吏꾨떒','泥??붿껌: "?꾩옱 ?대뜑???뚯씪 紐⑸줉??蹂댁뿬以?','??踰덉㎏ ?붿껌: "README.md瑜??쎄퀬 ?붿빟?댁쨾"','?뮕 ??紐낅졊 ?ㅽ뻾 ???뱀씤???붿껌?????덉뒿?덈떎']},
-  {title:'STEP 4: 媛꾨떒???묒뾽',steps:['諛붿씠釉?肄붾뵫: "媛꾨떒??怨꾩궛湲??뱁럹?댁?瑜?留뚮뱾?댁쨾"','?뚯씪 ?먮룞?? "???대뜑??.txt ?뚯씪 媛쒖닔瑜??몄뼱以?','肄붾뱶 遺꾩꽍: "???뚯씪??肄붾뱶瑜??ㅻ챸?댁쨾"','?뮕 寃곌낵媛 留덉쓬?????ㅻ㈃ 異붽? ?붿껌???섏꽭??]},
-  {title:'STEP 5: CLAUDE.md 留뚮뱾湲?,steps:['/init ?ㅽ뻾 ???꾨줈?앺듃 遺꾩꽍 ??CLAUDE.md ?먮룞 ?앹꽦','?앹꽦???뚯씪???댁뼱 ?꾨줈?앺듃 ?ㅻ챸 ?뺤씤','肄붾뵫 洹쒖튃 異붽?','湲덉? ?ы빆 紐낆떆','?뮕 CLAUDE.md??怨꾩냽 ?낅뜲?댄듃?섏꽭??]}
+  {title:'STEP 1: 설치하기',steps:['공식 문서(docs.anthropic.com)를 확인합니다','Node.js가 설치되어 있는지 확인합니다','터미널에서 설치 명령을 실행합니다','인증(API 키 또는 로그인)을 완료합니다','💡 구체적 설치 명령은 OS에 따라 다르므로 공식 문서를 참조하세요']},
+  {title:'STEP 2: 첫 실행',steps:['터미널을 열고 claude를 입력합니다','환영 메시지와 현재 디렉토리를 확인합니다','사용 가능한 기본 명령을 확인합니다','💡 프로젝트 폴더에서 시작하는 것을 추천합니다']},
+  {title:'STEP 3: 기본 명령 체험',steps:['/help → 명령 목록 확인','/doctor → 환경 진단','첫 요청: "현재 폴더의 파일 목록을 보여줘"','두 번째 요청: "README.md를 읽고 요약해줘"','💡 셸 명령 실행 시 승인을 요청할 수 있습니다']},
+  {title:'STEP 4: 간단한 작업',steps:['바이브 코딩: "간단한 계산기 웹페이지를 만들어줘"','파일 자동화: "이 폴더의 .txt 파일 개수를 세어줘"','코드 분석: "이 파일의 코드를 설명해줘"','💡 결과가 마음에 안 들면 추가 요청을 하세요']},
+  {title:'STEP 5: CLAUDE.md 만들기',steps:['/init 실행 → 프로젝트 분석 → CLAUDE.md 자동 생성','생성된 파일을 열어 프로젝트 설명 확인','코딩 규칙 추가','금지 사항 명시','💡 CLAUDE.md는 계속 업데이트하세요']}
 ];
 
-const labChecklistData = ['Node.js媛 ?ㅼ튂?섏뼱 ?덈떎','Claude Code媛 ?ㅼ튂?섏뼱 ?덈떎','?곕??먯뿉??claude 紐낅졊???ㅽ뻾?쒕떎','/help濡?紐낅졊 紐⑸줉???뺤씤?덈떎','媛꾨떒???뚯씪 ?묒뾽???깃났?덈떎','/init?쇰줈 CLAUDE.md瑜??앹꽦?덈떎'];
+const labChecklistData = ['Node.js가 설치되어 있다','Claude Code가 설치되어 있다','터미널에서 claude 명령이 실행된다','/help로 명령 목록을 확인했다','간단한 파일 작업을 성공했다','/init으로 CLAUDE.md를 생성했다'];
 
 const quizData = [
-  {q:'Claude Code???대뵒???ㅽ뻾?섎뒗媛?',opts:['??釉뚮씪?곗?','?곗뒪?ы넲 ??,'?곕???(CLI)','紐⑤컮????],answer:2,explain:'Claude Code???곕???紐낅졊以??명꽣?섏씠???먯꽌 ?ㅽ뻾?⑸땲??'},
-  {q:'Chat, Cowork, Claude Code???듭떖 李⑥씠??',opts:['紐⑤뜽???ㅻⅤ??,'媛寃⑹씠 ?ㅻⅤ??,'?ㅽ뻾 ?섍꼍怨?沅뚰븳???ㅻⅤ??,'?몄뼱媛 ?ㅻⅤ??],answer:2,explain:'媛숈? Claude 紐⑤뜽?댁?留??ㅽ뻾 ?섍꼍怨?沅뚰븳 踰붿쐞媛 ?ㅻ쫭?덈떎.'},
-  {q:'"諛붿씠釉?肄붾뵫"?대??',opts:['?뚯븙 ?ㅼ쑝硫?肄붾뵫','?먯뿰?대줈 AI?먭쾶 肄붾뵫???쒗궎??寃?,'?뱀젙 ?몄뼱濡쒕쭔 肄붾뵫','?쒕뜡 肄붾뵫'],answer:1,explain:'肄붾뵫 吏???놁씠 ?먯뿰?대줈 ?먰븯??寃껋쓣 ?ㅻ챸?섎㈃ AI媛 肄붾뱶瑜??앹꽦?섎뒗 寃껋엯?덈떎.'},
-  {q:'CLAUDE.md????븷??',opts:['濡쒓렇???ㅼ젙','?꾨줈?앺듃 留λ씫怨?洹쒖튃??AI?먭쾶 ?꾨떖','鍮꾨?踰덊샇 ???,'?붽툑 愿由?],answer:1,explain:'CLAUDE.md???꾨줈?앺듃??留λ씫, 洹쒖튃, 湲덉??ы빆??Claude Code?먭쾶 ?꾨떖?⑸땲??'},
-  {q:'/plan 紐낅졊???⑸룄??',opts:['?붽툑 ?뺤씤','?묒뾽 怨꾪쉷 ?섎┰','?ㅼ튂','珥덇린??],answer:1,explain:'/plan? ?묒뾽 ?꾩뿉 ?ㅽ뻾 怨꾪쉷???몄슦??紐낅졊?낅땲??'},
-  {q:'Claude Code?먯꽌留?媛?ν븳 湲곕뒫??',opts:['?띿뒪?????,'?뚯씪 ?낅줈??,'?쒕툕?먯씠?꾪듃 fork/蹂묐젹 泥섎━','??寃??],answer:2,explain:'?쒕툕?먯씠?꾪듃 fork??Claude Code留뚯쓽 湲곕뒫?낅땲??'},
-  {q:'/compact???④낵??',opts:['?뚯씪 ?뺤텞','???湲곕줉 ?붿빟?쇰줈 而⑦뀓?ㅽ듃 ?덉빟','?붾㈃ 異뺤냼','鍮꾩슜 ?덇컧'],answer:1,explain:'???湲곕줉???붿빟?섏뿬 而⑦뀓?ㅽ듃 ?덈룄?곕? ?⑥쑉?곸쑝濡??ъ슜?⑸땲??'},
-  {q:'鍮꾧컻諛쒖옄媛 Claude Code濡??????덈뒗 寃껋??',opts:['?꾨Т寃껊룄','媛꾨떒??吏덈Ц留?,'?뚯씪 ?먮룞?? ???앹꽦, ?곗씠??泥섎━','肄붾뱶 由щ럭留?],answer:2,explain:'諛붿씠釉?肄붾뵫?쇰줈 ?ㅼ뼇???묒뾽??媛?ν빀?덈떎.'},
-  {q:'Cowork怨?Claude Code??媛????李⑥씠??',opts:['紐⑤뜽 踰꾩쟾','GUI vs CLI','媛寃?,'?몄뼱 吏??],answer:1,explain:'Cowork? GUI, Claude Code??CLI?낅땲??'},
-  {q:'/init? 臾댁뾿???섎뒗媛?',opts:['Claude Code ?ㅼ튂','CLAUDE.md ?먮룞 ?앹꽦','紐⑤뱺 ?뚯씪 ??젣','鍮꾩슜 珥덇린??],answer:1,explain:'?꾨줈?앺듃瑜?遺꾩꽍?섏뿬 CLAUDE.md瑜??먮룞 ?앹꽦?⑸땲??'},
-  {q:'沅뚰븳 愿由ъ쓽 ?듭떖 媛쒕뀗??',opts:['鍮꾨?踰덊샇','allowed-tools, ?먮룞 ?뱀씤','2?④퀎 ?몄쬆','IP ?쒗븳'],answer:1,explain:'allowed-tools濡??꾧뎄瑜??쒗븳?섍퀬 ?먮룞 ?뱀씤?쇰줈 ?몄쓽瑜??믪엯?덈떎.'},
-  {q:'泥섏쓬 ?쒖옉????異붿쿇?섎뒗 ?묒뾽??',opts:['?洹쒕え ?꾨줈?앺듃','蹂듭옟??API 媛쒕컻','媛꾨떒???뚯씪 ?묒뾽','?곗씠?곕쿋?댁뒪 ?ㅺ퀎'],answer:2,explain:'媛꾨떒???뚯씪 ?묒뾽遺???쒖옉?섎뒗 寃껋쓣 異붿쿇?⑸땲??'},
-  {q:'?щ옒??紐낅졊???꾨땶 寃껋??',opts:['/help','/plan','/execute','/compact'],answer:2,explain:'/execute??Claude Code??湲곕낯 ?щ옒??紐낅졊???꾨떃?덈떎.'}
+  {q:'Claude Code는 어디서 실행되는가?',opts:['웹 브라우저','데스크톱 앱','터미널 (CLI)','모바일 앱'],answer:2,explain:'Claude Code는 터미널(명령줄 인터페이스)에서 실행됩니다.'},
+  {q:'Chat, Cowork, Claude Code의 핵심 차이는?',opts:['모델이 다르다','가격이 다르다','실행 환경과 권한이 다르다','언어가 다르다'],answer:2,explain:'같은 Claude 모델이지만 실행 환경과 권한 범위가 다릅니다.'},
+  {q:'"바이브 코딩"이란?',opts:['음악 들으며 코딩','자연어로 AI에게 코딩을 시키는 것','특정 언어로만 코딩','랜덤 코딩'],answer:1,explain:'코딩 지식 없이 자연어로 원하는 것을 설명하면 AI가 코드를 생성하는 것입니다.'},
+  {q:'CLAUDE.md의 역할은?',opts:['로그인 설정','프로젝트 맥락과 규칙을 AI에게 전달','비밀번호 저장','요금 관리'],answer:1,explain:'CLAUDE.md는 프로젝트의 맥락, 규칙, 금지사항을 Claude Code에게 전달합니다.'},
+  {q:'/plan 명령의 용도는?',opts:['요금 확인','작업 계획 수립','설치','초기화'],answer:1,explain:'/plan은 작업 전에 실행 계획을 세우는 명령입니다.'},
+  {q:'Claude Code에서만 가능한 기능은?',opts:['텍스트 대화','파일 업로드','서브에이전트 fork/병렬 처리','웹 검색'],answer:2,explain:'서브에이전트 fork는 Claude Code만의 기능입니다.'},
+  {q:'/compact의 효과는?',opts:['파일 압축','대화 기록 요약으로 컨텍스트 절약','화면 축소','비용 절감'],answer:1,explain:'대화 기록을 요약하여 컨텍스트 윈도우를 효율적으로 사용합니다.'},
+  {q:'비개발자가 Claude Code로 할 수 있는 것은?',opts:['아무것도','간단한 질문만','파일 자동화, 앱 생성, 데이터 처리','코드 리뷰만'],answer:2,explain:'바이브 코딩으로 다양한 작업이 가능합니다.'},
+  {q:'Cowork과 Claude Code의 가장 큰 차이는?',opts:['모델 버전','GUI vs CLI','가격','언어 지원'],answer:1,explain:'Cowork은 GUI, Claude Code는 CLI입니다.'},
+  {q:'/init은 무엇을 하는가?',opts:['Claude Code 설치','CLAUDE.md 자동 생성','모든 파일 삭제','비용 초기화'],answer:1,explain:'프로젝트를 분석하여 CLAUDE.md를 자동 생성합니다.'},
+  {q:'권한 관리의 핵심 개념은?',opts:['비밀번호','allowed-tools, 자동 승인','2단계 인증','IP 제한'],answer:1,explain:'allowed-tools로 도구를 제한하고 자동 승인으로 편의를 높입니다.'},
+  {q:'처음 시작할 때 추천하는 작업은?',opts:['대규모 프로젝트','복잡한 API 개발','간단한 파일 작업','데이터베이스 설계'],answer:2,explain:'간단한 파일 작업부터 시작하는 것을 추천합니다.'},
+  {q:'슬래시 명령이 아닌 것은?',opts:['/help','/plan','/execute','/compact'],answer:2,explain:'/execute는 Claude Code의 기본 슬래시 명령이 아닙니다.'}
 ];
 
 const glossaryData = [
-  {term:'Claude Code',def:'?곕??먯뿉???묐룞?섎뒗 AI 肄붾뵫 ?먯씠?꾪듃.',easy:'"?곕????덉쓽 AI 媛쒕컻 ?뚰듃??'},
-  {term:'CLI',def:'Command Line Interface. ?띿뒪??紐낅졊?쇰줈 而댄벂?곗? ?곹샇?묒슜.',easy:'"寃? ?붾㈃?먯꽌 湲?먮줈 紐낅졊?섎뒗 寃?'},
-  {term:'?곕???,def:'CLI瑜??ъ슜?섍린 ?꾪븳 ?꾨줈洹몃옩.',easy:'"紐낅졊?대? ?낅젰?섎뒗 李?'},
-  {term:'諛붿씠釉?肄붾뵫',def:'?먯뿰?대줈 AI?먭쾶 肄붾뵫???쒗궎??諛⑹떇.',easy:'"留먮줈 ?쒖폒???꾨줈洹몃옩 留뚮뱶??寃?'},
-  {term:'Cowork',def:'Claude??GUI 湲곕컲 ?묒뾽 ?꾩엫 紐⑤뱶.',easy:'"洹몃옒???붾㈃?먯꽌 AI?먭쾶 ???쒗궎??寃?'},
-  {term:'CLAUDE.md',def:'?꾨줈?앺듃 猷⑦듃???먮뒗 AI???꾨줈?앺듃 ?ㅻ챸??',easy:'"AI?먭쾶 二쇰뒗 ?꾨줈?앺듃 留ㅻ돱??'},
-  {term:'?щ옒??紐낅졊',def:'/濡??쒖옉?섎뒗 Claude Code 鍮좊Ⅸ 紐낅졊.',easy:'"/ 移섍퀬 諛붾줈 ?곕뒗 ?⑥텞??'},
-  {term:'?쒕툕?먯씠?꾪듃',def:'Claude Code媛 fork?섎뒗 ?섏쐞 ?먯씠?꾪듃. 蹂묐젹 ?묒뾽 媛??',easy:'"AI 遺꾩떊. ?щ윭 ?쇱쓣 ?숈떆??'},
-  {term:'?ㅽ궗',def:'?뱀젙 ?묒뾽???뱁솕???꾨＼?꾪듃+?꾧뎄 議고빀.',easy:'"AI???꾨Ц 湲곗닠 紐⑤뱢"'},
-  {term:'?뚮윭洹몄씤',def:'?몃? ?쒕퉬?ㅼ? AI瑜??곌껐?섎뒗 ?뺤옣 紐⑤뱢.',easy:'"AI????湲곕뒫 ?쇱슦湲?'},
-  {term:'而⑦뀓?ㅽ듃 ?덈룄??,def:'AI媛 ??踰덉뿉 泥섎━?????덈뒗 理쒕? ?띿뒪??湲몄씠.',easy:'"AI??湲곗뼲???쒓퀎"'},
-  {term:'git',def:'踰꾩쟾 愿由??쒖뒪??',easy:'"肄붾뱶 蹂寃???꾨㉧??'},
-  {term:'worktree',def:'?섎굹????μ냼?먯꽌 ?щ윭 釉뚮옖移섎? ?숈떆???묒뾽.',easy:'"?щ윭 踰꾩쟾???숈떆???닿린"'},
-  {term:'allowed-tools',def:'?ъ슜 媛?ν븳 ?꾧뎄 紐⑸줉???쒗븳?섎뒗 沅뚰븳 ?ㅼ젙.',easy:'"AI媛 ?????덈뒗 ?꾧뎄 ?덉슜 紐⑸줉"'},
-  {term:'fork',def:'?꾨줈?몄뒪瑜?蹂듭젣?섏뿬 ?낅┰ ?ㅽ뻾.',easy:'"遺꾩떊 留뚮뱾湲?'},
-  {term:'/compact',def:'???湲곕줉???붿빟?섏뿬 而⑦뀓?ㅽ듃 ?덉빟.',easy:'"????붿빟?댁꽌 湲곗뼲???꾨겮湲?'},
-  {term:'/init',def:'CLAUDE.md瑜??먮룞 ?앹꽦.',easy:'"?꾨줈?앺듃 ?ㅻ챸???먮룞 留뚮뱾湲?'},
-  {term:'?좏겙',def:'AI媛 ?띿뒪?몃? 泥섎━?섎뒗 理쒖냼 ?⑥쐞.',easy:'"AI媛 ?쎈뒗 湲??議곌컖"'}
+  {term:'Claude Code',def:'터미널에서 작동하는 AI 코딩 에이전트.',easy:'"터미널 안의 AI 개발 파트너"'},
+  {term:'CLI',def:'Command Line Interface. 텍스트 명령으로 컴퓨터와 상호작용.',easy:'"검은 화면에서 글자로 명령하는 것"'},
+  {term:'터미널',def:'CLI를 사용하기 위한 프로그램.',easy:'"명령어를 입력하는 창"'},
+  {term:'바이브 코딩',def:'자연어로 AI에게 코딩을 시키는 방식.',easy:'"말로 시켜서 프로그램 만드는 것"'},
+  {term:'Cowork',def:'Claude의 GUI 기반 작업 위임 모드.',easy:'"그래픽 화면에서 AI에게 일 시키는 것"'},
+  {term:'CLAUDE.md',def:'프로젝트 루트에 두는 AI용 프로젝트 설명서.',easy:'"AI에게 주는 프로젝트 매뉴얼"'},
+  {term:'슬래시 명령',def:'/로 시작하는 Claude Code 빠른 명령.',easy:'"/ 치고 바로 쓰는 단축키"'},
+  {term:'서브에이전트',def:'Claude Code가 fork하는 하위 에이전트. 병렬 작업 가능.',easy:'"AI 분신. 여러 일을 동시에"'},
+  {term:'스킬',def:'특정 작업에 특화된 프롬프트+도구 조합.',easy:'"AI의 전문 기술 모듈"'},
+  {term:'플러그인',def:'외부 서비스와 AI를 연결하는 확장 모듈.',easy:'"AI에 새 기능 끼우기"'},
+  {term:'컨텍스트 윈도우',def:'AI가 한 번에 처리할 수 있는 최대 텍스트 길이.',easy:'"AI의 기억력 한계"'},
+  {term:'git',def:'버전 관리 시스템.',easy:'"코드 변경 타임머신"'},
+  {term:'worktree',def:'하나의 저장소에서 여러 브랜치를 동시에 작업.',easy:'"여러 버전을 동시에 열기"'},
+  {term:'allowed-tools',def:'사용 가능한 도구 목록을 제한하는 권한 설정.',easy:'"AI가 쓸 수 있는 도구 허용 목록"'},
+  {term:'fork',def:'프로세스를 복제하여 독립 실행.',easy:'"분신 만들기"'},
+  {term:'/compact',def:'대화 기록을 요약하여 컨텍스트 절약.',easy:'"대화 요약해서 기억력 아끼기"'},
+  {term:'/init',def:'CLAUDE.md를 자동 생성.',easy:'"프로젝트 설명서 자동 만들기"'},
+  {term:'토큰',def:'AI가 텍스트를 처리하는 최소 단위.',easy:'"AI가 읽는 글자 조각"'}
 ];
 
 const memoArr = [
-  {title:'?뱥 ?듭떖 ?뺣━',id:'mm1',text:'??Claude Code = ?곕??먯뿉???묐룞?섎뒗 AI 肄붾뵫 ?먯씠?꾪듃\n??Chat = ???/ Cowork = ?꾩엫 / Claude Code = ?묒뾽\n\n?듭떖 李⑤퀎??\n  ???뚯씪 ?쒖뒪???꾩껜 ?묎렐\n  ????紐낅졊 ?ㅽ뻾\n  ??Git ?꾩쟾 ?듯빀\n  ???쒕툕?먯씠?꾪듃 蹂묐젹 泥섎━\n  ??/loop, cron 諛섎났 ?먮룞??n\n鍮꾧컻諛쒖옄??媛??\n  ??諛붿씠釉?肄붾뵫?쇰줈 ???앹꽦\n  ???뚯씪 ?먮룞?? ?곗씠??蹂??n  ???먯뿰?대쭔?쇰줈 異⑸텇'},
-  {title:'??泥??쒖옉 泥댄겕由ъ뒪??,id:'mm2',text:'??怨듭떇 臾몄꽌?먯꽌 ?ㅼ튂 諛⑸쾿 ?뺤씤\n??Node.js ?ㅼ튂 ?뺤씤\n??Claude Code ?ㅼ튂\n???곕??먯뿉??claude ?ㅽ뻾\n??/help 濡?紐낅졊 紐⑸줉 ?뺤씤\n??/doctor 濡??섍꼍 吏꾨떒\n??媛꾨떒???붿껌 ("?뚯씪 紐⑸줉 蹂댁뿬以?)\n??/init ?쇰줈 CLAUDE.md ?앹꽦\n??CLAUDE.md ?댁슜 ?뺤씤 諛??섏젙\n??諛붿씠釉?肄붾뵫 ?쒕룄'},
-  {title:'?⑨툘 ?щ옒??紐낅졊 移섑듃?쒗듃',id:'mm3',text:'/help      ???꾩?留?/ 紐낅졊 紐⑸줉\n/plan      ???묒뾽 怨꾪쉷 ?섎┰\n/review    ??蹂寃쎌궗??肄붾뱶 由щ럭\n/compact   ??????붿빟 (而⑦뀓?ㅽ듃 ?덉빟)\n/clear     ?????珥덇린??n/cost      ???좏겙/鍮꾩슜 ?뺤씤\n/doctor    ???섍꼍 吏꾨떒\n/init      ??CLAUDE.md ?먮룞 ?앹꽦\n/status    ???묒뾽 ?곹깭 ?뺤씤\n/config    ???ㅼ젙 蹂寃?}
+  {title:'📋 핵심 정리',id:'mm1',text:'• Claude Code = 터미널에서 작동하는 AI 코딩 에이전트\n• Chat = 대화 / Cowork = 위임 / Claude Code = 협업\n\n핵심 차별점:\n  → 파일 시스템 전체 접근\n  → 셸 명령 실행\n  → Git 완전 통합\n  → 서브에이전트 병렬 처리\n  → /loop, cron 반복 자동화\n\n비개발자도 가능:\n  → 바이브 코딩으로 앱 생성\n  → 파일 자동화, 데이터 변환\n  → 자연어만으로 충분'},
+  {title:'✅ 첫 시작 체크리스트',id:'mm2',text:'□ 공식 문서에서 설치 방법 확인\n□ Node.js 설치 확인\n□ Claude Code 설치\n□ 터미널에서 claude 실행\n□ /help 로 명령 목록 확인\n□ /doctor 로 환경 진단\n□ 간단한 요청 ("파일 목록 보여줘")\n□ /init 으로 CLAUDE.md 생성\n□ CLAUDE.md 내용 확인 및 수정\n□ 바이브 코딩 시도'},
+  {title:'⌨️ 슬래시 명령 치트시트',id:'mm3',text:'/help      → 도움말 / 명령 목록\n/plan      → 작업 계획 수립\n/review    → 변경사항 코드 리뷰\n/compact   → 대화 요약 (컨텍스트 절약)\n/clear     → 대화 초기화\n/cost      → 토큰/비용 확인\n/doctor    → 환경 진단\n/init      → CLAUDE.md 자동 생성\n/status    → 작업 상태 확인\n/config    → 설정 변경'}
 ];
 
 // ============ STATE ============
@@ -558,7 +558,7 @@ function selectWhat(idx){
 
 // ============ COMPARE TABLE ============
 function buildCompareTable(){
-  document.getElementById('compareTableWrap').innerHTML=`<table class="comp-table"><thead><tr><th>鍮꾧탳 ??ぉ</th><th>?뮠 Chat</th><th>?쨼 Cowork</th><th class="hi">??Claude Code</th></tr></thead><tbody>${compareTableData.map(r=>`<tr><td><strong>${r[0]}</strong></td><td>${r[1]}</td><td>${r[2]}</td><td class="hi">${r[3]}</td></tr>`).join('')}</tbody></table>`;
+  document.getElementById('compareTableWrap').innerHTML=`<table class="comp-table"><thead><tr><th>비교 항목</th><th>💬 Chat</th><th>🤖 Cowork</th><th class="hi">⚡ Claude Code</th></tr></thead><tbody>${compareTableData.map(r=>`<tr><td><strong>${r[0]}</strong></td><td>${r[1]}</td><td>${r[2]}</td><td class="hi">${r[3]}</td></tr>`).join('')}</tbody></table>`;
 }
 
 // ============ SCENARIOS ============
@@ -570,15 +570,15 @@ function switchSc(idx){
   document.querySelectorAll('#scTabs .tab-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
   const s=scenarioData[idx];
   document.getElementById('scContent').innerHTML=`<div class="compare-wrap">
-    <div class="compare-side chat"><span class="compare-label" style="background:rgba(255,123,114,0.15);color:var(--accent5);">?뮠 Chat</span><p>${s.chat}</p></div>
-    <div class="compare-side cowork"><span class="compare-label" style="background:rgba(63,185,80,0.15);color:var(--accent2);">?쨼 Cowork</span><p>${s.cowork}</p></div>
-    <div class="compare-side code"><span class="compare-label" style="background:rgba(210,168,255,0.15);color:var(--accent3);">??Claude Code</span><p>${s.code}</p></div>
+    <div class="compare-side chat"><span class="compare-label" style="background:rgba(255,123,114,0.15);color:var(--accent5);">💬 Chat</span><p>${s.chat}</p></div>
+    <div class="compare-side cowork"><span class="compare-label" style="background:rgba(63,185,80,0.15);color:var(--accent2);">🤖 Cowork</span><p>${s.cowork}</p></div>
+    <div class="compare-side code"><span class="compare-label" style="background:rgba(210,168,255,0.15);color:var(--accent3);">⚡ Claude Code</span><p>${s.code}</p></div>
   </div>`;
 }
 
 // ============ VIBE ============
 function buildVibe(){
-  document.getElementById('vibeWrap').innerHTML=vibeData.map(v=>`<div class="vibe-card"><h4>${v.title}</h4><div class="vibe-prompt">${esc(v.prompt)}</div><div class="vibe-result">??${v.result}</div></div>`).join('');
+  document.getElementById('vibeWrap').innerHTML=vibeData.map(v=>`<div class="vibe-card"><h4>${v.title}</h4><div class="vibe-prompt">${esc(v.prompt)}</div><div class="vibe-result">→ ${v.result}</div></div>`).join('');
 }
 
 // ============ FEATURES ============
@@ -595,13 +595,13 @@ function selectFeat(idx){
 
 // ============ SLASH ============
 function buildSlash(){
-  document.getElementById('slashWrap').innerHTML=slashData.map(s=>`<div class="slash-item"><div class="slash-cmd">${s.cmd}</div><div><div class="slash-desc">${s.desc}</div><div class="slash-use">?뱦 ${s.use}</div></div></div>`).join('');
+  document.getElementById('slashWrap').innerHTML=slashData.map(s=>`<div class="slash-item"><div class="slash-cmd">${s.cmd}</div><div><div class="slash-desc">${s.desc}</div><div class="slash-use">📌 ${s.use}</div></div></div>`).join('');
 }
 
 // ============ CLAUDE.md ============
 function buildClaudemd(){
   document.getElementById('claudemdWrap').innerHTML=claudemdData.map((c,i)=>{
-    if(c.code) return `<div class="card" style="margin:12px 0;padding:20px;"><h4 style="margin-bottom:10px;">${c.title}</h4><div class="code-block" id="cm${i}">${esc(c.code)}<button class="copy-btn" onclick="copyMemo(this,'cm${i}')">蹂듭궗</button></div></div>`;
+    if(c.code) return `<div class="card" style="margin:12px 0;padding:20px;"><h4 style="margin-bottom:10px;">${c.title}</h4><div class="code-block" id="cm${i}">${esc(c.code)}<button class="copy-btn" onclick="copyMemo(this,'cm${i}')">복사</button></div></div>`;
     return `<div class="card" style="margin:12px 0;padding:20px;"><h4 style="margin-bottom:10px;">${c.title}</h4><p style="font-size:0.88rem;color:var(--text2);white-space:pre-wrap;line-height:1.8;">${c.text}</p></div>`;
   }).join('');
 }
@@ -614,12 +614,12 @@ function buildDoctors(){
 function selectDr(idx){
   document.querySelectorAll('.dr-card').forEach((c,i)=>{c.classList.toggle('selected',i===idx);c.style.borderColor=i===idx?drColors[i]:'var(--border)';});
   const d=drInfo[idx];
-  document.getElementById('drPanel').innerHTML=`<h3 style="color:${d.color}">${d.emoji} ${d.name} ??${d.role}</h3>
-    <h4>???닿껐?섎뒗 吏덈Ц</h4><p style="font-size:0.9rem;color:var(--text2);margin-bottom:12px;">${d.q}</p>
-    <h4>?뱦 ?듭떖 ?붿빟</h4><ul class="dr-list">${d.summary.map(s=>'<li>'+s+'</li>').join('')}</ul>
-    <h4>?좑툘 ?뷀븳 ?ㅽ빐</h4><ul class="dr-list">${d.miscon.map(s=>'<li>'+s+'</li>').join('')}</ul>
-    <h4>??諛붾줈 ?대낵 ?됰룞</h4><ul class="dr-list">${d.actions.map(s=>'<li>'+s+'</li>').join('')}</ul>
-    <div class="dr-next">?∽툘 ${d.next}</div>`;
+  document.getElementById('drPanel').innerHTML=`<h3 style="color:${d.color}">${d.emoji} ${d.name} — ${d.role}</h3>
+    <h4>❓ 해결하는 질문</h4><p style="font-size:0.9rem;color:var(--text2);margin-bottom:12px;">${d.q}</p>
+    <h4>📌 핵심 요약</h4><ul class="dr-list">${d.summary.map(s=>'<li>'+s+'</li>').join('')}</ul>
+    <h4>⚠️ 흔한 오해</h4><ul class="dr-list">${d.miscon.map(s=>'<li>'+s+'</li>').join('')}</ul>
+    <h4>✅ 바로 해볼 행동</h4><ul class="dr-list">${d.actions.map(s=>'<li>'+s+'</li>').join('')}</ul>
+    <div class="dr-next">➡️ ${d.next}</div>`;
 }
 
 // ============ ROADMAP ============
@@ -627,10 +627,10 @@ function buildRoadmap(){
   document.getElementById('roadmapWrap').innerHTML=roadmapData.map((r,i)=>`
     <div class="road-step ${completedChecks['road'+i]?'completed':''}" id="rs${i}">
       <div class="road-dot"></div><h4>${r.title}</h4>
-      <div class="acc" style="margin:8px 0;"><div class="acc-head" onclick="toggleAcc(this)" style="font-size:0.83rem;padding:8px 12px;">?곸꽭 蹂닿린 <span>??</span></div>
-        <div class="acc-body"><p><strong>?렞 紐⑺몴:</strong> ${r.goal}</p><p><strong>?벀 以鍮꾨Ъ:</strong> ${r.prep}</p><p><strong>???깃났 湲곗?:</strong> ${r.success}</p><p><strong>?뵇 泥댄겕?ъ씤??</strong> ${r.checkpoint}</p></div>
+      <div class="acc" style="margin:8px 0;"><div class="acc-head" onclick="toggleAcc(this)" style="font-size:0.83rem;padding:8px 12px;">상세 보기 <span>▼</span></div>
+        <div class="acc-body"><p><strong>🎯 목표:</strong> ${r.goal}</p><p><strong>📦 준비물:</strong> ${r.prep}</p><p><strong>✅ 성공 기준:</strong> ${r.success}</p><p><strong>🔍 체크포인트:</strong> ${r.checkpoint}</p></div>
       </div>
-      <div class="road-check"><label><input type="checkbox" ${completedChecks['road'+i]?'checked':''} onchange="toggleRoad(${i},this.checked)"> ???④퀎 ?꾨즺</label></div>
+      <div class="road-check"><label><input type="checkbox" ${completedChecks['road'+i]?'checked':''} onchange="toggleRoad(${i},this.checked)"> 이 단계 완료</label></div>
     </div>`).join('');
 }
 function toggleRoad(i,v){completedChecks['road'+i]=v;const el=document.getElementById('rs'+i);el.classList.toggle('completed',v);el.querySelector('.road-dot').style.background=v?'var(--accent2)':'var(--bg3)';el.querySelector('.road-dot').style.borderColor=v?'var(--accent2)':'var(--border)';updateProgress();}
@@ -649,7 +649,7 @@ function switchLab(idx){
 
 // ============ QUIZ ============
 function buildQuiz(){
-  document.getElementById('quizWrap').innerHTML=quizData.map((q,i)=>`<div class="quiz-q" id="qq${i}"><h4>${i+1}. ${q.q}</h4>${q.opts.map((o,j)=>`<div class="quiz-opt" onclick="pickQuiz(${i},this,${j})">${String.fromCharCode(9312+j)} ${o}</div>`).join('')}<div class="quiz-explain" id="qe${i}">?뮕 ${q.explain}</div></div>`).join('');
+  document.getElementById('quizWrap').innerHTML=quizData.map((q,i)=>`<div class="quiz-q" id="qq${i}"><h4>${i+1}. ${q.q}</h4>${q.opts.map((o,j)=>`<div class="quiz-opt" onclick="pickQuiz(${i},this,${j})">${String.fromCharCode(9312+j)} ${o}</div>`).join('')}<div class="quiz-explain" id="qe${i}">💡 ${q.explain}</div></div>`).join('');
 }
 function pickQuiz(qi,el,val){
   if(quizAnswers[qi]!==undefined)return;quizAnswers[qi]=val;
@@ -661,26 +661,26 @@ function pickQuiz(qi,el,val){
 function scoreQuiz(){
   let c=0;quizData.forEach((q,i)=>{if(quizAnswers[i]===q.answer)c++;});
   const a=Object.keys(quizAnswers).length,t=quizData.length,sc=document.getElementById('quizScore');sc.style.display='block';
-  if(a<t)sc.innerHTML=`?꾩쭅 ${t-a}臾명빆 ?⑥븯?듬땲??`;
-  else{const p=Math.round(c/t*100);sc.innerHTML=`?렞 ${t}臾명빆 以?${c}媛??뺣떟 (${p}??<br><span style="font-size:0.9rem;color:var(--text2);">${p>=80?'?뚮??⑸땲?? Claude Code 湲곗큹瑜????댄빐?섍퀬 ?덉뒿?덈떎.':p>=50?'醫뗭? ?쒖옉?낅땲?? ?由?遺遺??댁꽕???ㅼ떆 ?쎌뼱蹂댁꽭??':'?뺤껜/鍮꾧탳???뱀뀡???ㅼ떆 ?댄렣蹂댁꽭??'}</span>`;}
+  if(a<t)sc.innerHTML=`아직 ${t-a}문항 남았습니다.`;
+  else{const p=Math.round(c/t*100);sc.innerHTML=`🎯 ${t}문항 중 ${c}개 정답 (${p}점)<br><span style="font-size:0.9rem;color:var(--text2);">${p>=80?'훌륭합니다! Claude Code 기초를 잘 이해하고 있습니다.':p>=50?'좋은 시작입니다. 틀린 부분 해설을 다시 읽어보세요.':'정체/비교표 섹션을 다시 살펴보세요.'}</span>`;}
 }
 function resetQuiz(){quizAnswers={};document.getElementById('quizScore').style.display='none';buildQuiz();updateProgress();}
 
 // ============ GLOSSARY ============
 function buildGlossary(){
-  document.getElementById('glossaryList').innerHTML=glossaryData.map(g=>`<div class="glossary-item" data-term="${g.term.toLowerCase()}"><div class="glossary-term" onclick="this.nextElementSibling.classList.toggle('open')">${g.term}</div><div class="glossary-def"><p>${g.def}</p><p class="glossary-easy">?ъ슫 留? ${g.easy}</p></div></div>`).join('');
+  document.getElementById('glossaryList').innerHTML=glossaryData.map(g=>`<div class="glossary-item" data-term="${g.term.toLowerCase()}"><div class="glossary-term" onclick="this.nextElementSibling.classList.toggle('open')">${g.term}</div><div class="glossary-def"><p>${g.def}</p><p class="glossary-easy">쉬운 말: ${g.easy}</p></div></div>`).join('');
 }
 function filterGlossary(val){const v=val.toLowerCase();document.querySelectorAll('.glossary-item').forEach(i=>{i.style.display=i.dataset.term.includes(v)||v===''?'block':'none';});}
 
 // ============ MEMO ============
 function buildMemo(){
-  document.getElementById('memoWrap').innerHTML=memoArr.map(m=>`<div class="memo-card"><h4>${m.title}</h4><button class="copy-btn" onclick="copyMemo(this,'${m.id}')">蹂듭궗</button><pre id="${m.id}">${m.text}</pre></div>`).join('');
+  document.getElementById('memoWrap').innerHTML=memoArr.map(m=>`<div class="memo-card"><h4>${m.title}</h4><button class="copy-btn" onclick="copyMemo(this,'${m.id}')">복사</button><pre id="${m.id}">${m.text}</pre></div>`).join('');
 }
 
 // ============ UTILS ============
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function toggleAcc(el){const b=el.nextElementSibling;b.classList.toggle('open');const a=el.querySelector('span');if(a)a.textContent=b.classList.contains('open')?'??:'??;}
-function copyMemo(btn,id){const t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(()=>{btn.textContent='蹂듭궗??';btn.classList.add('copied');setTimeout(()=>{btn.textContent='蹂듭궗';btn.classList.remove('copied');},1500);}).catch(()=>{const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);btn.textContent='蹂듭궗??';btn.classList.add('copied');setTimeout(()=>{btn.textContent='蹂듭궗';btn.classList.remove('copied');},1500);});}
+function toggleAcc(el){const b=el.nextElementSibling;b.classList.toggle('open');const a=el.querySelector('span');if(a)a.textContent=b.classList.contains('open')?'▲':'▼';}
+function copyMemo(btn,id){const t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(()=>{btn.textContent='복사됨!';btn.classList.add('copied');setTimeout(()=>{btn.textContent='복사';btn.classList.remove('copied');},1500);}).catch(()=>{const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);btn.textContent='복사됨!';btn.classList.add('copied');setTimeout(()=>{btn.textContent='복사';btn.classList.remove('copied');},1500);});}
 
 // ============ PROGRESS ============
 function updateProgress(){
@@ -691,7 +691,7 @@ function updateProgress(){
   const p=t>0?Math.round(d/t*100):0;
   document.getElementById('progressFill').style.width=p+'%';
   document.getElementById('progressBarTop').style.width=p+'%';
-  document.getElementById('progressLabel').textContent='?숈뒿 吏꾪뻾瑜?'+p+'%';
+  document.getElementById('progressLabel').textContent='학습 진행률 '+p+'%';
   saveState();
 }
 
@@ -709,6 +709,3 @@ init();
 </script>
 </body>
 </html>
-
-
-

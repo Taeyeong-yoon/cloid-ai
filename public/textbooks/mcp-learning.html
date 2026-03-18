@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MCP ?낅Ц ?명꽣?숉떚釉??숈뒿??</title>
+<title>MCP 입문 인터랙티브 학습실</title>
 <style>
 :root {
   --bg: #0e1117;
@@ -76,7 +76,7 @@ input{font-family:var(--font);}
 .diag-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:28px;}
 .diag-box h3{font-size:1rem;color:var(--accent4);margin-bottom:12px;}
 .diag-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;color:var(--text2);font-size:0.9rem;}
-.diag-item::before{content:'??;flex-shrink:0;}
+.diag-item::before{content:'⚡';flex-shrink:0;}
 .diag-solution{margin-top:16px;padding:14px;background:rgba(88,166,255,0.06);border-radius:var(--radius-sm);border-left:3px solid var(--accent);}
 .diag-solution p{font-size:0.88rem;color:var(--text2);margin:4px 0;}
 
@@ -151,7 +151,7 @@ input{font-family:var(--font);}
 .dr-panel h4{margin:14px 0 8px;font-size:0.92rem;color:var(--text);}
 .dr-list{list-style:none;padding:0;}
 .dr-list li{padding:6px 0;font-size:0.88rem;color:var(--text2);display:flex;gap:8px;align-items:flex-start;}
-.dr-list li::before{content:'??;color:var(--accent);flex-shrink:0;}
+.dr-list li::before{content:'→';color:var(--accent);flex-shrink:0;}
 .dr-next{margin-top:16px;padding:12px;background:var(--bg3);border-radius:var(--radius-sm);font-size:0.85rem;color:var(--text2);}
 
 /* Roadmap */
@@ -267,194 +267,194 @@ input{font-family:var(--font);}
 <div id="progressBarTop" style="width:0%"></div>
 
 <nav id="topNav">
-  <span class="nav-logo">MCP ?숈뒿??</span>
-  <button class="nav-btn active" onclick="goSec('hero')">??</button>
-  <button class="nav-btn" onclick="goSec('concept')">媛쒕뀗遺꾨━</button>
-  <button class="nav-btn" onclick="goSec('compare')">MCP ?꾪썑</button>
-  <button class="nav-btn" onclick="goSec('envlab')">?섍꼍鍮꾧탳</button>
-  <button class="nav-btn" onclick="goSec('doctors')">5諛뺤궗</button>
-  <button class="nav-btn" onclick="goSec('roadmap')">濡쒕뱶留?</button>
-  <button class="nav-btn" onclick="goSec('lab')">泥??ㅼ뒿</button>
-  <button class="nav-btn" onclick="goSec('apikey')">API Key?먮떒</button>
-  <button class="nav-btn" onclick="goSec('media')">?곸긽?뺤옣</button>
-  <button class="nav-btn" onclick="goSec('quiz')">?댁쫰</button>
-  <button class="nav-btn" onclick="goSec('glossary')">?⑹뼱?ъ쟾</button>
-  <button class="nav-btn" onclick="goSec('memo')">蹂듭궗硫붾え</button>
+  <span class="nav-logo">MCP 학습실</span>
+  <button class="nav-btn active" onclick="goSec('hero')">홈</button>
+  <button class="nav-btn" onclick="goSec('concept')">개념분리</button>
+  <button class="nav-btn" onclick="goSec('compare')">MCP 전후</button>
+  <button class="nav-btn" onclick="goSec('envlab')">환경비교</button>
+  <button class="nav-btn" onclick="goSec('doctors')">5박사</button>
+  <button class="nav-btn" onclick="goSec('roadmap')">로드맵</button>
+  <button class="nav-btn" onclick="goSec('lab')">첫 실습</button>
+  <button class="nav-btn" onclick="goSec('apikey')">API Key판단</button>
+  <button class="nav-btn" onclick="goSec('media')">영상확장</button>
+  <button class="nav-btn" onclick="goSec('quiz')">퀴즈</button>
+  <button class="nav-btn" onclick="goSec('glossary')">용어사전</button>
+  <button class="nav-btn" onclick="goSec('memo')">복사메모</button>
 </nav>
 
 <!-- ==================== HERO ==================== -->
 <div class="section active" id="sec-hero">
   <div style="padding-top:20px;">
-    <div class="hero-title">MCP ?낅Ц ?명꽣?숉떚釉??숈뒿??</div>
-    <p class="hero-sub">MCP vs API, ?툹LM+MCP vs CLI+MCP, 泥??ㅼ뒿 ?쒖꽌源뚯? ??踰덉뿉 ?뺣━.<br>5紐낆쓽 諛뺤궗 ?먯씠?꾪듃媛 ?④퍡 媛瑜댁퀜 ?쒕┰?덈떎.</p>
+    <div class="hero-title">MCP 입문 인터랙티브 학습실</div>
+    <p class="hero-sub">MCP vs API, 웹LLM+MCP vs CLI+MCP, 첫 실습 순서까지 한 번에 정리.<br>5명의 박사 에이전트가 함께 가르쳐 드립니다.</p>
     <div class="hero-btns">
-      <button class="btn btn-primary" onclick="goSec('concept')">諛붾줈 ?쒖옉?섍린</button>
-      <button class="btn btn-secondary" onclick="goSec('doctors')">5紐?諛뺤궗?먭쾶 諛곗슦湲?</button>
-      <button class="btn btn-secondary" onclick="goSec('lab')">泥??ㅼ뒿遺??蹂닿린</button>
+      <button class="btn btn-primary" onclick="goSec('concept')">바로 시작하기</button>
+      <button class="btn btn-secondary" onclick="goSec('doctors')">5명 박사에게 배우기</button>
+      <button class="btn btn-secondary" onclick="goSec('lab')">첫 실습부터 보기</button>
     </div>
 
     <div class="progress-summary">
-      <span class="progress-text" id="progressLabel">?숈뒿 吏꾪뻾瑜?0%</span>
+      <span class="progress-text" id="progressLabel">학습 진행률 0%</span>
       <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
     </div>
 
     <div class="diag-box">
-      <h3>?뱀떆 ?대윴 ?곹깭?멸???</h3>
-      <div class="diag-item">MCP? API媛 ?룰컝由곕떎</div>
-      <div class="diag-item">?대뵒???쒖옉?댁빞 ?좎? 紐⑤Ⅴ寃좊떎</div>
-      <div class="diag-item">?뱀뿉??LLM ?곕뒗 寃껉낵 CLI?먯꽌 MCP 遺숈씠??寃?萸먭? ?ㅻⅨ吏 紐⑤Ⅴ寃좊떎</div>
-      <div class="diag-item">?곸긽 履쎈룄 ?섏쨷???대낫怨??띕떎</div>
+      <h3>혹시 이런 상태인가요?</h3>
+      <div class="diag-item">MCP와 API가 헷갈린다</div>
+      <div class="diag-item">어디서 시작해야 할지 모르겠다</div>
+      <div class="diag-item">웹에서 LLM 쓰는 것과 CLI에서 MCP 붙이는 게 뭐가 다른지 모르겠다</div>
+      <div class="diag-item">영상 쪽도 나중에 해보고 싶다</div>
       <div class="diag-solution">
-        <p>??<strong>媛쒕뀗 遺꾨━</strong> ??MCP, API, API Key瑜??뺥솗??援щ텇?⑸땲??</p>
-        <p>??<strong>?섍꼍 鍮꾧탳</strong> ???툹LM+MCP? CLI+MCP 李⑥씠瑜?援ъ“濡?蹂댁뿬?쒕┰?덈떎</p>
-        <p>??<strong>?④퀎蹂??ㅼ뒿</strong> ??filesystem MCP濡??쒖옉 ???곸긽 API MCP濡??뺤옣?섎뒗 寃쎈줈瑜??덈궡?⑸땲??</p>
+        <p>✅ <strong>개념 분리</strong> — MCP, API, API Key를 정확히 구분합니다</p>
+        <p>✅ <strong>환경 비교</strong> — 웹LLM+MCP와 CLI+MCP 차이를 구조로 보여드립니다</p>
+        <p>✅ <strong>단계별 실습</strong> — filesystem MCP로 시작 → 영상 API MCP로 확장하는 경로를 안내합니다</p>
       </div>
     </div>
 
-    <div class="highlight-box">?뵎 API Key???낆옣沅뚯씠怨? MCP???곌껐 ?μ튂??</div>
+    <div class="highlight-box">🔑 API Key는 입장권이고, MCP는 연결 장치다</div>
   </div>
 </div>
 
 <!-- ==================== CONCEPT MAP ==================== -->
 <div class="section" id="sec-concept">
-  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--accent);">?뱀뀡 B</div>
-  <h2 class="sec-h">媛쒕뀗 遺꾨━ ?명꽣?숉떚釉?留?</h2>
-  <p class="sec-sub">5媛吏 ?듭떖 媛쒕뀗??移대뱶濡??뚮윭 鍮꾧탳?섏꽭?? MCP? API, ?덈? 媛숈? ?딆뒿?덈떎.</p>
+  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--accent);">섹션 B</div>
+  <h2 class="sec-h">개념 분리 인터랙티브 맵</h2>
+  <p class="sec-sub">5가지 핵심 개념을 카드로 눌러 비교하세요. MCP와 API, 절대 같지 않습니다.</p>
 
   <div class="card-grid card-grid-5" id="conceptGrid">
     <div class="card concept-card selected" onclick="selectConcept(0)" data-idx="0">
-      <span class="concept-icon">?뵆</span>
+      <span class="concept-icon">🔌</span>
       <div class="concept-label">MCP</div>
-      <div class="concept-brief">?곌껐 ?쒖?</div>
+      <div class="concept-brief">연결 표준</div>
     </div>
     <div class="card concept-card" onclick="selectConcept(1)" data-idx="1">
-      <span class="concept-icon">?뙋</span>
+      <span class="concept-icon">🌐</span>
       <div class="concept-label">API</div>
-      <div class="concept-brief">?몄텧 洹쒓꺽</div>
+      <div class="concept-brief">호출 규격</div>
     </div>
     <div class="card concept-card" onclick="selectConcept(2)" data-idx="2">
-      <span class="concept-icon">?렖</span>
+      <span class="concept-icon">🎫</span>
       <div class="concept-label">API Key</div>
-      <div class="concept-brief">?낆옣沅?</div>
+      <div class="concept-brief">입장권</div>
     </div>
     <div class="card concept-card" onclick="selectConcept(3)" data-idx="3">
-      <span class="concept-icon">?뮲</span>
+      <span class="concept-icon">💻</span>
       <div class="concept-label">AI Client</div>
-      <div class="concept-brief">?ъ슜 二쇱껜</div>
+      <div class="concept-brief">사용 주체</div>
     </div>
     <div class="card concept-card" onclick="selectConcept(4)" data-idx="4">
-      <span class="concept-icon">?뼢截?</span>
+      <span class="concept-icon">🖥️</span>
       <div class="concept-label">MCP Server</div>
-      <div class="concept-brief">?꾧뎄 ?쒓났??</div>
+      <div class="concept-brief">도구 제공자</div>
     </div>
   </div>
 
   <div class="concept-detail" id="conceptDetail"></div>
 
-  <div class="highlight-box">?뵎 API Key???낆옣沅뚯씠怨? MCP???곌껐 ?μ튂??</div>
+  <div class="highlight-box">🔑 API Key는 입장권이고, MCP는 연결 장치다</div>
 
   <!-- Misconception toggle -->
   <div class="toggle-group">
     <div class="toggle-header" onclick="toggleMiscon()">
-      <span>???由ш린 ?ъ슫 ?쒗쁽 蹂닿린 (8媛吏)</span>
-      <span class="toggle-arrow" id="misconArrow">??</span>
+      <span>❌ 틀리기 쉬운 표현 보기 (8가지)</span>
+      <span class="toggle-arrow" id="misconArrow">▼</span>
     </div>
     <div class="toggle-body" id="misconBody">
-      <div class="miscon-item"><div class="miscon-q">??"API Key媛 ?덉쑝硫?MCP媛 ?섎뒗 嫄??꾨땶媛??"</div><div class="miscon-a">狩??꾨떃?덈떎. API Key???몃? ?쒕퉬?ㅼ뿉 ?몄쬆?섎뒗 ?낆옣沅뚯씠怨? MCP??AI媛 ?꾧뎄瑜??????덇쾶 ?댁＜???곌껐 援ъ“?낅땲?? ?섏? 蹂꾧컻?낅땲??</div></div>
-      <div class="miscon-item"><div class="miscon-q">??"MCP??API 洹??먯껜??</div><div class="miscon-a">狩??꾨떃?덈떎. API???몃? ?쒕퉬?ㅼ쓽 ?몄텧 洹쒓꺽?닿퀬, MCP??AI ?대씪?댁뼵?몄? ?꾧뎄 ?쒕쾭瑜??뉖뒗 ?곌껐 ?꾨줈?좎퐳?낅땲??</div></div>
-      <div class="miscon-item"><div class="miscon-q">??"filesystem MCP??API Key媛 瑗??꾩슂?섎떎"</div><div class="miscon-a">狩?蹂댄넻 ?꾨떃?덈떎. filesystem MCP??濡쒖뺄 ?뚯씪留??ㅻ（誘濡??몃? ?몄쬆???꾩슂 ?녿뒗 寃쎌슦媛 留롮뒿?덈떎.</div></div>
-      <div class="miscon-item"><div class="miscon-q">??"?몃? ?곸긽 API MCP??API Key ?놁씠 ?????덈떎"</div><div class="miscon-a">狩??遺遺?洹몃젃吏 ?딆뒿?덈떎. ?몃? ?곸긽 ?쒕퉬?ㅻ뒗 ?몄쬆???꾩슂?섎?濡?API Key媛 ?꾩슂??媛?μ꽦???믪뒿?덈떎.</div></div>
-      <div class="miscon-item"><div class="miscon-q">??"MCP ?쒕쾭媛 怨?AI??</div><div class="miscon-a">狩??꾨떃?덈떎. MCP ?쒕쾭???꾧뎄瑜??쒓났?섎뒗 履쎌씠怨? AI ?대씪?댁뼵?멸? 洹??꾧뎄瑜??붿껌?섏뿬 ?ъ슜?⑸땲??</div></div>
-      <div class="miscon-item"><div class="miscon-q">??"AI ?대씪?댁뼵?멸? ?놁뼱??MCP ?쒕쾭媛 ?쇱옄 ?묐룞?쒕떎"</div><div class="miscon-a">狩?MCP ?쒕쾭???대씪?댁뼵?멸? ?붿껌?댁빞 ?숈옉?⑸땲?? ?쇱옄?쒕뒗 ?섎? ?덈뒗 ?묒뾽???섑뻾?섏? ?딆뒿?덈떎.</div></div>
-      <div class="miscon-item"><div class="miscon-q">??"??LLM?먯꽌 MCP瑜??곕㈃ CLI+MCP? ?꾩쟾??媛숇떎"</div><div class="miscon-a">狩?媛숈? MCP ?꾨줈?좎퐳?대씪???ㅽ뻾 ?섍꼍怨??묎렐 踰붿쐞媛 ?ㅻⅤ誘濡?泥닿컧???ㅻ쫭?덈떎.</div></div>
-      <div class="miscon-item"><div class="miscon-q">??"MCP瑜??곕㈃ 臾댁“嫄??덉씠 ?좊떎"</div><div class="miscon-a">狩?filesystem MCP泥섎읆 濡쒖뺄 ?꾧뎄瑜??곕뒗 寃쎌슦 ?몃? 鍮꾩슜??諛쒖깮?섏? ?딆쓣 ???덉뒿?덈떎. 鍮꾩슜? ?곌껐?섎뒗 ?몃? ?쒕퉬?ㅼ뿉 ?곕씪 ?ㅻ쫭?덈떎.</div></div>
+      <div class="miscon-item"><div class="miscon-q">❌ "API Key가 있으면 MCP가 되는 거 아닌가요?"</div><div class="miscon-a">⭕ 아닙니다. API Key는 외부 서비스에 인증하는 입장권이고, MCP는 AI가 도구를 쓸 수 있게 해주는 연결 구조입니다. 둘은 별개입니다.</div></div>
+      <div class="miscon-item"><div class="miscon-q">❌ "MCP는 API 그 자체다"</div><div class="miscon-a">⭕ 아닙니다. API는 외부 서비스의 호출 규격이고, MCP는 AI 클라이언트와 도구 서버를 잇는 연결 프로토콜입니다.</div></div>
+      <div class="miscon-item"><div class="miscon-q">❌ "filesystem MCP는 API Key가 꼭 필요하다"</div><div class="miscon-a">⭕ 보통 아닙니다. filesystem MCP는 로컬 파일만 다루므로 외부 인증이 필요 없는 경우가 많습니다.</div></div>
+      <div class="miscon-item"><div class="miscon-q">❌ "외부 영상 API MCP도 API Key 없이 쓸 수 있다"</div><div class="miscon-a">⭕ 대부분 그렇지 않습니다. 외부 영상 서비스는 인증이 필요하므로 API Key가 필요할 가능성이 높습니다.</div></div>
+      <div class="miscon-item"><div class="miscon-q">❌ "MCP 서버가 곧 AI다"</div><div class="miscon-a">⭕ 아닙니다. MCP 서버는 도구를 제공하는 쪽이고, AI 클라이언트가 그 도구를 요청하여 사용합니다.</div></div>
+      <div class="miscon-item"><div class="miscon-q">❌ "AI 클라이언트가 없어도 MCP 서버가 혼자 작동한다"</div><div class="miscon-a">⭕ MCP 서버는 클라이언트가 요청해야 동작합니다. 혼자서는 의미 있는 작업을 수행하지 않습니다.</div></div>
+      <div class="miscon-item"><div class="miscon-q">❌ "웹 LLM에서 MCP를 쓰면 CLI+MCP와 완전히 같다"</div><div class="miscon-a">⭕ 같은 MCP 프로토콜이라도 실행 환경과 접근 범위가 다르므로 체감이 다릅니다.</div></div>
+      <div class="miscon-item"><div class="miscon-q">❌ "MCP를 쓰면 무조건 돈이 든다"</div><div class="miscon-a">⭕ filesystem MCP처럼 로컬 도구를 쓰는 경우 외부 비용이 발생하지 않을 수 있습니다. 비용은 연결하는 외부 서비스에 따라 다릅니다.</div></div>
     </div>
   </div>
 </div>
 
 <!-- ==================== COMPARE (MCP On/Off) ==================== -->
 <div class="section" id="sec-compare">
-  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--accent2);">?뱀뀡 C</div>
-  <h2 class="sec-h">MCP瑜???????vs ????</h2>
-  <p class="sec-sub">"留먮쭔 ?섎뒗 AI"? "?꾧뎄瑜??곕뒗 AI"???대뼸寃??ㅻ?源뚯슂?</p>
+  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--accent2);">섹션 C</div>
+  <h2 class="sec-h">MCP를 안 쓸 때 vs 쓸 때</h2>
+  <p class="sec-sub">"말만 하는 AI"와 "도구를 쓰는 AI"는 어떻게 다를까요?</p>
 
   <div class="tabs" id="compareTabs">
-    <button class="tab-btn active" onclick="switchCompare(0)">?뚯씪 ?쎄린</button>
-    <button class="tab-btn" onclick="switchCompare(1)">肄붾뱶 ??μ냼</button>
-    <button class="tab-btn" onclick="switchCompare(2)">?곸긽 ?앹꽦</button>
+    <button class="tab-btn active" onclick="switchCompare(0)">파일 읽기</button>
+    <button class="tab-btn" onclick="switchCompare(1)">코드 저장소</button>
+    <button class="tab-btn" onclick="switchCompare(2)">영상 생성</button>
   </div>
 
   <div id="compareContent"></div>
 
   <div class="warn-box" style="margin-top:20px;">
-    ?뮕 ?듭떖: MCP瑜?遺숈씠硫?AI??"留먮쭔 ?섎뒗 ?곹깭"?먯꽌 踰쀬뼱??<strong>?ㅼ젣 ?꾧뎄瑜??ㅽ뻾?섎뒗 ?곹깭</strong>媛 ?⑸땲?? ?뚯씪???쎄퀬, ?곌퀬, 寃?됲븯怨? ?몃? ?쒕퉬?ㅻ? ?몄텧?????덉뒿?덈떎.
+    💡 핵심: MCP를 붙이면 AI는 "말만 하는 상태"에서 벗어나 <strong>실제 도구를 실행하는 상태</strong>가 됩니다. 파일을 읽고, 쓰고, 검색하고, 외부 서비스를 호출할 수 있습니다.
   </div>
 </div>
 
 <!-- ==================== ENV LAB ==================== -->
 <div class="section" id="sec-envlab">
-  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--accent3);">?뱀뀡 D</div>
-  <h2 class="sec-h">?툹LM+MCP vs CLI+MCP 鍮꾧탳 ?ㅽ뿕??</h2>
-  <p class="sec-sub">媛숈? MCP?쇰룄 ?대뵒???곕뒓?먯뿉 ?곕씪 泥닿컧???꾩쟾???ㅻ쫭?덈떎. 李⑥씠??"MCP???뺤껜"媛 ?ㅻⅨ 寃??꾨땲??"?ㅽ뻾 留λ씫怨??묎렐 踰붿쐞"媛 ?ㅻⅨ 寃껋엯?덈떎.</p>
+  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--accent3);">섹션 D</div>
+  <h2 class="sec-h">웹LLM+MCP vs CLI+MCP 비교 실험실</h2>
+  <p class="sec-sub">같은 MCP라도 어디서 쓰느냐에 따라 체감이 완전히 다릅니다. 차이는 "MCP의 정체"가 다른 게 아니라 "실행 맥락과 접근 범위"가 다른 것입니다.</p>
 
   <table class="comp-table">
-    <thead><tr><th>鍮꾧탳 ??ぉ</th><th>??LLM + MCP</th><th>CLI + MCP</th></tr></thead>
+    <thead><tr><th>비교 항목</th><th>웹 LLM + MCP</th><th>CLI + MCP</th></tr></thead>
     <tbody>
-      <tr><td><strong>二??ъ슜 ?섍꼍</strong></td><td>釉뚮씪?곗? 湲곕컲 AI 梨꾪똿</td><td>?곕???/ 肄붾뱶 ?먮뵒??</td></tr>
-      <tr><td><strong>吏꾩엯 ?쒖씠??</strong></td><td>?곷??곸쑝濡???쓬</td><td>CLI / ?ㅼ젙 ?뚯씪 ?댄빐 ?꾩슂</td></tr>
-      <tr><td><strong>濡쒖뺄 ?뚯씪 ?묎렐</strong></td><td>?섍꼍???곕씪 ?쒗븳?곸씪 ???덉쓬</td><td>濡쒖뺄 ?뚯씪 ?쒖뒪?쒖뿉 吏곸젒 ?묎렐?섍린 ?ъ?</td></tr>
-      <tr><td><strong>?곕???媛쒕컻?섍꼍 寃고빀</strong></td><td>?쒗븳??</td><td>git, ?먮뵒?? 鍮뚮뱶 ?꾧뎄? 諛???곕룞 媛??</td></tr>
-      <tr><td><strong>沅뚰븳/?ㅼ젙 ?댄빐</strong></td><td>?뚮옯?쇱씠 ?쇰? 愿由?</td><td>吏곸젒 ?ㅼ젙 ?뚯씪 ?몄쭛 ?꾩슂</td></tr>
-      <tr><td><strong>?곹빀???ъ슜??</strong></td><td>鍮좊Ⅸ ?ㅽ뿕, ??뷀삎 ?숈뒿</td><td>濡쒖뺄 ?꾨줈?앺듃, 肄붾뱶 ?묒뾽, ?먮룞??</td></tr>
-      <tr><td><strong>?낅Ц ?쒖씠??</strong></td><td>?ъ슫 ??</td><td>?쎄컙???숈뒿 怨≪꽑 議댁옱</td></tr>
-      <tr><td><strong>媛숈? ?묒뾽 ???먮쫫</strong></td><td>??붿갹?먯꽌 諛붾줈 寃곌낵 ?뺤씤</td><td>?곕???紐낅졊 ???뚯씪 ?쒖뒪?쒖뿉???뺤씤</td></tr>
+      <tr><td><strong>주 사용 환경</strong></td><td>브라우저 기반 AI 채팅</td><td>터미널 / 코드 에디터</td></tr>
+      <tr><td><strong>진입 난이도</strong></td><td>상대적으로 낮음</td><td>CLI / 설정 파일 이해 필요</td></tr>
+      <tr><td><strong>로컬 파일 접근</strong></td><td>환경에 따라 제한적일 수 있음</td><td>로컬 파일 시스템에 직접 접근하기 쉬움</td></tr>
+      <tr><td><strong>터미널/개발환경 결합</strong></td><td>제한적</td><td>git, 에디터, 빌드 도구와 밀접 연동 가능</td></tr>
+      <tr><td><strong>권한/설정 이해</strong></td><td>플랫폼이 일부 관리</td><td>직접 설정 파일 편집 필요</td></tr>
+      <tr><td><strong>적합한 사용자</strong></td><td>빠른 실험, 대화형 학습</td><td>로컬 프로젝트, 코드 작업, 자동화</td></tr>
+      <tr><td><strong>입문 난이도</strong></td><td>쉬운 편</td><td>약간의 학습 곡선 존재</td></tr>
+      <tr><td><strong>같은 작업 시 흐름</strong></td><td>대화창에서 바로 결과 확인</td><td>터미널 명령 → 파일 시스템에서 확인</td></tr>
     </tbody>
   </table>
 
-  <h3 style="font-size:1.05rem;margin:24px 0 12px;">??紐⑹쟻??留욌뒗 ?섍꼍??</h3>
-  <p style="font-size:0.88rem;color:var(--text2);margin-bottom:12px;">?꾨옒?먯꽌 紐⑹쟻???좏깮?섎㈃ 異붿쿇 ?섍꼍??諛붾앸땲??</p>
+  <h3 style="font-size:1.05rem;margin:24px 0 12px;">내 목적에 맞는 환경은?</h3>
+  <p style="font-size:0.88rem;color:var(--text2);margin-bottom:12px;">아래에서 목적을 선택하면 추천 환경이 바뀝니다.</p>
 
   <div class="purpose-grid" id="purposeGrid">
-    <div class="purpose-opt" onclick="selectPurpose(0)">?뱰 媛쒕뀗 ?댄빐</div>
-    <div class="purpose-opt" onclick="selectPurpose(1)">??鍮좊Ⅸ ?뚯뒪??</div>
-    <div class="purpose-opt" onclick="selectPurpose(2)">?뱚 濡쒖뺄 ?꾨줈?앺듃</div>
-    <div class="purpose-opt" onclick="selectPurpose(3)">?쨼 肄붾뱶 ?먮룞??</div>
-    <div class="purpose-opt" onclick="selectPurpose(4)">?뱷 ?뚯씪 ?쎄린/?곌린</div>
+    <div class="purpose-opt" onclick="selectPurpose(0)">📖 개념 이해</div>
+    <div class="purpose-opt" onclick="selectPurpose(1)">⚡ 빠른 테스트</div>
+    <div class="purpose-opt" onclick="selectPurpose(2)">📁 로컬 프로젝트</div>
+    <div class="purpose-opt" onclick="selectPurpose(3)">🤖 코드 자동화</div>
+    <div class="purpose-opt" onclick="selectPurpose(4)">📝 파일 읽기/쓰기</div>
   </div>
   <div class="purpose-result" id="purposeResult" style="display:none;"></div>
 </div>
 
 <!-- ==================== 5 DOCTORS ==================== -->
 <div class="section" id="sec-doctors">
-  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--accent4);">?뱀뀡 E</div>
-  <h2 class="sec-h">5紐?諛뺤궗 ?⑤꼸</h2>
-  <p class="sec-sub">媛?諛뺤궗瑜??대┃?섎㈃ ?대떦 愿?먯뿉???ㅻ챸, ?ㅽ빐 援먯젙, ?ㅼ쿇 ?됰룞??諛붾앸땲??</p>
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--accent4);">섹션 E</div>
+  <h2 class="sec-h">5명 박사 패널</h2>
+  <p class="sec-sub">각 박사를 클릭하면 해당 관점에서 설명, 오해 교정, 실천 행동이 바뀝니다.</p>
 
   <div class="card-grid card-grid-5" id="drGrid">
     <div class="card dr-card selected" onclick="selectDr(0)" style="border-color:var(--dr1)">
-      <span class="dr-emoji">?뵮</span>
+      <span class="dr-emoji">🔬</span>
       <div class="dr-name" style="color:var(--dr1)">Dr. Protocol</div>
-      <div class="dr-role">?꾨줈?좎퐳 諛뺤궗</div>
+      <div class="dr-role">프로토콜 박사</div>
     </div>
     <div class="card dr-card" onclick="selectDr(1)" style="border-color:var(--border)">
-      <span class="dr-emoji">?룛截?</span>
+      <span class="dr-emoji">🏗️</span>
       <div class="dr-name" style="color:var(--dr2)">Dr. Runtime</div>
-      <div class="dr-role">?섍꼍援ъ“ 諛뺤궗</div>
+      <div class="dr-role">환경구조 박사</div>
     </div>
     <div class="card dr-card" onclick="selectDr(2)" style="border-color:var(--border)">
-      <span class="dr-emoji">?뿺截?</span>
+      <span class="dr-emoji">🗺️</span>
       <div class="dr-name" style="color:var(--dr3)">Dr. Curriculum</div>
-      <div class="dr-role">?숈뒿?ㅺ퀎 諛뺤궗</div>
+      <div class="dr-role">학습설계 박사</div>
     </div>
     <div class="card dr-card" onclick="selectDr(3)" style="border-color:var(--border)">
-      <span class="dr-emoji">?썱截?</span>
+      <span class="dr-emoji">🛠️</span>
       <div class="dr-name" style="color:var(--dr4)">Dr. Hands-on</div>
-      <div class="dr-role">?ㅼ뒿肄붿튂 諛뺤궗</div>
+      <div class="dr-role">실습코치 박사</div>
     </div>
     <div class="card dr-card" onclick="selectDr(4)" style="border-color:var(--border)">
-      <span class="dr-emoji">?렗</span>
+      <span class="dr-emoji">🎬</span>
       <div class="dr-name" style="color:var(--dr5)">Dr. Media Pipeline</div>
-      <div class="dr-role">?곸긽?ㅽ뿕 諛뺤궗</div>
+      <div class="dr-role">영상실험 박사</div>
     </div>
   </div>
 
@@ -463,66 +463,66 @@ input{font-family:var(--font);}
 
 <!-- ==================== ROADMAP ==================== -->
 <div class="section" id="sec-roadmap">
-  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--accent);">?뱀뀡 F</div>
-  <h2 class="sec-h">?④퀎蹂??숈뒿 濡쒕뱶留?</h2>
-  <p class="sec-sub">泥댄겕諛뺤뒪瑜??꾨즺?섎㈃ 吏꾪뻾 ?곹깭媛 諛섏쁺?⑸땲?? ?쒖꽌?濡?諛잛븘媛?몄슂.</p>
+  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--accent);">섹션 F</div>
+  <h2 class="sec-h">단계별 학습 로드맵</h2>
+  <p class="sec-sub">체크박스를 완료하면 진행 상태가 반영됩니다. 순서대로 밟아가세요.</p>
 
   <div class="roadmap" id="roadmapWrap"></div>
 </div>
 
 <!-- ==================== FIRST LAB ==================== -->
 <div class="section" id="sec-lab">
-  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--accent2);">?뱀뀡 G</div>
-  <h2 class="sec-h">泥??ㅼ뒿 ?ㅽ뿕?? filesystem MCP</h2>
-  <p class="sec-sub">媛???ъ슫 泥??ㅼ뒿. API Key ?놁씠, 濡쒖뺄 ?뚯씪 ?쎄린/?곌린濡?MCP瑜?吏곸젒 泥닿컧?섏꽭??</p>
+  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--accent2);">섹션 G</div>
+  <h2 class="sec-h">첫 실습 실험실: filesystem MCP</h2>
+  <p class="sec-sub">가장 쉬운 첫 실습. API Key 없이, 로컬 파일 읽기/쓰기로 MCP를 직접 체감하세요.</p>
 
-  <div class="highlight-box" style="font-size:1rem;">?렞 紐⑺몴: AI媛 ?ㅼ젣濡??대뜑瑜?蹂닿퀬, ?뚯씪???쎄퀬, ???뚯씪??留뚮뱶??寃껋쓣 ?뺤씤?쒕떎</div>
+  <div class="highlight-box" style="font-size:1rem;">🎯 목표: AI가 실제로 폴더를 보고, 파일을 읽고, 새 파일을 만드는 것을 확인한다</div>
 
   <div class="acc">
-    <div class="acc-head" onclick="toggleAcc(this)">?뱛 異붿쿇 ?ㅼ뒿 ?대뜑 援ъ“ <span>??</span></div>
+    <div class="acc-head" onclick="toggleAcc(this)">📂 추천 실습 폴더 구조 <span>▼</span></div>
     <div class="acc-body"><pre style="font-family:var(--mono);font-size:0.82rem;color:var(--text2);line-height:1.8;">study/mcp-lab/
-  ?쒋?? notes.txt        ???숈뒿 硫붾え
-  ?쒋?? questions.md     ??沅곴툑??寃?紐⑸줉
-  ?붴?? summary.md       ??AI媛 ?앹꽦???붿빟 ?뚯씪</pre></div>
+  ├── notes.txt        ← 학습 메모
+  ├── questions.md     ← 궁금한 것 목록
+  └── summary.md       ← AI가 생성할 요약 파일</pre></div>
   </div>
 
-  <h3 style="font-size:1.05rem;margin:20px 0 10px;">?ㅼ뒿 ?쒕굹由ъ삤</h3>
+  <h3 style="font-size:1.05rem;margin:20px 0 10px;">실습 시나리오</h3>
 
   <div class="tabs" id="labTabs">
-    <button class="tab-btn active" onclick="switchLab(0)">?쒕굹由ъ삤 1</button>
-    <button class="tab-btn" onclick="switchLab(1)">?쒕굹由ъ삤 2</button>
-    <button class="tab-btn" onclick="switchLab(2)">?쒕굹由ъ삤 3</button>
+    <button class="tab-btn active" onclick="switchLab(0)">시나리오 1</button>
+    <button class="tab-btn" onclick="switchLab(1)">시나리오 2</button>
+    <button class="tab-btn" onclick="switchLab(2)">시나리오 3</button>
   </div>
   <div id="labContent"></div>
 
-  <h3 style="font-size:1.05rem;margin:24px 0 10px;">???ㅼ뒿 ??泥댄겕由ъ뒪??</h3>
+  <h3 style="font-size:1.05rem;margin:24px 0 10px;">✅ 실습 전 체크리스트</h3>
   <ul class="checklist" id="labChecklist">
-    <li><input type="checkbox" onchange="updateProgress()"> ?ㅼ뒿 ?대뜑媛 以鍮꾨릺?덈뒗媛</li>
-    <li><input type="checkbox" onchange="updateProgress()"> AI ?대씪?댁뼵?몄뿉???대떦 ?대뜑???묎렐 沅뚰븳???덉슜?덈뒗媛</li>
-    <li><input type="checkbox" onchange="updateProgress()"> ?쎌쓣 ?뚯씪(notes.txt ?????ㅼ젣濡?議댁옱?섎뒗媛</li>
-    <li><input type="checkbox" onchange="updateProgress()"> 異쒕젰 ?뚯씪(summary.md)???대뵒???앷만吏 ?댄빐?덈뒗媛</li>
+    <li><input type="checkbox" onchange="updateProgress()"> 실습 폴더가 준비되었는가</li>
+    <li><input type="checkbox" onchange="updateProgress()"> AI 클라이언트에서 해당 폴더에 접근 권한을 허용했는가</li>
+    <li><input type="checkbox" onchange="updateProgress()"> 읽을 파일(notes.txt 등)이 실제로 존재하는가</li>
+    <li><input type="checkbox" onchange="updateProgress()"> 출력 파일(summary.md)이 어디에 생길지 이해했는가</li>
   </ul>
 
   <div class="acc" style="margin-top:16px;">
-    <div class="acc-head" onclick="toggleAcc(this)">?좑툘 ?먯＜ 諛쒖깮?섎뒗 ?ㅽ뙣 ?먯씤 <span>??</span></div>
+    <div class="acc-head" onclick="toggleAcc(this)">⚠️ 자주 발생하는 실패 원인 <span>▼</span></div>
     <div class="acc-body">
       <ul>
-        <li><strong>寃쎈줈 臾몄젣</strong> ???ㅼ젙???낅젰???대뜑 寃쎈줈媛 ?ㅼ젣 寃쎈줈? ?ㅻⅨ 寃쎌슦</li>
-        <li><strong>沅뚰븳 臾몄젣</strong> ??AI ?대씪?댁뼵?몄뿉 ?대떦 ?대뜑 ?묎렐???덉슜?섏? ?딆? 寃쎌슦</li>
-        <li><strong>?ㅼ젙 ?꾨씫</strong> ??MCP ?쒕쾭 ?ㅼ젙 ?뚯씪?먯꽌 filesystem ?쒕쾭瑜??깅줉?섏? ?딆? 寃쎌슦</li>
-        <li><strong>異쒕젰 ?꾩튂 ?쇰룞</strong> ???덈줈 ?앹꽦???뚯씪???대뵒????λ릺?덈뒗吏 紐⑤Ⅴ??寃쎌슦</li>
+        <li><strong>경로 문제</strong> — 설정에 입력한 폴더 경로가 실제 경로와 다른 경우</li>
+        <li><strong>권한 문제</strong> — AI 클라이언트에 해당 폴더 접근을 허용하지 않은 경우</li>
+        <li><strong>설정 누락</strong> — MCP 서버 설정 파일에서 filesystem 서버를 등록하지 않은 경우</li>
+        <li><strong>출력 위치 혼동</strong> — 새로 생성된 파일이 어디에 저장되었는지 모르는 경우</li>
       </ul>
     </div>
   </div>
 
   <div class="acc">
-    <div class="acc-head" onclick="toggleAcc(this)">?럦 ?깃났 湲곗? <span>??</span></div>
+    <div class="acc-head" onclick="toggleAcc(this)">🎉 성공 기준 <span>▼</span></div>
     <div class="acc-body">
-      <p>?ㅼ쓬??紐⑤몢 ?뺤씤?섎㈃ 泥??ㅼ뒿 ?깃났?낅땲??</p>
+      <p>다음을 모두 확인하면 첫 실습 성공입니다:</p>
       <ul>
-        <li>AI媛 吏?뺣맂 ?대뜑???뚯씪 紐⑸줉??蹂댁뿬二쇱뿀??</li>
-        <li>AI媛 ?뱀젙 ?뚯씪???댁슜???ㅼ젣濡??쎌뼱??蹂댁뿬二쇱뿀??</li>
-        <li>AI媛 ???뚯씪???대떦 ?대뜑???앹꽦?섏?怨? ?ㅼ젣濡??뺤씤 媛?ν븯??</li>
+        <li>AI가 지정된 폴더의 파일 목록을 보여주었다</li>
+        <li>AI가 특정 파일의 내용을 실제로 읽어서 보여주었다</li>
+        <li>AI가 새 파일을 해당 폴더에 생성하였고, 실제로 확인 가능하다</li>
       </ul>
     </div>
   </div>
@@ -530,210 +530,216 @@ input{font-family:var(--font);}
 
 <!-- ==================== API KEY DECISION ==================== -->
 <div class="section" id="sec-apikey">
-  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--accent4);">?뱀뀡 H</div>
-  <h2 class="sec-h">API Key ?꾩슂 ?щ? ?먮떒湲?</h2>
-  <p class="sec-sub">?섏쓽 MCP ?ъ슜 紐⑹쟻??API Key媛 ?꾩슂?쒖? ?④퀎蹂꾨줈 ?뺤씤?섏꽭??</p>
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--accent4);">섹션 H</div>
+  <h2 class="sec-h">API Key 필요 여부 판단기</h2>
+  <p class="sec-sub">나의 MCP 사용 목적에 API Key가 필요한지 단계별로 확인하세요.</p>
 
   <div id="dtWrap"></div>
 
   <div class="warn-box" style="margin-top:20px;">
-    ?좑툘 <strong>API Key媛 ?꾩슂?섎떎怨??댁꽌 洹멸쾶 MCP???꾨????꾨떃?덈떎.</strong> API Key???몃? ?쒕퉬???몄쬆???꾩슂???뚮쭔 ?깆옣?⑸땲?? MCP??蹂몄쭏? AI? ?꾧뎄瑜??뉖뒗 ?곌껐 援ъ“?낅땲??
+    ⚠️ <strong>API Key가 필요하다고 해서 그게 MCP의 전부는 아닙니다.</strong> API Key는 외부 서비스 인증이 필요할 때만 등장합니다. MCP의 본질은 AI와 도구를 잇는 연결 구조입니다.
   </div>
 </div>
 
 <!-- ==================== MEDIA EXTENSION ==================== -->
 <div class="section" id="sec-media">
-  <div class="sec-tag" style="background:rgba(255,123,114,0.12);color:var(--accent5);">?뱀뀡 I</div>
-  <h2 class="sec-h">?곸긽 MCP ?뺤옣 ?뱀뀡</h2>
-  <p class="sec-sub">filesystem MCP瑜??댄빐?덈떎硫? ?ㅼ쓬 ?④퀎濡??곸긽 API MCP 援ъ“瑜??댄렣蹂댁꽭??</p>
+  <div class="sec-tag" style="background:rgba(255,123,114,0.12);color:var(--accent5);">섹션 I</div>
+  <h2 class="sec-h">영상 MCP 확장 섹션</h2>
+  <p class="sec-sub">filesystem MCP를 이해했다면, 다음 단계로 영상 API MCP 구조를 살펴보세요.</p>
 
-  <h3 style="font-size:1.05rem;margin-bottom:12px;">?곸긽 API MCP ?곗씠???먮쫫</h3>
+  <h3 style="font-size:1.05rem;margin-bottom:12px;">영상 API MCP 데이터 흐름</h3>
   <div class="pipe-diagram">
-    <div class="pipe-node" style="border-color:var(--accent);">?뮲 AI ?대씪?댁뼵??br><small style="color:var(--text3)">?꾨＼?꾪듃 ?꾨떖</small></div>
-    <div class="pipe-arrow">??</div>
-    <div class="pipe-node" style="border-color:var(--accent3);">?뼢截??곸긽 MCP ?쒕쾭<br><small style="color:var(--text3)">?붿껌 蹂??</small></div>
-    <div class="pipe-arrow">??</div>
-    <div class="pipe-node" style="border-color:var(--accent4);">?뙋 ?몃? ?곸긽 API<br><small style="color:var(--text3)">?곸긽 ?앹꽦 泥섎━</small></div>
-    <div class="pipe-arrow">??</div>
-    <div class="pipe-node" style="border-color:var(--accent2);">?뱚 寃곌낵 ?뚯씪<br><small style="color:var(--text3)">?곸긽/?대?吏</small></div>
+    <div class="pipe-node" style="border-color:var(--accent);">💻 AI 클라이언트<br><small style="color:var(--text3)">프롬프트 전달</small></div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-node" style="border-color:var(--accent3);">🖥️ 영상 MCP 서버<br><small style="color:var(--text3)">요청 변환</small></div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-node" style="border-color:var(--accent4);">🌐 외부 영상 API<br><small style="color:var(--text3)">영상 생성 처리</small></div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-node" style="border-color:var(--accent2);">📁 결과 파일<br><small style="color:var(--text3)">영상/이미지</small></div>
   </div>
 
-  <h3 style="font-size:1.05rem;margin:20px 0 10px;">filesystem MCP vs ?곸긽 API MCP 鍮꾧탳</h3>
+  <h3 style="font-size:1.05rem;margin:20px 0 10px;">filesystem MCP vs 영상 API MCP 비교</h3>
   <table class="comp-table">
-    <thead><tr><th>??ぉ</th><th>filesystem MCP</th><th>?곸긽 API MCP</th></tr></thead>
+    <thead><tr><th>항목</th><th>filesystem MCP</th><th>영상 API MCP</th></tr></thead>
     <tbody>
-      <tr><td><strong>API Key</strong></td><td>蹂댄넻 遺덊븘??</td><td>?꾩슂 媛?μ꽦 ?믪쓬</td></tr>
-      <tr><td><strong>?몃? ?ㅽ듃?뚰겕</strong></td><td>遺덊븘??(濡쒖뺄)</td><td>?꾩닔 (?몃? API ?몄텧)</td></tr>
-      <tr><td><strong>鍮꾩슜</strong></td><td>?놁쓬</td><td>?몃? ?쒕퉬???붽툑 諛쒖깮 媛??</td></tr>
-      <tr><td><strong>異쒕젰臾?</strong></td><td>?띿뒪???뚯씪</td><td>?곸긽/?대?吏 ?뚯씪</td></tr>
-      <tr><td><strong>?ㅽ뙣 吏??</strong></td><td>寃쎈줈/沅뚰븳 ?뺣룄</td><td>?몄쬆, ?ㅽ듃?뚰겕, API ?쒕룄, ?뚯씪 ??????ㅼ뼇</td></tr>
-      <tr><td><strong>?쒖씠??</strong></td><td>?낅Ц ?섏?</td><td>以묎툒 ?댁긽</td></tr>
+      <tr><td><strong>API Key</strong></td><td>보통 불필요</td><td>필요 가능성 높음</td></tr>
+      <tr><td><strong>외부 네트워크</strong></td><td>불필요 (로컬)</td><td>필수 (외부 API 호출)</td></tr>
+      <tr><td><strong>비용</strong></td><td>없음</td><td>외부 서비스 요금 발생 가능</td></tr>
+      <tr><td><strong>출력물</strong></td><td>텍스트 파일</td><td>영상/이미지 파일</td></tr>
+      <tr><td><strong>실패 지점</strong></td><td>경로/권한 정도</td><td>인증, 네트워크, API 한도, 파일 저장 등 다양</td></tr>
+      <tr><td><strong>난이도</strong></td><td>입문 수준</td><td>중급 이상</td></tr>
     </tbody>
   </table>
 
   <div class="acc">
-    <div class="acc-head" onclick="toggleAcc(this)">?뵇 ?곸긽 ?④퀎濡??섏뼱媛湲????뺤씤 ?ы빆 <span>??</span></div>
+    <div class="acc-head" onclick="toggleAcc(this)">🔍 영상 단계로 넘어가기 전 확인 사항 <span>▼</span></div>
     <div class="acc-body">
       <ul>
-        <li>filesystem MCP濡??뚯씪 ?쎄린/?곌린瑜??깃났?곸쑝濡??대뇬?붽??</li>
-        <li>AI ?대씪?댁뼵????MCP ?쒕쾭 ???꾧뎄 ?ㅽ뻾 ?먮쫫???댄빐?섎뒗媛?</li>
-        <li>API Key?쇰뒗 媛쒕뀗怨??몃? ?쒕퉬???몄쬆 援ъ“瑜?諛쏆븘?ㅼ씪 以鍮꾧? ?먮뒗媛?</li>
-        <li>?몃? API ?몄텧 ??鍮꾩슜??諛쒖깮?????덈떎???먯쓣 ?몄??덈뒗媛?</li>
+        <li>filesystem MCP로 파일 읽기/쓰기를 성공적으로 해봤는가?</li>
+        <li>AI 클라이언트 ↔ MCP 서버 ↔ 도구 실행 흐름을 이해하는가?</li>
+        <li>API Key라는 개념과 외부 서비스 인증 구조를 받아들일 준비가 됐는가?</li>
+        <li>외부 API 호출 시 비용이 발생할 수 있다는 점을 인지했는가?</li>
       </ul>
     </div>
   </div>
 
   <div class="acc">
-    <div class="acc-head" onclick="toggleAcc(this)">?㎦ 珥덈낫?먯슜 理쒖냼 ?곸긽 ?ㅽ뿕 ?먮쫫 <span>??</span></div>
+    <div class="acc-head" onclick="toggleAcc(this)">🧪 초보자용 최소 영상 실험 흐름 <span>▼</span></div>
     <div class="acc-body">
       <div class="scenario">
         <ol class="steps">
-          <li>?꾨＼?꾪듃 ?띿뒪??以鍮?(?대뼡 ?곸긽??留뚮뱾吏 ?ㅻ챸 ?묒꽦)</li>
-          <li>?곸긽??MCP ?쒕쾭 ?ㅼ젙 ?곌껐</li>
-          <li>?몃? ?곸긽 API ?몄쬆 ?뺣낫(API Key) ?곌껐</li>
-          <li>吏㏃? ?뚯뒪???붿껌 ?ㅽ뻾</li>
-          <li>寃곌낵 ?뚯씪(?곸긽/?대?吏) ?뺤씤</li>
-          <li>?꾨＼?꾪듃 ?섏젙 ???ъ떎??</li>
+          <li>프롬프트 텍스트 준비 (어떤 영상을 만들지 설명 작성)</li>
+          <li>영상용 MCP 서버 설정 연결</li>
+          <li>외부 영상 API 인증 정보(API Key) 연결</li>
+          <li>짧은 테스트 요청 실행</li>
+          <li>결과 파일(영상/이미지) 확인</li>
+          <li>프롬프트 수정 후 재실험</li>
         </ol>
       </div>
-      <p style="margin-top:10px;">?뮕 ?뱀젙 ?쒕퉬?ㅼ쓽 ?ㅼ젣 媛寃⑹씠??理쒖떊 ?뺤콉? ?대떦 ?쒕퉬?ㅼ쓽 怨듭떇 臾몄꽌瑜?諛섎뱶???뺤씤?섏꽭??</p>
+      <p style="margin-top:10px;">💡 특정 서비스의 실제 가격이나 최신 정책은 해당 서비스의 공식 문서를 반드시 확인하세요.</p>
     </div>
   </div>
 </div>
 
 <!-- ==================== QUIZ ==================== -->
 <div class="section" id="sec-quiz">
-  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--accent3);">?뱀뀡 J</div>
-  <h2 class="sec-h">?댁쫰 / ?먭린?먭?</h2>
-  <p class="sec-sub">10臾명빆?쇰줈 ?댄빐?꾨? ?뺤씤?섏꽭?? 臾몄젣瑜??怨??댁꽕???쎌뼱蹂댁꽭??</p>
+  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--accent3);">섹션 J</div>
+  <h2 class="sec-h">퀴즈 / 자기점검</h2>
+  <p class="sec-sub">10문항으로 이해도를 확인하세요. 문제를 풀고 해설을 읽어보세요.</p>
 
   <div id="quizWrap"></div>
   <div style="text-align:center;margin-top:16px;">
-    <button class="btn btn-primary" onclick="scoreQuiz()">梨꾩젏?섍린</button>
-    <button class="btn btn-secondary" onclick="resetQuiz()">?ㅼ떆 ?湲?</button>
+    <button class="btn btn-primary" onclick="scoreQuiz()">채점하기</button>
+    <button class="btn btn-secondary" onclick="resetQuiz()">다시 풀기</button>
   </div>
   <div class="quiz-score" id="quizScore" style="display:none;"></div>
 </div>
 
 <!-- ==================== GLOSSARY ==================== -->
 <div class="section" id="sec-glossary">
-  <div class="sec-tag" style="background:rgba(121,192,255,0.12);color:var(--accent6);">?뱀뀡 K</div>
-  <h2 class="sec-h">?⑹뼱?ъ쟾</h2>
-  <p class="sec-sub">寃?됲븯嫄곕굹 ?대┃?댁꽌 ?뺤쓽瑜??뺤씤?섏꽭??</p>
-  <input class="glossary-search" placeholder="?⑹뼱 寃??.." oninput="filterGlossary(this.value)" id="glossaryInput">
+  <div class="sec-tag" style="background:rgba(121,192,255,0.12);color:var(--accent6);">섹션 K</div>
+  <h2 class="sec-h">용어사전</h2>
+  <p class="sec-sub">검색하거나 클릭해서 정의를 확인하세요.</p>
+  <input class="glossary-search" placeholder="용어 검색..." oninput="filterGlossary(this.value)" id="glossaryInput">
   <div id="glossaryList"></div>
 </div>
 
 <!-- ==================== MEMO ==================== -->
 <div class="section" id="sec-memo">
-  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--accent2);">?뱀뀡 L</div>
-  <h2 class="sec-h">蹂듭궗??硫붾え / ?ㅽ뻾 泥댄겕由ъ뒪??</h2>
-  <p class="sec-sub">諛붾줈 ?ㅽ뻾????만 ???덈룄濡?蹂듭궗?댁꽌 ?ъ슜?섏꽭??</p>
+  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--accent2);">섹션 L</div>
+  <h2 class="sec-h">복사용 메모 / 실행 체크리스트</h2>
+  <p class="sec-sub">바로 실행에 옮길 수 있도록 복사해서 사용하세요.</p>
 
   <div class="memo-card">
-    <h4>?뱥 ?닿? 吏湲??댄빐???듭떖</h4>
-    <button class="copy-btn" onclick="copyMemo(this,'memo1')">蹂듭궗</button>
-    <pre id="memo1">??MCP??AI媛 ?몃? ?꾧뎄瑜??곌쾶 ?댁＜???쒖? ?곌껐 諛⑹떇?대떎
-??API???몃? ?쒕퉬?ㅼ쓽 ?몄텧 洹쒓꺽?대떎
-??API Key???몃? ?쒕퉬?ㅼ뿉 ?몄쬆?섍린 ?꾪븳 ?낆옣沅뚯씠????API Key媛 ?덈떎怨?MCP媛 ?앸굹??寃껋? ?꾨땲????泥??ㅼ뒿? filesystem MCP媛 媛???쎈떎
-  ??API Key ?놁씠 濡쒖뺄 ?뚯씪 ?쎄린/?곌린濡?諛붾줈 泥닿컧 媛??</pre>
+    <h4>📋 내가 지금 이해한 핵심</h4>
+    <button class="copy-btn" onclick="copyMemo(this,'memo1')">복사</button>
+    <pre id="memo1">• MCP는 AI가 외부 도구를 쓰게 해주는 표준 연결 방식이다
+• API는 외부 서비스의 호출 규격이다
+• API Key는 외부 서비스에 인증하기 위한 입장권이다
+• API Key가 있다고 MCP가 끝나는 것은 아니다
+• 첫 실습은 filesystem MCP가 가장 쉽다
+  → API Key 없이 로컬 파일 읽기/쓰기로 바로 체감 가능</pre>
   </div>
 
   <div class="memo-card">
-    <h4>?뱥 泥??ㅼ뒿 泥댄겕由ъ뒪??</h4>
-    <button class="copy-btn" onclick="copyMemo(this,'memo2')">蹂듭궗</button>
-    <pre id="memo2">???ㅼ뒿 ?대뜑 以鍮?(?? study/mcp-lab/)
-???대뜑 ?덉뿉 ?뚯뒪???뚯씪 ?앹꽦 (notes.txt, questions.md)
-??AI ?대씪?댁뼵?몄뿉???대떦 ?대뜑 ?묎렐 ?덉슜
-??AI?먭쾶 ?뚯씪 紐⑸줉 蹂닿린 ?붿껌
-??AI?먭쾶 ?뱀젙 ?뚯씪 ?쎄린 ?붿껌
-??AI?먭쾶 ???붿빟 ?뚯씪 ?곌린 ?붿껌
-???ㅼ젣濡??뚯씪???앹꽦?섏뿀?붿? ?뺤씤</pre>
+    <h4>📋 첫 실습 체크리스트</h4>
+    <button class="copy-btn" onclick="copyMemo(this,'memo2')">복사</button>
+    <pre id="memo2">□ 실습 폴더 준비 (예: study/mcp-lab/)
+□ 폴더 안에 테스트 파일 생성 (notes.txt, questions.md)
+□ AI 클라이언트에서 해당 폴더 접근 허용
+□ AI에게 파일 목록 보기 요청
+□ AI에게 특정 파일 읽기 요청
+□ AI에게 새 요약 파일 쓰기 요청
+□ 실제로 파일이 생성되었는지 확인</pre>
   </div>
 
   <div class="memo-card">
-    <h4>?뱥 ?곸긽 ?④퀎濡??섏뼱媛湲????뺤씤</h4>
-    <button class="copy-btn" onclick="copyMemo(this,'memo3')">蹂듭궗</button>
-    <pre id="memo3">??filesystem MCP濡??뚯씪 ?쎄린/?곌린 ?깃났 寃쏀뿕 ?덉쓬
-??AI ?대씪?댁뼵????MCP ?쒕쾭 ???꾧뎄 ?ㅽ뻾 ?먮쫫 ?댄빐????API Key = ?낆옣沅뚯씠?쇰뒗 媛쒕뀗 援щ텇 媛?????몃? ?쒕퉬???몄쬆 援ъ“ 媛쒕뀗 ?댄빐?????몃? API ?몄텧 ??鍮꾩슜 諛쒖깮 媛?μ꽦 ?몄??????곸긽 API MCP ?먮쫫:
-  ?대씪?댁뼵?????곸긽 MCP ?쒕쾭 ???몃? API ??寃곌낵 ?뚯씪</pre>
+    <h4>📋 영상 단계로 넘어가기 전 확인</h4>
+    <button class="copy-btn" onclick="copyMemo(this,'memo3')">복사</button>
+    <pre id="memo3">□ filesystem MCP로 파일 읽기/쓰기 성공 경험 있음
+□ AI 클라이언트 → MCP 서버 → 도구 실행 흐름 이해함
+□ API Key = 입장권이라는 개념 구분 가능
+□ 외부 서비스 인증 구조 개념 이해함
+□ 외부 API 호출 시 비용 발생 가능성 인지함
+□ 영상 API MCP 흐름:
+  클라이언트 → 영상 MCP 서버 → 외부 API → 결과 파일</pre>
   </div>
 </div>
 
 <script>
 // ============ DATA ============
 const conceptData = [
-  {title:'MCP (Model Context Protocol)', desc:'MCP??AI媛 ?몃? ?꾧뎄瑜??????덇쾶 ?댁＜???쒖? ?곌껐 諛⑹떇?낅땲?? 洹몃깷 梨꾪똿留??섎㈃ AI??留먮쭔 ?⑸땲?? MCP瑜?遺숈씠硫?AI媛 ?뚯씪???쎄퀬, ?곌퀬, 寃?됲븯怨? ?몃? ?쒕퉬?ㅻ? ?몄텧?????덉뒿?덈떎.', extra:'鍮꾩쑀: MCP??AI? ?꾧뎄瑜??뉖뒗 "USB 耳?대툝" 媛숈? 寃껋엯?덈떎. 耳?대툝???놁쑝硫?湲곌린媛 ?덉뼱???곌껐?????⑸땲??'},
-  {title:'API (Application Programming Interface)', desc:'API???뚰봽?몄썾?대겮由???뷀븯??洹쒓꺽?낅땲?? ?덈? ?ㅼ뼱 ?좎뵪 API, ?곸긽 ?앹꽦 API, GitHub API ?깆씠 ?덉뒿?덈떎. API ?먯껜??"????뺤떇???쎌냽"??肉? ?닿쾬留뚯쑝濡?AI媛 ?먮룞?쇰줈 ?꾧뎄瑜??곌쾶 ?섏????딆뒿?덈떎.', extra:'鍮꾩쑀: API??"硫붾돱???낅땲?? 硫붾돱?먯씠 ?덈떎怨??뚯떇???먮룞?쇰줈 ?섏삤吏???딆짛. ?꾧뎔媛媛 二쇰Ц???댁빞 ?⑸땲??'},
-  {title:'API Key', desc:'API Key???몃? ?쒕퉬?ㅼ뿉 ?묎렐?섍린 ?꾪븳 ?몄쬆 ?뺣낫(?낆옣沅??낅땲?? ?몃? ?쒕퉬?ㅽ삎 MCP瑜??ъ슜?????꾩슂?????덉뒿?덈떎. ?섏?留?filesystem MCP泥섎읆 濡쒖뺄 ?꾧뎄瑜????뚮뒗 蹂댄넻 ?꾩슂?섏? ?딆뒿?덈떎.', extra:'鍮꾩쑀: API Key??"肄섏꽌???낆옣沅??낅땲?? ?낆옣沅뚯씠 ?덈떎怨??뚰뼢 ?쒖뒪?쒖씠 ?곌껐?섎뒗 嫄??꾨떃?덈떎. ?낆옣沅뚯? ?낆옣沅? ?곌껐 ?μ튂???곌껐 ?μ튂?낅땲??'},
-  {title:'AI Client (AI ?대씪?댁뼵??', desc:'AI ?대씪?댁뼵?몃뒗 ?ъ슜?먭? AI? ??뷀븯??怨녹엯?덈떎. ??釉뚮씪?곗???LLM 梨꾪똿 ?명꽣?섏씠?ㅼ씪 ?섎룄 ?덇퀬, ?곕??먯쓽 CLI ?꾧뎄???섎룄 ?덉뒿?덈떎. MCP瑜??ъ슜?????대씪?댁뼵?멸? MCP ?쒕쾭???꾧뎄 ?ъ슜???붿껌?⑸땲??', extra:'?툹LM+MCP?먯꽌??釉뚮씪?곗?媛 ?대씪?댁뼵?? CLI+MCP?먯꽌???곕????꾧뎄媛 ?대씪?댁뼵????븷???⑸땲??'},
-  {title:'MCP Server (MCP ?쒕쾭)', desc:'MCP ?쒕쾭???ㅼ젣 ?꾧뎄瑜??쒓났?섎뒗 履쎌엯?덈떎. AI ?대씪?댁뼵?멸? "?뚯씪 ?쎌뼱以??쇨퀬 ?붿껌?섎㈃, MCP ?쒕쾭媛 洹??붿껌??諛쏆븘 ?ㅼ젣 ?뚯씪 ?쒖뒪?쒖뿉???뚯씪???쎌뼱 寃곌낵瑜??뚮젮以띾땲??', extra:'filesystem MCP ?쒕쾭??濡쒖뺄 ?뚯씪???ㅻ（怨? GitHub MCP ?쒕쾭??GitHub API瑜??ㅻ（怨? ?곸긽 MCP ?쒕쾭???몃? ?곸긽 API瑜??ㅻ９?덈떎.'}
+  {title:'MCP (Model Context Protocol)', desc:'MCP는 AI가 외부 도구를 쓸 수 있게 해주는 표준 연결 방식입니다. 그냥 채팅만 하면 AI는 말만 합니다. MCP를 붙이면 AI가 파일을 읽고, 쓰고, 검색하고, 외부 서비스를 호출할 수 있습니다.', extra:'비유: MCP는 AI와 도구를 잇는 "USB 케이블" 같은 것입니다. 케이블이 없으면 기기가 있어도 연결이 안 됩니다.'},
+  {title:'API (Application Programming Interface)', desc:'API는 소프트웨어끼리 대화하는 규격입니다. 예를 들어 날씨 API, 영상 생성 API, GitHub API 등이 있습니다. API 자체는 "대화 형식의 약속"일 뿐, 이것만으로 AI가 자동으로 도구를 쓰게 되지는 않습니다.', extra:'비유: API는 "메뉴판"입니다. 메뉴판이 있다고 음식이 자동으로 나오지는 않죠. 누군가가 주문을 해야 합니다.'},
+  {title:'API Key', desc:'API Key는 외부 서비스에 접근하기 위한 인증 정보(입장권)입니다. 외부 서비스형 MCP를 사용할 때 필요할 수 있습니다. 하지만 filesystem MCP처럼 로컬 도구를 쓸 때는 보통 필요하지 않습니다.', extra:'비유: API Key는 "콘서트 입장권"입니다. 입장권이 있다고 음향 시스템이 연결되는 건 아닙니다. 입장권은 입장권, 연결 장치는 연결 장치입니다.'},
+  {title:'AI Client (AI 클라이언트)', desc:'AI 클라이언트는 사용자가 AI와 대화하는 곳입니다. 웹 브라우저의 LLM 채팅 인터페이스일 수도 있고, 터미널의 CLI 도구일 수도 있습니다. MCP를 사용할 때 클라이언트가 MCP 서버에 도구 사용을 요청합니다.', extra:'웹LLM+MCP에서는 브라우저가 클라이언트, CLI+MCP에서는 터미널 도구가 클라이언트 역할을 합니다.'},
+  {title:'MCP Server (MCP 서버)', desc:'MCP 서버는 실제 도구를 제공하는 쪽입니다. AI 클라이언트가 "파일 읽어줘"라고 요청하면, MCP 서버가 그 요청을 받아 실제 파일 시스템에서 파일을 읽어 결과를 돌려줍니다.', extra:'filesystem MCP 서버는 로컬 파일을 다루고, GitHub MCP 서버는 GitHub API를 다루고, 영상 MCP 서버는 외부 영상 API를 다룹니다.'}
 ];
 
 const compareData = [
-  {title:'?뚯씪 ?쎄린', without:{label:'MCP ?놁쓬',text:'"???뚯씪???댁뼱遊??쇨퀬 留먰븯硫? AI???뚯씪 ?댁슜??紐⑤쫭?덈떎. ?ъ슜?먭? 吏곸젒 蹂듭궗?댁꽌 遺숈뿬?ｌ뼱???⑸땲?? AI??留먮쭔 ?????덉뒿?덈떎.'}, with:{label:'MCP ?덉쓬',text:'AI媛 ?깅줉??filesystem ?꾧뎄瑜??듯빐 ?ㅼ젣 ?뚯씪???쎌뒿?덈떎. ?ъ슜?먭? 蹂듭궗-遺숈뿬?ｊ린???꾩슂 ?놁씠, AI媛 吏곸젒 ?뚯씪???묎렐?섏뿬 ?댁슜??媛?몄샃?덈떎.'}},
-  {title:'肄붾뱶 ??μ냼', without:{label:'MCP ?놁쓬',text:'"源껎뿀釉뚮? 李멸퀬???쇨퀬 留먰빐?? AI???ㅼ젣 ??μ냼???묎렐?????놁뒿?덈떎. 異붿긽?곸씤 ?듬?留??⑸땲??'}, with:{label:'MCP ?덉쓬',text:'?곌껐??GitHub MCP ?꾧뎄瑜??듯빐 ?ㅼ젣 ??μ냼 ?뺣낫(?댁뒋, ?뚯씪 ?????묎렐?⑸땲?? ?ㅼ젣 ?곗씠?곕? 湲곕컲?쇰줈 援ъ껜???듬???媛?ν빀?덈떎.'}},
-  {title:'?곸긽 ?앹꽦', without:{label:'MCP ?놁쓬',text:'"?곸긽 留뚮뱾?댁쨾"?쇨퀬 留먰빐??AI?먭쾶 ?ㅼ젣 ?곸긽 ?앹꽦 ?뚯씠?꾨씪?몄씠 ?놁뒿?덈떎. ?ㅽ겕由쏀듃 ?띿뒪?몃쭔 以????덉뒿?덈떎.'}, with:{label:'MCP ?덉쓬',text:'?곌껐???곸긽??MCP瑜??듯빐 ?몃? ?곸긽 API瑜??몄텧?섍퀬, ?ㅼ젣 ?곸긽/?대?吏 寃곌낵 ?뚯씪??諛쏆쓣 ???덉뒿?덈떎.'}}
+  {title:'파일 읽기', without:{label:'MCP 없음',text:'"이 파일을 열어봐"라고 말하면, AI는 파일 내용을 모릅니다. 사용자가 직접 복사해서 붙여넣어야 합니다. AI는 말만 할 수 있습니다.'}, with:{label:'MCP 있음',text:'AI가 등록된 filesystem 도구를 통해 실제 파일을 읽습니다. 사용자가 복사-붙여넣기할 필요 없이, AI가 직접 파일에 접근하여 내용을 가져옵니다.'}},
+  {title:'코드 저장소', without:{label:'MCP 없음',text:'"깃허브를 참고해"라고 말해도, AI는 실제 저장소에 접근할 수 없습니다. 추상적인 답변만 합니다.'}, with:{label:'MCP 있음',text:'연결된 GitHub MCP 도구를 통해 실제 저장소 정보(이슈, 파일 등)에 접근합니다. 실제 데이터를 기반으로 구체적 답변이 가능합니다.'}},
+  {title:'영상 생성', without:{label:'MCP 없음',text:'"영상 만들어줘"라고 말해도 AI에게 실제 영상 생성 파이프라인이 없습니다. 스크립트 텍스트만 줄 수 있습니다.'}, with:{label:'MCP 있음',text:'연결된 영상용 MCP를 통해 외부 영상 API를 호출하고, 실제 영상/이미지 결과 파일을 받을 수 있습니다.'}}
 ];
 
 const purposeRec = [
-  {env:'??LLM + MCP', reason:'媛쒕뀗??鍮좊Ⅴ寃??댄빐?섎젮硫???뷀삎 ?섍꼍???좊━?⑸땲?? ?ㅼ젙 遺???놁씠 MCP ?곌껐 ??諛붾줈 ?ㅽ뿕?????덉뒿?덈떎.'},
-  {env:'??LLM + MCP', reason:'鍮좊Ⅸ ?뚯뒪?몄뿉????뷀삎 ?섍꼍???명빀?덈떎. 寃곌낵瑜?利됱떆 ??붿갹?먯꽌 ?뺤씤?????덉뒿?덈떎.'},
-  {env:'CLI + MCP', reason:'濡쒖뺄 ?꾨줈?앺듃瑜??ㅻ（?ㅻ㈃ ?곕???湲곕컲 CLI+MCP媛 ?뚯씪 ?쒖뒪???묎렐怨?git ?곕룞????諛?묓빀?덈떎.'},
-  {env:'CLI + MCP', reason:'肄붾뱶 ?먮룞???묒뾽? ?곕????섍꼍?먯꽌 ?먮뵒?? 鍮뚮뱶 ?꾧뎄? ?④퍡 ????媛???④낵?곸엯?덈떎.'},
-  {env:'????媛??(??LLM 癒쇱? 異붿쿇)', reason:'?뚯씪 ?쎄린/?곌린?????섍꼍 紐⑤몢 媛?ν븯吏留? 泥섏쓬?대씪硫???LLM+MCP?먯꽌 癒쇱? 泥댄뿕?섍퀬 CLI濡??섏뼱媛??寃껋씠 ?먯뿰?ㅻ읇?듬땲??'}
+  {env:'웹 LLM + MCP', reason:'개념을 빠르게 이해하려면 대화형 환경이 유리합니다. 설정 부담 없이 MCP 연결 후 바로 실험할 수 있습니다.'},
+  {env:'웹 LLM + MCP', reason:'빠른 테스트에는 대화형 환경이 편합니다. 결과를 즉시 대화창에서 확인할 수 있습니다.'},
+  {env:'CLI + MCP', reason:'로컬 프로젝트를 다루려면 터미널 기반 CLI+MCP가 파일 시스템 접근과 git 연동에 더 밀접합니다.'},
+  {env:'CLI + MCP', reason:'코드 자동화 작업은 터미널 환경에서 에디터, 빌드 도구와 함께 쓸 때 가장 효과적입니다.'},
+  {env:'둘 다 가능 (웹 LLM 먼저 추천)', reason:'파일 읽기/쓰기는 두 환경 모두 가능하지만, 처음이라면 웹 LLM+MCP에서 먼저 체험하고 CLI로 넘어가는 것이 자연스럽습니다.'}
 ];
 
 const drColors = ['var(--dr1)','var(--dr2)','var(--dr3)','var(--dr4)','var(--dr5)'];
 const drData = [
-  {name:'Dr. Protocol ???꾨줈?좎퐳 諛뺤궗', q:'MCP? API?????ㅻⅨ媛?', summary:['MCP??AI媛 ?몃? ?꾧뎄瑜??곌쾶 ?댁＜???곌껐 ?꾨줈?좎퐳?대떎','API???쒕퉬?ㅼ쓽 ?몄텧 洹쒓꺽?닿퀬, API Key??洹??쒕퉬?ㅼ쓽 ?낆옣沅뚯씠??,'???뗭? ?쒕줈 ?ㅻⅨ ?덉씠?댁뿉 ?덉쑝硫? ?쇰룞?섎㈃ MCP ?댄빐媛 瑗ъ씤??], miscon:['MCP = API?쇨퀬 ?앷컖?섎뒗 寃?,'API Key留??덉쑝硫?MCP ?곌껐???앸궗?ㅺ퀬 李⑷컖','MCP ?쒕쾭媛 AI 洹??먯껜?쇨퀬 ?ㅽ빐'], actions:['媛쒕뀗 遺꾨━ 留듭뿉??5媛?移대뱶瑜?紐⑤몢 ?뚮윭蹂닿린','?由ш린 ?ъ슫 ?쒗쁽 8媛吏瑜?紐⑤몢 ?쎌뼱蹂닿린','"API Key???낆옣沅? MCP???곌껐 ?μ튂" 臾몄옣???붽린?섍린'], next:'媛쒕뀗???뺣━?섏뿀?ㅻ㈃, ?섍꼍援ъ“ 諛뺤궗(Dr. Runtime)?먭쾶 ?대룞?섏뿬 ?밴낵 CLI 李⑥씠瑜?鍮꾧탳?섏꽭??'},
-  {name:'Dr. Runtime ???섍꼍援ъ“ 諛뺤궗', q:'?툹LM+MCP? CLI+MCP????泥닿컧???ㅻⅨ媛?', summary:['媛숈? MCP?쇰룄 ?ㅽ뻾 ?섍꼍(??vs CLI)???곕씪 ?묎렐 踰붿쐞? ?몄쓽?깆씠 ?ㅻⅤ??,'?툹LM+MCP????뷀삎 ?ㅽ뿕???좊━?섍퀬, CLI+MCP??濡쒖뺄 媛쒕컻 ?묒뾽??諛?묓븯??,'李⑥씠??蹂몄쭏? MCP ?먯껜媛 ?꾨땲???ㅽ뻾 留λ씫怨??묎렐 踰붿쐞?대떎'], miscon:['?밴낵 CLI?먯꽌 MCP ?먯껜媛 ?ㅻⅤ?ㅺ퀬 李⑷컖','CLI媛 臾댁“嫄??대졄?ㅺ퀬 ?⑥젙','?뱀뿉?쒕뒗 MCP瑜??????녿떎怨??ㅽ빐'], actions:['?섍꼍鍮꾧탳 ?ㅽ뿕?ㅼ뿉??鍮꾧탳?쒕? ?쎄린','紐⑹쟻 ?좏깮湲곗뿉?????곹솴??留욌뒗 ?섍꼍 ?뺤씤','媛숈? ?묒뾽(?뚯씪 ?쎄린)?????섍꼍?먯꽌 ?대낵 怨꾪쉷 ?몄슦湲?], next:'?섍꼍 李⑥씠瑜??댄빐?덈떎硫? ?숈뒿?ㅺ퀎 諛뺤궗(Dr. Curriculum)?먭쾶 ?대룞?섏뿬 ?숈뒿 ?쒖꽌瑜??≪쑝?몄슂.'},
-  {name:'Dr. Curriculum ???숈뒿?ㅺ퀎 諛뺤궗', q:'泥섏쓬遺???대뼡 ?쒖꽌濡?諛곗썙???섎뒗媛?', summary:['1?④퀎: 媛쒕뀗 遺꾨━ ??2?④퀎: 援ъ“ ?댄빐 ??3?④퀎: filesystem ?ㅼ뒿 ??4?④퀎: ?섍꼍 鍮꾧탳 ??5?④퀎: ?뺤옣','媛??④퀎?먮뒗 紐낇솗??紐⑺몴? ?깃났 湲곗????덈떎','嫄대꼫?곕㈃ ?ㅼ쓬 ?④퀎?먯꽌 留됲옄 媛?μ꽦???믩떎'], miscon:['泥섏쓬遺???곸긽 API MCP濡??쒖옉?대룄 ?쒕떎???ㅽ빐','媛쒕뀗 ?뺣━ ?놁씠 ?ㅼ뒿留??섎㈃ ?쒕떎??李⑷컖','??踰덉뿉 紐⑤뱺 MCP瑜???諛곗썙???쒕떎??遺??], actions:['濡쒕뱶留??뱀뀡?먯꽌 5?④퀎瑜??쒖꽌?濡??뺤씤','?꾩옱 ?닿? ?대뒓 ?④퀎?몄? 泥댄겕諛뺤뒪濡??쒖떆','?ㅼ쓬 ?④퀎??以鍮꾨Ъ怨??깃났 湲곗? 誘몃━ ?뺤씤'], next:'?숈뒿 ?쒖꽌瑜??≪븯?ㅻ㈃, ?ㅼ뒿肄붿튂 諛뺤궗(Dr. Hands-on)?먭쾶 ?대룞?섏뿬 泥??ㅼ뒿???쒖옉?섏꽭??'},
-  {name:'Dr. Hands-on ???ㅼ뒿肄붿튂 諛뺤궗', q:'filesystem MCP濡?泥??ㅼ뒿???대뼸寃??깃났?섎뒗媛?', summary:['?ㅼ뒿 ?대뜑瑜?留뚮뱾怨? AI ?대씪?댁뼵?몄뿉???묎렐???덉슜?섍퀬, ?뚯씪 ?쎄린/?곌린瑜??뚯뒪?명븳??,'泥댄겕由ъ뒪?몃? ?곕씪媛硫??볦튂??寃??놁씠 吏꾪뻾?????덈떎','?ㅽ뙣 ?먯씤? ?遺遺?寃쎈줈, 沅뚰븳, ?ㅼ젙 ?꾨씫?대떎'], miscon:['filesystem MCP??API Key媛 ?꾩슂?섎떎???ㅽ빐','?ㅼ뒿 ?놁씠 媛쒕뀗留뚯쑝濡?MCP瑜??댄빐?????덈떎??李⑷컖','?ㅽ뙣?섎㈃ MCP ?먯껜媛 ???섎뒗 寃껋씠?쇰뒗 ?ㅽ빐 (?遺遺??ㅼ젙 臾몄젣)'], actions:['泥??ㅼ뒿 ?뱀뀡?먯꽌 ?쒕굹由ъ삤 1???곕씪?섍린','泥댄겕由ъ뒪??4媛쒕? 紐⑤몢 ?뺤씤','AI媛 ?뚯씪???쎄퀬 ???뚯씪??留뚮뱶??寃껋쓣 吏곸젒 ?뺤씤'], next:'泥??ㅼ뒿???깃났?덈떎硫? ?곸긽?ㅽ뿕 諛뺤궗(Dr. Media Pipeline)?먭쾶 ?대룞?섏뿬 ?뺤옣 ?④퀎瑜??댄렣蹂댁꽭??'},
-  {name:'Dr. Media Pipeline ???곸긽?ㅽ뿕 諛뺤궗', q:'?곸긽 API MCP??臾댁뾿??異붽??섎뒗媛?', summary:['?곸긽 API MCP??"?대씪?댁뼵????MCP ?쒕쾭 ???몃? ?곸긽 API ??寃곌낵 ?뚯씪" 援ъ“??,'filesystem MCP? ?щ━ API Key, ?ㅽ듃?뚰겕, 鍮꾩슜, ?ㅽ뙣 吏?먯씠 異붽??쒕떎','filesystem MCP瑜?癒쇱? ?댄빐???ㅼ뿉 ?섏뼱?ㅻ㈃ ?⑥뵮 ?섏썡?섎떎'], miscon:['?곸긽 MCP媛 filesystem MCP? ?꾩쟾???ㅻⅨ 湲곗닠?대씪???ㅽ빐','API Key留??ｌ쑝硫?諛붾줈 ?곸긽???섏삩?ㅻ뒗 李⑷컖','?곸긽 MCP媛 珥덈낫?먯쓽 泥??ㅼ뒿?쇰줈 ?곹빀?섎떎???ㅽ빐'], actions:['?곸긽 MCP ?뺤옣 ?뱀뀡?먯꽌 ?먮쫫 ?ㅼ씠?닿렇???뺤씤','filesystem MCP vs ?곸긽 API MCP 鍮꾧탳???쎄린','?곸긽 ?④퀎濡??섏뼱媛湲????뺤씤 ?ы빆 ?먭?'], next:'紐⑤뱺 諛뺤궗??媛?대뱶瑜?留덉낀?듬땲?? ?댁쫰濡??먭린?먭????섍굅?? 蹂듭궗 硫붾え瑜??쒖슜??諛붾줈 ?ㅽ뻾????린?몄슂!'}
+  {name:'Dr. Protocol — 프로토콜 박사', q:'MCP와 API는 왜 다른가?', summary:['MCP는 AI가 외부 도구를 쓰게 해주는 연결 프로토콜이다','API는 서비스의 호출 규격이고, API Key는 그 서비스의 입장권이다','이 셋은 서로 다른 레이어에 있으며, 혼동하면 MCP 이해가 꼬인다'], miscon:['MCP = API라고 생각하는 것','API Key만 있으면 MCP 연결이 끝났다고 착각','MCP 서버가 AI 그 자체라고 오해'], actions:['개념 분리 맵에서 5개 카드를 모두 눌러보기','틀리기 쉬운 표현 8가지를 모두 읽어보기','"API Key는 입장권, MCP는 연결 장치" 문장을 암기하기'], next:'개념이 정리되었다면, 환경구조 박사(Dr. Runtime)에게 이동하여 웹과 CLI 차이를 비교하세요.'},
+  {name:'Dr. Runtime — 환경구조 박사', q:'웹LLM+MCP와 CLI+MCP는 왜 체감이 다른가?', summary:['같은 MCP라도 실행 환경(웹 vs CLI)에 따라 접근 범위와 편의성이 다르다','웹LLM+MCP는 대화형 실험에 유리하고, CLI+MCP는 로컬 개발 작업에 밀접하다','차이의 본질은 MCP 자체가 아니라 실행 맥락과 접근 범위이다'], miscon:['웹과 CLI에서 MCP 자체가 다르다고 착각','CLI가 무조건 어렵다고 단정','웹에서는 MCP를 쓸 수 없다고 오해'], actions:['환경비교 실험실에서 비교표를 읽기','목적 선택기에서 내 상황에 맞는 환경 확인','같은 작업(파일 읽기)을 두 환경에서 해볼 계획 세우기'], next:'환경 차이를 이해했다면, 학습설계 박사(Dr. Curriculum)에게 이동하여 학습 순서를 잡으세요.'},
+  {name:'Dr. Curriculum — 학습설계 박사', q:'처음부터 어떤 순서로 배워야 하는가?', summary:['1단계: 개념 분리 → 2단계: 구조 이해 → 3단계: filesystem 실습 → 4단계: 환경 비교 → 5단계: 확장','각 단계에는 명확한 목표와 성공 기준이 있다','건너뛰면 다음 단계에서 막힐 가능성이 높다'], miscon:['처음부터 영상 API MCP로 시작해도 된다는 오해','개념 정리 없이 실습만 하면 된다는 착각','한 번에 모든 MCP를 다 배워야 한다는 부담'], actions:['로드맵 섹션에서 5단계를 순서대로 확인','현재 내가 어느 단계인지 체크박스로 표시','다음 단계의 준비물과 성공 기준 미리 확인'], next:'학습 순서를 잡았다면, 실습코치 박사(Dr. Hands-on)에게 이동하여 첫 실습을 시작하세요.'},
+  {name:'Dr. Hands-on — 실습코치 박사', q:'filesystem MCP로 첫 실습을 어떻게 성공하는가?', summary:['실습 폴더를 만들고, AI 클라이언트에서 접근을 허용하고, 파일 읽기/쓰기를 테스트한다','체크리스트를 따라가면 놓치는 것 없이 진행할 수 있다','실패 원인은 대부분 경로, 권한, 설정 누락이다'], miscon:['filesystem MCP도 API Key가 필요하다는 오해','실습 없이 개념만으로 MCP를 이해할 수 있다는 착각','실패하면 MCP 자체가 안 되는 것이라는 오해 (대부분 설정 문제)'], actions:['첫 실습 섹션에서 시나리오 1을 따라하기','체크리스트 4개를 모두 확인','AI가 파일을 읽고 새 파일을 만드는 것을 직접 확인'], next:'첫 실습을 성공했다면, 영상실험 박사(Dr. Media Pipeline)에게 이동하여 확장 단계를 살펴보세요.'},
+  {name:'Dr. Media Pipeline — 영상실험 박사', q:'영상 API MCP는 무엇이 추가되는가?', summary:['영상 API MCP는 "클라이언트 → MCP 서버 → 외부 영상 API → 결과 파일" 구조다','filesystem MCP와 달리 API Key, 네트워크, 비용, 실패 지점이 추가된다','filesystem MCP를 먼저 이해한 뒤에 넘어오면 훨씬 수월하다'], miscon:['영상 MCP가 filesystem MCP와 완전히 다른 기술이라는 오해','API Key만 넣으면 바로 영상이 나온다는 착각','영상 MCP가 초보자의 첫 실습으로 적합하다는 오해'], actions:['영상 MCP 확장 섹션에서 흐름 다이어그램 확인','filesystem MCP vs 영상 API MCP 비교표 읽기','영상 단계로 넘어가기 전 확인 사항 점검'], next:'모든 박사의 가이드를 마쳤습니다. 퀴즈로 자기점검을 하거나, 복사 메모를 활용해 바로 실행에 옮기세요!'}
 ];
 
 const roadmapData = [
-  {title:'1?④퀎: 媛쒕뀗 遺꾨━', goal:'MCP, API, API Key, Client, Server瑜??뺥솗??援щ텇?쒕떎', prep:'???꾪떚?⑺듃??媛쒕뀗 遺꾨━ 留??뱀뀡', success:'5媛?媛쒕뀗??媛곴컖 ??臾몄옣?쇰줈 ?ㅻ챸?????덈떎', block:'API? MCP瑜?媛숈? 寃껋쑝濡?李⑷컖?섎뒗 寃쎌슦 ???꾨줈?좎퐳 諛뺤궗 ?ㅻ챸 ?ㅼ떆 ?쎄린', checkpoint:'?由ш린 ?ъ슫 ?쒗쁽 8媛쒕? 紐⑤몢 ?щ컮瑜닿쾶 援먯젙?????덈뒗媛?'},
-  {title:'2?④퀎: 理쒖냼 援ъ“ ?댄빐', goal:'AI Client ??MCP Server ???꾧뎄 ?ㅽ뻾 ?먮쫫???댄빐?쒕떎', prep:'媛쒕뀗 遺꾨━ ?꾨즺', success:'"?대씪?댁뼵?멸? ?쒕쾭???붿껌?섎㈃ ?쒕쾭媛 ?꾧뎄瑜??ㅽ뻾?쒕떎"瑜??먭린 留먮줈 ?ㅻ챸 媛??, block:'Client? Server ??븷 ?쇰룞 ???섍꼍援ъ“ 諛뺤궗 ?ㅻ챸 李멸퀬', checkpoint:'?툹LM+MCP? CLI+MCP?먯꽌 ?대씪?댁뼵?멸? ?꾧뎄?몄? 援щ텇 媛?ν븳媛?'},
-  {title:'3?④퀎: 泥??ㅼ뒿 (filesystem MCP)', goal:'濡쒖뺄 ?뚯씪 ?쎄린/?곌린瑜?AI媛 ?ㅽ뻾?섎뒗 寃껋쓣 吏곸젒 ?뺤씤?쒕떎', prep:'?ㅼ뒿 ?대뜑 ?앹꽦, AI ?대씪?댁뼵??以鍮? ?묎렐 沅뚰븳 ?덉슜', success:'AI媛 ?대뜑瑜?蹂닿퀬, ?뚯씪???쎄퀬, ???뚯씪??留뚮뱾?덈떎', block:'寃쎈줈/沅뚰븳/?ㅼ젙 ?ㅻ쪟 ???ㅽ뙣 ?먯씤 泥댄겕由ъ뒪???뺤씤', checkpoint:'3媛??ㅼ뒿 ?쒕굹由ъ삤 以?理쒖냼 1媛쒕? ?깃났?덈뒗媛?'},
-  {title:'4?④퀎: ?섍꼍 鍮꾧탳 ?ㅼ뒿', goal:'媛숈? ?묒뾽???툹LM+MCP? CLI+MCP?먯꽌 ?대낫怨?李⑥씠瑜?湲곕줉?쒕떎', prep:'3?④퀎 ?꾨즺, ???섍꼍 紐⑤몢 ?ъ슜 媛??, success:'???섍꼍??李⑥씠瑜?3媛吏 ?댁긽 湲곕줉?????덈떎', block:'?쒖そ ?섍꼍留??⑥꽌 鍮꾧탳媛 ???섎뒗 寃쎌슦', checkpoint:'李⑥씠??蹂몄쭏??"?ㅽ뻾 留λ씫怨??묎렐 踰붿쐞"?꾩쓣 ?댄빐?덈뒗媛?'},
-  {title:'5?④퀎: ?뺤옣 ?ㅼ뒿', goal:'GitHub MCP ?먮뒗 ?곸긽 API MCP瑜??곌껐?섏뿬 ?몃? ?쒕퉬???꾧뎄瑜??ъ슜?대낯??, prep:'3~4?④퀎 ?꾨즺, ?몃? ?쒕퉬??怨꾩젙 諛?API Key 以鍮?, success:'?몃? ?쒕퉬??MCP瑜??듯빐 ?ㅼ젣 寃곌낵瑜?諛쏆븯??, block:'?몄쬆 ?ㅽ뙣, API ?쒕룄, 鍮꾩슜 諛쒖깮 媛??, checkpoint:'filesystem MCP? ?몃? ?쒕퉬??MCP??李⑥씠瑜??ㅻ챸?????덈뒗媛?'}
+  {title:'1단계: 개념 분리', goal:'MCP, API, API Key, Client, Server를 정확히 구분한다', prep:'이 아티팩트의 개념 분리 맵 섹션', success:'5개 개념을 각각 한 문장으로 설명할 수 있다', block:'API와 MCP를 같은 것으로 착각하는 경우 → 프로토콜 박사 설명 다시 읽기', checkpoint:'틀리기 쉬운 표현 8개를 모두 올바르게 교정할 수 있는가?'},
+  {title:'2단계: 최소 구조 이해', goal:'AI Client ↔ MCP Server ↔ 도구 실행 흐름을 이해한다', prep:'개념 분리 완료', success:'"클라이언트가 서버에 요청하면 서버가 도구를 실행한다"를 자기 말로 설명 가능', block:'Client와 Server 역할 혼동 → 환경구조 박사 설명 참고', checkpoint:'웹LLM+MCP와 CLI+MCP에서 클라이언트가 누구인지 구분 가능한가?'},
+  {title:'3단계: 첫 실습 (filesystem MCP)', goal:'로컬 파일 읽기/쓰기를 AI가 실행하는 것을 직접 확인한다', prep:'실습 폴더 생성, AI 클라이언트 준비, 접근 권한 허용', success:'AI가 폴더를 보고, 파일을 읽고, 새 파일을 만들었다', block:'경로/권한/설정 오류 → 실패 원인 체크리스트 확인', checkpoint:'3개 실습 시나리오 중 최소 1개를 성공했는가?'},
+  {title:'4단계: 환경 비교 실습', goal:'같은 작업을 웹LLM+MCP와 CLI+MCP에서 해보고 차이를 기록한다', prep:'3단계 완료, 두 환경 모두 사용 가능', success:'두 환경의 차이를 3가지 이상 기록할 수 있다', block:'한쪽 환경만 써서 비교가 안 되는 경우', checkpoint:'차이의 본질이 "실행 맥락과 접근 범위"임을 이해했는가?'},
+  {title:'5단계: 확장 실습', goal:'GitHub MCP 또는 영상 API MCP를 연결하여 외부 서비스 도구를 사용해본다', prep:'3~4단계 완료, 외부 서비스 계정 및 API Key 준비', success:'외부 서비스 MCP를 통해 실제 결과를 받았다', block:'인증 실패, API 한도, 비용 발생 가능', checkpoint:'filesystem MCP와 외부 서비스 MCP의 차이를 설명할 수 있는가?'}
 ];
 
 const quizData = [
-  {q:'MCP??API? 媛숈? 媛쒕뀗?대떎.', type:'ox', answer:'X', explain:'MCP??AI媛 ?꾧뎄瑜??곌쾶 ?댁＜???곌껐 ?꾨줈?좎퐳?닿퀬, API???쒕퉬?ㅼ쓽 ?몄텧 洹쒓꺽?낅땲?? ?쒕줈 ?ㅻⅨ ?덉씠?댁뿉 ?덉뒿?덈떎.'},
-  {q:'filesystem MCP??蹂댄넻 API Key媛 瑗??꾩슂?섎떎.', type:'ox', answer:'X', explain:'filesystem MCP??濡쒖뺄 ?뚯씪留??ㅻ（誘濡??몃? ?몄쬆???꾩슂 ?녿뒗 寃쎌슦媛 留롮뒿?덈떎.'},
-  {q:'?툹LM+MCP? CLI+MCP??媛숈? MCP?쇰룄 ?ㅽ뻾 寃쏀뿕???ㅻ? ???덈떎.', type:'ox', answer:'O', explain:'媛숈? MCP ?꾨줈?좎퐳?대씪???ㅽ뻾 ?섍꼍(??vs CLI)???곕씪 ?묎렐 踰붿쐞? ?몄쓽?깆씠 ?ㅻ쫭?덈떎.'},
-  {q:'?곸긽 API MCP??蹂댄넻 ?몃? ?쒕퉬???몄쬆??異붽??쒕떎.', type:'ox', answer:'O', explain:'?몃? ?곸긽 API瑜??몄텧?섎젮硫??몄쬆(API Key ?????꾩슂??寃쎌슦媛 ?遺遺꾩엯?덈떎.'},
-  {q:'泥섏쓬 MCP ?ㅼ뒿? filesystem MCP媛 ?곹빀?섎떎.', type:'ox', answer:'O', explain:'API Key ?놁씠 濡쒖뺄 ?뚯씪 ?쎄린/?곌린濡?MCP瑜?鍮좊Ⅴ寃?泥닿컧?????덇린 ?뚮Ц?낅땲??'},
-  {q:'?ㅼ쓬 以?MCP????븷濡?媛???곸젅??寃껋??', type:'mc', opts:['?몃? ?쒕퉬?ㅼ쓽 ?몄텧 洹쒓꺽','AI媛 ?꾧뎄瑜??????덇쾶 ?댁＜???곌껐 諛⑹떇','?몄쬆???꾪븳 鍮꾨? ??,'AI 紐⑤뜽 ?먯껜'], answer:1, explain:'MCP??AI? ?꾧뎄瑜??뉖뒗 ?쒖? ?곌껐 諛⑹떇?낅땲??'},
-  {q:'API Key????븷濡?媛???곸젅??鍮꾩쑀??', type:'mc', opts:['USB 耳?대툝','肄섏꽌???낆옣沅?,'硫붾돱??,'?붾━??], answer:1, explain:'API Key???몃? ?쒕퉬?ㅼ뿉 ?묎렐?섍린 ?꾪븳 ?몄쬆 ?뺣낫, 利?"?낆옣沅??낅땲??'},
-  {q:'"AI?먭쾶 ?뚯씪 ?쎄린瑜??붿껌?덈뜑???ㅼ젣濡??뚯씪???쎌뿀??" ???곹솴?먯꽌 諛섎뱶???꾩슂??寃껋??', type:'mc', opts:['API Key','MCP ?곌껐','?몃? ?ㅽ듃?뚰겕','?곸긽 ?앹꽦 API'], answer:1, explain:'AI媛 ?ㅼ젣 ?뚯씪???묎렐?섎젮硫?MCP ?곌껐(?? filesystem MCP)???꾩슂?⑸땲??'},
-  {q:'?곸긽 API MCP???곗씠???먮쫫 ?쒖꽌濡??щ컮瑜?寃껋??', type:'mc', opts:['?몃? API ???대씪?댁뼵????MCP ?쒕쾭 ??寃곌낵 ?뚯씪','?대씪?댁뼵????MCP ?쒕쾭 ???몃? ?곸긽 API ??寃곌낵 ?뚯씪','MCP ?쒕쾭 ???대씪?댁뼵????寃곌낵 ?뚯씪 ???몃? API','寃곌낵 ?뚯씪 ???몃? API ??MCP ?쒕쾭 ???대씪?댁뼵??], answer:1, explain:'?대씪?댁뼵?멸? MCP ?쒕쾭???붿껌?섎㈃, ?쒕쾭媛 ?몃? ?곸긽 API瑜??몄텧?섍퀬, 洹?寃곌낵 ?뚯씪???뚯븘?듬땲??'},
-  {q:'filesystem MCP ?ㅼ뒿?먯꽌 媛???뷀븳 ?ㅽ뙣 ?먯씤???꾨땶 寃껋??', type:'mc', opts:['?대뜑 寃쎈줈 ?ㅻ쪟','?묎렐 沅뚰븳 誘명뿀??,'API Key 留뚮즺','?ㅼ젙 ?뚯씪 ?꾨씫'], answer:2, explain:'filesystem MCP??蹂댄넻 API Key瑜??ъ슜?섏? ?딆쑝誘濡? API Key 留뚮즺???ㅽ뙣 ?먯씤???꾨떃?덈떎.'}
+  {q:'MCP는 API와 같은 개념이다.', type:'ox', answer:'X', explain:'MCP는 AI가 도구를 쓰게 해주는 연결 프로토콜이고, API는 서비스의 호출 규격입니다. 서로 다른 레이어에 있습니다.'},
+  {q:'filesystem MCP는 보통 API Key가 꼭 필요하다.', type:'ox', answer:'X', explain:'filesystem MCP는 로컬 파일만 다루므로 외부 인증이 필요 없는 경우가 많습니다.'},
+  {q:'웹LLM+MCP와 CLI+MCP는 같은 MCP라도 실행 경험이 다를 수 있다.', type:'ox', answer:'O', explain:'같은 MCP 프로토콜이라도 실행 환경(웹 vs CLI)에 따라 접근 범위와 편의성이 다릅니다.'},
+  {q:'영상 API MCP는 보통 외부 서비스 인증이 추가된다.', type:'ox', answer:'O', explain:'외부 영상 API를 호출하려면 인증(API Key 등)이 필요한 경우가 대부분입니다.'},
+  {q:'처음 MCP 실습은 filesystem MCP가 적합하다.', type:'ox', answer:'O', explain:'API Key 없이 로컬 파일 읽기/쓰기로 MCP를 빠르게 체감할 수 있기 때문입니다.'},
+  {q:'다음 중 MCP의 역할로 가장 적절한 것은?', type:'mc', opts:['외부 서비스의 호출 규격','AI가 도구를 쓸 수 있게 해주는 연결 방식','인증을 위한 비밀 키','AI 모델 자체'], answer:1, explain:'MCP는 AI와 도구를 잇는 표준 연결 방식입니다.'},
+  {q:'API Key의 역할로 가장 적절한 비유는?', type:'mc', opts:['USB 케이블','콘서트 입장권','메뉴판','요리사'], answer:1, explain:'API Key는 외부 서비스에 접근하기 위한 인증 정보, 즉 "입장권"입니다.'},
+  {q:'"AI에게 파일 읽기를 요청했더니 실제로 파일을 읽었다." 이 상황에서 반드시 필요한 것은?', type:'mc', opts:['API Key','MCP 연결','외부 네트워크','영상 생성 API'], answer:1, explain:'AI가 실제 파일에 접근하려면 MCP 연결(예: filesystem MCP)이 필요합니다.'},
+  {q:'영상 API MCP의 데이터 흐름 순서로 올바른 것은?', type:'mc', opts:['외부 API → 클라이언트 → MCP 서버 → 결과 파일','클라이언트 → MCP 서버 → 외부 영상 API → 결과 파일','MCP 서버 → 클라이언트 → 결과 파일 → 외부 API','결과 파일 → 외부 API → MCP 서버 → 클라이언트'], answer:1, explain:'클라이언트가 MCP 서버에 요청하면, 서버가 외부 영상 API를 호출하고, 그 결과 파일이 돌아옵니다.'},
+  {q:'filesystem MCP 실습에서 가장 흔한 실패 원인이 아닌 것은?', type:'mc', opts:['폴더 경로 오류','접근 권한 미허용','API Key 만료','설정 파일 누락'], answer:2, explain:'filesystem MCP는 보통 API Key를 사용하지 않으므로, API Key 만료는 실패 원인이 아닙니다.'}
 ];
 
 const glossaryData = [
-  {term:'MCP', def:'Model Context Protocol. AI媛 ?몃? ?꾧뎄瑜??ъ슜?????덇쾶 ?댁＜???쒖? ?곌껐 諛⑹떇.', easy:'AI? ?꾧뎄 ?ъ씠瑜??뉖뒗 "USB 耳?대툝" 媛숈? 寃?'},
-  {term:'API', def:'Application Programming Interface. ?뚰봽?몄썾??媛??듭떊???꾪븳 ?몄텧 洹쒓꺽.', easy:'?쒕퉬?ㅼ쓽 "硫붾돱??. ?대뼡 湲곕뒫???대뼸寃??붿껌?????덈뒗吏 ?뺥빐???쎌냽.'},
-  {term:'API Key', def:'?몃? ?쒕퉬?ㅼ뿉 ?묎렐?섍린 ?꾪븳 ?몄쬆 ?뺣낫.', easy:'"肄섏꽌???낆옣沅?. ?닿쾶 ?덉뼱???몃? ?쒕퉬?ㅻ? ?????덈떎.'},
-  {term:'Client (?대씪?댁뼵??', def:'?ъ슜?먭? AI? ?곹샇?묒슜?섎뒗 ?꾨줈洹몃옩. MCP?먯꽌??AI ?대씪?댁뼵?멸? MCP ?쒕쾭???꾧뎄 ?ъ슜???붿껌?쒕떎.', easy:'AI? ??뷀븯??李쎄뎄. ??梨꾪똿?대뱺 ?곕??먯씠???ъ슜?먭? ?곕뒗 履?'},
-  {term:'Server (?쒕쾭)', def:'MCP?먯꽌 ?ㅼ젣 ?꾧뎄瑜??쒓났?섎뒗 ?꾨줈洹몃옩. ?대씪?댁뼵?몄쓽 ?붿껌??諛쏆븘 ?꾧뎄瑜??ㅽ뻾?쒕떎.', easy:'?꾧뎄瑜?媛吏怨??덈뒗 履? ?뚯씪 ?쎄린, API ?몄텧 ???ㅼ젣 ?묒뾽???섑뻾.'},
-  {term:'filesystem MCP', def:'濡쒖뺄 ?뚯씪 ?쒖뒪?쒖쓽 ?뚯씪???쎄퀬 ?????덇쾶 ?댁＜??MCP ?쒕쾭. 蹂댄넻 API Key ?놁씠 ?ъ슜 媛??', easy:'??而댄벂???대뜑瑜?AI媛 吏곸젒 蹂닿퀬 ?뚯씪???ㅻ（寃??댁＜???꾧뎄.'},
-  {term:'Tool (?꾧뎄)', def:'MCP ?쒕쾭媛 ?쒓났?섎뒗 援ъ껜??湲곕뒫 ?⑥쐞. ?? ?뚯씪 ?쎄린, ?뚯씪 ?곌린, 寃????', easy:'AI媛 ?ㅼ젣濡?"?????덈뒗 ?됰룞" ?섎굹?섎굹.'},
-  {term:'Local file (濡쒖뺄 ?뚯씪)', def:'?ъ슜?먯쓽 而댄벂?곗뿉 ??λ맂 ?뚯씪.', easy:'??而댄벂?곗뿉 ?덈뒗 ?뚯씪. ?명꽣???놁씠???묎렐 媛??'},
-  {term:'External service (?몃? ?쒕퉬??', def:'?명꽣?룹쓣 ?듯빐 ?묎렐?섎뒗 ?몃? ?쒕퉬?? GitHub, Google Drive, ?곸긽 ?앹꽦 API ??', easy:'??而댄벂??諛붽묑???덈뒗 ?쒕퉬?? 蹂댄넻 ?몄쬆(API Key)???꾩슂.'},
-  {term:'CLI', def:'Command Line Interface. ?곕??먯뿉??紐낅졊?대? ?낅젰?섏뿬 ?꾨줈洹몃옩???ъ슜?섎뒗 諛⑹떇.', easy:'寃? ?붾㈃(?곕????먯꽌 湲?먮줈 紐낅졊???대━??寃?'},
-  {term:'Web LLM', def:'??釉뚮씪?곗??먯꽌 ?ъ슜?섎뒗 ??뷀삎 AI ?쒕퉬??', easy:'?명꽣??釉뚮씪?곗?濡??묒냽?댁꽌 AI? 梨꾪똿?섎뒗 寃?'},
-  {term:'Permission (沅뚰븳)', def:'?꾨줈洹몃옩???뱀젙 ?먯썝(?뚯씪, ?대뜑 ?????묎렐?????덈룄濡??덉슜?섎뒗 寃?', easy:'"???대뜑 遊먮룄 ??" ?쇨퀬 AI?먭쾶 ?덈씫?댁＜??寃?'},
-  {term:'Output file (異쒕젰 ?뚯씪)', def:'AI媛 ?꾧뎄瑜??듯빐 ?앹꽦??寃곌낵 ?뚯씪.', easy:'AI媛 留뚮뱺 寃곌낵臾? ?띿뒪???뚯씪, ?곸긽 ?뚯씪 ??'}
+  {term:'MCP', def:'Model Context Protocol. AI가 외부 도구를 사용할 수 있게 해주는 표준 연결 방식.', easy:'AI와 도구 사이를 잇는 "USB 케이블" 같은 것.'},
+  {term:'API', def:'Application Programming Interface. 소프트웨어 간 통신을 위한 호출 규격.', easy:'서비스의 "메뉴판". 어떤 기능을 어떻게 요청할 수 있는지 정해둔 약속.'},
+  {term:'API Key', def:'외부 서비스에 접근하기 위한 인증 정보.', easy:'"콘서트 입장권". 이게 있어야 외부 서비스를 쓸 수 있다.'},
+  {term:'Client (클라이언트)', def:'사용자가 AI와 상호작용하는 프로그램. MCP에서는 AI 클라이언트가 MCP 서버에 도구 사용을 요청한다.', easy:'AI와 대화하는 창구. 웹 채팅이든 터미널이든 사용자가 쓰는 쪽.'},
+  {term:'Server (서버)', def:'MCP에서 실제 도구를 제공하는 프로그램. 클라이언트의 요청을 받아 도구를 실행한다.', easy:'도구를 가지고 있는 쪽. 파일 읽기, API 호출 등 실제 작업을 수행.'},
+  {term:'filesystem MCP', def:'로컬 파일 시스템의 파일을 읽고 쓸 수 있게 해주는 MCP 서버. 보통 API Key 없이 사용 가능.', easy:'내 컴퓨터 폴더를 AI가 직접 보고 파일을 다루게 해주는 도구.'},
+  {term:'Tool (도구)', def:'MCP 서버가 제공하는 구체적 기능 단위. 예: 파일 읽기, 파일 쓰기, 검색 등.', easy:'AI가 실제로 "할 수 있는 행동" 하나하나.'},
+  {term:'Local file (로컬 파일)', def:'사용자의 컴퓨터에 저장된 파일.', easy:'내 컴퓨터에 있는 파일. 인터넷 없이도 접근 가능.'},
+  {term:'External service (외부 서비스)', def:'인터넷을 통해 접근하는 외부 서비스. GitHub, Google Drive, 영상 생성 API 등.', easy:'내 컴퓨터 바깥에 있는 서비스. 보통 인증(API Key)이 필요.'},
+  {term:'CLI', def:'Command Line Interface. 터미널에서 명령어를 입력하여 프로그램을 사용하는 방식.', easy:'검은 화면(터미널)에서 글자로 명령을 내리는 것.'},
+  {term:'Web LLM', def:'웹 브라우저에서 사용하는 대화형 AI 서비스.', easy:'인터넷 브라우저로 접속해서 AI와 채팅하는 것.'},
+  {term:'Permission (권한)', def:'프로그램이 특정 자원(파일, 폴더 등)에 접근할 수 있도록 허용하는 것.', easy:'"이 폴더 봐도 돼?" 라고 AI에게 허락해주는 것.'},
+  {term:'Output file (출력 파일)', def:'AI가 도구를 통해 생성한 결과 파일.', easy:'AI가 만든 결과물. 텍스트 파일, 영상 파일 등.'}
 ];
 
 const labScenarios = [
-  {title:'?쒕굹由ъ삤 1: ?뚯씪 ?쎄린 ???붿빟 ?앹꽦', steps:['?ㅼ뒿 ?대뜑(study/mcp-lab/)?먯꽌 ?뚯씪 紐⑸줉 蹂닿린瑜??붿껌?쒕떎','notes.txt ?뚯씪 ?쎄린瑜??붿껌?쒕떎','?쎌? ?댁슜???듭떖 ?붿빟???앹꽦?대떖?쇨퀬 ?쒕떎','?붿빟??summary.md ?뚯씪濡???ν빐?щ씪怨??쒕떎','?ㅼ젣濡?summary.md媛 ?앷꼈?붿? ?뺤씤?쒕떎']},
-  {title:'?쒕굹由ъ삤 2: ?ㅼ썙??寃????異붿텧 ???뺣━', steps:['questions.md ?뚯씪?먯꽌 ?뱀젙 ?ㅼ썙???? "MCP")瑜?寃?됲빐?щ씪怨??쒕떎','?대떦 ?ㅼ썙?쒓? ?ы븿????ぉ留?異붿텧?대떖?쇨퀬 ?쒕떎','異붿텧???댁슜?????뚯씪(mcp-questions.md)濡??뺣━?대떖?쇨퀬 ?쒕떎','???뚯씪???앹꽦?섏뿀?붿? ?뺤씤?쒕떎']},
-  {title:'?쒕굹由ъ삤 3: ?щ윭 ?뚯씪 ?⑹튂湲?, steps:['?ㅼ뒿 ?대뜑??紐⑤뱺 ?뚯씪 紐⑸줉???뺤씤?쒕떎','notes.txt? questions.md瑜?紐⑤몢 ?쎌뼱?щ씪怨??쒕떎','???뚯씪???댁슜???섎굹???숈뒿 ?붿빟?쇰줈 ?⑹퀜?щ씪怨??쒕떎','寃곌낵瑜?combined-summary.md濡???ν빐?щ씪怨??쒕떎','?⑹퀜吏??뚯씪???댁슜???щ컮瑜몄? ?뺤씤?쒕떎']}
+  {title:'시나리오 1: 파일 읽기 → 요약 생성', steps:['실습 폴더(study/mcp-lab/)에서 파일 목록 보기를 요청한다','notes.txt 파일 읽기를 요청한다','읽은 내용의 핵심 요약을 생성해달라고 한다','요약을 summary.md 파일로 저장해달라고 한다','실제로 summary.md가 생겼는지 확인한다']},
+  {title:'시나리오 2: 키워드 검색 → 추출 → 정리', steps:['questions.md 파일에서 특정 키워드(예: "MCP")를 검색해달라고 한다','해당 키워드가 포함된 항목만 추출해달라고 한다','추출된 내용을 새 파일(mcp-questions.md)로 정리해달라고 한다','새 파일이 생성되었는지 확인한다']},
+  {title:'시나리오 3: 여러 파일 합치기', steps:['실습 폴더의 모든 파일 목록을 확인한다','notes.txt와 questions.md를 모두 읽어달라고 한다','두 파일의 내용을 하나의 학습 요약으로 합쳐달라고 한다','결과를 combined-summary.md로 저장해달라고 한다','합쳐진 파일의 내용이 올바른지 확인한다']}
 ];
 
 // ============ STATE ============
@@ -776,11 +782,11 @@ function switchCompare(idx) {
   document.getElementById('compareContent').innerHTML = `
     <div class="compare-wrap">
       <div class="compare-side without">
-        <span class="compare-label off">??${d.without.label}</span>
+        <span class="compare-label off">❌ ${d.without.label}</span>
         <p>${d.without.text}</p>
       </div>
       <div class="compare-side with">
-        <span class="compare-label on">??${d.with.label}</span>
+        <span class="compare-label on">✅ ${d.with.label}</span>
         <p>${d.with.text}</p>
       </div>
     </div>`;
@@ -791,7 +797,7 @@ function selectPurpose(idx) {
   document.querySelectorAll('.purpose-opt').forEach((o,i)=>{o.classList.toggle('selected',i===idx);});
   const r = purposeRec[idx];
   document.getElementById('purposeResult').style.display='block';
-  document.getElementById('purposeResult').innerHTML=`<strong>異붿쿇 異쒕컻?? ${r.env}</strong><br><span style="color:var(--text2);font-size:0.88rem;">${r.reason}</span>`;
+  document.getElementById('purposeResult').innerHTML=`<strong>추천 출발점: ${r.env}</strong><br><span style="color:var(--text2);font-size:0.88rem;">${r.reason}</span>`;
 }
 
 // ============ DOCTORS ============
@@ -804,11 +810,11 @@ function selectDr(idx) {
   const color = drColors[idx];
   document.getElementById('drPanel').innerHTML = `
     <h3 style="color:${color}">${d.name}</h3>
-    <h4>???닿껐?섎뒗 吏덈Ц</h4><p style="font-size:0.9rem;color:var(--text2);margin-bottom:12px;">${d.q}</p>
-    <h4>?뱦 ?듭떖 ?붿빟</h4><ul class="dr-list">${d.summary.map(s=>`<li>${s}</li>`).join('')}</ul>
-    <h4>?좑툘 ?먯＜ ?섎뒗 ?ㅽ빐</h4><ul class="dr-list">${d.miscon.map(s=>`<li>${s}</li>`).join('')}</ul>
-    <h4>??諛붾줈 ?대낵 ?됰룞</h4><ul class="dr-list">${d.actions.map(s=>`<li>${s}</li>`).join('')}</ul>
-    <div class="dr-next">?∽툘 ${d.next}</div>`;
+    <h4>❓ 해결하는 질문</h4><p style="font-size:0.9rem;color:var(--text2);margin-bottom:12px;">${d.q}</p>
+    <h4>📌 핵심 요약</h4><ul class="dr-list">${d.summary.map(s=>`<li>${s}</li>`).join('')}</ul>
+    <h4>⚠️ 자주 하는 오해</h4><ul class="dr-list">${d.miscon.map(s=>`<li>${s}</li>`).join('')}</ul>
+    <h4>✅ 바로 해볼 행동</h4><ul class="dr-list">${d.actions.map(s=>`<li>${s}</li>`).join('')}</ul>
+    <div class="dr-next">➡️ ${d.next}</div>`;
 }
 
 // ============ ROADMAP ============
@@ -819,17 +825,17 @@ function buildRoadmap() {
       <div class="road-dot"></div>
       <h4>${r.title}</h4>
       <div class="acc" style="margin:8px 0;">
-        <div class="acc-head" onclick="toggleAcc(this)" style="font-size:0.83rem;padding:8px 12px;">?곸꽭 蹂닿린 <span>??</span></div>
+        <div class="acc-head" onclick="toggleAcc(this)" style="font-size:0.83rem;padding:8px 12px;">상세 보기 <span>▼</span></div>
         <div class="acc-body">
-          <p><strong>?렞 紐⑺몴:</strong> ${r.goal}</p>
-          <p><strong>?벀 以鍮꾨Ъ:</strong> ${r.prep}</p>
-          <p><strong>???깃났 湲곗?:</strong> ${r.success}</p>
-          <p><strong>?슙 留됲엳??吏??</strong> ${r.block}</p>
-          <p><strong>?뵇 泥댄겕?ъ씤??</strong> ${r.checkpoint}</p>
+          <p><strong>🎯 목표:</strong> ${r.goal}</p>
+          <p><strong>📦 준비물:</strong> ${r.prep}</p>
+          <p><strong>✅ 성공 기준:</strong> ${r.success}</p>
+          <p><strong>🚧 막히는 지점:</strong> ${r.block}</p>
+          <p><strong>🔍 체크포인트:</strong> ${r.checkpoint}</p>
         </div>
       </div>
       <div class="road-check">
-        <label><input type="checkbox" ${completedChecks['road'+i]?'checked':''} onchange="toggleRoad(${i},this.checked)"> ???④퀎 ?꾨즺</label>
+        <label><input type="checkbox" ${completedChecks['road'+i]?'checked':''} onchange="toggleRoad(${i},this.checked)"> 이 단계 완료</label>
       </div>
     </div>`).join('');
 }
@@ -857,9 +863,9 @@ function switchLab(idx) {
 // ============ API KEY DECISION TREE ============
 let dtStep = 0;
 const dtQuestions = [
-  {q:'濡쒖뺄 ?뚯씪留??ㅻ０ ?덉젙?멸???', yes:{result:'no-key', text:'??filesystem MCP ??蹂댄넻 API Key 遺덊븘?? 濡쒖뺄 ?뚯씪 ?쎄린/?곌린濡?諛붾줈 ?쒖옉?섏꽭??'}, no:{next:1}},
-  {q:'?몃? ?쒕퉬??GitHub, Google Drive, ?곸긽 API ??? ?곌껐???덉젙?멸???', yes:{next:2}, no:{result:'no-key', text:'??濡쒖뺄 ?곕????뚯씪 湲곕컲 ?꾧뎄 ??蹂댄넻 API Key 遺덊븘??'}},
-  {q:'?대떦 ?몃? ?쒕퉬?ㅻ뒗 ?몄쬆(API Key)???꾩슂???쒕퉬?ㅼ씤媛??', yes:{result:'need-key', text:'?뵎 GitHub / Google Drive / ?곸긽 API MCP ????API Key ?꾩슂 媛?μ꽦 ?믪쓬. ?대떦 ?쒕퉬?ㅼ쓽 ?몄쬆 臾몄꽌瑜??뺤씤?섏꽭??'}, no:{result:'no-key', text:'???몄쬆???꾩슂 ?녿뒗 ?몃? ?꾧뎄?쇰㈃ API Key ?놁씠???곌껐 媛?ν븷 ???덉뒿?덈떎.'}}
+  {q:'로컬 파일만 다룰 예정인가요?', yes:{result:'no-key', text:'✅ filesystem MCP → 보통 API Key 불필요. 로컬 파일 읽기/쓰기로 바로 시작하세요.'}, no:{next:1}},
+  {q:'외부 서비스(GitHub, Google Drive, 영상 API 등)와 연결할 예정인가요?', yes:{next:2}, no:{result:'no-key', text:'✅ 로컬 터미널/파일 기반 도구 → 보통 API Key 불필요.'}},
+  {q:'해당 외부 서비스는 인증(API Key)이 필요한 서비스인가요?', yes:{result:'need-key', text:'🔑 GitHub / Google Drive / 영상 API MCP 등 → API Key 필요 가능성 높음. 해당 서비스의 인증 문서를 확인하세요.'}, no:{result:'no-key', text:'✅ 인증이 필요 없는 외부 도구라면 API Key 없이도 연결 가능할 수 있습니다.'}}
 ];
 function buildDT() {
   dtStep = 0;
@@ -873,8 +879,8 @@ function renderDTStep() {
     <div class="dt-q">
       <p>${q.q}</p>
       <div class="dt-btns">
-        <button class="btn btn-primary btn-sm" onclick="dtAnswer(true)">??</button>
-        <button class="btn btn-secondary btn-sm" onclick="dtAnswer(false)">?꾨땲??</button>
+        <button class="btn btn-primary btn-sm" onclick="dtAnswer(true)">예</button>
+        <button class="btn btn-secondary btn-sm" onclick="dtAnswer(false)">아니오</button>
       </div>
     </div>`;
 }
@@ -884,7 +890,7 @@ function dtAnswer(yes) {
   if(branch.result) {
     document.getElementById('dtWrap').innerHTML = `
       <div class="dt-result ${branch.result}">${branch.text}</div>
-      <div style="text-align:center;margin-top:10px;"><button class="btn btn-secondary btn-sm" onclick="buildDT()">?ㅼ떆 ?먮떒?섍린</button></div>`;
+      <div style="text-align:center;margin-top:10px;"><button class="btn btn-secondary btn-sm" onclick="buildDT()">다시 판단하기</button></div>`;
   } else {
     dtStep = branch.next;
     renderDTStep();
@@ -898,13 +904,13 @@ function buildQuiz() {
   wrap.innerHTML = quizData.map((q,i) => {
     if(q.type === 'ox') {
       return `<div class="quiz-q" id="qq${i}"><h4>${i+1}. ${q.q}</h4>
-        <div class="quiz-opt" onclick="pickQuiz(${i},this,'O')">狩?O</div>
-        <div class="quiz-opt" onclick="pickQuiz(${i},this,'X')">??X</div>
-        <div class="quiz-explain" id="qe${i}">?뮕 ${q.explain}</div></div>`;
+        <div class="quiz-opt" onclick="pickQuiz(${i},this,'O')">⭕ O</div>
+        <div class="quiz-opt" onclick="pickQuiz(${i},this,'X')">❌ X</div>
+        <div class="quiz-explain" id="qe${i}">💡 ${q.explain}</div></div>`;
     } else {
       return `<div class="quiz-q" id="qq${i}"><h4>${i+1}. ${q.q}</h4>
         ${q.opts.map((o,j) => `<div class="quiz-opt" onclick="pickQuiz(${i},this,${j})">${String.fromCharCode(9312+j)} ${o}</div>`).join('')}
-        <div class="quiz-explain" id="qe${i}">?뮕 ${q.explain}</div></div>`;
+        <div class="quiz-explain" id="qe${i}">💡 ${q.explain}</div></div>`;
     }
   }).join('');
 }
@@ -932,10 +938,10 @@ function scoreQuiz() {
   const answered = Object.keys(quizAnswers).length;
   document.getElementById('quizScore').style.display='block';
   if(answered < total) {
-    document.getElementById('quizScore').innerHTML = `?꾩쭅 ${total - answered}臾명빆???⑥븯?듬땲?? 紐⑤몢 ??대낫?몄슂!`;
+    document.getElementById('quizScore').innerHTML = `아직 ${total - answered}문항이 남았습니다. 모두 풀어보세요!`;
   } else {
     const pct = Math.round(correct/total*100);
-    document.getElementById('quizScore').innerHTML = `?렞 ${total}臾명빆 以?${correct}媛??뺣떟 (${pct}??<br><span style="font-size:0.9rem;color:var(--text2);">${pct>=80?'?뚮??⑸땲?? MCP 湲곗큹瑜????댄빐?섍퀬 ?덉뒿?덈떎.':pct>=50?'醫뗭? ?쒖옉?낅땲?? ?由?遺遺꾩쓽 ?댁꽕???ㅼ떆 ?쎌뼱蹂댁꽭??':'媛쒕뀗 遺꾨━ ?뱀뀡怨?諛뺤궗 ?⑤꼸???ㅼ떆 ?댄렣蹂댁꽭??'}</span>`;
+    document.getElementById('quizScore').innerHTML = `🎯 ${total}문항 중 ${correct}개 정답 (${pct}점)<br><span style="font-size:0.9rem;color:var(--text2);">${pct>=80?'훌륭합니다! MCP 기초를 잘 이해하고 있습니다.':pct>=50?'좋은 시작입니다. 틀린 부분의 해설을 다시 읽어보세요.':'개념 분리 섹션과 박사 패널을 다시 살펴보세요.'}</span>`;
   }
 }
 function resetQuiz() {
@@ -952,7 +958,7 @@ function renderGlossary(data) {
   document.getElementById('glossaryList').innerHTML = data.map((g,i) => `
     <div class="glossary-item" data-term="${g.term.toLowerCase()}">
       <div class="glossary-term" onclick="this.nextElementSibling.classList.toggle('open')">${g.term}</div>
-      <div class="glossary-def"><p>${g.def}</p><p class="glossary-easy">?ъ슫 留? ${g.easy}</p></div>
+      <div class="glossary-def"><p>${g.def}</p><p class="glossary-easy">쉬운 말: ${g.easy}</p></div>
     </div>`).join('');
 }
 function filterGlossary(val) {
@@ -967,16 +973,16 @@ function toggleAcc(el) {
   const body = el.nextElementSibling;
   body.classList.toggle('open');
   const arrow = el.querySelector('span');
-  if(arrow) arrow.textContent = body.classList.contains('open') ? '?? : '??;
+  if(arrow) arrow.textContent = body.classList.contains('open') ? '▲' : '▼';
 }
 
 // ============ COPY MEMO ============
 function copyMemo(btn, id) {
   const text = document.getElementById(id).textContent;
   navigator.clipboard.writeText(text).then(()=>{
-    btn.textContent='蹂듭궗??';
+    btn.textContent='복사됨!';
     btn.classList.add('copied');
-    setTimeout(()=>{btn.textContent='蹂듭궗';btn.classList.remove('copied');},1500);
+    setTimeout(()=>{btn.textContent='복사';btn.classList.remove('copied');},1500);
   }).catch(()=>{
     // fallback
     const ta = document.createElement('textarea');
@@ -985,9 +991,9 @@ function copyMemo(btn, id) {
     ta.select();
     document.execCommand('copy');
     document.body.removeChild(ta);
-    btn.textContent='蹂듭궗??';
+    btn.textContent='복사됨!';
     btn.classList.add('copied');
-    setTimeout(()=>{btn.textContent='蹂듭궗';btn.classList.remove('copied');},1500);
+    setTimeout(()=>{btn.textContent='복사';btn.classList.remove('copied');},1500);
   });
 }
 
@@ -1005,7 +1011,7 @@ function updateProgress() {
   const pct = total>0 ? Math.round(done/total*100) : 0;
   document.getElementById('progressFill').style.width = pct+'%';
   document.getElementById('progressBarTop').style.width = pct+'%';
-  document.getElementById('progressLabel').textContent = '?숈뒿 吏꾪뻾瑜?'+pct+'%';
+  document.getElementById('progressLabel').textContent = '학습 진행률 '+pct+'%';
   saveState();
 }
 
@@ -1044,6 +1050,3 @@ init();
 </script>
 </body>
 </html>
-
-
-
