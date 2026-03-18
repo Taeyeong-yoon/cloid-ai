@@ -30,12 +30,6 @@
     },
     {
       "type": "video",
-      "title": "NEW OpenClaw Browser Use AI Agent: Automate ANYTHING!",
-      "url": "https://www.youtube.com/watch?v=lGStMkOxE8c",
-      "description": "Want to make money and save time with AI? Get AI Coaching, Support & Courses ..."
-    },
-    {
-      "type": "video",
       "title": "커서 AI 브라우저 자동화 미쳤네요... | 당분간 클로드코드 말고 커서 쓸게요",
       "url": "https://www.youtube.com/watch?v=nUtQLCPhKm8",
       "description": "여러분 안녕하세요, 개발동생입니다. 다가오는 10월 23일, 3번째 콜로소 강의를 오픈하게 되었습니다! 이번 강의에서는 4가지 SaaS ..."
@@ -45,6 +39,12 @@
       "title": "PC 앞에 없어도 OK! 안티그래비티(Antigravity) 모바일 원격 제어 프로그램 만들기 (디스코드 &amp; 웹 연동)",
       "url": "https://www.youtube.com/watch?v=MK-MS74UiPM",
       "description": "집 밖에서도, 이동 중에도 내 PC의 안티그래비티를 완벽하게 제어하고 싶으셨나요? 이번 영상에서는 디스코드(Discord)와 웹페이지 ..."
+    },
+    {
+      "type": "video",
+      "title": "오픈클로 설치, 이 영상 하나로 종결! (나만의 AI 비서 만들기 A to Z)",
+      "url": "https://www.youtube.com/watch?v=31mbv1Mmf4s",
+      "description": "바이브코딩 #openclaw #오픈클로 [타임라인] 00:00~00:33 : 미리보기 (5분 만에 구축한 AI 비서 시연) 00:53~03:50 : OpenClaw란?"
     },
     {
       "type": "practice",
