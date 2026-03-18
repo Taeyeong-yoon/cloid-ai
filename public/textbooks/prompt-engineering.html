@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>프롬프트 엔지니어링 실전 학습실</title>
+<title>?꾨＼?꾪듃 ?붿??덉뼱留??ㅼ쟾 ?숈뒿??/title>
 <style>
 :root {
   --bg: #0e1117;
@@ -70,7 +70,7 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 .diag-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:28px;}
 .diag-box h3{font-size:1rem;color:var(--accent4);margin-bottom:12px;}
 .diag-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;color:var(--text2);font-size:0.9rem;}
-.diag-item::before{content:'⚡';flex-shrink:0;}
+.diag-item::before{content:'??;flex-shrink:0;}
 
 .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:var(--transition);}
 .card:hover{border-color:rgba(88,166,255,0.3);box-shadow:var(--shadow-sm);}
@@ -122,7 +122,7 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 .dr-panel h4{margin:14px 0 8px;font-size:0.92rem;color:var(--text);}
 .dr-list{list-style:none;padding:0;}
 .dr-list li{padding:6px 0;font-size:0.88rem;color:var(--text2);display:flex;gap:8px;align-items:flex-start;}
-.dr-list li::before{content:'→';color:var(--accent);flex-shrink:0;}
+.dr-list li::before{content:'??;color:var(--accent);flex-shrink:0;}
 .dr-next{margin-top:16px;padding:12px;background:var(--bg3);border-radius:var(--radius-sm);font-size:0.85rem;color:var(--text2);}
 
 .roadmap{position:relative;padding-left:28px;margin:20px 0;}
@@ -209,44 +209,44 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 <div id="progressBarTop" style="width:0%"></div>
 
 <nav id="topNav">
-  <span class="nav-logo">프롬프트 학습실</span>
-  <button class="nav-btn active" onclick="goSec('hero')">홈</button>
-  <button class="nav-btn" onclick="goSec('structure')">구조맵</button>
-  <button class="nav-btn" onclick="goSec('technique')">7기법</button>
-  <button class="nav-btn" onclick="goSec('compare')">비교실험</button>
-  <button class="nav-btn" onclick="goSec('doctors')">5박사</button>
-  <button class="nav-btn" onclick="goSec('roadmap')">로드맵</button>
-  <button class="nav-btn" onclick="goSec('template')">템플릿</button>
-  <button class="nav-btn" onclick="goSec('skill')">스킬변환</button>
-  <button class="nav-btn" onclick="goSec('checklist')">자가진단</button>
-  <button class="nav-btn" onclick="goSec('quiz')">퀴즈</button>
-  <button class="nav-btn" onclick="goSec('glossary')">용어사전</button>
-  <button class="nav-btn" onclick="goSec('memo')">복사메모</button>
+  <span class="nav-logo">?꾨＼?꾪듃 ?숈뒿??/span>
+  <button class="nav-btn active" onclick="goSec('hero')">??/button>
+  <button class="nav-btn" onclick="goSec('structure')">援ъ“留?/button>
+  <button class="nav-btn" onclick="goSec('technique')">7湲곕쾿</button>
+  <button class="nav-btn" onclick="goSec('compare')">鍮꾧탳?ㅽ뿕</button>
+  <button class="nav-btn" onclick="goSec('doctors')">5諛뺤궗</button>
+  <button class="nav-btn" onclick="goSec('roadmap')">濡쒕뱶留?/button>
+  <button class="nav-btn" onclick="goSec('template')">?쒗뵆由?/button>
+  <button class="nav-btn" onclick="goSec('skill')">?ㅽ궗蹂??/button>
+  <button class="nav-btn" onclick="goSec('checklist')">?먭?吏꾨떒</button>
+  <button class="nav-btn" onclick="goSec('quiz')">?댁쫰</button>
+  <button class="nav-btn" onclick="goSec('glossary')">?⑹뼱?ъ쟾</button>
+  <button class="nav-btn" onclick="goSec('memo')">蹂듭궗硫붾え</button>
 </nav>
 
 <!-- HERO -->
 <div class="section active" id="sec-hero">
   <div style="padding-top:20px;">
-    <div class="hero-title">프롬프트 엔지니어링 실전 학습실</div>
-    <p class="hero-sub">좋은 프롬프트 vs 나쁜 프롬프트, 7가지 핵심 기법, 실전 템플릿, SKILL.md 변환까지.<br>5명의 박사 에이전트가 함께 가르쳐 드립니다.</p>
+    <div class="hero-title">?꾨＼?꾪듃 ?붿??덉뼱留??ㅼ쟾 ?숈뒿??/div>
+    <p class="hero-sub">醫뗭? ?꾨＼?꾪듃 vs ?섏걶 ?꾨＼?꾪듃, 7媛吏 ?듭떖 湲곕쾿, ?ㅼ쟾 ?쒗뵆由? SKILL.md 蹂?섍퉴吏.<br>5紐낆쓽 諛뺤궗 ?먯씠?꾪듃媛 ?④퍡 媛瑜댁퀜 ?쒕┰?덈떎.</p>
     <div class="hero-btns">
-      <button class="btn btn-primary" onclick="goSec('structure')">바로 시작하기</button>
-      <button class="btn btn-secondary" onclick="goSec('doctors')">5명 박사에게 배우기</button>
-      <button class="btn btn-secondary" onclick="goSec('compare')">비교실험부터 보기</button>
+      <button class="btn btn-primary" onclick="goSec('structure')">諛붾줈 ?쒖옉?섍린</button>
+      <button class="btn btn-secondary" onclick="goSec('doctors')">5紐?諛뺤궗?먭쾶 諛곗슦湲?/button>
+      <button class="btn btn-secondary" onclick="goSec('compare')">鍮꾧탳?ㅽ뿕遺??蹂닿린</button>
     </div>
     <div class="progress-summary">
-      <span class="progress-text" id="progressLabel">학습 진행률 0%</span>
+      <span class="progress-text" id="progressLabel">?숈뒿 吏꾪뻾瑜?0%</span>
       <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
     </div>
     <div class="diag-box">
-      <h3>혹시 이런 상태인가요?</h3>
-      <div class="diag-item">프롬프트를 "대충" 쓰고 결과가 들쭉날쭉하다</div>
-      <div class="diag-item">시스템 프롬프트, Few-shot이 뭔지 모른다</div>
-      <div class="diag-item">매번 비슷한 요청을 반복하면서 결과가 다르다</div>
-      <div class="diag-item">SKILL.md 작성법을 모른다</div>
-      <div class="diag-item">프롬프트 엔지니어링을 체계적으로 배운 적 없다</div>
+      <h3>?뱀떆 ?대윴 ?곹깭?멸???</h3>
+      <div class="diag-item">?꾨＼?꾪듃瑜?"?異? ?곌퀬 寃곌낵媛 ?ㅼ춬?좎춬?섎떎</div>
+      <div class="diag-item">?쒖뒪???꾨＼?꾪듃, Few-shot??萸붿? 紐⑤Ⅸ??/div>
+      <div class="diag-item">留ㅻ쾲 鍮꾩듂???붿껌??諛섎났?섎㈃??寃곌낵媛 ?ㅻⅤ??/div>
+      <div class="diag-item">SKILL.md ?묒꽦踰뺤쓣 紐⑤Ⅸ??/div>
+      <div class="diag-item">?꾨＼?꾪듃 ?붿??덉뼱留곸쓣 泥닿퀎?곸쑝濡?諛곗슫 ???녿떎</div>
       <div style="margin-top:16px;padding:14px;background:rgba(88,166,255,0.06);border-radius:var(--radius-sm);border-left:3px solid var(--accent);">
-        <p style="font-size:0.88rem;color:var(--text2);">하나라도 해당되면 이 학습실이 도움이 됩니다. 구조맵(A)부터 순서대로 따라가세요.</p>
+        <p style="font-size:0.88rem;color:var(--text2);">?섎굹?쇰룄 ?대떦?섎㈃ ???숈뒿?ㅼ씠 ?꾩????⑸땲?? 援ъ“留?A)遺???쒖꽌?濡??곕씪媛?몄슂.</p>
       </div>
     </div>
   </div>
@@ -254,72 +254,72 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 
 <!-- STRUCTURE MAP -->
 <div class="section" id="sec-structure">
-  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--dr1);">🏗️ Dr. Structure</div>
-  <h2 class="sec-h">프롬프트의 6가지 구성요소</h2>
-  <p class="sec-sub">좋은 프롬프트는 6개의 블록으로 구성됩니다. 카드를 눌러 비교하세요.</p>
+  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--dr1);">?룛截?Dr. Structure</div>
+  <h2 class="sec-h">?꾨＼?꾪듃??6媛吏 援ъ꽦?붿냼</h2>
+  <p class="sec-sub">醫뗭? ?꾨＼?꾪듃??6媛쒖쓽 釉붾줉?쇰줈 援ъ꽦?⑸땲?? 移대뱶瑜??뚮윭 鍮꾧탳?섏꽭??</p>
   <div class="card-grid card-grid-6" id="structGrid"></div>
   <div class="concept-detail" id="structDetail"></div>
-  <div class="highlight-box">🔑 프롬프트는 "부탁"이 아니라 "설계"다</div>
+  <div class="highlight-box">?뵎 ?꾨＼?꾪듃??"遺?????꾨땲??"?ㅺ퀎"??/div>
 </div>
 
 <!-- 7 TECHNIQUES -->
 <div class="section" id="sec-technique">
-  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--dr2);">🔬 Dr. Technique</div>
-  <h2 class="sec-h">7가지 핵심 기법</h2>
-  <p class="sec-sub">프롬프트를 한 단계 끌어올리는 핵심 테크닉. 탭을 눌러 비교하세요.</p>
+  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--dr2);">?뵮 Dr. Technique</div>
+  <h2 class="sec-h">7媛吏 ?듭떖 湲곕쾿</h2>
+  <p class="sec-sub">?꾨＼?꾪듃瑜????④퀎 ?뚯뼱?щ━???듭떖 ?뚰겕?? ??쓣 ?뚮윭 鍮꾧탳?섏꽭??</p>
   <div class="tabs" id="techTabs"></div>
   <div id="techContent"></div>
 </div>
 
 <!-- COMPARE -->
 <div class="section" id="sec-compare">
-  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--dr3);">⚖️ Dr. Before-After</div>
-  <h2 class="sec-h">나쁜 프롬프트 vs 좋은 프롬프트</h2>
-  <p class="sec-sub">10가지 실전 사례로 차이를 체감해 보세요. 탭을 눌러 전환합니다.</p>
+  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--dr3);">?뽳툘 Dr. Before-After</div>
+  <h2 class="sec-h">?섏걶 ?꾨＼?꾪듃 vs 醫뗭? ?꾨＼?꾪듃</h2>
+  <p class="sec-sub">10媛吏 ?ㅼ쟾 ?щ?濡?李⑥씠瑜?泥닿컧??蹂댁꽭?? ??쓣 ?뚮윭 ?꾪솚?⑸땲??</p>
   <div class="tabs" id="compareTabs"></div>
   <div id="compareContent"></div>
-  <div class="warn-box" style="margin-top:20px;">💡 핵심: 구체적일수록 결과가 좋다. 형식을 지정하면 출력이 안정된다. 하지 말아야 할 것을 명시하면 실수가 줄어든다.</div>
+  <div class="warn-box" style="margin-top:20px;">?뮕 ?듭떖: 援ъ껜?곸씪?섎줉 寃곌낵媛 醫뗫떎. ?뺤떇??吏?뺥븯硫?異쒕젰???덉젙?쒕떎. ?섏? 留먯븘????寃껋쓣 紐낆떆?섎㈃ ?ㅼ닔媛 以꾩뼱?좊떎.</div>
 </div>
 
 <!-- DOCTORS -->
 <div class="section" id="sec-doctors">
-  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--accent4);">섹션 E</div>
-  <h2 class="sec-h">5명 박사 패널</h2>
-  <p class="sec-sub">각 박사를 클릭하면 해당 관점에서 설명, 오해 교정, 실천 행동이 바뀝니다.</p>
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--accent4);">?뱀뀡 E</div>
+  <h2 class="sec-h">5紐?諛뺤궗 ?⑤꼸</h2>
+  <p class="sec-sub">媛?諛뺤궗瑜??대┃?섎㈃ ?대떦 愿?먯뿉???ㅻ챸, ?ㅽ빐 援먯젙, ?ㅼ쿇 ?됰룞??諛붾앸땲??</p>
   <div class="card-grid card-grid-5" id="drGrid"></div>
   <div class="dr-panel" id="drPanel"></div>
 </div>
 
 <!-- ROADMAP -->
 <div class="section" id="sec-roadmap">
-  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--accent);">섹션 F</div>
-  <h2 class="sec-h">단계별 학습 로드맵</h2>
-  <p class="sec-sub">체크박스를 완료하면 진행 상태가 반영됩니다.</p>
+  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--accent);">?뱀뀡 F</div>
+  <h2 class="sec-h">?④퀎蹂??숈뒿 濡쒕뱶留?/h2>
+  <p class="sec-sub">泥댄겕諛뺤뒪瑜??꾨즺?섎㈃ 吏꾪뻾 ?곹깭媛 諛섏쁺?⑸땲??</p>
   <div class="roadmap" id="roadmapWrap"></div>
 </div>
 
 <!-- TEMPLATES -->
 <div class="section" id="sec-template">
-  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--dr4);">📝 Dr. Template</div>
-  <h2 class="sec-h">실전 프롬프트 템플릿 7가지</h2>
-  <p class="sec-sub">업무에 바로 쓸 수 있는 템플릿입니다. 클릭해서 열고, 복사 버튼으로 가져가세요.</p>
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--dr4);">?뱷 Dr. Template</div>
+  <h2 class="sec-h">?ㅼ쟾 ?꾨＼?꾪듃 ?쒗뵆由?7媛吏</h2>
+  <p class="sec-sub">?낅Т??諛붾줈 ?????덈뒗 ?쒗뵆由우엯?덈떎. ?대┃?댁꽌 ?닿퀬, 蹂듭궗 踰꾪듉?쇰줈 媛?멸??몄슂.</p>
   <div id="templateWrap"></div>
 </div>
 
 <!-- SKILL BRIDGE -->
 <div class="section" id="sec-skill">
-  <div class="sec-tag" style="background:rgba(255,123,114,0.12);color:var(--dr5);">🔗 Dr. Skill-Bridge</div>
-  <h2 class="sec-h">프롬프트 → SKILL.md 변환 실험실</h2>
-  <p class="sec-sub">좋은 프롬프트가 곧 좋은 SKILL.md의 본문이 됩니다. 3가지 변환 예시를 확인하세요.</p>
+  <div class="sec-tag" style="background:rgba(255,123,114,0.12);color:var(--dr5);">?뵕 Dr. Skill-Bridge</div>
+  <h2 class="sec-h">?꾨＼?꾪듃 ??SKILL.md 蹂???ㅽ뿕??/h2>
+  <p class="sec-sub">醫뗭? ?꾨＼?꾪듃媛 怨?醫뗭? SKILL.md??蹂몃Ц???⑸땲?? 3媛吏 蹂???덉떆瑜??뺤씤?섏꽭??</p>
   <div id="skillWrap"></div>
-  <div class="highlight-box">💡 좋은 프롬프트 = 좋은 SKILL.md 본문</div>
+  <div class="highlight-box">?뮕 醫뗭? ?꾨＼?꾪듃 = 醫뗭? SKILL.md 蹂몃Ц</div>
 </div>
 
 <!-- CHECKLIST -->
 <div class="section" id="sec-checklist">
-  <div class="sec-tag" style="background:rgba(121,192,255,0.12);color:var(--accent6);">섹션 I</div>
-  <h2 class="sec-h">프롬프트 자가진단 체크리스트</h2>
-  <p class="sec-sub">내 프롬프트가 괜찮은지, 아래 항목을 점검해 보세요.</p>
+  <div class="sec-tag" style="background:rgba(121,192,255,0.12);color:var(--accent6);">?뱀뀡 I</div>
+  <h2 class="sec-h">?꾨＼?꾪듃 ?먭?吏꾨떒 泥댄겕由ъ뒪??/h2>
+  <p class="sec-sub">???꾨＼?꾪듃媛 愿쒖갖?吏, ?꾨옒 ??ぉ???먭???蹂댁꽭??</p>
   <div class="card" style="padding:24px;">
     <ul class="checklist" id="checklistWrap"></ul>
   </div>
@@ -327,176 +327,176 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 
 <!-- QUIZ -->
 <div class="section" id="sec-quiz">
-  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--accent3);">섹션 J</div>
-  <h2 class="sec-h">퀴즈 / 자기점검</h2>
-  <p class="sec-sub">12문항으로 이해도를 확인하세요.</p>
+  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--accent3);">?뱀뀡 J</div>
+  <h2 class="sec-h">?댁쫰 / ?먭린?먭?</h2>
+  <p class="sec-sub">12臾명빆?쇰줈 ?댄빐?꾨? ?뺤씤?섏꽭??</p>
   <div id="quizWrap"></div>
   <div style="text-align:center;margin-top:16px;">
-    <button class="btn btn-primary" onclick="scoreQuiz()">채점하기</button>
-    <button class="btn btn-secondary" onclick="resetQuiz()">다시 풀기</button>
+    <button class="btn btn-primary" onclick="scoreQuiz()">梨꾩젏?섍린</button>
+    <button class="btn btn-secondary" onclick="resetQuiz()">?ㅼ떆 ?湲?/button>
   </div>
   <div class="quiz-score" id="quizScore" style="display:none;"></div>
 </div>
 
 <!-- GLOSSARY -->
 <div class="section" id="sec-glossary">
-  <div class="sec-tag" style="background:rgba(121,192,255,0.12);color:var(--accent6);">섹션 K</div>
-  <h2 class="sec-h">용어사전</h2>
-  <p class="sec-sub">클릭하면 정의가 나타납니다. 검색도 가능합니다.</p>
-  <input class="glossary-search" placeholder="용어 검색..." oninput="filterGlossary(this.value)">
+  <div class="sec-tag" style="background:rgba(121,192,255,0.12);color:var(--accent6);">?뱀뀡 K</div>
+  <h2 class="sec-h">?⑹뼱?ъ쟾</h2>
+  <p class="sec-sub">?대┃?섎㈃ ?뺤쓽媛 ?섑??⑸땲?? 寃?됰룄 媛?ν빀?덈떎.</p>
+  <input class="glossary-search" placeholder="?⑹뼱 寃??.." oninput="filterGlossary(this.value)">
   <div id="glossaryList"></div>
 </div>
 
 <!-- MEMO -->
 <div class="section" id="sec-memo">
-  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--accent2);">섹션 L</div>
-  <h2 class="sec-h">복사용 메모</h2>
-  <p class="sec-sub">핵심 정리, 체크리스트, 범용 템플릿을 복사해서 사용하세요.</p>
+  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--accent2);">?뱀뀡 L</div>
+  <h2 class="sec-h">蹂듭궗??硫붾え</h2>
+  <p class="sec-sub">?듭떖 ?뺣━, 泥댄겕由ъ뒪?? 踰붿슜 ?쒗뵆由우쓣 蹂듭궗?댁꽌 ?ъ슜?섏꽭??</p>
   <div id="memoWrap"></div>
 </div>
 
 <script>
 // ============ DATA ============
 const structData = [
-  {icon:'🎭',label:'역할 지정',brief:'Role',title:'역할 지정 (Role)',desc:'AI에게 전문가 역할을 부여합니다. 구체적인 경력, 전문 분야, 성격까지 포함하면 더 일관된 결과를 얻을 수 있습니다.',example:'예: "당신은 10년 경력의 UX 디자이너입니다"',tip:'역할에 구체적 숫자(경력 연수)를 넣으면 전문성 수준이 달라집니다.'},
-  {icon:'📖',label:'맥락 제공',brief:'Context',title:'맥락 제공 (Context)',desc:'배경 정보와 상황을 설명합니다. 산업, 규모, 상황, 대상 고객 등을 구체적으로 제공하세요.',example:'예: "B2B SaaS 스타트업의 시리즈A 투자 유치를 준비 중입니다"',tip:'"누가, 왜, 어떤 상황에서" 3가지를 반드시 포함하세요.'},
-  {icon:'📋',label:'구체적 지시',brief:'Instruction',title:'구체적 지시 (Instruction)',desc:'해야 할 일을 명확하게 지시합니다. 모호한 동사 대신 구체적인 행동을 지정하세요.',example:'예: "감정 점수(1~5)와 핵심 키워드 3개를 추출하세요"',tip:'동사를 구체적으로: "알려줘" → "비교 분석해서 표로 정리해줘"'},
-  {icon:'📐',label:'출력 형식',brief:'Format',title:'출력 형식 지정 (Format)',desc:'원하는 출력 형태를 지정합니다. JSON, 마크다운, 표 등 형식을 명시하면 출력이 안정됩니다.',example:'예: "JSON 형식으로 출력하세요"',tip:'출력 예시를 하나 보여주면 형식 안정성이 급격히 올라갑니다.'},
-  {icon:'🚧',label:'제약 조건',brief:'Constraints',title:'제약 조건 (Constraints)',desc:'하지 말아야 할 것을 명시합니다. 길이, 톤, 금지어 등을 제한하면 원치 않는 결과를 줄일 수 있습니다.',example:'예: "전문 용어 금지, 500자 이내"',tip:'"~하지 마세요"를 3개 이상 적어보면 결과가 크게 달라집니다.'},
-  {icon:'📌',label:'예시 제공',brief:'Examples',title:'예시 제공 (Examples / Few-shot)',desc:'원하는 결과의 예시를 보여줍니다. 1~3개의 입출력 예시를 주면 AI가 패턴을 파악합니다.',example:'예: "입력: \'배송이 늦어요\' → 출력: {감정: 불만, 점수: 2}"',tip:'예시 2~3개가 최적. 경계 사례를 포함하면 더 좋습니다.'}
+  {icon:'?렚',label:'??븷 吏??,brief:'Role',title:'??븷 吏??(Role)',desc:'AI?먭쾶 ?꾨Ц媛 ??븷??遺?ы빀?덈떎. 援ъ껜?곸씤 寃쎈젰, ?꾨Ц 遺꾩빞, ?깃꺽源뚯? ?ы븿?섎㈃ ???쇨???寃곌낵瑜??살쓣 ???덉뒿?덈떎.',example:'?? "?뱀떊? 10??寃쎈젰??UX ?붿옄?대꼫?낅땲??',tip:'??븷??援ъ껜???レ옄(寃쎈젰 ?곗닔)瑜??ｌ쑝硫??꾨Ц???섏????щ씪吏묐땲??'},
+  {icon:'?뱰',label:'留λ씫 ?쒓났',brief:'Context',title:'留λ씫 ?쒓났 (Context)',desc:'諛곌꼍 ?뺣낫? ?곹솴???ㅻ챸?⑸땲?? ?곗뾽, 洹쒕え, ?곹솴, ???怨좉컼 ?깆쓣 援ъ껜?곸쑝濡??쒓났?섏꽭??',example:'?? "B2B SaaS ?ㅽ??몄뾽???쒕━利뉯 ?ъ옄 ?좎튂瑜?以鍮?以묒엯?덈떎"',tip:'"?꾧?, ?? ?대뼡 ?곹솴?먯꽌" 3媛吏瑜?諛섎뱶???ы븿?섏꽭??'},
+  {icon:'?뱥',label:'援ъ껜??吏??,brief:'Instruction',title:'援ъ껜??吏??(Instruction)',desc:'?댁빞 ???쇱쓣 紐낇솗?섍쾶 吏?쒗빀?덈떎. 紐⑦샇???숈궗 ???援ъ껜?곸씤 ?됰룞??吏?뺥븯?몄슂.',example:'?? "媛먯젙 ?먯닔(1~5)? ?듭떖 ?ㅼ썙??3媛쒕? 異붿텧?섏꽭??',tip:'?숈궗瑜?援ъ껜?곸쑝濡? "?뚮젮以? ??"鍮꾧탳 遺꾩꽍?댁꽌 ?쒕줈 ?뺣━?댁쨾"'},
+  {icon:'?뱪',label:'異쒕젰 ?뺤떇',brief:'Format',title:'異쒕젰 ?뺤떇 吏??(Format)',desc:'?먰븯??異쒕젰 ?뺥깭瑜?吏?뺥빀?덈떎. JSON, 留덊겕?ㅼ슫, ?????뺤떇??紐낆떆?섎㈃ 異쒕젰???덉젙?⑸땲??',example:'?? "JSON ?뺤떇?쇰줈 異쒕젰?섏꽭??',tip:'異쒕젰 ?덉떆瑜??섎굹 蹂댁뿬二쇰㈃ ?뺤떇 ?덉젙?깆씠 湲됯꺽???щ씪媛묐땲??'},
+  {icon:'?슙',label:'?쒖빟 議곌굔',brief:'Constraints',title:'?쒖빟 議곌굔 (Constraints)',desc:'?섏? 留먯븘????寃껋쓣 紐낆떆?⑸땲?? 湲몄씠, ?? 湲덉????깆쓣 ?쒗븳?섎㈃ ?먯튂 ?딅뒗 寃곌낵瑜?以꾩씪 ???덉뒿?덈떎.',example:'?? "?꾨Ц ?⑹뼱 湲덉?, 500???대궡"',tip:'"~?섏? 留덉꽭??瑜?3媛??댁긽 ?곸뼱蹂대㈃ 寃곌낵媛 ?ш쾶 ?щ씪吏묐땲??'},
+  {icon:'?뱦',label:'?덉떆 ?쒓났',brief:'Examples',title:'?덉떆 ?쒓났 (Examples / Few-shot)',desc:'?먰븯??寃곌낵???덉떆瑜?蹂댁뿬以띾땲?? 1~3媛쒖쓽 ?낆텧???덉떆瑜?二쇰㈃ AI媛 ?⑦꽩???뚯븙?⑸땲??',example:'?? "?낅젰: \'諛곗넚????뼱??' ??異쒕젰: {媛먯젙: 遺덈쭔, ?먯닔: 2}"',tip:'?덉떆 2~3媛쒓? 理쒖쟻. 寃쎄퀎 ?щ?瑜??ы븿?섎㈃ ??醫뗭뒿?덈떎.'}
 ];
 
 const techData = [
-  {name:'역할 부여',desc:'AI에게 특정 역할을 부여하여 전문적인 관점에서 답하게 합니다.',bad:'마케팅 전략 알려줘',good:'당신은 실리콘밸리에서 15년간 B2B SaaS 마케팅을 담당한 CMO입니다. 시리즈A 단계의 스타트업이 MAU 1만에서 10만으로 성장하기 위한 마케팅 전략을 3단계로 제안해 주세요.',tip:'역할에 구체적 경력, 지역, 전문 분야를 넣으면 결과의 전문성이 달라집니다.'},
-  {name:'단계별 사고 (CoT)',desc:'문제를 단계적으로 생각하도록 유도하여 복잡한 추론의 정확도를 높입니다.',bad:'이 수학 문제 풀어줘',good:'다음 문제를 단계별로 풀어주세요. 각 단계마다 이유를 설명하고, 마지막에 최종 답을 명시하세요.\n\n문제: 공장에서 하루 150개 생산, 불량률 4%. 30일간 정상 제품 총 수는?',tip:'"단계별로", "하나씩", "이유를 설명하며"를 추가하면 CoT가 활성화됩니다.'},
-  {name:'Few-shot 예시',desc:'입력-출력 예시를 제공하여 AI가 패턴을 학습하게 합니다.',bad:'리뷰 감정 분석해줘',good:'다음 리뷰의 감정을 분석해 주세요.\n\n예시 1:\n리뷰: "배송이 빨라서 좋았어요"\n결과: {감정: 긍정, 점수: 4}\n\n예시 2:\n리뷰: "제품이 고장났어요"\n결과: {감정: 부정, 점수: 1}\n\n이제 분석할 리뷰:\n"가격 대비 괜찮은데 포장이 좀 아쉬워요"',tip:'예시 2~3개가 최적. 경계 사례(애매한 입력)를 포함하면 더 좋습니다.'},
-  {name:'출력 형식 지정',desc:'JSON, 표, 마크다운 등 원하는 형식을 명시하여 출력을 안정화합니다.',bad:'분석 결과 알려줘',good:'다음 형식의 JSON으로 출력해 주세요:\n{\n  "제목": "string",\n  "요약": "string (50자 이내)",\n  "핵심키워드": ["string", "string", "string"],\n  "중요도": 1~5\n}',tip:'구체적인 필드명, 데이터 타입, 길이 제한까지 지정하면 파싱하기 편한 출력을 얻습니다.'},
-  {name:'시스템 프롬프트',desc:'대화 전체에 적용되는 기본 지침을 설정합니다.',bad:'(매번 톤과 형식을 반복 지시)',good:'[시스템 프롬프트]\n당신은 한국어 기술 문서 편집자입니다.\n모든 답변은 존댓말로 하세요.\n마크다운 형식을 사용하세요.\n불확실한 정보는 "확인 필요"로 표시하세요.',tip:'시스템 프롬프트에 톤, 형식, 금지 사항을 넣으면 매 대화마다 반복할 필요가 없습니다.'},
-  {name:'프롬프트 체이닝',desc:'복잡한 작업을 여러 단계로 분할하여 순서대로 처리합니다.',bad:'이 보고서 분석해서 슬라이드로 만들어줘',good:'단계 1: "이 보고서에서 핵심 데이터 5개를 추출해 주세요"\n→ 단계 2: "추출된 데이터를 기반으로 트렌드를 분석해 주세요"\n→ 단계 3: "분석 결과를 경영진 브리핑용 슬라이드 3장 구성으로 요약해 주세요"',tip:'각 단계의 출력을 다음 단계의 입력으로 사용하세요. 한 번에 모든 것을 시키지 마세요.'},
-  {name:'네거티브 프롬프트',desc:'하지 말아야 할 것을 명시하여 원치 않는 결과를 방지합니다.',bad:'(금지 사항 없이 요청)',good:'다음 규칙을 지켜주세요:\n- 인사말 생략\n- 이모지 사용 금지\n- "~할 수 있습니다" 같은 모호한 표현 금지\n- 500자 초과 금지\n- 출처 불명확한 통계 인용 금지',tip:'"~하지 마세요"를 구체적으로 나열하면 결과의 품질이 급격히 올라갑니다.'}
+  {name:'??븷 遺??,desc:'AI?먭쾶 ?뱀젙 ??븷??遺?ы븯???꾨Ц?곸씤 愿?먯뿉???듯븯寃??⑸땲??',bad:'留덉????꾨왂 ?뚮젮以?,good:'?뱀떊? ?ㅻ━肄섎갭由ъ뿉??15?꾧컙 B2B SaaS 留덉??낆쓣 ?대떦??CMO?낅땲?? ?쒕━利뉯 ?④퀎???ㅽ??몄뾽??MAU 1留뚯뿉??10留뚯쑝濡??깆옣?섍린 ?꾪븳 留덉????꾨왂??3?④퀎濡??쒖븞??二쇱꽭??',tip:'??븷??援ъ껜??寃쎈젰, 吏?? ?꾨Ц 遺꾩빞瑜??ｌ쑝硫?寃곌낵???꾨Ц?깆씠 ?щ씪吏묐땲??'},
+  {name:'?④퀎蹂??ш퀬 (CoT)',desc:'臾몄젣瑜??④퀎?곸쑝濡??앷컖?섎룄濡??좊룄?섏뿬 蹂듭옟??異붾줎???뺥솗?꾨? ?믪엯?덈떎.',bad:'???섑븰 臾몄젣 ??댁쨾',good:'?ㅼ쓬 臾몄젣瑜??④퀎蹂꾨줈 ??댁＜?몄슂. 媛??④퀎留덈떎 ?댁쑀瑜??ㅻ챸?섍퀬, 留덉?留됱뿉 理쒖쥌 ?듭쓣 紐낆떆?섏꽭??\n\n臾몄젣: 怨듭옣?먯꽌 ?섎（ 150媛??앹궛, 遺덈웾瑜?4%. 30?쇨컙 ?뺤긽 ?쒗뭹 珥??섎뒗?',tip:'"?④퀎蹂꾨줈", "?섎굹??, "?댁쑀瑜??ㅻ챸?섎ŉ"瑜?異붽??섎㈃ CoT媛 ?쒖꽦?붾맗?덈떎.'},
+  {name:'Few-shot ?덉떆',desc:'?낅젰-異쒕젰 ?덉떆瑜??쒓났?섏뿬 AI媛 ?⑦꽩???숈뒿?섍쾶 ?⑸땲??',bad:'由щ럭 媛먯젙 遺꾩꽍?댁쨾',good:'?ㅼ쓬 由щ럭??媛먯젙??遺꾩꽍??二쇱꽭??\n\n?덉떆 1:\n由щ럭: "諛곗넚??鍮⑤씪??醫뗭븯?댁슂"\n寃곌낵: {媛먯젙: 湲띿젙, ?먯닔: 4}\n\n?덉떆 2:\n由щ럭: "?쒗뭹??怨좎옣?ъ뼱??\n寃곌낵: {媛먯젙: 遺?? ?먯닔: 1}\n\n?댁젣 遺꾩꽍??由щ럭:\n"媛寃??鍮?愿쒖갖????ъ옣??醫 ?꾩돩?뚯슂"',tip:'?덉떆 2~3媛쒓? 理쒖쟻. 寃쎄퀎 ?щ?(?좊ℓ???낅젰)瑜??ы븿?섎㈃ ??醫뗭뒿?덈떎.'},
+  {name:'異쒕젰 ?뺤떇 吏??,desc:'JSON, ?? 留덊겕?ㅼ슫 ???먰븯???뺤떇??紐낆떆?섏뿬 異쒕젰???덉젙?뷀빀?덈떎.',bad:'遺꾩꽍 寃곌낵 ?뚮젮以?,good:'?ㅼ쓬 ?뺤떇??JSON?쇰줈 異쒕젰??二쇱꽭??\n{\n  "?쒕ぉ": "string",\n  "?붿빟": "string (50???대궡)",\n  "?듭떖?ㅼ썙??: ["string", "string", "string"],\n  "以묒슂??: 1~5\n}',tip:'援ъ껜?곸씤 ?꾨뱶紐? ?곗씠????? 湲몄씠 ?쒗븳源뚯? 吏?뺥븯硫??뚯떛?섍린 ?명븳 異쒕젰???살뒿?덈떎.'},
+  {name:'?쒖뒪???꾨＼?꾪듃',desc:'????꾩껜???곸슜?섎뒗 湲곕낯 吏移⑥쓣 ?ㅼ젙?⑸땲??',bad:'(留ㅻ쾲 ?ㅺ낵 ?뺤떇??諛섎났 吏??',good:'[?쒖뒪???꾨＼?꾪듃]\n?뱀떊? ?쒓뎅??湲곗닠 臾몄꽌 ?몄쭛?먯엯?덈떎.\n紐⑤뱺 ?듬?? 議대뙎留먮줈 ?섏꽭??\n留덊겕?ㅼ슫 ?뺤떇???ъ슜?섏꽭??\n遺덊솗?ㅽ븳 ?뺣낫??"?뺤씤 ?꾩슂"濡??쒖떆?섏꽭??',tip:'?쒖뒪???꾨＼?꾪듃???? ?뺤떇, 湲덉? ?ы빆???ｌ쑝硫?留???붾쭏??諛섎났???꾩슂媛 ?놁뒿?덈떎.'},
+  {name:'?꾨＼?꾪듃 泥댁씠??,desc:'蹂듭옟???묒뾽???щ윭 ?④퀎濡?遺꾪븷?섏뿬 ?쒖꽌?濡?泥섎━?⑸땲??',bad:'??蹂닿퀬??遺꾩꽍?댁꽌 ?щ씪?대뱶濡?留뚮뱾?댁쨾',good:'?④퀎 1: "??蹂닿퀬?쒖뿉???듭떖 ?곗씠??5媛쒕? 異붿텧??二쇱꽭??\n???④퀎 2: "異붿텧???곗씠?곕? 湲곕컲?쇰줈 ?몃젋?쒕? 遺꾩꽍??二쇱꽭??\n???④퀎 3: "遺꾩꽍 寃곌낵瑜?寃쎌쁺吏?釉뚮━?묒슜 ?щ씪?대뱶 3??援ъ꽦?쇰줈 ?붿빟??二쇱꽭??',tip:'媛??④퀎??異쒕젰???ㅼ쓬 ?④퀎???낅젰?쇰줈 ?ъ슜?섏꽭?? ??踰덉뿉 紐⑤뱺 寃껋쓣 ?쒗궎吏 留덉꽭??'},
+  {name:'?ㅺ굅?곕툕 ?꾨＼?꾪듃',desc:'?섏? 留먯븘????寃껋쓣 紐낆떆?섏뿬 ?먯튂 ?딅뒗 寃곌낵瑜?諛⑹??⑸땲??',bad:'(湲덉? ?ы빆 ?놁씠 ?붿껌)',good:'?ㅼ쓬 洹쒖튃??吏耳쒖＜?몄슂:\n- ?몄궗留??앸왂\n- ?대え吏 ?ъ슜 湲덉?\n- "~?????덉뒿?덈떎" 媛숈? 紐⑦샇???쒗쁽 湲덉?\n- 500??珥덇낵 湲덉?\n- 異쒖쿂 遺덈챸?뺥븳 ?듦퀎 ?몄슜 湲덉?',tip:'"~?섏? 留덉꽭??瑜?援ъ껜?곸쑝濡??섏뿴?섎㈃ 寃곌낵???덉쭏??湲됯꺽???щ씪媛묐땲??'}
 ];
 
 const compareData = [
-  {title:'보고서 요약',bad:'보고서 요약해줘',good:'당신은 경영 컨설턴트입니다. 아래 보고서를 다음 형식으로 요약해 주세요:\n1. 핵심 결론 (1문장)\n2. 주요 데이터 3개 (숫자 포함)\n3. 경영진 시사점 (2문장)\n\n제약: 전체 300자 이내, 전문 용어 최소화',explain:'역할+형식+제약 조건을 추가하면 "어떤 관점에서, 무엇을, 어떻게" 요약할지 명확해집니다.'},
-  {title:'코드 리뷰',bad:'이 코드 봐줘',good:'당신은 시니어 백엔드 개발자입니다. 아래 Python 코드를 리뷰해 주세요.\n\n관점: 1) 보안 취약점 2) 성능 병목 3) 가독성\n출력: 각 관점별 문제점+개선안을 표로 정리\n제약: 코드 수정 금지, 설명만',explain:'리뷰 관점을 명시하고, 출력 형식을 지정하면 체계적인 리뷰를 받을 수 있습니다.'},
-  {title:'이메일 작성',bad:'이메일 써줘',good:'당신은 비즈니스 커뮤니케이션 전문가입니다.\n상황: 납품 일정이 2주 지연됨. 고객사 김부장에게 사과와 대안 전달.\n톤: 정중하되 자신감 있게\n구조: 사과→원인→대안→방지책\n제약: 200자 이내, 과도한 사과 금지',explain:'상황+대상+톤+구조를 구체적으로 주면 바로 사용할 수 있는 이메일이 나옵니다.'},
-  {title:'데이터 분석',bad:'이 데이터 분석해줘',good:'아래 매출 데이터(CSV)를 분석해 주세요.\n1. 월별 매출 추이 (증감률 포함)\n2. 상위 3개 제품 매출 비중\n3. 이상치(전월 대비 ±30%) 탐지\n출력: 마크다운 표 + 한 줄 인사이트\n제약: 추측 금지, 데이터 기반 사실만',explain:'분석 항목을 구체적으로 나열하고, "추측 금지" 제약을 추가하면 신뢰도가 올라갑니다.'},
-  {title:'회의록 정리',bad:'회의록 정리해줘',good:'아래 회의 녹취록을 정리해 주세요:\n## 회의 요약\n- 일시/참석자/핵심 안건\n## 결정 사항\n- [결정] — 담당자, 기한\n## 액션 아이템\n- [할 일] — 담당, 기한\n제약: 결정과 액션 중심, 발언자별 요약 불필요',explain:'출력 형식을 마크다운 템플릿으로 보여주면 AI가 그대로 채워 넣습니다.'},
-  {title:'번역 요청',bad:'이거 영어로 번역해줘',good:'아래 한국어를 영어로 번역해 주세요.\n- 비즈니스 공식 톤\n- 한국식 표현은 영미권에 맞게 의역\n- 고유명사: 원문 병기 "삼성전자 (Samsung)"\n- 번역 후 자연스러움 자체 평가 (1~5)',explain:'톤, 의역 기준, 고유명사 처리, 자체 평가를 추가하면 번역 품질이 달라집니다.'},
-  {title:'브레인스토밍',bad:'아이디어 좀 줘',good:'당신은 IDEO 디자인 씽킹 퍼실리테이터입니다.\n주제: "MZ세대 직장인 점심시간 활용 앱"\n방법: SCAMPER 기법\n출력: 기법별 아이디어 1개씩 (표)\n제약: 기존 앱과 차별화되는 것만',explain:'브레인스토밍도 프레임워크(SCAMPER)를 지정하면 체계적인 아이디어가 나옵니다.'},
-  {title:'학습 계획',bad:'파이썬 공부 계획 만들어줘',good:'당신은 프로그래밍 교육 전문가입니다.\n학습자: 엑셀 잘 쓰는 마케터, 코딩 경험 없음\n목표: 4주 후 Pandas로 데이터 분석\n조건: 하루 1시간, 주 5일\n출력: 주차별 계획표\n제약: 이론 30%, 실습 70%',explain:'학습자 수준+목표+시간+형식+비율까지 지정하면 실행 가능한 계획이 나옵니다.'},
-  {title:'프레젠테이션',bad:'발표 자료 만들어줘',good:'당신은 TED 코치입니다.\n주제: "AI 시대의 인사 전략"\n청중: C-level 임원 30명, 15분\n출력: 슬라이드 8장 구성안 (번호|제목|핵심메시지|비주얼)\n제약: 텍스트 최소, 데이터 시각화 위주',explain:'청중+시간+슬라이드 수+비주얼 가이드를 지정하면 전문적인 구성안이 나옵니다.'},
-  {title:'고객 응대',bad:'CS 응대 매뉴얼 만들어줘',good:'당신은 CX 전문가입니다.\n제품: SaaS 프로젝트 관리 도구\n상황: 결제 오류 문의\n출력: 상황분류→1차응대→에스컬레이션→팔로업\n제약: 3문장 이내 핵심전달, 과도한 사과 금지',explain:'상황 분류+스크립트 구조+에스컬레이션 기준+톤 제약까지 있으면 즉시 사용 가능한 매뉴얼이 됩니다.'}
+  {title:'蹂닿퀬???붿빟',bad:'蹂닿퀬???붿빟?댁쨾',good:'?뱀떊? 寃쎌쁺 而⑥꽕?댄듃?낅땲?? ?꾨옒 蹂닿퀬?쒕? ?ㅼ쓬 ?뺤떇?쇰줈 ?붿빟??二쇱꽭??\n1. ?듭떖 寃곕줎 (1臾몄옣)\n2. 二쇱슂 ?곗씠??3媛?(?レ옄 ?ы븿)\n3. 寃쎌쁺吏??쒖궗??(2臾몄옣)\n\n?쒖빟: ?꾩껜 300???대궡, ?꾨Ц ?⑹뼱 理쒖냼??,explain:'??븷+?뺤떇+?쒖빟 議곌굔??異붽??섎㈃ "?대뼡 愿?먯뿉?? 臾댁뾿?? ?대뼸寃? ?붿빟?좎? 紐낇솗?댁쭛?덈떎.'},
+  {title:'肄붾뱶 由щ럭',bad:'??肄붾뱶 遊먯쨾',good:'?뱀떊? ?쒕땲??諛깆뿏??媛쒕컻?먯엯?덈떎. ?꾨옒 Python 肄붾뱶瑜?由щ럭??二쇱꽭??\n\n愿?? 1) 蹂댁븞 痍⑥빟??2) ?깅뒫 蹂묐ぉ 3) 媛?낆꽦\n異쒕젰: 媛?愿?먮퀎 臾몄젣??媛쒖꽑?덉쓣 ?쒕줈 ?뺣━\n?쒖빟: 肄붾뱶 ?섏젙 湲덉?, ?ㅻ챸留?,explain:'由щ럭 愿?먯쓣 紐낆떆?섍퀬, 異쒕젰 ?뺤떇??吏?뺥븯硫?泥닿퀎?곸씤 由щ럭瑜?諛쏆쓣 ???덉뒿?덈떎.'},
+  {title:'?대찓???묒꽦',bad:'?대찓???⑥쨾',good:'?뱀떊? 鍮꾩쫰?덉뒪 而ㅻ??덉??댁뀡 ?꾨Ц媛?낅땲??\n?곹솴: ?⑺뭹 ?쇱젙??2二?吏?곕맖. 怨좉컼??源遺?μ뿉寃??ш낵? ????꾨떖.\n?? ?뺤쨷?섎릺 ?먯떊媛??덇쾶\n援ъ“: ?ш낵?믪썝?멤넂??댿넂諛⑹?梨?n?쒖빟: 200???대궡, 怨쇰룄???ш낵 湲덉?',explain:'?곹솴+?????援ъ“瑜?援ъ껜?곸쑝濡?二쇰㈃ 諛붾줈 ?ъ슜?????덈뒗 ?대찓?쇱씠 ?섏샃?덈떎.'},
+  {title:'?곗씠??遺꾩꽍',bad:'???곗씠??遺꾩꽍?댁쨾',good:'?꾨옒 留ㅼ텧 ?곗씠??CSV)瑜?遺꾩꽍??二쇱꽭??\n1. ?붾퀎 留ㅼ텧 異붿씠 (利앷컧瑜??ы븿)\n2. ?곸쐞 3媛??쒗뭹 留ㅼ텧 鍮꾩쨷\n3. ?댁긽移??꾩썡 ?鍮?짹30%) ?먯?\n異쒕젰: 留덊겕?ㅼ슫 ??+ ??以??몄궗?댄듃\n?쒖빟: 異붿륫 湲덉?, ?곗씠??湲곕컲 ?ъ떎留?,explain:'遺꾩꽍 ??ぉ??援ъ껜?곸쑝濡??섏뿴?섍퀬, "異붿륫 湲덉?" ?쒖빟??異붽??섎㈃ ?좊ː?꾧? ?щ씪媛묐땲??'},
+  {title:'?뚯쓽濡??뺣━',bad:'?뚯쓽濡??뺣━?댁쨾',good:'?꾨옒 ?뚯쓽 ?뱀랬濡앹쓣 ?뺣━??二쇱꽭??\n## ?뚯쓽 ?붿빟\n- ?쇱떆/李몄꽍???듭떖 ?덇굔\n## 寃곗젙 ?ы빆\n- [寃곗젙] ???대떦?? 湲고븳\n## ?≪뀡 ?꾩씠??n- [???? ???대떦, 湲고븳\n?쒖빟: 寃곗젙怨??≪뀡 以묒떖, 諛쒖뼵?먮퀎 ?붿빟 遺덊븘??,explain:'異쒕젰 ?뺤떇??留덊겕?ㅼ슫 ?쒗뵆由우쑝濡?蹂댁뿬二쇰㈃ AI媛 洹몃?濡?梨꾩썙 ?ｌ뒿?덈떎.'},
+  {title:'踰덉뿭 ?붿껌',bad:'?닿굅 ?곸뼱濡?踰덉뿭?댁쨾',good:'?꾨옒 ?쒓뎅?대? ?곸뼱濡?踰덉뿭??二쇱꽭??\n- 鍮꾩쫰?덉뒪 怨듭떇 ??n- ?쒓뎅???쒗쁽? ?곷?沅뚯뿉 留욊쾶 ?섏뿭\n- 怨좎쑀紐낆궗: ?먮Ц 蹂묎린 "?쇱꽦?꾩옄 (Samsung)"\n- 踰덉뿭 ???먯뿰?ㅻ윭? ?먯껜 ?됯? (1~5)',explain:'?? ?섏뿭 湲곗?, 怨좎쑀紐낆궗 泥섎━, ?먯껜 ?됯?瑜?異붽??섎㈃ 踰덉뿭 ?덉쭏???щ씪吏묐땲??'},
+  {title:'釉뚮젅?몄뒪?좊컢',bad:'?꾩씠?붿뼱 醫 以?,good:'?뱀떊? IDEO ?붿옄???쏀궧 ?쇱떎由ы뀒?댄꽣?낅땲??\n二쇱젣: "MZ?몃? 吏곸옣???먯떖?쒓컙 ?쒖슜 ??\n諛⑸쾿: SCAMPER 湲곕쾿\n異쒕젰: 湲곕쾿蹂??꾩씠?붿뼱 1媛쒖뵫 (??\n?쒖빟: 湲곗〈 ?깃낵 李⑤퀎?붾릺??寃껊쭔',explain:'釉뚮젅?몄뒪?좊컢???꾨젅?꾩썙??SCAMPER)瑜?吏?뺥븯硫?泥닿퀎?곸씤 ?꾩씠?붿뼱媛 ?섏샃?덈떎.'},
+  {title:'?숈뒿 怨꾪쉷',bad:'?뚯씠??怨듬? 怨꾪쉷 留뚮뱾?댁쨾',good:'?뱀떊? ?꾨줈洹몃옒諛?援먯쑁 ?꾨Ц媛?낅땲??\n?숈뒿?? ?묒? ???곕뒗 留덉??? 肄붾뵫 寃쏀뿕 ?놁쓬\n紐⑺몴: 4二???Pandas濡??곗씠??遺꾩꽍\n議곌굔: ?섎（ 1?쒓컙, 二?5??n異쒕젰: 二쇱감蹂?怨꾪쉷??n?쒖빟: ?대줎 30%, ?ㅼ뒿 70%',explain:'?숈뒿???섏?+紐⑺몴+?쒓컙+?뺤떇+鍮꾩쑉源뚯? 吏?뺥븯硫??ㅽ뻾 媛?ν븳 怨꾪쉷???섏샃?덈떎.'},
+  {title:'?꾨젅?좏뀒?댁뀡',bad:'諛쒗몴 ?먮즺 留뚮뱾?댁쨾',good:'?뱀떊? TED 肄붿튂?낅땲??\n二쇱젣: "AI ?쒕????몄궗 ?꾨왂"\n泥?쨷: C-level ?꾩썝 30紐? 15遺?n異쒕젰: ?щ씪?대뱶 8??援ъ꽦??(踰덊샇|?쒕ぉ|?듭떖硫붿떆吏|鍮꾩＜??\n?쒖빟: ?띿뒪??理쒖냼, ?곗씠???쒓컖???꾩＜',explain:'泥?쨷+?쒓컙+?щ씪?대뱶 ??鍮꾩＜??媛?대뱶瑜?吏?뺥븯硫??꾨Ц?곸씤 援ъ꽦?덉씠 ?섏샃?덈떎.'},
+  {title:'怨좉컼 ?묐?',bad:'CS ?묐? 留ㅻ돱??留뚮뱾?댁쨾',good:'?뱀떊? CX ?꾨Ц媛?낅땲??\n?쒗뭹: SaaS ?꾨줈?앺듃 愿由??꾧뎄\n?곹솴: 寃곗젣 ?ㅻ쪟 臾몄쓽\n異쒕젰: ?곹솴遺꾨쪟??李⑥쓳??믪뿉?ㅼ뺄?덉씠?섃넂?붾줈??n?쒖빟: 3臾몄옣 ?대궡 ?듭떖?꾨떖, 怨쇰룄???ш낵 湲덉?',explain:'?곹솴 遺꾨쪟+?ㅽ겕由쏀듃 援ъ“+?먯뒪而щ젅?댁뀡 湲곗?+???쒖빟源뚯? ?덉쑝硫?利됱떆 ?ъ슜 媛?ν븳 留ㅻ돱?쇱씠 ?⑸땲??'}
 ];
 
 const drColors = ['var(--dr1)','var(--dr2)','var(--dr3)','var(--dr4)','var(--dr5)'];
 const drData = [
-  {emoji:'🏗️',name:'Dr. Structure',role:'구조 박사',color:drColors[0],q:'좋은 프롬프트의 구조는?',
-   summary:['프롬프트는 6개 블록(역할, 맥락, 지시, 형식, 제약, 예시)으로 구성된다','각 블록을 의식적으로 채우면 결과 품질이 급격히 올라간다','구조를 먼저 잡고, 그 다음 내용을 채우라'],
-   miscon:['프롬프트는 자연스럽게 쓰면 된다 → 구조를 의식해야 한다','길게 쓰면 좋다 → 구조적으로 쓰는 것이 중요하다','한 번에 완벽해야 한다 → 블록별로 나눠서 개선하라'],
-   actions:['지금 쓰는 프롬프트에서 6개 블록 중 빠진 것을 찾아보세요','역할+지시+형식 3개만 추가해도 결과가 달라집니다','출력 예시를 하나 보여주는 습관을 들이세요'],
-   next:'구조를 이해했다면 기법 박사(Dr. Technique)에게 이동하세요.'},
-  {emoji:'🔬',name:'Dr. Technique',role:'기법 박사',color:drColors[1],q:'어떤 기법을 조합해야 하는가?',
-   summary:['7가지 핵심 기법은 조합해서 쓸 때 가장 강력하다','Chain of Thought(단계별 사고)는 복잡한 문제에 필수다','시스템 프롬프트로 일관성을 확보하라'],
-   miscon:['기법은 하나만 쓰면 된다 → 조합이 핵심이다','Few-shot은 예시가 많을수록 좋다 → 2~3개가 최적이다','네거티브 프롬프트는 부정적이다 → 오히려 품질을 높인다'],
-   actions:['오늘 쓸 프롬프트에 CoT("단계별로")를 추가해 보세요','시스템 프롬프트를 3줄로 작성해 보세요','네거티브 조건 3개를 추가해 보세요'],
-   next:'기법을 익혔다면 비교 박사(Dr. Before-After)에게 이동하세요.'},
-  {emoji:'⚖️',name:'Dr. Before-After',role:'비교 박사',color:drColors[2],q:'나쁜 프롬프트와 좋은 프롬프트의 차이는?',
-   summary:['차이는 "구체성"이다. 모호한 요청은 모호한 결과를 만든다','전후 비교를 통해 개선 포인트를 찾아라','반복 개선이 정상이다 — 한 번에 좋은 결과가 나올 필요 없다'],
-   miscon:['간단한 프롬프트가 더 좋다 → 구체적인 것이 좋다','AI가 알아서 잘 해준다 → 명시적으로 알려줘야 한다','한 번에 좋은 결과가 나와야 한다 → 반복 개선이 정상이다'],
-   actions:['최근 쓴 프롬프트를 꺼내서 비교 패턴으로 개선해 보세요','모호한 동사("해줘")를 구체적 동사로 바꿔 보세요','제약 조건을 3개 이상 추가해 보세요'],
-   next:'비교를 체감했다면 실전 박사(Dr. Template)에게 이동하세요.'},
-  {emoji:'📝',name:'Dr. Template',role:'실전 박사',color:drColors[3],q:'어떻게 실전에 바로 적용하는가?',
-   summary:['템플릿은 매번 0에서 시작하지 않게 해준다','업무 유형별로 기본 템플릿을 만들어 두라','템플릿의 빈칸만 채우면 70% 이상의 품질이 보장된다'],
-   miscon:['템플릿을 쓰면 창의성이 떨어진다 → 구조 위에 창의성이 올라간다','매번 새로 쓰는 게 낫다 → 반복 업무는 템플릿이 효율적이다','남의 템플릿을 그대로 쓰면 된다 → 내 업무에 맞게 커스터마이즈하라'],
-   actions:['가장 자주 하는 요청 3가지를 템플릿으로 만들어 보세요','팀 내 공유 프롬프트 라이브러리를 시작하세요','템플릿에 [여기에 입력]을 넣어 재사용성을 높이세요'],
-   next:'실전 템플릿을 만들었다면 스킬연결 박사(Dr. Skill-Bridge)에게 이동하세요.'},
-  {emoji:'🔗',name:'Dr. Skill-Bridge',role:'스킬연결 박사',color:drColors[4],q:'프롬프트를 어떻게 SKILL.md로 만드는가?',
-   summary:['좋은 프롬프트 = 좋은 SKILL.md 본문이다','프롬프트를 SKILL.md로 변환하면 자동화가 된다','스킬은 "반복되는 좋은 프롬프트"를 저장하는 것이다'],
-   miscon:['스킬은 개발자만 만든다 → 프롬프트만 잘 쓰면 누구나 만든다','스킬은 복잡하다 → 좋은 프롬프트를 포맷에 맞게 옮기면 된다','한 번 만들면 끝이다 → 사용 후 개선을 반복하라'],
-   actions:['가장 잘 만든 프롬프트 하나를 SKILL.md로 변환해 보세요','description에 트리거 키워드를 3개 이상 넣으세요','동료에게 스킬을 공유하고 피드백을 받으세요'],
-   next:'모든 박사의 가이드를 마쳤습니다. 퀴즈로 자기점검을 하거나 복사 메모를 활용하세요!'}
+  {emoji:'?룛截?,name:'Dr. Structure',role:'援ъ“ 諛뺤궗',color:drColors[0],q:'醫뗭? ?꾨＼?꾪듃??援ъ“??',
+   summary:['?꾨＼?꾪듃??6媛?釉붾줉(??븷, 留λ씫, 吏?? ?뺤떇, ?쒖빟, ?덉떆)?쇰줈 援ъ꽦?쒕떎','媛?釉붾줉???섏떇?곸쑝濡?梨꾩슦硫?寃곌낵 ?덉쭏??湲됯꺽???щ씪媛꾨떎','援ъ“瑜?癒쇱? ?↔퀬, 洹??ㅼ쓬 ?댁슜??梨꾩슦??],
+   miscon:['?꾨＼?꾪듃???먯뿰?ㅻ읇寃??곕㈃ ?쒕떎 ??援ъ“瑜??섏떇?댁빞 ?쒕떎','湲멸쾶 ?곕㈃ 醫뗫떎 ??援ъ“?곸쑝濡??곕뒗 寃껋씠 以묒슂?섎떎','??踰덉뿉 ?꾨꼍?댁빞 ?쒕떎 ??釉붾줉蹂꾨줈 ?섎닠??媛쒖꽑?섎씪'],
+   actions:['吏湲??곕뒗 ?꾨＼?꾪듃?먯꽌 6媛?釉붾줉 以?鍮좎쭊 寃껋쓣 李얠븘蹂댁꽭??,'??븷+吏???뺤떇 3媛쒕쭔 異붽??대룄 寃곌낵媛 ?щ씪吏묐땲??,'異쒕젰 ?덉떆瑜??섎굹 蹂댁뿬二쇰뒗 ?듦????ㅼ씠?몄슂'],
+   next:'援ъ“瑜??댄빐?덈떎硫?湲곕쾿 諛뺤궗(Dr. Technique)?먭쾶 ?대룞?섏꽭??'},
+  {emoji:'?뵮',name:'Dr. Technique',role:'湲곕쾿 諛뺤궗',color:drColors[1],q:'?대뼡 湲곕쾿??議고빀?댁빞 ?섎뒗媛?',
+   summary:['7媛吏 ?듭떖 湲곕쾿? 議고빀?댁꽌 ????媛??媛뺣젰?섎떎','Chain of Thought(?④퀎蹂??ш퀬)??蹂듭옟??臾몄젣???꾩닔??,'?쒖뒪???꾨＼?꾪듃濡??쇨??깆쓣 ?뺣낫?섎씪'],
+   miscon:['湲곕쾿? ?섎굹留??곕㈃ ?쒕떎 ??議고빀???듭떖?대떎','Few-shot? ?덉떆媛 留롮쓣?섎줉 醫뗫떎 ??2~3媛쒓? 理쒖쟻?대떎','?ㅺ굅?곕툕 ?꾨＼?꾪듃??遺?뺤쟻?대떎 ???ㅽ엳???덉쭏???믪씤??],
+   actions:['?ㅻ뒛 ???꾨＼?꾪듃??CoT("?④퀎蹂꾨줈")瑜?異붽???蹂댁꽭??,'?쒖뒪???꾨＼?꾪듃瑜?3以꾨줈 ?묒꽦??蹂댁꽭??,'?ㅺ굅?곕툕 議곌굔 3媛쒕? 異붽???蹂댁꽭??],
+   next:'湲곕쾿???듯삍?ㅻ㈃ 鍮꾧탳 諛뺤궗(Dr. Before-After)?먭쾶 ?대룞?섏꽭??'},
+  {emoji:'?뽳툘',name:'Dr. Before-After',role:'鍮꾧탳 諛뺤궗',color:drColors[2],q:'?섏걶 ?꾨＼?꾪듃? 醫뗭? ?꾨＼?꾪듃??李⑥씠??',
+   summary:['李⑥씠??"援ъ껜???대떎. 紐⑦샇???붿껌? 紐⑦샇??寃곌낵瑜?留뚮뱺??,'?꾪썑 鍮꾧탳瑜??듯빐 媛쒖꽑 ?ъ씤?몃? 李얠븘??,'諛섎났 媛쒖꽑???뺤긽?대떎 ????踰덉뿉 醫뗭? 寃곌낵媛 ?섏삱 ?꾩슂 ?녿떎'],
+   miscon:['媛꾨떒???꾨＼?꾪듃媛 ??醫뗫떎 ??援ъ껜?곸씤 寃껋씠 醫뗫떎','AI媛 ?뚯븘?????댁?????紐낆떆?곸쑝濡??뚮젮以섏빞 ?쒕떎','??踰덉뿉 醫뗭? 寃곌낵媛 ?섏????쒕떎 ??諛섎났 媛쒖꽑???뺤긽?대떎'],
+   actions:['理쒓렐 ???꾨＼?꾪듃瑜?爰쇰궡??鍮꾧탳 ?⑦꽩?쇰줈 媛쒖꽑??蹂댁꽭??,'紐⑦샇???숈궗("?댁쨾")瑜?援ъ껜???숈궗濡?諛붽퓭 蹂댁꽭??,'?쒖빟 議곌굔??3媛??댁긽 異붽???蹂댁꽭??],
+   next:'鍮꾧탳瑜?泥닿컧?덈떎硫??ㅼ쟾 諛뺤궗(Dr. Template)?먭쾶 ?대룞?섏꽭??'},
+  {emoji:'?뱷',name:'Dr. Template',role:'?ㅼ쟾 諛뺤궗',color:drColors[3],q:'?대뼸寃??ㅼ쟾??諛붾줈 ?곸슜?섎뒗媛?',
+   summary:['?쒗뵆由우? 留ㅻ쾲 0?먯꽌 ?쒖옉?섏? ?딄쾶 ?댁???,'?낅Т ?좏삎蹂꾨줈 湲곕낯 ?쒗뵆由우쓣 留뚮뱾???먮씪','?쒗뵆由우쓽 鍮덉뭏留?梨꾩슦硫?70% ?댁긽???덉쭏??蹂댁옣?쒕떎'],
+   miscon:['?쒗뵆由우쓣 ?곕㈃ 李쎌쓽?깆씠 ?⑥뼱吏꾨떎 ??援ъ“ ?꾩뿉 李쎌쓽?깆씠 ?щ씪媛꾨떎','留ㅻ쾲 ?덈줈 ?곕뒗 寃??ル떎 ??諛섎났 ?낅Т???쒗뵆由우씠 ?⑥쑉?곸씠??,'?⑥쓽 ?쒗뵆由우쓣 洹몃?濡??곕㈃ ?쒕떎 ?????낅Т??留욊쾶 而ㅼ뒪?곕쭏?댁쫰?섎씪'],
+   actions:['媛???먯＜ ?섎뒗 ?붿껌 3媛吏瑜??쒗뵆由우쑝濡?留뚮뱾??蹂댁꽭??,'? ??怨듭쑀 ?꾨＼?꾪듃 ?쇱씠釉뚮윭由щ? ?쒖옉?섏꽭??,'?쒗뵆由우뿉 [?ш린???낅젰]???ｌ뼱 ?ъ궗?⑹꽦???믪씠?몄슂'],
+   next:'?ㅼ쟾 ?쒗뵆由우쓣 留뚮뱾?덈떎硫??ㅽ궗?곌껐 諛뺤궗(Dr. Skill-Bridge)?먭쾶 ?대룞?섏꽭??'},
+  {emoji:'?뵕',name:'Dr. Skill-Bridge',role:'?ㅽ궗?곌껐 諛뺤궗',color:drColors[4],q:'?꾨＼?꾪듃瑜??대뼸寃?SKILL.md濡?留뚮뱶?붽??',
+   summary:['醫뗭? ?꾨＼?꾪듃 = 醫뗭? SKILL.md 蹂몃Ц?대떎','?꾨＼?꾪듃瑜?SKILL.md濡?蹂?섑븯硫??먮룞?붽? ?쒕떎','?ㅽ궗? "諛섎났?섎뒗 醫뗭? ?꾨＼?꾪듃"瑜???ν븯??寃껋씠??],
+   miscon:['?ㅽ궗? 媛쒕컻?먮쭔 留뚮뱺?????꾨＼?꾪듃留????곕㈃ ?꾧뎄??留뚮뱺??,'?ㅽ궗? 蹂듭옟?섎떎 ??醫뗭? ?꾨＼?꾪듃瑜??щ㎎??留욊쾶 ??린硫??쒕떎','??踰?留뚮뱾硫??앹씠?????ъ슜 ??媛쒖꽑??諛섎났?섎씪'],
+   actions:['媛????留뚮뱺 ?꾨＼?꾪듃 ?섎굹瑜?SKILL.md濡?蹂?섑빐 蹂댁꽭??,'description???몃━嫄??ㅼ썙?쒕? 3媛??댁긽 ?ｌ쑝?몄슂','?숇즺?먭쾶 ?ㅽ궗??怨듭쑀?섍퀬 ?쇰뱶諛깆쓣 諛쏆쑝?몄슂'],
+   next:'紐⑤뱺 諛뺤궗??媛?대뱶瑜?留덉낀?듬땲?? ?댁쫰濡??먭린?먭????섍굅??蹂듭궗 硫붾え瑜??쒖슜?섏꽭??'}
 ];
 
 const roadmapData = [
-  {title:'1단계: 구조 이해',goal:'프롬프트의 6가지 구성요소를 이해한다',prep:'구조맵 섹션 학습',success:'6가지 요소를 각각 설명할 수 있다',checkpoint:'역할+지시+형식을 포함한 프롬프트를 직접 써볼 수 있는가?'},
-  {title:'2단계: 기법 학습',goal:'7가지 핵심 기법을 구분하고 적용한다',prep:'1단계 완료',success:'CoT, Few-shot, 네거티브 프롬프트를 직접 사용할 수 있다',checkpoint:'기법을 조합한 프롬프트를 쓸 수 있는가?'},
-  {title:'3단계: 전후 비교 체험',goal:'나쁜/좋은 프롬프트 10가지 사례를 비교한다',prep:'2단계 완료',success:'왜 나쁜지, 어떻게 개선하는지 설명할 수 있다',checkpoint:'자신의 과거 프롬프트를 개선할 수 있는가?'},
-  {title:'4단계: 실전 적용',goal:'업무별 템플릿 7가지를 활용한다',prep:'3단계 완료',success:'템플릿을 커스터마이즈해서 실제 업무에 적용했다',checkpoint:'가장 자주 쓰는 프롬프트 3개를 템플릿화했는가?'},
-  {title:'5단계: 스킬 제작',goal:'프롬프트를 SKILL.md로 변환한다',prep:'4단계 완료',success:'최소 1개의 SKILL.md를 작성했다',checkpoint:'description에 트리거 키워드가 포함되어 있는가?'}
+  {title:'1?④퀎: 援ъ“ ?댄빐',goal:'?꾨＼?꾪듃??6媛吏 援ъ꽦?붿냼瑜??댄빐?쒕떎',prep:'援ъ“留??뱀뀡 ?숈뒿',success:'6媛吏 ?붿냼瑜?媛곴컖 ?ㅻ챸?????덈떎',checkpoint:'??븷+吏???뺤떇???ы븿???꾨＼?꾪듃瑜?吏곸젒 ?⑤낵 ???덈뒗媛?'},
+  {title:'2?④퀎: 湲곕쾿 ?숈뒿',goal:'7媛吏 ?듭떖 湲곕쾿??援щ텇?섍퀬 ?곸슜?쒕떎',prep:'1?④퀎 ?꾨즺',success:'CoT, Few-shot, ?ㅺ굅?곕툕 ?꾨＼?꾪듃瑜?吏곸젒 ?ъ슜?????덈떎',checkpoint:'湲곕쾿??議고빀???꾨＼?꾪듃瑜??????덈뒗媛?'},
+  {title:'3?④퀎: ?꾪썑 鍮꾧탳 泥댄뿕',goal:'?섏걶/醫뗭? ?꾨＼?꾪듃 10媛吏 ?щ?瑜?鍮꾧탳?쒕떎',prep:'2?④퀎 ?꾨즺',success:'???섏걶吏, ?대뼸寃?媛쒖꽑?섎뒗吏 ?ㅻ챸?????덈떎',checkpoint:'?먯떊??怨쇨굅 ?꾨＼?꾪듃瑜?媛쒖꽑?????덈뒗媛?'},
+  {title:'4?④퀎: ?ㅼ쟾 ?곸슜',goal:'?낅Т蹂??쒗뵆由?7媛吏瑜??쒖슜?쒕떎',prep:'3?④퀎 ?꾨즺',success:'?쒗뵆由우쓣 而ㅼ뒪?곕쭏?댁쫰?댁꽌 ?ㅼ젣 ?낅Т???곸슜?덈떎',checkpoint:'媛???먯＜ ?곕뒗 ?꾨＼?꾪듃 3媛쒕? ?쒗뵆由욱솕?덈뒗媛?'},
+  {title:'5?④퀎: ?ㅽ궗 ?쒖옉',goal:'?꾨＼?꾪듃瑜?SKILL.md濡?蹂?섑븳??,prep:'4?④퀎 ?꾨즺',success:'理쒖냼 1媛쒖쓽 SKILL.md瑜??묒꽦?덈떎',checkpoint:'description???몃━嫄??ㅼ썙?쒓? ?ы븿?섏뼱 ?덈뒗媛?'}
 ];
 
 const templateData = [
-  {cat:'보고서',title:'보고서 작성 프롬프트',code:'당신은 [분야] 전문 컨설턴트입니다.\n\n# 요청\n아래 데이터를 기반으로 [보고서 유형] 보고서를 작성해 주세요.\n\n# 구조\n1. Executive Summary (3문장 이내)\n2. 현황 분석 (데이터 기반, 표 포함)\n3. 핵심 이슈 3가지\n4. 권고안 (우선순위별)\n5. 다음 단계\n\n# 제약\n- 전체 [N]자 이내\n- 전문 용어 최소화\n- 추측 금지, 데이터 기반만\n\n# 데이터\n[여기에 데이터 붙여넣기]'},
-  {cat:'이메일',title:'비즈니스 이메일 프롬프트',code:'당신은 비즈니스 커뮤니케이션 전문가입니다.\n\n# 상황\n- 발신자: [내 직함/이름]\n- 수신자: [상대방 직함/이름]\n- 목적: [요청/안내/사과/제안]\n- 배경: [상황 설명]\n\n# 톤: [정중/캐주얼/공식적]\n\n# 구조\n1. 인사 + 목적 (1문장)\n2. 본문 (핵심 내용)\n3. 요청/다음 단계\n4. 마무리\n\n# 제약\n- [N]자 이내\n- [금지 표현]'},
-  {cat:'코드리뷰',title:'코드 리뷰 프롬프트',code:'당신은 [언어/프레임워크] 시니어 개발자입니다.\n\n# 리뷰 관점\n1. 🔒 보안 취약점\n2. ⚡ 성능 병목\n3. 📖 가독성/유지보수성\n4. 🧪 테스트 커버리지\n\n# 출력 형식\n| 관점 | 위치 | 문제점 | 심각도 | 개선안 |\n\n# 제약\n- 코드 직접 수정 금지, 설명만\n- 칭찬할 부분도 1개 이상 포함\n\n# 코드\n```\n[여기에 코드]\n```'},
-  {cat:'회의록',title:'회의록 요약 프롬프트',code:'당신은 프로젝트 매니저입니다.\n\n# 출력 형식\n## 회의 개요\n- 일시: / 참석자: / 안건:\n\n## 핵심 논의\n1. [주제] — [합의/미합의]\n\n## 결정 사항\n- [결정] — 담당: [이름], 기한: [날짜]\n\n## 액션 아이템\n- [ ] [할 일] — 담당: [이름], 기한: [날짜]\n\n# 제약\n- 결정과 액션 중심\n- 모호한 표현 구체화\n\n# 녹취록\n[여기에 붙여넣기]'},
-  {cat:'데이터분석',title:'데이터 분석 프롬프트',code:'당신은 데이터 분석가입니다.\n\n# 분석 요청\n1. 기술 통계 (평균, 중앙값, 표준편차)\n2. [특정 분석 항목]\n3. 이상치 탐지 (기준: [기준])\n4. 트렌드/패턴 도출\n\n# 출력: 각 항목별 마크다운 표\n마지막에 "핵심 인사이트 3줄 요약"\n\n# 제약\n- 추측 금지, 데이터 기반 사실만\n- 상관관계 ≠ 인과관계 명시\n\n# 데이터\n[여기에 붙여넣기]'},
-  {cat:'브레인스토밍',title:'아이디어 발상 프롬프트',code:'당신은 [분야] 이노베이션 퍼실리테이터입니다.\n\n# 주제\n[아이디어가 필요한 주제/문제]\n\n# 방법론\n[SCAMPER / 6 Thinking Hats / HMW 중 택 1]\n\n# 출력 형식\n| # | 기법 | 아이디어 | 설명 | 난이도 |\n\n# 제약\n- [N]개 이상\n- 기존과 차별화\n- 각 아이디어에 대상 사용자 명시'},
-  {cat:'번역/교정',title:'번역 및 교정 프롬프트',code:'당신은 [출발어]-[도착어] 전문 번역가입니다.\n전문 분야: [분야]\n\n# 가이드라인\n- 톤: [공식/비공식/기술적]\n- 문화적 표현: 의역 허용 (원문 병기)\n- 고유명사: [처리 방식]\n\n# 출력\n1. 번역문\n2. 번역 노트 (의역 부분 설명)\n3. 자연스러움 자체 평가 (1~5)\n\n# 원문\n[여기에 붙여넣기]'}
+  {cat:'蹂닿퀬??,title:'蹂닿퀬???묒꽦 ?꾨＼?꾪듃',code:'?뱀떊? [遺꾩빞] ?꾨Ц 而⑥꽕?댄듃?낅땲??\n\n# ?붿껌\n?꾨옒 ?곗씠?곕? 湲곕컲?쇰줈 [蹂닿퀬???좏삎] 蹂닿퀬?쒕? ?묒꽦??二쇱꽭??\n\n# 援ъ“\n1. Executive Summary (3臾몄옣 ?대궡)\n2. ?꾪솴 遺꾩꽍 (?곗씠??湲곕컲, ???ы븿)\n3. ?듭떖 ?댁뒋 3媛吏\n4. 沅뚭퀬??(?곗꽑?쒖쐞蹂?\n5. ?ㅼ쓬 ?④퀎\n\n# ?쒖빟\n- ?꾩껜 [N]???대궡\n- ?꾨Ц ?⑹뼱 理쒖냼??n- 異붿륫 湲덉?, ?곗씠??湲곕컲留?n\n# ?곗씠??n[?ш린???곗씠??遺숈뿬?ｊ린]'},
+  {cat:'?대찓??,title:'鍮꾩쫰?덉뒪 ?대찓???꾨＼?꾪듃',code:'?뱀떊? 鍮꾩쫰?덉뒪 而ㅻ??덉??댁뀡 ?꾨Ц媛?낅땲??\n\n# ?곹솴\n- 諛쒖떊?? [??吏곹븿/?대쫫]\n- ?섏떊?? [?곷?諛?吏곹븿/?대쫫]\n- 紐⑹쟻: [?붿껌/?덈궡/?ш낵/?쒖븞]\n- 諛곌꼍: [?곹솴 ?ㅻ챸]\n\n# ?? [?뺤쨷/罹먯＜??怨듭떇??\n\n# 援ъ“\n1. ?몄궗 + 紐⑹쟻 (1臾몄옣)\n2. 蹂몃Ц (?듭떖 ?댁슜)\n3. ?붿껌/?ㅼ쓬 ?④퀎\n4. 留덈Т由?n\n# ?쒖빟\n- [N]???대궡\n- [湲덉? ?쒗쁽]'},
+  {cat:'肄붾뱶由щ럭',title:'肄붾뱶 由щ럭 ?꾨＼?꾪듃',code:'?뱀떊? [?몄뼱/?꾨젅?꾩썙?? ?쒕땲??媛쒕컻?먯엯?덈떎.\n\n# 由щ럭 愿??n1. ?뵏 蹂댁븞 痍⑥빟??n2. ???깅뒫 蹂묐ぉ\n3. ?뱰 媛?낆꽦/?좎?蹂댁닔??n4. ?㎦ ?뚯뒪??而ㅻ쾭由ъ?\n\n# 異쒕젰 ?뺤떇\n| 愿??| ?꾩튂 | 臾몄젣??| ?ш컖??| 媛쒖꽑??|\n\n# ?쒖빟\n- 肄붾뱶 吏곸젒 ?섏젙 湲덉?, ?ㅻ챸留?n- 移?갔??遺遺꾨룄 1媛??댁긽 ?ы븿\n\n# 肄붾뱶\n```\n[?ш린??肄붾뱶]\n```'},
+  {cat:'?뚯쓽濡?,title:'?뚯쓽濡??붿빟 ?꾨＼?꾪듃',code:'?뱀떊? ?꾨줈?앺듃 留ㅻ땲??낅땲??\n\n# 異쒕젰 ?뺤떇\n## ?뚯쓽 媛쒖슂\n- ?쇱떆: / 李몄꽍?? / ?덇굔:\n\n## ?듭떖 ?쇱쓽\n1. [二쇱젣] ??[?⑹쓽/誘명빀??\n\n## 寃곗젙 ?ы빆\n- [寃곗젙] ???대떦: [?대쫫], 湲고븳: [?좎쭨]\n\n## ?≪뀡 ?꾩씠??n- [ ] [???? ???대떦: [?대쫫], 湲고븳: [?좎쭨]\n\n# ?쒖빟\n- 寃곗젙怨??≪뀡 以묒떖\n- 紐⑦샇???쒗쁽 援ъ껜??n\n# ?뱀랬濡?n[?ш린??遺숈뿬?ｊ린]'},
+  {cat:'?곗씠?곕텇??,title:'?곗씠??遺꾩꽍 ?꾨＼?꾪듃',code:'?뱀떊? ?곗씠??遺꾩꽍媛?낅땲??\n\n# 遺꾩꽍 ?붿껌\n1. 湲곗닠 ?듦퀎 (?됯퇏, 以묒븰媛? ?쒖??몄감)\n2. [?뱀젙 遺꾩꽍 ??ぉ]\n3. ?댁긽移??먯? (湲곗?: [湲곗?])\n4. ?몃젋???⑦꽩 ?꾩텧\n\n# 異쒕젰: 媛???ぉ蹂?留덊겕?ㅼ슫 ??n留덉?留됱뿉 "?듭떖 ?몄궗?댄듃 3以??붿빟"\n\n# ?쒖빟\n- 異붿륫 湲덉?, ?곗씠??湲곕컲 ?ъ떎留?n- ?곴?愿怨????멸낵愿怨?紐낆떆\n\n# ?곗씠??n[?ш린??遺숈뿬?ｊ린]'},
+  {cat:'釉뚮젅?몄뒪?좊컢',title:'?꾩씠?붿뼱 諛쒖긽 ?꾨＼?꾪듃',code:'?뱀떊? [遺꾩빞] ?대끂踰좎씠???쇱떎由ы뀒?댄꽣?낅땲??\n\n# 二쇱젣\n[?꾩씠?붿뼱媛 ?꾩슂??二쇱젣/臾몄젣]\n\n# 諛⑸쾿濡?n[SCAMPER / 6 Thinking Hats / HMW 以???1]\n\n# 異쒕젰 ?뺤떇\n| # | 湲곕쾿 | ?꾩씠?붿뼱 | ?ㅻ챸 | ?쒖씠??|\n\n# ?쒖빟\n- [N]媛??댁긽\n- 湲곗〈怨?李⑤퀎??n- 媛??꾩씠?붿뼱??????ъ슜??紐낆떆'},
+  {cat:'踰덉뿭/援먯젙',title:'踰덉뿭 諛?援먯젙 ?꾨＼?꾪듃',code:'?뱀떊? [異쒕컻??-[?꾩갑?? ?꾨Ц 踰덉뿭媛?낅땲??\n?꾨Ц 遺꾩빞: [遺꾩빞]\n\n# 媛?대뱶?쇱씤\n- ?? [怨듭떇/鍮꾧났??湲곗닠??\n- 臾명솕???쒗쁽: ?섏뿭 ?덉슜 (?먮Ц 蹂묎린)\n- 怨좎쑀紐낆궗: [泥섎━ 諛⑹떇]\n\n# 異쒕젰\n1. 踰덉뿭臾?n2. 踰덉뿭 ?명듃 (?섏뿭 遺遺??ㅻ챸)\n3. ?먯뿰?ㅻ윭? ?먯껜 ?됯? (1~5)\n\n# ?먮Ц\n[?ш린??遺숈뿬?ｊ린]'}
 ];
 
 const skillData = [
-  {title:'보고서 프롬프트 → SKILL.md',prompt:'당신은 경영 컨설턴트입니다. 아래 데이터를 기반으로 보고서를 작성해 주세요.\n구조: Executive Summary → 현황 분석 → 핵심 이슈 → 권고안\n제약: 1000자 이내, 전문 용어 최소화, 데이터 기반만',skill:'---\nname: business-report\ndescription: |\n  비즈니스 보고서를 작성할 때 사용합니다.\n  "보고서", "리포트", "분석 보고서" 등의 키워드로 트리거됩니다.\n---\n\n당신은 경영 컨설턴트입니다.\n\n# 보고서 구조\n1. Executive Summary (3문장 이내)\n2. 현황 분석 (데이터 기반, 표 포함)\n3. 핵심 이슈 3가지\n4. 권고안 (우선순위별)\n\n# 제약\n- 1000자 이내\n- 전문 용어 최소화\n- 추측 금지'},
-  {title:'코드 리뷰 프롬프트 → SKILL.md',prompt:'당신은 시니어 개발자입니다. 이 코드를 보안/성능/가독성 관점에서 리뷰해 주세요.\n출력: 관점별 표\n제약: 코드 수정 금지, 설명만',skill:'---\nname: code-review\ndescription: |\n  코드 리뷰를 요청할 때 사용합니다.\n  "코드 리뷰", "코드 검토", "리뷰해줘" 등으로 트리거됩니다.\n---\n\n당신은 시니어 소프트웨어 엔지니어입니다.\n\n# 리뷰 관점\n1. 🔒 보안 취약점\n2. ⚡ 성능 병목\n3. 📖 가독성/유지보수성\n\n# 출력 형식\n| 관점 | 위치 | 문제점 | 심각도 | 개선안 |\n\n# 제약\n- 코드 직접 수정 금지\n- 칭찬 1개 이상 포함'},
-  {title:'이메일 작성 프롬프트 → SKILL.md',prompt:'당신은 커뮤니케이션 전문가입니다. 비즈니스 이메일을 작성해 주세요.\n구조: 인사→본문→요청→마무리\n제약: 200자 이내, 과도한 사과 금지',skill:'---\nname: business-email\ndescription: |\n  비즈니스 이메일을 작성할 때 사용합니다.\n  "이메일", "메일 초안", "메일 작성" 등으로 트리거됩니다.\n---\n\n당신은 비즈니스 커뮤니케이션 전문가입니다.\n\n# 이메일 구조\n1. 인사 + 목적 (1문장)\n2. 본문 (핵심 내용)\n3. 요청/다음 단계\n4. 마무리\n\n# 제약\n- 200자 이내\n- 과도한 사과 금지\n- 모호한 표현 금지'}
+  {title:'蹂닿퀬???꾨＼?꾪듃 ??SKILL.md',prompt:'?뱀떊? 寃쎌쁺 而⑥꽕?댄듃?낅땲?? ?꾨옒 ?곗씠?곕? 湲곕컲?쇰줈 蹂닿퀬?쒕? ?묒꽦??二쇱꽭??\n援ъ“: Executive Summary ???꾪솴 遺꾩꽍 ???듭떖 ?댁뒋 ??沅뚭퀬??n?쒖빟: 1000???대궡, ?꾨Ц ?⑹뼱 理쒖냼?? ?곗씠??湲곕컲留?,skill:'---\nname: business-report\ndescription: |\n  鍮꾩쫰?덉뒪 蹂닿퀬?쒕? ?묒꽦?????ъ슜?⑸땲??\n  "蹂닿퀬??, "由ы룷??, "遺꾩꽍 蹂닿퀬?? ?깆쓽 ?ㅼ썙?쒕줈 ?몃━嫄곕맗?덈떎.\n---\n\n?뱀떊? 寃쎌쁺 而⑥꽕?댄듃?낅땲??\n\n# 蹂닿퀬??援ъ“\n1. Executive Summary (3臾몄옣 ?대궡)\n2. ?꾪솴 遺꾩꽍 (?곗씠??湲곕컲, ???ы븿)\n3. ?듭떖 ?댁뒋 3媛吏\n4. 沅뚭퀬??(?곗꽑?쒖쐞蹂?\n\n# ?쒖빟\n- 1000???대궡\n- ?꾨Ц ?⑹뼱 理쒖냼??n- 異붿륫 湲덉?'},
+  {title:'肄붾뱶 由щ럭 ?꾨＼?꾪듃 ??SKILL.md',prompt:'?뱀떊? ?쒕땲??媛쒕컻?먯엯?덈떎. ??肄붾뱶瑜?蹂댁븞/?깅뒫/媛?낆꽦 愿?먯뿉??由щ럭??二쇱꽭??\n異쒕젰: 愿?먮퀎 ??n?쒖빟: 肄붾뱶 ?섏젙 湲덉?, ?ㅻ챸留?,skill:'---\nname: code-review\ndescription: |\n  肄붾뱶 由щ럭瑜??붿껌?????ъ슜?⑸땲??\n  "肄붾뱶 由щ럭", "肄붾뱶 寃??, "由щ럭?댁쨾" ?깆쑝濡??몃━嫄곕맗?덈떎.\n---\n\n?뱀떊? ?쒕땲???뚰봽?몄썾???붿??덉뼱?낅땲??\n\n# 由щ럭 愿??n1. ?뵏 蹂댁븞 痍⑥빟??n2. ???깅뒫 蹂묐ぉ\n3. ?뱰 媛?낆꽦/?좎?蹂댁닔??n\n# 異쒕젰 ?뺤떇\n| 愿??| ?꾩튂 | 臾몄젣??| ?ш컖??| 媛쒖꽑??|\n\n# ?쒖빟\n- 肄붾뱶 吏곸젒 ?섏젙 湲덉?\n- 移?갔 1媛??댁긽 ?ы븿'},
+  {title:'?대찓???묒꽦 ?꾨＼?꾪듃 ??SKILL.md',prompt:'?뱀떊? 而ㅻ??덉??댁뀡 ?꾨Ц媛?낅땲?? 鍮꾩쫰?덉뒪 ?대찓?쇱쓣 ?묒꽦??二쇱꽭??\n援ъ“: ?몄궗?믩낯臾멤넂?붿껌?믩쭏臾대━\n?쒖빟: 200???대궡, 怨쇰룄???ш낵 湲덉?',skill:'---\nname: business-email\ndescription: |\n  鍮꾩쫰?덉뒪 ?대찓?쇱쓣 ?묒꽦?????ъ슜?⑸땲??\n  "?대찓??, "硫붿씪 珥덉븞", "硫붿씪 ?묒꽦" ?깆쑝濡??몃━嫄곕맗?덈떎.\n---\n\n?뱀떊? 鍮꾩쫰?덉뒪 而ㅻ??덉??댁뀡 ?꾨Ц媛?낅땲??\n\n# ?대찓??援ъ“\n1. ?몄궗 + 紐⑹쟻 (1臾몄옣)\n2. 蹂몃Ц (?듭떖 ?댁슜)\n3. ?붿껌/?ㅼ쓬 ?④퀎\n4. 留덈Т由?n\n# ?쒖빟\n- 200???대궡\n- 怨쇰룄???ш낵 湲덉?\n- 紐⑦샇???쒗쁽 湲덉?'}
 ];
 
 const checklistData = [
-  '역할(Role)이 명시되어 있는가?',
-  '맥락(Context)이 충분한가? (누가, 왜, 어떤 상황)',
-  '지시(Instruction)가 구체적인가? (모호한 동사 없는가)',
-  '출력 형식(Format)이 지정되어 있는가?',
-  '제약 조건(Constraints)이 3개 이상 있는가?',
-  '예시(Examples)가 포함되어 있는가?',
-  '"~하지 마세요" 네거티브 조건이 있는가?',
-  '출력 길이가 제한되어 있는가?',
-  '한 번에 하나의 작업만 요청하고 있는가?',
-  '대상 독자/사용자가 명시되어 있는가?',
-  '성공 기준이 명확한가?',
-  '재사용 가능한 템플릿 형태인가?'
+  '??븷(Role)??紐낆떆?섏뼱 ?덈뒗媛?',
+  '留λ씫(Context)??異⑸텇?쒓?? (?꾧?, ?? ?대뼡 ?곹솴)',
+  '吏??Instruction)媛 援ъ껜?곸씤媛? (紐⑦샇???숈궗 ?녿뒗媛)',
+  '異쒕젰 ?뺤떇(Format)??吏?뺣릺???덈뒗媛?',
+  '?쒖빟 議곌굔(Constraints)??3媛??댁긽 ?덈뒗媛?',
+  '?덉떆(Examples)媛 ?ы븿?섏뼱 ?덈뒗媛?',
+  '"~?섏? 留덉꽭?? ?ㅺ굅?곕툕 議곌굔???덈뒗媛?',
+  '異쒕젰 湲몄씠媛 ?쒗븳?섏뼱 ?덈뒗媛?',
+  '??踰덉뿉 ?섎굹???묒뾽留??붿껌?섍퀬 ?덈뒗媛?',
+  '????낆옄/?ъ슜?먭? 紐낆떆?섏뼱 ?덈뒗媛?',
+  '?깃났 湲곗???紐낇솗?쒓??',
+  '?ъ궗??媛?ν븳 ?쒗뵆由??뺥깭?멸??'
 ];
 
 const quizData = [
-  {q:'프롬프트의 6가지 구성요소에 해당하지 않는 것은?',opts:['역할 지정','맥락 제공','감정 표현','출력 형식'],answer:2,explain:'6가지 구성요소는 역할, 맥락, 지시, 형식, 제약, 예시입니다. "감정 표현"은 포함되지 않습니다.'},
-  {q:'"단계별로 생각해 주세요"는 어떤 기법인가?',opts:['Few-shot','Chain of Thought','네거티브 프롬프트','체이닝'],answer:1,explain:'Chain of Thought(CoT)는 AI에게 단계적 사고를 유도하는 기법입니다.'},
-  {q:'Few-shot 예시는 몇 개가 최적인가?',opts:['1개','2~3개','5~10개','많을수록 좋다'],answer:1,explain:'일반적으로 2~3개가 최적입니다.'},
-  {q:'다음 중 "좋은 프롬프트"의 특징이 아닌 것은?',opts:['출력 형식 지정','제약 조건 포함','가능한 짧게 작성','구체적 동사 사용'],answer:2,explain:'짧다고 좋은 것이 아닙니다. 구조적이고 구체적인 것이 중요합니다.'},
-  {q:'"전문 용어를 사용하지 마세요"는 어떤 구성요소?',opts:['역할 지정','맥락 제공','출력 형식','제약 조건'],answer:3,explain:'"~하지 마세요"는 제약 조건에 해당합니다.'},
-  {q:'시스템 프롬프트의 주요 장점은?',opts:['속도 향상','일관성 유지','비용 절감','창의성 증가'],answer:1,explain:'시스템 프롬프트는 전체 대화에 일관된 지침을 적용합니다.'},
-  {q:'프롬프트 체이닝이란?',opts:['같은 프롬프트 반복','여러 프롬프트 동시 전송','복잡한 작업을 여러 단계로 분할','프롬프트 암호화'],answer:2,explain:'체이닝은 작업을 단계별로 나누어 순서대로 처리하는 기법입니다.'},
-  {q:'네거티브 프롬프트의 효과는?',opts:['AI를 부정적으로 만든다','원치 않는 결과를 방지한다','프롬프트를 짧게 만든다','비용을 절약한다'],answer:1,explain:'하지 말아야 할 것을 명시하여 원치 않는 결과를 방지합니다.'},
-  {q:'SKILL.md에서 description 필드의 역할은?',opts:['AI 성격 설정','스킬 트리거 조건 결정','출력 형식 지정','비밀번호 설정'],answer:1,explain:'description은 어떤 키워드/상황에서 스킬이 트리거될지 결정합니다.'},
-  {q:'"보고서 써줘"가 나쁜 프롬프트인 이유는?',opts:['공손하지 않아서','역할, 형식, 제약이 없어서','AI가 못 써서','영어로 써야 해서'],answer:1,explain:'구체적인 정보 없이 모호한 요청을 하면 일반적인 결과가 나옵니다.'},
-  {q:'좋은 프롬프트와 좋은 SKILL.md의 관계는?',opts:['관련 없다','프롬프트를 포맷에 맞게 옮기면 SKILL.md가 된다','SKILL.md가 먼저다','코딩 필수'],answer:1,explain:'좋은 프롬프트를 SKILL.md 형식에 맞게 변환하면 스킬이 됩니다.'},
-  {q:'다음 중 출력 형식 지정의 예시가 아닌 것은?',opts:['JSON으로 출력하세요','마크다운 표로 정리하세요','열심히 해주세요','번호 목록으로 작성하세요'],answer:2,explain:'"열심히 해주세요"는 모호한 요청이지, 형식 지정이 아닙니다.'}
+  {q:'?꾨＼?꾪듃??6媛吏 援ъ꽦?붿냼???대떦?섏? ?딅뒗 寃껋??',opts:['??븷 吏??,'留λ씫 ?쒓났','媛먯젙 ?쒗쁽','異쒕젰 ?뺤떇'],answer:2,explain:'6媛吏 援ъ꽦?붿냼????븷, 留λ씫, 吏?? ?뺤떇, ?쒖빟, ?덉떆?낅땲?? "媛먯젙 ?쒗쁽"? ?ы븿?섏? ?딆뒿?덈떎.'},
+  {q:'"?④퀎蹂꾨줈 ?앷컖??二쇱꽭?????대뼡 湲곕쾿?멸??',opts:['Few-shot','Chain of Thought','?ㅺ굅?곕툕 ?꾨＼?꾪듃','泥댁씠??],answer:1,explain:'Chain of Thought(CoT)??AI?먭쾶 ?④퀎???ш퀬瑜??좊룄?섎뒗 湲곕쾿?낅땲??'},
+  {q:'Few-shot ?덉떆??紐?媛쒓? 理쒖쟻?멸??',opts:['1媛?,'2~3媛?,'5~10媛?,'留롮쓣?섎줉 醫뗫떎'],answer:1,explain:'?쇰컲?곸쑝濡?2~3媛쒓? 理쒖쟻?낅땲??'},
+  {q:'?ㅼ쓬 以?"醫뗭? ?꾨＼?꾪듃"???뱀쭠???꾨땶 寃껋??',opts:['異쒕젰 ?뺤떇 吏??,'?쒖빟 議곌굔 ?ы븿','媛?ν븳 吏㏐쾶 ?묒꽦','援ъ껜???숈궗 ?ъ슜'],answer:2,explain:'吏㏓떎怨?醫뗭? 寃껋씠 ?꾨떃?덈떎. 援ъ“?곸씠怨?援ъ껜?곸씤 寃껋씠 以묒슂?⑸땲??'},
+  {q:'"?꾨Ц ?⑹뼱瑜??ъ슜?섏? 留덉꽭?????대뼡 援ъ꽦?붿냼?',opts:['??븷 吏??,'留λ씫 ?쒓났','異쒕젰 ?뺤떇','?쒖빟 議곌굔'],answer:3,explain:'"~?섏? 留덉꽭?????쒖빟 議곌굔???대떦?⑸땲??'},
+  {q:'?쒖뒪???꾨＼?꾪듃??二쇱슂 ?μ젏??',opts:['?띾룄 ?μ긽','?쇨????좎?','鍮꾩슜 ?덇컧','李쎌쓽??利앷?'],answer:1,explain:'?쒖뒪???꾨＼?꾪듃???꾩껜 ??붿뿉 ?쇨???吏移⑥쓣 ?곸슜?⑸땲??'},
+  {q:'?꾨＼?꾪듃 泥댁씠?앹씠??',opts:['媛숈? ?꾨＼?꾪듃 諛섎났','?щ윭 ?꾨＼?꾪듃 ?숈떆 ?꾩넚','蹂듭옟???묒뾽???щ윭 ?④퀎濡?遺꾪븷','?꾨＼?꾪듃 ?뷀샇??],answer:2,explain:'泥댁씠?앹? ?묒뾽???④퀎蹂꾨줈 ?섎늻???쒖꽌?濡?泥섎━?섎뒗 湲곕쾿?낅땲??'},
+  {q:'?ㅺ굅?곕툕 ?꾨＼?꾪듃???④낵??',opts:['AI瑜?遺?뺤쟻?쇰줈 留뚮뱺??,'?먯튂 ?딅뒗 寃곌낵瑜?諛⑹??쒕떎','?꾨＼?꾪듃瑜?吏㏐쾶 留뚮뱺??,'鍮꾩슜???덉빟?쒕떎'],answer:1,explain:'?섏? 留먯븘????寃껋쓣 紐낆떆?섏뿬 ?먯튂 ?딅뒗 寃곌낵瑜?諛⑹??⑸땲??'},
+  {q:'SKILL.md?먯꽌 description ?꾨뱶????븷??',opts:['AI ?깃꺽 ?ㅼ젙','?ㅽ궗 ?몃━嫄?議곌굔 寃곗젙','異쒕젰 ?뺤떇 吏??,'鍮꾨?踰덊샇 ?ㅼ젙'],answer:1,explain:'description? ?대뼡 ?ㅼ썙???곹솴?먯꽌 ?ㅽ궗???몃━嫄곕맆吏 寃곗젙?⑸땲??'},
+  {q:'"蹂닿퀬???⑥쨾"媛 ?섏걶 ?꾨＼?꾪듃???댁쑀??',opts:['怨듭넀?섏? ?딆븘??,'??븷, ?뺤떇, ?쒖빟???놁뼱??,'AI媛 紐??⑥꽌','?곸뼱濡??⑥빞 ?댁꽌'],answer:1,explain:'援ъ껜?곸씤 ?뺣낫 ?놁씠 紐⑦샇???붿껌???섎㈃ ?쇰컲?곸씤 寃곌낵媛 ?섏샃?덈떎.'},
+  {q:'醫뗭? ?꾨＼?꾪듃? 醫뗭? SKILL.md??愿怨꾨뒗?',opts:['愿???녿떎','?꾨＼?꾪듃瑜??щ㎎??留욊쾶 ??린硫?SKILL.md媛 ?쒕떎','SKILL.md媛 癒쇱???,'肄붾뵫 ?꾩닔'],answer:1,explain:'醫뗭? ?꾨＼?꾪듃瑜?SKILL.md ?뺤떇??留욊쾶 蹂?섑븯硫??ㅽ궗???⑸땲??'},
+  {q:'?ㅼ쓬 以?異쒕젰 ?뺤떇 吏?뺤쓽 ?덉떆媛 ?꾨땶 寃껋??',opts:['JSON?쇰줈 異쒕젰?섏꽭??,'留덊겕?ㅼ슫 ?쒕줈 ?뺣━?섏꽭??,'?댁떖???댁＜?몄슂','踰덊샇 紐⑸줉?쇰줈 ?묒꽦?섏꽭??],answer:2,explain:'"?댁떖???댁＜?몄슂"??紐⑦샇???붿껌?댁?, ?뺤떇 吏?뺤씠 ?꾨떃?덈떎.'}
 ];
 
 const glossaryData = [
-  {term:'프롬프트 (Prompt)',def:'AI에게 보내는 입력 텍스트. 질문, 지시, 맥락 등을 포함.',easy:'AI에게 보내는 "주문서"'},
-  {term:'프롬프트 엔지니어링',def:'AI에서 원하는 결과를 얻기 위해 입력을 체계적으로 설계하는 기술.',easy:'"주문서를 잘 쓰는 기술"'},
-  {term:'시스템 프롬프트',def:'대화 전체에 적용되는 기본 지침. 사용자 메시지와 분리되어 일관성을 유지.',easy:'"AI의 기본 설정값"'},
-  {term:'Few-shot',def:'2~3개의 입출력 예시를 보여주어 AI가 패턴을 학습하게 하는 기법.',easy:'"이런 식으로 해달라"고 예시를 보여주는 것'},
-  {term:'Zero-shot',def:'예시 없이 지시만으로 AI에게 작업을 요청하는 방식.',easy:'"예시 없이 바로 시키는 것"'},
-  {term:'Chain of Thought (CoT)',def:'AI에게 단계별로 사고하도록 유도하여 추론 정확도를 높이는 기법.',easy:'"하나씩 생각해봐"라고 시키는 것'},
-  {term:'프롬프트 체이닝',def:'복잡한 작업을 여러 단계로 분할하고, 각 단계 출력을 다음 입력으로 연결.',easy:'"큰 일을 쪼개서 순서대로 시키는 것"'},
-  {term:'네거티브 프롬프트',def:'"하지 말아야 할 것"을 명시하여 원치 않는 결과를 방지.',easy:'"이건 하지 마"라고 금지 목록을 주는 것'},
-  {term:'역할 부여 (Role Prompting)',def:'AI에게 특정 전문가 역할을 부여하여 해당 관점에서 답하게 하는 기법.',easy:'"넌 의사야"라고 역할을 정해주는 것'},
-  {term:'구조화 출력',def:'JSON, 마크다운, 표 등 특정 형식으로 출력하도록 지정.',easy:'"이 형식으로 대답해"라고 틀을 정해주는 것'},
-  {term:'토큰 (Token)',def:'AI가 텍스트를 처리하는 최소 단위. 한국어는 보통 한 글자가 1~2토큰.',easy:'AI가 읽는 "글자 조각"'},
-  {term:'컨텍스트 윈도우',def:'AI가 한 번에 처리할 수 있는 최대 텍스트 길이.',easy:'AI의 "기억력 한계"'},
-  {term:'환각 (Hallucination)',def:'AI가 사실이 아닌 정보를 만들어내는 현상.',easy:'AI가 "아는 척하며 거짓말"하는 것'},
-  {term:'SKILL.md',def:'Claude의 스킬 정의 파일. name, description, 본문으로 구성.',easy:'AI에게 주는 "업무 매뉴얼 파일"'},
-  {term:'Temperature',def:'AI 출력의 무작위성을 조절하는 파라미터. 낮을수록 일관적.',easy:'AI의 "즉흥성 조절 다이얼"'},
-  {term:'그라운딩 (Grounding)',def:'AI 응답을 실제 데이터/문서에 기반하게 하여 환각을 줄이는 기법.',easy:'"실제 자료에 근거해서 대답해"라고 시키는 것'},
-  {term:'플러그인 (Plugin)',def:'AI의 기능을 확장하는 외부 도구/서비스 연결 모듈.',easy:'AI에게 새로운 "도구"를 달아주는 것'},
-  {term:'에이전트 (Agent)',def:'자율적으로 도구를 사용하고 판단하며 작업을 수행하는 AI 시스템.',easy:'"알아서 판단하고 행동하는 AI"'}
+  {term:'?꾨＼?꾪듃 (Prompt)',def:'AI?먭쾶 蹂대궡???낅젰 ?띿뒪?? 吏덈Ц, 吏?? 留λ씫 ?깆쓣 ?ы븿.',easy:'AI?먭쾶 蹂대궡??"二쇰Ц??'},
+  {term:'?꾨＼?꾪듃 ?붿??덉뼱留?,def:'AI?먯꽌 ?먰븯??寃곌낵瑜??산린 ?꾪빐 ?낅젰??泥닿퀎?곸쑝濡??ㅺ퀎?섎뒗 湲곗닠.',easy:'"二쇰Ц?쒕? ???곕뒗 湲곗닠"'},
+  {term:'?쒖뒪???꾨＼?꾪듃',def:'????꾩껜???곸슜?섎뒗 湲곕낯 吏移? ?ъ슜??硫붿떆吏? 遺꾨━?섏뼱 ?쇨??깆쓣 ?좎?.',easy:'"AI??湲곕낯 ?ㅼ젙媛?'},
+  {term:'Few-shot',def:'2~3媛쒖쓽 ?낆텧???덉떆瑜?蹂댁뿬二쇱뼱 AI媛 ?⑦꽩???숈뒿?섍쾶 ?섎뒗 湲곕쾿.',easy:'"?대윴 ?앹쑝濡??대떖??怨??덉떆瑜?蹂댁뿬二쇰뒗 寃?},
+  {term:'Zero-shot',def:'?덉떆 ?놁씠 吏?쒕쭔?쇰줈 AI?먭쾶 ?묒뾽???붿껌?섎뒗 諛⑹떇.',easy:'"?덉떆 ?놁씠 諛붾줈 ?쒗궎??寃?'},
+  {term:'Chain of Thought (CoT)',def:'AI?먭쾶 ?④퀎蹂꾨줈 ?ш퀬?섎룄濡??좊룄?섏뿬 異붾줎 ?뺥솗?꾨? ?믪씠??湲곕쾿.',easy:'"?섎굹???앷컖?대킄"?쇨퀬 ?쒗궎??寃?},
+  {term:'?꾨＼?꾪듃 泥댁씠??,def:'蹂듭옟???묒뾽???щ윭 ?④퀎濡?遺꾪븷?섍퀬, 媛??④퀎 異쒕젰???ㅼ쓬 ?낅젰?쇰줈 ?곌껐.',easy:'"???쇱쓣 履쇨컻???쒖꽌?濡??쒗궎??寃?'},
+  {term:'?ㅺ굅?곕툕 ?꾨＼?꾪듃',def:'"?섏? 留먯븘????寃???紐낆떆?섏뿬 ?먯튂 ?딅뒗 寃곌낵瑜?諛⑹?.',easy:'"?닿굔 ?섏? 留??쇨퀬 湲덉? 紐⑸줉??二쇰뒗 寃?},
+  {term:'??븷 遺??(Role Prompting)',def:'AI?먭쾶 ?뱀젙 ?꾨Ц媛 ??븷??遺?ы븯???대떦 愿?먯뿉???듯븯寃??섎뒗 湲곕쾿.',easy:'"???섏궗???쇨퀬 ??븷???뺥빐二쇰뒗 寃?},
+  {term:'援ъ“??異쒕젰',def:'JSON, 留덊겕?ㅼ슫, ?????뱀젙 ?뺤떇?쇰줈 異쒕젰?섎룄濡?吏??',easy:'"???뺤떇?쇰줈 ??듯빐"?쇨퀬 ????뺥빐二쇰뒗 寃?},
+  {term:'?좏겙 (Token)',def:'AI媛 ?띿뒪?몃? 泥섎━?섎뒗 理쒖냼 ?⑥쐞. ?쒓뎅?대뒗 蹂댄넻 ??湲?먭? 1~2?좏겙.',easy:'AI媛 ?쎈뒗 "湲??議곌컖"'},
+  {term:'而⑦뀓?ㅽ듃 ?덈룄??,def:'AI媛 ??踰덉뿉 泥섎━?????덈뒗 理쒕? ?띿뒪??湲몄씠.',easy:'AI??"湲곗뼲???쒓퀎"'},
+  {term:'?섍컖 (Hallucination)',def:'AI媛 ?ъ떎???꾨땶 ?뺣낫瑜?留뚮뱾?대궡???꾩긽.',easy:'AI媛 "?꾨뒗 泥숉븯硫?嫄곗쭞留??섎뒗 寃?},
+  {term:'SKILL.md',def:'Claude???ㅽ궗 ?뺤쓽 ?뚯씪. name, description, 蹂몃Ц?쇰줈 援ъ꽦.',easy:'AI?먭쾶 二쇰뒗 "?낅Т 留ㅻ돱???뚯씪"'},
+  {term:'Temperature',def:'AI 異쒕젰??臾댁옉?꾩꽦??議곗젅?섎뒗 ?뚮씪誘명꽣. ??쓣?섎줉 ?쇨???',easy:'AI??"利됲씎??議곗젅 ?ㅼ씠??'},
+  {term:'洹몃씪?대뵫 (Grounding)',def:'AI ?묐떟???ㅼ젣 ?곗씠??臾몄꽌??湲곕컲?섍쾶 ?섏뿬 ?섍컖??以꾩씠??湲곕쾿.',easy:'"?ㅼ젣 ?먮즺??洹쇨굅?댁꽌 ??듯빐"?쇨퀬 ?쒗궎??寃?},
+  {term:'?뚮윭洹몄씤 (Plugin)',def:'AI??湲곕뒫???뺤옣?섎뒗 ?몃? ?꾧뎄/?쒕퉬???곌껐 紐⑤뱢.',easy:'AI?먭쾶 ?덈줈??"?꾧뎄"瑜??ъ븘二쇰뒗 寃?},
+  {term:'?먯씠?꾪듃 (Agent)',def:'?먯쑉?곸쑝濡??꾧뎄瑜??ъ슜?섍퀬 ?먮떒?섎ŉ ?묒뾽???섑뻾?섎뒗 AI ?쒖뒪??',easy:'"?뚯븘???먮떒?섍퀬 ?됰룞?섎뒗 AI"'}
 ];
 
 const memoData = [
-  {title:'📋 핵심 정리',id:'memo1',text:'• 프롬프트는 "부탁"이 아니라 "설계"다\n• 6가지 구성요소: 역할 / 맥락 / 지시 / 형식 / 제약 / 예시\n• 7가지 핵심 기법: 역할부여 / CoT / Few-shot / 형식지정 / 시스템프롬프트 / 체이닝 / 네거티브\n\n핵심 원칙:\n  → 구체적일수록 결과가 좋다\n  → 형식을 지정하면 출력이 안정된다\n  → 하지 말아야 할 것을 명시하면 실수가 줄어든다\n  → 좋은 프롬프트 = 좋은 SKILL.md 본문'},
-  {title:'✅ 프롬프트 체크리스트',id:'memo2',text:'□ 역할이 명시되어 있는가?\n□ 맥락(누가, 왜, 상황)이 충분한가?\n□ 지시가 구체적인가?\n□ 출력 형식이 지정되어 있는가?\n□ 제약 조건이 3개 이상 있는가?\n□ 예시가 포함되어 있는가?\n□ 네거티브 조건이 있는가?\n□ 출력 길이가 제한되어 있는가?\n□ 한 번에 하나의 작업만 요청하는가?\n□ 대상 독자가 명시되어 있는가?'},
-  {title:'📝 범용 프롬프트 템플릿',id:'memo3',text:'당신은 [역할]입니다.\n\n# 상황\n[배경 맥락]\n\n# 요청\n[구체적 지시]\n\n# 출력 형식\n[원하는 형식]\n\n# 제약\n- [제약 1]\n- [제약 2]\n- [제약 3]\n\n# 예시\n입력: [예시 입력]\n출력: [예시 출력]'}
+  {title:'?뱥 ?듭떖 ?뺣━',id:'memo1',text:'???꾨＼?꾪듃??"遺?????꾨땲??"?ㅺ퀎"??n??6媛吏 援ъ꽦?붿냼: ??븷 / 留λ씫 / 吏??/ ?뺤떇 / ?쒖빟 / ?덉떆\n??7媛吏 ?듭떖 湲곕쾿: ??븷遺??/ CoT / Few-shot / ?뺤떇吏??/ ?쒖뒪?쒗봽濡ы봽??/ 泥댁씠??/ ?ㅺ굅?곕툕\n\n?듭떖 ?먯튃:\n  ??援ъ껜?곸씪?섎줉 寃곌낵媛 醫뗫떎\n  ???뺤떇??吏?뺥븯硫?異쒕젰???덉젙?쒕떎\n  ???섏? 留먯븘????寃껋쓣 紐낆떆?섎㈃ ?ㅼ닔媛 以꾩뼱?좊떎\n  ??醫뗭? ?꾨＼?꾪듃 = 醫뗭? SKILL.md 蹂몃Ц'},
+  {title:'???꾨＼?꾪듃 泥댄겕由ъ뒪??,id:'memo2',text:'????븷??紐낆떆?섏뼱 ?덈뒗媛?\n??留λ씫(?꾧?, ?? ?곹솴)??異⑸텇?쒓??\n??吏?쒓? 援ъ껜?곸씤媛?\n??異쒕젰 ?뺤떇??吏?뺣릺???덈뒗媛?\n???쒖빟 議곌굔??3媛??댁긽 ?덈뒗媛?\n???덉떆媛 ?ы븿?섏뼱 ?덈뒗媛?\n???ㅺ굅?곕툕 議곌굔???덈뒗媛?\n??異쒕젰 湲몄씠媛 ?쒗븳?섏뼱 ?덈뒗媛?\n????踰덉뿉 ?섎굹???묒뾽留??붿껌?섎뒗媛?\n??????낆옄媛 紐낆떆?섏뼱 ?덈뒗媛?'},
+  {title:'?뱷 踰붿슜 ?꾨＼?꾪듃 ?쒗뵆由?,id:'memo3',text:'?뱀떊? [??븷]?낅땲??\n\n# ?곹솴\n[諛곌꼍 留λ씫]\n\n# ?붿껌\n[援ъ껜??吏??\n\n# 異쒕젰 ?뺤떇\n[?먰븯???뺤떇]\n\n# ?쒖빟\n- [?쒖빟 1]\n- [?쒖빟 2]\n- [?쒖빟 3]\n\n# ?덉떆\n?낅젰: [?덉떆 ?낅젰]\n異쒕젰: [?덉떆 異쒕젰]'}
 ];
 
 // ============ STATE ============
@@ -527,7 +527,7 @@ function selectStruct(idx) {
   document.querySelectorAll('#structGrid .concept-card').forEach(c=>c.classList.remove('selected'));
   document.querySelectorAll('#structGrid .concept-card')[idx].classList.add('selected');
   const s = structData[idx];
-  document.getElementById('structDetail').innerHTML = `<h3>${s.title}</h3><p>${s.desc}</p><p style="margin-top:10px;color:var(--accent6);font-size:0.85rem;">${s.example}</p><p style="margin-top:8px;color:var(--accent2);font-size:0.85rem;">💡 ${s.tip}</p>`;
+  document.getElementById('structDetail').innerHTML = `<h3>${s.title}</h3><p>${s.desc}</p><p style="margin-top:10px;color:var(--accent6);font-size:0.85rem;">${s.example}</p><p style="margin-top:8px;color:var(--accent2);font-size:0.85rem;">?뮕 ${s.tip}</p>`;
 }
 
 // ============ TECHNIQUE TABS ============
@@ -543,10 +543,10 @@ function switchTech(idx) {
       <h3 style="color:var(--accent2);margin-bottom:8px;">${t.name}</h3>
       <p style="color:var(--text2);font-size:0.9rem;margin-bottom:16px;">${t.desc}</p>
       <div class="compare-wrap">
-        <div class="compare-side bad"><span class="compare-label off">❌ 나쁜 예</span><pre>${esc(t.bad)}</pre></div>
-        <div class="compare-side good"><span class="compare-label on">✅ 좋은 예</span><pre>${esc(t.good)}</pre></div>
+        <div class="compare-side bad"><span class="compare-label off">???섏걶 ??/span><pre>${esc(t.bad)}</pre></div>
+        <div class="compare-side good"><span class="compare-label on">??醫뗭? ??/span><pre>${esc(t.good)}</pre></div>
       </div>
-      <div style="margin-top:12px;padding:12px;background:rgba(63,185,80,0.06);border-radius:var(--radius-sm);border-left:3px solid var(--accent2);font-size:0.85rem;color:var(--text2);">💡 ${t.tip}</div>
+      <div style="margin-top:12px;padding:12px;background:rgba(63,185,80,0.06);border-radius:var(--radius-sm);border-left:3px solid var(--accent2);font-size:0.85rem;color:var(--text2);">?뮕 ${t.tip}</div>
     </div>`;
 }
 
@@ -560,10 +560,10 @@ function switchCompare(idx) {
   const c = compareData[idx];
   document.getElementById('compareContent').innerHTML = `
     <div class="compare-wrap">
-      <div class="compare-side bad"><span class="compare-label off">❌ 나쁜 프롬프트</span><pre>${esc(c.bad)}</pre></div>
-      <div class="compare-side good"><span class="compare-label on">✅ 좋은 프롬프트</span><pre>${esc(c.good)}</pre></div>
+      <div class="compare-side bad"><span class="compare-label off">???섏걶 ?꾨＼?꾪듃</span><pre>${esc(c.bad)}</pre></div>
+      <div class="compare-side good"><span class="compare-label on">??醫뗭? ?꾨＼?꾪듃</span><pre>${esc(c.good)}</pre></div>
     </div>
-    <div class="compare-explain"><strong>💡 왜 다른가?</strong> ${c.explain}</div>`;
+    <div class="compare-explain"><strong>?뮕 ???ㅻⅨ媛?</strong> ${c.explain}</div>`;
 }
 
 // ============ DOCTORS ============
@@ -575,12 +575,12 @@ function selectDr(idx) {
   document.querySelectorAll('.dr-card').forEach((c,i)=>{c.classList.toggle('selected',i===idx);c.style.borderColor=i===idx?drColors[i]:'var(--border)';});
   const d=drData[idx];
   document.getElementById('drPanel').innerHTML = `
-    <h3 style="color:${d.color}">${d.emoji} ${d.name} — ${d.role}</h3>
-    <h4>❓ 해결하는 질문</h4><p style="font-size:0.9rem;color:var(--text2);margin-bottom:12px;">${d.q}</p>
-    <h4>📌 핵심 요약</h4><ul class="dr-list">${d.summary.map(s=>'<li>'+s+'</li>').join('')}</ul>
-    <h4>⚠️ 흔한 오해</h4><ul class="dr-list">${d.miscon.map(s=>'<li>'+s+'</li>').join('')}</ul>
-    <h4>✅ 바로 해볼 행동</h4><ul class="dr-list">${d.actions.map(s=>'<li>'+s+'</li>').join('')}</ul>
-    <div class="dr-next">➡️ ${d.next}</div>`;
+    <h3 style="color:${d.color}">${d.emoji} ${d.name} ??${d.role}</h3>
+    <h4>???닿껐?섎뒗 吏덈Ц</h4><p style="font-size:0.9rem;color:var(--text2);margin-bottom:12px;">${d.q}</p>
+    <h4>?뱦 ?듭떖 ?붿빟</h4><ul class="dr-list">${d.summary.map(s=>'<li>'+s+'</li>').join('')}</ul>
+    <h4>?좑툘 ?뷀븳 ?ㅽ빐</h4><ul class="dr-list">${d.miscon.map(s=>'<li>'+s+'</li>').join('')}</ul>
+    <h4>??諛붾줈 ?대낵 ?됰룞</h4><ul class="dr-list">${d.actions.map(s=>'<li>'+s+'</li>').join('')}</ul>
+    <div class="dr-next">?∽툘 ${d.next}</div>`;
 }
 
 // ============ ROADMAP ============
@@ -590,15 +590,15 @@ function buildRoadmap() {
       <div class="road-dot"></div>
       <h4>${r.title}</h4>
       <div class="acc" style="margin:8px 0;">
-        <div class="acc-head" onclick="toggleAcc(this)" style="font-size:0.83rem;padding:8px 12px;">상세 보기 <span>▼</span></div>
+        <div class="acc-head" onclick="toggleAcc(this)" style="font-size:0.83rem;padding:8px 12px;">?곸꽭 蹂닿린 <span>??/span></div>
         <div class="acc-body">
-          <p><strong>🎯 목표:</strong> ${r.goal}</p>
-          <p><strong>📦 준비물:</strong> ${r.prep}</p>
-          <p><strong>✅ 성공 기준:</strong> ${r.success}</p>
-          <p><strong>🔍 체크포인트:</strong> ${r.checkpoint}</p>
+          <p><strong>?렞 紐⑺몴:</strong> ${r.goal}</p>
+          <p><strong>?벀 以鍮꾨Ъ:</strong> ${r.prep}</p>
+          <p><strong>???깃났 湲곗?:</strong> ${r.success}</p>
+          <p><strong>?뵇 泥댄겕?ъ씤??</strong> ${r.checkpoint}</p>
         </div>
       </div>
-      <div class="road-check"><label><input type="checkbox" ${completedChecks['road'+i]?'checked':''} onchange="toggleRoad(${i},this.checked)"> 이 단계 완료</label></div>
+      <div class="road-check"><label><input type="checkbox" ${completedChecks['road'+i]?'checked':''} onchange="toggleRoad(${i},this.checked)"> ???④퀎 ?꾨즺</label></div>
     </div>`).join('');
 }
 function toggleRoad(i,v) {
@@ -616,7 +616,7 @@ function buildTemplates() {
     <div class="template-card" id="tpl${i}">
       <h4 onclick="toggleTemplate(${i})">${t.title} <span>${t.cat}</span></h4>
       <div class="template-body" id="tplBody${i}">
-        <div class="code-block" id="tplCode${i}">${esc(t.code)}<button class="copy-btn" onclick="copyMemo(this,'tplCode${i}')">복사</button></div>
+        <div class="code-block" id="tplCode${i}">${esc(t.code)}<button class="copy-btn" onclick="copyMemo(this,'tplCode${i}')">蹂듭궗</button></div>
       </div>
     </div>`).join('');
 }
@@ -629,10 +629,10 @@ function buildSkillLab() {
   document.getElementById('skillWrap').innerHTML = skillData.map((s,i) => `
     <div class="skill-example">
       <h4>${s.title}</h4>
-      <p style="font-size:0.82rem;color:var(--text3);margin-bottom:8px;">원본 프롬프트:</p>
-      <div class="code-block" id="skP${i}">${esc(s.prompt)}<button class="copy-btn" onclick="copyMemo(this,'skP${i}')">복사</button></div>
-      <div class="skill-arrow">⬇ SKILL.md로 변환</div>
-      <div class="code-block" id="skS${i}">${esc(s.skill)}<button class="copy-btn" onclick="copyMemo(this,'skS${i}')">복사</button></div>
+      <p style="font-size:0.82rem;color:var(--text3);margin-bottom:8px;">?먮낯 ?꾨＼?꾪듃:</p>
+      <div class="code-block" id="skP${i}">${esc(s.prompt)}<button class="copy-btn" onclick="copyMemo(this,'skP${i}')">蹂듭궗</button></div>
+      <div class="skill-arrow">燧?SKILL.md濡?蹂??/div>
+      <div class="code-block" id="skS${i}">${esc(s.skill)}<button class="copy-btn" onclick="copyMemo(this,'skS${i}')">蹂듭궗</button></div>
     </div>`).join('');
 }
 
@@ -646,7 +646,7 @@ function buildQuiz() {
   document.getElementById('quizWrap').innerHTML = quizData.map((q,i) => `
     <div class="quiz-q" id="qq${i}"><h4>${i+1}. ${q.q}</h4>
     ${q.opts.map((o,j) => `<div class="quiz-opt" onclick="pickQuiz(${i},this,${j})">${String.fromCharCode(9312+j)} ${o}</div>`).join('')}
-    <div class="quiz-explain" id="qe${i}">💡 ${q.explain}</div></div>`).join('');
+    <div class="quiz-explain" id="qe${i}">?뮕 ${q.explain}</div></div>`).join('');
 }
 function pickQuiz(qi,el,val) {
   if(quizAnswers[qi]!==undefined) return;
@@ -667,8 +667,8 @@ function scoreQuiz() {
   quizData.forEach((q,i)=>{if(quizAnswers[i]===q.answer)correct++;});
   const answered=Object.keys(quizAnswers).length;
   const sc=document.getElementById('quizScore');sc.style.display='block';
-  if(answered<total){sc.innerHTML=`아직 ${total-answered}문항이 남았습니다.`;}
-  else{const pct=Math.round(correct/total*100);sc.innerHTML=`🎯 ${total}문항 중 ${correct}개 정답 (${pct}점)<br><span style="font-size:0.9rem;color:var(--text2);">${pct>=80?'훌륭합니다! 프롬프트 엔지니어링 기초를 잘 이해하고 있습니다.':pct>=50?'좋은 시작입니다. 틀린 부분의 해설을 다시 읽어보세요.':'구조 맵과 7기법 섹션을 다시 살펴보세요.'}</span>`;}
+  if(answered<total){sc.innerHTML=`?꾩쭅 ${total-answered}臾명빆???⑥븯?듬땲??`;}
+  else{const pct=Math.round(correct/total*100);sc.innerHTML=`?렞 ${total}臾명빆 以?${correct}媛??뺣떟 (${pct}??<br><span style="font-size:0.9rem;color:var(--text2);">${pct>=80?'?뚮??⑸땲?? ?꾨＼?꾪듃 ?붿??덉뼱留?湲곗큹瑜????댄빐?섍퀬 ?덉뒿?덈떎.':pct>=50?'醫뗭? ?쒖옉?낅땲?? ?由?遺遺꾩쓽 ?댁꽕???ㅼ떆 ?쎌뼱蹂댁꽭??':'援ъ“ 留듦낵 7湲곕쾿 ?뱀뀡???ㅼ떆 ?댄렣蹂댁꽭??'}</span>`;}
 }
 function resetQuiz(){quizAnswers={};document.getElementById('quizScore').style.display='none';buildQuiz();updateProgress();}
 
@@ -680,7 +680,7 @@ function renderGlossary(data) {
   document.getElementById('glossaryList').innerHTML = data.map(g => `
     <div class="glossary-item" data-term="${g.term.toLowerCase()}">
       <div class="glossary-term" onclick="this.nextElementSibling.classList.toggle('open')">${g.term}</div>
-      <div class="glossary-def"><p>${g.def}</p><p class="glossary-easy">쉬운 말: ${g.easy}</p></div>
+      <div class="glossary-def"><p>${g.def}</p><p class="glossary-easy">?ъ슫 留? ${g.easy}</p></div>
     </div>`).join('');
 }
 function filterGlossary(val) {
@@ -695,7 +695,7 @@ function buildMemo() {
   document.getElementById('memoWrap').innerHTML = memoData.map(m => `
     <div class="memo-card">
       <h4>${m.title}</h4>
-      <button class="copy-btn" onclick="copyMemo(this,'${m.id}')">복사</button>
+      <button class="copy-btn" onclick="copyMemo(this,'${m.id}')">蹂듭궗</button>
       <pre id="${m.id}">${m.text}</pre>
     </div>`).join('');
 }
@@ -704,18 +704,18 @@ function buildMemo() {
 function toggleAcc(el) {
   const body=el.nextElementSibling;body.classList.toggle('open');
   const arrow=el.querySelector('span');
-  if(arrow) arrow.textContent=body.classList.contains('open')?'▲':'▼';
+  if(arrow) arrow.textContent=body.classList.contains('open')?'??:'??;
 }
 
 // ============ COPY ============
 function copyMemo(btn,id) {
   const text=document.getElementById(id).textContent;
   navigator.clipboard.writeText(text).then(()=>{
-    btn.textContent='복사됨!';btn.classList.add('copied');
-    setTimeout(()=>{btn.textContent='복사';btn.classList.remove('copied');},1500);
+    btn.textContent='蹂듭궗??';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='蹂듭궗';btn.classList.remove('copied');},1500);
   }).catch(()=>{
     const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);
-    btn.textContent='복사됨!';btn.classList.add('copied');setTimeout(()=>{btn.textContent='복사';btn.classList.remove('copied');},1500);
+    btn.textContent='蹂듭궗??';btn.classList.add('copied');setTimeout(()=>{btn.textContent='蹂듭궗';btn.classList.remove('copied');},1500);
   });
 }
 
@@ -731,7 +731,7 @@ function updateProgress() {
   const pct=total>0?Math.round(done/total*100):0;
   document.getElementById('progressFill').style.width=pct+'%';
   document.getElementById('progressBarTop').style.width=pct+'%';
-  document.getElementById('progressLabel').textContent='학습 진행률 '+pct+'%';
+  document.getElementById('progressLabel').textContent='?숈뒿 吏꾪뻾瑜?'+pct+'%';
   saveState();
 }
 
@@ -757,5 +757,43 @@ function init() {
 }
 init();
 </script>
+<script>
+(function () {
+  const lang = new URLSearchParams(window.location.search).get("lang") || "en";
+  const target = lang === "ko" ? "ko" : "en";
+  function setCookie(value) {
+    document.cookie = `googtrans=/ko/${value};path=/`;
+    document.cookie = `googtrans=/ko/${value};path=/;domain=${location.hostname}`;
+  }
+  if (target === "ko") {
+    setCookie("ko");
+    return;
+  }
+  setCookie("en");
+  const holder = document.createElement("div");
+  holder.id = "google_translate_element";
+  holder.style.display = "none";
+  document.body.appendChild(holder);
+  window.googleTranslateElementInit = function () {
+    new google.translate.TranslateElement({ pageLanguage: "ko", includedLanguages: "en,ko", autoDisplay: false }, "google_translate_element");
+    let tries = 0;
+    const timer = setInterval(() => {
+      const combo = document.querySelector(".goog-te-combo");
+      if (combo) {
+        combo.value = "en";
+        combo.dispatchEvent(new Event("change"));
+        clearInterval(timer);
+      }
+      tries += 1;
+      if (tries > 40) clearInterval(timer);
+    }, 250);
+  };
+  const script = document.createElement("script");
+  script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  script.async = true;
+  document.head.appendChild(script);
+})();
+</script>
 </body>
 </html>
+

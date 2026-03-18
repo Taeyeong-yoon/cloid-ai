@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { ArrowLeft, Maximize2, Minimize2 } from "lucide-react";
@@ -13,13 +13,9 @@ export default function TextbookViewer({ textbook }: { textbook: Textbook }) {
   const [contentLocale, setContentLocale] = useState<"en" | "ko">("en");
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const contentSrc = useMemo(() => {
-    const file =
-      contentLocale === "ko"
-        ? textbook.htmlFileKo || textbook.htmlFile
-        : textbook.htmlFileEn || textbook.htmlFile;
-
-    return file ? `/textbooks/${file}` : "";
-  }, [contentLocale, textbook.htmlFile, textbook.htmlFileEn, textbook.htmlFileKo]);
+    const file = textbook.htmlFileKo || textbook.htmlFile;
+    return file ? `/textbooks/${file}?lang=${contentLocale}` : "";
+  }, [contentLocale, textbook.htmlFile, textbook.htmlFileKo]);
 
   const listLabel = locale === "ko" ? "교재 목록" : "Textbook list";
   const fullscreenLabel = locale === "ko" ? "전체 화면" : "Fullscreen";
