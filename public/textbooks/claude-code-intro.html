@@ -1,34 +1,711 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting Started with Claude Code</title>
-  <link rel="stylesheet" href="/textbooks/common.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code 입문 학습실</title>
+<style>
+:root {
+  --bg: #0e1117;
+  --bg2: #161b22;
+  --bg3: #1c2333;
+  --card: #1e2536;
+  --card-hover: #252d42;
+  --border: #2d3548;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --text3: #6e7681;
+  --accent: #58a6ff;
+  --accent2: #3fb950;
+  --accent3: #d2a8ff;
+  --accent4: #f0883e;
+  --accent5: #ff7b72;
+  --accent6: #79c0ff;
+  --dr1: #58a6ff;
+  --dr2: #3fb950;
+  --dr3: #d2a8ff;
+  --dr4: #f0883e;
+  --dr5: #ff7b72;
+  --success: #3fb950;
+  --warn: #f0883e;
+  --danger: #ff7b72;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+  --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+  --font: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'SF Mono', 'Cascadia Code', 'Consolas', monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:15px;}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;}
+button{font-family:var(--font);cursor:pointer;border:none;outline:none;transition:var(--transition);}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+#progressBarTop{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--dr1),var(--dr3),var(--dr5));z-index:1001;transition:width 0.5s;}
+#topNav{position:fixed;top:3px;left:0;right:0;z-index:1000;background:rgba(14,17,23,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 16px;display:flex;align-items:center;height:52px;gap:4px;overflow-x:auto;}
+#topNav::-webkit-scrollbar{display:none;}
+.nav-btn{padding:6px 14px;border-radius:20px;font-size:0.82rem;color:var(--text2);background:transparent;white-space:nowrap;border:1px solid transparent;}
+.nav-btn:hover{color:var(--text);background:var(--bg3);}
+.nav-btn.active{color:var(--accent);background:rgba(88,166,255,0.1);border-color:rgba(88,166,255,0.3);}
+.nav-logo{font-weight:700;color:var(--accent);font-size:1rem;margin-right:12px;white-space:nowrap;font-family:var(--mono);}
+
+.section{display:none;padding:70px 16px 40px;max-width:960px;margin:0 auto;}
+.section.active{display:block;animation:fadeUp 0.35s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+.hero-title{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px;letter-spacing:-0.5px;}
+.hero-sub{color:var(--text2);font-size:1.05rem;margin-bottom:28px;line-height:1.6;}
+.hero-btns{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;}
+.btn{padding:10px 22px;border-radius:var(--radius-sm);font-size:0.92rem;font-weight:600;transition:var(--transition);}
+.btn-primary{background:var(--accent);color:#fff;}
+.btn-primary:hover{background:#79b8ff;transform:translateY(-1px);}
+.btn-secondary{background:var(--bg3);color:var(--text);border:1px solid var(--border);}
+.btn-secondary:hover{background:var(--card-hover);border-color:var(--accent);}
+.btn-sm{padding:6px 14px;font-size:0.82rem;}
+
+.diag-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:28px;}
+.diag-box h3{font-size:1rem;color:var(--accent4);margin-bottom:12px;}
+.diag-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;color:var(--text2);font-size:0.9rem;}
+.diag-item::before{content:'⚡';flex-shrink:0;}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:var(--transition);}
+.card:hover{border-color:rgba(88,166,255,0.3);box-shadow:var(--shadow-sm);}
+.card-grid{display:grid;gap:14px;}
+.card-grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+.card-grid-3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}
+.card-grid-5{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));}
+
+.sec-h{font-size:1.5rem;font-weight:700;margin-bottom:6px;}
+.sec-sub{color:var(--text2);font-size:0.92rem;margin-bottom:24px;}
+.sec-tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:0.72rem;font-weight:600;margin-bottom:12px;}
+
+.concept-card{cursor:pointer;text-align:center;padding:18px 14px;}
+.concept-card.selected{border-color:var(--accent);box-shadow:0 0 20px rgba(88,166,255,0.15);}
+.concept-icon{font-size:2rem;margin-bottom:8px;display:block;}
+.concept-label{font-weight:700;font-size:0.95rem;}
+.concept-brief{color:var(--text3);font-size:0.78rem;margin-top:4px;}
+.concept-detail{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:16px;min-height:160px;}
+.concept-detail h3{color:var(--accent);margin-bottom:10px;}
+.concept-detail p{color:var(--text2);font-size:0.9rem;margin-bottom:8px;}
+
+.highlight-box{background:linear-gradient(135deg,rgba(88,166,255,0.08),rgba(210,168,255,0.08));border:2px solid var(--accent);border-radius:var(--radius);padding:20px;text-align:center;margin:24px 0;font-size:1.15rem;font-weight:700;color:var(--accent);}
+.warn-box{padding:14px 18px;background:rgba(240,136,62,0.06);border:1px solid rgba(240,136,62,0.25);border-radius:var(--radius-sm);margin:16px 0;font-size:0.88rem;color:var(--accent4);}
+
+.comp-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:0.83rem;}
+.comp-table th{background:var(--bg3);padding:10px;text-align:left;font-weight:600;border-bottom:2px solid var(--border);}
+.comp-table td{padding:10px;border-bottom:1px solid var(--border);color:var(--text2);}
+.comp-table tr:hover td{background:rgba(88,166,255,0.02);}
+.comp-table .hi{color:var(--accent);font-weight:600;}
+
+.tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:18px;}
+.tab-btn{padding:8px 18px;border-radius:var(--radius-sm);font-size:0.85rem;background:var(--bg3);color:var(--text2);font-weight:500;}
+.tab-btn:hover{background:var(--card-hover);color:var(--text);}
+.tab-btn.active{background:rgba(88,166,255,0.12);color:var(--accent);border:1px solid rgba(88,166,255,0.3);}
+
+.compare-wrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:16px 0;}
+@media(max-width:700px){.compare-wrap{grid-template-columns:1fr;}}
+.compare-side{padding:16px;border-radius:var(--radius);border:1px solid var(--border);font-size:0.85rem;color:var(--text2);}
+.compare-side.chat{background:rgba(255,123,114,0.04);border-color:rgba(255,123,114,0.2);}
+.compare-side.cowork{background:rgba(63,185,80,0.04);border-color:rgba(63,185,80,0.2);}
+.compare-side.code{background:rgba(210,168,255,0.04);border-color:rgba(210,168,255,0.2);}
+.compare-label{display:inline-block;padding:2px 8px;border-radius:6px;font-size:0.72rem;font-weight:700;margin-bottom:8px;}
+
+.dr-card{cursor:pointer;padding:16px;text-align:center;border:2px solid var(--border);transition:var(--transition);}
+.dr-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+.dr-card.selected{box-shadow:0 0 24px rgba(88,166,255,0.12);}
+.dr-emoji{font-size:2.4rem;margin-bottom:6px;display:block;}
+.dr-name{font-weight:700;font-size:0.88rem;}
+.dr-role{color:var(--text3);font-size:0.75rem;margin-top:2px;}
+.dr-panel{margin-top:18px;padding:24px;border-radius:var(--radius);border:1px solid var(--border);background:var(--card);}
+.dr-panel h3{margin-bottom:12px;font-size:1.1rem;}
+.dr-panel h4{margin:14px 0 8px;font-size:0.92rem;}
+.dr-list{list-style:none;padding:0;}
+.dr-list li{padding:6px 0;font-size:0.88rem;color:var(--text2);display:flex;gap:8px;align-items:flex-start;}
+.dr-list li::before{content:'→';color:var(--accent);flex-shrink:0;}
+.dr-next{margin-top:16px;padding:12px;background:var(--bg3);border-radius:var(--radius-sm);font-size:0.85rem;color:var(--text2);}
+
+.roadmap{position:relative;padding-left:28px;margin:20px 0;}
+.roadmap::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:2px;background:var(--border);}
+.road-step{position:relative;margin-bottom:20px;padding:18px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);transition:var(--transition);}
+.road-step.completed{border-color:var(--accent2);background:rgba(63,185,80,0.03);}
+.road-dot{position:absolute;left:-24px;top:22px;width:14px;height:14px;border-radius:50%;background:var(--bg3);border:2px solid var(--border);z-index:1;transition:var(--transition);}
+.road-step.completed .road-dot{background:var(--accent2);border-color:var(--accent2);}
+.road-step h4{font-size:1rem;margin-bottom:6px;}
+.road-step p{font-size:0.85rem;color:var(--text2);}
+.road-check{margin-top:10px;}
+.road-check label{display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--text2);cursor:pointer;}
+.road-check input[type=checkbox]{width:16px;height:16px;accent-color:var(--accent2);cursor:pointer;}
+
+.acc{margin:10px 0;}
+.acc-head{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--bg3);border-radius:var(--radius-sm);cursor:pointer;font-size:0.9rem;font-weight:600;transition:var(--transition);}
+.acc-head:hover{background:var(--card-hover);}
+.acc-body{display:none;padding:16px 18px;background:var(--card);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius-sm) var(--radius-sm);}
+.acc-body.open{display:block;animation:fadeUp 0.2s ease;}
+.acc-body p,.acc-body li{font-size:0.88rem;color:var(--text2);}
+.acc-body ul{padding-left:18px;margin:8px 0;}
+.acc-body li{margin:4px 0;}
+
+.scenario{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin:12px 0;}
+.scenario h4{color:var(--accent4);font-size:0.95rem;margin-bottom:8px;}
+.scenario .steps{counter-reset:step;list-style:none;padding:0;}
+.scenario .steps li{counter-increment:step;padding:6px 0;font-size:0.85rem;color:var(--text2);display:flex;gap:8px;}
+.scenario .steps li::before{content:counter(step);background:var(--accent);color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;flex-shrink:0;}
+
+.slash-grid{display:grid;gap:8px;}
+.slash-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:start;}
+@media(max-width:500px){.slash-item{grid-template-columns:1fr;}}
+.slash-cmd{font-family:var(--mono);font-size:0.88rem;color:var(--accent);font-weight:700;}
+.slash-desc{font-size:0.83rem;color:var(--text2);}
+.slash-use{font-size:0.78rem;color:var(--text3);margin-top:4px;}
+
+.code-block{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;font-family:var(--mono);font-size:0.82rem;color:var(--text2);white-space:pre-wrap;line-height:1.7;position:relative;}
+.copy-btn{position:absolute;top:12px;right:12px;padding:5px 12px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;font-size:0.75rem;color:var(--text2);}
+.copy-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.copy-btn.copied{background:var(--accent2);color:#fff;border-color:var(--accent2);}
+
+.vibe-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin:12px 0;}
+.vibe-card h4{font-size:0.92rem;color:var(--accent3);margin-bottom:8px;}
+.vibe-prompt{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px;font-family:var(--mono);font-size:0.82rem;color:var(--text2);margin:8px 0;line-height:1.6;white-space:pre-wrap;}
+.vibe-result{font-size:0.83rem;color:var(--accent2);margin-top:8px;}
+
+.checklist{list-style:none;padding:0;}
+.checklist li{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:0.88rem;color:var(--text2);}
+.checklist li input{width:16px;height:16px;accent-color:var(--accent2);cursor:pointer;}
+
+.quiz-q{padding:18px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin:12px 0;}
+.quiz-q h4{font-size:0.92rem;margin-bottom:12px;}
+.quiz-opt{display:block;padding:8px 14px;margin:4px 0;background:var(--bg3);border-radius:var(--radius-sm);cursor:pointer;font-size:0.85rem;transition:var(--transition);border:1px solid transparent;}
+.quiz-opt:hover{background:var(--card-hover);border-color:var(--border);}
+.quiz-opt.correct{background:rgba(63,185,80,0.12);border-color:var(--accent2);color:var(--accent2);}
+.quiz-opt.wrong{background:rgba(255,123,114,0.08);border-color:var(--accent5);color:var(--accent5);}
+.quiz-opt.disabled{pointer-events:none;opacity:0.7;}
+.quiz-explain{display:none;margin-top:10px;padding:10px;background:var(--bg3);border-radius:var(--radius-sm);font-size:0.83rem;color:var(--text2);}
+.quiz-score{text-align:center;padding:20px;font-size:1.2rem;font-weight:700;color:var(--accent);}
+
+.glossary-search{width:100%;padding:10px 16px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:0.9rem;margin-bottom:16px;}
+.glossary-search::placeholder{color:var(--text3);}
+.glossary-item{padding:12px 0;border-bottom:1px solid var(--border);}
+.glossary-term{font-weight:700;color:var(--accent);font-size:0.92rem;cursor:pointer;}
+.glossary-def{font-size:0.85rem;color:var(--text2);margin-top:4px;display:none;}
+.glossary-def.open{display:block;}
+.glossary-easy{font-size:0.82rem;color:var(--text3);font-style:italic;margin-top:2px;}
+
+.memo-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin:12px 0;position:relative;}
+.memo-card h4{font-size:0.95rem;margin-bottom:10px;color:var(--accent);}
+.memo-card pre{font-family:var(--mono);font-size:0.82rem;color:var(--text2);white-space:pre-wrap;line-height:1.6;}
+
+.progress-summary{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin:16px 0;}
+.progress-bar{flex:1;height:8px;background:var(--bg3);border-radius:4px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:4px;transition:width 0.6s;}
+.progress-text{font-size:0.82rem;color:var(--text2);white-space:nowrap;}
+
+@media(max-width:640px){
+  .card-grid-5{grid-template-columns:repeat(3,1fr);}
+  .compare-wrap{grid-template-columns:1fr;}
+  .hero-title{font-size:1.6rem;}
+  .section{padding:64px 12px 30px;}
+}
+</style>
 </head>
-<body data-book-id="claude-code-intro">
-  <div id="progressBarTop"></div>
-  <nav id="topNav">
-    <span class="nav-logo"><span class="nav-orb"></span><span data-ko="Claude Code 입문" data-en="Getting Started with Claude Code">Getting Started with Claude Code</span></span>
-    <button class="nav-btn active" data-section="hero" data-ko="홈" data-en="Home">Home</button>
-    <button class="nav-btn" data-section="flow" data-ko="흐름" data-en="Flow">Flow</button>
-    <button class="nav-btn" data-section="compare" data-ko="비교" data-en="Compare">Compare</button>
-    <button class="nav-btn" data-section="roadmap" data-ko="로드맵" data-en="Roadmap">Roadmap</button>
-    <button class="nav-btn" data-section="lab" data-ko="실습" data-en="Lab">Lab</button>
-    <button class="nav-btn" data-section="quiz" data-ko="퀴즈" data-en="Quiz">Quiz</button>
-    <button class="nav-btn" data-section="memo" data-ko="메모" data-en="Memo">Memo</button>
-    <span class="nav-spacer"></span>
-    <button class="lang-btn" data-locale="ko">한글</button>
-    <button class="lang-btn active" data-locale="en">English</button>
-  </nav>
-  <div class="section active" id="sec-hero"><div class="hero-grid"><div><div class="hero-title" data-ko="Claude Code 입문" data-en="Getting Started with Claude Code">Getting Started with Claude Code</div><p class="hero-sub" data-ko="Claude Code는 단순 채팅창이 아니라 저장소를 읽고 수정하고 검증까지 연결하는 에이전트형 CLI입니다. 처음 사용할 때 필요한 흐름과 안전한 시작 순서를 정리합니다." data-en="Claude Code is not just a chat surface. It is an agentic CLI that reads, edits, and validates changes in a repository. This textbook covers the safest way to begin.">Claude Code is not just a chat surface. It is an agentic CLI that reads, edits, and validates changes in a repository. This textbook covers the safest way to begin.</p><div class="hero-btns"><button class="btn btn-primary" data-start-section="flow" data-ko="기본 흐름 보기" data-en="See the basic flow">See the basic flow</button><button class="btn btn-secondary" data-start-section="lab" data-ko="첫 실습 열기" data-en="Open the first lab">Open the first lab</button></div></div><div class="hero-panel"><div class="hero-system"><div class="hero-ring"></div><div class="hero-ring-2"></div><div class="hero-ring-3"></div><div class="hero-core"></div></div></div></div></div>
-  <div class="section" id="sec-flow"><div class="sec-tag">Section A</div><h2 class="sec-h" data-ko="기본 흐름" data-en="Core workflow">Core workflow</h2><div class="pipe-diagram"><div class="pipe-node"><strong>Read</strong><span data-ko="저장소 구조를 먼저 이해" data-en="Understand the repo first">Understand the repo first</span></div><div class="pipe-arrow">→</div><div class="pipe-node"><strong>Plan</strong><span data-ko="작업 범위를 명확히 정의" data-en="Define the scope">Define the scope</span></div><div class="pipe-arrow">→</div><div class="pipe-node"><strong>Edit</strong><span data-ko="필요한 파일만 수정" data-en="Edit only the needed files">Edit only the needed files</span></div><div class="pipe-arrow">→</div><div class="pipe-node"><strong>Verify</strong><span data-ko="빌드와 테스트로 확인" data-en="Validate with build and tests">Validate with build and tests</span></div></div></div>
-  <div class="section" id="sec-compare"><div class="sec-tag">Section B</div><h2 class="sec-h" data-ko="일반 채팅 vs Claude Code" data-en="Chat vs Claude Code">Chat vs Claude Code</h2><div class="compare-wrap"><div class="compare-side bad"><h3 data-ko="일반 채팅" data-en="Chat only">Chat only</h3><ul><li data-ko="설명 위주로 끝나기 쉽다" data-en="Often stops at explanation">Often stops at explanation</li><li data-ko="파일 수정과 검증이 분리된다" data-en="File edits and validation are separate">File edits and validation are separate</li></ul></div><div class="compare-side good"><h3 data-ko="Claude Code" data-en="Claude Code">Claude Code</h3><ul><li data-ko="저장소를 읽고 수정까지 연결한다" data-en="Connects reading the repo to editing it">Connects reading the repo to editing it</li><li data-ko="검증 단계까지 이어가기 쉽다" data-en="Makes verification part of the workflow">Makes verification part of the workflow</li></ul></div></div></div>
-  <div class="section" id="sec-roadmap"><div class="sec-tag">Section C</div><h2 class="sec-h" data-ko="로드맵" data-en="Roadmap">Roadmap</h2><div class="roadmap-card"><label class="roadmap-row" data-roadmap="1"><input type="checkbox" /><div><strong data-ko="읽기부터 시작" data-en="Start by reading">Start by reading</strong><p data-ko="처음에는 수정보다 구조 파악을 우선합니다." data-en="Prioritize understanding before editing.">Prioritize understanding before editing.</p></div></label><label class="roadmap-row" data-roadmap="2"><input type="checkbox" /><div><strong data-ko="작은 수정" data-en="Make a small edit">Make a small edit</strong><p data-ko="한 파일, 한 기능처럼 작은 범위로 시작합니다." data-en="Start with one file or one small feature.">Start with one file or one small feature.</p></div></label><label class="roadmap-row" data-roadmap="3"><input type="checkbox" /><div><strong data-ko="검증 연결" data-en="Connect validation">Connect validation</strong><p data-ko="build나 test를 실행해 결과까지 확인합니다." data-en="Run build or tests and inspect the result.">Run build or tests and inspect the result.</p></div></label></div></div>
-  <div class="section" id="sec-lab"><div class="sec-tag">Section D</div><h2 class="sec-h" data-ko="실습" data-en="Lab">Lab</h2><div class="card"><ol><li data-ko="저장소 구조를 요약해 달라고 요청합니다." data-en="Ask for a summary of the repository structure.">Ask for a summary of the repository structure.</li><li data-ko="작은 버그 하나를 찾고 원인을 설명하게 합니다." data-en="Find one small bug and ask for the root cause.">Find one small bug and ask for the root cause.</li><li data-ko="작은 수정 뒤 build를 실행해 결과를 확인합니다." data-en="Apply a small fix and run build to verify it.">Apply a small fix and run build to verify it.</li></ol></div></div>
-  <div class="section" id="sec-quiz" data-quiz><div class="sec-tag">Section E</div><h2 class="sec-h" data-ko="퀴즈" data-en="Quiz">Quiz</h2><div class="quiz-box" data-answer="b"><h3 data-ko="1. 가장 안전한 첫 단계는?" data-en="1. What is the safest first step?">1. What is the safest first step?</h3><label class="quiz-option"><input type="radio" name="cc1" value="a" /> <span data-ko="여러 파일을 바로 수정한다" data-en="Immediately edit many files">Immediately edit many files</span></label><label class="quiz-option"><input type="radio" name="cc1" value="b" /> <span data-ko="저장소 구조를 먼저 읽는다" data-en="Read the repo structure first">Read the repo structure first</span></label><label class="quiz-option"><input type="radio" name="cc1" value="c" /> <span data-ko="테스트를 먼저 지운다" data-en="Delete tests first">Delete tests first</span></label></div><div class="memo-actions"><button class="btn btn-primary" data-quiz-submit data-ko="채점하기" data-en="Check answers">Check answers</button><div class="quiz-result" data-quiz-result></div></div></div>
-  <div class="section" id="sec-memo"><div class="sec-tag">Section F</div><h2 class="sec-h" data-ko="메모" data-en="Memo">Memo</h2><div class="memo-box"><textarea data-memo data-ko-placeholder="Claude Code로 가장 먼저 해보고 싶은 작업을 적어보세요." data-en-placeholder="Write the first task you want to try with Claude Code." placeholder="Write the first task you want to try with Claude Code."></textarea><div class="memo-actions"><button class="btn btn-secondary" data-memo-save data-ko="저장" data-en="Save">Save</button><button class="btn btn-secondary" data-memo-copy data-ko="복사" data-en="Copy">Copy</button><button class="btn btn-secondary" data-memo-reset data-ko="초기화" data-en="Reset">Reset</button></div></div></div>
-  <div class="footer-note" data-ko="CLOID.AI interactive textbook · Claude Code basics" data-en="CLOID.AI interactive textbook · Claude Code basics">CLOID.AI interactive textbook · Claude Code basics</div>
-  <script src="/textbooks/common.js"></script>
+<body>
+<div id="progressBarTop" style="width:0%"></div>
+<nav id="topNav">
+  <span class="nav-logo">$ claude</span>
+  <button class="nav-btn active" onclick="goSec('hero')">홈</button>
+  <button class="nav-btn" onclick="goSec('what')">정체</button>
+  <button class="nav-btn" onclick="goSec('compare')">비교표</button>
+  <button class="nav-btn" onclick="goSec('scenario')">시나리오</button>
+  <button class="nav-btn" onclick="goSec('vibe')">바이브코딩</button>
+  <button class="nav-btn" onclick="goSec('features')">핵심기능</button>
+  <button class="nav-btn" onclick="goSec('slash')">슬래시명령</button>
+  <button class="nav-btn" onclick="goSec('claudemd')">CLAUDE.md</button>
+  <button class="nav-btn" onclick="goSec('doctors')">5박사</button>
+  <button class="nav-btn" onclick="goSec('roadmap')">로드맵</button>
+  <button class="nav-btn" onclick="goSec('lab')">첫실습</button>
+  <button class="nav-btn" onclick="goSec('quiz')">퀴즈</button>
+  <button class="nav-btn" onclick="goSec('glossary')">용어</button>
+  <button class="nav-btn" onclick="goSec('memo')">메모</button>
+</nav>
+
+<!-- HERO -->
+<div class="section active" id="sec-hero">
+  <div style="padding-top:20px;">
+    <div class="hero-title">Claude Code 입문 학습실</div>
+    <p class="hero-sub">Chat/Cowork/Claude Code 차이, 바이브 코딩, 슬래시 명령, CLAUDE.md까지.<br>5명의 박사 에이전트가 함께 가르쳐 드립니다.</p>
+    <div class="hero-btns">
+      <button class="btn btn-primary" onclick="goSec('what')">바로 시작하기</button>
+      <button class="btn btn-secondary" onclick="goSec('doctors')">5명 박사에게 배우기</button>
+      <button class="btn btn-secondary" onclick="goSec('vibe')">바이브코딩부터 보기</button>
+    </div>
+    <div class="progress-summary">
+      <span class="progress-text" id="progressLabel">학습 진행률 0%</span>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    </div>
+    <div class="diag-box">
+      <h3>혹시 이런 상태인가요?</h3>
+      <div class="diag-item">Claude Code가 뭔지 모른다</div>
+      <div class="diag-item">Chat과 Claude Code의 차이를 모른다</div>
+      <div class="diag-item">터미널이 뭔지는 아는데 Claude Code가 어떻게 작동하는지 모른다</div>
+      <div class="diag-item">"바이브 코딩"을 해보고 싶다</div>
+      <div class="diag-item">스킬/플러그인/서브에이전트가 궁금하다</div>
+      <div style="margin-top:16px;padding:14px;background:rgba(88,166,255,0.06);border-radius:var(--radius-sm);border-left:3px solid var(--accent);">
+        <p style="font-size:0.88rem;color:var(--text2);">하나라도 해당되면 이 학습실이 도움이 됩니다. 정체(A)부터 순서대로 따라가세요.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT IS -->
+<div class="section" id="sec-what">
+  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--dr1);">🔴 Dr. Identity</div>
+  <h2 class="sec-h">Claude Code란 무엇인가?</h2>
+  <p class="sec-sub">터미널에서 작동하는 AI 코딩 에이전트. 같은 Claude인데 환경과 권한이 다릅니다.</p>
+  <div class="card-grid card-grid-3" id="whatGrid"></div>
+  <div class="concept-detail" id="whatDetail"></div>
+  <div class="highlight-box">🔑 Chat은 대화, Cowork은 위임, Code는 협업이다</div>
+</div>
+
+<!-- COMPARE TABLE -->
+<div class="section" id="sec-compare">
+  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--dr2);">🟢 Dr. Environment</div>
+  <h2 class="sec-h">Chat vs Cowork vs Claude Code</h2>
+  <p class="sec-sub">세 가지 모드의 핵심 차이를 한눈에 비교하세요.</p>
+  <div style="overflow-x:auto;" id="compareTableWrap"></div>
+</div>
+
+<!-- SCENARIOS -->
+<div class="section" id="sec-scenario">
+  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--dr2);">🟢 Dr. Environment</div>
+  <h2 class="sec-h">같은 요청, 다른 결과</h2>
+  <p class="sec-sub">4가지 시나리오에서 Chat/Cowork/Claude Code가 어떻게 다르게 동작하는지 비교합니다.</p>
+  <div class="tabs" id="scTabs"></div>
+  <div id="scContent"></div>
+</div>
+
+<!-- VIBE CODING -->
+<div class="section" id="sec-vibe">
+  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--dr3);">🟡 Dr. Vibe</div>
+  <h2 class="sec-h">비개발자를 위한 바이브 코딩</h2>
+  <p class="sec-sub">코딩을 몰라도 됩니다. 원하는 것을 자연어로 설명하면 Claude Code가 만들어 줍니다.</p>
+  <div id="vibeWrap"></div>
+  <div class="warn-box">💡 처음엔 간단한 파일 작업부터 시작하세요. 점진적으로 복잡한 프로젝트로 확장하면 됩니다.</div>
+</div>
+
+<!-- FEATURES -->
+<div class="section" id="sec-features">
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--dr4);">🔵 Dr. Power</div>
+  <h2 class="sec-h">핵심 기능 6가지</h2>
+  <p class="sec-sub">카드를 클릭하면 상세 설명이 나타납니다.</p>
+  <div class="card-grid card-grid-3" id="featGrid"></div>
+  <div class="concept-detail" id="featDetail"></div>
+</div>
+
+<!-- SLASH COMMANDS -->
+<div class="section" id="sec-slash">
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--dr4);">🔵 Dr. Power</div>
+  <h2 class="sec-h">슬래시 명령 레퍼런스</h2>
+  <p class="sec-sub">Claude Code에서 자주 쓰는 10가지 슬래시 명령입니다.</p>
+  <div class="slash-grid" id="slashWrap"></div>
+</div>
+
+<!-- CLAUDE.md -->
+<div class="section" id="sec-claudemd">
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--dr4);">🔵 Dr. Power</div>
+  <h2 class="sec-h">CLAUDE.md 완전 가이드</h2>
+  <p class="sec-sub">CLAUDE.md는 AI에게 주는 "프로젝트 설명서"입니다.</p>
+  <div id="claudemdWrap"></div>
+</div>
+
+<!-- DOCTORS -->
+<div class="section" id="sec-doctors">
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--accent4);">섹션 H</div>
+  <h2 class="sec-h">5명 박사 패널</h2>
+  <p class="sec-sub">각 박사를 클릭하면 전문 영역, 오해 교정, 실천 행동이 바뀝니다.</p>
+  <div class="card-grid card-grid-5" id="drGrid"></div>
+  <div class="dr-panel" id="drPanel"></div>
+</div>
+
+<!-- ROADMAP -->
+<div class="section" id="sec-roadmap">
+  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--accent);">섹션 I</div>
+  <h2 class="sec-h">단계별 학습 로드맵</h2>
+  <p class="sec-sub">6단계를 순서대로 따라가세요.</p>
+  <div class="roadmap" id="roadmapWrap"></div>
+</div>
+
+<!-- LAB -->
+<div class="section" id="sec-lab">
+  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--dr5);">🟣 Dr. Practice</div>
+  <h2 class="sec-h">첫 실습 실험실</h2>
+  <p class="sec-sub">설치부터 첫 성공까지 5단계를 따라가세요.</p>
+  <div class="highlight-box" style="font-size:1rem;">🎯 목표: 터미널에서 claude를 실행하고, 첫 번째 작업을 성공한다</div>
+  <div class="tabs" id="labTabs"></div>
+  <div id="labContent"></div>
+  <h3 style="font-size:1.05rem;margin:24px 0 10px;">✅ 첫 실습 체크리스트</h3>
+  <ul class="checklist" id="labChecklist"></ul>
+</div>
+
+<!-- QUIZ -->
+<div class="section" id="sec-quiz">
+  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--accent3);">섹션 K</div>
+  <h2 class="sec-h">퀴즈 / 자기점검</h2>
+  <p class="sec-sub">13문항으로 이해도를 확인하세요.</p>
+  <div id="quizWrap"></div>
+  <div style="text-align:center;margin-top:16px;">
+    <button class="btn btn-primary" onclick="scoreQuiz()">채점하기</button>
+    <button class="btn btn-secondary" onclick="resetQuiz()">다시 풀기</button>
+  </div>
+  <div class="quiz-score" id="quizScore" style="display:none;"></div>
+</div>
+
+<!-- GLOSSARY -->
+<div class="section" id="sec-glossary">
+  <div class="sec-tag" style="background:rgba(121,192,255,0.12);color:var(--accent6);">섹션 L</div>
+  <h2 class="sec-h">용어사전</h2>
+  <p class="sec-sub">클릭하면 정의가 나타납니다.</p>
+  <input class="glossary-search" placeholder="용어 검색..." oninput="filterGlossary(this.value)">
+  <div id="glossaryList"></div>
+</div>
+
+<!-- MEMO -->
+<div class="section" id="sec-memo">
+  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--accent2);">섹션 M</div>
+  <h2 class="sec-h">복사용 메모</h2>
+  <p class="sec-sub">핵심 정리, 체크리스트, 치트시트를 복사하세요.</p>
+  <div id="memoWrap"></div>
+</div>
+
+<script>
+// ============ DATA ============
+const whatData = [
+  {icon:'💻',label:'터미널 AI 에이전트',brief:'CLI에서 실행',title:'터미널 기반 AI 에이전트',desc:'Claude Code는 웹 브라우저가 아닌 터미널에서 동작합니다. 파일 시스템에 직접 접근하고, npm/pip/git 등 모든 CLI 도구를 활용할 수 있습니다.',extra:'Chat이 "대화"라면, Claude Code는 "협업 개발"입니다.'},
+  {icon:'🤝',label:'협업 모드',brief:'대화 → 위임 → 협업',title:'Chat/Cowork/Code의 차이',desc:'Chat: 질문하면 답을 줍니다 (대화). Cowork: 작업을 위임하면 알아서 처리합니다 (GUI). Claude Code: 터미널에서 함께 코드를 읽고, 수정하고, 실행합니다 (CLI 협업).',extra:'같은 Claude 모델이지만 파일 수정 권한, 셸 실행 권한 등 자율성이 다릅니다.'},
+  {icon:'🚀',label:'비개발자도 가능',brief:'바이브 코딩',title:'개발자만의 도구가 아니다',desc:'"이런 웹사이트 만들어줘", "이 폴더의 CSV를 합쳐줘" 같은 자연어 요청만으로 Claude Code가 코드를 생성하고 실행합니다.',extra:'이것이 바로 "바이브 코딩". 개발 경험 없어도 아이디어를 현실로 만들 수 있습니다.'}
+];
+
+const compareTableData = [
+  ['실행 환경','웹 브라우저','데스크톱 앱 (GUI)','터미널 (CLI)'],
+  ['핵심 모드','대화 (Q&A)','작업 위임','협업 개발'],
+  ['파일 접근','업로드만','지정 폴더','전체 파일 시스템'],
+  ['셸 명령 실행','❌','제한적','✅ 전체'],
+  ['Git 통합','❌','제한적','✅ 완전 통합'],
+  ['서브에이전트','❌','❌','✅ fork/병렬'],
+  ['스킬/플러그인','일부','✅ 공유 구조','✅ + 고급 기능'],
+  ['대상 사용자','모든 사용자','비개발자 중심','개발자 + 바이브코더'],
+  ['반복 자동화','❌','제한적','✅ /loop, cron'],
+  ['권한 관리','기본','기본','allowed-tools, 자동승인']
+];
+
+const scenarioData = [
+  {title:'📁 CSV 파일 합치기',chat:'Python 코드를 알려드릴게요. 복사해서 실행하세요.',cowork:'지정 폴더의 CSV를 찾아 합칩니다. 결과를 저장합니다.',code:'현재 디렉토리 CSV 자동 탐색 → pandas로 합치기 → merged.csv 저장 → "합쳤습니다. 총 1,234행" 보고. 모든 과정이 터미널에서 자동 실행.'},
+  {title:'🐛 버그 찾아 고치기',chat:'코드를 붙여넣어 주시면 분석합니다. (파일 접근 불가)',cowork:'지정 파일을 열어 분석, 수정 제안. (GUI에서 승인 필요)',code:'프로젝트 전체 탐색 → 버그 원인 파악 → 직접 수정 → 테스트 실행 → git commit. 모든 과정이 자동.'},
+  {title:'🌐 웹사이트 만들기',chat:'HTML/CSS/JS 코드를 알려드립니다. 복사해서 저장하세요.',cowork:'파일을 생성하고 기본 구조를 만듭니다.',code:'프로젝트 폴더 생성 → 파일 작성 → 로컬 서버 실행 → 브라우저 확인 → 수정 요청 시 즉시 반영.'},
+  {title:'📊 데이터 분석 + 차트',chat:'분석 방법과 코드를 설명합니다. 실행은 직접.',cowork:'업로드된 파일을 분석하고 결과를 보여줍니다.',code:'데이터 파일 읽기 → pandas 분석 → 차트 생성 → PNG 저장 → "분석 완료. 차트는 output/에 있습니다" 보고.'}
+];
+
+const vibeData = [
+  {title:'📱 할 일 관리 앱',prompt:'"할 일을 추가하고, 완료 체크하고, 삭제할 수 있는 간단한 웹 앱을 만들어줘. 예쁜 디자인으로."',result:'HTML/CSS/JS 파일 생성 → 로컬 서버 실행 → 브라우저에서 바로 사용 가능'},
+  {title:'📁 폴더 자동 정리',prompt:'"Downloads 폴더를 확장자별로 분류해줘.\n이미지는 Images/, 문서는 Documents/, 나머지는 Others/로."',result:'Python 스크립트 작성 + 즉시 실행 → 파일이 자동 분류됨'},
+  {title:'📊 엑셀 데이터 변환',prompt:'"이 CSV에서 2024년 데이터만 필터링해서 월별 합계를 구하고 새 엑셀로 저장해줘."',result:'pandas로 처리 → .xlsx 파일 저장'},
+  {title:'🖼️ 이미지 일괄 처리',prompt:'"photos 폴더의 모든 이미지를 800px로 리사이즈하고 파일명에 날짜 추가해줘."',result:'Pillow로 이미지 처리 → resized/ 폴더에 저장'},
+  {title:'📝 마크다운 블로그',prompt:'"마크다운 기술 블로그용 정적 사이트를 만들어줘. 포스트 목록, 개별 페이지, 다크 모드 지원."',result:'정적 사이트 생성기 구축 → 블로그 프로젝트 완성'},
+  {title:'🔄 반복 보고서 자동화',prompt:'"매주 월요일 data/의 최신 CSV를 읽어서 요약 보고서를 마크다운으로 만드는 스크립트를 만들어줘."',result:'Python 스크립트 + cron 설정 안내 → 자동화 완성'}
+];
+
+const featData = [
+  {icon:'⌨️',label:'슬래시 명령',brief:'빠른 제어',title:'슬래시 명령',desc:'/help, /plan, /review, /compact 등 10가지 이상의 명령으로 Claude Code를 빠르게 제어합니다.',extra:'자주 쓰는 워크플로를 단축키처럼 활용 가능.'},
+  {icon:'📄',label:'CLAUDE.md',brief:'프로젝트 설명서',title:'CLAUDE.md',desc:'프로젝트 루트에 두면 매 대화 시작 시 Claude Code가 읽습니다. 코딩 스타일, 구조, 금지사항 등을 적어두면 일관된 협업이 가능.',extra:'/init으로 자동 생성 가능.'},
+  {icon:'🔌',label:'스킬/플러그인',brief:'기능 확장',title:'스킬 & 플러그인',desc:'스킬: 특정 작업에 특화된 프롬프트+도구 조합. 플러그인: 외부 서비스 연결. CLI에서만 가능한 고급 기능이 추가됩니다.',extra:'파일 시스템 직접 접근, 셸 명령 실행 권한 등.'},
+  {icon:'🔀',label:'서브에이전트',brief:'병렬 처리',title:'서브에이전트',desc:'Claude Code가 서브에이전트를 fork하여 병렬로 작업할 수 있습니다. 예: "프론트와 백엔드를 동시에 개발해줘"',extra:'git worktree를 활용한 독립 브랜치 작업도 가능.'},
+  {icon:'🔁',label:'/loop & cron',brief:'반복 자동화',title:'/loop & cron',desc:'/loop: 특정 조건 만족까지 반복. cron: 시간 기반 자동 실행.',extra:'예: "매일 오전 9시에 테스트 실행하고 슬랙으로 결과 전송"'},
+  {icon:'🔒',label:'권한 관리',brief:'세밀한 제어',title:'권한 관리',desc:'allowed-tools: 사용 가능한 도구 제한. 자동 승인: 신뢰하는 작업은 확인 없이 자동 실행.',extra:'안전과 편의 사이의 균형을 설정.'}
+];
+
+const slashData = [
+  {cmd:'/help',desc:'사용 가능한 명령과 도움말 표시',use:'처음 시작할 때'},
+  {cmd:'/plan',desc:'현재 작업에 대한 실행 계획 수립',use:'복잡한 작업 전 방향 확인'},
+  {cmd:'/review',desc:'현재 변경사항(git diff) 검토',use:'커밋 전 코드 품질 확인'},
+  {cmd:'/compact',desc:'대화 기록 요약, 컨텍스트 절약',use:'대화가 길어져 맥락이 흐릴 때'},
+  {cmd:'/clear',desc:'대화 기록 완전 초기화',use:'새로운 작업 시작 시'},
+  {cmd:'/cost',desc:'토큰 사용량과 비용 표시',use:'비용 관리, 사용량 확인'},
+  {cmd:'/doctor',desc:'환경 문제 진단',use:'설치 후 문제가 있을 때'},
+  {cmd:'/init',desc:'CLAUDE.md 자동 생성',use:'새 프로젝트 시작 시'},
+  {cmd:'/status',desc:'현재 작업 상태 표시',use:'진행 중인 작업 확인'},
+  {cmd:'/config',desc:'설정 확인 및 변경',use:'권한, 모델 등 설정 변경'}
+];
+
+const claudemdData = [
+  {title:'📌 CLAUDE.md의 역할',text:'CLAUDE.md는 프로젝트 루트에 두는 텍스트 파일입니다.\nClaude Code는 대화 시작 시 이 파일을 자동으로 읽습니다.\n\n역할:\n• 프로젝트 구조와 기술 스택 설명\n• 코딩 컨벤션과 규칙 정의\n• 금지 사항(하지 말아야 할 것) 명시\n• 자주 쓰는 명령어/스크립트 안내'},
+  {title:'📝 예시 1: 웹 프로젝트',code:'# 프로젝트 개요\nReact + TypeScript 기반 대시보드\n\n# 기술 스택\n- Frontend: React 18, TypeScript, Tailwind CSS\n- Backend: Node.js, Express\n- DB: PostgreSQL\n\n# 코딩 규칙\n- 함수형 컴포넌트만 사용 (class 금지)\n- 변수명은 camelCase, 파일명은 kebab-case\n- any 타입 사용 금지\n\n# 금지 사항\n- console.log를 커밋하지 말 것\n- 인라인 스타일 사용 금지\n- 테스트 없이 PR 금지\n\n# 유용한 명령\n- npm run dev: 개발 서버\n- npm test: 테스트 실행'},
+  {title:'📝 예시 2: 데이터 분석 프로젝트',code:'# 프로젝트 개요\n마케팅 데이터 분석 파이프라인\n\n# 환경\n- Python 3.11, pandas, matplotlib\n- 데이터: data/ 폴더의 CSV\n- 결과: output/ 폴더에 저장\n\n# 규칙\n- 원본 데이터 수정 금지\n- 모든 분석에 날짜 필터 포함\n- 차트는 한글 폰트(NanumGothic) 사용\n- 결과 파일명: YYYYMMDD_분석명.csv\n\n# 주의\n- 개인정보 컬럼은 마스킹 처리\n- 외부 API 호출 금지'}
+];
+
+const drColors = ['var(--dr1)','var(--dr2)','var(--dr3)','var(--dr4)','var(--dr5)'];
+const drInfo = [
+  {emoji:'🔴',name:'Dr. Identity',role:'정체성 박사',color:drColors[0],q:'Claude Code가 뭐고 왜 쓰는가?',
+   summary:['Claude Code는 터미널에서 작동하는 AI 코딩 에이전트다','같은 Claude 모델이지만 실행 환경과 권한이 다르다','파일 시스템 접근, 셸 명령 실행, git 통합이 핵심 차별점이다'],
+   miscon:['개발자만 쓸 수 있다 → 바이브 코딩으로 비개발자도 활용 가능','Chat의 상위 버전이다 → 다른 모드이며, 각각 장점이 있다','위험하다 → 권한 관리로 안전하게 사용 가능'],
+   actions:['터미널을 열어 Claude Code를 직접 실행해 보세요','간단한 파일 작업부터 시작하세요','Chat으로 하던 작업 하나를 Claude Code로 해보세요'],
+   next:'정체를 이해했다면 환경 박사(Dr. Environment)에게 이동하세요.'},
+  {emoji:'🟢',name:'Dr. Environment',role:'환경 박사',color:drColors[1],q:'Chat/Cowork/Code는 왜 다른가?',
+   summary:['Chat은 대화, Cowork은 위임, Claude Code는 협업이다','세 모드 모두 같은 Claude 모델을 사용한다','실행 환경(웹/GUI/CLI)에 따라 할 수 있는 것이 달라진다'],
+   miscon:['하나만 쓰면 된다 → 상황에 따라 적합한 모드가 다르다','Cowork과 Claude Code는 같다 → GUI vs CLI, 권한 범위가 다르다','Claude Code가 항상 최선이다 → 간단한 질문은 Chat이 더 빠르다'],
+   actions:['같은 작업을 Chat과 Claude Code로 각각 해보세요','비교표에서 10가지 차이를 확인하세요','작업 유형별로 적합한 모드를 정리해 보세요'],
+   next:'환경 차이를 이해했다면 바이브코딩 박사(Dr. Vibe)에게 이동하세요.'},
+  {emoji:'🟡',name:'Dr. Vibe',role:'바이브코딩 박사',color:drColors[2],q:'비개발자도 할 수 있는 것은?',
+   summary:['바이브 코딩은 자연어로 코딩하는 것이다','코딩 지식 없이도 앱, 스크립트, 자동화를 만들 수 있다','처음엔 간단한 파일 작업부터 시작하는 것을 추천한다'],
+   miscon:['코딩을 알아야 한다 → 자연어만으로 충분하다','결과물 품질이 낮다 → 구체적으로 설명하면 전문가 수준이다','한 번에 완성해야 한다 → 대화하며 점진적으로 개선하라'],
+   actions:['"이런 앱 만들어줘"를 한 번 시도해 보세요','파일 자동화를 직접 해보세요','결과가 마음에 안 들면 추가 요청을 하세요'],
+   next:'바이브 코딩을 해봤다면 기능 박사(Dr. Power)에게 이동하세요.'},
+  {emoji:'🔵',name:'Dr. Power',role:'기능 박사',color:drColors[3],q:'핵심 기능은 무엇인가?',
+   summary:['슬래시 명령은 Claude Code의 빠른 제어 수단이다','CLAUDE.md는 프로젝트의 "설명서"로, 일관된 협업의 핵심이다','서브에이전트와 /loop로 복잡한 작업을 자동화할 수 있다'],
+   miscon:['슬래시 명령을 다 외워야 한다 → /help로 언제든 확인 가능','CLAUDE.md는 선택사항이다 → 없으면 매번 맥락을 반복해야 한다','서브에이전트는 어렵다 → "이 두 작업을 동시에 해줘"라고 하면 된다'],
+   actions:['/help를 실행해서 명령 목록을 확인하세요','/init으로 CLAUDE.md를 자동 생성해 보세요','간단한 /plan을 실행해 보세요'],
+   next:'기능을 익혔다면 실습 박사(Dr. Practice)에게 이동하세요.'},
+  {emoji:'🟣',name:'Dr. Practice',role:'실습 박사',color:drColors[4],q:'어떻게 첫 성공을 이끌어내는가?',
+   summary:['설치→첫 실행→기본 명령→CLAUDE.md→스킬 순으로 진행하라','처음엔 간단한 파일 작업부터 시작하라','실수를 두려워하지 마라 — git으로 언제든 되돌릴 수 있다'],
+   miscon:['설치가 어렵다 → 공식 문서를 따라가면 5분 안에 완료','실수하면 큰일난다 → git으로 언제든 되돌릴 수 있다','한 번에 큰 프로젝트를 해야 한다 → 작은 것부터 점진적으로'],
+   actions:['오늘 당장 설치해서 실행해 보세요','기존 프로젝트에서 /init을 실행해 보세요','매일 하나씩 새로운 슬래시 명령을 사용해 보세요'],
+   next:'모든 박사의 가이드를 마쳤습니다. 퀴즈로 자기점검을 하거나 복사 메모를 활용하세요!'}
+];
+
+const roadmapData = [
+  {title:'1단계: 개념 이해',goal:'Claude Code가 뭔지, Chat/Cowork과 어떻게 다른지 이해',prep:'정체/비교표 섹션 학습',success:'세 모드의 차이를 설명할 수 있다',checkpoint:'Claude Code의 핵심 차별점 3가지를 말할 수 있는가?'},
+  {title:'2단계: 설치',goal:'공식 문서를 참고하여 설치',prep:'Node.js 설치 확인',success:'터미널에서 claude 명령이 실행된다',checkpoint:'/doctor로 환경 진단이 통과하는가?'},
+  {title:'3단계: 첫 실행',goal:'기본 명령 확인 및 간단한 요청',prep:'2단계 완료',success:'/help로 명령 목록을 확인했다',checkpoint:'간단한 파일 작업을 성공했는가?'},
+  {title:'4단계: 기본 작업',goal:'파일 처리, 코드 생성, 데이터 분석',prep:'3단계 완료',success:'바이브 코딩으로 최소 1개 프로젝트를 만들었다',checkpoint:'대화하며 점진적 개선을 해봤는가?'},
+  {title:'5단계: CLAUDE.md',goal:'프로젝트에 CLAUDE.md 생성 및 활용',prep:'4단계 완료',success:'/init으로 생성 후 커스터마이즈했다',checkpoint:'코딩 규칙과 금지사항이 반영되었는가?'},
+  {title:'6단계: 스킬 & 자동화',goal:'스킬/플러그인 활용, 서브에이전트 시도',prep:'5단계 완료',success:'최소 1개 스킬을 사용하거나 만들었다',checkpoint:'반복 작업을 자동화했는가?'}
+];
+
+const labSteps = [
+  {title:'STEP 1: 설치하기',steps:['공식 문서(docs.anthropic.com)를 확인합니다','Node.js가 설치되어 있는지 확인합니다','터미널에서 설치 명령을 실행합니다','인증(API 키 또는 로그인)을 완료합니다','💡 구체적 설치 명령은 OS에 따라 다르므로 공식 문서를 참조하세요']},
+  {title:'STEP 2: 첫 실행',steps:['터미널을 열고 claude를 입력합니다','환영 메시지와 현재 디렉토리를 확인합니다','사용 가능한 기본 명령을 확인합니다','💡 프로젝트 폴더에서 시작하는 것을 추천합니다']},
+  {title:'STEP 3: 기본 명령 체험',steps:['/help → 명령 목록 확인','/doctor → 환경 진단','첫 요청: "현재 폴더의 파일 목록을 보여줘"','두 번째 요청: "README.md를 읽고 요약해줘"','💡 셸 명령 실행 시 승인을 요청할 수 있습니다']},
+  {title:'STEP 4: 간단한 작업',steps:['바이브 코딩: "간단한 계산기 웹페이지를 만들어줘"','파일 자동화: "이 폴더의 .txt 파일 개수를 세어줘"','코드 분석: "이 파일의 코드를 설명해줘"','💡 결과가 마음에 안 들면 추가 요청을 하세요']},
+  {title:'STEP 5: CLAUDE.md 만들기',steps:['/init 실행 → 프로젝트 분석 → CLAUDE.md 자동 생성','생성된 파일을 열어 프로젝트 설명 확인','코딩 규칙 추가','금지 사항 명시','💡 CLAUDE.md는 계속 업데이트하세요']}
+];
+
+const labChecklistData = ['Node.js가 설치되어 있다','Claude Code가 설치되어 있다','터미널에서 claude 명령이 실행된다','/help로 명령 목록을 확인했다','간단한 파일 작업을 성공했다','/init으로 CLAUDE.md를 생성했다'];
+
+const quizData = [
+  {q:'Claude Code는 어디서 실행되는가?',opts:['웹 브라우저','데스크톱 앱','터미널 (CLI)','모바일 앱'],answer:2,explain:'Claude Code는 터미널(명령줄 인터페이스)에서 실행됩니다.'},
+  {q:'Chat, Cowork, Claude Code의 핵심 차이는?',opts:['모델이 다르다','가격이 다르다','실행 환경과 권한이 다르다','언어가 다르다'],answer:2,explain:'같은 Claude 모델이지만 실행 환경과 권한 범위가 다릅니다.'},
+  {q:'"바이브 코딩"이란?',opts:['음악 들으며 코딩','자연어로 AI에게 코딩을 시키는 것','특정 언어로만 코딩','랜덤 코딩'],answer:1,explain:'코딩 지식 없이 자연어로 원하는 것을 설명하면 AI가 코드를 생성하는 것입니다.'},
+  {q:'CLAUDE.md의 역할은?',opts:['로그인 설정','프로젝트 맥락과 규칙을 AI에게 전달','비밀번호 저장','요금 관리'],answer:1,explain:'CLAUDE.md는 프로젝트의 맥락, 규칙, 금지사항을 Claude Code에게 전달합니다.'},
+  {q:'/plan 명령의 용도는?',opts:['요금 확인','작업 계획 수립','설치','초기화'],answer:1,explain:'/plan은 작업 전에 실행 계획을 세우는 명령입니다.'},
+  {q:'Claude Code에서만 가능한 기능은?',opts:['텍스트 대화','파일 업로드','서브에이전트 fork/병렬 처리','웹 검색'],answer:2,explain:'서브에이전트 fork는 Claude Code만의 기능입니다.'},
+  {q:'/compact의 효과는?',opts:['파일 압축','대화 기록 요약으로 컨텍스트 절약','화면 축소','비용 절감'],answer:1,explain:'대화 기록을 요약하여 컨텍스트 윈도우를 효율적으로 사용합니다.'},
+  {q:'비개발자가 Claude Code로 할 수 있는 것은?',opts:['아무것도','간단한 질문만','파일 자동화, 앱 생성, 데이터 처리','코드 리뷰만'],answer:2,explain:'바이브 코딩으로 다양한 작업이 가능합니다.'},
+  {q:'Cowork과 Claude Code의 가장 큰 차이는?',opts:['모델 버전','GUI vs CLI','가격','언어 지원'],answer:1,explain:'Cowork은 GUI, Claude Code는 CLI입니다.'},
+  {q:'/init은 무엇을 하는가?',opts:['Claude Code 설치','CLAUDE.md 자동 생성','모든 파일 삭제','비용 초기화'],answer:1,explain:'프로젝트를 분석하여 CLAUDE.md를 자동 생성합니다.'},
+  {q:'권한 관리의 핵심 개념은?',opts:['비밀번호','allowed-tools, 자동 승인','2단계 인증','IP 제한'],answer:1,explain:'allowed-tools로 도구를 제한하고 자동 승인으로 편의를 높입니다.'},
+  {q:'처음 시작할 때 추천하는 작업은?',opts:['대규모 프로젝트','복잡한 API 개발','간단한 파일 작업','데이터베이스 설계'],answer:2,explain:'간단한 파일 작업부터 시작하는 것을 추천합니다.'},
+  {q:'슬래시 명령이 아닌 것은?',opts:['/help','/plan','/execute','/compact'],answer:2,explain:'/execute는 Claude Code의 기본 슬래시 명령이 아닙니다.'}
+];
+
+const glossaryData = [
+  {term:'Claude Code',def:'터미널에서 작동하는 AI 코딩 에이전트.',easy:'"터미널 안의 AI 개발 파트너"'},
+  {term:'CLI',def:'Command Line Interface. 텍스트 명령으로 컴퓨터와 상호작용.',easy:'"검은 화면에서 글자로 명령하는 것"'},
+  {term:'터미널',def:'CLI를 사용하기 위한 프로그램.',easy:'"명령어를 입력하는 창"'},
+  {term:'바이브 코딩',def:'자연어로 AI에게 코딩을 시키는 방식.',easy:'"말로 시켜서 프로그램 만드는 것"'},
+  {term:'Cowork',def:'Claude의 GUI 기반 작업 위임 모드.',easy:'"그래픽 화면에서 AI에게 일 시키는 것"'},
+  {term:'CLAUDE.md',def:'프로젝트 루트에 두는 AI용 프로젝트 설명서.',easy:'"AI에게 주는 프로젝트 매뉴얼"'},
+  {term:'슬래시 명령',def:'/로 시작하는 Claude Code 빠른 명령.',easy:'"/ 치고 바로 쓰는 단축키"'},
+  {term:'서브에이전트',def:'Claude Code가 fork하는 하위 에이전트. 병렬 작업 가능.',easy:'"AI 분신. 여러 일을 동시에"'},
+  {term:'스킬',def:'특정 작업에 특화된 프롬프트+도구 조합.',easy:'"AI의 전문 기술 모듈"'},
+  {term:'플러그인',def:'외부 서비스와 AI를 연결하는 확장 모듈.',easy:'"AI에 새 기능 끼우기"'},
+  {term:'컨텍스트 윈도우',def:'AI가 한 번에 처리할 수 있는 최대 텍스트 길이.',easy:'"AI의 기억력 한계"'},
+  {term:'git',def:'버전 관리 시스템.',easy:'"코드 변경 타임머신"'},
+  {term:'worktree',def:'하나의 저장소에서 여러 브랜치를 동시에 작업.',easy:'"여러 버전을 동시에 열기"'},
+  {term:'allowed-tools',def:'사용 가능한 도구 목록을 제한하는 권한 설정.',easy:'"AI가 쓸 수 있는 도구 허용 목록"'},
+  {term:'fork',def:'프로세스를 복제하여 독립 실행.',easy:'"분신 만들기"'},
+  {term:'/compact',def:'대화 기록을 요약하여 컨텍스트 절약.',easy:'"대화 요약해서 기억력 아끼기"'},
+  {term:'/init',def:'CLAUDE.md를 자동 생성.',easy:'"프로젝트 설명서 자동 만들기"'},
+  {term:'토큰',def:'AI가 텍스트를 처리하는 최소 단위.',easy:'"AI가 읽는 글자 조각"'}
+];
+
+const memoArr = [
+  {title:'📋 핵심 정리',id:'mm1',text:'• Claude Code = 터미널에서 작동하는 AI 코딩 에이전트\n• Chat = 대화 / Cowork = 위임 / Claude Code = 협업\n\n핵심 차별점:\n  → 파일 시스템 전체 접근\n  → 셸 명령 실행\n  → Git 완전 통합\n  → 서브에이전트 병렬 처리\n  → /loop, cron 반복 자동화\n\n비개발자도 가능:\n  → 바이브 코딩으로 앱 생성\n  → 파일 자동화, 데이터 변환\n  → 자연어만으로 충분'},
+  {title:'✅ 첫 시작 체크리스트',id:'mm2',text:'□ 공식 문서에서 설치 방법 확인\n□ Node.js 설치 확인\n□ Claude Code 설치\n□ 터미널에서 claude 실행\n□ /help 로 명령 목록 확인\n□ /doctor 로 환경 진단\n□ 간단한 요청 ("파일 목록 보여줘")\n□ /init 으로 CLAUDE.md 생성\n□ CLAUDE.md 내용 확인 및 수정\n□ 바이브 코딩 시도'},
+  {title:'⌨️ 슬래시 명령 치트시트',id:'mm3',text:'/help      → 도움말 / 명령 목록\n/plan      → 작업 계획 수립\n/review    → 변경사항 코드 리뷰\n/compact   → 대화 요약 (컨텍스트 절약)\n/clear     → 대화 초기화\n/cost      → 토큰/비용 확인\n/doctor    → 환경 진단\n/init      → CLAUDE.md 자동 생성\n/status    → 작업 상태 확인\n/config    → 설정 변경'}
+];
+
+// ============ STATE ============
+let currentSection='hero', completedChecks={}, quizAnswers={};
+
+// ============ NAV ============
+function goSec(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b=>{b.classList.remove('active');if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes("'"+id+"'"))b.classList.add('active');});
+  currentSection=id;window.scrollTo({top:0,behavior:'smooth'});saveState();
+}
+
+// ============ WHAT ============
+function buildWhat(){
+  document.getElementById('whatGrid').innerHTML=whatData.map((w,i)=>`<div class="card concept-card${i===0?' selected':''}" onclick="selectWhat(${i})"><span class="concept-icon">${w.icon}</span><div class="concept-label">${w.label}</div><div class="concept-brief">${w.brief}</div></div>`).join('');
+  selectWhat(0);
+}
+function selectWhat(idx){
+  document.querySelectorAll('#whatGrid .concept-card').forEach(c=>c.classList.remove('selected'));
+  document.querySelectorAll('#whatGrid .concept-card')[idx].classList.add('selected');
+  const w=whatData[idx];
+  document.getElementById('whatDetail').innerHTML=`<h3>${w.title}</h3><p>${w.desc}</p><p style="margin-top:10px;color:var(--accent6);font-size:0.85rem;">${w.extra}</p>`;
+}
+
+// ============ COMPARE TABLE ============
+function buildCompareTable(){
+  document.getElementById('compareTableWrap').innerHTML=`<table class="comp-table"><thead><tr><th>비교 항목</th><th>💬 Chat</th><th>🤖 Cowork</th><th class="hi">⚡ Claude Code</th></tr></thead><tbody>${compareTableData.map(r=>`<tr><td><strong>${r[0]}</strong></td><td>${r[1]}</td><td>${r[2]}</td><td class="hi">${r[3]}</td></tr>`).join('')}</tbody></table>`;
+}
+
+// ============ SCENARIOS ============
+function buildScenarios(){
+  document.getElementById('scTabs').innerHTML=scenarioData.map((s,i)=>`<button class="tab-btn${i===0?' active':''}" onclick="switchSc(${i})">${s.title}</button>`).join('');
+  switchSc(0);
+}
+function switchSc(idx){
+  document.querySelectorAll('#scTabs .tab-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
+  const s=scenarioData[idx];
+  document.getElementById('scContent').innerHTML=`<div class="compare-wrap">
+    <div class="compare-side chat"><span class="compare-label" style="background:rgba(255,123,114,0.15);color:var(--accent5);">💬 Chat</span><p>${s.chat}</p></div>
+    <div class="compare-side cowork"><span class="compare-label" style="background:rgba(63,185,80,0.15);color:var(--accent2);">🤖 Cowork</span><p>${s.cowork}</p></div>
+    <div class="compare-side code"><span class="compare-label" style="background:rgba(210,168,255,0.15);color:var(--accent3);">⚡ Claude Code</span><p>${s.code}</p></div>
+  </div>`;
+}
+
+// ============ VIBE ============
+function buildVibe(){
+  document.getElementById('vibeWrap').innerHTML=vibeData.map(v=>`<div class="vibe-card"><h4>${v.title}</h4><div class="vibe-prompt">${esc(v.prompt)}</div><div class="vibe-result">→ ${v.result}</div></div>`).join('');
+}
+
+// ============ FEATURES ============
+function buildFeatures(){
+  document.getElementById('featGrid').innerHTML=featData.map((f,i)=>`<div class="card concept-card${i===0?' selected':''}" onclick="selectFeat(${i})"><span class="concept-icon">${f.icon}</span><div class="concept-label">${f.label}</div><div class="concept-brief">${f.brief}</div></div>`).join('');
+  selectFeat(0);
+}
+function selectFeat(idx){
+  document.querySelectorAll('#featGrid .concept-card').forEach(c=>c.classList.remove('selected'));
+  document.querySelectorAll('#featGrid .concept-card')[idx].classList.add('selected');
+  const f=featData[idx];
+  document.getElementById('featDetail').innerHTML=`<h3>${f.title}</h3><p>${f.desc}</p><p style="margin-top:10px;color:var(--accent6);font-size:0.85rem;">${f.extra}</p>`;
+}
+
+// ============ SLASH ============
+function buildSlash(){
+  document.getElementById('slashWrap').innerHTML=slashData.map(s=>`<div class="slash-item"><div class="slash-cmd">${s.cmd}</div><div><div class="slash-desc">${s.desc}</div><div class="slash-use">📌 ${s.use}</div></div></div>`).join('');
+}
+
+// ============ CLAUDE.md ============
+function buildClaudemd(){
+  document.getElementById('claudemdWrap').innerHTML=claudemdData.map((c,i)=>{
+    if(c.code) return `<div class="card" style="margin:12px 0;padding:20px;"><h4 style="margin-bottom:10px;">${c.title}</h4><div class="code-block" id="cm${i}">${esc(c.code)}<button class="copy-btn" onclick="copyMemo(this,'cm${i}')">복사</button></div></div>`;
+    return `<div class="card" style="margin:12px 0;padding:20px;"><h4 style="margin-bottom:10px;">${c.title}</h4><p style="font-size:0.88rem;color:var(--text2);white-space:pre-wrap;line-height:1.8;">${c.text}</p></div>`;
+  }).join('');
+}
+
+// ============ DOCTORS ============
+function buildDoctors(){
+  document.getElementById('drGrid').innerHTML=drInfo.map((d,i)=>`<div class="card dr-card${i===0?' selected':''}" onclick="selectDr(${i})" style="border-color:${i===0?d.color:'var(--border)'}"><span class="dr-emoji">${d.emoji}</span><div class="dr-name" style="color:${d.color}">${d.name}</div><div class="dr-role">${d.role}</div></div>`).join('');
+  selectDr(0);
+}
+function selectDr(idx){
+  document.querySelectorAll('.dr-card').forEach((c,i)=>{c.classList.toggle('selected',i===idx);c.style.borderColor=i===idx?drColors[i]:'var(--border)';});
+  const d=drInfo[idx];
+  document.getElementById('drPanel').innerHTML=`<h3 style="color:${d.color}">${d.emoji} ${d.name} — ${d.role}</h3>
+    <h4>❓ 해결하는 질문</h4><p style="font-size:0.9rem;color:var(--text2);margin-bottom:12px;">${d.q}</p>
+    <h4>📌 핵심 요약</h4><ul class="dr-list">${d.summary.map(s=>'<li>'+s+'</li>').join('')}</ul>
+    <h4>⚠️ 흔한 오해</h4><ul class="dr-list">${d.miscon.map(s=>'<li>'+s+'</li>').join('')}</ul>
+    <h4>✅ 바로 해볼 행동</h4><ul class="dr-list">${d.actions.map(s=>'<li>'+s+'</li>').join('')}</ul>
+    <div class="dr-next">➡️ ${d.next}</div>`;
+}
+
+// ============ ROADMAP ============
+function buildRoadmap(){
+  document.getElementById('roadmapWrap').innerHTML=roadmapData.map((r,i)=>`
+    <div class="road-step ${completedChecks['road'+i]?'completed':''}" id="rs${i}">
+      <div class="road-dot"></div><h4>${r.title}</h4>
+      <div class="acc" style="margin:8px 0;"><div class="acc-head" onclick="toggleAcc(this)" style="font-size:0.83rem;padding:8px 12px;">상세 보기 <span>▼</span></div>
+        <div class="acc-body"><p><strong>🎯 목표:</strong> ${r.goal}</p><p><strong>📦 준비물:</strong> ${r.prep}</p><p><strong>✅ 성공 기준:</strong> ${r.success}</p><p><strong>🔍 체크포인트:</strong> ${r.checkpoint}</p></div>
+      </div>
+      <div class="road-check"><label><input type="checkbox" ${completedChecks['road'+i]?'checked':''} onchange="toggleRoad(${i},this.checked)"> 이 단계 완료</label></div>
+    </div>`).join('');
+}
+function toggleRoad(i,v){completedChecks['road'+i]=v;const el=document.getElementById('rs'+i);el.classList.toggle('completed',v);el.querySelector('.road-dot').style.background=v?'var(--accent2)':'var(--bg3)';el.querySelector('.road-dot').style.borderColor=v?'var(--accent2)':'var(--border)';updateProgress();}
+
+// ============ LAB ============
+function buildLab(){
+  document.getElementById('labTabs').innerHTML=labSteps.map((s,i)=>`<button class="tab-btn${i===0?' active':''}" onclick="switchLab(${i})">${s.title}</button>`).join('');
+  switchLab(0);
+  document.getElementById('labChecklist').innerHTML=labChecklistData.map((c,i)=>`<li><input type="checkbox" ${completedChecks['lc'+i]?'checked':''} onchange="completedChecks['lc'+i]=this.checked;updateProgress()"> ${c}</li>`).join('');
+}
+function switchLab(idx){
+  document.querySelectorAll('#labTabs .tab-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
+  const s=labSteps[idx];
+  document.getElementById('labContent').innerHTML=`<div class="scenario"><h4>${s.title}</h4><ol class="steps">${s.steps.map(st=>'<li>'+st+'</li>').join('')}</ol></div>`;
+}
+
+// ============ QUIZ ============
+function buildQuiz(){
+  document.getElementById('quizWrap').innerHTML=quizData.map((q,i)=>`<div class="quiz-q" id="qq${i}"><h4>${i+1}. ${q.q}</h4>${q.opts.map((o,j)=>`<div class="quiz-opt" onclick="pickQuiz(${i},this,${j})">${String.fromCharCode(9312+j)} ${o}</div>`).join('')}<div class="quiz-explain" id="qe${i}">💡 ${q.explain}</div></div>`).join('');
+}
+function pickQuiz(qi,el,val){
+  if(quizAnswers[qi]!==undefined)return;quizAnswers[qi]=val;
+  const q=quizData[qi],correct=val===q.answer;
+  el.classList.add(correct?'correct':'wrong');
+  el.parentElement.querySelectorAll('.quiz-opt').forEach(o=>{o.classList.add('disabled');const idx=parseInt(o.getAttribute('onclick').match(/,(\d+)\)/)?.[1]);if(idx===q.answer)o.classList.add('correct');});
+  document.getElementById('qe'+qi).style.display='block';updateProgress();
+}
+function scoreQuiz(){
+  let c=0;quizData.forEach((q,i)=>{if(quizAnswers[i]===q.answer)c++;});
+  const a=Object.keys(quizAnswers).length,t=quizData.length,sc=document.getElementById('quizScore');sc.style.display='block';
+  if(a<t)sc.innerHTML=`아직 ${t-a}문항 남았습니다.`;
+  else{const p=Math.round(c/t*100);sc.innerHTML=`🎯 ${t}문항 중 ${c}개 정답 (${p}점)<br><span style="font-size:0.9rem;color:var(--text2);">${p>=80?'훌륭합니다! Claude Code 기초를 잘 이해하고 있습니다.':p>=50?'좋은 시작입니다. 틀린 부분 해설을 다시 읽어보세요.':'정체/비교표 섹션을 다시 살펴보세요.'}</span>`;}
+}
+function resetQuiz(){quizAnswers={};document.getElementById('quizScore').style.display='none';buildQuiz();updateProgress();}
+
+// ============ GLOSSARY ============
+function buildGlossary(){
+  document.getElementById('glossaryList').innerHTML=glossaryData.map(g=>`<div class="glossary-item" data-term="${g.term.toLowerCase()}"><div class="glossary-term" onclick="this.nextElementSibling.classList.toggle('open')">${g.term}</div><div class="glossary-def"><p>${g.def}</p><p class="glossary-easy">쉬운 말: ${g.easy}</p></div></div>`).join('');
+}
+function filterGlossary(val){const v=val.toLowerCase();document.querySelectorAll('.glossary-item').forEach(i=>{i.style.display=i.dataset.term.includes(v)||v===''?'block':'none';});}
+
+// ============ MEMO ============
+function buildMemo(){
+  document.getElementById('memoWrap').innerHTML=memoArr.map(m=>`<div class="memo-card"><h4>${m.title}</h4><button class="copy-btn" onclick="copyMemo(this,'${m.id}')">복사</button><pre id="${m.id}">${m.text}</pre></div>`).join('');
+}
+
+// ============ UTILS ============
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function toggleAcc(el){const b=el.nextElementSibling;b.classList.toggle('open');const a=el.querySelector('span');if(a)a.textContent=b.classList.contains('open')?'▲':'▼';}
+function copyMemo(btn,id){const t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(()=>{btn.textContent='복사됨!';btn.classList.add('copied');setTimeout(()=>{btn.textContent='복사';btn.classList.remove('copied');},1500);}).catch(()=>{const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);btn.textContent='복사됨!';btn.classList.add('copied');setTimeout(()=>{btn.textContent='복사';btn.classList.remove('copied');},1500);});}
+
+// ============ PROGRESS ============
+function updateProgress(){
+  let t=0,d=0;
+  for(let i=0;i<6;i++){t++;if(completedChecks['road'+i])d++;}
+  for(let i=0;i<labChecklistData.length;i++){t++;if(completedChecks['lc'+i])d++;}
+  t+=quizData.length;d+=Object.keys(quizAnswers).length;
+  const p=t>0?Math.round(d/t*100):0;
+  document.getElementById('progressFill').style.width=p+'%';
+  document.getElementById('progressBarTop').style.width=p+'%';
+  document.getElementById('progressLabel').textContent='학습 진행률 '+p+'%';
+  saveState();
+}
+
+// ============ STATE ============
+function saveState(){try{localStorage.setItem('cc-lab-state',JSON.stringify({completedChecks,quizAnswers,currentSection}));}catch(e){}}
+function loadState(){try{const r=localStorage.getItem('cc-lab-state');if(r){const s=JSON.parse(r);if(s.completedChecks)completedChecks=s.completedChecks;if(s.quizAnswers)quizAnswers=s.quizAnswers;}}catch(e){}}
+
+// ============ INIT ============
+function init(){
+  loadState();
+  buildWhat();buildCompareTable();buildScenarios();buildVibe();buildFeatures();buildSlash();buildClaudemd();buildDoctors();buildRoadmap();buildLab();buildQuiz();buildGlossary();buildMemo();
+  updateProgress();
+}
+init();
+</script>
 </body>
 </html>

@@ -1,36 +1,761 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prompt Engineering in Practice</title>
-  <link rel="stylesheet" href="/textbooks/common.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프롬프트 엔지니어링 실전 학습실</title>
+<style>
+:root {
+  --bg: #0e1117;
+  --bg2: #161b22;
+  --bg3: #1c2333;
+  --card: #1e2536;
+  --card-hover: #252d42;
+  --border: #2d3548;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --text3: #6e7681;
+  --accent: #58a6ff;
+  --accent2: #3fb950;
+  --accent3: #d2a8ff;
+  --accent4: #f0883e;
+  --accent5: #ff7b72;
+  --accent6: #79c0ff;
+  --dr1: #58a6ff;
+  --dr2: #3fb950;
+  --dr3: #d2a8ff;
+  --dr4: #f0883e;
+  --dr5: #ff7b72;
+  --success: #3fb950;
+  --warn: #f0883e;
+  --danger: #ff7b72;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+  --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+  --font: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'SF Mono', 'Cascadia Code', 'Consolas', monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:15px;}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;}
+a{color:var(--accent);text-decoration:none;}
+button{font-family:var(--font);cursor:pointer;border:none;outline:none;transition:var(--transition);}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+#progressBarTop{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--dr1),var(--dr3),var(--dr5));z-index:1001;transition:width 0.5s;}
+
+#topNav{position:fixed;top:3px;left:0;right:0;z-index:1000;background:rgba(14,17,23,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 16px;display:flex;align-items:center;height:52px;gap:4px;overflow-x:auto;}
+#topNav::-webkit-scrollbar{display:none;}
+.nav-btn{padding:6px 14px;border-radius:20px;font-size:0.82rem;color:var(--text2);background:transparent;white-space:nowrap;border:1px solid transparent;}
+.nav-btn:hover{color:var(--text);background:var(--bg3);}
+.nav-btn.active{color:var(--accent);background:rgba(88,166,255,0.1);border-color:rgba(88,166,255,0.3);}
+.nav-logo{font-weight:700;color:var(--accent);font-size:1rem;margin-right:12px;white-space:nowrap;}
+
+.section{display:none;padding:70px 16px 40px;max-width:960px;margin:0 auto;}
+.section.active{display:block;animation:fadeUp 0.35s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+.hero-title{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px;letter-spacing:-0.5px;}
+.hero-sub{color:var(--text2);font-size:1.05rem;margin-bottom:28px;line-height:1.6;}
+.hero-btns{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;}
+.btn{padding:10px 22px;border-radius:var(--radius-sm);font-size:0.92rem;font-weight:600;transition:var(--transition);}
+.btn-primary{background:var(--accent);color:#fff;}
+.btn-primary:hover{background:#79b8ff;transform:translateY(-1px);}
+.btn-secondary{background:var(--bg3);color:var(--text);border:1px solid var(--border);}
+.btn-secondary:hover{background:var(--card-hover);border-color:var(--accent);}
+.btn-sm{padding:6px 14px;font-size:0.82rem;}
+
+.diag-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:28px;}
+.diag-box h3{font-size:1rem;color:var(--accent4);margin-bottom:12px;}
+.diag-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;color:var(--text2);font-size:0.9rem;}
+.diag-item::before{content:'⚡';flex-shrink:0;}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:var(--transition);}
+.card:hover{border-color:rgba(88,166,255,0.3);box-shadow:var(--shadow-sm);}
+.card-grid{display:grid;gap:14px;}
+.card-grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+.card-grid-3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}
+.card-grid-6{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));}
+
+.sec-h{font-size:1.5rem;font-weight:700;margin-bottom:6px;color:var(--text);}
+.sec-sub{color:var(--text2);font-size:0.92rem;margin-bottom:24px;}
+.sec-tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:0.72rem;font-weight:600;margin-bottom:12px;}
+
+.concept-card{cursor:pointer;text-align:center;padding:18px 14px;position:relative;overflow:hidden;}
+.concept-card.selected{border-color:var(--accent);box-shadow:0 0 20px rgba(88,166,255,0.15);}
+.concept-icon{font-size:2rem;margin-bottom:8px;display:block;}
+.concept-label{font-weight:700;font-size:0.95rem;}
+.concept-brief{color:var(--text3);font-size:0.78rem;margin-top:4px;}
+.concept-detail{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:16px;min-height:160px;}
+.concept-detail h3{color:var(--accent);margin-bottom:10px;}
+.concept-detail p{color:var(--text2);font-size:0.9rem;margin-bottom:8px;}
+
+.highlight-box{background:linear-gradient(135deg,rgba(88,166,255,0.08),rgba(210,168,255,0.08));border:2px solid var(--accent);border-radius:var(--radius);padding:20px;text-align:center;margin:24px 0;font-size:1.15rem;font-weight:700;color:var(--accent);}
+
+.tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:18px;}
+.tab-btn{padding:8px 18px;border-radius:var(--radius-sm);font-size:0.85rem;background:var(--bg3);color:var(--text2);font-weight:500;}
+.tab-btn:hover{background:var(--card-hover);color:var(--text);}
+.tab-btn.active{background:rgba(88,166,255,0.12);color:var(--accent);border:1px solid rgba(88,166,255,0.3);}
+
+.compare-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+@media(max-width:640px){.compare-wrap{grid-template-columns:1fr;}}
+.compare-side{padding:18px;border-radius:var(--radius);border:1px solid var(--border);}
+.compare-side.bad{background:rgba(255,123,114,0.04);border-color:rgba(255,123,114,0.2);}
+.compare-side.good{background:rgba(63,185,80,0.04);border-color:rgba(63,185,80,0.2);}
+.compare-label{display:inline-block;padding:2px 8px;border-radius:6px;font-size:0.72rem;font-weight:700;margin-bottom:8px;}
+.compare-label.off{background:rgba(255,123,114,0.15);color:var(--accent5);}
+.compare-label.on{background:rgba(63,185,80,0.15);color:var(--accent2);}
+.compare-side p,.compare-side pre{font-size:0.85rem;color:var(--text2);white-space:pre-wrap;line-height:1.7;}
+.compare-explain{margin-top:12px;padding:12px;background:var(--bg3);border-radius:var(--radius-sm);font-size:0.85rem;color:var(--text2);}
+.compare-explain strong{color:var(--accent4);}
+
+.dr-card{cursor:pointer;padding:16px;text-align:center;border:2px solid var(--border);transition:var(--transition);}
+.dr-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+.dr-card.selected{box-shadow:0 0 24px rgba(88,166,255,0.12);}
+.dr-emoji{font-size:2.4rem;margin-bottom:6px;display:block;}
+.dr-name{font-weight:700;font-size:0.88rem;}
+.dr-role{color:var(--text3);font-size:0.75rem;margin-top:2px;}
+.dr-panel{margin-top:18px;padding:24px;border-radius:var(--radius);border:1px solid var(--border);background:var(--card);}
+.dr-panel h3{margin-bottom:12px;font-size:1.1rem;}
+.dr-panel h4{margin:14px 0 8px;font-size:0.92rem;color:var(--text);}
+.dr-list{list-style:none;padding:0;}
+.dr-list li{padding:6px 0;font-size:0.88rem;color:var(--text2);display:flex;gap:8px;align-items:flex-start;}
+.dr-list li::before{content:'→';color:var(--accent);flex-shrink:0;}
+.dr-next{margin-top:16px;padding:12px;background:var(--bg3);border-radius:var(--radius-sm);font-size:0.85rem;color:var(--text2);}
+
+.roadmap{position:relative;padding-left:28px;margin:20px 0;}
+.roadmap::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:2px;background:var(--border);}
+.road-step{position:relative;margin-bottom:20px;padding:18px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);transition:var(--transition);}
+.road-step.completed{border-color:var(--accent2);background:rgba(63,185,80,0.03);}
+.road-dot{position:absolute;left:-24px;top:22px;width:14px;height:14px;border-radius:50%;background:var(--bg3);border:2px solid var(--border);z-index:1;transition:var(--transition);}
+.road-step.completed .road-dot{background:var(--accent2);border-color:var(--accent2);}
+.road-step h4{font-size:1rem;margin-bottom:6px;}
+.road-step p{font-size:0.85rem;color:var(--text2);}
+.road-check{margin-top:10px;}
+.road-check label{display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--text2);cursor:pointer;}
+.road-check input[type=checkbox]{width:16px;height:16px;accent-color:var(--accent2);cursor:pointer;}
+
+.acc{margin:10px 0;}
+.acc-head{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--bg3);border-radius:var(--radius-sm);cursor:pointer;font-size:0.9rem;font-weight:600;transition:var(--transition);}
+.acc-head:hover{background:var(--card-hover);}
+.acc-body{display:none;padding:16px 18px;background:var(--card);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius-sm) var(--radius-sm);}
+.acc-body.open{display:block;animation:fadeUp 0.2s ease;}
+.acc-body p,.acc-body li{font-size:0.88rem;color:var(--text2);}
+.acc-body ul{padding-left:18px;margin:8px 0;}
+.acc-body li{margin:4px 0;}
+
+.template-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin:12px 0;position:relative;}
+.template-card h4{font-size:0.95rem;padding:16px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.template-card h4 span{font-size:0.72rem;padding:2px 8px;border-radius:6px;background:rgba(88,166,255,0.12);color:var(--accent);}
+.template-body{display:none;padding:0 18px 18px;}
+.template-body.open{display:block;animation:fadeUp 0.2s ease;}
+.code-block{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;font-family:var(--mono);font-size:0.82rem;color:var(--text2);white-space:pre-wrap;line-height:1.7;position:relative;}
+
+.skill-example{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:14px 0;}
+.skill-example h4{font-size:0.95rem;color:var(--accent3);margin-bottom:12px;}
+.skill-arrow{text-align:center;font-size:1.2rem;color:var(--accent3);margin:12px 0;font-weight:700;}
+
+.checklist{list-style:none;padding:0;}
+.checklist li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;font-size:0.88rem;color:var(--text2);border-bottom:1px solid var(--border);}
+.checklist li:last-child{border:none;}
+.checklist li input{width:16px;height:16px;accent-color:var(--accent2);cursor:pointer;margin-top:2px;flex-shrink:0;}
+
+.quiz-q{padding:18px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin:12px 0;}
+.quiz-q h4{font-size:0.92rem;margin-bottom:12px;}
+.quiz-opt{display:block;padding:8px 14px;margin:4px 0;background:var(--bg3);border-radius:var(--radius-sm);cursor:pointer;font-size:0.85rem;transition:var(--transition);border:1px solid transparent;}
+.quiz-opt:hover{background:var(--card-hover);border-color:var(--border);}
+.quiz-opt.correct{background:rgba(63,185,80,0.12);border-color:var(--accent2);color:var(--accent2);}
+.quiz-opt.wrong{background:rgba(255,123,114,0.08);border-color:var(--accent5);color:var(--accent5);}
+.quiz-opt.disabled{pointer-events:none;opacity:0.7;}
+.quiz-explain{display:none;margin-top:10px;padding:10px;background:var(--bg3);border-radius:var(--radius-sm);font-size:0.83rem;color:var(--text2);}
+.quiz-score{text-align:center;padding:20px;font-size:1.2rem;font-weight:700;color:var(--accent);}
+
+.glossary-search{width:100%;padding:10px 16px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:0.9rem;margin-bottom:16px;}
+.glossary-search::placeholder{color:var(--text3);}
+.glossary-item{padding:12px 0;border-bottom:1px solid var(--border);}
+.glossary-term{font-weight:700;color:var(--accent);font-size:0.92rem;cursor:pointer;}
+.glossary-def{font-size:0.85rem;color:var(--text2);margin-top:4px;display:none;}
+.glossary-def.open{display:block;}
+.glossary-easy{font-size:0.82rem;color:var(--text3);font-style:italic;margin-top:2px;}
+
+.memo-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin:12px 0;position:relative;}
+.memo-card h4{font-size:0.95rem;margin-bottom:10px;color:var(--accent);}
+.memo-card pre{font-family:var(--mono);font-size:0.82rem;color:var(--text2);white-space:pre-wrap;line-height:1.6;}
+.copy-btn{position:absolute;top:12px;right:12px;padding:5px 12px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;font-size:0.75rem;color:var(--text2);}
+.copy-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.copy-btn.copied{background:var(--accent2);color:#fff;border-color:var(--accent2);}
+
+.progress-summary{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin:16px 0;}
+.progress-bar{flex:1;height:8px;background:var(--bg3);border-radius:4px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:4px;transition:width 0.6s;}
+.progress-text{font-size:0.82rem;color:var(--text2);white-space:nowrap;}
+
+.warn-box{padding:14px 18px;background:rgba(240,136,62,0.06);border:1px solid rgba(240,136,62,0.25);border-radius:var(--radius-sm);margin:16px 0;font-size:0.88rem;color:var(--accent4);}
+
+.card-grid-5{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));}
+
+@media(max-width:640px){
+  .card-grid-5{grid-template-columns:repeat(3,1fr);}
+  .card-grid-6{grid-template-columns:repeat(2,1fr);}
+  .hero-title{font-size:1.6rem;}
+  .section{padding:64px 12px 30px;}
+}
+</style>
 </head>
-<body data-book-id="prompt-engineering">
-  <div id="progressBarTop"></div>
-  <nav id="topNav">
-    <span class="nav-logo"><span class="nav-orb"></span><span data-ko="프롬프트 실전" data-en="Prompt Engineering">Prompt Engineering</span></span>
-    <button class="nav-btn active" data-section="hero" data-ko="홈" data-en="Home">Home</button>
-    <button class="nav-btn" data-section="model" data-ko="기초" data-en="Basics">Basics</button>
-    <button class="nav-btn" data-section="patterns" data-ko="패턴" data-en="Patterns">Patterns</button>
-    <button class="nav-btn" data-section="compare" data-ko="비교" data-en="Compare">Compare</button>
-    <button class="nav-btn" data-section="roadmap" data-ko="로드맵" data-en="Roadmap">Roadmap</button>
-    <button class="nav-btn" data-section="lab" data-ko="실습" data-en="Lab">Lab</button>
-    <button class="nav-btn" data-section="quiz" data-ko="퀴즈" data-en="Quiz">Quiz</button>
-    <button class="nav-btn" data-section="memo" data-ko="메모" data-en="Memo">Memo</button>
-    <span class="nav-spacer"></span>
-    <button class="lang-btn" data-locale="ko">한글</button>
-    <button class="lang-btn active" data-locale="en">English</button>
-  </nav>
-  <div class="section active" id="sec-hero"><div class="hero-grid"><div><div class="hero-title" data-ko="프롬프트 엔지니어링 실전" data-en="Prompt Engineering in Practice">Prompt Engineering in Practice</div><p class="hero-sub" data-ko="좋은 프롬프트는 문장을 멋지게 쓰는 기술보다 구조를 설계하는 일에 가깝습니다. 역할, 입력 맥락, 출력 형식, 평가 기준을 어떻게 조합할지 실전 관점으로 정리합니다." data-en="Great prompting is less about clever phrasing and more about structure design. This textbook shows how to combine role, input context, output format, and evaluation criteria into repeatable practice.">Great prompting is less about clever phrasing and more about structure design. This textbook shows how to combine role, input context, output format, and evaluation criteria into repeatable practice.</p><div class="hero-btns"><button class="btn btn-primary" data-start-section="model" data-ko="기초 구조 보기" data-en="See the base structure">See the base structure</button><button class="btn btn-secondary" data-start-section="lab" data-ko="실습 열기" data-en="Open the lab">Open the lab</button></div></div><div class="hero-panel"><div class="hero-system"><div class="hero-ring"></div><div class="hero-ring-2"></div><div class="hero-ring-3"></div><div class="hero-core"></div><div class="signal a"></div><div class="signal b"></div></div></div></div></div>
-  <div class="section" id="sec-model"><div class="sec-tag">Section A</div><h2 class="sec-h" data-ko="프롬프트의 네 층" data-en="The four prompt layers">The four prompt layers</h2><p class="sec-sub" data-ko="실전에서 강한 프롬프트는 역할, 입력, 출력, 평가가 함께 움직입니다." data-en="A strong prompt in practice aligns role, input, output, and evaluation.">A strong prompt in practice aligns role, input, output, and evaluation.</p><div class="card-grid card-grid-2"><div class="card"><h3>Role</h3><p data-ko="AI가 어떤 관점과 책임으로 답할지 결정합니다." data-en="Sets the point of view and responsibility of the model.">Sets the point of view and responsibility of the model.</p></div><div class="card"><h3>Input</h3><p data-ko="문제, 자료, 제약 조건을 충분히 제공해야 합니다." data-en="Provides the task, data, and constraints clearly.">Provides the task, data, and constraints clearly.</p></div><div class="card"><h3>Output</h3><p data-ko="표, bullet, JSON, 보고서 등 결과 형식을 고정합니다." data-en="Locks the output into a table, bullets, JSON, or a report.">Locks the output into a table, bullets, JSON, or a report.</p></div><div class="card"><h3>Evaluation</h3><p data-ko="좋은 답변의 기준을 미리 적어 결과 편차를 줄입니다." data-en="States success criteria in advance to reduce variance.">States success criteria in advance to reduce variance.</p></div></div></div>
-  <div class="section" id="sec-patterns"><div class="sec-tag">Section B</div><h2 class="sec-h" data-ko="실전 패턴" data-en="Practical patterns">Practical patterns</h2><div class="card-grid card-grid-2"><div class="card"><h3 data-ko="Few-shot" data-en="Few-shot">Few-shot</h3><p data-ko="예시 1~3개를 넣어 톤과 구조를 안정화합니다." data-en="Use 1 to 3 examples to stabilize tone and structure.">Use 1 to 3 examples to stabilize tone and structure.</p></div><div class="card"><h3 data-ko="구조화 출력" data-en="Structured output">Structured output</h3><p data-ko="후속 자동화가 필요하다면 출력 형식을 먼저 정합니다." data-en="Define the output schema first if downstream automation matters.">Define the output schema first if downstream automation matters.</p></div><div class="card"><h3 data-ko="역할 프레이밍" data-en="Role framing">Role framing</h3><p data-ko="교사, 리뷰어, 분석가처럼 역할을 부여하면 기대치가 선명해집니다." data-en="Role framing makes expectations and quality standards clearer.">Role framing makes expectations and quality standards clearer.</p></div><div class="card"><h3 data-ko="자체 평가 포함" data-en="Built-in evaluation">Built-in evaluation</h3><p data-ko="답변 뒤에 체크리스트를 요구하면 품질 점검이 쉬워집니다." data-en="Ask the model to self-check against a checklist after answering.">Ask the model to self-check against a checklist after answering.</p></div></div></div>
-  <div class="section" id="sec-compare"><div class="sec-tag">Section C</div><h2 class="sec-h" data-ko="약한 프롬프트 vs 강한 프롬프트" data-en="Weak prompt vs strong prompt">Weak prompt vs strong prompt</h2><div class="compare-wrap"><div class="compare-side bad"><h3 data-ko="약한 프롬프트" data-en="Weak prompt">Weak prompt</h3><ul><li data-ko="목표가 모호하다" data-en="The goal is vague">The goal is vague</li><li data-ko="출력 형식이 없다" data-en="No output format is specified">No output format is specified</li><li data-ko="성공 기준이 없다" data-en="No success criteria are defined">No success criteria are defined</li></ul></div><div class="compare-side good"><h3 data-ko="강한 프롬프트" data-en="Strong prompt">Strong prompt</h3><ul><li data-ko="역할과 맥락이 분명하다" data-en="Role and context are explicit">Role and context are explicit</li><li data-ko="출력 형식이 구조화되어 있다" data-en="The output format is structured">The output format is structured</li><li data-ko="평가 기준이 포함되어 있다" data-en="Evaluation criteria are included">Evaluation criteria are included</li></ul></div></div></div>
-  <div class="section" id="sec-roadmap"><div class="sec-tag">Section D</div><h2 class="sec-h" data-ko="학습 로드맵" data-en="Learning roadmap">Learning roadmap</h2><div class="roadmap-card"><label class="roadmap-row" data-roadmap="1"><input type="checkbox" /><div><strong data-ko="역할부터 고정" data-en="Fix the role first">Fix the role first</strong><p data-ko="AI가 어떤 사람처럼 답해야 하는지 먼저 정합니다." data-en="Start by defining what kind of specialist the model should act as.">Start by defining what kind of specialist the model should act as.</p></div></label><label class="roadmap-row" data-roadmap="2"><input type="checkbox" /><div><strong data-ko="출력 형식 지정" data-en="Set the output format">Set the output format</strong><p data-ko="표, bullet, JSON 중 하나로 결과를 제한합니다." data-en="Restrict the result to a table, bullets, or JSON.">Restrict the result to a table, bullets, or JSON.</p></div></label><label class="roadmap-row" data-roadmap="3"><input type="checkbox" /><div><strong data-ko="평가 기준 추가" data-en="Add evaluation criteria">Add evaluation criteria</strong><p data-ko="좋은 답의 조건을 적어 답변 품질을 끌어올립니다." data-en="Add explicit criteria so the model knows what quality means.">Add explicit criteria so the model knows what quality means.</p></div></label></div></div>
-  <div class="section" id="sec-lab"><div class="sec-tag">Section E</div><h2 class="sec-h" data-ko="실습" data-en="Lab">Lab</h2><div class="card"><ol><li data-ko="하나의 업무 주제를 고릅니다." data-en="Choose one real work topic.">Choose one real work topic.</li><li data-ko="역할, 입력 맥락, 출력 형식, 평가 기준을 모두 적습니다." data-en="Write role, input context, output format, and evaluation criteria.">Write role, input context, output format, and evaluation criteria.</li><li data-ko="약한 버전과 강한 버전 프롬프트를 각각 실행해 결과 차이를 비교합니다." data-en="Run a weak and a strong version of the prompt and compare the outputs.">Run a weak and a strong version of the prompt and compare the outputs.</li></ol></div></div>
-  <div class="section" id="sec-quiz" data-quiz><div class="sec-tag">Section F</div><h2 class="sec-h" data-ko="퀴즈" data-en="Quiz">Quiz</h2><div class="quiz-box" data-answer="b"><h3 data-ko="1. 강한 프롬프트의 특징은?" data-en="1. What is a defining trait of a strong prompt?">1. What is a defining trait of a strong prompt?</h3><label class="quiz-option"><input type="radio" name="p1" value="a" /> <span data-ko="문장이 무조건 길다" data-en="It is always long">It is always long</span></label><label class="quiz-option"><input type="radio" name="p1" value="b" /> <span data-ko="역할, 출력 형식, 평가 기준이 분명하다" data-en="Role, output format, and evaluation criteria are clear">Role, output format, and evaluation criteria are clear</span></label><label class="quiz-option"><input type="radio" name="p1" value="c" /> <span data-ko="영어로만 작성한다" data-en="It is written only in English">It is written only in English</span></label></div><div class="memo-actions"><button class="btn btn-primary" data-quiz-submit data-ko="채점하기" data-en="Check answers">Check answers</button><div class="quiz-result" data-quiz-result></div></div></div>
-  <div class="section" id="sec-memo"><div class="sec-tag">Section G</div><h2 class="sec-h" data-ko="메모" data-en="Memo">Memo</h2><div class="memo-box"><textarea data-memo data-ko-placeholder="재사용하고 싶은 프롬프트 패턴을 적어보세요." data-en-placeholder="Write the prompt pattern you want to reuse." placeholder="Write the prompt pattern you want to reuse."></textarea><div class="memo-actions"><button class="btn btn-secondary" data-memo-save data-ko="저장" data-en="Save">Save</button><button class="btn btn-secondary" data-memo-copy data-ko="복사" data-en="Copy">Copy</button><button class="btn btn-secondary" data-memo-reset data-ko="초기화" data-en="Reset">Reset</button></div></div></div>
-  <div class="footer-note" data-ko="CLOID.AI interactive textbook · Prompt engineering patterns" data-en="CLOID.AI interactive textbook · Prompt engineering patterns">CLOID.AI interactive textbook · Prompt engineering patterns</div>
-  <script src="/textbooks/common.js"></script>
+<body>
+
+<div id="progressBarTop" style="width:0%"></div>
+
+<nav id="topNav">
+  <span class="nav-logo">프롬프트 학습실</span>
+  <button class="nav-btn active" onclick="goSec('hero')">홈</button>
+  <button class="nav-btn" onclick="goSec('structure')">구조맵</button>
+  <button class="nav-btn" onclick="goSec('technique')">7기법</button>
+  <button class="nav-btn" onclick="goSec('compare')">비교실험</button>
+  <button class="nav-btn" onclick="goSec('doctors')">5박사</button>
+  <button class="nav-btn" onclick="goSec('roadmap')">로드맵</button>
+  <button class="nav-btn" onclick="goSec('template')">템플릿</button>
+  <button class="nav-btn" onclick="goSec('skill')">스킬변환</button>
+  <button class="nav-btn" onclick="goSec('checklist')">자가진단</button>
+  <button class="nav-btn" onclick="goSec('quiz')">퀴즈</button>
+  <button class="nav-btn" onclick="goSec('glossary')">용어사전</button>
+  <button class="nav-btn" onclick="goSec('memo')">복사메모</button>
+</nav>
+
+<!-- HERO -->
+<div class="section active" id="sec-hero">
+  <div style="padding-top:20px;">
+    <div class="hero-title">프롬프트 엔지니어링 실전 학습실</div>
+    <p class="hero-sub">좋은 프롬프트 vs 나쁜 프롬프트, 7가지 핵심 기법, 실전 템플릿, SKILL.md 변환까지.<br>5명의 박사 에이전트가 함께 가르쳐 드립니다.</p>
+    <div class="hero-btns">
+      <button class="btn btn-primary" onclick="goSec('structure')">바로 시작하기</button>
+      <button class="btn btn-secondary" onclick="goSec('doctors')">5명 박사에게 배우기</button>
+      <button class="btn btn-secondary" onclick="goSec('compare')">비교실험부터 보기</button>
+    </div>
+    <div class="progress-summary">
+      <span class="progress-text" id="progressLabel">학습 진행률 0%</span>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    </div>
+    <div class="diag-box">
+      <h3>혹시 이런 상태인가요?</h3>
+      <div class="diag-item">프롬프트를 "대충" 쓰고 결과가 들쭉날쭉하다</div>
+      <div class="diag-item">시스템 프롬프트, Few-shot이 뭔지 모른다</div>
+      <div class="diag-item">매번 비슷한 요청을 반복하면서 결과가 다르다</div>
+      <div class="diag-item">SKILL.md 작성법을 모른다</div>
+      <div class="diag-item">프롬프트 엔지니어링을 체계적으로 배운 적 없다</div>
+      <div style="margin-top:16px;padding:14px;background:rgba(88,166,255,0.06);border-radius:var(--radius-sm);border-left:3px solid var(--accent);">
+        <p style="font-size:0.88rem;color:var(--text2);">하나라도 해당되면 이 학습실이 도움이 됩니다. 구조맵(A)부터 순서대로 따라가세요.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STRUCTURE MAP -->
+<div class="section" id="sec-structure">
+  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--dr1);">🏗️ Dr. Structure</div>
+  <h2 class="sec-h">프롬프트의 6가지 구성요소</h2>
+  <p class="sec-sub">좋은 프롬프트는 6개의 블록으로 구성됩니다. 카드를 눌러 비교하세요.</p>
+  <div class="card-grid card-grid-6" id="structGrid"></div>
+  <div class="concept-detail" id="structDetail"></div>
+  <div class="highlight-box">🔑 프롬프트는 "부탁"이 아니라 "설계"다</div>
+</div>
+
+<!-- 7 TECHNIQUES -->
+<div class="section" id="sec-technique">
+  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--dr2);">🔬 Dr. Technique</div>
+  <h2 class="sec-h">7가지 핵심 기법</h2>
+  <p class="sec-sub">프롬프트를 한 단계 끌어올리는 핵심 테크닉. 탭을 눌러 비교하세요.</p>
+  <div class="tabs" id="techTabs"></div>
+  <div id="techContent"></div>
+</div>
+
+<!-- COMPARE -->
+<div class="section" id="sec-compare">
+  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--dr3);">⚖️ Dr. Before-After</div>
+  <h2 class="sec-h">나쁜 프롬프트 vs 좋은 프롬프트</h2>
+  <p class="sec-sub">10가지 실전 사례로 차이를 체감해 보세요. 탭을 눌러 전환합니다.</p>
+  <div class="tabs" id="compareTabs"></div>
+  <div id="compareContent"></div>
+  <div class="warn-box" style="margin-top:20px;">💡 핵심: 구체적일수록 결과가 좋다. 형식을 지정하면 출력이 안정된다. 하지 말아야 할 것을 명시하면 실수가 줄어든다.</div>
+</div>
+
+<!-- DOCTORS -->
+<div class="section" id="sec-doctors">
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--accent4);">섹션 E</div>
+  <h2 class="sec-h">5명 박사 패널</h2>
+  <p class="sec-sub">각 박사를 클릭하면 해당 관점에서 설명, 오해 교정, 실천 행동이 바뀝니다.</p>
+  <div class="card-grid card-grid-5" id="drGrid"></div>
+  <div class="dr-panel" id="drPanel"></div>
+</div>
+
+<!-- ROADMAP -->
+<div class="section" id="sec-roadmap">
+  <div class="sec-tag" style="background:rgba(88,166,255,0.12);color:var(--accent);">섹션 F</div>
+  <h2 class="sec-h">단계별 학습 로드맵</h2>
+  <p class="sec-sub">체크박스를 완료하면 진행 상태가 반영됩니다.</p>
+  <div class="roadmap" id="roadmapWrap"></div>
+</div>
+
+<!-- TEMPLATES -->
+<div class="section" id="sec-template">
+  <div class="sec-tag" style="background:rgba(240,136,62,0.12);color:var(--dr4);">📝 Dr. Template</div>
+  <h2 class="sec-h">실전 프롬프트 템플릿 7가지</h2>
+  <p class="sec-sub">업무에 바로 쓸 수 있는 템플릿입니다. 클릭해서 열고, 복사 버튼으로 가져가세요.</p>
+  <div id="templateWrap"></div>
+</div>
+
+<!-- SKILL BRIDGE -->
+<div class="section" id="sec-skill">
+  <div class="sec-tag" style="background:rgba(255,123,114,0.12);color:var(--dr5);">🔗 Dr. Skill-Bridge</div>
+  <h2 class="sec-h">프롬프트 → SKILL.md 변환 실험실</h2>
+  <p class="sec-sub">좋은 프롬프트가 곧 좋은 SKILL.md의 본문이 됩니다. 3가지 변환 예시를 확인하세요.</p>
+  <div id="skillWrap"></div>
+  <div class="highlight-box">💡 좋은 프롬프트 = 좋은 SKILL.md 본문</div>
+</div>
+
+<!-- CHECKLIST -->
+<div class="section" id="sec-checklist">
+  <div class="sec-tag" style="background:rgba(121,192,255,0.12);color:var(--accent6);">섹션 I</div>
+  <h2 class="sec-h">프롬프트 자가진단 체크리스트</h2>
+  <p class="sec-sub">내 프롬프트가 괜찮은지, 아래 항목을 점검해 보세요.</p>
+  <div class="card" style="padding:24px;">
+    <ul class="checklist" id="checklistWrap"></ul>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div class="section" id="sec-quiz">
+  <div class="sec-tag" style="background:rgba(210,168,255,0.12);color:var(--accent3);">섹션 J</div>
+  <h2 class="sec-h">퀴즈 / 자기점검</h2>
+  <p class="sec-sub">12문항으로 이해도를 확인하세요.</p>
+  <div id="quizWrap"></div>
+  <div style="text-align:center;margin-top:16px;">
+    <button class="btn btn-primary" onclick="scoreQuiz()">채점하기</button>
+    <button class="btn btn-secondary" onclick="resetQuiz()">다시 풀기</button>
+  </div>
+  <div class="quiz-score" id="quizScore" style="display:none;"></div>
+</div>
+
+<!-- GLOSSARY -->
+<div class="section" id="sec-glossary">
+  <div class="sec-tag" style="background:rgba(121,192,255,0.12);color:var(--accent6);">섹션 K</div>
+  <h2 class="sec-h">용어사전</h2>
+  <p class="sec-sub">클릭하면 정의가 나타납니다. 검색도 가능합니다.</p>
+  <input class="glossary-search" placeholder="용어 검색..." oninput="filterGlossary(this.value)">
+  <div id="glossaryList"></div>
+</div>
+
+<!-- MEMO -->
+<div class="section" id="sec-memo">
+  <div class="sec-tag" style="background:rgba(63,185,80,0.12);color:var(--accent2);">섹션 L</div>
+  <h2 class="sec-h">복사용 메모</h2>
+  <p class="sec-sub">핵심 정리, 체크리스트, 범용 템플릿을 복사해서 사용하세요.</p>
+  <div id="memoWrap"></div>
+</div>
+
+<script>
+// ============ DATA ============
+const structData = [
+  {icon:'🎭',label:'역할 지정',brief:'Role',title:'역할 지정 (Role)',desc:'AI에게 전문가 역할을 부여합니다. 구체적인 경력, 전문 분야, 성격까지 포함하면 더 일관된 결과를 얻을 수 있습니다.',example:'예: "당신은 10년 경력의 UX 디자이너입니다"',tip:'역할에 구체적 숫자(경력 연수)를 넣으면 전문성 수준이 달라집니다.'},
+  {icon:'📖',label:'맥락 제공',brief:'Context',title:'맥락 제공 (Context)',desc:'배경 정보와 상황을 설명합니다. 산업, 규모, 상황, 대상 고객 등을 구체적으로 제공하세요.',example:'예: "B2B SaaS 스타트업의 시리즈A 투자 유치를 준비 중입니다"',tip:'"누가, 왜, 어떤 상황에서" 3가지를 반드시 포함하세요.'},
+  {icon:'📋',label:'구체적 지시',brief:'Instruction',title:'구체적 지시 (Instruction)',desc:'해야 할 일을 명확하게 지시합니다. 모호한 동사 대신 구체적인 행동을 지정하세요.',example:'예: "감정 점수(1~5)와 핵심 키워드 3개를 추출하세요"',tip:'동사를 구체적으로: "알려줘" → "비교 분석해서 표로 정리해줘"'},
+  {icon:'📐',label:'출력 형식',brief:'Format',title:'출력 형식 지정 (Format)',desc:'원하는 출력 형태를 지정합니다. JSON, 마크다운, 표 등 형식을 명시하면 출력이 안정됩니다.',example:'예: "JSON 형식으로 출력하세요"',tip:'출력 예시를 하나 보여주면 형식 안정성이 급격히 올라갑니다.'},
+  {icon:'🚧',label:'제약 조건',brief:'Constraints',title:'제약 조건 (Constraints)',desc:'하지 말아야 할 것을 명시합니다. 길이, 톤, 금지어 등을 제한하면 원치 않는 결과를 줄일 수 있습니다.',example:'예: "전문 용어 금지, 500자 이내"',tip:'"~하지 마세요"를 3개 이상 적어보면 결과가 크게 달라집니다.'},
+  {icon:'📌',label:'예시 제공',brief:'Examples',title:'예시 제공 (Examples / Few-shot)',desc:'원하는 결과의 예시를 보여줍니다. 1~3개의 입출력 예시를 주면 AI가 패턴을 파악합니다.',example:'예: "입력: \'배송이 늦어요\' → 출력: {감정: 불만, 점수: 2}"',tip:'예시 2~3개가 최적. 경계 사례를 포함하면 더 좋습니다.'}
+];
+
+const techData = [
+  {name:'역할 부여',desc:'AI에게 특정 역할을 부여하여 전문적인 관점에서 답하게 합니다.',bad:'마케팅 전략 알려줘',good:'당신은 실리콘밸리에서 15년간 B2B SaaS 마케팅을 담당한 CMO입니다. 시리즈A 단계의 스타트업이 MAU 1만에서 10만으로 성장하기 위한 마케팅 전략을 3단계로 제안해 주세요.',tip:'역할에 구체적 경력, 지역, 전문 분야를 넣으면 결과의 전문성이 달라집니다.'},
+  {name:'단계별 사고 (CoT)',desc:'문제를 단계적으로 생각하도록 유도하여 복잡한 추론의 정확도를 높입니다.',bad:'이 수학 문제 풀어줘',good:'다음 문제를 단계별로 풀어주세요. 각 단계마다 이유를 설명하고, 마지막에 최종 답을 명시하세요.\n\n문제: 공장에서 하루 150개 생산, 불량률 4%. 30일간 정상 제품 총 수는?',tip:'"단계별로", "하나씩", "이유를 설명하며"를 추가하면 CoT가 활성화됩니다.'},
+  {name:'Few-shot 예시',desc:'입력-출력 예시를 제공하여 AI가 패턴을 학습하게 합니다.',bad:'리뷰 감정 분석해줘',good:'다음 리뷰의 감정을 분석해 주세요.\n\n예시 1:\n리뷰: "배송이 빨라서 좋았어요"\n결과: {감정: 긍정, 점수: 4}\n\n예시 2:\n리뷰: "제품이 고장났어요"\n결과: {감정: 부정, 점수: 1}\n\n이제 분석할 리뷰:\n"가격 대비 괜찮은데 포장이 좀 아쉬워요"',tip:'예시 2~3개가 최적. 경계 사례(애매한 입력)를 포함하면 더 좋습니다.'},
+  {name:'출력 형식 지정',desc:'JSON, 표, 마크다운 등 원하는 형식을 명시하여 출력을 안정화합니다.',bad:'분석 결과 알려줘',good:'다음 형식의 JSON으로 출력해 주세요:\n{\n  "제목": "string",\n  "요약": "string (50자 이내)",\n  "핵심키워드": ["string", "string", "string"],\n  "중요도": 1~5\n}',tip:'구체적인 필드명, 데이터 타입, 길이 제한까지 지정하면 파싱하기 편한 출력을 얻습니다.'},
+  {name:'시스템 프롬프트',desc:'대화 전체에 적용되는 기본 지침을 설정합니다.',bad:'(매번 톤과 형식을 반복 지시)',good:'[시스템 프롬프트]\n당신은 한국어 기술 문서 편집자입니다.\n모든 답변은 존댓말로 하세요.\n마크다운 형식을 사용하세요.\n불확실한 정보는 "확인 필요"로 표시하세요.',tip:'시스템 프롬프트에 톤, 형식, 금지 사항을 넣으면 매 대화마다 반복할 필요가 없습니다.'},
+  {name:'프롬프트 체이닝',desc:'복잡한 작업을 여러 단계로 분할하여 순서대로 처리합니다.',bad:'이 보고서 분석해서 슬라이드로 만들어줘',good:'단계 1: "이 보고서에서 핵심 데이터 5개를 추출해 주세요"\n→ 단계 2: "추출된 데이터를 기반으로 트렌드를 분석해 주세요"\n→ 단계 3: "분석 결과를 경영진 브리핑용 슬라이드 3장 구성으로 요약해 주세요"',tip:'각 단계의 출력을 다음 단계의 입력으로 사용하세요. 한 번에 모든 것을 시키지 마세요.'},
+  {name:'네거티브 프롬프트',desc:'하지 말아야 할 것을 명시하여 원치 않는 결과를 방지합니다.',bad:'(금지 사항 없이 요청)',good:'다음 규칙을 지켜주세요:\n- 인사말 생략\n- 이모지 사용 금지\n- "~할 수 있습니다" 같은 모호한 표현 금지\n- 500자 초과 금지\n- 출처 불명확한 통계 인용 금지',tip:'"~하지 마세요"를 구체적으로 나열하면 결과의 품질이 급격히 올라갑니다.'}
+];
+
+const compareData = [
+  {title:'보고서 요약',bad:'보고서 요약해줘',good:'당신은 경영 컨설턴트입니다. 아래 보고서를 다음 형식으로 요약해 주세요:\n1. 핵심 결론 (1문장)\n2. 주요 데이터 3개 (숫자 포함)\n3. 경영진 시사점 (2문장)\n\n제약: 전체 300자 이내, 전문 용어 최소화',explain:'역할+형식+제약 조건을 추가하면 "어떤 관점에서, 무엇을, 어떻게" 요약할지 명확해집니다.'},
+  {title:'코드 리뷰',bad:'이 코드 봐줘',good:'당신은 시니어 백엔드 개발자입니다. 아래 Python 코드를 리뷰해 주세요.\n\n관점: 1) 보안 취약점 2) 성능 병목 3) 가독성\n출력: 각 관점별 문제점+개선안을 표로 정리\n제약: 코드 수정 금지, 설명만',explain:'리뷰 관점을 명시하고, 출력 형식을 지정하면 체계적인 리뷰를 받을 수 있습니다.'},
+  {title:'이메일 작성',bad:'이메일 써줘',good:'당신은 비즈니스 커뮤니케이션 전문가입니다.\n상황: 납품 일정이 2주 지연됨. 고객사 김부장에게 사과와 대안 전달.\n톤: 정중하되 자신감 있게\n구조: 사과→원인→대안→방지책\n제약: 200자 이내, 과도한 사과 금지',explain:'상황+대상+톤+구조를 구체적으로 주면 바로 사용할 수 있는 이메일이 나옵니다.'},
+  {title:'데이터 분석',bad:'이 데이터 분석해줘',good:'아래 매출 데이터(CSV)를 분석해 주세요.\n1. 월별 매출 추이 (증감률 포함)\n2. 상위 3개 제품 매출 비중\n3. 이상치(전월 대비 ±30%) 탐지\n출력: 마크다운 표 + 한 줄 인사이트\n제약: 추측 금지, 데이터 기반 사실만',explain:'분석 항목을 구체적으로 나열하고, "추측 금지" 제약을 추가하면 신뢰도가 올라갑니다.'},
+  {title:'회의록 정리',bad:'회의록 정리해줘',good:'아래 회의 녹취록을 정리해 주세요:\n## 회의 요약\n- 일시/참석자/핵심 안건\n## 결정 사항\n- [결정] — 담당자, 기한\n## 액션 아이템\n- [할 일] — 담당, 기한\n제약: 결정과 액션 중심, 발언자별 요약 불필요',explain:'출력 형식을 마크다운 템플릿으로 보여주면 AI가 그대로 채워 넣습니다.'},
+  {title:'번역 요청',bad:'이거 영어로 번역해줘',good:'아래 한국어를 영어로 번역해 주세요.\n- 비즈니스 공식 톤\n- 한국식 표현은 영미권에 맞게 의역\n- 고유명사: 원문 병기 "삼성전자 (Samsung)"\n- 번역 후 자연스러움 자체 평가 (1~5)',explain:'톤, 의역 기준, 고유명사 처리, 자체 평가를 추가하면 번역 품질이 달라집니다.'},
+  {title:'브레인스토밍',bad:'아이디어 좀 줘',good:'당신은 IDEO 디자인 씽킹 퍼실리테이터입니다.\n주제: "MZ세대 직장인 점심시간 활용 앱"\n방법: SCAMPER 기법\n출력: 기법별 아이디어 1개씩 (표)\n제약: 기존 앱과 차별화되는 것만',explain:'브레인스토밍도 프레임워크(SCAMPER)를 지정하면 체계적인 아이디어가 나옵니다.'},
+  {title:'학습 계획',bad:'파이썬 공부 계획 만들어줘',good:'당신은 프로그래밍 교육 전문가입니다.\n학습자: 엑셀 잘 쓰는 마케터, 코딩 경험 없음\n목표: 4주 후 Pandas로 데이터 분석\n조건: 하루 1시간, 주 5일\n출력: 주차별 계획표\n제약: 이론 30%, 실습 70%',explain:'학습자 수준+목표+시간+형식+비율까지 지정하면 실행 가능한 계획이 나옵니다.'},
+  {title:'프레젠테이션',bad:'발표 자료 만들어줘',good:'당신은 TED 코치입니다.\n주제: "AI 시대의 인사 전략"\n청중: C-level 임원 30명, 15분\n출력: 슬라이드 8장 구성안 (번호|제목|핵심메시지|비주얼)\n제약: 텍스트 최소, 데이터 시각화 위주',explain:'청중+시간+슬라이드 수+비주얼 가이드를 지정하면 전문적인 구성안이 나옵니다.'},
+  {title:'고객 응대',bad:'CS 응대 매뉴얼 만들어줘',good:'당신은 CX 전문가입니다.\n제품: SaaS 프로젝트 관리 도구\n상황: 결제 오류 문의\n출력: 상황분류→1차응대→에스컬레이션→팔로업\n제약: 3문장 이내 핵심전달, 과도한 사과 금지',explain:'상황 분류+스크립트 구조+에스컬레이션 기준+톤 제약까지 있으면 즉시 사용 가능한 매뉴얼이 됩니다.'}
+];
+
+const drColors = ['var(--dr1)','var(--dr2)','var(--dr3)','var(--dr4)','var(--dr5)'];
+const drData = [
+  {emoji:'🏗️',name:'Dr. Structure',role:'구조 박사',color:drColors[0],q:'좋은 프롬프트의 구조는?',
+   summary:['프롬프트는 6개 블록(역할, 맥락, 지시, 형식, 제약, 예시)으로 구성된다','각 블록을 의식적으로 채우면 결과 품질이 급격히 올라간다','구조를 먼저 잡고, 그 다음 내용을 채우라'],
+   miscon:['프롬프트는 자연스럽게 쓰면 된다 → 구조를 의식해야 한다','길게 쓰면 좋다 → 구조적으로 쓰는 것이 중요하다','한 번에 완벽해야 한다 → 블록별로 나눠서 개선하라'],
+   actions:['지금 쓰는 프롬프트에서 6개 블록 중 빠진 것을 찾아보세요','역할+지시+형식 3개만 추가해도 결과가 달라집니다','출력 예시를 하나 보여주는 습관을 들이세요'],
+   next:'구조를 이해했다면 기법 박사(Dr. Technique)에게 이동하세요.'},
+  {emoji:'🔬',name:'Dr. Technique',role:'기법 박사',color:drColors[1],q:'어떤 기법을 조합해야 하는가?',
+   summary:['7가지 핵심 기법은 조합해서 쓸 때 가장 강력하다','Chain of Thought(단계별 사고)는 복잡한 문제에 필수다','시스템 프롬프트로 일관성을 확보하라'],
+   miscon:['기법은 하나만 쓰면 된다 → 조합이 핵심이다','Few-shot은 예시가 많을수록 좋다 → 2~3개가 최적이다','네거티브 프롬프트는 부정적이다 → 오히려 품질을 높인다'],
+   actions:['오늘 쓸 프롬프트에 CoT("단계별로")를 추가해 보세요','시스템 프롬프트를 3줄로 작성해 보세요','네거티브 조건 3개를 추가해 보세요'],
+   next:'기법을 익혔다면 비교 박사(Dr. Before-After)에게 이동하세요.'},
+  {emoji:'⚖️',name:'Dr. Before-After',role:'비교 박사',color:drColors[2],q:'나쁜 프롬프트와 좋은 프롬프트의 차이는?',
+   summary:['차이는 "구체성"이다. 모호한 요청은 모호한 결과를 만든다','전후 비교를 통해 개선 포인트를 찾아라','반복 개선이 정상이다 — 한 번에 좋은 결과가 나올 필요 없다'],
+   miscon:['간단한 프롬프트가 더 좋다 → 구체적인 것이 좋다','AI가 알아서 잘 해준다 → 명시적으로 알려줘야 한다','한 번에 좋은 결과가 나와야 한다 → 반복 개선이 정상이다'],
+   actions:['최근 쓴 프롬프트를 꺼내서 비교 패턴으로 개선해 보세요','모호한 동사("해줘")를 구체적 동사로 바꿔 보세요','제약 조건을 3개 이상 추가해 보세요'],
+   next:'비교를 체감했다면 실전 박사(Dr. Template)에게 이동하세요.'},
+  {emoji:'📝',name:'Dr. Template',role:'실전 박사',color:drColors[3],q:'어떻게 실전에 바로 적용하는가?',
+   summary:['템플릿은 매번 0에서 시작하지 않게 해준다','업무 유형별로 기본 템플릿을 만들어 두라','템플릿의 빈칸만 채우면 70% 이상의 품질이 보장된다'],
+   miscon:['템플릿을 쓰면 창의성이 떨어진다 → 구조 위에 창의성이 올라간다','매번 새로 쓰는 게 낫다 → 반복 업무는 템플릿이 효율적이다','남의 템플릿을 그대로 쓰면 된다 → 내 업무에 맞게 커스터마이즈하라'],
+   actions:['가장 자주 하는 요청 3가지를 템플릿으로 만들어 보세요','팀 내 공유 프롬프트 라이브러리를 시작하세요','템플릿에 [여기에 입력]을 넣어 재사용성을 높이세요'],
+   next:'실전 템플릿을 만들었다면 스킬연결 박사(Dr. Skill-Bridge)에게 이동하세요.'},
+  {emoji:'🔗',name:'Dr. Skill-Bridge',role:'스킬연결 박사',color:drColors[4],q:'프롬프트를 어떻게 SKILL.md로 만드는가?',
+   summary:['좋은 프롬프트 = 좋은 SKILL.md 본문이다','프롬프트를 SKILL.md로 변환하면 자동화가 된다','스킬은 "반복되는 좋은 프롬프트"를 저장하는 것이다'],
+   miscon:['스킬은 개발자만 만든다 → 프롬프트만 잘 쓰면 누구나 만든다','스킬은 복잡하다 → 좋은 프롬프트를 포맷에 맞게 옮기면 된다','한 번 만들면 끝이다 → 사용 후 개선을 반복하라'],
+   actions:['가장 잘 만든 프롬프트 하나를 SKILL.md로 변환해 보세요','description에 트리거 키워드를 3개 이상 넣으세요','동료에게 스킬을 공유하고 피드백을 받으세요'],
+   next:'모든 박사의 가이드를 마쳤습니다. 퀴즈로 자기점검을 하거나 복사 메모를 활용하세요!'}
+];
+
+const roadmapData = [
+  {title:'1단계: 구조 이해',goal:'프롬프트의 6가지 구성요소를 이해한다',prep:'구조맵 섹션 학습',success:'6가지 요소를 각각 설명할 수 있다',checkpoint:'역할+지시+형식을 포함한 프롬프트를 직접 써볼 수 있는가?'},
+  {title:'2단계: 기법 학습',goal:'7가지 핵심 기법을 구분하고 적용한다',prep:'1단계 완료',success:'CoT, Few-shot, 네거티브 프롬프트를 직접 사용할 수 있다',checkpoint:'기법을 조합한 프롬프트를 쓸 수 있는가?'},
+  {title:'3단계: 전후 비교 체험',goal:'나쁜/좋은 프롬프트 10가지 사례를 비교한다',prep:'2단계 완료',success:'왜 나쁜지, 어떻게 개선하는지 설명할 수 있다',checkpoint:'자신의 과거 프롬프트를 개선할 수 있는가?'},
+  {title:'4단계: 실전 적용',goal:'업무별 템플릿 7가지를 활용한다',prep:'3단계 완료',success:'템플릿을 커스터마이즈해서 실제 업무에 적용했다',checkpoint:'가장 자주 쓰는 프롬프트 3개를 템플릿화했는가?'},
+  {title:'5단계: 스킬 제작',goal:'프롬프트를 SKILL.md로 변환한다',prep:'4단계 완료',success:'최소 1개의 SKILL.md를 작성했다',checkpoint:'description에 트리거 키워드가 포함되어 있는가?'}
+];
+
+const templateData = [
+  {cat:'보고서',title:'보고서 작성 프롬프트',code:'당신은 [분야] 전문 컨설턴트입니다.\n\n# 요청\n아래 데이터를 기반으로 [보고서 유형] 보고서를 작성해 주세요.\n\n# 구조\n1. Executive Summary (3문장 이내)\n2. 현황 분석 (데이터 기반, 표 포함)\n3. 핵심 이슈 3가지\n4. 권고안 (우선순위별)\n5. 다음 단계\n\n# 제약\n- 전체 [N]자 이내\n- 전문 용어 최소화\n- 추측 금지, 데이터 기반만\n\n# 데이터\n[여기에 데이터 붙여넣기]'},
+  {cat:'이메일',title:'비즈니스 이메일 프롬프트',code:'당신은 비즈니스 커뮤니케이션 전문가입니다.\n\n# 상황\n- 발신자: [내 직함/이름]\n- 수신자: [상대방 직함/이름]\n- 목적: [요청/안내/사과/제안]\n- 배경: [상황 설명]\n\n# 톤: [정중/캐주얼/공식적]\n\n# 구조\n1. 인사 + 목적 (1문장)\n2. 본문 (핵심 내용)\n3. 요청/다음 단계\n4. 마무리\n\n# 제약\n- [N]자 이내\n- [금지 표현]'},
+  {cat:'코드리뷰',title:'코드 리뷰 프롬프트',code:'당신은 [언어/프레임워크] 시니어 개발자입니다.\n\n# 리뷰 관점\n1. 🔒 보안 취약점\n2. ⚡ 성능 병목\n3. 📖 가독성/유지보수성\n4. 🧪 테스트 커버리지\n\n# 출력 형식\n| 관점 | 위치 | 문제점 | 심각도 | 개선안 |\n\n# 제약\n- 코드 직접 수정 금지, 설명만\n- 칭찬할 부분도 1개 이상 포함\n\n# 코드\n```\n[여기에 코드]\n```'},
+  {cat:'회의록',title:'회의록 요약 프롬프트',code:'당신은 프로젝트 매니저입니다.\n\n# 출력 형식\n## 회의 개요\n- 일시: / 참석자: / 안건:\n\n## 핵심 논의\n1. [주제] — [합의/미합의]\n\n## 결정 사항\n- [결정] — 담당: [이름], 기한: [날짜]\n\n## 액션 아이템\n- [ ] [할 일] — 담당: [이름], 기한: [날짜]\n\n# 제약\n- 결정과 액션 중심\n- 모호한 표현 구체화\n\n# 녹취록\n[여기에 붙여넣기]'},
+  {cat:'데이터분석',title:'데이터 분석 프롬프트',code:'당신은 데이터 분석가입니다.\n\n# 분석 요청\n1. 기술 통계 (평균, 중앙값, 표준편차)\n2. [특정 분석 항목]\n3. 이상치 탐지 (기준: [기준])\n4. 트렌드/패턴 도출\n\n# 출력: 각 항목별 마크다운 표\n마지막에 "핵심 인사이트 3줄 요약"\n\n# 제약\n- 추측 금지, 데이터 기반 사실만\n- 상관관계 ≠ 인과관계 명시\n\n# 데이터\n[여기에 붙여넣기]'},
+  {cat:'브레인스토밍',title:'아이디어 발상 프롬프트',code:'당신은 [분야] 이노베이션 퍼실리테이터입니다.\n\n# 주제\n[아이디어가 필요한 주제/문제]\n\n# 방법론\n[SCAMPER / 6 Thinking Hats / HMW 중 택 1]\n\n# 출력 형식\n| # | 기법 | 아이디어 | 설명 | 난이도 |\n\n# 제약\n- [N]개 이상\n- 기존과 차별화\n- 각 아이디어에 대상 사용자 명시'},
+  {cat:'번역/교정',title:'번역 및 교정 프롬프트',code:'당신은 [출발어]-[도착어] 전문 번역가입니다.\n전문 분야: [분야]\n\n# 가이드라인\n- 톤: [공식/비공식/기술적]\n- 문화적 표현: 의역 허용 (원문 병기)\n- 고유명사: [처리 방식]\n\n# 출력\n1. 번역문\n2. 번역 노트 (의역 부분 설명)\n3. 자연스러움 자체 평가 (1~5)\n\n# 원문\n[여기에 붙여넣기]'}
+];
+
+const skillData = [
+  {title:'보고서 프롬프트 → SKILL.md',prompt:'당신은 경영 컨설턴트입니다. 아래 데이터를 기반으로 보고서를 작성해 주세요.\n구조: Executive Summary → 현황 분석 → 핵심 이슈 → 권고안\n제약: 1000자 이내, 전문 용어 최소화, 데이터 기반만',skill:'---\nname: business-report\ndescription: |\n  비즈니스 보고서를 작성할 때 사용합니다.\n  "보고서", "리포트", "분석 보고서" 등의 키워드로 트리거됩니다.\n---\n\n당신은 경영 컨설턴트입니다.\n\n# 보고서 구조\n1. Executive Summary (3문장 이내)\n2. 현황 분석 (데이터 기반, 표 포함)\n3. 핵심 이슈 3가지\n4. 권고안 (우선순위별)\n\n# 제약\n- 1000자 이내\n- 전문 용어 최소화\n- 추측 금지'},
+  {title:'코드 리뷰 프롬프트 → SKILL.md',prompt:'당신은 시니어 개발자입니다. 이 코드를 보안/성능/가독성 관점에서 리뷰해 주세요.\n출력: 관점별 표\n제약: 코드 수정 금지, 설명만',skill:'---\nname: code-review\ndescription: |\n  코드 리뷰를 요청할 때 사용합니다.\n  "코드 리뷰", "코드 검토", "리뷰해줘" 등으로 트리거됩니다.\n---\n\n당신은 시니어 소프트웨어 엔지니어입니다.\n\n# 리뷰 관점\n1. 🔒 보안 취약점\n2. ⚡ 성능 병목\n3. 📖 가독성/유지보수성\n\n# 출력 형식\n| 관점 | 위치 | 문제점 | 심각도 | 개선안 |\n\n# 제약\n- 코드 직접 수정 금지\n- 칭찬 1개 이상 포함'},
+  {title:'이메일 작성 프롬프트 → SKILL.md',prompt:'당신은 커뮤니케이션 전문가입니다. 비즈니스 이메일을 작성해 주세요.\n구조: 인사→본문→요청→마무리\n제약: 200자 이내, 과도한 사과 금지',skill:'---\nname: business-email\ndescription: |\n  비즈니스 이메일을 작성할 때 사용합니다.\n  "이메일", "메일 초안", "메일 작성" 등으로 트리거됩니다.\n---\n\n당신은 비즈니스 커뮤니케이션 전문가입니다.\n\n# 이메일 구조\n1. 인사 + 목적 (1문장)\n2. 본문 (핵심 내용)\n3. 요청/다음 단계\n4. 마무리\n\n# 제약\n- 200자 이내\n- 과도한 사과 금지\n- 모호한 표현 금지'}
+];
+
+const checklistData = [
+  '역할(Role)이 명시되어 있는가?',
+  '맥락(Context)이 충분한가? (누가, 왜, 어떤 상황)',
+  '지시(Instruction)가 구체적인가? (모호한 동사 없는가)',
+  '출력 형식(Format)이 지정되어 있는가?',
+  '제약 조건(Constraints)이 3개 이상 있는가?',
+  '예시(Examples)가 포함되어 있는가?',
+  '"~하지 마세요" 네거티브 조건이 있는가?',
+  '출력 길이가 제한되어 있는가?',
+  '한 번에 하나의 작업만 요청하고 있는가?',
+  '대상 독자/사용자가 명시되어 있는가?',
+  '성공 기준이 명확한가?',
+  '재사용 가능한 템플릿 형태인가?'
+];
+
+const quizData = [
+  {q:'프롬프트의 6가지 구성요소에 해당하지 않는 것은?',opts:['역할 지정','맥락 제공','감정 표현','출력 형식'],answer:2,explain:'6가지 구성요소는 역할, 맥락, 지시, 형식, 제약, 예시입니다. "감정 표현"은 포함되지 않습니다.'},
+  {q:'"단계별로 생각해 주세요"는 어떤 기법인가?',opts:['Few-shot','Chain of Thought','네거티브 프롬프트','체이닝'],answer:1,explain:'Chain of Thought(CoT)는 AI에게 단계적 사고를 유도하는 기법입니다.'},
+  {q:'Few-shot 예시는 몇 개가 최적인가?',opts:['1개','2~3개','5~10개','많을수록 좋다'],answer:1,explain:'일반적으로 2~3개가 최적입니다.'},
+  {q:'다음 중 "좋은 프롬프트"의 특징이 아닌 것은?',opts:['출력 형식 지정','제약 조건 포함','가능한 짧게 작성','구체적 동사 사용'],answer:2,explain:'짧다고 좋은 것이 아닙니다. 구조적이고 구체적인 것이 중요합니다.'},
+  {q:'"전문 용어를 사용하지 마세요"는 어떤 구성요소?',opts:['역할 지정','맥락 제공','출력 형식','제약 조건'],answer:3,explain:'"~하지 마세요"는 제약 조건에 해당합니다.'},
+  {q:'시스템 프롬프트의 주요 장점은?',opts:['속도 향상','일관성 유지','비용 절감','창의성 증가'],answer:1,explain:'시스템 프롬프트는 전체 대화에 일관된 지침을 적용합니다.'},
+  {q:'프롬프트 체이닝이란?',opts:['같은 프롬프트 반복','여러 프롬프트 동시 전송','복잡한 작업을 여러 단계로 분할','프롬프트 암호화'],answer:2,explain:'체이닝은 작업을 단계별로 나누어 순서대로 처리하는 기법입니다.'},
+  {q:'네거티브 프롬프트의 효과는?',opts:['AI를 부정적으로 만든다','원치 않는 결과를 방지한다','프롬프트를 짧게 만든다','비용을 절약한다'],answer:1,explain:'하지 말아야 할 것을 명시하여 원치 않는 결과를 방지합니다.'},
+  {q:'SKILL.md에서 description 필드의 역할은?',opts:['AI 성격 설정','스킬 트리거 조건 결정','출력 형식 지정','비밀번호 설정'],answer:1,explain:'description은 어떤 키워드/상황에서 스킬이 트리거될지 결정합니다.'},
+  {q:'"보고서 써줘"가 나쁜 프롬프트인 이유는?',opts:['공손하지 않아서','역할, 형식, 제약이 없어서','AI가 못 써서','영어로 써야 해서'],answer:1,explain:'구체적인 정보 없이 모호한 요청을 하면 일반적인 결과가 나옵니다.'},
+  {q:'좋은 프롬프트와 좋은 SKILL.md의 관계는?',opts:['관련 없다','프롬프트를 포맷에 맞게 옮기면 SKILL.md가 된다','SKILL.md가 먼저다','코딩 필수'],answer:1,explain:'좋은 프롬프트를 SKILL.md 형식에 맞게 변환하면 스킬이 됩니다.'},
+  {q:'다음 중 출력 형식 지정의 예시가 아닌 것은?',opts:['JSON으로 출력하세요','마크다운 표로 정리하세요','열심히 해주세요','번호 목록으로 작성하세요'],answer:2,explain:'"열심히 해주세요"는 모호한 요청이지, 형식 지정이 아닙니다.'}
+];
+
+const glossaryData = [
+  {term:'프롬프트 (Prompt)',def:'AI에게 보내는 입력 텍스트. 질문, 지시, 맥락 등을 포함.',easy:'AI에게 보내는 "주문서"'},
+  {term:'프롬프트 엔지니어링',def:'AI에서 원하는 결과를 얻기 위해 입력을 체계적으로 설계하는 기술.',easy:'"주문서를 잘 쓰는 기술"'},
+  {term:'시스템 프롬프트',def:'대화 전체에 적용되는 기본 지침. 사용자 메시지와 분리되어 일관성을 유지.',easy:'"AI의 기본 설정값"'},
+  {term:'Few-shot',def:'2~3개의 입출력 예시를 보여주어 AI가 패턴을 학습하게 하는 기법.',easy:'"이런 식으로 해달라"고 예시를 보여주는 것'},
+  {term:'Zero-shot',def:'예시 없이 지시만으로 AI에게 작업을 요청하는 방식.',easy:'"예시 없이 바로 시키는 것"'},
+  {term:'Chain of Thought (CoT)',def:'AI에게 단계별로 사고하도록 유도하여 추론 정확도를 높이는 기법.',easy:'"하나씩 생각해봐"라고 시키는 것'},
+  {term:'프롬프트 체이닝',def:'복잡한 작업을 여러 단계로 분할하고, 각 단계 출력을 다음 입력으로 연결.',easy:'"큰 일을 쪼개서 순서대로 시키는 것"'},
+  {term:'네거티브 프롬프트',def:'"하지 말아야 할 것"을 명시하여 원치 않는 결과를 방지.',easy:'"이건 하지 마"라고 금지 목록을 주는 것'},
+  {term:'역할 부여 (Role Prompting)',def:'AI에게 특정 전문가 역할을 부여하여 해당 관점에서 답하게 하는 기법.',easy:'"넌 의사야"라고 역할을 정해주는 것'},
+  {term:'구조화 출력',def:'JSON, 마크다운, 표 등 특정 형식으로 출력하도록 지정.',easy:'"이 형식으로 대답해"라고 틀을 정해주는 것'},
+  {term:'토큰 (Token)',def:'AI가 텍스트를 처리하는 최소 단위. 한국어는 보통 한 글자가 1~2토큰.',easy:'AI가 읽는 "글자 조각"'},
+  {term:'컨텍스트 윈도우',def:'AI가 한 번에 처리할 수 있는 최대 텍스트 길이.',easy:'AI의 "기억력 한계"'},
+  {term:'환각 (Hallucination)',def:'AI가 사실이 아닌 정보를 만들어내는 현상.',easy:'AI가 "아는 척하며 거짓말"하는 것'},
+  {term:'SKILL.md',def:'Claude의 스킬 정의 파일. name, description, 본문으로 구성.',easy:'AI에게 주는 "업무 매뉴얼 파일"'},
+  {term:'Temperature',def:'AI 출력의 무작위성을 조절하는 파라미터. 낮을수록 일관적.',easy:'AI의 "즉흥성 조절 다이얼"'},
+  {term:'그라운딩 (Grounding)',def:'AI 응답을 실제 데이터/문서에 기반하게 하여 환각을 줄이는 기법.',easy:'"실제 자료에 근거해서 대답해"라고 시키는 것'},
+  {term:'플러그인 (Plugin)',def:'AI의 기능을 확장하는 외부 도구/서비스 연결 모듈.',easy:'AI에게 새로운 "도구"를 달아주는 것'},
+  {term:'에이전트 (Agent)',def:'자율적으로 도구를 사용하고 판단하며 작업을 수행하는 AI 시스템.',easy:'"알아서 판단하고 행동하는 AI"'}
+];
+
+const memoData = [
+  {title:'📋 핵심 정리',id:'memo1',text:'• 프롬프트는 "부탁"이 아니라 "설계"다\n• 6가지 구성요소: 역할 / 맥락 / 지시 / 형식 / 제약 / 예시\n• 7가지 핵심 기법: 역할부여 / CoT / Few-shot / 형식지정 / 시스템프롬프트 / 체이닝 / 네거티브\n\n핵심 원칙:\n  → 구체적일수록 결과가 좋다\n  → 형식을 지정하면 출력이 안정된다\n  → 하지 말아야 할 것을 명시하면 실수가 줄어든다\n  → 좋은 프롬프트 = 좋은 SKILL.md 본문'},
+  {title:'✅ 프롬프트 체크리스트',id:'memo2',text:'□ 역할이 명시되어 있는가?\n□ 맥락(누가, 왜, 상황)이 충분한가?\n□ 지시가 구체적인가?\n□ 출력 형식이 지정되어 있는가?\n□ 제약 조건이 3개 이상 있는가?\n□ 예시가 포함되어 있는가?\n□ 네거티브 조건이 있는가?\n□ 출력 길이가 제한되어 있는가?\n□ 한 번에 하나의 작업만 요청하는가?\n□ 대상 독자가 명시되어 있는가?'},
+  {title:'📝 범용 프롬프트 템플릿',id:'memo3',text:'당신은 [역할]입니다.\n\n# 상황\n[배경 맥락]\n\n# 요청\n[구체적 지시]\n\n# 출력 형식\n[원하는 형식]\n\n# 제약\n- [제약 1]\n- [제약 2]\n- [제약 3]\n\n# 예시\n입력: [예시 입력]\n출력: [예시 출력]'}
+];
+
+// ============ STATE ============
+let currentSection = 'hero';
+let completedChecks = {};
+let quizAnswers = {};
+
+// ============ NAV ============
+function goSec(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => {
+    if(b.getAttribute('onclick') && b.getAttribute('onclick').includes("'"+id+"'")) b.classList.add('active');
+  });
+  currentSection = id;
+  window.scrollTo({top:0,behavior:'smooth'});
+  saveState();
+}
+
+// ============ STRUCTURE MAP ============
+function buildStructure() {
+  const grid = document.getElementById('structGrid');
+  grid.innerHTML = structData.map((s,i) => `<div class="card concept-card${i===0?' selected':''}" onclick="selectStruct(${i})" data-idx="${i}"><span class="concept-icon">${s.icon}</span><div class="concept-label">${s.label}</div><div class="concept-brief">${s.brief}</div></div>`).join('');
+  selectStruct(0);
+}
+function selectStruct(idx) {
+  document.querySelectorAll('#structGrid .concept-card').forEach(c=>c.classList.remove('selected'));
+  document.querySelectorAll('#structGrid .concept-card')[idx].classList.add('selected');
+  const s = structData[idx];
+  document.getElementById('structDetail').innerHTML = `<h3>${s.title}</h3><p>${s.desc}</p><p style="margin-top:10px;color:var(--accent6);font-size:0.85rem;">${s.example}</p><p style="margin-top:8px;color:var(--accent2);font-size:0.85rem;">💡 ${s.tip}</p>`;
+}
+
+// ============ TECHNIQUE TABS ============
+function buildTechniques() {
+  document.getElementById('techTabs').innerHTML = techData.map((t,i) => `<button class="tab-btn${i===0?' active':''}" onclick="switchTech(${i})">${i+1}. ${t.name}</button>`).join('');
+  switchTech(0);
+}
+function switchTech(idx) {
+  document.querySelectorAll('#techTabs .tab-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
+  const t = techData[idx];
+  document.getElementById('techContent').innerHTML = `
+    <div class="card" style="padding:24px;">
+      <h3 style="color:var(--accent2);margin-bottom:8px;">${t.name}</h3>
+      <p style="color:var(--text2);font-size:0.9rem;margin-bottom:16px;">${t.desc}</p>
+      <div class="compare-wrap">
+        <div class="compare-side bad"><span class="compare-label off">❌ 나쁜 예</span><pre>${esc(t.bad)}</pre></div>
+        <div class="compare-side good"><span class="compare-label on">✅ 좋은 예</span><pre>${esc(t.good)}</pre></div>
+      </div>
+      <div style="margin-top:12px;padding:12px;background:rgba(63,185,80,0.06);border-radius:var(--radius-sm);border-left:3px solid var(--accent2);font-size:0.85rem;color:var(--text2);">💡 ${t.tip}</div>
+    </div>`;
+}
+
+// ============ COMPARE ============
+function buildCompare() {
+  document.getElementById('compareTabs').innerHTML = compareData.map((c,i) => `<button class="tab-btn${i===0?' active':''}" onclick="switchCompare(${i})">${i+1}. ${c.title}</button>`).join('');
+  switchCompare(0);
+}
+function switchCompare(idx) {
+  document.querySelectorAll('#compareTabs .tab-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
+  const c = compareData[idx];
+  document.getElementById('compareContent').innerHTML = `
+    <div class="compare-wrap">
+      <div class="compare-side bad"><span class="compare-label off">❌ 나쁜 프롬프트</span><pre>${esc(c.bad)}</pre></div>
+      <div class="compare-side good"><span class="compare-label on">✅ 좋은 프롬프트</span><pre>${esc(c.good)}</pre></div>
+    </div>
+    <div class="compare-explain"><strong>💡 왜 다른가?</strong> ${c.explain}</div>`;
+}
+
+// ============ DOCTORS ============
+function buildDoctors() {
+  document.getElementById('drGrid').innerHTML = drData.map((d,i) => `<div class="card dr-card${i===0?' selected':''}" onclick="selectDr(${i})" style="border-color:${i===0?d.color:'var(--border)'}"><span class="dr-emoji">${d.emoji}</span><div class="dr-name" style="color:${d.color}">${d.name}</div><div class="dr-role">${d.role}</div></div>`).join('');
+  selectDr(0);
+}
+function selectDr(idx) {
+  document.querySelectorAll('.dr-card').forEach((c,i)=>{c.classList.toggle('selected',i===idx);c.style.borderColor=i===idx?drColors[i]:'var(--border)';});
+  const d=drData[idx];
+  document.getElementById('drPanel').innerHTML = `
+    <h3 style="color:${d.color}">${d.emoji} ${d.name} — ${d.role}</h3>
+    <h4>❓ 해결하는 질문</h4><p style="font-size:0.9rem;color:var(--text2);margin-bottom:12px;">${d.q}</p>
+    <h4>📌 핵심 요약</h4><ul class="dr-list">${d.summary.map(s=>'<li>'+s+'</li>').join('')}</ul>
+    <h4>⚠️ 흔한 오해</h4><ul class="dr-list">${d.miscon.map(s=>'<li>'+s+'</li>').join('')}</ul>
+    <h4>✅ 바로 해볼 행동</h4><ul class="dr-list">${d.actions.map(s=>'<li>'+s+'</li>').join('')}</ul>
+    <div class="dr-next">➡️ ${d.next}</div>`;
+}
+
+// ============ ROADMAP ============
+function buildRoadmap() {
+  document.getElementById('roadmapWrap').innerHTML = roadmapData.map((r,i) => `
+    <div class="road-step ${completedChecks['road'+i]?'completed':''}" id="roadStep${i}">
+      <div class="road-dot"></div>
+      <h4>${r.title}</h4>
+      <div class="acc" style="margin:8px 0;">
+        <div class="acc-head" onclick="toggleAcc(this)" style="font-size:0.83rem;padding:8px 12px;">상세 보기 <span>▼</span></div>
+        <div class="acc-body">
+          <p><strong>🎯 목표:</strong> ${r.goal}</p>
+          <p><strong>📦 준비물:</strong> ${r.prep}</p>
+          <p><strong>✅ 성공 기준:</strong> ${r.success}</p>
+          <p><strong>🔍 체크포인트:</strong> ${r.checkpoint}</p>
+        </div>
+      </div>
+      <div class="road-check"><label><input type="checkbox" ${completedChecks['road'+i]?'checked':''} onchange="toggleRoad(${i},this.checked)"> 이 단계 완료</label></div>
+    </div>`).join('');
+}
+function toggleRoad(i,v) {
+  completedChecks['road'+i]=v;
+  const el=document.getElementById('roadStep'+i);
+  el.classList.toggle('completed',v);
+  el.querySelector('.road-dot').style.background=v?'var(--accent2)':'var(--bg3)';
+  el.querySelector('.road-dot').style.borderColor=v?'var(--accent2)':'var(--border)';
+  updateProgress();
+}
+
+// ============ TEMPLATES ============
+function buildTemplates() {
+  document.getElementById('templateWrap').innerHTML = templateData.map((t,i) => `
+    <div class="template-card" id="tpl${i}">
+      <h4 onclick="toggleTemplate(${i})">${t.title} <span>${t.cat}</span></h4>
+      <div class="template-body" id="tplBody${i}">
+        <div class="code-block" id="tplCode${i}">${esc(t.code)}<button class="copy-btn" onclick="copyMemo(this,'tplCode${i}')">복사</button></div>
+      </div>
+    </div>`).join('');
+}
+function toggleTemplate(i) {
+  document.getElementById('tplBody'+i).classList.toggle('open');
+}
+
+// ============ SKILL LAB ============
+function buildSkillLab() {
+  document.getElementById('skillWrap').innerHTML = skillData.map((s,i) => `
+    <div class="skill-example">
+      <h4>${s.title}</h4>
+      <p style="font-size:0.82rem;color:var(--text3);margin-bottom:8px;">원본 프롬프트:</p>
+      <div class="code-block" id="skP${i}">${esc(s.prompt)}<button class="copy-btn" onclick="copyMemo(this,'skP${i}')">복사</button></div>
+      <div class="skill-arrow">⬇ SKILL.md로 변환</div>
+      <div class="code-block" id="skS${i}">${esc(s.skill)}<button class="copy-btn" onclick="copyMemo(this,'skS${i}')">복사</button></div>
+    </div>`).join('');
+}
+
+// ============ CHECKLIST ============
+function buildChecklist() {
+  document.getElementById('checklistWrap').innerHTML = checklistData.map((c,i) => `<li><input type="checkbox" ${completedChecks['chk'+i]?'checked':''} onchange="completedChecks['chk'+i]=this.checked;updateProgress();"> ${c}</li>`).join('');
+}
+
+// ============ QUIZ ============
+function buildQuiz() {
+  document.getElementById('quizWrap').innerHTML = quizData.map((q,i) => `
+    <div class="quiz-q" id="qq${i}"><h4>${i+1}. ${q.q}</h4>
+    ${q.opts.map((o,j) => `<div class="quiz-opt" onclick="pickQuiz(${i},this,${j})">${String.fromCharCode(9312+j)} ${o}</div>`).join('')}
+    <div class="quiz-explain" id="qe${i}">💡 ${q.explain}</div></div>`).join('');
+}
+function pickQuiz(qi,el,val) {
+  if(quizAnswers[qi]!==undefined) return;
+  quizAnswers[qi]=val;
+  const q=quizData[qi];
+  const correct=val===q.answer;
+  el.classList.add(correct?'correct':'wrong');
+  el.parentElement.querySelectorAll('.quiz-opt').forEach(o=>{
+    o.classList.add('disabled');
+    const idx=parseInt(o.getAttribute('onclick').match(/,(\d+)\)/)?.[1]);
+    if(idx===q.answer) o.classList.add('correct');
+  });
+  document.getElementById('qe'+qi).style.display='block';
+  updateProgress();
+}
+function scoreQuiz() {
+  let correct=0,total=quizData.length;
+  quizData.forEach((q,i)=>{if(quizAnswers[i]===q.answer)correct++;});
+  const answered=Object.keys(quizAnswers).length;
+  const sc=document.getElementById('quizScore');sc.style.display='block';
+  if(answered<total){sc.innerHTML=`아직 ${total-answered}문항이 남았습니다.`;}
+  else{const pct=Math.round(correct/total*100);sc.innerHTML=`🎯 ${total}문항 중 ${correct}개 정답 (${pct}점)<br><span style="font-size:0.9rem;color:var(--text2);">${pct>=80?'훌륭합니다! 프롬프트 엔지니어링 기초를 잘 이해하고 있습니다.':pct>=50?'좋은 시작입니다. 틀린 부분의 해설을 다시 읽어보세요.':'구조 맵과 7기법 섹션을 다시 살펴보세요.'}</span>`;}
+}
+function resetQuiz(){quizAnswers={};document.getElementById('quizScore').style.display='none';buildQuiz();updateProgress();}
+
+// ============ GLOSSARY ============
+function buildGlossary() {
+  renderGlossary(glossaryData);
+}
+function renderGlossary(data) {
+  document.getElementById('glossaryList').innerHTML = data.map(g => `
+    <div class="glossary-item" data-term="${g.term.toLowerCase()}">
+      <div class="glossary-term" onclick="this.nextElementSibling.classList.toggle('open')">${g.term}</div>
+      <div class="glossary-def"><p>${g.def}</p><p class="glossary-easy">쉬운 말: ${g.easy}</p></div>
+    </div>`).join('');
+}
+function filterGlossary(val) {
+  const v=val.toLowerCase();
+  document.querySelectorAll('.glossary-item').forEach(item=>{
+    item.style.display=item.dataset.term.includes(v)||v===''?'block':'none';
+  });
+}
+
+// ============ MEMO ============
+function buildMemo() {
+  document.getElementById('memoWrap').innerHTML = memoData.map(m => `
+    <div class="memo-card">
+      <h4>${m.title}</h4>
+      <button class="copy-btn" onclick="copyMemo(this,'${m.id}')">복사</button>
+      <pre id="${m.id}">${m.text}</pre>
+    </div>`).join('');
+}
+
+// ============ ACCORDION ============
+function toggleAcc(el) {
+  const body=el.nextElementSibling;body.classList.toggle('open');
+  const arrow=el.querySelector('span');
+  if(arrow) arrow.textContent=body.classList.contains('open')?'▲':'▼';
+}
+
+// ============ COPY ============
+function copyMemo(btn,id) {
+  const text=document.getElementById(id).textContent;
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.textContent='복사됨!';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='복사';btn.classList.remove('copied');},1500);
+  }).catch(()=>{
+    const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);
+    btn.textContent='복사됨!';btn.classList.add('copied');setTimeout(()=>{btn.textContent='복사';btn.classList.remove('copied');},1500);
+  });
+}
+
+// ============ UTIL ============
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+// ============ PROGRESS ============
+function updateProgress() {
+  let total=0,done=0;
+  for(let i=0;i<5;i++){total++;if(completedChecks['road'+i])done++;}
+  for(let i=0;i<checklistData.length;i++){total++;if(completedChecks['chk'+i])done++;}
+  total+=quizData.length;done+=Object.keys(quizAnswers).length;
+  const pct=total>0?Math.round(done/total*100):0;
+  document.getElementById('progressFill').style.width=pct+'%';
+  document.getElementById('progressBarTop').style.width=pct+'%';
+  document.getElementById('progressLabel').textContent='학습 진행률 '+pct+'%';
+  saveState();
+}
+
+// ============ STATE ============
+function saveState(){try{localStorage.setItem('pe-lab-state',JSON.stringify({completedChecks,quizAnswers,currentSection}));}catch(e){}}
+function loadState(){try{const r=localStorage.getItem('pe-lab-state');if(r){const s=JSON.parse(r);if(s.completedChecks)completedChecks=s.completedChecks;if(s.quizAnswers)quizAnswers=s.quizAnswers;}}catch(e){}}
+
+// ============ INIT ============
+function init() {
+  loadState();
+  buildStructure();
+  buildTechniques();
+  buildCompare();
+  buildDoctors();
+  buildRoadmap();
+  buildTemplates();
+  buildSkillLab();
+  buildChecklist();
+  buildQuiz();
+  buildGlossary();
+  buildMemo();
+  updateProgress();
+}
+init();
+</script>
 </body>
 </html>
