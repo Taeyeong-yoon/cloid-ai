@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="ko">
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,291 +8,55 @@
 </head>
 <body data-book-id="mcp-learning">
   <div id="progressBarTop"></div>
-
   <nav id="topNav">
-    <span class="nav-logo">
-      <span class="nav-orb"></span>
-      <span data-ko="MCP 학습실" data-en="MCP Learning Lab">MCP 학습실</span>
-    </span>
-    <button class="nav-btn active" data-section="hero" data-ko="홈" data-en="Home">홈</button>
-    <button class="nav-btn" data-section="concept" data-ko="개념분리" data-en="Concept">개념분리</button>
-    <button class="nav-btn" data-section="compare" data-ko="MCP 전후" data-en="Before/After">MCP 전후</button>
-    <button class="nav-btn" data-section="envlab" data-ko="환경비교" data-en="Environment">환경비교</button>
-    <button class="nav-btn" data-section="doctors" data-ko="5박사" data-en="5 Experts">5박사</button>
-    <button class="nav-btn" data-section="roadmap" data-ko="로드맵" data-en="Roadmap">로드맵</button>
-    <button class="nav-btn" data-section="lab" data-ko="첫 실습" data-en="First Lab">첫 실습</button>
-    <button class="nav-btn" data-section="apikey" data-ko="API Key판단" data-en="API Key">API Key판단</button>
-    <button class="nav-btn" data-section="quiz" data-ko="퀴즈" data-en="Quiz">퀴즈</button>
-    <button class="nav-btn" data-section="glossary" data-ko="용어사전" data-en="Glossary">용어사전</button>
-    <button class="nav-btn" data-section="memo" data-ko="복사메모" data-en="Memo">복사메모</button>
+    <span class="nav-logo"><span class="nav-orb"></span><span data-ko="MCP 학습실" data-en="MCP Learning Lab">MCP Learning Lab</span></span>
+    <button class="nav-btn active" data-section="hero" data-ko="홈" data-en="Home">Home</button>
+    <button class="nav-btn" data-section="concept" data-ko="개념 분리" data-en="Concept">Concept</button>
+    <button class="nav-btn" data-section="compare" data-ko="MCP 전후" data-en="Before/After">Before/After</button>
+    <button class="nav-btn" data-section="envlab" data-ko="환경 비교" data-en="Environment">Environment</button>
+    <button class="nav-btn" data-section="doctors" data-ko="전문가 관점" data-en="Experts">Experts</button>
+    <button class="nav-btn" data-section="roadmap" data-ko="로드맵" data-en="Roadmap">Roadmap</button>
+    <button class="nav-btn" data-section="lab" data-ko="첫 실습" data-en="First Lab">First Lab</button>
+    <button class="nav-btn" data-section="apikey" data-ko="API Key 판단" data-en="API Key">API Key</button>
+    <button class="nav-btn" data-section="quiz" data-ko="퀴즈" data-en="Quiz">Quiz</button>
+    <button class="nav-btn" data-section="glossary" data-ko="용어사전" data-en="Glossary">Glossary</button>
+    <button class="nav-btn" data-section="memo" data-ko="메모" data-en="Memo">Memo</button>
     <span class="nav-spacer"></span>
-    <button class="lang-btn active" data-locale="ko">한글</button>
-    <button class="lang-btn" data-locale="en">English</button>
+    <button class="lang-btn" data-locale="ko">한글</button>
+    <button class="lang-btn active" data-locale="en">English</button>
   </nav>
 
   <div class="section active" id="sec-hero">
     <div class="hero-grid">
       <div>
-        <div class="hero-title" data-ko="MCP 입문 인터랙티브 학습실" data-en="MCP Interactive Learning Lab">MCP 입문 인터랙티브 학습실</div>
-        <p class="hero-sub" data-ko="MCP와 API의 차이, 웹 LLM + MCP와 CLI + MCP의 차이, 그리고 가장 좋은 첫 실습 순서를 한 화면 안에서 정리합니다. 흩어진 문서 대신 버튼으로 단계별 이동하며 이해할 수 있게 만들었습니다." data-en="Understand MCP vs API, web LLM + MCP vs CLI + MCP, and the best first practice path in one guided screen. This textbook uses section buttons instead of scattered reading.">
-          MCP와 API의 차이, 웹 LLM + MCP와 CLI + MCP의 차이, 그리고 가장 좋은 첫 실습 순서를 한 화면 안에서 정리합니다. 흩어진 문서 대신 버튼으로 단계별 이동하며 이해할 수 있게 만들었습니다.
-        </p>
-        <div class="hero-btns">
-          <button class="btn btn-primary" data-start-section="concept" data-ko="바로 시작하기" data-en="Start now">바로 시작하기</button>
-          <button class="btn btn-secondary" data-start-section="lab" data-ko="첫 실습 보기" data-en="See first lab">첫 실습 보기</button>
-        </div>
-
-        <div class="diag-box">
-          <h3 data-ko="이 교재에서 먼저 고칠 오해" data-en="Misconceptions to fix first">이 교재에서 먼저 고칠 오해</h3>
-          <div class="diag-item" data-ko="API Key만 있으면 MCP가 붙는다고 생각하기" data-en="Thinking MCP works with only an API key">API Key만 있으면 MCP가 붙는다고 생각하기</div>
-          <div class="diag-item" data-ko="MCP를 특정 앱 이름처럼 이해하기" data-en="Thinking MCP is the name of one app">MCP를 특정 앱 이름처럼 이해하기</div>
-          <div class="diag-item" data-ko="처음부터 고비용 외부 API를 붙여야 한다고 생각하기" data-en="Thinking you must start with expensive external APIs">처음부터 고비용 외부 API를 붙여야 한다고 생각하기</div>
-        </div>
+        <div class="hero-title" data-ko="MCP 입문 인터랙티브 학습실" data-en="MCP Interactive Learning Lab">MCP Interactive Learning Lab</div>
+        <p class="hero-sub" data-ko="MCP와 API의 차이, Web LLM + MCP와 CLI + MCP의 차이, 그리고 가장 좋은 첫 실습 순서를 한 화면 안에서 정리합니다. 흩어진 문서 대신 상단 버튼으로 섹션을 전환하며 배우도록 설계했습니다." data-en="Understand MCP vs API, web LLM + MCP vs CLI + MCP, and the best first practice path in one guided screen. This textbook uses section buttons instead of scattered reading.">Understand MCP vs API, web LLM + MCP vs CLI + MCP, and the best first practice path in one guided screen. This textbook uses section buttons instead of scattered reading.</p>
+        <div class="hero-btns"><button class="btn btn-primary" data-start-section="concept" data-ko="바로 시작하기" data-en="Start now">Start now</button><button class="btn btn-secondary" data-start-section="lab" data-ko="첫 실습 보기" data-en="See first lab">See first lab</button></div>
+        <div class="diag-box"><h3 data-ko="먼저 고쳐야 할 오해" data-en="Misconceptions to fix first">Misconceptions to fix first</h3><div class="diag-item" data-ko="API Key만 있으면 MCP가 연결된다고 생각하기" data-en="Thinking MCP works with only an API key">Thinking MCP works with only an API key</div><div class="diag-item" data-ko="MCP를 특정 앱 이름처럼 이해하기" data-en="Thinking MCP is the name of one app">Thinking MCP is the name of one app</div><div class="diag-item" data-ko="처음부터 고비용 외부 API를 붙여야 한다고 생각하기" data-en="Thinking you must start with expensive external APIs">Thinking you must start with expensive external APIs</div></div>
       </div>
-
-      <div class="hero-panel">
-        <div class="hero-system">
-          <div class="hero-ring"></div>
-          <div class="hero-ring-2"></div>
-          <div class="hero-ring-3"></div>
-          <div class="hero-core"></div>
-          <div class="signal a"></div>
-          <div class="signal b"></div>
-          <div class="hero-side-note">
-            <div class="note-chip">
-              <strong data-ko="핵심 문장" data-en="Core sentence">핵심 문장</strong>
-              <p data-ko="MCP는 API 키가 아니라, AI가 도구를 표준 방식으로 쓰게 하는 연결 구조입니다." data-en="MCP is not an API key. It is the connection layer that lets AI use tools through a standard interface.">MCP는 API 키가 아니라, AI가 도구를 표준 방식으로 쓰게 하는 연결 구조입니다.</p>
-            </div>
-            <div class="note-chip">
-              <strong data-ko="가장 좋은 첫 실습" data-en="Best first lab">가장 좋은 첫 실습</strong>
-              <p data-ko="filesystem MCP처럼 키가 필요 없는 로컬 도구부터 시작하는 것이 가장 좋습니다." data-en="The best starting point is a local tool like filesystem MCP that does not require an API key.">filesystem MCP처럼 키가 필요 없는 로컬 도구부터 시작하는 것이 가장 좋습니다.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="hero-panel"><div class="hero-system"><div class="hero-ring"></div><div class="hero-ring-2"></div><div class="hero-ring-3"></div><div class="hero-core"></div><div class="signal a"></div><div class="signal b"></div><div class="hero-side-note"><div class="note-chip"><strong data-ko="핵심 문장" data-en="Core sentence">Core sentence</strong><p data-ko="MCP는 API Key가 아니라, AI가 도구를 표준 방식으로 쓰게 하는 연결 구조입니다." data-en="MCP is not an API key. It is the connection layer that lets AI use tools through a standard interface.">MCP is not an API key. It is the connection layer that lets AI use tools through a standard interface.</p></div><div class="note-chip"><strong data-ko="가장 좋은 첫 실습" data-en="Best first lab">Best first lab</strong><p data-ko="filesystem MCP처럼 키가 필요 없는 로컬 도구부터 시작하는 것이 가장 좋습니다." data-en="The best starting point is a local tool like filesystem MCP that does not require an API key.">The best starting point is a local tool like filesystem MCP that does not require an API key.</p></div></div></div></div>
     </div>
   </div>
 
-  <div class="section" id="sec-concept">
-    <div class="sec-tag">Section A</div>
-    <h2 class="sec-h" data-ko="개념 분리 인터랙티브 맵" data-en="Interactive concept map">개념 분리 인터랙티브 맵</h2>
-    <p class="sec-sub" data-ko="카드를 눌러 MCP의 최소 구조를 하나씩 분리해 보세요." data-en="Click the cards to separate the minimum MCP structure into clear pieces.">카드를 눌러 MCP의 최소 구조를 하나씩 분리해 보세요.</p>
+  <div class="section" id="sec-concept"><div class="sec-tag">Section A</div><h2 class="sec-h" data-ko="개념 분리 인터랙티브 맵" data-en="Interactive concept map">Interactive concept map</h2><p class="sec-sub" data-ko="카드를 눌러 MCP의 최소 구조를 하나씩 분리해 보세요." data-en="Click the cards to separate the minimum MCP structure into clear pieces.">Click the cards to separate the minimum MCP structure into clear pieces.</p><div class="card-grid card-grid-3"><div class="card concept-card" data-concept="client"><div class="concept-icon">AI</div><div class="concept-label" data-ko="클라이언트" data-en="Client">Client</div><div class="concept-brief" data-ko="요청을 받고 도구 사용을 계획" data-en="Receives the request and plans tool use">Receives the request and plans tool use</div></div><div class="card concept-card" data-concept="server"><div class="concept-icon">MCP</div><div class="concept-label" data-ko="서버" data-en="Server">Server</div><div class="concept-brief" data-ko="도구를 표준 인터페이스로 노출" data-en="Exposes tools through a standard interface">Exposes tools through a standard interface</div></div><div class="card concept-card" data-concept="config"><div class="concept-icon">CFG</div><div class="concept-label" data-ko="설정" data-en="Config">Config</div><div class="concept-brief" data-ko="어떻게 연결할지 정의" data-en="Defines how the server is attached">Defines how the server is attached</div></div></div><div class="concept-detail" data-concept-detail="client"><strong data-ko="클라이언트" data-en="Client">Client</strong><p data-ko="Claude Code나 Codex CLI 같은 도구입니다. 사용자의 요청을 이해하고 어떤 도구를 써야 할지 판단합니다." data-en="This is a tool like Claude Code or Codex CLI. It understands the user request and decides what tool to use.">This is a tool like Claude Code or Codex CLI. It understands the user request and decides what tool to use.</p></div><div class="concept-detail hidden-locale" data-concept-detail="server"><strong data-ko="MCP 서버" data-en="MCP Server">MCP Server</strong><p data-ko="파일 읽기/쓰기, GitHub 조회, 외부 API 호출 같은 기능을 AI가 일정한 방식으로 다룰 수 있게 노출합니다." data-en="The MCP server exposes things like file access, GitHub lookups, or external API calls in a way the AI can use consistently.">The MCP server exposes things like file access, GitHub lookups, or external API calls in a way the AI can use consistently.</p></div><div class="concept-detail hidden-locale" data-concept-detail="config"><strong data-ko="설정 파일" data-en="Config file">Config file</strong><p data-ko="어떤 MCP 서버를 어떤 명령으로 붙일지 정하는 연결점입니다. API Key가 있어도 이 설정이 없으면 AI는 그 서버를 사용할 수 없습니다." data-en="The config connects the MCP server command to the client. Even if you have an API key, the AI cannot use that server without this attachment.">The config connects the MCP server command to the client. Even if you have an API key, the AI cannot use that server without this attachment.</p></div></div>
 
-    <div class="card-grid card-grid-3">
-      <div class="card concept-card" data-concept="client">
-        <div class="concept-icon">AI</div>
-        <div class="concept-label" data-ko="클라이언트" data-en="Client">클라이언트</div>
-        <div class="concept-brief" data-ko="요청을 받고 도구 사용을 계획" data-en="Receives the request and plans tool use">요청을 받고 도구 사용을 계획</div>
-      </div>
-      <div class="card concept-card" data-concept="server">
-        <div class="concept-icon">MCP</div>
-        <div class="concept-label" data-ko="서버" data-en="Server">서버</div>
-        <div class="concept-brief" data-ko="도구를 표준 인터페이스로 노출" data-en="Exposes tools through a standard interface">도구를 표준 인터페이스로 노출</div>
-      </div>
-      <div class="card concept-card" data-concept="config">
-        <div class="concept-icon">CFG</div>
-        <div class="concept-label" data-ko="설정" data-en="Config">설정</div>
-        <div class="concept-brief" data-ko="어떤 서버를 어떻게 붙일지 정의" data-en="Defines how the server is attached">어떤 서버를 어떻게 붙일지 정의</div>
-      </div>
-    </div>
+  <div class="section" id="sec-compare"><div class="sec-tag">Section B</div><h2 class="sec-h" data-ko="MCP 없는 상태 vs 있는 상태" data-en="Without MCP vs with MCP">Without MCP vs with MCP</h2><p class="sec-sub" data-ko="겉으로 비슷해 보여도 학습 경험과 실행 감각은 크게 달라집니다." data-en="They may look similar at first, but the learning and execution experience is very different.">They may look similar at first, but the learning and execution experience is very different.</p><div class="compare-wrap"><div class="compare-side bad"><h3 data-ko="MCP 없이" data-en="Without MCP">Without MCP</h3><ul><li data-ko="각 API마다 다른 호출 코드를 직접 다뤄야 합니다." data-en="You must directly handle different request code for each API.">You must directly handle different request code for each API.</li><li data-ko="AI가 도구를 쓰지 못하고 설명만 하게 되기 쉽습니다." data-en="The AI often ends up only answering instead of actually using tools.">The AI often ends up only answering instead of actually using tools.</li><li data-ko="초보자는 구조보다 호출 코드에서 먼저 막히기 쉽습니다." data-en="Beginners get stuck on request code before understanding the structure.">Beginners get stuck on request code before understanding the structure.</li></ul></div><div class="compare-side good"><h3 data-ko="MCP 사용" data-en="With MCP">With MCP</h3><ul><li data-ko="AI가 도구 이름과 입력 구조를 보고 쓸 수 있습니다." data-en="The AI can inspect tool names and input schemas before using them.">The AI can inspect tool names and input schemas before using them.</li><li data-ko="filesystem, GitHub, custom API를 같은 연결 감각으로 배울 수 있습니다." data-en="You can learn filesystem, GitHub, and custom APIs through the same connection model.">You can learn filesystem, GitHub, and custom APIs through the same connection model.</li><li data-ko="교육에서는 구조 이해가 훨씬 빨라집니다." data-en="For education, the structural understanding becomes much faster.">For education, the structural understanding becomes much faster.</li></ul></div></div></div>
 
-    <div class="concept-detail" data-concept-detail="client">
-      <strong data-ko="클라이언트" data-en="Client">클라이언트</strong>
-      <p data-ko="Claude Code나 Codex CLI 같은 도구입니다. 사용자의 요청을 이해하고 어떤 도구를 써야 할지 판단합니다." data-en="This is a tool like Claude Code or Codex CLI. It understands the user request and decides what tool to use.">Claude Code나 Codex CLI 같은 도구입니다. 사용자의 요청을 이해하고 어떤 도구를 써야 할지 판단합니다.</p>
-    </div>
-    <div class="concept-detail hidden-locale" data-concept-detail="server">
-      <strong data-ko="MCP 서버" data-en="MCP Server">MCP 서버</strong>
-      <p data-ko="파일 읽기/쓰기, GitHub 조회, 외부 API 호출 같은 기능을 AI가 이해하기 쉬운 방식으로 보여줍니다." data-en="The MCP server exposes things like file access, GitHub lookups, or external API calls in a way the AI can use consistently.">파일 읽기/쓰기, GitHub 조회, 외부 API 호출 같은 기능을 AI가 이해하기 쉬운 방식으로 보여줍니다.</p>
-    </div>
-    <div class="concept-detail hidden-locale" data-concept-detail="config">
-      <strong data-ko="설정 파일" data-en="Config file">설정 파일</strong>
-      <p data-ko="어떤 MCP 서버를 어떤 명령으로 실행할지 연결합니다. API 키가 있다 해도 이 설정이 없으면 AI는 그 서버를 모릅니다." data-en="The config connects the MCP server command to the client. Even if you have an API key, the AI cannot use that server without this attachment.">어떤 MCP 서버를 어떤 명령으로 실행할지 연결합니다. API 키가 있다 해도 이 설정이 없으면 AI는 그 서버를 모릅니다.</p>
-    </div>
-  </div>
+  <div class="section" id="sec-envlab"><div class="sec-tag">Section C</div><h2 class="sec-h" data-ko="Web LLM + MCP vs CLI + MCP" data-en="Web LLM + MCP vs CLI + MCP">Web LLM + MCP vs CLI + MCP</h2><p class="sec-sub" data-ko="같은 MCP라도 어디서 실행하느냐에 따라 체감이 달라집니다." data-en="The same MCP feels different depending on where it runs.">The same MCP feels different depending on where it runs.</p><div class="compare-wrap"><div class="card"><h3 data-ko="Web LLM + MCP" data-en="Web LLM + MCP">Web LLM + MCP</h3><p data-ko="가볍게 시작하기 좋고 진입 장벽이 낮습니다. 다만 로컬 파일과 시스템 접근은 제한되는 경우가 많습니다." data-en="It is easy to start and has a low barrier. But local file and system access is often limited.">It is easy to start and has a low barrier. But local file and system access is often limited.</p></div><div class="card"><h3 data-ko="CLI + MCP" data-en="CLI + MCP">CLI + MCP</h3><p data-ko="로컬 작업과 자동화에 강합니다. 대신 설정과 환경 이해가 조금 더 필요합니다." data-en="It is stronger for local work and automation, but requires more environment understanding.">It is stronger for local work and automation, but requires more environment understanding.</p></div></div><div class="pipe-diagram"><div class="pipe-node"><strong>Web client</strong><span data-ko="브라우저 중심 사용" data-en="Browser-first usage">Browser-first usage</span></div><div class="pipe-arrow">→</div><div class="pipe-node"><strong>MCP</strong><span data-ko="도구 연결 표준" data-en="Tool connection standard">Tool connection standard</span></div><div class="pipe-arrow">→</div><div class="pipe-node"><strong>CLI</strong><span data-ko="로컬 작업과 자동화" data-en="Local work and automation">Local work and automation</span></div></div></div>
 
-  <div class="section" id="sec-compare">
-    <div class="sec-tag">Section B</div>
-    <h2 class="sec-h" data-ko="MCP를 안 쓸 때 vs 쓸 때" data-en="Without MCP vs with MCP">MCP를 안 쓸 때 vs 쓸 때</h2>
-    <p class="sec-sub" data-ko="둘 다 비슷해 보여도, 사용자의 체감은 완전히 다릅니다." data-en="They may look similar at first, but the learning and execution experience is very different.">둘 다 비슷해 보여도, 사용자의 체감은 완전히 다릅니다.</p>
+  <div class="section" id="sec-doctors"><div class="sec-tag">Section D</div><h2 class="sec-h" data-ko="세 전문가 관점" data-en="Three expert views">Three expert views</h2><p class="sec-sub" data-ko="관점을 바꾸면 MCP의 의미도 달라집니다. 카드를 눌러 시선을 바꿔보세요." data-en="The meaning of MCP changes with perspective. Click the cards to switch viewpoints.">The meaning of MCP changes with perspective. Click the cards to switch viewpoints.</p><div class="doctor-grid"><div class="doctor-card" data-doctor="teacher"><div class="doctor-role">Teacher</div><h3 data-ko="교사" data-en="Teacher">Teacher</h3><p data-ko="학습자에게 설명" data-en="Explain to a learner">Explain to a learner</p></div><div class="doctor-card" data-doctor="engineer"><div class="doctor-role">Engineer</div><h3 data-ko="엔지니어" data-en="Engineer">Engineer</h3><p data-ko="구현 구조를 봄" data-en="See the implementation layer">See the implementation layer</p></div><div class="doctor-card" data-doctor="operator"><div class="doctor-role">Operator</div><h3 data-ko="운영자" data-en="Operator">Operator</h3><p data-ko="권한과 리스크를 봄" data-en="Check permissions and risk">Check permissions and risk</p></div></div><div class="doctor-detail" data-doctor-detail="teacher"><strong data-ko="교사 관점" data-en="Teacher view">Teacher view</strong><p data-ko="MCP는 AI가 실제로 도구를 어떻게 쓰는지 설명하기 좋은 주제입니다. 처음에는 filesystem MCP처럼 눈에 보이는 도구가 가장 좋습니다." data-en="MCP is a good topic for showing learners how AI actually uses tools. Start with something visible like filesystem MCP.">MCP is a good topic for showing learners how AI actually uses tools. Start with something visible like filesystem MCP.</p></div><div class="doctor-detail hidden-locale" data-doctor-detail="engineer"><strong data-ko="엔지니어 관점" data-en="Engineer view">Engineer view</strong><p data-ko="MCP는 외부 도구를 기술하고 실행하는 방식을 표준화하는 연결 계층입니다. 결국 중요한 것은 도구 스키마와 실행 규칙입니다." data-en="MCP is a connection layer that standardizes how external tools are described and executed. The key is the tool schema and execution rules.">MCP is a connection layer that standardizes how external tools are described and executed. The key is the tool schema and execution rules.</p></div><div class="doctor-detail hidden-locale" data-doctor-detail="operator"><strong data-ko="운영자 관점" data-en="Operator view">Operator view</strong><p data-ko="어떤 도구를 열지, 어떤 권한까지 줄지, 로그와 실패 지점을 어디서 관리할지 결정하는 일이 쉬워집니다." data-en="It becomes easier to decide which tools to expose, what permissions to allow, and where to manage logs and failure points.">It becomes easier to decide which tools to expose, what permissions to allow, and where to manage logs and failure points.</p></div></div>
 
-    <div class="compare-wrap">
-      <div class="compare-side bad">
-        <h3 data-ko="MCP 없이" data-en="Without MCP">MCP 없이</h3>
-        <ul>
-          <li data-ko="각 API마다 다른 호출 코드를 직접 다뤄야 합니다." data-en="You must directly handle different request code for each API.">각 API마다 다른 호출 코드를 직접 다뤄야 합니다.</li>
-          <li data-ko="AI는 도구 목록을 모른 채 답변만 하게 되기 쉽습니다." data-en="The AI often ends up only answering instead of actually using tools.">AI는 도구 목록을 모른 채 답변만 하게 되기 쉽습니다.</li>
-          <li data-ko="초보자는 구조보다 코드 호출에 먼저 막힙니다." data-en="Beginners get stuck on request code before understanding the structure.">초보자는 구조보다 코드 호출에 먼저 막힙니다.</li>
-        </ul>
-      </div>
-      <div class="compare-side good">
-        <h3 data-ko="MCP 사용" data-en="With MCP">MCP 사용</h3>
-        <ul>
-          <li data-ko="AI가 도구의 이름과 입력 형식을 보고 사용할 수 있습니다." data-en="The AI can inspect tool names and input schemas before using them.">AI가 도구의 이름과 입력 형식을 보고 사용할 수 있습니다.</li>
-          <li data-ko="filesystem, GitHub, 커스텀 API를 같은 연결 감각으로 배울 수 있습니다." data-en="You can learn filesystem, GitHub, and custom APIs through the same connection model.">filesystem, GitHub, 커스텀 API를 같은 연결 감각으로 배울 수 있습니다.</li>
-          <li data-ko="교육에서는 구조 이해가 빨라집니다." data-en="For education, the structural understanding becomes much faster.">교육에서는 구조 이해가 빨라집니다.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <div class="section" id="sec-roadmap"><div class="sec-tag">Section E</div><h2 class="sec-h" data-ko="단계별 학습 로드맵" data-en="Step-by-step roadmap">Step-by-step roadmap</h2><p class="sec-sub" data-ko="아래 순서를 따르면 개념을 훨씬 안정적으로 이해할 수 있습니다." data-en="If you follow the sequence below, the concept becomes much easier to hold onto.">If you follow the sequence below, the concept becomes much easier to hold onto.</p><div class="roadmap-card"><label class="roadmap-row" data-roadmap="1"><input type="checkbox" /><div><strong data-ko="filesystem MCP부터 보기" data-en="Start with filesystem MCP">Start with filesystem MCP</strong><p data-ko="API Key 없이도 구조를 이해할 수 있습니다." data-en="You can understand the structure without any API key.">You can understand the structure without any API key.</p></div></label><label class="roadmap-row" data-roadmap="2"><input type="checkbox" /><div><strong data-ko="클라이언트와 서버 역할 구분" data-en="Separate client and server roles">Separate client and server roles</strong><p data-ko="누가 요청하고 누가 실행하는지 말로 설명해봅니다." data-en="Explain who requests and who executes the action.">Explain who requests and who executes the action.</p></div></label><label class="roadmap-row" data-roadmap="3"><input type="checkbox" /><div><strong data-ko="설정 파일 읽기" data-en="Read the config file">Read the config file</strong><p data-ko="어떤 명령으로 MCP가 붙는지 확인합니다." data-en="Check how the MCP server is attached through config.">Check how the MCP server is attached through config.</p></div></label><label class="roadmap-row" data-roadmap="4"><input type="checkbox" /><div><strong data-ko="인증 도구로 확장" data-en="Expand to authenticated tools">Expand to authenticated tools</strong><p data-ko="그 다음에 GitHub나 Google 도구로 넘어갑니다." data-en="Only after that, move to GitHub or Google tools.">Only after that, move to GitHub or Google tools.</p></div></label></div></div>
 
-  <div class="section" id="sec-envlab">
-    <div class="sec-tag">Section C</div>
-    <h2 class="sec-h" data-ko="웹 LLM + MCP vs CLI + MCP" data-en="Web LLM + MCP vs CLI + MCP">웹 LLM + MCP vs CLI + MCP</h2>
-    <p class="sec-sub" data-ko="같은 MCP라도 어디서 실행하느냐에 따라 체감이 달라집니다." data-en="The same MCP feels different depending on where it runs.">같은 MCP라도 어디서 실행하느냐에 따라 체감이 달라집니다.</p>
+  <div class="section" id="sec-lab"><div class="sec-tag">Section F</div><h2 class="sec-h" data-ko="첫 실습: filesystem MCP" data-en="First lab: filesystem MCP">First lab: filesystem MCP</h2><p class="sec-sub" data-ko="가장 쉬운 첫 실습은 키가 필요 없는 로컬 도구입니다." data-en="The easiest first lab is a local tool that does not need a key.">The easiest first lab is a local tool that does not need a key.</p><div class="card"><ol><li data-ko="filesystem MCP를 연결합니다." data-en="Attach filesystem MCP.">Attach filesystem MCP.</li><li data-ko="AI에게 현재 폴더 구조를 요약하게 합니다." data-en="Ask the AI to summarize the current folder structure.">Ask the AI to summarize the current folder structure.</li><li data-ko="작은 결과물 하나를 만듭니다. 예: 문제지 초안." data-en="Create one small output, such as a worksheet draft.">Create one small output, such as a worksheet draft.</li><li data-ko="그 다음에만 외부 API 도구로 확장합니다." data-en="Only after that, move to external API tools.">Only after that, move to external API tools.</li></ol></div></div>
 
-    <div class="compare-wrap">
-      <div class="card">
-        <h3 data-ko="웹 LLM + MCP" data-en="Web LLM + MCP">웹 LLM + MCP</h3>
-        <p data-ko="가볍게 시작하기 좋고 진입 장벽이 낮습니다. 다만 로컬 파일과 시스템 접근은 제한될 수 있습니다." data-en="It is easy to start and has a low barrier. But local file and system access is often limited.">가볍게 시작하기 좋고 진입 장벽이 낮습니다. 다만 로컬 파일과 시스템 접근은 제한될 수 있습니다.</p>
-      </div>
-      <div class="card">
-        <h3 data-ko="CLI + MCP" data-en="CLI + MCP">CLI + MCP</h3>
-        <p data-ko="로컬 작업과 자동화에 강합니다. 대신 설정과 환경 이해가 조금 더 필요합니다." data-en="It is stronger for local work and automation, but requires more environment understanding.">로컬 작업과 자동화에 강합니다. 대신 설정과 환경 이해가 조금 더 필요합니다.</p>
-      </div>
-    </div>
+  <div class="section" id="sec-apikey"><div class="sec-tag">Section G</div><h2 class="sec-h" data-ko="API Key가 필요한가?" data-en="Do you need an API key?">Do you need an API key?</h2><p class="sec-sub" data-ko="질문은 단순합니다. 지금 붙이려는 도구가 외부 SaaS를 실제로 호출하느냐입니다." data-en="The question is simple: does the tool actually call an external SaaS?"></p><div class="compare-wrap"><div class="card"><h3 data-ko="키가 필요 없는 경우" data-en="When you do not need a key">When you do not need a key</h3><ul><li data-ko="로컬 filesystem" data-en="Local filesystem">Local filesystem</li><li data-ko="간단한 로컬 유틸리티" data-en="Simple local utilities">Simple local utilities</li></ul></div><div class="card"><h3 data-ko="키가 필요한 경우" data-en="When you need a key">When you need a key</h3><ul><li data-ko="GitHub API" data-en="GitHub API">GitHub API</li><li data-ko="Google Drive/Docs" data-en="Google Drive/Docs">Google Drive/Docs</li><li data-ko="영상 생성 API" data-en="Video generation APIs">Video generation APIs</li></ul></div></div></div>
 
-    <div class="pipe-diagram">
-      <div class="pipe-node">
-        <strong>Web client</strong>
-        <span data-ko="브라우저 중심 사용" data-en="Browser-first usage">브라우저 중심 사용</span>
-      </div>
-      <div class="pipe-arrow">→</div>
-      <div class="pipe-node">
-        <strong>MCP</strong>
-        <span data-ko="도구 연결 표준" data-en="Tool connection standard">도구 연결 표준</span>
-      </div>
-      <div class="pipe-arrow">→</div>
-      <div class="pipe-node">
-        <strong>CLI</strong>
-        <span data-ko="로컬 작업과 자동화" data-en="Local work and automation">로컬 작업과 자동화</span>
-      </div>
-    </div>
-  </div>
+  <div class="section" id="sec-quiz" data-quiz><div class="sec-tag">Section H</div><h2 class="sec-h" data-ko="퀴즈 / 자기점검" data-en="Quiz / self-check">Quiz / self-check</h2><p class="sec-sub" data-ko="짧은 질문으로 현재 이해를 점검해보세요." data-en="Use this short quiz to check your understanding.">Use this short quiz to check your understanding.</p><div class="quiz-box" data-answer="b"><h3 data-ko="1. MCP를 가장 정확하게 설명한 것은?" data-en="1. Which statement best describes MCP?">1. Which statement best describes MCP?</h3><label class="quiz-option"><input type="radio" name="m1" value="a" /> <span data-ko="API Key를 저장하는 방법" data-en="A method to store API keys">A method to store API keys</span></label><label class="quiz-option"><input type="radio" name="m1" value="b" /> <span data-ko="AI가 도구를 표준 방식으로 쓰게 하는 연결 구조" data-en="A connection structure that lets AI use tools through a standard interface">A connection structure that lets AI use tools through a standard interface</span></label><label class="quiz-option"><input type="radio" name="m1" value="c" /> <span data-ko="영상 생성 전용 플랫폼" data-en="A platform only for video generation">A platform only for video generation</span></label></div><div class="quiz-box" data-answer="a" style="margin-top:12px;"><h3 data-ko="2. 첫 실습으로 가장 좋은 것은?" data-en="2. What is the best first lab?">2. What is the best first lab?</h3><label class="quiz-option"><input type="radio" name="m2" value="a" /> <span data-ko="filesystem MCP" data-en="filesystem MCP">filesystem MCP</span></label><label class="quiz-option"><input type="radio" name="m2" value="b" /> <span data-ko="고비용 영상 API" data-en="An expensive video API">An expensive video API</span></label><label class="quiz-option"><input type="radio" name="m2" value="c" /> <span data-ko="OAuth부터 붙이는 문서 도구" data-en="A document tool that starts with OAuth">A document tool that starts with OAuth</span></label></div><div class="memo-actions"><button class="btn btn-primary" data-quiz-submit data-ko="채점하기" data-en="Check answers">Check answers</button><div class="quiz-result" data-quiz-result></div></div></div>
 
-  <div class="section" id="sec-doctors">
-    <div class="sec-tag">Section D</div>
-    <h2 class="sec-h" data-ko="5박사 패널" data-en="5 expert panel">5박사 패널</h2>
-    <p class="sec-sub" data-ko="관점이 바뀌면 설명도 달라집니다. 카드를 눌러 관점을 바꿔보세요." data-en="The explanation changes with the perspective. Click the cards to switch viewpoints.">관점이 바뀌면 설명도 달라집니다. 카드를 눌러 관점을 바꿔보세요.</p>
+  <div class="section" id="sec-glossary"><div class="sec-tag">Section I</div><h2 class="sec-h" data-ko="용어사전" data-en="Glossary">Glossary</h2><p class="sec-sub" data-ko="검색으로 빠르게 용어를 다시 확인해보세요." data-en="Use search to quickly revisit the terms.">Use search to quickly revisit the terms.</p><div class="glossary-box"><input class="glossary-search" data-glossary-search data-ko-placeholder="용어 검색" data-en-placeholder="Search terms" placeholder="Search terms" /><div class="glossary-item" data-glossary-item><strong>MCP Client</strong><p data-ko="도구를 요청하고 사용하는 AI 측 애플리케이션" data-en="The AI-side application that requests and uses tools">The AI-side application that requests and uses tools</p></div><div class="glossary-item" data-glossary-item><strong>MCP Server</strong><p data-ko="도구 목록과 실행 인터페이스를 표준 방식으로 제공하는 서버" data-en="The server that exposes tools and execution interfaces in a standard way">The server that exposes tools and execution interfaces in a standard way</p></div><div class="glossary-item" data-glossary-item><strong>Credential</strong><p data-ko="외부 서비스를 호출할 때 필요한 key, token, OAuth 정보" data-en="Keys, tokens, or OAuth credentials needed for external services">Keys, tokens, or OAuth credentials needed for external services</p></div></div></div>
 
-    <div class="doctor-grid">
-      <div class="doctor-card" data-doctor="teacher"><div class="doctor-role">Teacher</div><h3 data-ko="교사" data-en="Teacher">교사</h3><p data-ko="학생에게 설명하는 관점" data-en="Explain to a learner">학생에게 설명하는 관점</p></div>
-      <div class="doctor-card" data-doctor="engineer"><div class="doctor-role">Engineer</div><h3 data-ko="개발자" data-en="Engineer">개발자</h3><p data-ko="구현 구조를 보는 관점" data-en="See the implementation layer">구현 구조를 보는 관점</p></div>
-      <div class="doctor-card" data-doctor="operator"><div class="doctor-role">Operator</div><h3 data-ko="운영자" data-en="Operator">운영자</h3><p data-ko="권한과 리스크를 보는 관점" data-en="Check permissions and risk">권한과 리스크를 보는 관점</p></div>
-    </div>
-
-    <div class="doctor-detail" data-doctor-detail="teacher">
-      <strong data-ko="교사 관점" data-en="Teacher view">교사 관점</strong>
-      <p data-ko="MCP는 학생에게 “AI가 도구를 실제로 쓰는 구조”를 설명하기에 좋은 주제입니다. 처음엔 filesystem MCP처럼 눈으로 확인 가능한 도구가 좋습니다." data-en="MCP is a good topic for showing learners how AI actually uses tools. Start with something visible like filesystem MCP.">MCP는 학생에게 “AI가 도구를 실제로 쓰는 구조”를 설명하기에 좋은 주제입니다. 처음엔 filesystem MCP처럼 눈으로 확인 가능한 도구가 좋습니다.</p>
-    </div>
-    <div class="doctor-detail hidden-locale" data-doctor-detail="engineer">
-      <strong data-ko="개발자 관점" data-en="Engineer view">개발자 관점</strong>
-      <p data-ko="MCP는 여러 외부 도구를 제각각 붙이는 대신, 표준 스키마와 실행 방식으로 정리해 주는 연결 레이어입니다." data-en="MCP is a connection layer that standardizes how external tools are described and executed.">MCP는 여러 외부 도구를 제각각 붙이는 대신, 표준 스키마와 실행 방식으로 정리해 주는 연결 레이어입니다.</p>
-    </div>
-    <div class="doctor-detail hidden-locale" data-doctor-detail="operator">
-      <strong data-ko="운영자 관점" data-en="Operator view">운영자 관점</strong>
-      <p data-ko="어떤 도구를 열고 어떤 권한을 줄지, 로그와 실패 지점을 어디서 관리할지 결정하기 쉬워집니다." data-en="It becomes easier to decide which tools to expose, what permissions to allow, and where to manage logs and failure points.">어떤 도구를 열고 어떤 권한을 줄지, 로그와 실패 지점을 어디서 관리할지 결정하기 쉬워집니다.</p>
-    </div>
-  </div>
-
-  <div class="section" id="sec-roadmap">
-    <div class="sec-tag">Section E</div>
-    <h2 class="sec-h" data-ko="단계별 학습 로드맵" data-en="Step-by-step roadmap">단계별 학습 로드맵</h2>
-    <p class="sec-sub" data-ko="순서대로 체크해가며 따라오면 가장 덜 헷갈립니다." data-en="If you follow the sequence below, the concept becomes much easier to hold onto.">순서대로 체크해가며 따라오면 가장 덜 헷갈립니다.</p>
-
-    <div class="roadmap-card">
-      <label class="roadmap-row" data-roadmap="1"><input type="checkbox" /><div><strong data-ko="filesystem MCP부터 보기" data-en="Start with filesystem MCP">filesystem MCP부터 보기</strong><p data-ko="API 키 없이도 구조를 이해할 수 있습니다." data-en="You can understand the structure without any API key.">API 키 없이도 구조를 이해할 수 있습니다.</p></div></label>
-      <label class="roadmap-row" data-roadmap="2"><input type="checkbox" /><div><strong data-ko="클라이언트와 서버 역할 구분" data-en="Separate client and server roles">클라이언트와 서버 역할 구분</strong><p data-ko="누가 요청하고 누가 실행하는지 말로 설명해봅니다." data-en="Explain who requests and who executes the action.">누가 요청하고 누가 실행하는지 말로 설명해봅니다.</p></div></label>
-      <label class="roadmap-row" data-roadmap="3"><input type="checkbox" /><div><strong data-ko="설정 파일 읽기" data-en="Read the config file">설정 파일 읽기</strong><p data-ko="어떤 명령으로 MCP가 붙는지 확인합니다." data-en="Check how the MCP server is attached through config.">어떤 명령으로 MCP가 붙는지 확인합니다.</p></div></label>
-      <label class="roadmap-row" data-roadmap="4"><input type="checkbox" /><div><strong data-ko="인증형 도구로 확장" data-en="Expand to authenticated tools">인증형 도구로 확장</strong><p data-ko="그 다음에 GitHub나 Google 도구를 붙입니다." data-en="Only after that, move to GitHub or Google tools.">그 다음에 GitHub나 Google 도구를 붙입니다.</p></div></label>
-    </div>
-  </div>
-
-  <div class="section" id="sec-lab">
-    <div class="sec-tag">Section F</div>
-    <h2 class="sec-h" data-ko="첫 실습 실험실: filesystem MCP" data-en="First lab: filesystem MCP">첫 실습 실험실: filesystem MCP</h2>
-    <p class="sec-sub" data-ko="가장 쉬운 첫 실습은 키 없는 로컬 도구입니다." data-en="The easiest first lab is a local tool that does not need a key.">가장 쉬운 첫 실습은 키 없는 로컬 도구입니다.</p>
-
-    <div class="card">
-      <ol>
-        <li data-ko="filesystem MCP를 연결한다." data-en="Attach filesystem MCP.">filesystem MCP를 연결한다.</li>
-        <li data-ko="AI에게 현재 폴더 구조를 요약하게 한다." data-en="Ask the AI to summarize the current folder structure.">AI에게 현재 폴더 구조를 요약하게 한다.</li>
-        <li data-ko="작은 결과물 하나를 만든다. 예: 문제지 초안" data-en="Create one small output, such as a worksheet draft.">작은 결과물 하나를 만든다. 예: 문제지 초안</li>
-        <li data-ko="그 뒤에만 외부 API형 도구를 붙인다." data-en="Only after that, move to external API tools.">그 뒤에만 외부 API형 도구를 붙인다.</li>
-      </ol>
-    </div>
-  </div>
-
-  <div class="section" id="sec-apikey">
-    <div class="sec-tag">Section G</div>
-    <h2 class="sec-h" data-ko="API Key 필요 여부 판단기" data-en="Do you need an API key?">API Key 필요 여부 판단기</h2>
-    <p class="sec-sub" data-ko="질문은 단순합니다. 지금 붙이려는 도구가 외부 SaaS를 실제로 호출하느냐입니다." data-en="The question is simple: does the tool actually call an external SaaS?">질문은 단순합니다. 지금 붙이려는 도구가 외부 SaaS를 실제로 호출하느냐입니다.</p>
-
-    <div class="compare-wrap">
-      <div class="card">
-        <h3 data-ko="키가 필요 없는 경우" data-en="When you do not need a key">키가 필요 없는 경우</h3>
-        <ul>
-          <li data-ko="로컬 파일 시스템" data-en="Local filesystem">로컬 파일 시스템</li>
-          <li data-ko="간단한 로컬 유틸리티" data-en="Simple local utilities">간단한 로컬 유틸리티</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3 data-ko="키가 필요한 경우" data-en="When you need a key">키가 필요한 경우</h3>
-        <ul>
-          <li data-ko="GitHub API" data-en="GitHub API">GitHub API</li>
-          <li data-ko="Google Drive/Docs" data-en="Google Drive/Docs">Google Drive/Docs</li>
-          <li data-ko="영상 생성 API" data-en="Video generation APIs">영상 생성 API</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="section" id="sec-quiz" data-quiz>
-    <div class="sec-tag">Section H</div>
-    <h2 class="sec-h" data-ko="퀴즈 / 자기점검" data-en="Quiz / self-check">퀴즈 / 자기점검</h2>
-    <p class="sec-sub" data-ko="짧게 확인하고 넘어가세요." data-en="Use this short quiz to check your understanding.">짧게 확인하고 넘어가세요.</p>
-    <div class="quiz-box" data-answer="b">
-      <h3 data-ko="1. MCP를 가장 정확히 설명한 것은?" data-en="1. Which statement best describes MCP?">1. MCP를 가장 정확히 설명한 것은?</h3>
-      <label class="quiz-option"><input type="radio" name="m1" value="a" /> <span data-ko="API 키를 저장하는 방식" data-en="A method to store API keys">API 키를 저장하는 방식</span></label>
-      <label class="quiz-option"><input type="radio" name="m1" value="b" /> <span data-ko="AI가 도구를 표준 방식으로 쓰게 하는 연결 구조" data-en="A connection structure that lets AI use tools through a standard interface">AI가 도구를 표준 방식으로 쓰게 하는 연결 구조</span></label>
-      <label class="quiz-option"><input type="radio" name="m1" value="c" /> <span data-ko="영상 생성 전용 플랫폼" data-en="A platform only for video generation">영상 생성 전용 플랫폼</span></label>
-    </div>
-    <div class="quiz-box" data-answer="a" style="margin-top:12px;">
-      <h3 data-ko="2. 첫 실습으로 가장 좋은 것은?" data-en="2. What is the best first lab?">2. 첫 실습으로 가장 좋은 것은?</h3>
-      <label class="quiz-option"><input type="radio" name="m2" value="a" /> <span data-ko="filesystem MCP" data-en="filesystem MCP">filesystem MCP</span></label>
-      <label class="quiz-option"><input type="radio" name="m2" value="b" /> <span data-ko="고비용 영상 API" data-en="An expensive video API">고비용 영상 API</span></label>
-      <label class="quiz-option"><input type="radio" name="m2" value="c" /> <span data-ko="OAuth부터 붙이는 문서 도구" data-en="A document tool that starts with OAuth">OAuth부터 붙이는 문서 도구</span></label>
-    </div>
-    <div class="memo-actions">
-      <button class="btn btn-primary" data-quiz-submit data-ko="채점하기" data-en="Check answers">채점하기</button>
-      <div class="quiz-result" data-quiz-result></div>
-    </div>
-  </div>
-
-  <div class="section" id="sec-glossary">
-    <div class="sec-tag">Section I</div>
-    <h2 class="sec-h" data-ko="용어사전" data-en="Glossary">용어사전</h2>
-    <p class="sec-sub" data-ko="검색으로 빠르게 다시 확인하세요." data-en="Use search to quickly revisit the terms.">검색으로 빠르게 다시 확인하세요.</p>
-    <div class="glossary-box">
-      <input class="glossary-search" data-glossary-search data-ko-placeholder="용어 검색" data-en-placeholder="Search terms" placeholder="용어 검색" />
-      <div class="glossary-item" data-glossary-item><strong>MCP Client</strong><p data-ko="도구를 요청하고 사용하는 AI 측 애플리케이션" data-en="The AI-side application that requests and uses tools">도구를 요청하고 사용하는 AI 측 애플리케이션</p></div>
-      <div class="glossary-item" data-glossary-item><strong>MCP Server</strong><p data-ko="도구 목록과 실행 인터페이스를 표준 방식으로 제공하는 서버" data-en="The server that exposes tools and execution interfaces in a standard way">도구 목록과 실행 인터페이스를 표준 방식으로 제공하는 서버</p></div>
-      <div class="glossary-item" data-glossary-item><strong>Credential</strong><p data-ko="외부 서비스를 호출할 때 필요한 키, 토큰, OAuth 정보" data-en="Keys, tokens, or OAuth credentials needed for external services">외부 서비스를 호출할 때 필요한 키, 토큰, OAuth 정보</p></div>
-    </div>
-  </div>
-
-  <div class="section" id="sec-memo">
-    <div class="sec-tag">Section J</div>
-    <h2 class="sec-h" data-ko="복사용 메모 / 실행 체크리스트" data-en="Copy memo / action checklist">복사용 메모 / 실행 체크리스트</h2>
-    <p class="sec-sub" data-ko="내 언어로 다시 써보면 이해가 정리됩니다." data-en="Rewriting it in your own words helps the concept stick.">내 언어로 다시 써보면 이해가 정리됩니다.</p>
-    <div class="memo-box">
-      <textarea data-memo data-ko-placeholder="예: MCP는 API 키가 아니라 AI와 도구를 연결하는 표준 구조다." data-en-placeholder="Example: MCP is not an API key, but a standard structure connecting AI and tools." placeholder="예: MCP는 API 키가 아니라 AI와 도구를 연결하는 표준 구조다."></textarea>
-      <div class="memo-actions">
-        <button class="btn btn-secondary" data-memo-save data-ko="저장" data-en="Save">저장</button>
-        <button class="btn btn-secondary" data-memo-copy data-ko="복사" data-en="Copy">복사</button>
-        <button class="btn btn-secondary" data-memo-reset data-ko="초기화" data-en="Reset">초기화</button>
-      </div>
-    </div>
-  </div>
+  <div class="section" id="sec-memo"><div class="sec-tag">Section J</div><h2 class="sec-h" data-ko="메모 / 실행 체크리스트" data-en="Copy memo / action checklist">Copy memo / action checklist</h2><p class="sec-sub" data-ko="자기 언어로 다시 적어보면 이해가 더 오래 남습니다." data-en="Rewriting it in your own words helps the concept stick.">Rewriting it in your own words helps the concept stick.</p><div class="memo-box"><textarea data-memo data-ko-placeholder="예: MCP는 API Key가 아니라, AI와 도구를 잇는 표준 연결 구조다." data-en-placeholder="Example: MCP is not an API key, but a standard structure connecting AI and tools." placeholder="Example: MCP is not an API key, but a standard structure connecting AI and tools."></textarea><div class="memo-actions"><button class="btn btn-secondary" data-memo-save data-ko="저장" data-en="Save">Save</button><button class="btn btn-secondary" data-memo-copy data-ko="복사" data-en="Copy">Copy</button><button class="btn btn-secondary" data-memo-reset data-ko="초기화" data-en="Reset">Reset</button></div></div></div>
 
   <div class="footer-note" data-ko="CLOID.AI interactive textbook · MCP foundations" data-en="CLOID.AI interactive textbook · MCP foundations">CLOID.AI interactive textbook · MCP foundations</div>
   <script src="/textbooks/common.js"></script>

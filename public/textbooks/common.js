@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   const body = document.body;
   const bookId = body.dataset.bookId || "textbook";
   const stateKey = `${bookId}:state`;
@@ -11,20 +11,13 @@
 
   function setProgress() {
     if (!progressBar || sections.length === 0) return;
-    const index = Math.max(
-      0,
-      sections.findIndex((section) => section.id === `sec-${currentSection}`),
-    );
+    const index = Math.max(0, sections.findIndex((section) => section.id === `sec-${currentSection}`));
     const ratio = Math.max(0.08, (index + 1) / sections.length);
     progressBar.style.width = `${ratio * 100}%`;
   }
 
   function saveState(extra) {
-    const state = {
-      section: currentSection,
-      locale,
-      ...(extra || {}),
-    };
+    const state = { section: currentSection, locale, ...(extra || {}) };
     localStorage.setItem(stateKey, JSON.stringify(state));
   }
 
@@ -38,11 +31,7 @@
   }
 
   window.goSec = goSec;
-
-  navButtons.forEach((button) => {
-    button.addEventListener("click", () => goSec(button.dataset.section));
-  });
-
+  navButtons.forEach((button) => button.addEventListener("click", () => goSec(button.dataset.section)));
   document.querySelectorAll("[data-start-section]").forEach((button) => {
     button.addEventListener("click", () => goSec(button.dataset.startSection));
   });
@@ -156,9 +145,7 @@
     saveState();
   }
 
-  localeButtons.forEach((button) => {
-    button.addEventListener("click", () => applyLocale(button.dataset.locale));
-  });
+  localeButtons.forEach((button) => button.addEventListener("click", () => applyLocale(button.dataset.locale)));
 
   try {
     const savedState = JSON.parse(localStorage.getItem(stateKey) || "{}");
@@ -170,7 +157,6 @@
 
   applyLocale(locale);
   goSec(currentSection);
-
   const defaultConcept = document.querySelector("[data-concept]");
   if (defaultConcept) defaultConcept.click();
   const defaultDoctor = document.querySelector("[data-doctor]");
