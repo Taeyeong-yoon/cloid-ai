@@ -258,9 +258,10 @@ button:active:not(:disabled) {
 
 .journey-hero-surface-skills {
   background:
-    radial-gradient(circle at 24% 30%, rgba(245, 158, 11, 0.2), transparent 30%),
-    radial-gradient(circle at 80% 26%, rgba(96, 165, 250, 0.14), transparent 26%),
-    linear-gradient(180deg, rgba(18, 12, 30, 0.72), rgba(11, 9, 18, 0.98));
+    radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.22), transparent 40%),
+    radial-gradient(circle at 16% 18%, rgba(167, 139, 250, 0.10), transparent 28%),
+    radial-gradient(circle at 84% 82%, rgba(109, 40, 217, 0.10), transparent 26%),
+    linear-gradient(180deg, rgba(12, 8, 28, 0.80), rgba(6, 4, 16, 0.98));
 }
 
 .journey-hero-surface-labs {
@@ -435,82 +436,151 @@ button:active:not(:disabled) {
   bottom: 18%;
 }
 
-.journey-skills-lane {
+/* ── Claude Hub 네트워크 비주얼 ─────────────────────────────── */
+
+/* 도트 그리드 배경 */
+.journey-hub-bg {
   position: absolute;
-  left: 11%;
-  right: 11%;
+  inset: 1rem;
+  border-radius: 1.2rem;
+  opacity: 0.18;
+  background-image: radial-gradient(circle, rgba(139, 92, 246, 0.6) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* 중심 궤도 링 */
+.journey-hub-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 88px;
+  height: 88px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px dashed rgba(139, 92, 246, 0.18);
+}
+
+/* 연결선 공통 */
+.journey-hub-line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   height: 1px;
-  background: linear-gradient(90deg, rgba(245, 158, 11, 0), rgba(245, 158, 11, 0.24), rgba(96, 165, 250, 0));
+  transform-origin: 0 50%;
 }
 
-.journey-skills-lane-1 {
-  top: 34%;
+.journey-hub-line-1 {
+  width: 64px;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.55), transparent);
+  transform: translate(0, -50%) rotate(-133deg);
 }
 
-.journey-skills-lane-2 {
-  top: 63%;
+.journey-hub-line-2 {
+  width: 66px;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.50), transparent);
+  transform: translate(0, -50%) rotate(-44deg);
 }
 
-.journey-skill-tile,
+.journey-hub-line-3 {
+  width: 60px;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.45), transparent);
+  transform: translate(0, -50%) rotate(-6deg);
+}
+
+.journey-hub-line-4 {
+  width: 70px;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.50), transparent);
+  transform: translate(0, -50%) rotate(138deg);
+}
+
+.journey-hub-line-5 {
+  width: 62px;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.45), transparent);
+  transform: translate(0, -50%) rotate(50deg);
+}
+
+/* 허브 중심 노드 */
+.journey-hub-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(196, 181, 253, 1) 0%, rgba(109, 40, 217, 0.9) 100%);
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.9), 0 0 36px rgba(139, 92, 246, 0.35);
+  z-index: 2;
+}
+
+/* 중심 펄스 링 */
+.journey-hub-pulse {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  animation: hubPulse 2.8s ease-out infinite;
+  z-index: 1;
+}
+
+@keyframes hubPulse {
+  0%   { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+  100% { transform: translate(-50%, -50%) scale(3.2); opacity: 0; }
+}
+
+/* 주변 노드 (연결 서비스) */
+.journey-hub-node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(167, 139, 250, 0.75);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.55), 0 0 4px rgba(167, 139, 250, 0.8);
+}
+
+.journey-hub-node-1 { left: 16%;  top: 15%; }
+.journey-hub-node-2 { right: 14%; top: 16%; }
+.journey-hub-node-3 { right: 9%;  top: 46%; }
+.journey-hub-node-4 { left: 13%;  bottom: 17%; }
+.journey-hub-node-5 { right: 20%; bottom: 16%; }
+
+/* 라벨 칩 */
+.journey-hub-chip {
+  position: absolute;
+  border-radius: 999px;
+  height: 15px;
+  background: rgba(139, 92, 246, 0.10);
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.06);
+}
+
+.journey-hub-chip-1 {
+  left: 6%;
+  bottom: 32%;
+  width: 50px;
+}
+
+.journey-hub-chip-2 {
+  right: 6%;
+  top: 30%;
+  width: 44px;
+}
+
+.journey-hub-chip-3 {
+  left: 30%;
+  bottom: 14%;
+  width: 38px;
+}
+
 .journey-skill-chip,
 .journey-lab-window {
   position: absolute;
   border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(8px);
-}
-
-.journey-skill-tile {
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(38, 38, 48, 0.8), rgba(17, 24, 39, 0.45));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
-}
-
-.journey-skill-tile-a {
-  left: 12%;
-  top: 18%;
-  width: 84px;
-  height: 84px;
-}
-
-.journey-skill-tile-b {
-  left: 42%;
-  top: 32%;
-  width: 96px;
-  height: 62px;
-}
-
-.journey-skill-tile-c {
-  right: 10%;
-  bottom: 18%;
-  width: 90px;
-  height: 72px;
-}
-
-.journey-skill-chip {
-  border-radius: 999px;
-  background: rgba(245, 158, 11, 0.12);
-  box-shadow: 0 0 18px rgba(245, 158, 11, 0.08);
-}
-
-.journey-skill-chip-1 {
-  left: 18%;
-  top: 58%;
-  width: 64px;
-  height: 20px;
-}
-
-.journey-skill-chip-2 {
-  right: 22%;
-  top: 18%;
-  width: 48px;
-  height: 20px;
-}
-
-.journey-skill-chip-3 {
-  right: 13%;
-  top: 50%;
-  width: 58px;
-  height: 20px;
 }
 
 .journey-lab-grid {

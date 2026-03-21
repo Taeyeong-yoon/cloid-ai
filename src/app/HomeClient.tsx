@@ -93,14 +93,23 @@ function JourneyHero({ variant }: { variant: JourneyCardKey }) {
   if (variant === "skills") {
     return (
       <div className="journey-hero journey-hero-skills">
-        <div className="journey-skills-lane journey-skills-lane-1" />
-        <div className="journey-skills-lane journey-skills-lane-2" />
-        <div className="journey-skill-tile journey-skill-tile-a" />
-        <div className="journey-skill-tile journey-skill-tile-b" />
-        <div className="journey-skill-tile journey-skill-tile-c" />
-        <div className="journey-skill-chip journey-skill-chip-1" />
-        <div className="journey-skill-chip journey-skill-chip-2" />
-        <div className="journey-skill-chip journey-skill-chip-3" />
+        <div className="journey-hub-bg" />
+        <div className="journey-hub-orbit" />
+        <div className="journey-hub-line journey-hub-line-1" />
+        <div className="journey-hub-line journey-hub-line-2" />
+        <div className="journey-hub-line journey-hub-line-3" />
+        <div className="journey-hub-line journey-hub-line-4" />
+        <div className="journey-hub-line journey-hub-line-5" />
+        <div className="journey-hub-node journey-hub-node-1" />
+        <div className="journey-hub-node journey-hub-node-2" />
+        <div className="journey-hub-node journey-hub-node-3" />
+        <div className="journey-hub-node journey-hub-node-4" />
+        <div className="journey-hub-node journey-hub-node-5" />
+        <div className="journey-hub-center" />
+        <div className="journey-hub-pulse" />
+        <div className="journey-hub-chip journey-hub-chip-1" />
+        <div className="journey-hub-chip journey-hub-chip-2" />
+        <div className="journey-hub-chip journey-hub-chip-3" />
       </div>
     );
   }
