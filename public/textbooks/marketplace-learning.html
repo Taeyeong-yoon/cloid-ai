@@ -81,6 +81,24 @@ input,select{font-family:var(--font);}
 .concept-detail{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;margin-top:14px;min-height:140px;}
 .concept-detail h3{color:var(--acc);margin-bottom:8px;font-size:1.05rem;}
 .concept-detail p{color:var(--text2);font-size:0.88rem;margin-bottom:7px;}
+.map-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;}
+.map-card{cursor:pointer;text-align:center;padding:12px 8px;min-height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.map-card.selected{border-color:var(--acc);box-shadow:0 0 20px rgba(245,158,11,0.12);}
+.map-card .concept-icon{font-size:1.35rem;margin-bottom:6px;}
+.map-card .concept-label{font-size:0.83rem;line-height:1.3;}
+.map-card .concept-brief{font-size:0.71rem;line-height:1.35;}
+.map-detail-title{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.map-detail-title .map-mark{font-size:1.35rem;line-height:1;}
+.map-detail-lead{font-size:0.91rem;color:var(--text2);line-height:1.75;}
+.map-list{list-style:none;padding:0;margin:14px 0 0;}
+.map-list li{display:flex;gap:8px;align-items:flex-start;padding:6px 0;font-size:0.86rem;color:var(--text2);line-height:1.65;}
+.map-list li::before{content:'•';color:var(--acc);flex-shrink:0;}
+.map-box{margin-top:14px;padding:14px 16px;border-radius:var(--radius-sm);background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.22);}
+.map-box strong{display:block;margin-bottom:6px;color:var(--acc);}
+.map-box p{margin:0;color:var(--text2);font-size:0.85rem;line-height:1.7;}
+.map-tip{margin-top:12px;padding:12px 14px;border-radius:var(--radius-sm);background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.18);font-size:0.84rem;color:var(--text2);line-height:1.65;}
+@media(max-width:1100px){.map-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:640px){.map-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.map-card{min-height:96px;}}
 
 .toggle-group{margin:18px 0;}
 .toggle-header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--bg3);border-radius:var(--radius-sm);cursor:pointer;font-size:0.88rem;font-weight:600;}
@@ -99,9 +117,49 @@ input,select{font-family:var(--font);}
 .compare-side{padding:16px;border-radius:var(--radius);border:1px solid var(--border);}
 .compare-side.old{background:rgba(239,68,68,0.03);border-color:rgba(239,68,68,0.2);}
 .compare-side.new{background:rgba(16,185,129,0.03);border-color:rgba(16,185,129,0.2);}
+.stack-flow{margin-top:18px;padding:22px;border:1px solid var(--border);border-radius:var(--radius);background:linear-gradient(180deg,rgba(16,185,129,0.04),rgba(245,158,11,0.04));}
+.stack-flow-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:18px;flex-wrap:wrap;}
+.stack-flow-head h3{font-size:1.08rem;margin-bottom:6px;}
+.stack-flow-head p{color:var(--text2);font-size:0.88rem;max-width:720px;}
+.stack-flow-chip{padding:7px 12px;border-radius:999px;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.2);color:var(--acc2);font-size:0.76rem;font-weight:700;white-space:nowrap;}
+.stack-flow-visual{display:grid;gap:10px;}
+.stack-layer{position:relative;padding:16px 18px;border-radius:18px;border:1px solid var(--border);background:var(--card);}
+.stack-layer.skill{border-color:rgba(56,189,248,0.28);background:rgba(56,189,248,0.06);}
+.stack-layer.connector{border-color:rgba(139,92,246,0.26);background:rgba(139,92,246,0.06);}
+.stack-layer.plugin{border-color:rgba(245,158,11,0.28);background:rgba(245,158,11,0.07);}
+.stack-layer.market{border-color:rgba(236,72,153,0.26);background:rgba(236,72,153,0.06);}
+.stack-layer.runtime{border-color:rgba(16,185,129,0.28);background:rgba(16,185,129,0.07);}
+.stack-layer-top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:8px;}
+.stack-layer-title{display:flex;align-items:center;gap:10px;font-size:1rem;font-weight:800;}
+.stack-layer-badge{padding:4px 10px;border-radius:999px;background:rgba(255,255,255,0.06);border:1px solid var(--border);font-size:0.72rem;color:var(--text3);}
+.stack-layer-desc{color:var(--text2);font-size:0.88rem;line-height:1.7;}
+.stack-layer-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:14px;margin-top:12px;}
+.stack-mini{padding:12px 14px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);}
+.stack-mini strong{display:block;font-size:0.78rem;color:var(--acc);margin-bottom:6px;}
+.stack-mini p{margin:0;color:var(--text2);font-size:0.82rem;line-height:1.65;}
+.stack-arrow{display:flex;justify-content:center;align-items:center;color:var(--acc2);font-size:1.15rem;font-weight:800;height:18px;}
+.stack-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px;}
+.stack-summary-card{padding:14px 16px;border-radius:14px;background:var(--bg3);border:1px solid var(--border);}
+.stack-summary-card strong{display:block;font-size:0.8rem;color:var(--acc2);margin-bottom:6px;}
+.stack-summary-card p{margin:0;color:var(--text2);font-size:0.82rem;line-height:1.65;}
+@media(max-width:760px){.stack-layer-grid,.stack-summary{grid-template-columns:1fr;}}
 .compare-label{display:inline-block;padding:2px 8px;border-radius:6px;font-size:0.72rem;font-weight:700;margin-bottom:8px;}
 .compare-label.off{background:rgba(239,68,68,0.12);color:var(--acc4);}
 .compare-label.on{background:rgba(16,185,129,0.12);color:var(--acc2);}
+.plugin-flow{margin-top:18px;padding:22px;border-radius:var(--radius);border:1px solid var(--border);background:radial-gradient(circle at top left, rgba(139,92,246,0.14), transparent 30%),linear-gradient(180deg, rgba(17,24,39,0.94), rgba(10,15,26,0.94));overflow:hidden;}
+.plugin-flow-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px;}
+.plugin-flow-head h3{font-size:1.06rem;margin-bottom:6px;}
+.plugin-flow-head p{font-size:0.86rem;color:var(--text2);max-width:700px;}
+.plugin-flow-chip{flex-shrink:0;padding:6px 10px;border-radius:999px;background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.28);color:var(--acc3);font-size:0.75rem;font-weight:700;}
+.plugin-flow-visual{padding:18px;border-radius:var(--radius);background:rgba(10,15,26,0.7);border:1px solid rgba(148,163,184,0.14);}
+.plugin-svg{width:100%;height:auto;display:block;}
+.plugin-node{fill:#131a28;stroke-width:1.6;}
+.plugin-node-text{fill:var(--text);font-size:13px;font-weight:700;}
+.plugin-subtext{fill:var(--text2);font-size:11px;}
+.plugin-arrow{fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;}
+.plugin-flow-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px;}
+.plugin-flow-note{padding:12px 14px;border-radius:12px;background:rgba(26,34,52,0.72);border:1px solid rgba(148,163,184,0.14);font-size:0.82rem;color:var(--text2);}
+.plugin-flow-note strong{display:block;color:var(--text);margin-bottom:4px;}
 
 .tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:16px;}
 .tab-btn{padding:7px 16px;border-radius:var(--radius-sm);font-size:0.83rem;background:var(--bg3);color:var(--text2);font-weight:500;}
@@ -198,6 +256,9 @@ input,select{font-family:var(--font);}
   .card-grid-5{grid-template-columns:repeat(3,1fr);}
   .pipe-diagram{flex-direction:column;}
   .pipe-arrow{transform:rotate(90deg);}
+  .plugin-flow{padding:18px 14px;}
+  .plugin-flow-head{flex-direction:column;}
+  .plugin-flow-notes{grid-template-columns:1fr;}
   .section{padding:60px 12px 30px;}
 }
 </style>
@@ -260,7 +321,7 @@ input,select{font-family:var(--font);}
   <div class="sec-tag" style="background:rgba(245,158,11,0.12);color:var(--acc);">섹션 A</div>
   <h2 class="sec-h">개념 분리 인터랙티브 맵</h2>
   <p class="sec-sub">6가지 핵심 개념을 카드로 눌러 비교하세요. 이것들은 모두 다른 레이어에 있습니다.</p>
-  <div class="card-grid card-grid-3" id="conceptGrid"></div>
+  <div class="map-grid" id="conceptGrid"></div>
   <div class="concept-detail" id="conceptDetail"></div>
   <div class="highlight-box">🧩 Skill은 프롬프트, Plugin은 패키지, Marketplace는 배포 채널이다</div>
   <div class="toggle-group">
@@ -285,19 +346,121 @@ input,select{font-family:var(--font);}
 <div class="section" id="sec-struct">
   <div class="sec-tag" style="background:rgba(16,185,129,0.12);color:var(--acc2);">섹션 B</div>
   <h2 class="sec-h">전체 구조: 레이어별 이해</h2>
-  <p class="sec-sub">아래에서 위로 쌓이는 구조입니다. 각 레이어가 어떤 역할인지 클릭해서 확인하세요.</p>
-  <div class="pipe-diagram" style="flex-direction:column-reverse;">
-    <div class="pipe-node" style="border-color:var(--acc5);width:90%;max-width:400px;" onclick="showLayer(0)">📝 <strong>Skill</strong><br><small style="color:var(--text3)">마크다운 지시문 (SKILL.md)</small></div>
-    <div class="pipe-arrow" style="transform:rotate(90deg);">↑</div>
-    <div class="pipe-node" style="border-color:var(--acc3);width:90%;max-width:400px;" onclick="showLayer(1)">🔌 <strong>Connector</strong><br><small style="color:var(--text3)">외부 도구 연결 (MCP 기반)</small></div>
-    <div class="pipe-arrow" style="transform:rotate(90deg);">↑</div>
-    <div class="pipe-node" style="border-color:var(--acc);width:90%;max-width:400px;" onclick="showLayer(2)">📦 <strong>Plugin</strong><br><small style="color:var(--text3)">Skill + Connector + 명령어 묶음</small></div>
-    <div class="pipe-arrow" style="transform:rotate(90deg);">↑</div>
-    <div class="pipe-node" style="border-color:var(--acc6);width:90%;max-width:400px;" onclick="showLayer(3)">🏪 <strong>Marketplace</strong><br><small style="color:var(--text3)">플러그인 배포/관리 채널</small></div>
-    <div class="pipe-arrow" style="transform:rotate(90deg);">↑</div>
-    <div class="pipe-node" style="border-color:var(--acc4);width:90%;max-width:400px;" onclick="showLayer(4)">🖥️ <strong>Cowork / Claude Code</strong><br><small style="color:var(--text3)">플러그인이 실행되는 환경</small></div>
+  <p class="sec-sub">아래에서 위로 쌓이는 구조를 한 화면에서 읽을 수 있게 정리했습니다. 각 레이어는 아래층을 재료로 삼아 위층에서 더 큰 실행 단위가 됩니다.</p>
+  <div class="stack-flow">
+    <div class="stack-flow-head">
+      <div>
+        <h3>아래층은 재료, 위층은 실행과 배포</h3>
+        <p>맨 아래의 Skill은 지시문이고, Connector는 데이터 연결입니다. 이 둘을 묶어 Plugin이 되고, 그 Plugin을 팀에 퍼뜨리는 곳이 Marketplace이며, 실제로 쓰는 자리가 Cowork / Claude Code입니다.</p>
+      </div>
+      <div class="stack-flow-chip">Skill → Connector → Plugin → Marketplace → Runtime</div>
+    </div>
+    <div class="stack-flow-visual">
+      <div class="stack-layer skill">
+        <div class="stack-layer-top">
+          <div class="stack-layer-title">📝 Skill</div>
+          <div class="stack-layer-badge">가장 작은 단위</div>
+        </div>
+        <div class="stack-layer-desc">Claude에게 "이 상황에서는 이렇게 일하라"라고 알려주는 지시문입니다. 반복되는 업무 방법을 문서로 저장한 단계입니다.</div>
+        <div class="stack-layer-grid">
+          <div class="stack-mini">
+            <strong>무엇을 담나</strong>
+            <p>업무 목적, 진행 순서, 출력 형식, 금지 사항, 예시 답변 같은 작업 규칙을 담습니다.</p>
+          </div>
+          <div class="stack-mini">
+            <strong>예시</strong>
+            <p>`회의록 요약 스킬`, `영업 미팅 준비 스킬`, `블로그 초안 작성 스킬`처럼 반복 업무 하나를 정의합니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="stack-arrow">↑ 이 스킬이 실제 데이터를 쓰려면 연결이 필요</div>
+      <div class="stack-layer connector">
+        <div class="stack-layer-top">
+          <div class="stack-layer-title">🔌 Connector</div>
+          <div class="stack-layer-badge">외부 데이터 연결</div>
+        </div>
+        <div class="stack-layer-desc">Claude가 Gmail, Slack, Google Drive, GitHub 같은 외부 서비스에 접근하게 해 주는 연결부입니다. 지시문만으로는 못 보는 데이터를 여는 단계입니다.</div>
+        <div class="stack-layer-grid">
+          <div class="stack-mini">
+            <strong>왜 필요한가</strong>
+            <p>실제 메일, 파일, 일정, CRM 데이터가 있어야 업무 자동화가 현실적인 결과를 만들 수 있습니다.</p>
+          </div>
+          <div class="stack-mini">
+            <strong>예시</strong>
+            <p>`Gmail 연결`, `Google Calendar 연결`, `Salesforce 연결`을 켜 두면 Claude가 실제 업무 데이터를 읽습니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="stack-arrow">↑ 지시문과 연결을 실전에 맞게 한 상자로 묶음</div>
+      <div class="stack-layer plugin">
+        <div class="stack-layer-top">
+          <div class="stack-layer-title">📦 Plugin</div>
+          <div class="stack-layer-badge">실행 패키지</div>
+        </div>
+        <div class="stack-layer-desc">Skill과 Connector, 필요하면 슬래시 명령과 설정까지 함께 넣은 패키지입니다. "영업용 Claude", "재무용 Claude"처럼 역할별 전문가 세트를 만드는 단계입니다.</div>
+        <div class="stack-layer-grid">
+          <div class="stack-mini">
+            <strong>안에 들어가는 것</strong>
+            <p>스킬 여러 개, 커넥터 설정, `/call-prep` 같은 명령어, 역할 설명, 폴더 구조와 설정 파일이 함께 들어갑니다.</p>
+          </div>
+          <div class="stack-mini">
+            <strong>예시</strong>
+            <p>`Sales Plugin` 안에 고객 조사 스킬, CRM 커넥터, 미팅 준비 명령을 함께 묶어 둡니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="stack-arrow">↑ 좋은 패키지를 여러 사람이 쓰려면 배포 채널이 필요</div>
+      <div class="stack-layer market">
+        <div class="stack-layer-top">
+          <div class="stack-layer-title">🏪 Marketplace</div>
+          <div class="stack-layer-badge">배포와 관리</div>
+        </div>
+        <div class="stack-layer-desc">플러그인을 개인 파일로 끝내지 않고 팀과 조직에 배포하는 채널입니다. 어떤 플러그인을 누가 설치하고 어떤 버전을 쓰는지 관리하는 운영 레이어입니다.</div>
+        <div class="stack-layer-grid">
+          <div class="stack-mini">
+            <strong>하는 일</strong>
+            <p>플러그인 공개 범위 관리, 버전 업데이트, 조직 내 자동 설치, GitHub 기반 배포를 담당합니다.</p>
+          </div>
+          <div class="stack-mini">
+            <strong>예시</strong>
+            <p>교육팀이 만든 `신입 온보딩 플러그인`을 사내 마켓플레이스에 올려 전 직원이 같은 버전으로 쓰게 합니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="stack-arrow">↑ 배포된 패키지는 실제 작업 환경에서 실행됨</div>
+      <div class="stack-layer runtime">
+        <div class="stack-layer-top">
+          <div class="stack-layer-title">🖥️ Cowork / Claude Code</div>
+          <div class="stack-layer-badge">실행 환경</div>
+        </div>
+        <div class="stack-layer-desc">같은 플러그인도 어디서 실행하느냐에 따라 체감이 달라집니다. Cowork은 업무 위임 중심, Claude Code는 로컬 개발 실행 중심입니다.</div>
+        <div class="stack-layer-grid">
+          <div class="stack-mini">
+            <strong>Cowork</strong>
+            <p>비개발자가 버튼, 폼, 워크플로 중심으로 업무를 맡기고 결과를 받는 환경입니다.</p>
+          </div>
+          <div class="stack-mini">
+            <strong>Claude Code</strong>
+            <p>개발자가 터미널, 파일 수정, 셸 명령, git 흐름까지 직접 다루는 실행 환경입니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stack-summary">
+      <div class="stack-summary-card">
+        <strong>한 문장 요약</strong>
+        <p>Skill은 행동 규칙, Connector는 데이터 연결, Plugin은 실행 패키지입니다.</p>
+      </div>
+      <div class="stack-summary-card">
+        <strong>팀 관점</strong>
+        <p>Marketplace는 좋은 Plugin을 팀 전체에 복제 가능하게 만드는 배포 시스템입니다.</p>
+      </div>
+      <div class="stack-summary-card">
+        <strong>사용자 관점</strong>
+        <p>최종 사용자는 Cowork 또는 Claude Code에서 이 구조를 실제 업무나 개발 흐름으로 체감합니다.</p>
+      </div>
+    </div>
   </div>
-  <div class="concept-detail" id="layerDetail" style="min-height:100px;"></div>
   <div class="warn-box">💡 핵심: Skill 하나만으로도 충분히 유용합니다. Plugin은 여러 Skill을 묶어 더 강력하게 만든 것이고, Marketplace는 그걸 팀에 배포하는 수단입니다. 필요에 따라 단계적으로 확장하세요.</div>
 </div>
 
@@ -313,6 +476,96 @@ input,select{font-family:var(--font);}
     <button class="tab-btn" onclick="switchCompare(3)">마케팅</button>
   </div>
   <div id="compareContent"></div>
+  <div class="plugin-flow">
+    <div class="plugin-flow-head">
+      <div>
+        <h3>플러그인이 실제로 일하는 상세 흐름도</h3>
+        <p>플러그인이 없으면 사용자가 매번 역할, 규칙, 데이터 소스를 반복 설명해야 합니다. 플러그인이 있으면 그 맥락과 명령, 연결부가 한 패키지 안에 들어가서 바로 실행 가능한 업무 흐름으로 바뀝니다.</p>
+      </div>
+      <div class="plugin-flow-chip">반복 설명 → 패키지 실행</div>
+    </div>
+    <div class="plugin-flow-visual">
+      <svg class="plugin-svg" viewBox="0 0 920 390" role="img" aria-label="Detailed plugin workflow with and without plugin">
+        <defs>
+          <marker id="pluginArrowRed" markerWidth="8" markerHeight="8" refX="6.4" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#ef4444"></path>
+          </marker>
+          <marker id="pluginArrowGreen" markerWidth="8" markerHeight="8" refX="6.4" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#10b981"></path>
+          </marker>
+          <marker id="pluginArrowViolet" markerWidth="8" markerHeight="8" refX="6.4" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#8b5cf6"></path>
+          </marker>
+        </defs>
+
+        <text class="plugin-node-text" x="198" y="30" text-anchor="middle" fill="#ef4444">플러그인 없음</text>
+        <rect class="plugin-node" x="36" y="52" width="144" height="68" rx="18" stroke="#ef4444"></rect>
+        <text class="plugin-node-text" x="108" y="80" text-anchor="middle">사용자</text>
+        <text class="plugin-subtext" x="108" y="100" text-anchor="middle">요청 + 규칙 설명</text>
+
+        <rect class="plugin-node" x="220" y="52" width="154" height="68" rx="18" stroke="#ef4444"></rect>
+        <text class="plugin-node-text" x="297" y="80" text-anchor="middle">Claude</text>
+        <text class="plugin-subtext" x="297" y="100" text-anchor="middle">그때그때 해석</text>
+
+        <rect class="plugin-node" x="414" y="24" width="158" height="52" rx="16" stroke="#64748b"></rect>
+        <text class="plugin-node-text" x="493" y="48" text-anchor="middle">브랜드 규칙</text>
+        <text class="plugin-subtext" x="493" y="64" text-anchor="middle">매번 다시 설명</text>
+
+        <rect class="plugin-node" x="414" y="92" width="158" height="52" rx="16" stroke="#64748b"></rect>
+        <text class="plugin-node-text" x="493" y="116" text-anchor="middle">명령 형식</text>
+        <text class="plugin-subtext" x="493" y="132" text-anchor="middle">일관성 약함</text>
+
+        <rect class="plugin-node" x="414" y="160" width="158" height="52" rx="16" stroke="#64748b"></rect>
+        <text class="plugin-node-text" x="493" y="184" text-anchor="middle">도구 연결</text>
+        <text class="plugin-subtext" x="493" y="200" text-anchor="middle">직접 붙여넣기 의존</text>
+
+        <path class="plugin-arrow" d="M180 86 C196 86, 206 86, 220 86" stroke="#ef4444" marker-end="url(#pluginArrowRed)"></path>
+        <path class="plugin-arrow" d="M374 86 C390 86, 400 50, 414 50" stroke="#94a3b8" stroke-dasharray="6 6"></path>
+        <path class="plugin-arrow" d="M374 86 C390 86, 400 118, 414 118" stroke="#94a3b8" stroke-dasharray="6 6"></path>
+        <path class="plugin-arrow" d="M374 86 C390 86, 400 186, 414 186" stroke="#94a3b8" stroke-dasharray="6 6"></path>
+
+        <text class="plugin-node-text" x="688" y="30" text-anchor="middle" fill="#10b981">플러그인 있음</text>
+        <rect class="plugin-node" x="36" y="268" width="144" height="68" rx="18" stroke="#10b981"></rect>
+        <text class="plugin-node-text" x="108" y="296" text-anchor="middle">사용자</text>
+        <text class="plugin-subtext" x="108" y="316" text-anchor="middle">짧은 목표만 입력</text>
+
+        <rect class="plugin-node" x="220" y="268" width="154" height="68" rx="18" stroke="#10b981"></rect>
+        <text class="plugin-node-text" x="297" y="296" text-anchor="middle">Claude</text>
+        <text class="plugin-subtext" x="297" y="316" text-anchor="middle">플러그인 호출</text>
+
+        <rect class="plugin-node" x="414" y="244" width="170" height="116" rx="20" stroke="#8b5cf6"></rect>
+        <text class="plugin-node-text" x="499" y="276" text-anchor="middle">Plugin</text>
+        <text class="plugin-subtext" x="499" y="298" text-anchor="middle">Skill: 역할/톤/절차</text>
+        <text class="plugin-subtext" x="499" y="316" text-anchor="middle">Commands: /run /report</text>
+        <text class="plugin-subtext" x="499" y="334" text-anchor="middle">Connector: CRM/Docs/Slack</text>
+
+        <rect class="plugin-node" x="644" y="228" width="138" height="52" rx="16" stroke="#3b82f6"></rect>
+        <text class="plugin-node-text" x="713" y="252" text-anchor="middle">Cowork</text>
+        <text class="plugin-subtext" x="713" y="268" text-anchor="middle">폼형 워크플로</text>
+
+        <rect class="plugin-node" x="644" y="298" width="138" height="52" rx="16" stroke="#ef4444"></rect>
+        <text class="plugin-node-text" x="713" y="322" text-anchor="middle">Claude Code</text>
+        <text class="plugin-subtext" x="713" y="338" text-anchor="middle">CLI 명령형 실행</text>
+
+        <rect class="plugin-node" x="812" y="262" width="78" height="80" rx="18" stroke="#10b981"></rect>
+        <text class="plugin-node-text" x="851" y="290" text-anchor="middle">결과</text>
+        <text class="plugin-subtext" x="851" y="308" text-anchor="middle">일관된</text>
+        <text class="plugin-subtext" x="851" y="324" text-anchor="middle">업무 출력</text>
+
+        <path class="plugin-arrow" d="M180 302 C196 302, 206 302, 220 302" stroke="#10b981" marker-end="url(#pluginArrowGreen)"></path>
+        <path class="plugin-arrow" d="M374 302 C390 302, 400 302, 414 302" stroke="#10b981" marker-end="url(#pluginArrowGreen)"></path>
+        <path class="plugin-arrow" d="M584 302 C608 302, 620 256, 644 254" stroke="#8b5cf6" marker-end="url(#pluginArrowViolet)"></path>
+        <path class="plugin-arrow" d="M584 302 C608 302, 620 324, 644 324" stroke="#8b5cf6" marker-end="url(#pluginArrowViolet)"></path>
+        <path class="plugin-arrow" d="M782 254 C796 254, 802 276, 812 286" stroke="#10b981" marker-end="url(#pluginArrowGreen)"></path>
+        <path class="plugin-arrow" d="M782 324 C796 324, 802 316, 812 310" stroke="#10b981" marker-end="url(#pluginArrowGreen)"></path>
+      </svg>
+      <div class="plugin-flow-notes">
+        <div class="plugin-flow-note"><strong>플러그인 없을 때</strong>톤, 형식, 회사 절차, 데이터 소스를 요청할 때마다 다시 알려줘야 해서 결과가 흔들립니다.</div>
+        <div class="plugin-flow-note"><strong>플러그인 내부</strong>Skill이 역할과 규칙을 잡고, Commands가 호출 방식을 고정하고, Connector가 외부 도구 연결을 담당합니다.</div>
+        <div class="plugin-flow-note"><strong>플러그인 있을 때</strong>사용자는 짧은 목표만 말하고, 실행 환경은 Cowork든 Claude Code든 같은 패키지를 불러 일관된 결과를 만듭니다.</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- ===== 5 DOCTORS ===== -->
@@ -472,20 +725,12 @@ input,select{font-family:var(--font);}
 <script>
 // ===== DATA =====
 const conceptData = [
-  {icon:'📝',label:'Skill',brief:'프롬프트 지시문',title:'Skill (스킬)',desc:'SKILL.md 마크다운 파일 하나입니다. 안에 YAML 프론트매터(이름, 설명)와 마크다운 본문(Claude가 따를 지시사항)이 들어 있습니다. 본질은 "재사용 가능하게 저장해둔 고급 프롬프트"입니다.',extra:'비유: 요리 레시피 카드. "이 상황에서는 이렇게 해라"라는 지침서입니다. 매번 입으로 설명하던 걸 카드에 적어둔 것이죠.'},
-  {icon:'🔌',label:'Connector',brief:'외부 도구 연결',title:'Connector (커넥터)',desc:'외부 서비스(Gmail, Google Drive, Slack, GitHub 등)를 Claude에 연결하는 것입니다. 내부적으로 MCP 프로토콜을 사용하지만, 사용자는 설정 파일을 직접 만질 필요 없이 UI에서 토글로 켜고 끕니다.',extra:'비유: 전원 어댑터. 서로 다른 서비스를 Claude가 사용할 수 있도록 규격을 맞춰주는 장치입니다.'},
-  {icon:'📦',label:'Plugin',brief:'스킬+커넥터 패키지',title:'Plugin (플러그인)',desc:'Skill(들) + Connector(들) + 슬래시 명령 + 서브에이전트를 하나의 폴더로 묶은 것입니다. 특정 직무나 역할에 맞게 Claude를 전문가로 만드는 "패키지"입니다. 마크다운 파일과 JSON 설정으로 구성됩니다.',extra:'비유: 도구 세트(공구함). 레시피(스킬) + 재료 공급선(커넥터) + 빠른 주문 메뉴(슬래시 명령)를 한 상자에 담은 것입니다.'},
-  {icon:'🏪',label:'Marketplace',brief:'배포/관리 채널',title:'Marketplace (마켓플레이스)',desc:'플러그인을 팀이나 조직 전체에 배포하고 관리하는 채널입니다. 공개 마켓(Anthropic 제공)과 프라이빗 마켓(기업이 자체 구축)이 있습니다. GitHub 레포와 연결하여 버전 관리가 가능합니다.',extra:'비유: 사내 앱스토어. 단, 현재 유료 판매 기능은 없고, 팀 내부 배포/관리 도구에 가깝습니다.'},
-  {icon:'🖥️',label:'Cowork',brief:'AI 작업 환경',title:'Cowork (코워크)',desc:'비개발자가 복잡한 업무를 AI 에이전트에게 맡기는 작업 환경입니다. "목표를 설정하면 Claude가 완성된 결과물을 만들어주는" 구조입니다. 플러그인은 주로 이 Cowork 환경에서 실행됩니다.',extra:'비유: AI 비서의 사무실. 비서에게 "이거 해줘"라고 맡기면 알아서 도구를 쓰고 결과를 주는 공간입니다.'},
-  {icon:'⚙️',label:'Claude Code',brief:'개발자용 CLI',title:'Claude Code (클로드 코드)',desc:'터미널에서 작동하는 개발자용 AI 코딩 도구입니다. 같은 플러그인 구조를 사용하지만, 서브에이전트 분기, 셸 명령 권한, git worktree 등 고급 기능을 추가로 지원합니다.',extra:'비유: Cowork이 비서의 사무실이라면, Claude Code는 개발자의 작업대입니다. 같은 도구를 쓰지만 손으로 직접 다루는 환경이죠.'}
-];
-
-const layerData = [
-  {title:'📝 Skill 레이어',desc:'가장 기본 단위입니다. SKILL.md 파일 하나로 Claude에게 특정 업무 수행 방법을 가르칩니다. 프론트매터(name, description)로 "언제 쓸지"를 정하고, 본문에 "어떻게 할지"를 적습니다. 스크립트 파일을 첨부하면 코드 실행도 가능합니다.'},
-  {title:'🔌 Connector 레이어',desc:'외부 서비스를 Claude에 연결합니다. Gmail, Google Calendar, Slack, GitHub, DocuSign 등이 있습니다. MCP 프로토콜 기반이지만, 사용자는 UI에서 토글만 하면 됩니다. 인증(OAuth 등)은 첫 연결 시 한 번만 하면 됩니다.'},
-  {title:'📦 Plugin 레이어',desc:'Skill(들)과 Connector(들)를 하나의 패키지로 묶습니다. 폴더 구조는: .claude-plugin/plugin.json(매니페스트) + skills/(스킬들) + commands/(슬래시 명령) + .mcp.json(커넥터 설정). 설치하면 슬래시 명령(/call-prep 등)을 바로 쓸 수 있습니다.'},
-  {title:'🏪 Marketplace 레이어',desc:'플러그인을 조직 전체에 배포합니다. 관리자가 GitHub 레포를 연결하면 자동 싱크됩니다. 플러그인별로 자동 설치/선택적 공개/비공개를 제어합니다. 공개 마켓(Anthropic 공식)과 프라이빗 마켓(기업 자체)이 있습니다.'},
-  {title:'🖥️ 실행 환경 레이어',desc:'Cowork(비개발자)과 Claude Code(개발자)에서 플러그인이 실행됩니다. Cowork에서는 슬래시 명령이 폼 형태로 표시되어 직관적입니다. Claude Code에서는 서브에이전트, worktree, cron 등 고급 기능이 추가됩니다. 같은 플러그인이 환경에 따라 다르게 작동할 수 있습니다.'}
+  {icon:'📝',label:'Skill',brief:'지시문 저장',title:'Skill (스킬)',desc:'스킬은 Claude가 특정 상황에서 어떻게 행동해야 하는지 알려주는 재사용 가능한 지시문입니다. 보통 `SKILL.md` 파일로 저장되며, 반복적으로 같은 품질을 내고 싶을 때 가장 먼저 쓰는 기본 단위입니다.',points:['매번 길게 설명하던 업무 방법을 문서 하나로 저장해 둘 수 있습니다.','"언제 이 스킬을 써야 하는지"와 "어떤 순서로 일해야 하는지"를 함께 적을 수 있습니다.','가장 가볍게 시작할 수 있는 자동화 단위라서 초보자에게 가장 적합합니다.'],example:'예) "회의록을 읽고 액션 아이템 5개로 요약" 같은 작업을 스킬로 저장해 두면, 다음부터는 같은 기준으로 반복 실행할 수 있습니다.',extra:'비유: 요리 레시피 카드. 매번 입으로 설명하던 조리법을 카드 한 장에 적어 둔 상태입니다.',tip:'처음에는 복잡한 플러그인보다 스킬 1개부터 만드는 것이 이해가 쉽습니다.'},
+  {icon:'🔌',label:'Connector',brief:'외부 연결',title:'Connector (커넥터)',desc:'커넥터는 Claude가 Gmail, Slack, Google Drive, GitHub 같은 외부 도구와 연결되게 만드는 장치입니다. 내부적으로는 MCP 같은 연결 표준을 쓰더라도, 사용자는 보통 토글이나 로그인만으로 설정합니다.',points:['Claude가 외부 데이터를 읽거나 보내려면 커넥터가 필요합니다.','연결이 되어야 메일 조회, 파일 검색, 캘린더 확인 같은 실제 업무 실행이 가능합니다.','사용자는 프로토콜 자체보다 "무엇이 연결되는가"를 이해하는 것이 중요합니다.'],example:'예) Gmail 커넥터가 연결되어 있으면 "오늘 받은 고객 메일 중 중요한 것만 요약해줘" 같은 요청이 가능해집니다.',extra:'비유: 전원 어댑터. 서로 다른 기기를 같은 콘센트에 꽂을 수 있게 맞춰 주는 변환 장치입니다.',tip:'커넥터는 Claude를 똑똑하게 만드는 것이 아니라, Claude가 접근할 수 있는 데이터 범위를 넓혀 주는 역할입니다.'},
+  {icon:'📦',label:'Plugin',brief:'패키지 묶음',title:'Plugin (플러그인)',desc:'플러그인은 스킬, 커넥터, 명령어, 설정을 하나로 묶은 실행 패키지입니다. 즉 "이 직무에는 이렇게 일하라"는 지시와 "이 데이터에 접근하라"는 연결을 함께 넣어, Claude를 특정 역할의 전문가처럼 작동하게 만듭니다.',points:['스킬 하나보다 더 강력한 이유는 지시문과 연결과 실행 진입점을 함께 묶기 때문입니다.','팀이 같은 방식으로 일하게 만드는 표준 패키지 역할을 합니다.','직무별 플러그인을 만들어 두면 업무 온보딩 속도가 빨라집니다.'],example:'예) 영업 플러그인 안에 `고객사 조사 스킬`, `CRM 커넥터`, `/call-prep` 명령을 묶어 두면 영업 담당자는 복잡한 설정 없이 바로 미팅 준비를 시킬 수 있습니다.',extra:'비유: 공구함. 망치 하나가 아니라 망치, 드라이버, 설명서가 한 상자에 정리된 상태입니다.',tip:'초보자는 "플러그인 = 여러 조각을 실전에 맞게 묶은 결과물"이라고 이해하면 가장 쉽습니다.'},
+  {icon:'🏪',label:'Marketplace',brief:'배포 채널',title:'Marketplace (마켓플레이스)',desc:'마켓플레이스는 플러그인을 개인이 아니라 팀이나 조직 단위로 배포하고 관리하는 공간입니다. 누가 어떤 플러그인을 쓸지, 버전을 어떻게 맞출지, 공개 범위를 어떻게 둘지 정하는 운영 채널에 가깝습니다.',points:['좋은 플러그인을 한 명만 쓰지 않고 조직 전체에 배포할 수 있습니다.','GitHub와 연결하면 업데이트와 버전 관리를 체계적으로 할 수 있습니다.','공개 마켓과 사내 전용 프라이빗 마켓을 구분해서 운영할 수 있습니다.'],example:'예) 교육팀이 만든 "신입 온보딩 플러그인"을 마켓플레이스에 올리면, 신입사원 모두가 같은 버전을 바로 설치해 쓸 수 있습니다.',extra:'비유: 사내 앱 배포 센터. 앱을 만드는 곳이 아니라, 만든 앱을 조직에 깔고 관리하는 곳입니다.',tip:'마켓플레이스는 기능 자체가 아니라 배포 방식이라는 점을 구분해서 보면 헷갈리지 않습니다.'},
+  {icon:'🖥️',label:'Cowork',brief:'업무 실행 환경',title:'Cowork (코워크)',desc:'Cowork은 비개발자가 Claude에게 업무를 맡기고 결과물을 받는 작업 환경입니다. 사용자는 목표를 말하고, Claude는 연결된 도구와 플러그인을 활용해 실무 흐름을 대신 수행하는 쪽에 가깝습니다.',points:['채팅만 하는 공간이 아니라 실제 업무 흐름을 실행하는 에이전트형 환경입니다.','폼, 버튼, 워크플로 형태로 보여 주기 때문에 비개발자도 접근하기 쉽습니다.','플러그인의 가치를 가장 직관적으로 체감하기 쉬운 실행 환경입니다.'],example:'예) "이번 주 고객 미팅 준비 자료 만들어줘"라고 요청하면, Cowork이 관련 커넥터와 플러그인을 사용해 결과 문서를 준비하는 식입니다.',extra:'비유: AI 비서의 사무실. 사용자는 지시하고, 비서는 필요한 도구를 써서 결과를 가져옵니다.',tip:'Cowork은 "설명"보다 "업무 위임"에 강하다고 이해하면 Claude Chat과 구분이 쉬워집니다.'},
+  {icon:'⚙️',label:'Claude Code',brief:'개발 실행 환경',title:'Claude Code (클로드 코드)',desc:'Claude Code는 터미널에서 동작하는 개발자용 실행 환경입니다. 같은 플러그인 구조를 활용할 수 있지만, 파일 수정, 셸 명령, git 작업, 병렬 에이전트 같은 개발 친화적 기능을 더 직접적으로 다룹니다.',points:['개발자는 실제 로컬 코드베이스와 터미널 명령을 함께 다룰 수 있습니다.','같은 개념이라도 Cowork보다 더 세밀하고 강한 실행 권한을 가질 수 있습니다.','자동화뿐 아니라 디버깅, 테스트, 리팩터링 같은 엔지니어링 작업에 적합합니다.'],example:'예) "이 저장소의 오류를 찾고 테스트를 고쳐줘"라고 하면 Claude Code가 파일을 읽고 수정하고 명령을 실행하면서 문제를 해결할 수 있습니다.',extra:'비유: 개발자의 작업대. 같은 도구라도 손으로 직접 조립하고 점검하는 공방에 가깝습니다.',tip:'Cowork과 Claude Code는 경쟁 관계가 아니라, 같은 플러그인을 다른 환경에서 쓰는 실행 방식의 차이로 보면 됩니다.'}
 ];
 
 const compareData = [
@@ -681,19 +926,13 @@ function goSec(id){
 // ===== CONCEPT =====
 function buildConcepts(){
   const g=document.getElementById('conceptGrid');
-  g.innerHTML=conceptData.map((c,i)=>`<div class="card concept-card ${i===0?'selected':''}" onclick="selectConcept(${i})"><span class="concept-icon">${c.icon}</span><div class="concept-label">${c.label}</div><div class="concept-brief">${c.brief}</div></div>`).join('');
+  g.innerHTML=conceptData.map((c,i)=>`<div class="card map-card ${i===0?'selected':''}" onclick="selectConcept(${i})"><span class="concept-icon">${c.icon}</span><div class="concept-label">${c.label}</div><div class="concept-brief">${c.brief}</div></div>`).join('');
   selectConcept(0);
 }
 function selectConcept(idx){
-  document.querySelectorAll('.concept-card').forEach((c,i)=>c.classList.toggle('selected',i===idx));
+  document.querySelectorAll('#conceptGrid .map-card').forEach((c,i)=>c.classList.toggle('selected',i===idx));
   const d=conceptData[idx];
-  document.getElementById('conceptDetail').innerHTML=`<h3>${d.title}</h3><p>${d.desc}</p><p style="margin-top:8px;color:var(--acc5);font-size:0.83rem;">${d.extra}</p>`;
-}
-
-// ===== LAYER =====
-function showLayer(idx){
-  const d=layerData[idx];
-  document.getElementById('layerDetail').innerHTML=`<h3>${d.title}</h3><p style="color:var(--text2);font-size:0.88rem;">${d.desc}</p>`;
+  document.getElementById('conceptDetail').innerHTML=`<div class="map-detail-title"><span class="map-mark">${d.icon}</span><h3>${d.title}</h3></div><p class="map-detail-lead">${d.desc}</p><ul class="map-list">${d.points.map(p=>`<li>${p}</li>`).join('')}</ul><div class="map-box"><strong>예시</strong><p>${d.example}</p></div><div class="map-box"><strong>비유</strong><p>${d.extra}</p></div><div class="map-tip"><strong>초보자 팁:</strong> ${d.tip}</div>`;
 }
 
 // ===== TOGGLE =====
@@ -840,7 +1079,7 @@ function loadState(){try{const r=localStorage.getItem('mp-lab-state');if(r){cons
 // ===== INIT =====
 function init(){
   loadState();
-  buildConcepts();showLayer(0);switchCompare(0);buildDoctors();buildRoadmap();
+  buildConcepts();switchCompare(0);buildDoctors();buildRoadmap();
   buildUsecases();switchLab(0);buildDT();buildQuiz();buildGlossary();updateProgress();
 }
 init();

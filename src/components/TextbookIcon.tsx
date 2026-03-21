@@ -81,6 +81,16 @@ export default function TextbookIcon({ icon, accentColor, size = 120 }: Props) {
         <circle cx="92" cy="30" r="5" fill={dim} stroke={color} strokeWidth="1.5" />
       </>
     ),
+    github: (
+      <>
+        <circle cx="60" cy="56" r="22" fill={dim} stroke={color} strokeWidth="1.8" />
+        <circle cx="44" cy="38" r="5" fill={dim} stroke={color} strokeWidth="1.5" />
+        <circle cx="76" cy="38" r="5" fill={dim} stroke={color} strokeWidth="1.5" />
+        <path d="M49 72c4-4 18-4 22 0" {...stroke} />
+        <path d="M50 78v12M70 78v12" {...stroke} />
+        <path d="M43 27l-6-7M77 27l6-7" {...stroke} />
+      </>
+    ),
     integration: (
       <>
         <path d="M44 46h-8c-8 0-14 6-14 14s6 14 14 14h8" {...stroke} />

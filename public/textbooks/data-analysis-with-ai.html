@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>데이터 분석 with AI 인터랙티브 학습실</title>
+<style>
+:root{--bg:#060a0e;--bg2:#0a1018;--bg3:#121c2a;--card:#182234;--card2:#1e2c42;--border:#263450;--text:#e4edf8;--text2:#8a9ec0;--text3:#526080;--c1:#38bdf8;--c2:#34d399;--c3:#fb923c;--c4:#a78bfa;--c5:#f87171;--c6:#facc15;--r:14px;--rs:8px;--f:'Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;--m:'SF Mono','Cascadia Code','Consolas',monospace;--tr:.25s cubic-bezier(.4,0,.2,1);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;font-size:15px;}body{font-family:var(--f);background:var(--bg);color:var(--text);line-height:1.7;}button{font-family:var(--f);cursor:pointer;border:none;outline:none;transition:var(--tr);}button:focus-visible{outline:2px solid var(--c1);outline-offset:2px;}input,select{font-family:var(--f);}
+#pB{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--c1),var(--c2),var(--c4),var(--c3));z-index:1001;transition:width .5s;}
+#nv{position:fixed;top:3px;left:0;right:0;z-index:1000;background:rgba(6,10,14,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 10px;display:flex;align-items:center;height:48px;gap:2px;overflow-x:auto;}#nv::-webkit-scrollbar{display:none;}
+.nb{padding:5px 10px;border-radius:18px;font-size:.74rem;color:var(--text2);background:0;white-space:nowrap;border:1px solid transparent;}.nb:hover{color:var(--text);background:var(--bg3);}.nb.a{color:var(--c1);background:rgba(56,189,248,.08);border-color:rgba(56,189,248,.25);}
+.nl{font-weight:800;font-size:.86rem;margin-right:6px;white-space:nowrap;background:linear-gradient(90deg,var(--c1),var(--c2),var(--c4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.S{display:none;padding:62px 16px 40px;max-width:980px;margin:0 auto;}.S.a{display:block;animation:fu .3s ease;}
+@keyframes fu{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.ht{font-size:clamp(1.5rem,4.5vw,2.3rem);font-weight:800;background:linear-gradient(135deg,var(--c1),var(--c2),var(--c4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px;}
+.hs{color:var(--text2);font-size:.9rem;margin-bottom:18px;line-height:1.7;}
+.bt{padding:8px 16px;border-radius:var(--rs);font-size:.84rem;font-weight:600;}.bp{background:var(--c1);color:#000;}.bp:hover{filter:brightness(1.12);transform:translateY(-1px);}.bs{background:var(--bg3);color:var(--text);border:1px solid var(--border);}.bs:hover{border-color:var(--c1);}
+.hb{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.cd{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px;transition:var(--tr);margin-bottom:10px;}.cd:hover{border-color:rgba(56,189,248,.18);}
+.sh{font-size:1.25rem;font-weight:700;margin-bottom:4px;}.ss{color:var(--text2);font-size:.84rem;margin-bottom:16px;}
+.st{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.68rem;font-weight:600;margin-bottom:8px;}
+.hx{background:linear-gradient(135deg,rgba(56,189,248,.06),rgba(52,211,153,.06));border:2px solid var(--c1);border-radius:var(--r);padding:14px;text-align:center;margin:14px 0;font-size:.95rem;font-weight:700;color:var(--c1);}
+.dx{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px;margin-bottom:16px;}.dx h3{font-size:.88rem;color:var(--c1);margin-bottom:6px;}.di{display:flex;gap:6px;padding:3px 0;color:var(--text2);font-size:.82rem;}.di::before{content:'📊';flex-shrink:0;}
+.ds{margin-top:10px;padding:10px;background:rgba(56,189,248,.03);border-radius:var(--rs);border-left:3px solid var(--c1);}.ds p{font-size:.8rem;color:var(--text2);margin:2px 0;}
+.ps{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);margin:12px 0;}.pb{flex:1;height:6px;background:var(--bg3);border-radius:3px;overflow:hidden;}.pf{height:100%;background:linear-gradient(90deg,var(--c1),var(--c2));border-radius:3px;transition:width .6s;}.pt{font-size:.76rem;color:var(--text2);white-space:nowrap;}
+.fbox{margin:14px 0;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}.fbox-t{padding:12px 16px;font-weight:700;font-size:.88rem;background:var(--bg3);}.fbox-b{padding:16px;}
+.fsteps{margin-top:10px;display:flex;flex-direction:column;gap:8px;}.fstep{display:flex;gap:10px;align-items:flex-start;}.fstep-n{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;flex-shrink:0;color:#000;}.fstep-t{font-size:.82rem;color:var(--text2);line-height:1.6;padding-top:3px;}.fstep-t strong{color:var(--text);}
+.tb{display:flex;gap:3px;flex-wrap:wrap;margin-bottom:12px;}.tt{padding:6px 13px;border-radius:var(--rs);font-size:.78rem;background:var(--bg3);color:var(--text2);font-weight:500;}.tt:hover{background:var(--card2);color:var(--text);}.tt.a{background:rgba(56,189,248,.1);color:var(--c1);border:1px solid rgba(56,189,248,.2);}
+.dc{cursor:pointer;padding:12px;text-align:center;border:2px solid var(--border);border-radius:var(--r);transition:var(--tr);}.dc:hover{transform:translateY(-2px);}.dc.s{box-shadow:0 0 16px rgba(56,189,248,.08);}.de{font-size:1.8rem;margin-bottom:3px;display:block;}.dn{font-weight:700;font-size:.74rem;}.dr{color:var(--text3);font-size:.66rem;margin-top:1px;}
+.dp{margin-top:12px;padding:18px;border-radius:var(--r);border:1px solid var(--border);background:var(--card);}.dp h3{margin-bottom:6px;font-size:.92rem;}.dp h4{margin:10px 0 4px;font-size:.84rem;}.dl{list-style:none;padding:0;}.dl li{padding:3px 0;font-size:.8rem;color:var(--text2);display:flex;gap:6px;}.dl li::before{content:'→';color:var(--c1);flex-shrink:0;}.dnn{margin-top:10px;padding:8px 12px;background:var(--bg3);border-radius:var(--rs);font-size:.78rem;color:var(--text2);}
+.cg{display:grid;gap:10px;}.cg5{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));}
+.rm{position:relative;padding-left:22px;margin:14px 0;}.rm::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border);}.rs{position:relative;margin-bottom:14px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);transition:var(--tr);}.rs.done{border-color:var(--c2);}.rd{position:absolute;left:-18px;top:16px;width:11px;height:11px;border-radius:50%;background:var(--bg3);border:2px solid var(--border);z-index:1;transition:var(--tr);}.rs.done .rd{background:var(--c2);border-color:var(--c2);}.rs h4{font-size:.86rem;margin-bottom:3px;}.rc label{display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--text2);cursor:pointer;margin-top:5px;}.rc input{width:14px;height:14px;accent-color:var(--c2);cursor:pointer;}
+.ac{margin:6px 0;}.ah{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:var(--bg3);border-radius:var(--rs);cursor:pointer;font-size:.82rem;font-weight:600;}.ah:hover{background:var(--card2);}.ab{display:none;padding:10px 12px;background:var(--card);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--rs) var(--rs);}.ab.o{display:block;animation:fu .2s ease;}.ab p,.ab li{font-size:.8rem;color:var(--text2);}.ab ul{padding-left:14px;margin:4px 0;}.ab li{margin:2px 0;}
+.qq{padding:12px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);margin:7px 0;}.qq h4{font-size:.82rem;margin-bottom:7px;color:var(--text);}.qo{display:block;padding:6px 10px;margin:3px 0;background:var(--bg3);border-radius:var(--rs);cursor:pointer;font-size:.76rem;border:1px solid transparent;}.qo:hover{background:var(--card2);border-color:var(--border);}.qo.c{background:rgba(52,211,153,.08);border-color:var(--c2);color:var(--c2);}.qo.w{background:rgba(248,113,113,.05);border-color:var(--c5);color:var(--c5);}.qo.d{pointer-events:none;opacity:.7;}.qx{display:none;margin-top:7px;padding:7px 10px;background:var(--bg3);border-radius:var(--rs);font-size:.74rem;color:var(--text2);border-left:3px solid var(--c1);}.qs{text-align:center;padding:16px;font-size:1.05rem;font-weight:700;color:var(--c2);}
+.gi{width:100%;padding:8px 12px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--rs);color:var(--text);font-size:.82rem;margin-bottom:10px;}.gi::placeholder{color:var(--text3);}.gl{padding:8px 0;border-bottom:1px solid var(--border);}.gt{font-weight:700;color:var(--c1);font-size:.82rem;cursor:pointer;}.gd{font-size:.76rem;color:var(--text2);margin-top:2px;display:none;}.gd.o{display:block;animation:fu .2s ease;}.ge{font-size:.73rem;color:var(--text3);font-style:italic;margin-top:2px;}
+.mc{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:12px;margin:8px 0;position:relative;}.mc h4{font-size:.82rem;margin-bottom:6px;color:var(--c1);}.mc pre{font-family:var(--m);font-size:.72rem;color:var(--text2);white-space:pre-wrap;line-height:1.65;}.cb{position:absolute;top:8px;right:8px;padding:3px 8px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;font-size:.66rem;color:var(--text2);cursor:pointer;}.cb:hover{background:var(--c1);color:#000;}.cb.cp{background:var(--c2);color:#000;}
+.wb{padding:10px 12px;background:rgba(56,189,248,.03);border:1px solid rgba(56,189,248,.15);border-radius:var(--rs);margin:10px 0;font-size:.8rem;color:var(--c1);}
+.wg{padding:10px 12px;background:rgba(52,211,153,.03);border:1px solid rgba(52,211,153,.15);border-radius:var(--rs);margin:10px 0;font-size:.8rem;color:var(--c2);}
+.wo{padding:10px 12px;background:rgba(251,146,60,.03);border:1px solid rgba(251,146,60,.15);border-radius:var(--rs);margin:10px 0;font-size:.8rem;color:var(--c3);}
+.we{padding:10px 12px;background:rgba(248,113,113,.03);border:1px solid rgba(248,113,113,.15);border-radius:var(--rs);margin:10px 0;font-size:.8rem;color:var(--c5);}
+.ct{width:100%;border-collapse:collapse;margin:10px 0;font-size:.75rem;}.ct th{background:var(--bg3);padding:8px;text-align:left;font-weight:600;border-bottom:2px solid var(--border);}.ct td{padding:7px 8px;border-bottom:1px solid var(--border);color:var(--text2);}
+.codeblock{background:var(--bg);border:1px solid var(--border);border-radius:var(--rs);padding:13px;margin:10px 0;overflow-x:auto;font-family:var(--m);font-size:.72rem;line-height:1.7;}
+.kw{color:var(--c4);font-weight:600;}.str{color:var(--c2);}.num{color:var(--c3);}.key{color:var(--c1);}.cmt{color:var(--text3);font-style:italic;}.fn{color:var(--c6);}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.chip{display:inline-block;padding:2px 8px;border-radius:8px;font-size:.66rem;font-weight:700;margin:2px;}
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin:10px 0;}
+.flow-box{padding:7px 12px;border-radius:var(--rs);font-size:.76rem;font-weight:600;text-align:center;}
+.flow-arr{color:var(--text3);font-size:.9rem;flex-shrink:0;}
+/* bar chart */
+.bar-row{display:flex;align-items:center;gap:8px;margin:4px 0;}.bar-label{font-size:.74rem;color:var(--text2);min-width:90px;text-align:right;}.bar-track{flex:1;height:10px;background:var(--bg3);border-radius:5px;overflow:hidden;}.bar-fill{height:100%;border-radius:5px;transition:width .8s cubic-bezier(.4,0,.2,1);}.bar-val{font-size:.72rem;color:var(--text3);min-width:36px;}
+@media(max-width:700px){.cg5{grid-template-columns:repeat(2,1fr);}.S{padding:56px 10px 24px;}.ct{font-size:.68rem;}.ct th,.ct td{padding:5px;}.grid2,.grid3{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div id="pB" style="width:0%"></div>
+<nav id="nv">
+  <span class="nl">📊 데이터 분석 AI</span>
+  <button class="nb a" onclick="go('hero')">홈</button>
+  <button class="nb" onclick="go('why')">왜 AI인가</button>
+  <button class="nb" onclick="go('workflow')">분석 워크플로</button>
+  <button class="nb" onclick="go('tools')">도구 선택</button>
+  <button class="nb" onclick="go('prompt')">프롬프트 기술</button>
+  <button class="nb" onclick="go('viz')">시각화</button>
+  <button class="nb" onclick="go('pitfalls')">함정과 검증</button>
+  <button class="nb" onclick="go('usecase')">업종별 사례</button>
+  <button class="nb" onclick="go('doctors')">5박사</button>
+  <button class="nb" onclick="go('roadmap')">로드맵</button>
+  <button class="nb" onclick="go('quiz')">퀴즈</button>
+  <button class="nb" onclick="go('glossary')">용어사전</button>
+  <button class="nb" onclick="go('memo')">복사메모</button>
+</nav>
+
+<!-- ══════ HERO ══════ -->
+<div class="S a" id="sec-hero"><div style="padding-top:12px;">
+<div class="ht">데이터 분석 with AI 인터랙티브 학습실</div>
+<p class="hs">코딩 없이도, 통계 전문가가 아니어도.<br>AI를 데이터 분석 파트너로 활용하는 실전 방법을 배웁니다.</p>
+<div class="hb">
+  <button class="bt bp" onclick="go('why')">바로 시작하기</button>
+  <button class="bt bs" onclick="go('workflow')">분석 워크플로</button>
+  <button class="bt bs" onclick="go('prompt')">프롬프트 기술</button>
+</div>
+<div class="ps"><span class="pt" id="pL">진행률 0%</span><div class="pb"><div class="pf" id="pF" style="width:0%"></div></div></div>
+<div class="dx"><h3>혹시 이런 상태인가요?</h3>
+  <div class="di">데이터가 있는데 뭘 봐야 할지 모르겠다</div>
+  <div class="di">엑셀·파이썬을 잘 못해서 분석이 막힌다</div>
+  <div class="di">AI한테 물어봤는데 뭘 어떻게 넘겨야 할지 모르겠다</div>
+  <div class="di">분석 결과를 어떻게 검증해야 하는지 모르겠다</div>
+  <div class="di">그래프는 그렸는데 인사이트를 못 뽑겠다</div>
+  <div class="ds">
+    <p>✅ <strong>워크플로</strong> — 데이터 수집부터 보고까지 6단계 전체 흐름</p>
+    <p>✅ <strong>도구 선택</strong> — Claude·ChatGPT·Gemini·전문 도구를 언제 쓸지</p>
+    <p>✅ <strong>프롬프트 기술</strong> — 데이터 분석에 최적화된 AI 요청법</p>
+    <p>✅ <strong>함정과 검증</strong> — AI 분석을 맹신하면 안 되는 이유와 검증법</p>
+    <p>✅ <strong>업종별 사례</strong> — 마케팅·재무·HR·운영 등 실전 7가지 사례</p>
+  </div>
+</div>
+<div class="hx">📊 AI는 데이터 분석을 대체하지 않는다. 당신의 분석 속도를 10배 높인다.</div>
+</div></div>
+
+<!-- ══════ WHY AI ══════ -->
+<div class="S" id="sec-why">
+<div class="st" style="background:rgba(56,189,248,.1);color:var(--c1);">섹션 A</div>
+<h2 class="sh">왜 데이터 분석에 AI를 쓰는가</h2>
+<p class="ss">AI가 데이터 분석 업무에서 실제로 무엇을 바꾸는지 구체적으로 파악합니다.</p>
+
+<div class="cd">
+<h3 style="font-size:1rem;margin-bottom:10px;">⏱️ 시간 단축 — 어디서 얼마나?</h3>
+<div style="display:flex;flex-direction:column;gap:6px;margin-bottom:6px;">
+  <div class="bar-row"><span class="bar-label">데이터 정제</span><div class="bar-track"><div class="bar-fill" style="width:80%;background:var(--c1);"></div></div><span class="bar-val">-80%</span></div>
+  <div class="bar-row"><span class="bar-label">코드 작성</span><div class="bar-track"><div class="bar-fill" style="width:75%;background:var(--c2);"></div></div><span class="bar-val">-75%</span></div>
+  <div class="bar-row"><span class="bar-label">패턴 탐색</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:var(--c4);"></div></div><span class="bar-val">-60%</span></div>
+  <div class="bar-row"><span class="bar-label">보고서 초안</span><div class="bar-track"><div class="bar-fill" style="width:70%;background:var(--c3);"></div></div><span class="bar-val">-70%</span></div>
+  <div class="bar-row"><span class="bar-label">의사결정 해석</span><div class="bar-track"><div class="bar-fill" style="width:40%;background:var(--c6);"></div></div><span class="bar-val">-40%</span></div>
+</div>
+<p style="font-size:.75rem;color:var(--text3);">※ 대략적인 작업 시간 단축 추정치. 데이터 성격과 분석 복잡도에 따라 다를 수 있습니다.</p>
+</div>
+
+<div class="cd">
+<h3 style="font-size:1rem;margin-bottom:10px;">🔄 기존 방식 vs AI 활용 방식</h3>
+<div class="grid2">
+  <div style="padding:12px;background:var(--bg3);border-radius:var(--rs);border-left:3px solid var(--text3);">
+    <div style="font-size:.8rem;font-weight:700;color:var(--text2);margin-bottom:8px;">기존 방식</div>
+    <div class="fsteps">
+      <div class="fstep"><div class="fstep-n" style="background:var(--text3);font-size:.65rem;">1</div><div class="fstep-t">엑셀/파이썬 직접 작성</div></div>
+      <div class="fstep"><div class="fstep-n" style="background:var(--text3);font-size:.65rem;">2</div><div class="fstep-t">오류 수동 디버깅</div></div>
+      <div class="fstep"><div class="fstep-n" style="background:var(--text3);font-size:.65rem;">3</div><div class="fstep-t">차트 수동 구성</div></div>
+      <div class="fstep"><div class="fstep-n" style="background:var(--text3);font-size:.65rem;">4</div><div class="fstep-t">보고서 처음부터 작성</div></div>
+    </div>
+    <div style="margin-top:8px;font-size:.75rem;color:var(--text3);">소요: 3~5일</div>
+  </div>
+  <div style="padding:12px;background:var(--bg3);border-radius:var(--rs);border-left:3px solid var(--c1);">
+    <div style="font-size:.8rem;font-weight:700;color:var(--c1);margin-bottom:8px;">AI 활용 방식</div>
+    <div class="fsteps">
+      <div class="fstep"><div class="fstep-n" style="background:var(--c1);font-size:.65rem;">1</div><div class="fstep-t">데이터 구조 AI에 설명</div></div>
+      <div class="fstep"><div class="fstep-n" style="background:var(--c1);font-size:.65rem;">2</div><div class="fstep-t">AI가 코드·수식 생성</div></div>
+      <div class="fstep"><div class="fstep-n" style="background:var(--c1);font-size:.65rem;">3</div><div class="fstep-t">결과 검토 + 방향 수정</div></div>
+      <div class="fstep"><div class="fstep-n" style="background:var(--c1);font-size:.65rem;">4</div><div class="fstep-t">AI가 보고서 초안 작성</div></div>
+    </div>
+    <div style="margin-top:8px;font-size:.75rem;color:var(--c2);">소요: 반나절~1일</div>
+  </div>
+</div>
+</div>
+
+<div class="cd">
+<h3 style="font-size:1rem;margin-bottom:8px;">🎯 AI가 잘하는 것 vs 사람이 해야 하는 것</h3>
+<table class="ct"><thead><tr><th>구분</th><th>✅ AI가 잘하는 것</th><th>🧠 사람이 해야 하는 것</th></tr></thead><tbody>
+<tr><td style="font-weight:600;color:var(--c3);">데이터</td><td>정제·변환·이상치 탐색</td><td>어떤 데이터가 필요한지 판단</td></tr>
+<tr><td style="font-weight:600;color:var(--c3);">분석</td><td>통계 계산·패턴 탐색·상관관계</td><td>인과관계 판단·비즈니스 맥락 해석</td></tr>
+<tr><td style="font-weight:600;color:var(--c3);">코드</td><td>Python·SQL·엑셀 수식 작성</td><td>로직이 맞는지 검토</td></tr>
+<tr><td style="font-weight:600;color:var(--c3);">시각화</td><td>차트 코드 생성·색상 제안</td><td>어떤 차트가 메시지를 전달하는지</td></tr>
+<tr><td style="font-weight:600;color:var(--c3);">보고</td><td>보고서 초안·요약·제목</td><td>의사결정으로 연결·책임</td></tr>
+</tbody></table>
+<div class="wo">⚠️ AI는 "계산 파트너"입니다. 비즈니스 판단과 최종 책임은 항상 사람에게 있습니다.</div>
+</div>
+
+<div class="hx">📌 AI 데이터 분석의 핵심: 질문을 잘 던지는 능력이 코딩 실력보다 중요하다.</div>
+</div>
+
+<!-- ══════ WORKFLOW ══════ -->
+<div class="S" id="sec-workflow">
+<div class="st" style="background:rgba(52,211,153,.1);color:var(--c2);">섹션 B</div>
+<h2 class="sh">AI와 함께하는 6단계 분석 워크플로</h2>
+<p class="ss">데이터를 받은 순간부터 보고서 완성까지 전체 흐름을 익힙니다.</p>
+
+<div class="flow">
+  <div class="flow-box" style="background:rgba(56,189,248,.08);border:1px solid var(--c1);color:var(--c1);">① 문제 정의</div><div class="flow-arr">→</div>
+  <div class="flow-box" style="background:rgba(52,211,153,.08);border:1px solid var(--c2);color:var(--c2);">② 데이터 파악</div><div class="flow-arr">→</div>
+  <div class="flow-box" style="background:rgba(167,139,250,.08);border:1px solid var(--c4);color:var(--c4);">③ 정제·준비</div><div class="flow-arr">→</div>
+  <div class="flow-box" style="background:rgba(251,146,60,.08);border:1px solid var(--c3);color:var(--c3);">④ 탐색 분석</div><div class="flow-arr">→</div>
+  <div class="flow-box" style="background:rgba(250,204,21,.08);border:1px solid var(--c6);color:var(--c6);">⑤ 시각화</div><div class="flow-arr">→</div>
+  <div class="flow-box" style="background:rgba(248,113,113,.08);border:1px solid var(--c5);color:var(--c5);">⑥ 인사이트·보고</div>
+</div>
+
+<div id="wfTabs" class="tb"></div>
+<div id="wfC"></div>
+</div>
+
+<!-- ══════ TOOLS ══════ -->
+<div class="S" id="sec-tools">
+<div class="st" style="background:rgba(167,139,250,.1);color:var(--c4);">섹션 C</div>
+<h2 class="sh">데이터 분석 AI 도구 선택 가이드</h2>
+<p class="ss">작업에 따라 다른 도구를 써야 합니다. 어떤 도구를 언제 쓸지 정리합니다.</p>
+<div id="toolTabs" class="tb"></div>
+<div id="toolC"></div>
+</div>
+
+<!-- ══════ PROMPT ══════ -->
+<div class="S" id="sec-prompt">
+<div class="st" style="background:rgba(251,146,60,.1);color:var(--c3);">섹션 D</div>
+<h2 class="sh">데이터 분석 프롬프트 기술</h2>
+<p class="ss">AI에게 데이터를 어떻게 설명하고 무엇을 요청해야 좋은 결과를 얻는지 배웁니다.</p>
+<div id="prTabs" class="tb"></div>
+<div id="prC"></div>
+</div>
+
+<!-- ══════ VIZ ══════ -->
+<div class="S" id="sec-viz">
+<div class="st" style="background:rgba(250,204,21,.1);color:var(--c6);">섹션 E</div>
+<h2 class="sh">AI로 데이터 시각화하기</h2>
+<p class="ss">어떤 차트를 언제 써야 하는지, AI에게 어떻게 요청하는지 알아봅니다.</p>
+
+<div class="cd">
+<h3 style="font-size:1rem;margin-bottom:10px;">📊 차트 선택 가이드 — 목적에 따라</h3>
+<table class="ct"><thead><tr><th>보여주고 싶은 것</th><th>추천 차트</th><th>AI 요청 키워드</th></tr></thead><tbody>
+<tr><td>시간에 따른 변화</td><td style="color:var(--c1);">선 그래프 (Line Chart)</td><td>"시계열, 추이, 트렌드"</td></tr>
+<tr><td>항목 간 크기 비교</td><td style="color:var(--c2);">막대 그래프 (Bar Chart)</td><td>"비교, 랭킹, 카테고리별"</td></tr>
+<tr><td>전체 중 비율</td><td style="color:var(--c3);">파이/도넛 차트</td><td>"비율, 구성, 점유율"</td></tr>
+<tr><td>두 변수 관계</td><td style="color:var(--c4);">산점도 (Scatter Plot)</td><td>"상관관계, 분포, 클러스터"</td></tr>
+<tr><td>분포 모양</td><td style="color:var(--c6);">히스토그램 / 박스플롯</td><td>"분포, 이상치, 사분위"</td></tr>
+<tr><td>여러 변수 관계</td><td style="color:var(--c5);">히트맵</td><td>"상관계수, 매트릭스, 강도"</td></tr>
+<tr><td>지역별 데이터</td><td style="color:var(--c1);">지도 시각화</td><td>"지역별, 도시별, 지도"</td></tr>
+</tbody></table>
+</div>
+
+<div class="cd">
+<h3 style="font-size:1rem;margin-bottom:8px;">🎨 AI에게 시각화 요청하는 법</h3>
+<div class="fsteps">
+  <div class="fstep"><div class="fstep-n" style="background:var(--c6);">1</div><div class="fstep-t"><strong>목적 명시:</strong> "이 차트로 [무엇을] 보여주고 싶다"를 먼저 말합니다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c6);">2</div><div class="fstep-t"><strong>데이터 구조 설명:</strong> X축·Y축에 해당하는 컬럼명을 알려줍니다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c6);">3</div><div class="fstep-t"><strong>도구 지정:</strong> Python(matplotlib/seaborn/plotly), Excel, Tableau 중 무엇을 쓸지.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c6);">4</div><div class="fstep-t"><strong>스타일 지정:</strong> "다크 테마", "색맹 친화", "프레젠테이션용" 등.</div></div>
+</div>
+<div class="codeblock"><span class="cmt"># 좋은 시각화 요청 예시</span>
+<span class="str">"월별 매출 추이를 선 그래프로 그려줘.
+X축: month (2024-01 ~ 2024-12),
+Y축: revenue (단위: 만원).
+연도별로 다른 색 선을 써서 2023년과 비교해줘.
+Python matplotlib으로, 한글 폰트는 malgun gothic."</span></div>
+</div>
+
+<div class="cd">
+<h3 style="font-size:1rem;margin-bottom:8px;">⚡ 시각화 도구별 특징</h3>
+<div class="grid3">
+  <div style="padding:10px;background:var(--bg3);border-radius:var(--rs);border-top:3px solid var(--c2);">
+    <div style="font-size:.8rem;font-weight:700;color:var(--c2);margin-bottom:5px;">Matplotlib/Seaborn</div>
+    <div style="font-size:.74rem;color:var(--text2);">정적 차트 · 논문 수준 품질 · Python 필수 · AI가 가장 잘 작성</div>
+  </div>
+  <div style="padding:10px;background:var(--bg3);border-radius:var(--rs);border-top:3px solid var(--c4);">
+    <div style="font-size:.8rem;font-weight:700;color:var(--c4);margin-bottom:5px;">Plotly</div>
+    <div style="font-size:.74rem;color:var(--text2);">인터랙티브 차트 · 웹 대시보드 · 줌/필터 가능 · Python/JS</div>
+  </div>
+  <div style="padding:10px;background:var(--bg3);border-radius:var(--rs);border-top:3px solid var(--c3);">
+    <div style="font-size:.8rem;font-weight:700;color:var(--c3);margin-bottom:5px;">Excel / Google Sheets</div>
+    <div style="font-size:.74rem;color:var(--text2);">코딩 불필요 · 빠른 프로토타입 · AI가 수식/매크로 생성</div>
+  </div>
+</div>
+</div>
+
+<div class="wb">💡 처음에는 Excel/Sheets로 빠르게 만들고, 품질이 필요하면 Plotly로 전환하는 전략이 효율적입니다.</div>
+</div>
+
+<!-- ══════ PITFALLS ══════ -->
+<div class="S" id="sec-pitfalls">
+<div class="st" style="background:rgba(248,113,113,.1);color:var(--c5);">섹션 F</div>
+<h2 class="sh">AI 분석의 함정과 검증법</h2>
+<p class="ss">AI 분석을 맹신하면 안 되는 이유와, 결과를 검증하는 실전 방법입니다.</p>
+
+<div id="pitTabs" class="tb"></div>
+<div id="pitC"></div>
+</div>
+
+<!-- ══════ USE CASES ══════ -->
+<div class="S" id="sec-usecase">
+<div class="st" style="background:rgba(56,189,248,.1);color:var(--c1);">섹션 G</div>
+<h2 class="sh">업종·직무별 AI 데이터 분석 사례</h2>
+<p class="ss">실제 업무에서 어떻게 AI 데이터 분석을 적용하는지 7가지 사례를 살펴봅니다.</p>
+<div id="ucTabs" class="tb"></div>
+<div id="ucC"></div>
+</div>
+
+<!-- ══════ DOCTORS ══════ -->
+<div class="S" id="sec-doctors">
+<div class="st" style="background:rgba(167,139,250,.1);color:var(--c4);">섹션 H</div>
+<h2 class="sh">5명 전문가 패널</h2>
+<p class="ss">각 전문가를 클릭하면 데이터 분석의 특정 관점을 깊이 설명합니다.</p>
+<div class="cg cg5" id="dG"></div>
+<div class="dp" id="dP"></div>
+</div>
+
+<!-- ══════ ROADMAP ══════ -->
+<div class="S" id="sec-roadmap">
+<div class="st" style="background:rgba(52,211,153,.1);color:var(--c2);">섹션 I</div>
+<h2 class="sh">AI 데이터 분석 학습 로드맵</h2>
+<p class="ss">단계별로 체크하면서 역량을 키워가세요. 진행률이 자동으로 저장됩니다.</p>
+<div class="rm" id="rmW"></div>
+</div>
+
+<!-- ══════ QUIZ ══════ -->
+<div class="S" id="sec-quiz">
+<div class="st" style="background:rgba(56,189,248,.1);color:var(--c1);">섹션 J</div>
+<h2 class="sh">퀴즈 — 데이터 분석 AI 이해도 확인</h2>
+<p class="ss">12문항으로 핵심 개념 이해도를 점검합니다.</p>
+<div id="qW"></div>
+<div style="text-align:center;margin-top:12px;">
+  <button class="bt bp" onclick="sQ()">채점하기</button>&nbsp;
+  <button class="bt bs" onclick="rQ()">다시 풀기</button>
+</div>
+<div class="qs" id="qS" style="display:none;"></div>
+</div>
+
+<!-- ══════ GLOSSARY ══════ -->
+<div class="S" id="sec-glossary">
+<div class="st" style="background:rgba(251,146,60,.1);color:var(--c3);">섹션 K</div>
+<h2 class="sh">데이터 분석 용어사전</h2>
+<p class="ss">처음 보는 용어가 나오면 바로 여기서 찾아보세요.</p>
+<input class="gi" placeholder="용어 검색... (예: 이상치, 회귀, EDA)" oninput="fg(this.value)">
+<div id="gL"></div>
+</div>
+
+<!-- ══════ MEMO ══════ -->
+<div class="S" id="sec-memo">
+<div class="st" style="background:rgba(52,211,153,.1);color:var(--c2);">섹션 L</div>
+<h2 class="sh">복사용 메모</h2>
+<p class="ss">자주 쓰는 프롬프트와 체크리스트를 복사해 두세요.</p>
+
+<div class="mc"><h4>📋 데이터 분석 요청 기본 템플릿</h4><button class="cb" onclick="cm(this,'m1')">복사</button><pre id="m1">나는 [직무]입니다. [분석 목적]을 위해 데이터를 분석하고 싶습니다.
+
+데이터 구조:
+- 행 수: [N]행
+- 컬럼: [컬럼명1 (타입)] / [컬럼명2 (타입)] / ...
+- 기간: [날짜 범위]
+- 특이사항: [결측값 여부, 이상값 의심 등]
+
+분석 목표:
+1. [알고 싶은 것 1]
+2. [알고 싶은 것 2]
+
+결과물 형태: [Python 코드 / 엑셀 수식 / 보고서 문장]
+도구: [Python pandas / Excel / SQL]</pre></div>
+
+<div class="mc"><h4>📋 데이터 정제 요청 프롬프트</h4><button class="cb" onclick="cm(this,'m2')">복사</button><pre id="m2">다음 데이터를 정제해줘:
+
+[데이터 샘플 5~10행 붙여넣기]
+
+정제 목표:
+1. 결측값(NaN/빈칸) 처리 — 어떻게 처리할지 추천도 해줘
+2. 중복 행 제거
+3. 날짜 컬럼을 datetime 형식으로 변환
+4. 이상치 탐지 (IQR 방법 사용)
+5. 컬럼명 영어_소문자_언더스코어 형식으로 통일
+
+결과: pandas DataFrame 기준 Python 코드로 작성해줘.
+각 단계를 주석으로 설명해줘.</pre></div>
+
+<div class="mc"><h4>📋 EDA(탐색적 분석) 요청 프롬프트</h4><button class="cb" onclick="cm(this,'m3')">복사</button><pre id="m3">다음 데이터의 EDA(탐색적 데이터 분석)를 해줘:
+
+컬럼 정보: [컬럼명과 데이터 타입 목록]
+행 수: [N]
+
+다음 순서로 분석해줘:
+1. 기초 통계 (평균, 중앙값, 표준편차, min/max)
+2. 결측값 현황 및 처리 권고
+3. 수치형 컬럼 분포 시각화 (히스토그램)
+4. 범주형 컬럼 빈도 분석
+5. 수치형 컬럼 간 상관계수 히트맵
+6. 이상치 탐지 결과 요약
+7. 발견한 주요 패턴 3가지 요약
+
+Python pandas + seaborn + matplotlib으로 작성해줘.</pre></div>
+
+<div class="mc"><h4>📋 AI 분석 결과 검증 체크리스트</h4><button class="cb" onclick="cm(this,'m4')">복사</button><pre id="m4">AI 분석 결과 검증 체크리스트
+
+[ ] 1. 샘플 계산: AI가 계산한 수치를 소규모 샘플로 직접 확인했는가?
+[ ] 2. 상식 점검: 결과가 업무 경험·상식과 크게 다르지 않은가?
+[ ] 3. 데이터 출처: 분석에 쓰인 데이터가 올바른 기간·범위인가?
+[ ] 4. 인과관계: 상관관계를 인과관계로 잘못 해석하지 않았는가?
+[ ] 5. 편향 점검: 샘플이 전체 모집단을 대표하는가?
+[ ] 6. 코드 실행: 생성된 코드를 실제로 실행해서 오류가 없는가?
+[ ] 7. 단위 확인: 숫자의 단위(원/달러, 건/명, %)가 일치하는가?
+[ ] 8. 기간 확인: 비교 대상의 시간 범위가 동일한가?
+[ ] 9. 결측 처리: 결측값 처리 방법이 분석 목적에 적합한가?
+[ ] 10. 이해관계: 결과가 특정 방향으로 유도되지 않았는가?</pre></div>
+
+<div class="mc"><h4>📋 분석 인사이트 도출 프롬프트</h4><button class="cb" onclick="cm(this,'m5')">복사</button><pre id="m5">다음 분석 결과를 바탕으로 비즈니스 인사이트를 도출해줘:
+
+[분석 결과 / 수치 / 차트 설명 붙여넣기]
+
+나의 상황:
+- 업종: [업종]
+- 직무: [직무]
+- 의사결정 대상: [누구에게 보고/설득할지]
+
+다음 형식으로 정리해줘:
+1. 핵심 발견 3가지 (각 1~2문장)
+2. 예상되는 원인 (데이터 기반으로)
+3. 권고 액션 2~3가지 (구체적이고 실행 가능하게)
+4. 추가로 확인이 필요한 데이터나 분석
+5. 보고서 Executive Summary 2문단 (임원용)</pre></div>
+
+<div class="mc"><h4>📋 SQL 데이터 추출 요청 프롬프트</h4><button class="cb" onclick="cm(this,'m6')">복사</button><pre id="m6">다음 테이블에서 데이터를 추출하는 SQL을 작성해줘:
+
+테이블 구조:
+- orders (order_id, user_id, order_date, amount, status)
+- users (user_id, signup_date, region, tier)
+- products (product_id, category, price)
+
+목표: [원하는 분석 결과 설명]
+기간: [날짜 범위]
+필터 조건: [특정 조건]
+집계 방법: [SUM/AVG/COUNT 등]
+정렬: [어떤 기준으로]
+
+DB: [MySQL / PostgreSQL / BigQuery / Snowflake]
+가독성 좋게 주석도 달아줘.</pre></div>
+</div>
+
+<script>
+/* ══ DATA ══ */
+
+const WF=[
+{nm:'① 문제 정의',content:`<div class="cd">
+<h3 style="color:var(--c1);font-size:.95rem;margin-bottom:8px;">문제를 먼저 정의해야 AI도 제대로 답한다</h3>
+<p style="font-size:.83rem;color:var(--text2);margin-bottom:10px;">데이터 분석에서 가장 흔한 실수는 "일단 돌려보기"입니다. 질문이 없으면 AI도 답을 못 합니다.</p>
+<div class="fsteps">
+  <div class="fstep"><div class="fstep-n" style="background:var(--c1);">1</div><div class="fstep-t"><strong>비즈니스 질문:</strong> "왜 3월에 매출이 떨어졌는가?" 처럼 구체적인 질문을 먼저 만든다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c1);">2</div><div class="fstep-t"><strong>성공 기준 정의:</strong> "어떤 결과가 나오면 이 분석이 성공인가?" 를 미리 결정한다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c1);">3</div><div class="fstep-t"><strong>의사결정 연결:</strong> "이 분석 결과로 어떤 결정을 내릴 것인가?" 를 먼저 생각한다.</div></div>
+</div>
+<div class="codeblock"><span class="cmt"># AI에게 문제 정의를 도와달라는 요청</span>
+<span class="str">"우리 e커머스의 3월 매출이 전월 대비 15% 감소했어.
+어떤 각도로 분석해야 원인을 찾을 수 있을까?
+분석 방향 5가지와 각각 필요한 데이터를 제안해줘."</span></div>
+</div>`},
+{nm:'② 데이터 파악',content:`<div class="cd">
+<h3 style="color:var(--c2);font-size:.95rem;margin-bottom:8px;">데이터를 AI에게 효과적으로 설명하는 법</h3>
+<p style="font-size:.83rem;color:var(--text2);margin-bottom:10px;">실제 데이터를 모두 붙여넣을 수 없을 때, 구조를 텍스트로 설명하는 방법입니다.</p>
+<div class="codeblock"><span class="cmt"># 데이터 구조 설명 템플릿</span>
+<span class="str">"데이터 구조를 설명할게:
+- 파일: sales_2024.csv
+- 행 수: 약 50,000행
+- 기간: 2024년 1월~12월
+- 컬럼:
+  · order_id (정수, 주문 고유번호)
+  · order_date (날짜, YYYY-MM-DD)
+  · customer_id (정수)
+  · product_category (텍스트: 의류/식품/전자제품)
+  · amount (실수, 원화)
+  · region (텍스트: 서울/경기/지방)
+- 결측값: amount에 약 2% 존재
+- 특이사항: order_date가 문자열로 저장되어 있음"</span></div>
+<div class="wb">💡 샘플 5~10행을 직접 붙여넣으면 AI가 훨씬 정확하게 분석합니다. 민감 정보는 마스킹 후 사용하세요.</div>
+</div>`},
+{nm:'③ 정제·준비',content:`<div class="cd">
+<h3 style="color:var(--c4);font-size:.95rem;margin-bottom:8px;">데이터 정제 — AI에게 맡길 수 있는 작업들</h3>
+<table class="ct"><thead><tr><th>문제</th><th>AI 요청 방법</th><th>도구</th></tr></thead><tbody>
+<tr><td>결측값 처리</td><td>"이 컬럼의 결측값을 평균/중앙값으로 대체하는 코드"</td><td>pandas</td></tr>
+<tr><td>중복 제거</td><td>"order_id 기준 중복 행 제거 코드"</td><td>pandas / Excel</td></tr>
+<tr><td>날짜 형식 통일</td><td>"여러 형식의 날짜를 YYYY-MM-DD로 통일"</td><td>pandas / 정규식</td></tr>
+<tr><td>이상치 탐지</td><td>"IQR 방법으로 이상치 찾고 표시하는 코드"</td><td>pandas / scipy</td></tr>
+<tr><td>텍스트 정규화</td><td>"카테고리 텍스트의 대소문자·공백 통일"</td><td>pandas str</td></tr>
+<tr><td>타입 변환</td><td>"문자열로 저장된 숫자 컬럼을 float으로"</td><td>pandas</td></tr>
+</tbody></table>
+<div class="codeblock"><span class="kw">import</span> pandas <span class="kw">as</span> pd
+
+<span class="cmt"># AI가 생성한 정제 코드 예시</span>
+df = pd.read_csv(<span class="str">'sales_2024.csv'</span>)
+
+<span class="cmt"># 날짜 변환</span>
+df[<span class="str">'order_date'</span>] = pd.to_datetime(df[<span class="str">'order_date'</span>])
+
+<span class="cmt"># 결측값 처리 (amount는 중앙값으로)</span>
+df[<span class="str">'amount'</span>].fillna(df[<span class="str">'amount'</span>].median(), inplace=<span class="kw">True</span>)
+
+<span class="cmt"># 이상치 제거 (IQR 방법)</span>
+Q1 = df[<span class="str">'amount'</span>].quantile(<span class="num">0.25</span>)
+Q3 = df[<span class="str">'amount'</span>].quantile(<span class="num">0.75</span>)
+IQR = Q3 - Q1
+df = df[(df[<span class="str">'amount'</span>] >= Q1 - <span class="num">1.5</span>*IQR) & (df[<span class="str">'amount'</span>] <= Q3 + <span class="num">1.5</span>*IQR)]</div>
+</div>`},
+{nm:'④ 탐색 분석',content:`<div class="cd">
+<h3 style="color:var(--c3);font-size:.95rem;margin-bottom:8px;">EDA — AI와 함께 데이터 속 패턴 찾기</h3>
+<p style="font-size:.83rem;color:var(--text2);margin-bottom:8px;">EDA(Exploratory Data Analysis)는 가설 없이 데이터를 자유롭게 탐색하는 단계입니다.</p>
+<div class="fsteps">
+  <div class="fstep"><div class="fstep-n" style="background:var(--c3);">1</div><div class="fstep-t"><strong>기초 통계:</strong> 평균, 중앙값, 표준편차를 보고 데이터의 "성격"을 파악합니다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c3);">2</div><div class="fstep-t"><strong>분포 확인:</strong> 히스토그램으로 데이터가 어떻게 퍼져 있는지 봅니다. 정규분포인가? 편향되어 있나?</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c3);">3</div><div class="fstep-t"><strong>그룹별 비교:</strong> 지역별, 월별, 카테고리별로 나눠서 차이를 탐색합니다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c3);">4</div><div class="fstep-t"><strong>상관관계:</strong> 어떤 변수들이 함께 움직이는지 확인합니다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c3);">5</div><div class="fstep-t"><strong>가설 생성:</strong> "혹시 A가 B에 영향을 주는 건 아닐까?" 같은 가설을 여러 개 만듭니다.</div></div>
+</div>
+<div class="wb">💡 AI에게 "이 데이터에서 흥미로운 패턴 5개를 찾아줘"라고 하면 시작점을 잡는 데 도움이 됩니다.</div>
+</div>`},
+{nm:'⑤ 시각화',content:`<div class="cd">
+<h3 style="color:var(--c6);font-size:.95rem;margin-bottom:8px;">시각화 — 데이터를 이야기로 바꾸기</h3>
+<p style="font-size:.83rem;color:var(--text2);margin-bottom:8px;">좋은 시각화는 보는 사람이 1초 안에 메시지를 이해할 수 있어야 합니다.</p>
+<div class="fsteps">
+  <div class="fstep"><div class="fstep-n" style="background:var(--c6);color:#000;">1</div><div class="fstep-t"><strong>1차트 1메시지:</strong> 하나의 차트에 하나의 이야기만 담습니다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c6);color:#000;">2</div><div class="fstep-t"><strong>제목이 인사이트:</strong> "3월 매출 현황" 대신 "3월 매출, 서울에서 15% 하락"처럼 씁니다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c6);color:#000;">3</div><div class="fstep-t"><strong>불필요한 요소 제거:</strong> 3D 차트, 과도한 색상, 격자선은 제거합니다.</div></div>
+</div>
+<p style="font-size:.83rem;color:var(--text2);margin-top:8px;">시각화 전문 섹션에서 자세히 다룹니다. → <button class="bt bs bm" onclick="go('viz')">시각화 섹션으로</button></p>
+</div>`},
+{nm:'⑥ 인사이트·보고',content:`<div class="cd">
+<h3 style="color:var(--c5);font-size:.95rem;margin-bottom:8px;">인사이트 도출 — 숫자를 의사결정으로</h3>
+<p style="font-size:.83rem;color:var(--text2);margin-bottom:8px;">데이터를 분석한 이유는 숫자를 보기 위해서가 아니라, 더 나은 결정을 내리기 위해서입니다.</p>
+<table class="ct"><thead><tr><th>수준</th><th>예시</th><th>가치</th></tr></thead><tbody>
+<tr><td style="color:var(--text3);">관찰 (낮음)</td><td>"3월 매출이 15% 감소했다"</td><td>누구나 알 수 있음</td></tr>
+<tr><td style="color:var(--c3);">해석 (중간)</td><td>"3월 모바일 전환율이 급락했다"</td><td>원인 방향 제시</td></tr>
+<tr><td style="color:var(--c2);">인사이트 (높음)</td><td>"iOS 업데이트로 결제 버튼이 가려졌다"</td><td>즉시 행동 가능</td></tr>
+<tr><td style="color:var(--c1);">예측 (최고)</td><td>"이대로면 4월도 12% 감소 예상"</td><td>선제적 대응 가능</td></tr>
+</tbody></table>
+<div class="codeblock"><span class="cmt"># AI에게 인사이트 도출 요청</span>
+<span class="str">"다음 분석 결과에서 비즈니스 인사이트를 도출해줘.
+단순한 수치 나열이 아니라, 왜 이런 결과가 나왔는지
+가능한 원인과 권고 액션까지 포함해줘.
+임원 보고용으로 Executive Summary 2문단도 작성해줘."</span></div>
+</div>`}
+];
+
+const TOOLS=[
+{nm:'🤖 Claude',content:`<div class="cd">
+<h3 style="color:var(--c1);font-size:.95rem;margin-bottom:8px;">Claude — 분석 기획·코드 생성·보고서 작성</h3>
+<div class="fsteps">
+  <div class="fstep"><div class="fstep-n" style="background:var(--c1);">✓</div><div class="fstep-t"><strong>강점:</strong> 긴 데이터 구조 설명 이해, 복잡한 분석 로직 설계, 코드 + 설명 동시 제공, 보고서 문체 우수</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c5);">✗</div><div class="fstep-t"><strong>약점:</strong> 직접 파일 실행 불가 (코드만 생성), 실시간 데이터 접근 불가</div></div>
+</div>
+<div class="wo">📌 최적 사용: 분석 설계 → 코드 작성 → 결과 해석 → 보고서 초안. 파일은 직접 실행해야 함.</div>
+<div class="codeblock"><span class="cmt"># Claude 활용 최적 워크플로</span>
+<span class="str">1. Claude에게 분석 방향 설계 요청
+2. Claude가 생성한 Python/SQL 코드를 로컬에서 실행
+3. 결과(숫자/오류)를 Claude에게 다시 붙여넣기
+4. Claude가 해석 + 다음 분석 제안
+5. 보고서 초안 작성 요청</span></div>
+</div>`},
+{nm:'💬 ChatGPT',content:`<div class="cd">
+<h3 style="color:var(--c2);font-size:.95rem;margin-bottom:8px;">ChatGPT — 파일 업로드 직접 분석 (Plus/Pro)</h3>
+<div class="fsteps">
+  <div class="fstep"><div class="fstep-n" style="background:var(--c2);">✓</div><div class="fstep-t"><strong>강점:</strong> CSV/Excel 파일 직접 업로드 → AI가 직접 실행 → 차트까지 생성. Code Interpreter가 강력.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c5);">✗</div><div class="fstep-t"><strong>약점:</strong> 대용량 파일 처리 한계, 보안 민감 데이터 업로드 주의</div></div>
+</div>
+<div class="wb">📌 최적 사용: 파일을 직접 업로드해서 "이 데이터 분석해줘" — 가장 빠른 방법. Plus 구독 필요.</div>
+</div>`},
+{nm:'🔵 Gemini',content:`<div class="cd">
+<h3 style="color:var(--c1);font-size:.95rem;margin-bottom:8px;">Gemini — Google Sheets·BigQuery 연동</h3>
+<div class="fsteps">
+  <div class="fstep"><div class="fstep-n" style="background:var(--c1);">✓</div><div class="fstep-t"><strong>강점:</strong> Google Sheets에 직접 통합, BigQuery 쿼리 생성, Google Workspace 데이터 접근</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c5);">✗</div><div class="fstep-t"><strong>약점:</strong> Google 생태계 밖에서는 이점 감소</div></div>
+</div>
+<div class="wb">📌 최적 사용: Google Sheets 데이터 분석, BigQuery 연동, Google 생태계 사용자</div>
+</div>`},
+{nm:'🐍 Python+AI',content:`<div class="cd">
+<h3 style="color:var(--c4);font-size:.95rem;margin-bottom:8px;">Python + AI — 가장 강력한 조합</h3>
+<p style="font-size:.83rem;color:var(--text2);margin-bottom:8px;">AI가 pandas·numpy·scikit-learn 코드를 작성해 주고, 본인은 실행·검토만 합니다.</p>
+<table class="ct"><thead><tr><th>라이브러리</th><th>용도</th><th>AI 요청 예시</th></tr></thead><tbody>
+<tr><td style="color:var(--c2);">pandas</td><td>데이터 조작·정제</td><td>"groupby + agg로 월별 합계"</td></tr>
+<tr><td style="color:var(--c3);">matplotlib/seaborn</td><td>정적 시각화</td><td>"히트맵에 상관계수 표시"</td></tr>
+<tr><td style="color:var(--c4);">plotly</td><td>인터랙티브 차트</td><td>"드래그 줌 되는 선 그래프"</td></tr>
+<tr><td style="color:var(--c1);">scikit-learn</td><td>머신러닝·예측</td><td>"선형회귀로 매출 예측"</td></tr>
+<tr><td style="color:var(--c5);">statsmodels</td><td>통계 검정</td><td>"t-test로 두 그룹 비교"</td></tr>
+</tbody></table>
+<div class="wg">✅ 추천: Jupyter Notebook에서 AI가 생성한 코드를 셀 단위로 실행하면서 결과를 바로 확인하세요.</div>
+</div>`},
+{nm:'📊 전문 도구',content:`<div class="cd">
+<h3 style="color:var(--c3);font-size:.95rem;margin-bottom:8px;">데이터 분석 전문 도구 — AI와 조합하기</h3>
+<table class="ct"><thead><tr><th>도구</th><th>특징</th><th>AI와 조합법</th></tr></thead><tbody>
+<tr><td style="color:var(--c1);font-weight:700;">Tableau</td><td>드래그앤드롭 시각화 BI</td><td>AI로 계산식·파라미터 생성</td></tr>
+<tr><td style="color:var(--c2);font-weight:700;">Power BI</td><td>MS 생태계 BI</td><td>AI로 DAX 수식 작성</td></tr>
+<tr><td style="color:var(--c3);font-weight:700;">Looker Studio</td><td>Google 무료 BI</td><td>Google Sheets + Gemini 연동</td></tr>
+<tr><td style="color:var(--c4);font-weight:700;">Snowflake</td><td>클라우드 데이터 웨어하우스</td><td>AI로 복잡한 SQL 작성</td></tr>
+<tr><td style="color:var(--c6);font-weight:700;">Databricks</td><td>대규모 데이터·ML</td><td>AI Assistant로 노트북 작성</td></tr>
+</tbody></table>
+<div class="wb">💡 전문 도구의 복잡한 쿼리 언어(DAX, SQL방언)는 AI에게 맡기고, 본인은 결과 해석에 집중하세요.</div>
+</div>`}
+];
+
+const PR=[
+{nm:'📐 기본 구조',content:`<div class="cd">
+<h3 style="color:var(--c3);font-size:.95rem;margin-bottom:8px;">좋은 데이터 분석 프롬프트의 5가지 요소</h3>
+<div class="fsteps">
+  <div class="fstep"><div class="fstep-n" style="background:var(--c3);color:#000;">①</div><div class="fstep-t"><strong>역할 부여:</strong> "당신은 데이터 분석 전문가입니다. 비즈니스 맥락을 이해하고 실용적인 인사이트를 제공해주세요."</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c3);color:#000;">②</div><div class="fstep-t"><strong>데이터 구조:</strong> 컬럼명, 타입, 행 수, 기간, 특이사항을 명확히 설명합니다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c3);color:#000;">③</div><div class="fstep-t"><strong>목표 명시:</strong> "어떤 질문에 답하고 싶은가"를 구체적으로 씁니다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c3);color:#000;">④</div><div class="fstep-t"><strong>출력 형식:</strong> Python 코드인지, SQL인지, 텍스트 요약인지, 보고서인지 지정합니다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c3);color:#000;">⑤</div><div class="fstep-t"><strong>제약 조건:</strong> 도구(pandas 버전), 보고 대상(임원용/실무자용), 형식(슬라이드/문서)을 알려줍니다.</div></div>
+</div>
+</div>`},
+{nm:'❌ vs ✅ 비교',content:`<div class="cd">
+<h3 style="color:var(--c5);font-size:.95rem;margin-bottom:8px;">나쁜 프롬프트 vs 좋은 프롬프트</h3>
+<div style="display:flex;flex-direction:column;gap:10px;">
+  <div style="padding:10px;background:rgba(248,113,113,.05);border:1px solid rgba(248,113,113,.2);border-radius:var(--rs);">
+    <div style="font-size:.76rem;color:var(--c5);font-weight:700;margin-bottom:4px;">❌ 나쁜 프롬프트</div>
+    <div style="font-size:.8rem;color:var(--text2);">"매출 데이터 분석해줘"</div>
+    <div style="font-size:.72rem;color:var(--text3);margin-top:4px;">→ AI가 무엇을 해야 하는지, 어떤 데이터인지 전혀 모릅니다.</div>
+  </div>
+  <div style="padding:10px;background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.2);border-radius:var(--rs);">
+    <div style="font-size:.76rem;color:var(--c2);font-weight:700;margin-bottom:4px;">✅ 좋은 프롬프트</div>
+    <div style="font-size:.8rem;color:var(--text2);">"e커머스 매출 데이터가 있어. 컬럼은 date/category/revenue/region이고 2024년 전체 월별 데이터야. 3월에 전월 대비 15% 하락했는데, 어떤 카테고리와 지역에서 하락이 집중됐는지 pandas 코드로 분석해줘. 결과 출력 후 차트도 그려줘."</div>
+    <div style="font-size:.72rem;color:var(--text3);margin-top:4px;">→ 데이터 구조, 목표, 도구, 출력 형식이 모두 명확합니다.</div>
+  </div>
+</div>
+</div>`},
+{nm:'🔁 반복 개선',content:`<div class="cd">
+<h3 style="color:var(--c4);font-size:.95rem;margin-bottom:8px;">AI와 대화로 분석 깊이 더하기</h3>
+<p style="font-size:.83rem;color:var(--text2);margin-bottom:8px;">한 번의 질문으로 끝내지 말고, 결과를 보면서 계속 파고드세요.</p>
+<div class="fsteps">
+  <div class="fstep"><div class="fstep-n" style="background:var(--c4);">1</div><div class="fstep-t"><strong>초기 분석:</strong> 전체 현황 파악 → 이상한 부분 발견</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c4);">2</div><div class="fstep-t"><strong>드릴다운:</strong> "3월 중에서 어떤 주에 특히 심했어?" → 주별 분석</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c4);">3</div><div class="fstep-t"><strong>가설 검증:</strong> "모바일 전환율도 확인해봐" → 가설 검증</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c4);">4</div><div class="fstep-t"><strong>원인 탐색:</strong> "다른 가능한 원인도 찾아봐" → 대안 탐색</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c4);">5</div><div class="fstep-t"><strong>결론 정리:</strong> "지금까지 분석을 한 페이지로 요약해줘" → 보고서화</div></div>
+</div>
+</div>`},
+{nm:'🛡️ 보안 주의',content:`<div class="cd">
+<h3 style="color:var(--c5);font-size:.95rem;margin-bottom:8px;">실제 데이터 사용 시 보안 주의사항</h3>
+<div class="we">⚠️ 실제 고객 데이터·개인정보·기밀 정보를 AI에 직접 붙여넣지 마세요.</div>
+<div class="fsteps">
+  <div class="fstep"><div class="fstep-n" style="background:var(--c5);">!</div><div class="fstep-t"><strong>개인정보 마스킹:</strong> 이름→홍**,  이메일→*@gmail.com, 전화→010-****-****</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c5);">!</div><div class="fstep-t"><strong>구조만 공유:</strong> 실제 데이터 대신 컬럼명과 데이터 타입만 설명해도 코드 생성 가능</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c5);">!</div><div class="fstep-t"><strong>샘플 생성:</strong> "이 구조와 비슷한 샘플 데이터 10행 만들어줘"로 가짜 데이터로 테스트</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c2);">✓</div><div class="fstep-t"><strong>온프레미스 옵션:</strong> 기업 보안 환경에서는 Claude Enterprise / 프라이빗 배포 활용</div></div>
+</div>
+</div>`}
+];
+
+const PIT=[
+{nm:'🎭 환각 위험',content:`<div class="cd">
+<h3 style="color:var(--c5);font-size:.95rem;margin-bottom:8px;">AI 환각 — 틀린 수치를 자신 있게 말할 때</h3>
+<p style="font-size:.83rem;color:var(--text2);margin-bottom:8px;">AI는 데이터를 "이해"하는 게 아니라 "패턴을 맞추는" 시스템입니다. 숫자를 지어낼 수 있습니다.</p>
+<div class="fsteps">
+  <div class="fstep"><div class="fstep-n" style="background:var(--c5);">위험</div><div class="fstep-t"><strong>요약 수치를 지어냄:</strong> "매출 합계는 약 1.2억입니다"라고 했지만 실제로 계산하지 않은 경우</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c5);">위험</div><div class="fstep-t"><strong>존재하지 않는 컬럼 참조:</strong> 요청에 없는 컬럼을 있다고 가정하고 코드 작성</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c5);">위험</div><div class="fstep-t"><strong>통계 개념 혼동:</strong> 평균과 중앙값을 혼동하거나 잘못된 통계 검정 적용</div></div>
+</div>
+<div class="wg">✅ 대응: 핵심 수치는 반드시 직접 계산해서 검증. "이 계산 과정을 단계별로 보여줘"라고 요청.</div>
+</div>`},
+{nm:'🔗 인과 혼동',content:`<div class="cd">
+<h3 style="color:var(--c3);font-size:.95rem;margin-bottom:8px;">상관관계 ≠ 인과관계</h3>
+<p style="font-size:.83rem;color:var(--text2);margin-bottom:8px;">데이터 분석에서 가장 흔한 실수입니다. AI도 이 함정을 범할 수 있습니다.</p>
+<div style="padding:12px;background:var(--bg3);border-radius:var(--rs);margin-bottom:10px;">
+  <div style="font-size:.8rem;color:var(--c3);font-weight:700;margin-bottom:6px;">🔍 유명한 상관관계 착각 사례</div>
+  <div style="font-size:.78rem;color:var(--text2);">• 아이스크림 판매량 ↑ → 익사 사고 ↑ (실제 원인: 여름)</div>
+  <div style="font-size:.78rem;color:var(--text2);">• 광고비 ↑ → 매출 ↑ (실제: 성수기에 광고비도 매출도 올라간 것)</div>
+  <div style="font-size:.78rem;color:var(--text2);">• 신발 크기 ↑ → 수학 점수 ↑ (실제 원인: 나이)</div>
+</div>
+<div class="fsteps">
+  <div class="fstep"><div class="fstep-n" style="background:var(--c3);color:#000;">✓</div><div class="fstep-t"><strong>검증법:</strong> "혼재변수(제3의 원인)가 있을 수 있어. 다른 설명 가능한 원인을 찾아봐"라고 AI에 추가 요청</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c3);color:#000;">✓</div><div class="fstep-t"><strong>A/B 테스트:</strong> 진짜 인과관계를 확인하려면 실험(A/B 테스트) 설계가 필요합니다.</div></div>
+</div>
+</div>`},
+{nm:'📏 편향 탐지',content:`<div class="cd">
+<h3 style="color:var(--c4);font-size:.95rem;margin-bottom:8px;">데이터 편향 — 잘못된 데이터로 분석하면</h3>
+<table class="ct"><thead><tr><th>편향 종류</th><th>예시</th><th>대응법</th></tr></thead><tbody>
+<tr><td style="color:var(--c4);">생존 편향</td><td>성공한 기업만 분석 → 성공 공식 도출</td><td>폐업 기업도 포함</td></tr>
+<tr><td style="color:var(--c4);">확증 편향</td><td>가설에 맞는 데이터만 선택</td><td>반례 데이터도 확인</td></tr>
+<tr><td style="color:var(--c4);">표본 편향</td><td>모바일 유저 설문 → 전체 고객 대표라 착각</td><td>표본 대표성 확인</td></tr>
+<tr><td style="color:var(--c4);">측정 편향</td><td>A 지역은 카드결제, B 지역은 현금 주로 사용</td><td>측정 방법 통일</td></tr>
+</tbody></table>
+<div class="wb">💡 AI에게 "이 분석에서 발생할 수 있는 편향을 찾아줘"라고 요청하면 사각지대를 줄일 수 있습니다.</div>
+</div>`},
+{nm:'✅ 검증 방법',content:`<div class="cd">
+<h3 style="color:var(--c2);font-size:.95rem;margin-bottom:8px;">AI 분석 결과 검증 4단계</h3>
+<div class="fsteps">
+  <div class="fstep"><div class="fstep-n" style="background:var(--c2);color:#000;">1</div><div class="fstep-t"><strong>샘플 검증:</strong> 10~20행을 직접 수동 계산해서 AI 결과와 비교합니다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c2);color:#000;">2</div><div class="fstep-t"><strong>상식 점검:</strong> "이 숫자가 말이 되는가?" 업무 경험으로 상식 체크합니다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c2);color:#000;">3</div><div class="fstep-t"><strong>다른 방법으로 재확인:</strong> 같은 질문을 다른 도구(Excel vs Python)로 계산해봅니다.</div></div>
+  <div class="fstep"><div class="fstep-n" style="background:var(--c2);color:#000;">4</div><div class="fstep-t"><strong>전문가 리뷰:</strong> 중요한 분석은 통계·도메인 전문가에게 검토 받습니다.</div></div>
+</div>
+<div class="wg">✅ "이 분석의 한계점과 주의사항을 알려줘"를 항상 마지막에 요청하세요.</div>
+</div>`}
+];
+
+const UC=[
+{nm:'📣 마케팅',content:`<div class="cd"><h3 style="font-size:.95rem;margin-bottom:6px;">📣 마케팅 — 캠페인 성과 분석</h3><p style="font-size:.9rem;font-weight:700;color:var(--c1);margin-bottom:6px;">핵심 분석: 채널별 ROI, 전환율, 고객 여정</p><div class="fsteps"><div class="fstep"><div class="fstep-n" style="background:var(--c1);">→</div><div class="fstep-t"><strong>AI 활용:</strong> 광고 채널별 CPA(전환당 비용) 계산, A/B 테스트 결과 유의성 검정, 고객 세그먼트별 반응률 비교</div></div><div class="fstep"><div class="fstep-n" style="background:var(--c2);">→</div><div class="fstep-t"><strong>프롬프트 예시:</strong> "페이스북/인스타/구글 광고 데이터가 있어. 채널별 ROAS와 전환율을 비교하고 예산 재배분 방향을 제안해줘."</div></div></div><p style="font-size:.8rem;color:var(--text2);margin-top:8px;">핵심 지표: CTR, CVR, ROAS, CAC, LTV, NPS</p></div>`},
+{nm:'💰 재무',content:`<div class="cd"><h3 style="font-size:.95rem;margin-bottom:6px;">💰 재무·회계 — 수익성 분석</h3><p style="font-size:.9rem;font-weight:700;color:var(--c2);margin-bottom:6px;">핵심 분석: P&L 분석, 비용 구조, 현금흐름</p><div class="fsteps"><div class="fstep"><div class="fstep-n" style="background:var(--c2);">→</div><div class="fstep-t"><strong>AI 활용:</strong> 월별 P&L 변동 원인 분석, 비용 항목별 트렌드, 예산 대비 실적 편차 분석</div></div><div class="fstep"><div class="fstep-n" style="background:var(--c1);">→</div><div class="fstep-t"><strong>프롬프트 예시:</strong> "3개년 P&L 데이터야. 영업이익률이 하락한 원인을 비용 항목별로 분석하고 개선 포인트를 찾아줘."</div></div></div><p style="font-size:.8rem;color:var(--text2);margin-top:8px;">핵심 지표: 영업이익률, EBITDA, ROE, 현금전환주기</p></div>`},
+{nm:'👥 HR',content:`<div class="cd"><h3 style="font-size:.95rem;margin-bottom:6px;">👥 HR — 인력 분석 (People Analytics)</h3><p style="font-size:.9rem;font-weight:700;color:var(--c4);margin-bottom:6px;">핵심 분석: 이직률, 성과 분포, 채용 효율</p><div class="fsteps"><div class="fstep"><div class="fstep-n" style="background:var(--c4);">→</div><div class="fstep-t"><strong>AI 활용:</strong> 부서별 이직률 패턴 분석, 채용 소스별 성과 비교, 교육 투자 대비 성과 향상</div></div><div class="fstep"><div class="fstep-n" style="background:var(--c2);">→</div><div class="fstep-t"><strong>프롬프트 예시:</strong> "직원 데이터에서 이직 위험 요소를 찾아줘. 재직 기간, 부서, 급여 밴드, 성과 등급을 기준으로 분석해줘."</div></div></div><div class="we">⚠️ 개인정보 보호: HR 데이터는 반드시 익명화 후 AI에 입력</div></div>`},
+{nm:'🏪 운영·물류',content:`<div class="cd"><h3 style="font-size:.95rem;margin-bottom:6px;">🏪 운영·물류 — 효율 최적화</h3><p style="font-size:.9rem;font-weight:700;color:var(--c3);margin-bottom:6px;">핵심 분석: 재고 최적화, 배송 효율, 수요 예측</p><div class="fsteps"><div class="fstep"><div class="fstep-n" style="background:var(--c3);color:#000;">→</div><div class="fstep-t"><strong>AI 활용:</strong> 계절성 수요 예측, 재고 부족/과잉 패턴 분석, 공급업체별 납기 분석</div></div><div class="fstep"><div class="fstep-n" style="background:var(--c2);">→</div><div class="fstep-t"><strong>프롬프트 예시:</strong> "과거 3년 판매 데이터로 내년 월별 수요를 예측해줘. 계절 요인과 트렌드를 반영해줘."</div></div></div><p style="font-size:.8rem;color:var(--text2);margin-top:8px;">핵심 지표: 재고회전율, 납기준수율, OTD, OTIF</p></div>`},
+{nm:'🛒 e커머스',content:`<div class="cd"><h3 style="font-size:.95rem;margin-bottom:6px;">🛒 e커머스 — 고객 행동 분석</h3><p style="font-size:.9rem;font-weight:700;color:var(--c1);margin-bottom:6px;">핵심 분석: 퍼널 분석, 장바구니 이탈, RFM</p><div class="fsteps"><div class="fstep"><div class="fstep-n" style="background:var(--c1);">→</div><div class="fstep-t"><strong>AI 활용:</strong> RFM(최근성/빈도/금액) 고객 세그먼트, 이탈 단계 분석, 상품 추천 로직 설계</div></div><div class="fstep"><div class="fstep-n" style="background:var(--c2);">→</div><div class="fstep-t"><strong>프롬프트 예시:</strong> "고객 구매 로그 데이터야. RFM 분석으로 VIP/이탈위험/신규 고객을 구분하고 각 그룹별 마케팅 전략을 제안해줘."</div></div></div><p style="font-size:.8rem;color:var(--text2);margin-top:8px;">핵심 지표: 전환율, 객단가, 재구매율, 장바구니 이탈률</p></div>`},
+{nm:'🏥 헬스케어',content:`<div class="cd"><h3 style="font-size:.95rem;margin-bottom:6px;">🏥 헬스케어 — 임상·운영 데이터 분석</h3><p style="font-size:.9rem;font-weight:700;color:var(--c5);margin-bottom:6px;">핵심 분석: 환자 흐름, 대기시간, 재원일수</p><div class="fsteps"><div class="fstep"><div class="fstep-n" style="background:var(--c5);">→</div><div class="fstep-t"><strong>AI 활용:</strong> 진료과별 대기시간 패턴, 재원일수 최적화, 응급실 혼잡 예측</div></div><div class="fstep"><div class="fstep-n" style="background:var(--c2);">→</div><div class="fstep-t"><strong>프롬프트 예시:</strong> "외래 진료 예약/실제 진료 데이터야. 대기시간이 30분 이상인 케이스 패턴을 찾고 개선안을 제안해줘."</div></div></div><div class="we">⚠️ 헬스케어 데이터는 HIPAA·개인정보보호법 준수 필수. 반드시 익명화.</div></div>`},
+{nm:'📱 제품·UX',content:`<div class="cd"><h3 style="font-size:.95rem;margin-bottom:6px;">📱 제품·UX — 사용자 행동 분석</h3><p style="font-size:.9rem;font-weight:700;color:var(--c4);margin-bottom:6px;">핵심 분석: 리텐션, 퍼널, 피처 사용률</p><div class="fsteps"><div class="fstep"><div class="fstep-n" style="background:var(--c4);">→</div><div class="fstep-t"><strong>AI 활용:</strong> 코호트 리텐션 분석, 피처별 참여율, NPS 텍스트 분석(감성 분류)</div></div><div class="fstep"><div class="fstep-n" style="background:var(--c2);">→</div><div class="fstep-t"><strong>프롬프트 예시:</strong> "앱 로그 데이터야. 가입 후 7일/30일 리텐션을 코호트별로 분석하고, 이탈 시점의 공통 패턴을 찾아줘."</div></div></div><p style="font-size:.8rem;color:var(--text2);margin-top:8px;">핵심 지표: DAU/MAU, 리텐션율, 세션 길이, NPS</p></div>`}
+];
+
+const drE=['🎯','🔬','📐','💡','🌊'],drN=['Dr. Question','Dr. Stats','Dr. Clean','Dr. Story','Dr. Scale'],drR=['질문 박사','통계 박사','정제 박사','스토리 박사','스케일 박사'];
+const drC=['var(--c1)','var(--c4)','var(--c2)','var(--c3)','var(--c6)'];
+const DD=[
+{nm:'Dr. Question — 질문 박사',q:'데이터 분석에서 가장 중요한 것은 무엇인가?',
+su:['분석 전에 "이 분석으로 어떤 결정을 내릴 것인가?"를 반드시 정의하라','나쁜 질문을 가진 좋은 분석은 시간 낭비. 좋은 질문을 가진 단순한 분석이 훨씬 가치 있다','AI에게 "어떤 질문을 해야 할지 제안해줘"라고 먼저 물어라'],
+mi:['더 많은 데이터가 있으면 더 좋은 분석이 나온다 (No! 올바른 데이터가 핵심)','분석을 시작하기 전에 가설이 없어도 된다 (No! 가설 없는 분석은 표류한다)','모든 질문에 데이터 분석이 필요하다 (No! 경험과 상식만으로 충분한 경우도 많다)'],
+ac:['분석 의뢰를 받으면 먼저 "이 결과로 무엇을 할 것인가?"를 역으로 물어보기','분석 시작 전 1페이지 분석 계획서(질문/가설/데이터/방법/예상결과) 작성하기','AI에게 "이 질문을 더 구체적으로 만들어줘"라고 요청하는 습관 들이기'],
+nx:'통계 박사에게 이동하여 올바른 분석 방법을 배우세요.'},
+{nm:'Dr. Stats — 통계 박사',q:'AI 시대에 통계 지식이 왜 여전히 필요한가?',
+su:['AI가 통계를 "실행"할 수 있지만, 어떤 통계를 써야 하는지 판단은 사람이 해야 한다','p값이 작다고 중요한 것이 아니다. 효과 크기(Effect Size)를 함께 봐야 한다','AI가 생성한 통계 결과가 맞는지 검토할 최소한의 통계 감각은 필요하다'],
+mi:['통계학을 완벽히 몰라야 데이터 분석을 할 수 없다 (No! 기본 개념만으로 충분히 시작 가능)','AI가 선택한 통계 방법이 항상 옳다 (No! 반드시 검토 필요)','상관계수 0.7이면 강한 관계다 (No! 맥락에 따라 다름)'],
+ac:['평균/중앙값/분산/상관계수 4가지의 의미와 차이를 이해하기','통계 결과를 볼 때 "이 방법이 이 데이터에 적합한가?" 한 번 더 생각하기','AI에게 "이 통계 방법의 가정과 한계점을 설명해줘"라고 요청하기'],
+nx:'정제 박사에게 이동하여 데이터 품질을 높이는 법을 배우세요.'},
+{nm:'Dr. Clean — 정제 박사',q:'데이터 정제에 왜 그렇게 많은 시간이 걸리는가?',
+su:['실전 데이터 분석 시간의 60~80%는 정제에 쓰인다. 이것이 현실이다','더러운 데이터로 만든 완벽한 분석은 쓰레기다 (Garbage In, Garbage Out)','AI는 정제 코드를 빠르게 작성해주지만, 어떤 정제가 필요한지 판단은 사람이 한다'],
+mi:['결측값은 무조건 삭제하면 된다 (No! 삭제가 오히려 편향을 만들 수 있다)','이상치는 무조건 제거해야 한다 (No! 이상치가 오히려 중요한 신호일 수 있다)','정제는 한 번만 하면 된다 (No! 분석하면서 계속 발견하고 수정해야 한다)'],
+ac:['데이터를 받으면 먼저 df.info(), df.describe(), df.isnull().sum() 세 줄로 현황 파악','결측값 처리 전 "왜 결측이 발생했는가?"를 먼저 파악하기','AI에게 "이 정제 방법의 장단점과 대안을 알려줘"라고 요청하기'],
+nx:'스토리 박사에게 이동하여 분석 결과를 전달하는 법을 배우세요.'},
+{nm:'Dr. Story — 스토리 박사',q:'좋은 데이터 스토리텔링이란 무엇인가?',
+su:['차트와 숫자는 증거다. 인사이트와 권고가 있어야 진짜 분석이다','청중이 이해할 수 있는 언어로 말해야 한다. 통계 용어는 부록으로','"그래서 우리가 뭘 해야 하는가?"에 답하는 것이 분석의 최종 목표다'],
+mi:['더 많은 차트가 더 좋은 보고서를 만든다 (No! 핵심 3개가 30개보다 낫다)','데이터를 보여주면 청중이 스스로 해석할 것이다 (No! 인사이트를 명확히 전달해야 한다)','임원에게도 상세 방법론을 설명해야 한다 (No! 임원에게는 결론과 권고만)'],
+ac:['보고서 첫 페이지에 Executive Summary(결론+권고) 먼저 쓰기','차트 제목을 "월별 매출" → "3월 매출, 서울에서 15% 급락"으로 바꾸기','AI에게 "이 분석 결과를 임원 대상으로 2분 내 설명하는 스크립트 작성해줘"'],
+nx:'스케일 박사에게 이동하여 대규모 분석 자동화를 배우세요.'},
+{nm:'Dr. Scale — 스케일 박사',q:'데이터 분석을 어떻게 조직 역량으로 키우는가?',
+su:['반복되는 분석은 자동화하라. 매주 같은 리포트를 만들면 AI로 파이프라인 구축','데이터 문화는 분석 담당자 1명이 아니라 모든 팀원이 데이터를 읽는 문화를 의미한다','지금 당장은 작게 시작하라. 가장 자주 만드는 리포트 하나를 AI로 자동화하는 것부터'],
+mi:['데이터 분석은 전담 팀이 생기면 시작할 수 있다 (No! 개인부터 지금 당장 가능)','완벽한 데이터 인프라가 갖춰져야 분석을 시작할 수 있다 (No! 엑셀로도 시작 가능)','AI가 생기면 데이터 분석가가 필요 없다 (No! 분석가의 역할이 바뀌는 것이지 사라지지 않음)'],
+ac:['가장 많이 반복하는 리포트를 AI 프롬프트 템플릿으로 표준화하기','팀 내 "AI 데이터 분석 스터디"를 주 1회로 시작하기','개인 분석 노하우를 프롬프트 라이브러리로 문서화하기'],
+nx:'모든 전문가 완료! 로드맵을 확인하고 퀴즈를 풀어보세요.'}
+];
+
+const RM=[
+{t:'1단계: 분석 사고방식 장착',g:'"왜 분석하는가"를 항상 먼저 정의하는 습관',s:'분석 의뢰가 오면 5분 안에 분석 목적과 성공 기준을 정의할 수 있다',c:'마지막 분석에서 "이 결과로 어떤 결정을 내릴 것인가?"를 먼저 정의했는가?'},
+{t:'2단계: AI 데이터 대화법 익히기',g:'데이터 구조를 AI에게 효과적으로 설명하는 법 습득',s:'복사메모의 기본 템플릿을 써서 AI에게 분석을 요청할 수 있다',c:'데이터 컬럼, 타입, 행 수, 목표를 포함한 프롬프트를 작성해봤는가?'},
+{t:'3단계: 기본 도구 선택',g:'Python pandas 또는 Excel+AI 중 하나를 주 도구로 결정',s:'실제 업무 데이터를 AI 도움으로 불러오고 기초 통계를 뽑을 수 있다',c:'Jupyter Notebook 또는 Google Colab을 설치하고 첫 코드를 실행해봤는가?'},
+{t:'4단계: EDA 실습',g:'실제 데이터로 탐색적 분석(EDA) 한 사이클 완료',s:'결측값 처리, 기초 통계, 차트 생성, 패턴 발견 순서로 분석 완료',c:'이상치를 발견하고 처리 방법을 결정해봤는가?'},
+{t:'5단계: 인사이트 전달',g:'분석 결과를 보고서/슬라이드로 전달하는 것까지 완료',s:'비전문가도 이해할 수 있는 보고서를 AI 도움으로 작성 완료',c:'"그래서 우리가 뭘 해야 하는가?"에 대한 권고가 포함되어 있는가?'}
+];
+
+const QQ=[
+{q:'AI는 데이터 분석에서 비즈니스 판단과 최종 의사결정까지 대신할 수 있다.',tp:'ox',an:'X',ex:'AI는 계산·패턴 탐색을 도와주는 파트너입니다. 비즈니스 판단과 최종 책임은 항상 사람에게 있습니다.'},
+{q:'데이터 정제(클렌징)는 전체 분석 시간의 60~80%를 차지하는 것이 일반적이다.',tp:'ox',an:'O',ex:'실전 데이터 분석에서 정제·준비 단계가 대부분의 시간을 차지합니다. "Garbage In, Garbage Out"은 실제 현실입니다.'},
+{q:'ChatGPT Plus에서 CSV 파일을 직접 업로드하면 AI가 직접 실행하고 차트까지 생성할 수 있다.',tp:'ox',an:'O',ex:'ChatGPT Plus의 Code Interpreter 기능은 파일 업로드 후 직접 Python 코드를 실행하고 시각화까지 제공합니다.'},
+{q:'두 변수 사이의 상관관계가 높으면 하나가 다른 하나의 원인이라고 결론 내릴 수 있다.',tp:'ox',an:'X',ex:'상관관계는 인과관계가 아닙니다. 제3의 변수(혼재변수)가 있을 수 있습니다. 인과관계 확인을 위해서는 A/B 테스트 같은 실험이 필요합니다.'},
+{q:'시간에 따른 데이터 변화를 보여주기에 가장 적합한 차트는?',tp:'mc',op:['파이 차트','선 그래프(Line Chart)','산점도','히트맵'],an:1,ex:'선 그래프는 시간 흐름에 따른 추이를 보여주는 데 가장 적합합니다.'},
+{q:'EDA의 풀 네임은?',tp:'mc',op:['Enhanced Data Algorithm','Exploratory Data Analysis','Extensive Data Audit','Experimental Data Application'],an:1,ex:'EDA는 Exploratory Data Analysis(탐색적 데이터 분석)의 약자입니다. 가설 없이 데이터를 자유롭게 탐색하는 초기 단계입니다.'},
+{q:'이상치(Outlier)는 항상 제거해야 한다.',tp:'ox',an:'X',ex:'이상치가 오류일 수도 있지만, 가장 중요한 신호일 수도 있습니다. 이상치의 발생 원인을 먼저 파악해야 합니다.'},
+{q:'클로드(Claude)가 다른 AI보다 데이터 파일을 직접 실행하는 기능이 강하다.',tp:'ox',an:'X',ex:'파일 직접 실행은 ChatGPT Code Interpreter가 가장 강합니다. Claude는 코드 작성, 분석 설계, 보고서 작성에서 강점이 있습니다.'},
+{q:'보고서의 차트 제목으로 더 좋은 것은?',tp:'mc',op:['"2024년 3월 지역별 매출 현황"','"3월 매출, 서울 지역에서 15% 급락"','"매출 차트 #3"','"지역별 비교 데이터"'],an:1,ex:'좋은 차트 제목은 독자가 1초 안에 핵심 메시지를 이해할 수 있어야 합니다. 단순 설명 대신 인사이트를 제목으로 씁니다.'},
+{q:'RFM 분석에서 R, F, M이 각각 뜻하는 것은?',tp:'mc',op:['Revenue, Frequency, Marketing','Recency, Frequency, Monetary','Region, Function, Market','Response, Factor, Method'],an:1,ex:'RFM은 고객 세그먼테이션 기법으로 Recency(최근성), Frequency(구매 빈도), Monetary(구매 금액)를 기준으로 고객을 분류합니다.'},
+{q:'실제 고객 개인정보 데이터를 AI에게 보낼 때 반드시 해야 하는 것은?',tp:'mc',op:['AI가 더 잘 분석하도록 전부 공유','개인정보 마스킹 후 공유','데이터를 이메일로 먼저 전송','별도 계정 사용'],an:1,ex:'개인정보, 기밀 데이터는 반드시 마스킹(익명화) 후 AI에 입력해야 합니다. 미마스킹 입력은 개인정보 보호법 위반 소지가 있습니다.'},
+{q:'AI 분석 결과 검증에서 가장 기본적인 첫 번째 단계는?',tp:'mc',op:['다른 팀원에게 물어보기','샘플 데이터를 직접 수동 계산하여 결과와 비교','더 비싼 AI 모델로 재분석','인터넷 검색으로 확인'],an:1,ex:'핵심 수치는 10~20행을 수동으로 직접 계산해 AI 결과와 비교하는 것이 기본 검증 방법입니다.'}
+];
+
+const GG=[
+{t:'EDA',d:'Exploratory Data Analysis. 탐색적 데이터 분석. 가설 없이 데이터를 자유롭게 살펴보며 패턴을 발견하는 초기 단계.',e:'데이터를 처음 만났을 때 하는 탐색'},
+{t:'이상치 (Outlier)',d:'데이터의 전반적인 패턴에서 크게 벗어난 값. 오류일 수도, 중요한 신호일 수도 있어 제거 전 원인 파악이 필수.',e:'데이터에서 튀는 값'},
+{t:'결측값',d:'데이터가 존재해야 하는 곳에 비어 있는 값. NaN, NULL, 빈칸 등으로 표현. 처리 방법이 분석 결과에 큰 영향을 미침.',e:'데이터의 빈칸'},
+{t:'상관관계',d:'두 변수가 함께 변화하는 정도. 상관계수(r)로 -1~+1 사이 값. 인과관계가 아님을 주의.',e:'두 숫자가 같이 오르내리는 정도'},
+{t:'인과관계',d:'원인과 결과의 관계. 상관관계와 다르며 실험(A/B 테스트)으로 확인 가능. 분석에서 가장 자주 혼동되는 개념.',e:'A 때문에 B가 일어나는 관계'},
+{t:'RFM',d:'고객 세그먼테이션 기법. Recency(최근 구매일), Frequency(구매 빈도), Monetary(구매 금액)로 고객 가치를 분류.',e:'고객을 VIP·일반·이탈 위험으로 나누는 법'},
+{t:'코호트 분석',d:'같은 시기에 특정 행동을 한 사용자 그룹(코호트)을 시간에 따라 추적하는 분석. 리텐션 분석에 주로 사용.',e:'가입 월별로 사용자를 나눠서 추적'},
+{t:'A/B 테스트',d:'두 가지 버전(A와 B)을 무작위 집단에 노출하여 어떤 것이 더 효과적인지 통계적으로 검증하는 실험.',e:'어느 것이 더 나은지 실험으로 확인'},
+{t:'p값',d:'귀무가설이 맞다고 가정했을 때 이 결과가 나올 확률. 보통 0.05 미만이면 통계적으로 유의미하다고 판단.',e:'이 결과가 우연일 확률'},
+{t:'회귀분석',d:'변수 간의 관계를 수식으로 표현하여 예측하는 통계 방법. 선형회귀는 AI가 가장 자주 생성하는 예측 모델.',e:'데이터로 미래를 예측하는 수식'},
+{t:'IQR',d:'Interquartile Range. 3사분위수(Q3)와 1사분위수(Q1)의 차이. 이상치를 탐지하는 데 널리 사용.',e:'이상치를 찾는 기준값'},
+{t:'Pandas',d:'Python의 데이터 분석 라이브러리. DataFrame으로 데이터를 조작·정제·분석. AI가 가장 많이 생성하는 분석 코드.',e:'파이썬으로 엑셀처럼 데이터 다루기'},
+{t:'데이터 파이프라인',d:'데이터를 수집·정제·변환·분석·저장하는 자동화된 흐름. 반복 분석을 자동화할 때 구축.',e:'데이터가 자동으로 흘러가는 공장'},
+{t:'대시보드',d:'여러 차트와 지표를 한 화면에 모아 실시간으로 모니터링하는 시각화 도구. Tableau, Power BI, Looker Studio 등.',e:'중요 숫자를 한 화면에 모아 보기'},
+{t:'ROAS',d:'Return On Ad Spend. 광고비 대비 매출액. 광고 효율을 측정하는 핵심 마케팅 지표.',e:'광고에 1원 썼을 때 몇 원 벌었나'},
+{t:'RAG',d:'Retrieval Augmented Generation. 외부 데이터를 AI에 주입해 답변을 생성. 내부 데이터 기반 Q&A에 활용.',e:'AI에게 내부 문서를 먹이는 방법'},
+{t:'생존 편향',d:'살아남은 것만 관찰하여 잘못된 결론을 내리는 편향. 성공 사례만 분석하면 실패 원인을 놓친다.',e:'성공한 것만 보고 결론 내리는 실수'},
+{t:'피벗 테이블',d:'행과 열을 재구성하여 데이터를 요약하는 방법. Excel의 피벗 테이블, pandas의 pivot_table.',e:'데이터를 원하는 형태로 요약 정리'},
+{t:'시계열',d:'시간 순서로 수집된 데이터. 트렌드, 계절성, 주기성을 분석하는 데 특화된 방법론이 별도로 존재.',e:'시간에 따라 변하는 데이터'},
+{t:'표준편차',d:'데이터가 평균에서 얼마나 퍼져 있는지 나타내는 지표. 작을수록 데이터가 평균에 밀집, 클수록 분산.',e:'데이터가 얼마나 들쭉날쭉한지'}
+];
+
+let ck={},qA={};
+
+/* ══ BUILDERS ══ */
+function mkTabs(data,tabId,contId,fn){
+  document.getElementById(tabId).innerHTML=data.map((d,i)=>`<button class="tt ${i===0?'a':''}" onclick="${fn}(${i})">${d.nm}</button>`).join('');
+  fn==='sWF'?sWF(0):fn==='sTL'?sTL(0):fn==='sPR'?sPR(0):fn==='sPIT'?sPIT(0):sUC(0);
+}
+function sWF(i){sel('wfTabs',i);document.getElementById('wfC').innerHTML=WF[i].content;}
+function sTL(i){sel('toolTabs',i);document.getElementById('toolC').innerHTML=TOOLS[i].content;}
+function sPR(i){sel('prTabs',i);document.getElementById('prC').innerHTML=PR[i].content;}
+function sPIT(i){sel('pitTabs',i);document.getElementById('pitC').innerHTML=PIT[i].content;}
+function sUC(i){sel('ucTabs',i);document.getElementById('ucC').innerHTML=UC[i].content;}
+function sel(tabId,i){document.querySelectorAll('#'+tabId+' .tt').forEach((b,j)=>b.classList.toggle('a',j===i));}
+
+function bD(){
+  document.getElementById('dG').innerHTML=drE.map((e,i)=>`<div class="cd dc ${i===0?'s':''}" onclick="sD(${i})" style="border-color:${i===0?drC[0]:'var(--border)'}"><span class="de">${e}</span><div class="dn" style="color:${drC[i]}">${drN[i]}</div><div class="dr">${drR[i]}</div></div>`).join('');
+  sD(0);
+}
+function sD(i){
+  document.querySelectorAll('#dG .dc').forEach((c,j)=>{c.classList.toggle('s',j===i);c.style.borderColor=j===i?drC[j]:'var(--border)';});
+  const d=DD[i];
+  document.getElementById('dP').innerHTML=`<h3 style="color:${drC[i]}">${d.nm}</h3><h4 style="margin:8px 0 4px;">❓ ${d.q}</h4><h4 style="margin:10px 0 4px;">📌 핵심 요약</h4><ul class="dl">${d.su.map(s=>`<li>${s}</li>`).join('')}</ul><h4 style="margin:10px 0 4px;">⚠️ 흔한 오해</h4><ul class="dl">${d.mi.map(s=>`<li>${s}</li>`).join('')}</ul><h4 style="margin:10px 0 4px;">✅ 실천 행동</h4><ul class="dl">${d.ac.map(s=>`<li>${s}</li>`).join('')}</ul><div class="dnn">➡️ ${d.nx}</div>`;
+}
+
+function bRM(){
+  document.getElementById('rmW').innerHTML=RM.map((r,i)=>`<div class="rs ${ck['r'+i]?'done':''}" id="rs${i}"><div class="rd"></div><h4>${r.t}</h4><div class="ac" style="margin:4px 0;"><div class="ah" onclick="ta(this)" style="font-size:.74rem;padding:5px 9px;">상세 보기 <span>▼</span></div><div class="ab"><p><strong>🎯 목표:</strong> ${r.g}</p><p><strong>✅ 달성 기준:</strong> ${r.s}</p><p><strong>🔍 자가 점검:</strong> ${r.c}</p></div></div><div class="rc"><label><input type="checkbox" ${ck['r'+i]?'checked':''} onchange="tR(${i},this.checked)"> 완료 표시</label></div></div>`).join('');
+}
+function tR(i,v){
+  ck['r'+i]=v;
+  const el=document.getElementById('rs'+i);
+  el.classList.toggle('done',v);
+  el.querySelector('.rd').style.background=v?'var(--c2)':'var(--bg3)';
+  el.querySelector('.rd').style.borderColor=v?'var(--c2)':'var(--border)';
+  up();sv();
+}
+
+function bQ(){
+  document.getElementById('qW').innerHTML=QQ.map((q,i)=>{
+    if(q.tp==='ox')return`<div class="qq"><h4>${i+1}. ${q.q}</h4><div class="qo" onclick="pQ(${i},this,'O')">⭕ O (맞다)</div><div class="qo" onclick="pQ(${i},this,'X')">❌ X (틀리다)</div><div class="qx" id="qx${i}">💡 ${q.ex}</div></div>`;
+    return`<div class="qq"><h4>${i+1}. ${q.q}</h4>${q.op.map((o,j)=>`<div class="qo" onclick="pQ(${i},this,${j})">${String.fromCharCode(9312+j)} ${o}</div>`).join('')}<div class="qx" id="qx${i}">💡 ${q.ex}</div></div>`;
+  }).join('');
+}
+function pQ(i,el,v){
+  if(qA[i]!==undefined)return;
+  qA[i]=v;
+  const q=QQ[i],ok=v===q.an;
+  el.classList.add(ok?'c':'w');
+  el.parentElement.querySelectorAll('.qo').forEach(o=>{
+    o.classList.add('d');
+    if(q.tp==='ox'){if(o.textContent.includes(q.an))o.classList.add('c');}
+    else{const x=parseInt(o.getAttribute('onclick').match(/,(\d+)\)/)?.[1]);if(x===q.an)o.classList.add('c');}
+  });
+  document.getElementById('qx'+i).style.display='block';
+  up();
+}
+function sQ(){
+  let c=0;QQ.forEach((q,i)=>{if(qA[i]===q.an)c++;});
+  const a=Object.keys(qA).length,t=QQ.length;
+  document.getElementById('qS').style.display='block';
+  if(a<t)document.getElementById('qS').innerHTML=`${t-a}문항이 남았습니다! 모두 풀고 채점하세요.`;
+  else{const p=Math.round(c/t*100);document.getElementById('qS').innerHTML=`🎯 ${c}/${t}문항 정답 (${p}점) — ${p>=90?'🏆 데이터 분석 AI 마스터!':p>=70?'🎉 훌륭합니다! 조금만 더!':p>=50?'📖 함정 섹션을 다시 확인하세요!':'🔄 왜 AI인가 섹션부터 다시!'}`;}
+  up();
+}
+function rQ(){qA={};document.getElementById('qS').style.display='none';bQ();up();}
+
+function bG(){
+  document.getElementById('gL').innerHTML=GG.map(g=>`<div class="gl" data-t="${g.t.toLowerCase()}"><div class="gt" onclick="this.nextElementSibling.classList.toggle('o')">${g.t}</div><div class="gd"><p>${g.d}</p><p class="ge">쉬운 말: ${g.e}</p></div></div>`).join('');
+}
+function fg(v){
+  const l=v.toLowerCase();
+  document.querySelectorAll('.gl').forEach(i=>{i.style.display=i.dataset.t.includes(l)||l===''?'block':'none';});
+}
+function ta(el){
+  const b=el.nextElementSibling;b.classList.toggle('o');
+  const a=el.querySelector('span');if(a)a.textContent=b.classList.contains('o')?'▲':'▼';
+}
+function cm(b,id){
+  const t=document.getElementById(id).textContent;
+  navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨!';b.classList.add('cp');setTimeout(()=>{b.textContent='복사';b.classList.remove('cp');},1500);}).catch(()=>{const x=document.createElement('textarea');x.value=t;document.body.appendChild(x);x.select();document.execCommand('copy');document.body.removeChild(x);b.textContent='복사됨!';b.classList.add('cp');setTimeout(()=>{b.textContent='복사';b.classList.remove('cp');},1500);});
+}
+function go(id){
+  document.querySelectorAll('.S').forEach(s=>s.classList.remove('a'));
+  document.getElementById('sec-'+id).classList.add('a');
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('a'));
+  document.querySelectorAll('.nb').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes("'"+id+"'"))b.classList.add('a');});
+  window.scrollTo({top:0,behavior:'smooth'});sv();
+}
+function up(){
+  let t=0,d=0;
+  for(let i=0;i<5;i++){t++;if(ck['r'+i])d++;}
+  t+=QQ.length;d+=Object.keys(qA).length;
+  const p=t>0?Math.round(d/t*100):0;
+  document.getElementById('pF').style.width=p+'%';
+  document.getElementById('pB').style.width=p+'%';
+  document.getElementById('pL').textContent='진행률 '+p+'%';
+  sv();
+}
+function sv(){try{localStorage.setItem('da-ai-lab',JSON.stringify({ck,qA}));}catch(e){}}
+function ld(){try{const r=localStorage.getItem('da-ai-lab');if(r){const s=JSON.parse(r);if(s.ck)ck=s.ck;if(s.qA)qA=s.qA;}}catch(e){}}
+
+function init(){
+  ld();
+  document.getElementById('wfTabs').innerHTML=WF.map((d,i)=>`<button class="tt ${i===0?'a':''}" onclick="sWF(${i})">${d.nm}</button>`).join('');
+  sWF(0);
+  document.getElementById('toolTabs').innerHTML=TOOLS.map((d,i)=>`<button class="tt ${i===0?'a':''}" onclick="sTL(${i})">${d.nm}</button>`).join('');
+  sTL(0);
+  document.getElementById('prTabs').innerHTML=PR.map((d,i)=>`<button class="tt ${i===0?'a':''}" onclick="sPR(${i})">${d.nm}</button>`).join('');
+  sPR(0);
+  document.getElementById('pitTabs').innerHTML=PIT.map((d,i)=>`<button class="tt ${i===0?'a':''}" onclick="sPIT(${i})">${d.nm}</button>`).join('');
+  sPIT(0);
+  document.getElementById('ucTabs').innerHTML=UC.map((d,i)=>`<button class="tt ${i===0?'a':''}" onclick="sUC(${i})">${d.nm}</button>`).join('');
+  sUC(0);
+  bD();bRM();bQ();bG();up();
+}
+init();
+</script>
+</body>
+</html>

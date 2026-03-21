@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>멀티모달 AI 활용 인터랙티브 학습실</title>
+<style>
+:root{--bg:#080a10;--bg2:#0e1320;--bg3:#161d30;--card:#1c2540;--card2:#223050;--border:#2c3860;--text:#e6ecf8;--text2:#8b9cc0;--text3:#5a6e94;--a1:#e879f9;--a2:#22d3ee;--a3:#a3e635;--a4:#fb923c;--a5:#f472b6;--a6:#60a5fa;--r:14px;--rs:8px;--f:'Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;--m:'SF Mono','Cascadia Code','Consolas',monospace;--tr:.25s cubic-bezier(.4,0,.2,1);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;font-size:15px;}body{font-family:var(--f);background:var(--bg);color:var(--text);line-height:1.7;}button{font-family:var(--f);cursor:pointer;border:none;outline:none;transition:var(--tr);}button:focus-visible{outline:2px solid var(--a2);outline-offset:2px;}input{font-family:var(--f);}
+#pB{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--a1),var(--a2));z-index:1001;transition:width .5s;}
+#nv{position:fixed;top:3px;left:0;right:0;z-index:1000;background:rgba(8,10,16,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 10px;display:flex;align-items:center;height:48px;gap:2px;overflow-x:auto;}#nv::-webkit-scrollbar{display:none;}
+.nb{padding:5px 10px;border-radius:18px;font-size:.74rem;color:var(--text2);background:0;white-space:nowrap;border:1px solid transparent;}.nb:hover{color:var(--text);background:var(--bg3);}.nb.a{color:var(--a2);background:rgba(34,211,238,.08);border-color:rgba(34,211,238,.25);}
+.nl{font-weight:800;font-size:.86rem;margin-right:6px;white-space:nowrap;background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.S{display:none;padding:62px 16px 36px;max-width:960px;margin:0 auto;}.S.a{display:block;animation:fu .3s ease;}
+@keyframes fu{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.ht{font-size:clamp(1.5rem,4.5vw,2.3rem);font-weight:800;background:linear-gradient(135deg,var(--a1),var(--a2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px;}
+.hs{color:var(--text2);font-size:.9rem;margin-bottom:18px;line-height:1.7;}
+.bt{padding:8px 16px;border-radius:var(--rs);font-size:.84rem;font-weight:600;}.bp{background:var(--a2);color:#000;}.bp:hover{filter:brightness(1.15);transform:translateY(-1px);}.bs{background:var(--bg3);color:var(--text);border:1px solid var(--border);}.bs:hover{border-color:var(--a2);}.bm{padding:5px 11px;font-size:.76rem;}
+.hb{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.cd{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px;transition:var(--tr);margin-bottom:10px;}.cd:hover{border-color:rgba(34,211,238,.2);}
+.sh{font-size:1.25rem;font-weight:700;margin-bottom:4px;}.ss{color:var(--text2);font-size:.84rem;margin-bottom:16px;}
+.st{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.68rem;font-weight:600;margin-bottom:8px;}
+.hx{background:linear-gradient(135deg,rgba(232,121,249,.06),rgba(34,211,238,.06));border:2px solid var(--a1);border-radius:var(--r);padding:14px;text-align:center;margin:14px 0;font-size:.95rem;font-weight:700;color:var(--a1);}
+.dx{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px;margin-bottom:16px;}.dx h3{font-size:.88rem;color:var(--a2);margin-bottom:6px;}.di{display:flex;gap:6px;padding:3px 0;color:var(--text2);font-size:.82rem;}.di::before{content:'⚡';flex-shrink:0;}
+.ds{margin-top:10px;padding:10px;background:rgba(34,211,238,.03);border-radius:var(--rs);border-left:3px solid var(--a2);}.ds p{font-size:.8rem;color:var(--text2);margin:2px 0;}
+.ps{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);margin:12px 0;}.pb{flex:1;height:6px;background:var(--bg3);border-radius:3px;overflow:hidden;}.pf{height:100%;background:linear-gradient(90deg,var(--a1),var(--a2));border-radius:3px;transition:width .6s;}.pt{font-size:.76rem;color:var(--text2);white-space:nowrap;}
+.fbox{margin:14px 0;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}.fbox-t{padding:12px 16px;font-weight:700;font-size:.88rem;}.fbox-b{padding:16px;}
+.fdiag{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;padding:8px 0;}
+.fn{padding:8px 14px;background:var(--card);border:2px solid var(--border);border-radius:var(--rs);text-align:center;font-size:.76rem;font-weight:600;min-width:70px;}
+.fa{color:var(--a2);font-size:1rem;font-weight:700;flex-shrink:0;}
+.fn-1{border-color:var(--a1);background:rgba(232,121,249,.06);}.fn-2{border-color:var(--a2);background:rgba(34,211,238,.06);}.fn-3{border-color:var(--a3);background:rgba(163,230,53,.06);}.fn-4{border-color:var(--a4);background:rgba(251,146,60,.06);}
+.fsteps{margin-top:12px;display:flex;flex-direction:column;gap:7px;}.fstep{display:flex;gap:10px;align-items:flex-start;}.fstep-n{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0;color:#000;}.fstep-t{font-size:.82rem;color:var(--text2);line-height:1.5;}.fstep-t strong{color:var(--text);}
+.tb{display:flex;gap:3px;flex-wrap:wrap;margin-bottom:12px;}.tt{padding:6px 13px;border-radius:var(--rs);font-size:.78rem;background:var(--bg3);color:var(--text2);font-weight:500;}.tt:hover{background:var(--card2);color:var(--text);}.tt.a{background:rgba(34,211,238,.1);color:var(--a2);border:1px solid rgba(34,211,238,.2);}
+.dc{cursor:pointer;padding:12px;text-align:center;border:2px solid var(--border);}.dc:hover{transform:translateY(-2px);}.dc.s{box-shadow:0 0 14px rgba(34,211,238,.06);}.de{font-size:1.7rem;margin-bottom:2px;display:block;}.dn{font-weight:700;font-size:.74rem;}.dr{color:var(--text3);font-size:.66rem;margin-top:1px;}
+.dp{margin-top:12px;padding:18px;border-radius:var(--r);border:1px solid var(--border);background:var(--card);}.dp h3{margin-bottom:6px;font-size:.92rem;}.dp h4{margin:8px 0 4px;font-size:.84rem;}.dl{list-style:none;padding:0;}.dl li{padding:3px 0;font-size:.8rem;color:var(--text2);display:flex;gap:6px;}.dl li::before{content:'→';color:var(--a2);flex-shrink:0;}.dnn{margin-top:10px;padding:8px;background:var(--bg3);border-radius:var(--rs);font-size:.78rem;color:var(--text2);}
+.cg{display:grid;gap:10px;}.cg5{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));}
+.rm{position:relative;padding-left:22px;margin:14px 0;}.rm::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border);}.rs{position:relative;margin-bottom:14px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);}.rs.done{border-color:var(--a3);}.rd{position:absolute;left:-18px;top:16px;width:11px;height:11px;border-radius:50%;background:var(--bg3);border:2px solid var(--border);z-index:1;}.rs.done .rd{background:var(--a3);border-color:var(--a3);}.rs h4{font-size:.86rem;margin-bottom:3px;}.rc label{display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--text2);cursor:pointer;margin-top:5px;}.rc input{width:14px;height:14px;accent-color:var(--a3);cursor:pointer;}
+.ac{margin:6px 0;}.ah{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:var(--bg3);border-radius:var(--rs);cursor:pointer;font-size:.82rem;font-weight:600;}.ah:hover{background:var(--card2);}.ab{display:none;padding:10px 12px;background:var(--card);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--rs) var(--rs);}.ab.o{display:block;animation:fu .2s ease;}.ab p,.ab li{font-size:.8rem;color:var(--text2);}.ab ul{padding-left:14px;margin:4px 0;}.ab li{margin:2px 0;}
+.qq{padding:12px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);margin:7px 0;}.qq h4{font-size:.82rem;margin-bottom:6px;}.qo{display:block;padding:5px 9px;margin:3px 0;background:var(--bg3);border-radius:var(--rs);cursor:pointer;font-size:.76rem;border:1px solid transparent;}.qo:hover{background:var(--card2);border-color:var(--border);}.qo.c{background:rgba(163,230,53,.08);border-color:var(--a3);color:var(--a3);}.qo.w{background:rgba(244,114,182,.05);border-color:var(--a5);color:var(--a5);}.qo.d{pointer-events:none;opacity:.7;}.qx{display:none;margin-top:6px;padding:6px;background:var(--bg3);border-radius:var(--rs);font-size:.74rem;color:var(--text2);}.qs{text-align:center;padding:14px;font-size:1.05rem;font-weight:700;color:var(--a3);}
+.gi{width:100%;padding:8px 12px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--rs);color:var(--text);font-size:.82rem;margin-bottom:10px;}.gi::placeholder{color:var(--text3);}.gl{padding:7px 0;border-bottom:1px solid var(--border);}.gt{font-weight:700;color:var(--a2);font-size:.82rem;cursor:pointer;}.gd{font-size:.76rem;color:var(--text2);margin-top:2px;display:none;}.gd.o{display:block;}.ge{font-size:.74rem;color:var(--text3);font-style:italic;margin-top:1px;}
+.mc{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:12px;margin:7px 0;position:relative;}.mc h4{font-size:.82rem;margin-bottom:5px;color:var(--a2);}.mc pre{font-family:var(--m);font-size:.72rem;color:var(--text2);white-space:pre-wrap;line-height:1.6;}.cb{position:absolute;top:7px;right:7px;padding:3px 8px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;font-size:.66rem;color:var(--text2);}.cb:hover{background:var(--a2);color:#000;}.cb.cp{background:var(--a3);color:#000;}
+.wb{padding:10px 12px;background:rgba(34,211,238,.03);border:1px solid rgba(34,211,238,.15);border-radius:var(--rs);margin:10px 0;font-size:.8rem;color:var(--a2);}
+.ct{width:100%;border-collapse:collapse;margin:10px 0;font-size:.76rem;}.ct th{background:var(--bg3);padding:8px;text-align:left;font-weight:600;border-bottom:2px solid var(--border);}.ct td{padding:8px;border-bottom:1px solid var(--border);color:var(--text2);}
+@media(max-width:680px){.cg5{grid-template-columns:repeat(2,1fr);}.S{padding:56px 10px 24px;}}
+</style>
+</head>
+<body>
+<div id="pB" style="width:0%"></div>
+<nav id="nv"><span class="nl">🎨 멀티모달 AI</span><button class="nb a" onclick="go('hero')">홈</button><button class="nb" onclick="go('what')">멀티모달이란</button><button class="nb" onclick="go('modes')">모달별 가이드</button><button class="nb" onclick="go('compare')">AI별 비교</button><button class="nb" onclick="go('claude')">Claude 비전</button><button class="nb" onclick="go('scenarios')">실전활용</button><button class="nb" onclick="go('doctors')">5박사</button><button class="nb" onclick="go('roadmap')">로드맵</button><button class="nb" onclick="go('quiz')">퀴즈</button><button class="nb" onclick="go('glossary')">용어사전</button><button class="nb" onclick="go('memo')">복사메모</button></nav>
+
+<!-- HERO -->
+<div class="S a" id="sec-hero"><div style="padding-top:12px;">
+<div class="ht">멀티모달 AI 활용 인터랙티브 학습실</div>
+<p class="hs">텍스트만? 이제 이미지, PDF, 차트, 스크린샷까지. AI가 "보고 읽고 이해하는" 시대.<br>Claude의 비전 기능부터 GPT/Gemini 비교, 실전 활용법까지 완전 정복합니다.</p>
+<div class="hb"><button class="bt bp" onclick="go('what')">바로 시작하기</button><button class="bt bs" onclick="go('compare')">AI별 비교</button><button class="bt bs" onclick="go('scenarios')">실전 활용 보기</button></div>
+<div class="ps"><span class="pt" id="pL">진행률 0%</span><div class="pb"><div class="pf" id="pF" style="width:0%"></div></div></div>
+<div class="dx"><h3>혹시 이런 상태인가요?</h3>
+<div class="di">"멀티모달"이 뭔지, 텍스트 AI와 뭐가 다른지 모르겠다</div>
+<div class="di">Claude에 이미지를 보내면 뭘 할 수 있는지 모르겠다</div>
+<div class="di">GPT는 이미지 생성, Gemini는 비디오 분석이 된다는데 차이가 뭔지 헷갈린다</div>
+<div class="di">PDF나 차트를 AI에게 보내서 분석하고 싶은데 어떻게 하는지 모르겠다</div>
+<div class="di">Claude에서 음성 입력이 된다는데 어떻게 쓰는지 모르겠다</div>
+<div class="ds">
+<p>✅ <strong>개념 정리</strong> — 멀티모달 = 텍스트 + 이미지 + 문서 + 음성을 함께 처리하는 AI</p>
+<p>✅ <strong>모달별 가이드</strong> — 이미지, PDF, 차트, 스크린샷, 음성 각각의 활용법</p>
+<p>✅ <strong>AI별 비교</strong> — Claude/GPT/Gemini 각각 뭘 잘하는지 정확히 비교</p>
+<p>✅ <strong>실전 시나리오</strong> — 업무에서 바로 쓸 수 있는 멀티모달 활용 7가지</p>
+</div></div>
+<div class="hx">👁️ Claude는 "보고 이해하는" AI. 이미지를 읽고, 차트를 분석하고, PDF를 해석한다.</div>
+</div></div>
+
+<!-- WHAT -->
+<div class="S" id="sec-what"><div class="st" style="background:rgba(232,121,249,.1);color:var(--a1);">섹션 A</div>
+<h2 class="sh">멀티모달 AI란 무엇인가</h2>
+<p class="ss">텍스트만 이해하는 AI와, 여러 형태의 데이터를 함께 이해하는 AI의 차이를 알아보세요.</p>
+
+<h3 style="font-size:1rem;margin:14px 0 6px;">📝 텍스트 전용 AI — 글만 이해</h3>
+<p style="font-size:.85rem;color:var(--text2);margin-bottom:14px;">텍스트만 입력받고 텍스트로만 답합니다. 이미지를 보여줘도 "이미지를 처리할 수 없습니다"라고 합니다. 초기 GPT-3, 초기 Claude 등이 이 방식이었습니다.</p>
+
+<h3 style="font-size:1rem;margin:14px 0 6px;">🎨 멀티모달 AI — 여러 형태를 함께 이해</h3>
+<p style="font-size:.85rem;color:var(--text2);margin-bottom:6px;"><strong>멀티모달(Multimodal)</strong>이란 여러 가지 형태(모달)의 데이터를 동시에 처리할 수 있다는 뜻입니다. 텍스트 + 이미지, 텍스트 + 음성, 텍스트 + 비디오 등을 함께 이해하고 추론합니다.</p>
+<p style="font-size:.83rem;color:var(--text2);margin-bottom:6px;"><strong>비유:</strong> 텍스트 전용 AI는 "전화로만 소통하는 상담사", 멀티모달 AI는 "화상 통화로 화면도 보면서 소통하는 상담사"입니다.</p>
+
+<h3 style="font-size:1rem;margin:18px 0 6px;">모달의 종류</h3>
+<table class="ct"><thead><tr><th>모달</th><th>설명</th><th>Claude 지원</th></tr></thead><tbody>
+<tr><td><strong>📝 텍스트</strong></td><td>일반 텍스트 입력/출력</td><td>✅ 완전 지원</td></tr>
+<tr><td><strong>🖼️ 이미지</strong></td><td>사진, 스크린샷, 다이어그램 분석</td><td>✅ 입력 분석 가능 (생성 불가)</td></tr>
+<tr><td><strong>📄 PDF</strong></td><td>문서, 보고서, 논문 분석</td><td>✅ 이미지로 변환하여 분석</td></tr>
+<tr><td><strong>📊 차트/그래프</strong></td><td>데이터 시각화 해석</td><td>✅ 축 레이블, 값, 관계 해석</td></tr>
+<tr><td><strong>🎤 음성 (STT)</strong></td><td>음성 → 텍스트 변환 후 처리</td><td>✅ Claude Code에서 20개 언어 지원</td></tr>
+<tr><td><strong>🎵 오디오</strong></td><td>소리/음악 직접 분석</td><td>❌ 네이티브 미지원</td></tr>
+<tr><td><strong>🎬 비디오</strong></td><td>영상 프레임 분석</td><td>⚠️ 프레임 단위 이미지로 가능 (네이티브 미지원)</td></tr>
+<tr><td><strong>🖌️ 이미지 생성</strong></td><td>텍스트→이미지 생성</td><td>❌ 미지원 (GPT+DALL-E는 가능)</td></tr>
+</tbody></table>
+
+<div class="wb">💡 <strong>핵심 구분:</strong> Claude는 이미지를 <strong>"보고 이해하는"</strong> 데 매우 강하지만, <strong>"만들어내는"</strong> 것은 못합니다. 이미지 생성이 필요하면 GPT+DALL-E를, 비디오 분석이 필요하면 Gemini를 고려하세요.</div>
+</div>
+
+<!-- MODAL GUIDE -->
+<div class="S" id="sec-modes"><div class="st" style="background:rgba(34,211,238,.1);color:var(--a2);">섹션 B</div>
+<h2 class="sh">모달별 활용 가이드</h2>
+<p class="ss">각 모달 탭을 클릭하면 "무엇을 할 수 있는지 + 잘 쓰는 팁 + 한계"가 나옵니다.</p>
+<div class="tb" id="mdTabs"></div>
+<div id="mdC"></div>
+</div>
+
+<!-- AI COMPARE -->
+<div class="S" id="sec-compare"><div class="st" style="background:rgba(163,230,53,.1);color:var(--a3);">섹션 C</div>
+<h2 class="sh">AI별 멀티모달 비교</h2>
+<p class="ss">Claude, GPT, Gemini가 각각 어떤 모달에서 강한지 한눈에 비교하세요.</p>
+<table class="ct"><thead><tr><th>능력</th><th>🟣 Claude</th><th>🟢 GPT (OpenAI)</th><th>🔵 Gemini (Google)</th></tr></thead><tbody>
+<tr><td><strong>이미지 분석</strong></td><td>⭐⭐⭐ 최상급<br><small>차트, 문서, 다이어그램 해석에 특히 강함</small></td><td>⭐⭐⭐ 우수</td><td>⭐⭐⭐ 우수</td></tr>
+<tr><td><strong>이미지 생성</strong></td><td>❌ 불가</td><td>⭐⭐⭐ DALL-E 통합<br><small>텍스트→이미지 생성 가능</small></td><td>⭐⭐ Imagen 통합</td></tr>
+<tr><td><strong>PDF/문서 분석</strong></td><td>⭐⭐⭐ 최상급<br><small>긴 문서 맥락 파악에 강함</small></td><td>⭐⭐ 우수</td><td>⭐⭐ 우수</td></tr>
+<tr><td><strong>음성 입력 (STT)</strong></td><td>⭐⭐ Claude Code 20언어</td><td>⭐⭐⭐ Whisper 통합<br><small>실시간 음성 대화</small></td><td>⭐⭐ 음성 지원</td></tr>
+<tr><td><strong>오디오 분석</strong></td><td>❌ 미지원</td><td>⭐⭐⭐ GPT-4o 네이티브</td><td>⭐⭐ 지원</td></tr>
+<tr><td><strong>비디오 분석</strong></td><td>⚠️ 프레임 단위만</td><td>⚠️ 제한적</td><td>⭐⭐⭐ 1시간 비디오 분석<br><small>가장 강력</small></td></tr>
+<tr><td><strong>컨텍스트 윈도우</strong></td><td>200K~1M 토큰</td><td>128K 토큰</td><td>1M 토큰</td></tr>
+<tr><td><strong>구조화된 데이터 해석</strong></td><td>⭐⭐⭐ 최상급<br><small>재무제표, 법률 문서 등</small></td><td>⭐⭐ 우수</td><td>⭐⭐ 우수</td></tr>
+</tbody></table>
+
+<h3 style="font-size:1rem;margin:18px 0 8px;">🎯 언제 어떤 AI를 쓸까?</h3>
+<div class="cd"><strong style="color:var(--a1);">Claude를 쓸 때:</strong><p style="font-size:.83rem;color:var(--text2);">차트/그래프 분석, PDF 보고서 해석, 스크린샷 데이터 추출, 재무제표 분석, 다이어그램 이해, 긴 문서 맥락 파악. <strong>"보고 분석하는"</strong> 작업에 최적.</p></div>
+<div class="cd"><strong style="color:var(--a3);">GPT를 쓸 때:</strong><p style="font-size:.83rem;color:var(--text2);">이미지 생성(DALL-E), 실시간 음성 대화, 오디오 분석, 크리에이티브 비주얼 작업. <strong>"만들어내는"</strong> 작업에 강점.</p></div>
+<div class="cd"><strong style="color:var(--a6);">Gemini를 쓸 때:</strong><p style="font-size:.83rem;color:var(--text2);">긴 비디오 분석(1시간+), 초대형 문서 처리, Google Workspace 연동, 비용 효율적 대량 처리. <strong>"비디오 + 대용량"</strong> 작업에 최적.</p></div>
+</div>
+
+<!-- CLAUDE VISION -->
+<div class="S" id="sec-claude"><div class="st" style="background:rgba(232,121,249,.1);color:var(--a1);">섹션 D</div>
+<h2 class="sh">Claude 비전 심화 가이드</h2>
+<p class="ss">Claude의 이미지/PDF 분석 기능을 제대로 활용하는 방법을 배우세요.</p>
+
+<h3 style="font-size:1rem;margin:14px 0 6px;">Claude가 "보는" 방식의 특징</h3>
+<p style="font-size:.85rem;color:var(--text2);margin-bottom:12px;">대부분의 AI는 이미지를 "인식"하는 데 초점을 맞춥니다 (이건 고양이다, 이건 빌딩이다). Claude는 다릅니다. Claude는 <strong>언어 모델에 시각 인식이 통합</strong>된 구조입니다. 그래서 이미지를 보면 단순히 "무엇이 있다"가 아니라, <strong>"이것이 무엇을 의미하는지"를 맥락 속에서 추론</strong>합니다.</p>
+<p style="font-size:.83rem;color:var(--text2);margin-bottom:6px;"><strong>예:</strong> 막대 차트를 보여주면, 다른 AI는 "막대 5개가 있다"고 말하지만, Claude는 "축 레이블을 읽고, 값을 해석하고, 전년 대비 매출이 23% 증가했다"고 분석합니다.</p>
+
+<h3 style="font-size:1rem;margin:18px 0 8px;">📸 지원하는 이미지 형식</h3>
+<p style="font-size:.83rem;color:var(--text2);margin-bottom:6px;">PNG, JPEG, GIF, WebP. 최대 8000×8000px. claude.ai에서 최대 20장, API에서 최대 600장까지 한 번에 전송 가능.</p>
+
+<h3 style="font-size:1rem;margin:18px 0 8px;">🏆 Claude 비전이 특히 잘하는 것</h3>
+<div class="cd"><strong>1. 차트/그래프 분석</strong><p style="font-size:.82rem;color:var(--text2);">축 레이블, 범례, 데이터 값을 읽고 의미를 해석합니다. 추세, 비교, 이상치를 설명합니다.</p></div>
+<div class="cd"><strong>2. 문서/PDF OCR</strong><p style="font-size:.82rem;color:var(--text2);">스캔된 문서, 영수증, 계약서의 텍스트를 읽어냅니다. 표 구조도 이해합니다.</p></div>
+<div class="cd"><strong>3. 다이어그램/플로차트 해석</strong><p style="font-size:.82rem;color:var(--text2);">아키텍처 다이어그램, 워크플로 차트, UML을 읽고 코드나 설명으로 변환합니다.</p></div>
+<div class="cd"><strong>4. UI/디자인 분석</strong><p style="font-size:.82rem;color:var(--text2);">앱 스크린샷, 와이어프레임을 분석하여 UI 요소를 식별하고 코드로 변환합니다.</p></div>
+<div class="cd"><strong>5. 비교 분석</strong><p style="font-size:.82rem;color:var(--text2);">여러 이미지를 동시에 보내면 비교 분석합니다. 디자인 A vs B, 시점별 변화 등.</p></div>
+
+<h3 style="font-size:1rem;margin:18px 0 8px;">💡 잘 쓰는 프롬프트 팁</h3>
+<div class="cd"><strong>"먼저 묘사, 그다음 분석" 패턴</strong><p style="font-size:.82rem;color:var(--text2);">"이 이미지를 먼저 상세히 묘사한 뒤, [특정 질문]에 답해줘"라고 하면 정확도가 올라갑니다. Claude가 시각 정보를 체계적으로 처리하게 됩니다.</p></div>
+<div class="cd"><strong>영역 지정</strong><p style="font-size:.82rem;color:var(--text2);">"이미지 왼쪽 하단의 표를 읽어줘" 또는 "빨간색 그래프 선만 분석해줘"처럼 특정 영역을 지시하면 집중도가 올라갑니다.</p></div>
+<div class="cd"><strong>맥락 제공</strong><p style="font-size:.82rem;color:var(--text2);">"이건 2024년 Q3 재무제표야. 전분기 대비 변화를 분석해줘"처럼 배경 정보를 주면 해석 품질이 크게 향상됩니다.</p></div>
+
+<div class="wb">⚠️ <strong>한계:</strong> Claude는 이미지를 <strong>생성</strong>할 수 없습니다. "이 이미지를 수정해줘"나 "비슷한 이미지를 만들어줘"는 불가능합니다. 분석과 해석에 특화되어 있습니다. 또한 아주 작은 텍스트나 저해상도 이미지는 정확도가 떨어질 수 있습니다.</div>
+</div>
+
+<!-- SCENARIOS -->
+<div class="S" id="sec-scenarios"><div class="st" style="background:rgba(251,146,60,.1);color:var(--a4);">섹션 E</div>
+<h2 class="sh">실전 활용 시나리오 7가지</h2>
+<p class="ss">멀티모달 AI를 실제 업무에서 어떻게 쓰는지 상세 안내합니다.</p>
+<div class="tb" id="scTabs"></div>
+<div id="scC"></div>
+</div>
+
+<!-- 5 DOCTORS -->
+<div class="S" id="sec-doctors"><div class="st" style="background:rgba(244,114,182,.1);color:var(--a5);">섹션 F</div>
+<h2 class="sh">5명 박사 패널</h2><p class="ss">각 박사를 클릭하면 관점별 설명이 바뀝니다.</p>
+<div class="cg cg5" id="dG"></div><div class="dp" id="dP"></div>
+</div>
+
+<!-- ROADMAP -->
+<div class="S" id="sec-roadmap"><div class="st" style="background:rgba(163,230,53,.1);color:var(--a3);">섹션 G</div>
+<h2 class="sh">학습 로드맵</h2><p class="ss">체크박스 완료 시 진행률 반영.</p>
+<div class="rm" id="rmW"></div>
+</div>
+
+<!-- QUIZ -->
+<div class="S" id="sec-quiz"><div class="st" style="background:rgba(34,211,238,.1);color:var(--a2);">섹션 H</div>
+<h2 class="sh">퀴즈</h2><p class="ss">12문항으로 이해도 확인.</p>
+<div id="qW"></div><div style="text-align:center;margin-top:10px;"><button class="bt bp" onclick="sQ()">채점</button> <button class="bt bs" onclick="rQ()">다시</button></div><div class="qs" id="qS" style="display:none;"></div>
+</div>
+
+<!-- GLOSSARY -->
+<div class="S" id="sec-glossary"><div class="st" style="background:rgba(96,165,250,.1);color:var(--a6);">섹션 I</div>
+<h2 class="sh">용어사전</h2><input class="gi" placeholder="용어 검색..." oninput="fg(this.value)"><div id="gL"></div>
+</div>
+
+<!-- MEMO -->
+<div class="S" id="sec-memo"><div class="st" style="background:rgba(163,230,53,.1);color:var(--a3);">섹션 J</div>
+<h2 class="sh">복사용 메모</h2>
+<div class="mc"><h4>📋 멀티모달 AI 핵심 정리</h4><button class="cb" onclick="cm(this,'m1')">복사</button><pre id="m1">[ 멀티모달이란 ]
+텍스트 + 이미지 + 문서 + 음성 등을 함께 처리하는 AI
+
+[ Claude 멀티모달 능력 ]
+✅ 이미지 분석 (차트, 다이어그램, 스크린샷)
+✅ PDF/문서 분석 (OCR, 표 구조 이해)
+✅ 비교 분석 (여러 이미지 동시)
+✅ STT 음성 입력 (Claude Code, 20언어)
+❌ 이미지 생성 불가
+❌ 오디오/비디오 네이티브 미지원
+
+[ AI별 최적 용도 ]
+• Claude → 보고 분석하는 작업 (차트, PDF, 재무제표)
+• GPT → 만들어내는 작업 (이미지 생성, 음성 대화)
+• Gemini → 대용량 처리 (긴 비디오, 초대형 문서)
+
+[ Claude 비전 프롬프트 팁 ]
+1. "먼저 묘사, 그다음 분석" 패턴
+2. 영역 지정 ("왼쪽 하단의 표를 읽어줘")
+3. 맥락 제공 ("이건 Q3 재무제표야")</pre></div>
+<div class="mc"><h4>📋 상황별 AI 선택 치트시트</h4><button class="cb" onclick="cm(this,'m2')">복사</button><pre id="m2">차트/그래프 데이터 추출? → Claude
+PDF 보고서 분석/요약? → Claude
+스크린샷에서 텍스트 추출? → Claude
+재무제표 해석? → Claude
+다이어그램→코드 변환? → Claude
+이미지 생성이 필요? → GPT (DALL-E)
+실시간 음성 대화? → GPT (Whisper)
+1시간 비디오 분석? → Gemini
+초대형 문서(100만 토큰)? → Gemini 또는 Claude
+여러 이미지 비교? → Claude (최대 600장)
+UI 디자인 분석? → Claude</pre></div>
+</div>
+
+<script>
+const MD=[
+{nm:'🖼️ 이미지 분석',d:'사진, 스크린샷, 다이어그램을 Claude에게 보내 분석하는 방법',
+can:['사진 속 물체, 텍스트, 장면 묘사','스크린샷에서 UI 요소 식별','다이어그램/플로차트를 텍스트로 변환','여러 이미지 비교 분석 (최대 20장)','이미지 속 텍스트 OCR 추출'],
+tips:['고해상도 이미지일수록 정확도가 높음','여러 장을 한 번에 보내면 비교 분석 가능','"이 이미지를 묘사한 뒤 분석해줘" 패턴 사용','관심 영역을 지정하면 집중도 향상'],
+limit:['이미지 생성 불가 (분석만)','8000×8000px 초과 시 거부','아주 작은 텍스트는 인식 어려움','사람 얼굴 식별은 하지 않음 (프라이버시)']},
+{nm:'📄 PDF 분석',d:'보고서, 논문, 계약서를 통째로 보내 요약/분석하는 방법',
+can:['긴 PDF를 요약하고 핵심 추출','표와 차트가 포함된 문서 분석','여러 PDF를 비교 분석','특정 섹션만 집중 분석'],
+tips:['PDF를 그대로 업로드 (이미지로 자동 변환)','긴 문서는 "먼저 목차를 파악한 뒤 요약해줘"','특정 페이지를 지정: "5페이지의 표를 분석해줘"','맥락 제공: "이건 2024년 연간 보고서야"'],
+limit:['매우 긴 PDF는 토큰 한도에 주의','스캔 품질이 낮으면 OCR 정확도 떨어짐','비밀번호 보호 PDF는 처리 불가','복잡한 레이아웃은 구조 파악이 어려울 수 있음']},
+{nm:'📊 차트/그래프',d:'데이터 시각화를 보내 수치와 추세를 해석하는 방법',
+can:['축 레이블, 범례, 데이터 값 읽기','추세, 비교, 이상치 해석','차트 내용을 표 형태로 변환','여러 차트를 비교 분석'],
+tips:['차트 유형을 명시: "이 꺾은선 그래프에서..."','비교 요청: "이 두 차트의 추세를 비교해줘"','수치 추출: "각 막대의 정확한 값을 표로 만들어줘"','해석 요청: "이 데이터에서 주목할 점은?"'],
+limit:['3D 차트는 정확도가 떨어질 수 있음','매우 복잡한 대시보드는 부분적으로 요청','색상 구분이 미묘한 차트는 어려움','실시간 데이터 차트는 정적 캡처 필요']},
+{nm:'🖥️ UI/스크린샷',d:'앱 화면, 웹페이지 스크린샷을 보내 분석하고 코드로 변환하는 방법',
+can:['UI 요소 식별 (버튼, 입력 필드, 메뉴 등)','와이어프레임을 HTML/CSS 코드로 변환','디자인 피드백 제공','에러 화면 분석 (에러 메시지 해석)'],
+tips:['"이 UI를 HTML+CSS로 재현해줘"','비교: "이 두 디자인 중 어떤 게 사용성이 좋은지"','접근성 검토: "이 UI의 접근성 문제점을 찾아줘"','에러 분석: "이 에러 화면의 원인은?"'],
+limit:['매우 복잡한 앱은 부분 캡처 추천','동적 요소(애니메이션)는 캡처 불가','실제 코드와 완벽히 일치하지는 않음','디자인 "생성"이 아닌 "분석" 중심']},
+{nm:'🎤 음성 입력',d:'음성으로 AI에게 지시하는 방법 (STT)',
+can:['Claude Code에서 음성으로 코딩 지시','20개 언어 음성 인식 (한국어 포함)','Push-to-talk 방식으로 자연스럽게 대화','음성 메모를 텍스트로 변환 후 처리'],
+tips:['Claude Code에서 space 키를 누르고 말하기','조용한 환경에서 더 정확','짧고 명확한 문장으로 말하기','복잡한 지시는 텍스트와 음성을 혼합'],
+limit:['claude.ai 웹에서는 네이티브 음성 입력 미지원','실시간 대화형 음성(GPT-4o 수준)은 미지원','배경 소음이 많으면 인식률 하락','네이티브 오디오 분석은 불가']}
+];
+
+const SC=[
+{nm:'📊 재무제표 분석',d:'재무제표 이미지/PDF를 보내 핵심 지표를 추출하고 전년 대비 비교',st:[{c:'var(--a1)',t:'<strong>이미지 업로드:</strong> 재무제표 PDF 또는 스크린샷을 Claude에 전송'},{c:'var(--a2)',t:'<strong>맥락 제공:</strong> "이건 2024년 Q3 손익계산서야. 전분기 대비 변화를 분석해줘"'},{c:'var(--a3)',t:'<strong>Claude 분석:</strong> 매출, 영업이익, 순이익 등 핵심 지표를 추출하고 비교 분석'},{c:'var(--a4)',t:'<strong>결과 활용:</strong> 분석 결과를 표로 정리하거나 보고서 초안에 삽입'}]},
+{nm:'📋 계약서 검토',d:'계약서 PDF를 보내 위험 조항을 찾고 요약',st:[{c:'var(--a1)',t:'<strong>PDF 업로드:</strong> 계약서 전체를 Claude에 전송'},{c:'var(--a2)',t:'<strong>지시:</strong> "이 계약서에서 주의할 조항, 불리한 조건, 모호한 표현을 찾아줘"'},{c:'var(--a3)',t:'<strong>Claude 분석:</strong> 위험 조항 하이라이트 + 이유 설명 + 수정 제안'},{c:'var(--a4)',t:'<strong>주의:</strong> AI 분석은 참고용. 법률 전문가 검토 필수'}]},
+{nm:'🖥️ 디자인→코드',d:'UI 디자인 스크린샷을 보내 HTML/CSS 코드로 변환',st:[{c:'var(--a1)',t:'<strong>스크린샷 캡처:</strong> 변환할 UI 디자인을 캡처하여 Claude에 전송'},{c:'var(--a2)',t:'<strong>지시:</strong> "이 UI를 반응형 HTML+CSS로 재현해줘. Tailwind CSS 사용"'},{c:'var(--a3)',t:'<strong>Claude 생성:</strong> 이미지를 분석하여 레이아웃, 색상, 폰트를 코드로 변환'},{c:'var(--a4)',t:'<strong>정제:</strong> 생성된 코드를 실행하고, 필요하면 추가 수정 요청'}]},
+{nm:'📈 차트 데이터 추출',d:'차트 이미지에서 수치를 읽어 표로 변환하고 추세 분석',st:[{c:'var(--a1)',t:'<strong>차트 이미지 전송:</strong> 막대, 꺾은선, 원형 등 차트 이미지를 전송'},{c:'var(--a2)',t:'<strong>지시:</strong> "이 차트의 각 항목과 값을 표로 만들고, 주목할 추세를 분석해줘"'},{c:'var(--a3)',t:'<strong>Claude 추출:</strong> 축 레이블, 범례, 데이터 값을 읽어 표로 정리'},{c:'var(--a4)',t:'<strong>활용:</strong> 추출된 데이터를 Excel에 넣거나 보고서에 삽입'}]},
+{nm:'📚 논문/보고서 요약',d:'긴 PDF 논문이나 보고서를 업로드해 핵심 요약 + Q&A',st:[{c:'var(--a1)',t:'<strong>PDF 업로드:</strong> 논문이나 보고서 전체를 전송'},{c:'var(--a2)',t:'<strong>1차 요청:</strong> "이 논문의 핵심 주장, 방법론, 결론을 요약해줘"'},{c:'var(--a3)',t:'<strong>후속 질문:</strong> "3장의 실험 결과를 더 상세히 설명해줘"처럼 특정 섹션 심화'},{c:'var(--a4)',t:'<strong>활용:</strong> 요약을 팀에 공유하거나 후속 리서치 방향 설정'}]},
+{nm:'🔍 에러 화면 분석',d:'에러 스크린샷을 보내 원인 파악과 해결 방법 제안',st:[{c:'var(--a1)',t:'<strong>스크린샷 캡처:</strong> 에러 화면, 로그 메시지 등을 캡처하여 전송'},{c:'var(--a2)',t:'<strong>지시:</strong> "이 에러의 원인을 분석하고 해결 방법을 제안해줘"'},{c:'var(--a3)',t:'<strong>Claude 분석:</strong> 에러 코드, 스택 트레이스, 설정 문제 등을 해석'},{c:'var(--a4)',t:'<strong>해결:</strong> 단계별 해결 방법 제안 + 재발 방지 조언'}]},
+{nm:'🏗️ 다이어그램 해석',d:'아키텍처/시스템 다이어그램을 보내 설명 또는 코드로 변환',st:[{c:'var(--a1)',t:'<strong>다이어그램 전송:</strong> 시스템 아키텍처, ERD, 플로차트 등의 이미지를 전송'},{c:'var(--a2)',t:'<strong>지시:</strong> "이 아키텍처를 단계별로 설명하고, 개선점을 제안해줘"'},{c:'var(--a3)',t:'<strong>Claude 해석:</strong> 각 컴포넌트, 연결, 데이터 흐름을 텍스트로 설명'},{c:'var(--a4)',t:'<strong>변환:</strong> 필요하면 Mermaid 다이어그램 코드, 문서, 또는 구현 코드로 변환'}]}
+];
+
+const drE=['👁️','🔬','🎯','🛠️','🔮'],drN=['Dr. Vision','Dr. Compare','Dr. Strategy','Dr. Practice','Dr. Future'],drR=['비전 박사','비교 박사','전략 박사','실전 박사','전망 박사'],drC=['var(--a1)','var(--a2)','var(--a3)','var(--a4)','var(--a5)'];
+const DD=[
+{nm:'Dr. Vision — 비전 박사',q:'Claude의 이미지 분석은 어떻게 작동하는가?',su:['Claude는 이미지를 "인식"이 아니라 "맥락 속에서 추론"한다','차트를 보면 값뿐 아니라 의미까지 해석한다','최대 600장을 한 번에 분석 가능 (API)'],mi:['Claude가 이미지를 생성할 수 있다는 오해','모든 이미지를 완벽히 인식한다는 착각 (저해상도/작은 텍스트 한계)','Claude만 멀티모달이라는 오해 (GPT, Gemini도 지원)'],ac:['이미지 하나를 Claude에 보내 분석 요청해보기','"먼저 묘사, 그다음 분석" 패턴 시도','차트 이미지에서 데이터 추출 시도'],nx:'비교 박사에게 이동하여 AI별 차이를 파악하세요.'},
+{nm:'Dr. Compare — 비교 박사',q:'Claude/GPT/Gemini의 멀티모달 차이는?',su:['Claude = 보고 분석하는 데 최강 (차트, 문서, 구조화 데이터)','GPT = 만들어내는 데 강점 (이미지 생성, 음성 대화)','Gemini = 대용량 처리 (긴 비디오, 1M 토큰)'],mi:['하나의 AI가 모든 멀티모달에서 최고라는 착각','Claude가 모든 면에서 뒤처진다는 오해 (분석에서 최강)','멀티모달 = 이미지 생성이라는 좁은 이해'],ac:['AI별 비교표를 꼼꼼히 읽기','자신의 주 용도에 맞는 AI 선택','필요하면 여러 AI를 조합 사용'],nx:'전략 박사에게 이동하여 용도별 최적 AI를 선택하세요.'},
+{nm:'Dr. Strategy — 전략 박사',q:'어떤 상황에 어떤 AI/모달을 써야 하는가?',su:['데이터 분석/문서 해석 → Claude','크리에이티브 생성 → GPT','비디오/대용량 → Gemini','한 AI로 안 되면 조합하라'],mi:['모든 작업에 같은 AI를 써야 한다는 부담','멀티모달이 텍스트보다 항상 좋다는 착각','비싼 모델이 무조건 좋다는 오해'],ac:['복사 메모의 "상황별 AI 선택 치트시트" 활용','자주 하는 업무 3가지에 최적 AI 매핑','텍스트만으로 충분한 작업은 텍스트로'],nx:'실전 박사에게 이동하여 구체적 시나리오를 시도하세요.'},
+{nm:'Dr. Practice — 실전 박사',q:'멀티모달을 실제 업무에서 어떻게 쓰는가?',su:['재무제표 분석, 계약서 검토, 디자인→코드, 차트 데이터 추출 등 7가지 시나리오','프롬프트 팁: 맥락 제공 + 영역 지정 + 묘사→분석 패턴','여러 이미지를 한 번에 보내면 비교 분석이 가능'],mi:['완벽한 결과가 바로 나온다는 기대 (반복 정제 필요)','이미지만 보내면 알아서 분석한다는 착각 (맥락이 중요)','AI 분석을 최종 결과로 쓸 수 있다는 과신 (검증 필요)'],ac:['7가지 시나리오 중 자기 업무에 맞는 것 1개 시도','프롬프트 팁 3가지를 적용해보기','결과의 정확도를 직접 검증'],nx:'전망 박사에게 이동하여 앞으로의 발전을 살펴보세요.'},
+{nm:'Dr. Future — 전망 박사',q:'멀티모달 AI는 앞으로 어떻게 발전하는가?',su:['Claude에 오디오/비디오 네이티브 지원이 추가될 가능성','이미지 생성 기능 추가 여부는 미지수 (Anthropic의 안전 철학)','모든 AI가 풀 멀티모달로 수렴하는 추세'],mi:['현재 한계가 영원하다는 착각 (빠르게 발전 중)','특정 AI가 모든 모달에서 승리할 것이라는 예측','멀티모달이 텍스트를 대체한다는 오해 (보완 관계)'],ac:['현재 가능한 것부터 최대한 활용','분기마다 각 AI의 멀티모달 업데이트 확인','새 기능이 나오면 기존 워크플로에 통합 시도'],nx:'모든 박사 완료! 퀴즈로 점검하거나 복사 메모를 활용하세요.'}];
+
+const RM=[
+{t:'1단계: 멀티모달 개념 이해',g:'텍스트 전용 vs 멀티모달 차이 이해, 모달의 종류 파악',s:'"멀티모달 = 여러 형태를 함께 처리"를 설명 가능',c:'Claude가 지원하는 모달과 지원하지 않는 모달을 구분 가능한가?'},
+{t:'2단계: Claude 비전 이해',g:'Claude가 이미지를 어떻게 분석하는지, 잘하는 것과 한계 파악',s:'프롬프트 팁 3가지를 실제로 적용 가능',c:'"먼저 묘사, 그다음 분석" 패턴을 써봤는가?'},
+{t:'3단계: AI별 비교',g:'Claude/GPT/Gemini의 멀티모달 강점/약점을 구분',s:'상황에 맞는 AI를 추천 가능',c:'이미지 생성, 비디오 분석, 문서 분석 각각에 최적 AI를 말할 수 있는가?'},
+{t:'4단계: 실전 시도',g:'7가지 시나리오 중 최소 1개를 직접 시도',s:'실제로 이미지/PDF를 보내 분석 결과를 확인',c:'Claude에 이미지를 보내 유의미한 분석을 받아봤는가?'},
+{t:'5단계: 워크플로 통합',g:'멀티모달을 일상 업무에 통합하는 습관 형성',s:'주 1회 이상 멀티모달 기능을 업무에 활용',c:'텍스트만 보내던 습관에서 이미지/PDF도 함께 보내는 습관이 생겼는가?'}];
+
+const QQ=[
+{q:'멀티모달 AI란 텍스트만 처리하는 AI이다.',tp:'ox',an:'X',ex:'멀티모달은 텍스트+이미지+음성 등 여러 형태를 함께 처리하는 AI입니다.'},
+{q:'Claude는 이미지를 분석할 수 있지만 생성할 수는 없다.',tp:'ox',an:'O',ex:'Claude는 이미지를 "보고 이해하는" 데 특화되어 있으며, 이미지 생성은 지원하지 않습니다.'},
+{q:'Claude는 비디오를 네이티브로 분석할 수 있다.',tp:'ox',an:'X',ex:'Claude는 비디오 프레임을 이미지로 변환하면 분석 가능하지만, 네이티브 비디오 분석은 지원하지 않습니다.'},
+{q:'GPT가 Claude보다 차트 데이터 해석에서 항상 우월하다.',tp:'ox',an:'X',ex:'구조화된 데이터 해석(차트, 재무제표 등)에서는 Claude가 특히 강합니다.'},
+{q:'Claude에 이미지를 최대 몇 장까지 보낼 수 있는가? (API)',tp:'mc',op:['10장','100장','600장','무제한'],an:2,ex:'API에서 최대 600장(200K 컨텍스트 모델은 100장)을 한 번에 전송할 수 있습니다.'},
+{q:'이미지 생성이 필요할 때 가장 적합한 AI는?',tp:'mc',op:['Claude','GPT (DALL-E)','Gemini','모두 가능'],an:1,ex:'GPT는 DALL-E와 통합되어 텍스트→이미지 생성이 가능합니다.'},
+{q:'1시간 분량의 비디오 분석에 가장 적합한 AI는?',tp:'mc',op:['Claude','GPT','Gemini','모두 불가'],an:2,ex:'Gemini는 1시간 이상의 비디오를 분석할 수 있는 가장 강력한 멀티모달 비디오 처리 능력을 갖추고 있습니다.'},
+{q:'Claude 비전에서 "먼저 묘사, 그다음 분석" 패턴을 쓰면 정확도가 올라간다.',tp:'ox',an:'O',ex:'Claude가 시각 정보를 체계적으로 처리하게 되어 분석 정확도가 향상됩니다.'},
+{q:'Claude의 음성 입력(STT)은 몇 개 언어를 지원하는가?',tp:'mc',op:['5개','10개','20개','50개'],an:2,ex:'Claude Code에서 20개 언어의 음성 인식을 지원합니다.'},
+{q:'PDF를 Claude에 보내면 어떻게 처리되는가?',tp:'mc',op:['텍스트만 추출','이미지로 변환하여 비전으로 분석','처리 불가','별도 플러그인 필요'],an:1,ex:'PDF는 이미지로 변환되어 Claude의 비전 기능으로 분석됩니다.'},
+{q:'멀티모달 AI를 쓸 때, 맥락 없이 이미지만 보내도 최적의 분석을 받을 수 있다.',tp:'ox',an:'X',ex:'"이건 Q3 재무제표야" 같은 배경 정보를 함께 제공하면 해석 품질이 크게 향상됩니다.'},
+{q:'Claude가 지원하지 않는 기능은?',tp:'mc',op:['PDF 분석','차트 데이터 추출','이미지 생성','스크린샷 분석'],an:2,ex:'Claude는 이미지를 생성할 수 없습니다. 분석과 해석에 특화되어 있습니다.'}];
+
+const GG=[
+{t:'멀티모달 (Multimodal)',d:'텍스트, 이미지, 음성 등 여러 형태의 데이터를 함께 처리하는 AI 능력.',e:'여러 감각을 동시에 쓰는 AI.'},
+{t:'모달 (Modality)',d:'데이터의 형태. 텍스트, 이미지, 오디오, 비디오 등.',e:'AI가 받아들이는 정보의 종류.'},
+{t:'비전 (Vision)',d:'AI가 이미지를 분석하고 이해하는 능력.',e:'AI의 "눈". 그림을 보고 뭔지 아는 것.'},
+{t:'OCR',d:'Optical Character Recognition. 이미지 속 텍스트를 인식하는 기술.',e:'사진에 있는 글자를 읽어내는 것.'},
+{t:'STT (Speech-to-Text)',d:'음성을 텍스트로 변환하는 기술.',e:'말한 것을 글로 바꾸는 것.'},
+{t:'TTS (Text-to-Speech)',d:'텍스트를 음성으로 변환하는 기술.',e:'글을 소리로 읽어주는 것.'},
+{t:'DALL-E',d:'OpenAI의 이미지 생성 모델. GPT와 통합되어 텍스트→이미지 생성.',e:'글로 설명하면 그림을 그려주는 AI.'},
+{t:'Whisper',d:'OpenAI의 음성 인식 모델. GPT와 통합되어 음성 입력/변환.',e:'AI의 귀. 말을 듣고 글로 바꿈.'},
+{t:'컨텍스트 윈도우',d:'AI가 한 번에 처리할 수 있는 최대 데이터 양.',e:'AI의 작업 기억력 크기.'},
+{t:'토큰',d:'AI가 텍스트/이미지를 처리하는 단위. 이미지도 토큰으로 변환됨.',e:'AI의 연료 단위.'},
+{t:'프레임',d:'비디오의 한 장면. 비디오를 프레임 단위로 쪼개면 이미지로 분석 가능.',e:'영상의 한 컷 한 컷.'},
+{t:'Base64',d:'이미지를 텍스트 문자열로 인코딩하는 방식. API에서 이미지 전송에 사용.',e:'그림을 글자로 변환하는 것.'},
+{t:'Imagen',d:'Google의 이미지 생성 모델. Gemini와 통합.',e:'Google 버전의 DALL-E.'},
+{t:'Claude 비전',d:'Claude 모델에 내장된 이미지 분석 기능. 별도 모델이 아닌 통합 기능.',e:'Claude의 눈.'},
+{t:'네이티브 지원',d:'외부 변환 없이 AI가 해당 형태를 직접 처리하는 것.',e:'번역기 없이 원어로 소통하는 것.'}];
+
+let ck={},qA={};
+function go(id){document.querySelectorAll('.S').forEach(s=>s.classList.remove('a'));document.getElementById('sec-'+id).classList.add('a');document.querySelectorAll('.nb').forEach(b=>b.classList.remove('a'));document.querySelectorAll('.nb').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes("'"+id+"'"))b.classList.add('a');});window.scrollTo({top:0,behavior:'smooth'});sv();}
+
+function bMD(){document.getElementById('mdTabs').innerHTML=MD.map((m,i)=>`<button class="tt ${i===0?'a':''}" onclick="sMD(${i})">${m.nm}</button>`).join('');sMD(0);}
+function sMD(i){document.querySelectorAll('#mdTabs .tt').forEach((b,j)=>b.classList.toggle('a',j===i));const m=MD[i];document.getElementById('mdC').innerHTML=`<div class="cd"><h3 style="color:var(--a2);font-size:.95rem;margin-bottom:8px;">${m.nm}</h3><p style="font-size:.83rem;color:var(--text2);margin-bottom:12px;">${m.d}</p><h4 style="font-size:.86rem;margin-bottom:6px;">✅ 할 수 있는 것</h4><ul class="dl">${m.can.map(c=>`<li>${c}</li>`).join('')}</ul><h4 style="font-size:.86rem;margin:10px 0 6px;">💡 잘 쓰는 팁</h4><ul class="dl">${m.tips.map(t=>`<li>${t}</li>`).join('')}</ul><h4 style="font-size:.86rem;margin:10px 0 6px;">⚠️ 한계</h4><ul class="dl">${m.limit.map(l=>`<li>${l}</li>`).join('')}</ul></div>`;}
+
+function bSC(){document.getElementById('scTabs').innerHTML=SC.map((s,i)=>`<button class="tt ${i===0?'a':''}" onclick="sSC(${i})">${s.nm}</button>`).join('');sSC(0);}
+function sSC(i){document.querySelectorAll('#scTabs .tt').forEach((b,j)=>b.classList.toggle('a',j===i));const s=SC[i];let sh=s.st.map((x,j)=>`<div class="fstep"><div class="fstep-n" style="background:${x.c}">${j+1}</div><div class="fstep-t">${x.t}</div></div>`).join('');document.getElementById('scC').innerHTML=`<div class="cd"><h3 style="color:var(--a4);font-size:.95rem;margin-bottom:6px;">${s.nm}</h3><p style="font-size:.83rem;color:var(--text2);margin-bottom:10px;">${s.d}</p><div class="fsteps">${sh}</div></div>`;}
+
+function bD(){document.getElementById('dG').innerHTML=drE.map((e,i)=>`<div class="cd dc ${i===0?'s':''}" onclick="sD(${i})" style="border-color:${i===0?drC[0]:'var(--border)'}"><span class="de">${e}</span><div class="dn" style="color:${drC[i]}">${drN[i]}</div><div class="dr">${drR[i]}</div></div>`).join('');sD(0);}
+function sD(i){document.querySelectorAll('#dG .dc').forEach((c,j)=>{c.classList.toggle('s',j===i);c.style.borderColor=j===i?drC[j]:'var(--border)';});const d=DD[i];document.getElementById('dP').innerHTML=`<h3 style="color:${drC[i]}">${d.nm}</h3><h4>❓ ${d.q}</h4><h4 style="margin-top:6px;">📌 요약</h4><ul class="dl">${d.su.map(s=>`<li>${s}</li>`).join('')}</ul><h4>⚠️ 오해</h4><ul class="dl">${d.mi.map(s=>`<li>${s}</li>`).join('')}</ul><h4>✅ 행동</h4><ul class="dl">${d.ac.map(s=>`<li>${s}</li>`).join('')}</ul><div class="dnn">➡️ ${d.nx}</div>`;}
+
+function bRM(){document.getElementById('rmW').innerHTML=RM.map((r,i)=>`<div class="rs ${ck['r'+i]?'done':''}" id="rs${i}"><div class="rd"></div><h4>${r.t}</h4><div class="ac" style="margin:4px 0;"><div class="ah" onclick="ta(this)" style="font-size:.74rem;padding:5px 9px;">상세 <span>▼</span></div><div class="ab"><p><strong>🎯:</strong> ${r.g}</p><p><strong>✅:</strong> ${r.s}</p><p><strong>🔍:</strong> ${r.c}</p></div></div><div class="rc"><label><input type="checkbox" ${ck['r'+i]?'checked':''} onchange="tR(${i},this.checked)"> 완료</label></div></div>`).join('');}
+function tR(i,v){ck['r'+i]=v;const el=document.getElementById('rs'+i);el.classList.toggle('done',v);el.querySelector('.rd').style.background=v?'var(--a3)':'var(--bg3)';el.querySelector('.rd').style.borderColor=v?'var(--a3)':'var(--border)';up();sv();}
+
+function bQ(){document.getElementById('qW').innerHTML=QQ.map((q,i)=>{if(q.tp==='ox')return`<div class="qq"><h4>${i+1}. ${q.q}</h4><div class="qo" onclick="pQ(${i},this,'O')">⭕ O</div><div class="qo" onclick="pQ(${i},this,'X')">❌ X</div><div class="qx" id="qx${i}">💡 ${q.ex}</div></div>`;return`<div class="qq"><h4>${i+1}. ${q.q}</h4>${q.op.map((o,j)=>`<div class="qo" onclick="pQ(${i},this,${j})">${String.fromCharCode(9312+j)} ${o}</div>`).join('')}<div class="qx" id="qx${i}">💡 ${q.ex}</div></div>`;}).join('');}
+function pQ(i,el,v){if(qA[i]!==undefined)return;qA[i]=v;const q=QQ[i],ok=v===q.an;el.classList.add(ok?'c':'w');el.parentElement.querySelectorAll('.qo').forEach(o=>{o.classList.add('d');if(q.tp==='ox'){if(o.textContent.includes(q.an))o.classList.add('c');}else{const x=parseInt(o.getAttribute('onclick').match(/,(\d+)\)/)?.[1]);if(x===q.an)o.classList.add('c');}});document.getElementById('qx'+i).style.display='block';up();}
+function sQ(){let c=0;QQ.forEach((q,i)=>{if(qA[i]===q.an)c++;});const a=Object.keys(qA).length,t=QQ.length;document.getElementById('qS').style.display='block';if(a<t)document.getElementById('qS').innerHTML=`${t-a}문항 남음`;else{const p=Math.round(c/t*100);document.getElementById('qS').innerHTML=`🎯 ${c}/${t} (${p}점) ${p>=80?'훌륭!':p>=50?'해설 확인!':'기초부터!'}`;}up();}
+function rQ(){qA={};document.getElementById('qS').style.display='none';bQ();up();}
+
+function bG(){document.getElementById('gL').innerHTML=GG.map(g=>`<div class="gl" data-t="${g.t.toLowerCase()}"><div class="gt" onclick="this.nextElementSibling.classList.toggle('o')">${g.t}</div><div class="gd"><p>${g.d}</p><p class="ge">쉬운 말: ${g.e}</p></div></div>`).join('');}
+function fg(v){const l=v.toLowerCase();document.querySelectorAll('.gl').forEach(i=>{i.style.display=i.dataset.t.includes(l)||l===''?'block':'none';});}
+function ta(el){const b=el.nextElementSibling;b.classList.toggle('o');const a=el.querySelector('span');if(a)a.textContent=b.classList.contains('o')?'▲':'▼';}
+function cm(b,id){const t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(()=>{b.textContent='복사됨!';b.classList.add('cp');setTimeout(()=>{b.textContent='복사';b.classList.remove('cp');},1500);}).catch(()=>{const x=document.createElement('textarea');x.value=t;document.body.appendChild(x);x.select();document.execCommand('copy');document.body.removeChild(x);b.textContent='복사됨!';b.classList.add('cp');setTimeout(()=>{b.textContent='복사';b.classList.remove('cp');},1500);});}
+function up(){let t=0,d=0;for(let i=0;i<5;i++){t++;if(ck['r'+i])d++;}t+=QQ.length;d+=Object.keys(qA).length;const p=t>0?Math.round(d/t*100):0;document.getElementById('pF').style.width=p+'%';document.getElementById('pB').style.width=p+'%';document.getElementById('pL').textContent='진행률 '+p+'%';sv();}
+function sv(){try{localStorage.setItem('mm-lab',JSON.stringify({ck,qA}));}catch(e){}}
+function ld(){try{const r=localStorage.getItem('mm-lab');if(r){const s=JSON.parse(r);if(s.ck)ck=s.ck;if(s.qA)qA=s.qA;}}catch(e){}}
+function init(){ld();bMD();bSC();bD();bRM();bQ();bG();up();}
+init();
+</script>
+</body>
+</html>

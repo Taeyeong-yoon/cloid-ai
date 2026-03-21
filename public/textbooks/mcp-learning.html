@@ -103,6 +103,200 @@ input{font-family:var(--font);}
 .concept-detail h3{color:var(--accent);margin-bottom:10px;}
 .concept-detail p{color:var(--text2);font-size:0.9rem;margin-bottom:8px;}
 
+/* MCP vs API Flow */
+.flow-compare{
+  margin:24px 0 20px;
+  padding:22px;
+  background:
+    radial-gradient(circle at top left, rgba(88,166,255,0.14), transparent 34%),
+    radial-gradient(circle at top right, rgba(63,185,80,0.1), transparent 32%),
+    var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.flow-compare-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:18px;
+}
+.flow-compare-head h3{
+  font-size:1.08rem;
+  color:var(--text);
+  margin-bottom:6px;
+}
+.flow-compare-head p{
+  color:var(--text2);
+  font-size:0.88rem;
+  max-width:700px;
+}
+.flow-chip{
+  flex-shrink:0;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(88,166,255,0.1);
+  border:1px solid rgba(88,166,255,0.28);
+  color:var(--accent);
+  font-size:0.75rem;
+  font-weight:700;
+}
+.flow-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+.flow-panel{
+  position:relative;
+  padding:18px;
+  border-radius:var(--radius);
+  background:rgba(14,17,23,0.72);
+  border:1px solid var(--border);
+}
+.flow-panel.mcp{box-shadow:inset 0 0 0 1px rgba(88,166,255,0.08);}
+.flow-panel.api{box-shadow:inset 0 0 0 1px rgba(240,136,62,0.08);}
+.flow-label{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:8px;
+  font-size:0.8rem;
+  font-weight:700;
+}
+.flow-panel.mcp .flow-label{color:var(--accent);}
+.flow-panel.api .flow-label{color:var(--accent4);}
+.flow-panel h4{
+  font-size:1rem;
+  color:var(--text);
+  margin-bottom:6px;
+}
+.flow-panel p{
+  font-size:0.85rem;
+  color:var(--text2);
+  margin-bottom:14px;
+}
+.flow-svg{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.flow-node{
+  fill:#131923;
+  stroke-width:1.5;
+}
+.flow-node-text{
+  fill:var(--text);
+  font-size:13px;
+  font-weight:600;
+}
+.flow-subtext{
+  fill:var(--text2);
+  font-size:11px;
+}
+.flow-arrow{
+  fill:none;
+  stroke-width:2.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.flow-caption{
+  margin-top:10px;
+  padding-top:12px;
+  border-top:1px dashed rgba(139,148,158,0.25);
+  font-size:0.82rem;
+  color:var(--text2);
+}
+.usage-flow-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  margin-top:18px;
+}
+.usage-flow-panel{
+  padding:18px;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  background:rgba(14,17,23,0.78);
+}
+.usage-flow-panel.without{
+  background:linear-gradient(180deg, rgba(255,123,114,0.08), rgba(14,17,23,0.82));
+  border-color:rgba(255,123,114,0.22);
+}
+.usage-flow-panel.with{
+  background:linear-gradient(180deg, rgba(63,185,80,0.08), rgba(14,17,23,0.82));
+  border-color:rgba(63,185,80,0.22);
+}
+.usage-flow-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:0.75rem;
+  font-weight:700;
+  margin-bottom:10px;
+}
+.usage-flow-panel.without .usage-flow-badge{
+  color:var(--accent5);
+  background:rgba(255,123,114,0.12);
+  border:1px solid rgba(255,123,114,0.24);
+}
+.usage-flow-panel.with .usage-flow-badge{
+  color:var(--accent2);
+  background:rgba(63,185,80,0.12);
+  border:1px solid rgba(63,185,80,0.24);
+}
+.usage-flow-panel h4{
+  font-size:1rem;
+  margin-bottom:6px;
+}
+.usage-flow-panel p{
+  font-size:0.85rem;
+  color:var(--text2);
+  margin-bottom:14px;
+}
+.usage-list{
+  list-style:none;
+  padding:0;
+  display:grid;
+  gap:10px;
+}
+.usage-list li{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  padding:10px 12px;
+  border-radius:12px;
+  background:rgba(28,35,51,0.58);
+  color:var(--text2);
+  font-size:0.83rem;
+}
+.usage-list li strong{
+  color:var(--text);
+  display:block;
+  margin-bottom:2px;
+}
+.usage-dot{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  font-size:0.75rem;
+  font-weight:700;
+}
+.usage-flow-panel.without .usage-dot{
+  background:rgba(255,123,114,0.16);
+  color:var(--accent5);
+}
+.usage-flow-panel.with .usage-dot{
+  background:rgba(63,185,80,0.16);
+  color:var(--accent2);
+}
+
 /* Highlight Box */
 .highlight-box{background:linear-gradient(135deg,rgba(88,166,255,0.08),rgba(210,168,255,0.08));border:2px solid var(--accent);border-radius:var(--radius);padding:20px;text-align:center;margin:24px 0;font-size:1.15rem;font-weight:700;color:var(--accent);}
 
@@ -258,6 +452,10 @@ input{font-family:var(--font);}
   .pipe-diagram{flex-direction:column;}
   .pipe-arrow{transform:rotate(90deg);}
   .hero-title{font-size:1.6rem;}
+  .flow-compare{padding:18px 14px;}
+  .flow-compare-head{flex-direction:column;}
+  .flow-grid{grid-template-columns:1fr;}
+  .usage-flow-grid{grid-template-columns:1fr;}
   .section{padding:64px 12px 30px;}
 }
 </style>
@@ -353,6 +551,90 @@ input{font-family:var(--font);}
 
   <div class="highlight-box">🔑 API Key는 입장권이고, MCP는 연결 장치다</div>
 
+  <div class="flow-compare">
+    <div class="flow-compare-head">
+      <div>
+        <h3>MCP vs API 비교 흐름도</h3>
+        <p>둘 다 "연결"처럼 보이지만 역할은 다릅니다. MCP는 AI가 여러 도구와 데이터를 이어 쓰게 만드는 표준이고, API는 특정 기능을 요청하고 응답받는 인터페이스입니다.</p>
+      </div>
+      <div class="flow-chip">표준 vs 인터페이스</div>
+    </div>
+
+    <div class="flow-grid">
+      <div class="flow-panel mcp">
+        <div class="flow-label">MCP</div>
+        <h4>AI가 여러 도구와 데이터에 연결하는 표준</h4>
+        <p>AI 클라이언트가 MCP를 통해 파일, DB, 검색, 외부 서비스 같은 여러 자원에 일관된 방식으로 접근합니다.</p>
+        <svg class="flow-svg" viewBox="0 0 520 300" role="img" aria-label="MCP flow diagram">
+          <defs>
+            <marker id="flowArrowMcp" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+              <path d="M0,0 L10,5 L0,10 Z" fill="#58a6ff"></path>
+            </marker>
+          </defs>
+          <rect class="flow-node" x="24" y="108" width="118" height="74" rx="18" stroke="#58a6ff"></rect>
+          <text class="flow-node-text" x="83" y="137" text-anchor="middle">AI</text>
+          <text class="flow-subtext" x="83" y="158" text-anchor="middle">질문 · 작업 요청</text>
+
+          <rect class="flow-node" x="198" y="98" width="126" height="94" rx="18" stroke="#58a6ff"></rect>
+          <text class="flow-node-text" x="261" y="132" text-anchor="middle">MCP</text>
+          <text class="flow-subtext" x="261" y="153" text-anchor="middle">도구 연결 표준</text>
+          <text class="flow-subtext" x="261" y="171" text-anchor="middle">공통 형식으로 중개</text>
+
+          <rect class="flow-node" x="382" y="26" width="108" height="58" rx="16" stroke="#3fb950"></rect>
+          <text class="flow-node-text" x="436" y="50" text-anchor="middle">파일</text>
+          <text class="flow-subtext" x="436" y="68" text-anchor="middle">filesystem</text>
+
+          <rect class="flow-node" x="382" y="121" width="108" height="58" rx="16" stroke="#d2a8ff"></rect>
+          <text class="flow-node-text" x="436" y="145" text-anchor="middle">DB</text>
+          <text class="flow-subtext" x="436" y="163" text-anchor="middle">query / read</text>
+
+          <rect class="flow-node" x="382" y="216" width="108" height="58" rx="16" stroke="#f0883e"></rect>
+          <text class="flow-node-text" x="436" y="240" text-anchor="middle">외부 서비스</text>
+          <text class="flow-subtext" x="436" y="258" text-anchor="middle">search / media</text>
+
+          <path class="flow-arrow" d="M142 145 C164 145, 176 145, 198 145" stroke="#58a6ff" marker-end="url(#flowArrowMcp)"></path>
+          <path class="flow-arrow" d="M324 145 C348 145, 350 58, 382 55" stroke="#58a6ff" marker-end="url(#flowArrowMcp)"></path>
+          <path class="flow-arrow" d="M324 145 C348 145, 352 150, 382 150" stroke="#58a6ff" marker-end="url(#flowArrowMcp)"></path>
+          <path class="flow-arrow" d="M324 145 C348 145, 350 246, 382 245" stroke="#58a6ff" marker-end="url(#flowArrowMcp)"></path>
+        </svg>
+        <div class="flow-caption">핵심: 하나의 AI가 여러 도구를 같은 연결 규칙으로 다룰 수 있게 해줍니다.</div>
+      </div>
+
+      <div class="flow-panel api">
+        <div class="flow-label">API</div>
+        <h4>특정 기능을 요청하고 응답받는 인터페이스</h4>
+        <p>클라이언트가 정해진 엔드포인트에 요청을 보내고, 서버가 결과를 응답합니다. 보통 한 기능 단위 호출에 초점이 있습니다.</p>
+        <svg class="flow-svg" viewBox="0 0 520 300" role="img" aria-label="API flow diagram">
+          <defs>
+            <marker id="flowArrowApi" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+              <path d="M0,0 L10,5 L0,10 Z" fill="#f0883e"></path>
+            </marker>
+          </defs>
+          <rect class="flow-node" x="34" y="108" width="122" height="74" rx="18" stroke="#f0883e"></rect>
+          <text class="flow-node-text" x="95" y="137" text-anchor="middle">클라이언트</text>
+          <text class="flow-subtext" x="95" y="158" text-anchor="middle">앱 · 프론트엔드</text>
+
+          <rect class="flow-node" x="198" y="108" width="124" height="74" rx="18" stroke="#f0883e"></rect>
+          <text class="flow-node-text" x="260" y="137" text-anchor="middle">API</text>
+          <text class="flow-subtext" x="260" y="158" text-anchor="middle">요청 / 응답 규격</text>
+
+          <rect class="flow-node" x="364" y="108" width="122" height="74" rx="18" stroke="#f0883e"></rect>
+          <text class="flow-node-text" x="425" y="137" text-anchor="middle">서버 기능</text>
+          <text class="flow-subtext" x="425" y="158" text-anchor="middle">검색, 결제, 생성 등</text>
+
+          <path class="flow-arrow" d="M156 132 C172 132, 182 132, 198 132" stroke="#f0883e" marker-end="url(#flowArrowApi)"></path>
+          <path class="flow-arrow" d="M322 132 C338 132, 348 132, 364 132" stroke="#f0883e" marker-end="url(#flowArrowApi)"></path>
+          <path class="flow-arrow" d="M364 158 C348 158, 338 158, 322 158" stroke="#f7b267" marker-end="url(#flowArrowApi)"></path>
+          <path class="flow-arrow" d="M198 158 C182 158, 172 158, 156 158" stroke="#f7b267" marker-end="url(#flowArrowApi)"></path>
+
+          <text class="flow-subtext" x="260" y="84" text-anchor="middle">특정 기능 호출</text>
+          <text class="flow-subtext" x="260" y="219" text-anchor="middle">결과 응답 반환</text>
+        </svg>
+        <div class="flow-caption">핵심: 필요한 기능 하나를 호출하고, 그 결과를 되돌려받는 구조입니다.</div>
+      </div>
+    </div>
+  </div>
+
   <!-- Misconception toggle -->
   <div class="toggle-group">
     <div class="toggle-header" onclick="toggleMiscon()">
@@ -378,13 +660,104 @@ input{font-family:var(--font);}
   <h2 class="sec-h">MCP를 안 쓸 때 vs 쓸 때</h2>
   <p class="sec-sub">"말만 하는 AI"와 "도구를 쓰는 AI"는 어떻게 다를까요?</p>
 
-  <div class="tabs" id="compareTabs">
-    <button class="tab-btn active" onclick="switchCompare(0)">파일 읽기</button>
-    <button class="tab-btn" onclick="switchCompare(1)">코드 저장소</button>
-    <button class="tab-btn" onclick="switchCompare(2)">영상 생성</button>
-  </div>
+  <div class="flow-compare">
+    <div class="flow-compare-head">
+      <div>
+        <h3>MCP 사용 전후 비교 흐름도</h3>
+        <p>MCP가 없으면 AI는 설명과 추측에 머무르고, MCP가 있으면 실제 도구와 연결되어 읽기, 검색, 호출 같은 작업 흐름이 생깁니다.</p>
+      </div>
+      <div class="flow-chip">말만 하는 AI vs 실행하는 AI</div>
+    </div>
 
-  <div id="compareContent"></div>
+    <div class="usage-flow-grid">
+      <div class="usage-flow-panel without">
+        <div class="usage-flow-badge">MCP 없음</div>
+        <h4>요청은 받지만 실제 도구 실행은 못함</h4>
+        <p>AI가 답변은 만들 수 있어도 파일, 저장소, 외부 서비스에 직접 들어가지는 못합니다.</p>
+        <svg class="flow-svg" viewBox="0 0 520 230" role="img" aria-label="without MCP flow diagram">
+          <defs>
+            <marker id="flowArrowOff" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+              <path d="M0,0 L10,5 L0,10 Z" fill="#ff7b72"></path>
+            </marker>
+          </defs>
+          <rect class="flow-node" x="28" y="82" width="118" height="68" rx="18" stroke="#ff7b72"></rect>
+          <text class="flow-node-text" x="87" y="109" text-anchor="middle">사용자</text>
+          <text class="flow-subtext" x="87" y="128" text-anchor="middle">"파일 읽어줘"</text>
+
+          <rect class="flow-node" x="202" y="82" width="118" height="68" rx="18" stroke="#ff7b72"></rect>
+          <text class="flow-node-text" x="261" y="109" text-anchor="middle">AI</text>
+          <text class="flow-subtext" x="261" y="128" text-anchor="middle">설명 · 추측 · 안내</text>
+
+          <rect class="flow-node" x="376" y="32" width="112" height="54" rx="16" stroke="#6e7681"></rect>
+          <text class="flow-node-text" x="432" y="55" text-anchor="middle">파일</text>
+          <text class="flow-subtext" x="432" y="71" text-anchor="middle">직접 접근 불가</text>
+
+          <rect class="flow-node" x="376" y="104" width="112" height="54" rx="16" stroke="#6e7681"></rect>
+          <text class="flow-node-text" x="432" y="127" text-anchor="middle">저장소</text>
+          <text class="flow-subtext" x="432" y="143" text-anchor="middle">실데이터 없음</text>
+
+          <rect class="flow-node" x="376" y="176" width="112" height="54" rx="16" stroke="#6e7681"></rect>
+          <text class="flow-node-text" x="432" y="199" text-anchor="middle">외부 API</text>
+          <text class="flow-subtext" x="432" y="215" text-anchor="middle">호출 불가</text>
+
+          <path class="flow-arrow" d="M146 116 C168 116, 180 116, 202 116" stroke="#ff7b72" marker-end="url(#flowArrowOff)"></path>
+          <path class="flow-arrow" d="M320 116 C346 116, 352 60, 376 58" stroke="#6e7681" stroke-dasharray="6 6"></path>
+          <path class="flow-arrow" d="M320 116 C346 116, 352 131, 376 131" stroke="#6e7681" stroke-dasharray="6 6"></path>
+          <path class="flow-arrow" d="M320 116 C346 116, 352 202, 376 203" stroke="#6e7681" stroke-dasharray="6 6"></path>
+        </svg>
+        <ul class="usage-list">
+          <li><span class="usage-dot">1</span><div><strong>파일 읽기</strong>사용자가 내용을 직접 붙여넣어야 합니다.</div></li>
+          <li><span class="usage-dot">2</span><div><strong>코드 저장소</strong>실제 이슈나 파일 상태를 확인하지 못합니다.</div></li>
+          <li><span class="usage-dot">3</span><div><strong>영상 생성</strong>아이디어나 스크립트 제안까지만 가능합니다.</div></li>
+        </ul>
+      </div>
+
+      <div class="usage-flow-panel with">
+        <div class="usage-flow-badge">MCP 있음</div>
+        <h4>AI가 연결된 도구를 실제로 실행함</h4>
+        <p>AI가 MCP 서버를 통해 파일 시스템, 저장소, 외부 API에 연결되어 결과를 직접 가져오거나 만들어냅니다.</p>
+        <svg class="flow-svg" viewBox="0 0 520 230" role="img" aria-label="with MCP flow diagram">
+          <defs>
+            <marker id="flowArrowOn" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+              <path d="M0,0 L10,5 L0,10 Z" fill="#3fb950"></path>
+            </marker>
+          </defs>
+          <rect class="flow-node" x="20" y="82" width="108" height="68" rx="18" stroke="#3fb950"></rect>
+          <text class="flow-node-text" x="74" y="109" text-anchor="middle">사용자</text>
+          <text class="flow-subtext" x="74" y="128" text-anchor="middle">"실행해줘"</text>
+
+          <rect class="flow-node" x="160" y="82" width="96" height="68" rx="18" stroke="#3fb950"></rect>
+          <text class="flow-node-text" x="208" y="109" text-anchor="middle">AI</text>
+          <text class="flow-subtext" x="208" y="128" text-anchor="middle">작업 판단</text>
+
+          <rect class="flow-node" x="288" y="72" width="104" height="88" rx="18" stroke="#58a6ff"></rect>
+          <text class="flow-node-text" x="340" y="104" text-anchor="middle">MCP</text>
+          <text class="flow-subtext" x="340" y="123" text-anchor="middle">도구 연결</text>
+          <text class="flow-subtext" x="340" y="141" text-anchor="middle">실행 중개</text>
+
+          <rect class="flow-node" x="424" y="24" width="76" height="44" rx="14" stroke="#3fb950"></rect>
+          <text class="flow-node-text" x="462" y="50" text-anchor="middle">파일</text>
+
+          <rect class="flow-node" x="424" y="92" width="76" height="44" rx="14" stroke="#d2a8ff"></rect>
+          <text class="flow-node-text" x="462" y="118" text-anchor="middle">저장소</text>
+
+          <rect class="flow-node" x="424" y="160" width="76" height="44" rx="14" stroke="#f0883e"></rect>
+          <text class="flow-node-text" x="462" y="186" text-anchor="middle">API</text>
+
+          <path class="flow-arrow" d="M128 116 C140 116, 148 116, 160 116" stroke="#3fb950" marker-end="url(#flowArrowOn)"></path>
+          <path class="flow-arrow" d="M256 116 C268 116, 276 116, 288 116" stroke="#3fb950" marker-end="url(#flowArrowOn)"></path>
+          <path class="flow-arrow" d="M392 116 C410 116, 412 46, 424 46" stroke="#3fb950" marker-end="url(#flowArrowOn)"></path>
+          <path class="flow-arrow" d="M392 116 C408 116, 412 114, 424 114" stroke="#3fb950" marker-end="url(#flowArrowOn)"></path>
+          <path class="flow-arrow" d="M392 116 C410 116, 412 182, 424 182" stroke="#3fb950" marker-end="url(#flowArrowOn)"></path>
+        </svg>
+        <ul class="usage-list">
+          <li><span class="usage-dot">1</span><div><strong>파일 읽기</strong>filesystem MCP로 실제 파일을 열고 내용을 확인합니다.</div></li>
+          <li><span class="usage-dot">2</span><div><strong>코드 저장소</strong>연결된 저장소 정보를 기반으로 구체적으로 답합니다.</div></li>
+          <li><span class="usage-dot">3</span><div><strong>영상 생성</strong>외부 API나 파이프라인을 호출해 결과물을 받습니다.</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <div class="warn-box" style="margin-top:20px;">
     💡 핵심: MCP를 붙이면 AI는 "말만 하는 상태"에서 벗어나 <strong>실제 도구를 실행하는 상태</strong>가 됩니다. 파일을 읽고, 쓰고, 검색하고, 외부 서비스를 호출할 수 있습니다.
@@ -676,12 +1049,6 @@ const conceptData = [
   {title:'MCP Server (MCP 서버)', desc:'MCP 서버는 실제 도구를 제공하는 쪽입니다. AI 클라이언트가 "파일 읽어줘"라고 요청하면, MCP 서버가 그 요청을 받아 실제 파일 시스템에서 파일을 읽어 결과를 돌려줍니다.', extra:'filesystem MCP 서버는 로컬 파일을 다루고, GitHub MCP 서버는 GitHub API를 다루고, 영상 MCP 서버는 외부 영상 API를 다룹니다.'}
 ];
 
-const compareData = [
-  {title:'파일 읽기', without:{label:'MCP 없음',text:'"이 파일을 열어봐"라고 말하면, AI는 파일 내용을 모릅니다. 사용자가 직접 복사해서 붙여넣어야 합니다. AI는 말만 할 수 있습니다.'}, with:{label:'MCP 있음',text:'AI가 등록된 filesystem 도구를 통해 실제 파일을 읽습니다. 사용자가 복사-붙여넣기할 필요 없이, AI가 직접 파일에 접근하여 내용을 가져옵니다.'}},
-  {title:'코드 저장소', without:{label:'MCP 없음',text:'"깃허브를 참고해"라고 말해도, AI는 실제 저장소에 접근할 수 없습니다. 추상적인 답변만 합니다.'}, with:{label:'MCP 있음',text:'연결된 GitHub MCP 도구를 통해 실제 저장소 정보(이슈, 파일 등)에 접근합니다. 실제 데이터를 기반으로 구체적 답변이 가능합니다.'}},
-  {title:'영상 생성', without:{label:'MCP 없음',text:'"영상 만들어줘"라고 말해도 AI에게 실제 영상 생성 파이프라인이 없습니다. 스크립트 텍스트만 줄 수 있습니다.'}, with:{label:'MCP 있음',text:'연결된 영상용 MCP를 통해 외부 영상 API를 호출하고, 실제 영상/이미지 결과 파일을 받을 수 있습니다.'}}
-];
-
 const purposeRec = [
   {env:'웹 LLM + MCP', reason:'개념을 빠르게 이해하려면 대화형 환경이 유리합니다. 설정 부담 없이 MCP 연결 후 바로 실험할 수 있습니다.'},
   {env:'웹 LLM + MCP', reason:'빠른 테스트에는 대화형 환경이 편합니다. 결과를 즉시 대화창에서 확인할 수 있습니다.'},
@@ -773,23 +1140,6 @@ function toggleMiscon() {
   const arrow = document.getElementById('misconArrow');
   body.classList.toggle('open');
   arrow.classList.toggle('open');
-}
-
-// ============ COMPARE TABS ============
-function switchCompare(idx) {
-  document.querySelectorAll('#compareTabs .tab-btn').forEach((b,i) => b.classList.toggle('active', i===idx));
-  const d = compareData[idx];
-  document.getElementById('compareContent').innerHTML = `
-    <div class="compare-wrap">
-      <div class="compare-side without">
-        <span class="compare-label off">❌ ${d.without.label}</span>
-        <p>${d.without.text}</p>
-      </div>
-      <div class="compare-side with">
-        <span class="compare-label on">✅ ${d.with.label}</span>
-        <p>${d.with.text}</p>
-      </div>
-    </div>`;
 }
 
 // ============ PURPOSE SELECTOR ============
@@ -1037,7 +1387,6 @@ function loadState() {
 function init() {
   loadState();
   selectConcept(0);
-  switchCompare(0);
   selectDr(0);
   buildRoadmap();
   switchLab(0);

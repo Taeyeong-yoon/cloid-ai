@@ -224,9 +224,9 @@ export default function HomeClient({
       desc: t.home.journey_skills_desc,
       cta: t.home.skills_label,
       event: "cta_journey_skills",
-      accentText: "text-amber-300",
-      borderHover: "hover:border-amber-500/60 hover:shadow-[0_18px_48px_rgba(245,158,11,0.12)]",
-      badgeClass: "border-amber-500/25 bg-amber-500/10",
+      accentText: "text-violet-300",
+      borderHover: "hover:border-violet-500/60 hover:shadow-[0_18px_48px_rgba(139,92,246,0.12)]",
+      badgeClass: "border-violet-500/25 bg-violet-500/10",
       heroClass: "journey-hero-surface journey-hero-surface-skills",
     },
     {

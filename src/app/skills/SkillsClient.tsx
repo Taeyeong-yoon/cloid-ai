@@ -1,17 +1,49 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect } from "react";
-import { Zap, Search, ArrowLeft, Copy, Check, X } from "lucide-react";
+import { Search, ArrowLeft, Copy, Check, X, Cpu, Zap, Calendar } from "lucide-react";
 import type { Skill } from "@/lib/types";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 import FloatingTutor from "@/components/FloatingTutor";
 
+// ─── 카테고리 설정 ────────────────────────────────────────────
+const CATEGORY_CONFIG = [
+  {
+    key: "all",
+    labelKo: "전체",
+    labelEn: "All",
+    icon: null,
+    color: "text-slate-300",
+    bg: "bg-slate-700",
+    border: "border-slate-600",
+  },
+  {
+    key: "features",
+    labelKo: "기본 기능",
+    labelEn: "Core Features",
+    icon: Cpu,
+    color: "text-violet-300",
+    bg: "bg-violet-900/60",
+    border: "border-violet-700",
+  },
+  {
+    key: "usecases",
+    labelKo: "활용 사례",
+    labelEn: "Use Cases",
+    icon: Zap,
+    color: "text-amber-300",
+    bg: "bg-amber-900/60",
+    border: "border-amber-700",
+  },
+] as const;
+type CategoryKey = (typeof CATEGORY_CONFIG)[number]["key"];
+
 // ─── 난이도 설정 ───────────────────────────────────────────────
 const DIFFICULTY_CONFIG = [
-  { key: "all",          color: "text-slate-300",   bg: "bg-slate-700",       border: "border-slate-600"  },
-  { key: "beginner",     color: "text-emerald-300", bg: "bg-emerald-900/60",  border: "border-emerald-700" },
-  { key: "intermediate", color: "text-amber-300",   bg: "bg-amber-900/60",    border: "border-amber-700"  },
-  { key: "advanced",     color: "text-rose-300",    bg: "bg-rose-900/60",     border: "border-rose-700"   },
+  { key: "all", color: "text-slate-300", bg: "bg-slate-700", border: "border-slate-600" },
+  { key: "beginner", color: "text-emerald-300", bg: "bg-emerald-900/60", border: "border-emerald-700" },
+  { key: "intermediate", color: "text-amber-300", bg: "bg-amber-900/60", border: "border-amber-700" },
+  { key: "advanced", color: "text-rose-300", bg: "bg-rose-900/60", border: "border-rose-700" },
 ] as const;
 type DifficultyKey = (typeof DIFFICULTY_CONFIG)[number]["key"];
 
@@ -33,7 +65,6 @@ function MarkdownContent({ raw }: { raw: string }) {
   while (i < lines.length) {
     const line = lines[i];
 
-    // 코드 블록
     if (line.trim().startsWith("```")) {
       const lang = line.trim().slice(3).trim();
       const codeLines: string[] = [];
@@ -46,9 +77,7 @@ function MarkdownContent({ raw }: { raw: string }) {
       const idx = codeBlockIdx++;
       elements.push(
         <div key={`code-${idx}`} className="relative group my-3">
-          {lang && (
-            <span className="absolute top-2.5 left-3 text-xs text-slate-500 font-mono">{lang}</span>
-          )}
+          {lang && <span className="absolute top-2.5 left-3 text-xs text-slate-500 font-mono">{lang}</span>}
           <button
             onClick={() => copyCode(code, idx)}
             className="absolute top-2 right-2 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100"
@@ -65,36 +94,67 @@ function MarkdownContent({ raw }: { raw: string }) {
       continue;
     }
 
-    // 수평선
     if (/^---+$/.test(line.trim())) {
       elements.push(<hr key={`hr-${i}`} className="border-slate-800 my-4" />);
       i++;
       continue;
     }
 
-    // h2
     if (line.startsWith("## ")) {
       elements.push(
-        <h2 key={`h2-${i}`} className="text-base font-bold text-white mt-6 mb-2 flex items-center gap-2">
-          {line.slice(3)}
-        </h2>
+        <h2 key={`h2-${i}`} className="text-base font-bold text-white mt-6 mb-2">{line.slice(3)}</h2>
       );
       i++;
       continue;
     }
 
-    // h3
     if (line.startsWith("### ")) {
       elements.push(
-        <h3 key={`h3-${i}`} className="text-sm font-semibold text-slate-200 mt-4 mb-1.5">
-          {line.slice(4)}
-        </h3>
+        <h3 key={`h3-${i}`} className="text-sm font-semibold text-slate-200 mt-4 mb-1.5">{line.slice(4)}</h3>
       );
       i++;
       continue;
     }
 
-    // 리스트 (- 또는 숫자.)
+    // 테이블 파싱
+    if (line.trim().startsWith("|")) {
+      const tableRows: string[][] = [];
+      while (i < lines.length && lines[i].trim().startsWith("|")) {
+        if (/^\|[-\s|]+\|$/.test(lines[i].trim())) { i++; continue; }
+        const cells = lines[i].trim().slice(1, -1).split("|").map(c => c.trim());
+        tableRows.push(cells);
+        i++;
+      }
+      if (tableRows.length > 0) {
+        elements.push(
+          <div key={`table-${i}`} className="overflow-x-auto my-3">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr>
+                  {tableRows[0].map((cell, j) => (
+                    <th key={j} className="text-left px-3 py-2 bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-xs">
+                      {cell}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {tableRows.slice(1).map((row, ri) => (
+                  <tr key={ri} className={ri % 2 === 0 ? "bg-slate-900/40" : "bg-slate-900/20"}>
+                    {row.map((cell, j) => (
+                      <td key={j} className="px-3 py-2 text-slate-300 border border-slate-800 text-xs leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: formatInline(cell) }} />
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      }
+      continue;
+    }
+
     const listItems: string[] = [];
     let isOrdered = false;
     if (/^(\d+\.|-)/.test(line.trim())) {
@@ -118,17 +178,11 @@ function MarkdownContent({ raw }: { raw: string }) {
       continue;
     }
 
-    // 빈 줄
-    if (line.trim() === "") {
-      i++;
-      continue;
-    }
+    if (line.trim() === "") { i++; continue; }
 
-    // 일반 단락
     elements.push(
       <p key={`p-${i}`} className="text-sm text-slate-400 leading-relaxed my-1.5"
-        dangerouslySetInnerHTML={{ __html: formatInline(line) }}
-      />
+        dangerouslySetInnerHTML={{ __html: formatInline(line) }} />
     );
     i++;
   }
@@ -143,11 +197,20 @@ function formatInline(text: string): string {
     .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noreferrer" class="text-violet-400 hover:text-violet-300 underline underline-offset-2">$1</a>');
 }
 
-// ─── 스킬 카드 ────────────────────────────────────────────────
-function SkillCard({ skill, selected, onClick }: { skill: Skill; selected: boolean; onClick: () => void }) {
+// ─── 허브 카드 ─────────────────────────────────────────────────
+function HubCard({ skill, selected, onClick, locale }: {
+  skill: Skill; selected: boolean; onClick: () => void; locale: string;
+}) {
   const diff = DIFFICULTY_CONFIG.find((d) => d.key === skill.difficulty) ?? DIFFICULTY_CONFIG[1];
-  const { t } = useTranslation();
-  const diffLabel: Record<string, string> = { beginner: t.common.level_beginner, intermediate: t.common.level_intermediate, advanced: t.common.level_advanced };
+  const cat = CATEGORY_CONFIG.find((c) => c.key === skill.category) ?? CATEGORY_CONFIG[1];
+  const CatIcon = cat.icon;
+
+  const diffLabel: Record<string, string> = {
+    beginner: locale === "ko" ? "입문" : "Beginner",
+    intermediate: locale === "ko" ? "실전" : "Practical",
+    advanced: locale === "ko" ? "고급" : "Advanced",
+  };
+
   return (
     <button
       onClick={onClick}
@@ -158,59 +221,87 @@ function SkillCard({ skill, selected, onClick }: { skill: Skill; selected: boole
       }`}
     >
       <div className="flex items-start justify-between gap-2 mb-2">
-        <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${diff.bg} ${diff.color} ${diff.border} border`}>
-          {diffLabel[skill.difficulty]}
-        </span>
+        <div className="flex items-center gap-1.5 flex-wrap">
+          {CatIcon && (
+            <span className={`inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full font-medium ${cat.bg} ${cat.color} ${cat.border} border`}>
+              <CatIcon size={10} />
+              {locale === "ko" ? (skill.category === "features" ? "기본 기능" : "활용 사례") : (skill.category === "features" ? "Feature" : "Use Case")}
+            </span>
+          )}
+          <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${diff.bg} ${diff.color} ${diff.border} border`}>
+            {diffLabel[skill.difficulty] ?? skill.difficulty}
+          </span>
+        </div>
         {selected && <span className="w-1.5 h-1.5 rounded-full bg-violet-400 mt-1.5 shrink-0" />}
       </div>
+
       <h3 className={`text-sm font-semibold mb-1 leading-snug transition-colors ${selected ? "text-white" : "text-slate-200 group-hover:text-white"}`}>
         {skill.title}
       </h3>
       <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{skill.summary}</p>
-      <div className="flex flex-wrap gap-1 mt-2.5">
-        {skill.tags.slice(0, 3).map((tag) => (
-          <span key={tag} className="text-xs px-1.5 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700/60">
-            {tag}
+
+      <div className="flex items-center justify-between mt-2.5 gap-2">
+        <div className="flex flex-wrap gap-1">
+          {skill.tags.slice(0, 3).map((tag) => (
+            <span key={tag} className="text-xs px-1.5 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700/60">
+              {tag}
+            </span>
+          ))}
+        </div>
+        {skill.updated && (
+          <span className="flex items-center gap-1 text-[10px] text-slate-600 shrink-0">
+            <Calendar size={9} />
+            {skill.updated}
           </span>
-        ))}
+        )}
       </div>
     </button>
   );
 }
 
 // ─── 상세 패널 ────────────────────────────────────────────────
-// NAV_H: nav h-14 = 3.5rem = 56px, PANEL_GAP: 1rem gap below nav
 const NAV_H = 56;
 const PANEL_GAP = 16;
 
-function SkillDetail({
-  skill,
-  onClose,
-  stickyRef,
-}: {
-  skill: Skill;
-  onClose: () => void;
-  stickyRef?: React.RefObject<HTMLDivElement | null>;
+function HubDetail({ skill, onClose, stickyRef, locale }: {
+  skill: Skill; onClose: () => void; stickyRef?: React.RefObject<HTMLDivElement | null>; locale: string;
 }) {
   const diff = DIFFICULTY_CONFIG.find((d) => d.key === skill.difficulty) ?? DIFFICULTY_CONFIG[1];
-  const { t } = useTranslation();
-  const diffLabel: Record<string, string> = { beginner: t.common.level_beginner, intermediate: t.common.level_intermediate, advanced: t.common.level_advanced };
+  const cat = CATEGORY_CONFIG.find((c) => c.key === skill.category) ?? CATEGORY_CONFIG[1];
+  const CatIcon = cat.icon;
 
-  // frontmatter 제거 후 콘텐츠만 추출
+  const diffLabel: Record<string, string> = {
+    beginner: locale === "ko" ? "입문" : "Beginner",
+    intermediate: locale === "ko" ? "실전" : "Practical",
+    advanced: locale === "ko" ? "고급" : "Advanced",
+  };
+
   const content = skill.content.replace(/^---[\s\S]*?---\n?/, "").trim();
 
   return (
     <div className="flex-1 min-w-0">
-      {/* sticky top: nav(3.5rem) + gap(1rem) = 4.5rem */}
       <div ref={stickyRef} className="sticky top-[4.5rem]">
         <div className="rounded-2xl border border-slate-800 bg-slate-900/50 overflow-hidden">
-          {/* 헤더 */}
           <div className="px-6 py-5 border-b border-slate-800 bg-slate-900/80">
             <div className="flex items-start justify-between gap-3">
               <div className="flex-1 min-w-0">
-                <span className={`inline-block text-xs px-2.5 py-1 rounded-full font-medium mb-3 ${diff.bg} ${diff.color} ${diff.border} border`}>
-                  {diffLabel[skill.difficulty]}
-                </span>
+                <div className="flex items-center gap-2 mb-3 flex-wrap">
+                  {CatIcon && (
+                    <span className={`inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full font-medium ${cat.bg} ${cat.color} ${cat.border} border`}>
+                      <CatIcon size={11} />
+                      {locale === "ko" ? (skill.category === "features" ? "기본 기능" : "활용 사례") : (skill.category === "features" ? "Core Feature" : "Use Case")}
+                    </span>
+                  )}
+                  <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${diff.bg} ${diff.color} ${diff.border} border`}>
+                    {diffLabel[skill.difficulty] ?? skill.difficulty}
+                  </span>
+                  {skill.updated && (
+                    <span className="flex items-center gap-1 text-xs text-slate-500">
+                      <Calendar size={11} />
+                      {skill.updated}
+                    </span>
+                  )}
+                </div>
                 <h2 className="text-xl font-bold text-white leading-snug mb-1.5">{skill.title}</h2>
                 <p className="text-sm text-slate-400 leading-relaxed">{skill.summary}</p>
               </div>
@@ -230,7 +321,6 @@ function SkillDetail({
             </div>
           </div>
 
-          {/* 본문: 패널 내부만 스크롤 (sticky top + 헤더 높이 확보) */}
           <div className="px-6 py-5 max-h-[calc(100vh-14rem)] overflow-y-auto">
             <MarkdownContent raw={content} />
           </div>
@@ -242,111 +332,146 @@ function SkillDetail({
 
 // ─── 메인 ─────────────────────────────────────────────────────
 export default function SkillsClient({ skills }: { skills: Skill[] }) {
-  const { t } = useTranslation();
+  const { locale, t } = useTranslation();
   const [query, setQuery] = useState("");
+  const [category, setCategory] = useState<CategoryKey>("all");
   const [difficulty, setDifficulty] = useState<DifficultyKey>("all");
   const [selected, setSelected] = useState<Skill | null>(null);
   const detailRef = useRef<HTMLDivElement>(null);
 
-  // 카드 선택 시 상세 패널이 뷰포트 위에 있으면 nav 바로 아래로 스크롤
   useEffect(() => {
     if (!selected || typeof window === "undefined" || window.innerWidth < 768) return;
-
     const frame = requestAnimationFrame(() => {
       if (!detailRef.current) return;
       const rect = detailRef.current.getBoundingClientRect();
-      // sticky가 아직 적용되지 않았거나 패널 상단이 nav 아래에 없는 경우
       if (rect.top < NAV_H) {
-        const reduceMotion =
-          window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
-        window.scrollTo({
-          top: window.scrollY + rect.top - NAV_H - PANEL_GAP,
-          behavior: reduceMotion ? "auto" : "smooth",
-        });
+        const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+        window.scrollTo({ top: window.scrollY + rect.top - NAV_H - PANEL_GAP, behavior: reduceMotion ? "auto" : "smooth" });
       }
     });
-
     return () => cancelAnimationFrame(frame);
   }, [selected?.slug]);
 
   const counts = useMemo(() => ({
     all: skills.length,
-    beginner: skills.filter((s) => s.difficulty === "beginner").length,
-    intermediate: skills.filter((s) => s.difficulty === "intermediate").length,
-    advanced: skills.filter((s) => s.difficulty === "advanced").length,
+    features: skills.filter((s) => s.category === "features").length,
+    usecases: skills.filter((s) => s.category === "usecases").length,
   }), [skills]);
 
   const DIFF_ORDER: Record<string, number> = { beginner: 0, intermediate: 1, advanced: 2 };
+
   const filtered = useMemo(() => skills
     .filter((s) => {
+      const matchC = category === "all" || s.category === category;
       const matchD = difficulty === "all" || s.difficulty === difficulty;
       const matchQ =
         !query ||
         s.title.toLowerCase().includes(query.toLowerCase()) ||
         s.summary.toLowerCase().includes(query.toLowerCase()) ||
         s.tags.some((tag) => tag.toLowerCase().includes(query.toLowerCase()));
-      return matchD && matchQ;
+      return matchC && matchD && matchQ;
     })
     .sort((a, b) => (DIFF_ORDER[a.difficulty] ?? 1) - (DIFF_ORDER[b.difficulty] ?? 1)),
-  [skills, difficulty, query]);
+    [skills, category, difficulty, query]
+  );
 
   function handleSelect(skill: Skill) {
     setSelected((prev) => (prev?.slug === skill.slug ? null : skill));
   }
 
-  const tutorTitle = selected?.title ?? (query ? `Skills search: ${query}` : t.skills.title);
-  const tutorSummary =
-    selected?.summary ??
-    (query
-      ? `Current filtered skills count: ${filtered.length}`
-      : "Ask about the current skill recipe, implementation steps, or common mistakes.");
+  const hubTitle = locale === "ko" ? "클로드 허브" : "Claude Hub";
+  const hubDesc = locale === "ko"
+    ? "Claude 기능 가이드와 실전 활용 사례를 한 곳에서"
+    : "Claude feature guides and real-world use cases in one place";
+
+  const tutorTitle = selected?.title ?? hubTitle;
+  const tutorSummary = selected?.summary ?? hubDesc;
   const tutorDetails = selected
     ? [
+        `Category: ${selected.category}`,
         `Difficulty: ${selected.difficulty}`,
-        `Tags: ${selected.tags.join(", ")}`,
         selected.content.replace(/^---[\s\S]*?---\n?/, "").trim().slice(0, 900),
       ]
-    : filtered.slice(0, 5).map((skill) => `${skill.title}: ${skill.summary}`);
+    : filtered.slice(0, 5).map((s) => `${s.title}: ${s.summary}`);
+
+  const diffLabelMap: Record<string, string> = {
+    all: locale === "ko" ? "전체" : "All",
+    beginner: locale === "ko" ? "입문" : "Beginner",
+    intermediate: locale === "ko" ? "실전" : "Practical",
+    advanced: locale === "ko" ? "고급" : "Advanced",
+  };
+  const diffCounts: Record<string, number> = {
+    all: (category === "all" ? skills : skills.filter(s => s.category === category)).length,
+    beginner: (category === "all" ? skills : skills.filter(s => s.category === category)).filter(s => s.difficulty === "beginner").length,
+    intermediate: (category === "all" ? skills : skills.filter(s => s.category === category)).filter(s => s.difficulty === "intermediate").length,
+    advanced: (category === "all" ? skills : skills.filter(s => s.category === category)).filter(s => s.difficulty === "advanced").length,
+  };
 
   return (
     <div>
       {/* 페이지 헤더 */}
-      <div className="flex items-center gap-2.5 mb-6">
-        <Zap size={20} className="text-violet-400" />
-        <h1 className="text-2xl font-bold text-white">{t.skills.title}</h1>
+      <div className="mb-6">
+        <div className="flex items-center gap-2.5 mb-1">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-900/40 border border-violet-700/40">
+            <Cpu size={16} className="text-violet-400" />
+          </div>
+          <h1 className="text-2xl font-bold text-white">{hubTitle}</h1>
+        </div>
+        <p className="ml-10 text-sm text-slate-400">{hubDesc}</p>
       </div>
 
-      {/* 컨트롤 바: 난이도 탭 + 검색 */}
+      {/* 카테고리 탭 */}
+      <div className="flex gap-2 mb-4 overflow-x-auto pb-1">
+        {CATEGORY_CONFIG.map((cat) => {
+          const CatIcon = cat.icon;
+          const isActive = category === cat.key;
+          const count = cat.key === "all" ? counts.all : counts[cat.key as "features" | "usecases"];
+          return (
+            <button
+              key={cat.key}
+              onClick={() => { setCategory(cat.key); setSelected(null); }}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all whitespace-nowrap border ${
+                isActive
+                  ? `${cat.bg} ${cat.color} ${cat.border} shadow-sm`
+                  : "bg-slate-900 border-slate-800 text-slate-500 hover:text-slate-300 hover:border-slate-700"
+              }`}
+            >
+              {CatIcon && <CatIcon size={14} />}
+              {cat.key === "all"
+                ? (locale === "ko" ? "전체" : "All")
+                : (locale === "ko" ? cat.labelKo : cat.labelEn)}
+              <span className={`text-xs ${isActive ? "opacity-80" : "opacity-50"}`}>{count}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* 컨트롤: 난이도 + 검색 */}
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
-        {/* 난이도 탭 — 단일 선택 */}
         <div className="flex gap-1.5 p-1 bg-slate-900 border border-slate-800 rounded-xl">
-          {DIFFICULTY_CONFIG.map((d) => {
-            const tabLabel: Record<string, string> = { all: t.common.level_all, beginner: t.common.level_beginner, intermediate: t.common.level_intermediate, advanced: t.common.level_advanced };
-            return (
-              <button
-                key={d.key}
-                onClick={() => { setDifficulty(d.key); setSelected(null); }}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
-                  difficulty === d.key
-                    ? `${d.bg} ${d.color} ${d.border} border shadow-sm`
-                    : "text-slate-500 hover:text-slate-300"
-                }`}
-              >
-                {tabLabel[d.key]}
-                <span className={`text-xs ${difficulty === d.key ? "opacity-80" : "opacity-50"}`}>
-                  {counts[d.key]}
-                </span>
-              </button>
-            );
-          })}
+          {DIFFICULTY_CONFIG.map((d) => (
+            <button
+              key={d.key}
+              onClick={() => { setDifficulty(d.key); setSelected(null); }}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                difficulty === d.key
+                  ? `${d.bg} ${d.color} ${d.border} border shadow-sm`
+                  : "text-slate-500 hover:text-slate-300"
+              }`}
+            >
+              {diffLabelMap[d.key]}
+              <span className={`text-xs ${difficulty === d.key ? "opacity-80" : "opacity-50"}`}>
+                {diffCounts[d.key] ?? 0}
+              </span>
+            </button>
+          ))}
         </div>
 
-        {/* 검색 */}
         <div className="relative flex-1 min-w-0 sm:max-w-xs">
           <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
           <input
             type="text"
-            placeholder={t.skills.search_placeholder}
+            placeholder={locale === "ko" ? "검색..." : "Search..."}
             value={query}
             onChange={(e) => { setQuery(e.target.value); setSelected(null); }}
             className="w-full h-full bg-slate-900 border border-slate-800 rounded-xl pl-9 pr-8 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-violet-600 transition-colors"
@@ -359,45 +484,43 @@ export default function SkillsClient({ skills }: { skills: Skill[] }) {
         </div>
       </div>
 
-      {/* 결과 없음 */}
       {filtered.length === 0 && (
-        <div className="text-center py-16 text-slate-500">{t.common.no_results}</div>
+        <div className="text-center py-16 text-slate-500">
+          {locale === "ko" ? "결과가 없습니다." : "No results found."}
+        </div>
       )}
 
-      {/* 레이아웃: 목록 + 상세 */}
+      {/* 레이아웃 */}
       <div className="flex gap-5 items-start">
-        {/* 스킬 목록 */}
         <div className={`shrink-0 space-y-2 transition-all duration-200 ${selected ? "w-72 hidden md:block" : "w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 space-y-0"}`}>
           {filtered.map((skill) => (
-            <SkillCard
+            <HubCard
               key={skill.slug}
               skill={skill}
               selected={selected?.slug === skill.slug}
               onClick={() => handleSelect(skill)}
+              locale={locale}
             />
           ))}
         </div>
 
-        {/* 상세 패널 */}
         {selected && (
           <>
-            {/* 모바일: 전체 화면 오버레이 */}
             <div className="md:hidden fixed inset-0 z-40 bg-slate-950/95 overflow-y-auto p-4">
               <button
                 onClick={() => setSelected(null)}
                 className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-white mb-4 transition-colors"
               >
                 <ArrowLeft size={16} />
-                {t.common.back_to_list}
+                {locale === "ko" ? "목록으로" : "Back to list"}
               </button>
-              <SkillDetail skill={selected} onClose={() => setSelected(null)} />
+              <HubDetail skill={selected} onClose={() => setSelected(null)} locale={locale} />
             </div>
-
-            {/* 데스크톱: 사이드 패널 (sticky + auto-scroll) */}
-            <SkillDetail skill={selected} onClose={() => setSelected(null)} stickyRef={detailRef} />
+            <HubDetail skill={selected} onClose={() => setSelected(null)} stickyRef={detailRef} locale={locale} />
           </>
         )}
       </div>
+
       <FloatingTutor
         scope="skills"
         contextTitle={tutorTitle}

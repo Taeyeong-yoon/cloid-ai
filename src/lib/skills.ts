@@ -19,6 +19,8 @@ export function getAllSkills(): Skill[] {
         difficulty: (data.difficulty as string) ?? 'beginner',
         summary: data.summary as string,
         content,
+        category: (data.category as 'features' | 'usecases') ?? 'features',
+        updated: data.updated ? String(data.updated instanceof Date ? data.updated.toISOString().slice(0, 10) : data.updated) : undefined,
       };
     });
   } catch {
@@ -38,6 +40,8 @@ export function getSkill(slug: string): Skill | null {
       difficulty: (data.difficulty as string) ?? 'beginner',
       summary: data.summary as string,
       content,
+      category: (data.category as 'features' | 'usecases') ?? 'features',
+      updated: data.updated ? String(data.updated instanceof Date ? data.updated.toISOString().slice(0, 10) : data.updated) : undefined,
     };
   } catch {
     return null;

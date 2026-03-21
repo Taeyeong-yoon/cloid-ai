@@ -104,4 +104,6 @@ export interface Skill {
   difficulty: string;
   summary: string;
   content: string;
+  category: 'features' | 'usecases';
+  updated?: string;
 }

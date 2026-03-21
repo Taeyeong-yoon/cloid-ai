@@ -3,11 +3,11 @@ import { getAllSkills } from "@/lib/skills";
 import SkillsClient from "./SkillsClient";
 
 export const metadata: Metadata = {
-  title: "AI 스킬 레시피 – CLOID.AI | 바로 쓰는 AI 패턴",
-  description: "실무에 바로 적용하는 AI 스킬 레시피. 프롬프트 템플릿, API 코드, 자동화 패턴을 복사해서 바로 사용하세요.",
+  title: "클로드 허브 – CLOID.AI | Claude 기능 & 활용 사례",
+  description: "Claude 기본 기능 완전 가이드와 텔레그램·GitHub·Slack·n8n 등 실전 협업 사례를 한 곳에서. 상시 업데이트.",
   openGraph: {
-    title: "AI 스킬 레시피 – CLOID.AI",
-    description: "실무에 바로 적용하는 AI 스킬 레시피 모음",
+    title: "클로드 허브 – CLOID.AI",
+    description: "Claude 기능 가이드와 실전 활용 사례 모음",
     url: "https://cloid.ai/skills",
   },
 };
