@@ -105,7 +105,11 @@ function JourneyHero({ variant }: { variant: JourneyCardKey }) {
         <div className="journey-hub-node journey-hub-node-3" />
         <div className="journey-hub-node journey-hub-node-4" />
         <div className="journey-hub-node journey-hub-node-5" />
-        <div className="journey-hub-center" />
+        <div className="journey-hub-center">
+          <svg viewBox="0 0 24 24" fill="currentColor" className="journey-hub-claude-logo">
+            <path d="M13.827 3.52h3.603L24 20h-3.603l-6.57-16.48zm-7.258 0h3.767L16.906 20h-3.674l-1.343-3.461H5.017L3.674 20H0L6.569 3.52zm4.132 9.959L8.453 7.687 6.205 13.48H10.7z" />
+          </svg>
+        </div>
         <div className="journey-hub-pulse" />
         <div className="journey-hub-chip journey-hub-chip-1" />
         <div className="journey-hub-chip journey-hub-chip-2" />
