@@ -492,6 +492,7 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
   const [selectedTrackId, setSelectedTrackId] = useState<LabTrackId>("ai-basics");
   const selectedTrackRef = useRef<HTMLDivElement>(null);
   const toolsSectionRef = useRef<HTMLDivElement>(null);
+  const isInitialMount = useRef(true);
 
   function handleOpenTool(tool: ToolId) {
     setActiveTool(tool);
@@ -528,6 +529,10 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
     : labs.slice(0, 5).map((lab) => `${lab.title}: ${lab.description}`);
 
   useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
     if (typeof window === "undefined") return;
     if (!selectedTrackRef.current) return;
 
