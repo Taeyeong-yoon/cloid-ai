@@ -14,7 +14,7 @@ import {
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 type Row = Record<string, string>;
-type OperationId = "trimText" | "fillMissing" | "removeDuplicates" | "normalizeDate";
+type OperationId = "trimText" | "fillMissing" | "removeDuplicates" | "normalizeDate" | "dropEmptyRows" | "normalizeCase" | "formatNumbers" | "normalizePhone";
 
 type Dataset = {
   id: string;
@@ -145,7 +145,7 @@ S1005,정하린,영어,91,A,2026-1`,
   },
 ];
 
-const OPERATION_ORDER: OperationId[] = ["trimText", "fillMissing", "removeDuplicates", "normalizeDate"];
+const OPERATION_ORDER: OperationId[] = ["trimText", "fillMissing", "removeDuplicates", "normalizeDate", "dropEmptyRows", "normalizeCase", "formatNumbers", "normalizePhone"];
 
 const EMPTY_VALUE = "(empty)";
 
@@ -289,6 +289,78 @@ function applyOperations(rows: Row[], activeOperations: OperationId[]) {
     logs.push(`날짜 형식 통일: ${changes}개 셀`);
   }
 
+  if (activeOperations.includes("dropEmptyRows")) {
+    const before = nextRows.length;
+    nextRows = nextRows.filter((row) =>
+      Object.values(row).some((value) => value.trim() !== "")
+    );
+    logs.push(`빈 행 제거: ${before - nextRows.length}개 행`);
+  }
+
+  if (activeOperations.includes("normalizeCase")) {
+    let changes = 0;
+    nextRows = nextRows.map((row) => {
+      const nextRow: Row = {};
+      Object.entries(row).forEach(([key, value]) => {
+        if (/id|code|phone|email/i.test(key)) {
+          const lower = value.toLowerCase();
+          if (lower !== value) changes += 1;
+          nextRow[key] = lower;
+        } else {
+          nextRow[key] = value;
+        }
+      });
+      return nextRow;
+    });
+    logs.push(`대소문자 통일(소문자): ${changes}개 셀`);
+  }
+
+  if (activeOperations.includes("formatNumbers")) {
+    let changes = 0;
+    nextRows = nextRows.map((row) => {
+      const nextRow: Row = {};
+      Object.entries(row).forEach(([key, value]) => {
+        if (/price|amount|salary|sales|quantity|stock|score/i.test(key)) {
+          const cleaned = value.replace(/,/g, "").trim();
+          if (cleaned !== value && cleaned !== "" && !isNaN(Number(cleaned))) {
+            nextRow[key] = cleaned;
+            changes += 1;
+          } else {
+            nextRow[key] = value;
+          }
+        } else {
+          nextRow[key] = value;
+        }
+      });
+      return nextRow;
+    });
+    logs.push(`숫자 형식 정리(콤마 제거): ${changes}개 셀`);
+  }
+
+  if (activeOperations.includes("normalizePhone")) {
+    let changes = 0;
+    nextRows = nextRows.map((row) => {
+      const nextRow: Row = {};
+      Object.entries(row).forEach(([key, value]) => {
+        if (/phone|tel|contact/i.test(key) && value.trim() !== "") {
+          const digits = value.replace(/[^0-9]/g, "");
+          let normalized = value;
+          if (digits.length === 11 && digits.startsWith("010")) {
+            normalized = `${digits.slice(0, 3)}-${digits.slice(3, 7)}-${digits.slice(7)}`;
+          } else if (digits.length === 10) {
+            normalized = `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
+          }
+          if (normalized !== value) changes += 1;
+          nextRow[key] = normalized;
+        } else {
+          nextRow[key] = value;
+        }
+      });
+      return nextRow;
+    });
+    logs.push(`전화번호 형식 통일: ${changes}개 셀`);
+  }
+
   return { rows: nextRows, logs };
 }
 
@@ -331,6 +403,46 @@ function getNotebookCode(activeOperations: OperationId[]) {
       "date_cols = [col for col in df.columns if 'date' in col.lower()]",
       "for col in date_cols:",
       "    df[col] = pd.to_datetime(df[col], errors='coerce').dt.strftime('%Y-%m-%d')",
+    );
+  }
+
+  if (activeOperations.includes("dropEmptyRows")) {
+    lines.push("", "# 5) 빈 행 제거", "df = df.dropna(how='all')");
+  }
+
+  if (activeOperations.includes("normalizeCase")) {
+    lines.push(
+      "",
+      "# 6) 대소문자 통일 (id/code/email 컬럼 소문자화)",
+      "case_cols = [col for col in df.columns if any(k in col.lower() for k in ['id','code','phone','email'])]",
+      "df[case_cols] = df[case_cols].apply(lambda col: col.astype(str).str.lower())",
+    );
+  }
+
+  if (activeOperations.includes("formatNumbers")) {
+    lines.push(
+      "",
+      "# 7) 숫자 형식 정리 (콤마 제거)",
+      "num_cols = [col for col in df.columns if any(k in col.lower() for k in ['price','amount','salary','sales','quantity','stock','score'])]",
+      "for col in num_cols:",
+      "    df[col] = df[col].astype(str).str.replace(',', '', regex=False)",
+      "    df[col] = pd.to_numeric(df[col], errors='coerce')",
+    );
+  }
+
+  if (activeOperations.includes("normalizePhone")) {
+    lines.push(
+      "",
+      "# 8) 전화번호 형식 통일",
+      "import re",
+      "phone_cols = [col for col in df.columns if any(k in col.lower() for k in ['phone','tel','contact'])]",
+      "def normalize_phone(v):",
+      "    digits = re.sub(r'[^0-9]', '', str(v))",
+      "    if len(digits) == 11: return f'{digits[:3]}-{digits[3:7]}-{digits[7:]}'",
+      "    if len(digits) == 10: return f'{digits[:3]}-{digits[3:6]}-{digits[6:]}'",
+      "    return v",
+      "for col in phone_cols:",
+      "    df[col] = df[col].apply(normalize_phone)",
     );
   }
 
@@ -443,6 +555,22 @@ export default function DataPreprocessingPreview() {
       title: isKo ? "날짜 형식 통일" : "Normalize dates",
       detail: isKo ? "2026/03/01 → 2026-03-01 형태로 맞춥니다." : "Convert slash dates to ISO format.",
     },
+    dropEmptyRows: {
+      title: isKo ? "빈 행 제거" : "Drop empty rows",
+      detail: isKo ? "모든 셀이 비어 있는 행을 삭제합니다." : "Remove rows where all values are blank.",
+    },
+    normalizeCase: {
+      title: isKo ? "대소문자 통일" : "Normalize case",
+      detail: isKo ? "id·code·email 컬럼을 소문자로 통일합니다." : "Lowercase id, code, and email columns.",
+    },
+    formatNumbers: {
+      title: isKo ? "숫자 형식 정리" : "Format numbers",
+      detail: isKo ? "금액·수량 컬럼의 콤마와 불필요한 문자를 제거합니다." : "Strip commas from price and quantity columns.",
+    },
+    normalizePhone: {
+      title: isKo ? "전화번호 형식 통일" : "Normalize phone",
+      detail: isKo ? "숫자만 추출해 010-0000-0000 형식으로 맞춥니다." : "Reformat phone numbers to 010-0000-0000 pattern.",
+    },
   };
 
   return (
@@ -519,7 +647,7 @@ export default function DataPreprocessingPreview() {
             <WandSparkles size={13} />
             {isKo ? "3. 전처리 단계 실행" : "3. Run preprocessing steps"}
           </div>
-          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
             {OPERATION_ORDER.map((operation) => {
               const active = activeOperations.includes(operation);
               return (
