@@ -20,7 +20,7 @@ type Challenge = {
   expectedOutput: string;
 };
 
-const EXAMPLE_CATEGORIES = ["기초", "데이터", "AI 실습", "알고리즘"] as const;
+const EXAMPLE_CATEGORIES = ["기초", "데이터", "내장함수", "AI 실습", "알고리즘"] as const;
 
 const EXAMPLES: Example[] = [
   // 기초
@@ -228,6 +228,259 @@ for i, p in enumerate([p1, p2], 1):
     print(p)
     print()`,
   },
+  // 내장함수
+  {
+    category: "내장함수",
+    label: "map & filter",
+    code: `numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# map: 모든 원소에 함수 적용
+squares = list(map(lambda x: x ** 2, numbers))
+print(f"제곱:    {squares}")
+
+# filter: 조건에 맞는 원소만 추출
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+odds  = list(filter(lambda x: x % 2 != 0, numbers))
+print(f"짝수:    {evens}")
+print(f"홀수:    {odds}")
+
+# map + filter 조합
+big_squares = list(map(lambda x: x**2, filter(lambda x: x > 5, numbers)))
+print(f"5 초과 제곱: {big_squares}")
+
+# 리스트 컴프리헨션과 동일한 결과
+same = [x**2 for x in numbers if x > 5]
+print(f"컴프리헨션: {same}")`,
+  },
+  {
+    category: "내장함수",
+    label: "zip & 언패킹",
+    code: `names   = ["김민서", "이준호", "박소연", "최태양"]
+scores  = [92, 78, 85, 61]
+grades  = ["A", "B", "B", "D"]
+
+# zip: 여러 리스트를 동시에 순회
+print("=== 성적표 ===")
+for name, score, grade in zip(names, scores, grades):
+    bar = "█" * (score // 10)
+    print(f"{name}: {score}점 ({grade}) {bar}")
+
+# zip으로 딕셔너리 생성
+score_dict = dict(zip(names, scores))
+print(f"\\n딕셔너리: {score_dict}")
+
+# zip과 enumerate 조합
+print("\\n순위:")
+ranked = sorted(zip(scores, names), reverse=True)
+for rank, (score, name) in enumerate(ranked, 1):
+    print(f"  {rank}위 {name}: {score}점")`,
+  },
+  {
+    category: "내장함수",
+    label: "try / except",
+    code: `def safe_divide(a, b):
+    try:
+        result = a / b
+        return result
+    except ZeroDivisionError:
+        return "오류: 0으로 나눌 수 없습니다"
+    except TypeError as e:
+        return f"오류: 타입 불일치 ({e})"
+    finally:
+        print(f"  → divide({a}, {b}) 호출됨")
+
+# 다양한 케이스 테스트
+cases = [(10, 2), (5, 0), (9, "3"), (100, 4)]
+for a, b in cases:
+    result = safe_divide(a, b)
+    print(f"결과: {result}")
+    print()
+
+# 예외를 활용한 안전한 형변환
+def to_int(value):
+    try:
+        return int(value), None
+    except (ValueError, TypeError) as e:
+        return None, str(e)
+
+for val in ["42", "3.14", "abc", None]:
+    num, err = to_int(val)
+    print(f"to_int({repr(val):8}) → {num if num is not None else f'실패: {err}'}")`,
+  },
+  {
+    category: "내장함수",
+    label: "set 연산",
+    code: `python_users  = {"김민서", "이준호", "박소연", "최태양", "정하린"}
+js_users      = {"이준호", "강다은", "박소연", "윤서준"}
+data_users    = {"최태양", "김민서", "한도윤", "박소연"}
+
+# 집합 연산
+both_py_js  = python_users & js_users          # 교집합
+either      = python_users | js_users          # 합집합
+only_python = python_users - js_users          # 차집합
+symmetric   = python_users ^ js_users          # 대칭 차집합
+
+print(f"Python 사용자: {sorted(python_users)}")
+print(f"JS 사용자:     {sorted(js_users)}")
+print(f"둘 다 사용:    {sorted(both_py_js)}")
+print(f"Python만:      {sorted(only_python)}")
+
+# 3개 이상 기술 보유자
+all_three = python_users & js_users & data_users
+print(f"\\n3개 스킬 모두: {sorted(all_three) or '없음'}")
+
+# 중복 제거
+raw = [1, 2, 2, 3, 3, 3, 4, 5, 5]
+unique = sorted(set(raw))
+print(f"\\n중복 제거: {raw} → {unique}")`,
+  },
+  {
+    category: "내장함수",
+    label: "collections.Counter",
+    code: `from collections import Counter, defaultdict
+
+text = "python is great python is easy python data python ai data ai"
+words = text.split()
+
+# Counter: 빈도 자동 집계
+counter = Counter(words)
+print("=== 단어 빈도 ===")
+for word, count in counter.most_common(5):
+    bar = "■" * count
+    print(f"  {word:8}: {bar} ({count})")
+
+# Counter 연산
+c1 = Counter(["a", "b", "b", "c", "c", "c"])
+c2 = Counter(["b", "b", "c", "d", "d"])
+print(f"\\nc1: {dict(c1)}")
+print(f"c2: {dict(c2)}")
+print(f"합: {dict(c1 + c2)}")
+print(f"교: {dict(c1 & c2)}")
+
+# defaultdict: 키 없어도 기본값 자동 생성
+sales = defaultdict(list)
+data = [("서울", 100), ("부산", 80), ("서울", 120), ("부산", 90), ("인천", 70)]
+for city, amount in data:
+    sales[city].append(amount)
+
+print("\\n=== 지역별 매출 ===")
+for city, amounts in sales.items():
+    print(f"  {city}: {amounts} → 합계 {sum(amounts)}")`,
+  },
+  {
+    category: "내장함수",
+    label: "datetime",
+    code: `from datetime import datetime, timedelta, date
+
+now = datetime.now()
+print(f"현재 시각: {now.strftime('%Y년 %m월 %d일 %H:%M:%S')}")
+print(f"요일: {['월','화','수','목','금','토','일'][now.weekday()]}요일")
+
+# 날짜 계산
+d_day = date(2026, 12, 31)
+today = date.today()
+diff = d_day - today
+print(f"\\n2026년 12월 31일까지: {diff.days}일 남음")
+
+# 시간 연산
+deadline = now + timedelta(days=7, hours=3)
+print(f"7일 3시간 후: {deadline.strftime('%Y-%m-%d %H:%M')}")
+
+# 문자열 → datetime 파싱
+date_strings = ["2026/03/01", "2026-06-15", "20261225"]
+formats = ["%Y/%m/%d", "%Y-%m-%d", "%Y%m%d"]
+print("\\n날짜 파싱:")
+for s, fmt in zip(date_strings, formats):
+    dt = datetime.strptime(s, fmt)
+    print(f"  {s:12} → {dt.strftime('%Y년 %-m월 %-d일') if hasattr(dt, 'day') else dt}")`,
+  },
+  {
+    category: "내장함수",
+    label: "문자열 메서드",
+    code: `text = "  Hello, Python World! 파이썬은 최고입니다.  "
+
+# 기본 정리
+print(f"원본:        '{text}'")
+print(f"strip:       '{text.strip()}'")
+print(f"upper:       '{text.strip().upper()}'")
+print(f"lower:       '{text.strip().lower()}'")
+
+# 검색 & 확인
+s = "Python is powerful and Python is popular"
+print(f"\\n찾기(find):  {s.find('Python')}")
+print(f"개수(count): {s.count('Python')}")
+print(f"시작(startswith): {s.startswith('Python')}")
+print(f"끝(endswith):     {s.endswith('popular')}")
+
+# 변환
+print(f"\\n교체(replace): {s.replace('Python', 'AI')}")
+print(f"분리(split):   {s.split(' and ')}")
+print(f"결합(join):    {'→'.join(['A','B','C','D'])}")
+
+# 포맷
+name, score = "김민서", 92.5
+print(f"\\nf-string:  {name}의 점수는 {score:.1f}점")
+print(f"format:    {'{:>10} {:06.2f}'.format(name, score)}")
+print(f"zfill:     {'42'.zfill(6)}")`,
+  },
+  {
+    category: "내장함수",
+    label: "*args / **kwargs",
+    code: `# *args: 가변 위치 인수
+def sum_all(*args):
+    print(f"받은 인수: {args}")
+    return sum(args)
+
+print(sum_all(1, 2, 3))
+print(sum_all(10, 20, 30, 40, 50))
+
+# **kwargs: 가변 키워드 인수
+def profile(**kwargs):
+    print("\\n=== 프로필 ===")
+    for key, value in kwargs.items():
+        print(f"  {key}: {value}")
+
+profile(name="김민서", age=28, job="개발자", skill="Python")
+
+# 혼합 사용
+def log(level, *messages, separator="│", **meta):
+    prefix = f"[{level.upper()}]"
+    body = f" {separator} ".join(str(m) for m in messages)
+    detail = " ".join(f"{k}={v}" for k, v in meta.items())
+    print(f"{prefix} {body}  {detail}")
+
+log("info", "서버 시작", "포트 8080", host="localhost", pid=1234)
+log("warn", "응답 지연", separator="·", latency="320ms")`,
+  },
+  {
+    category: "내장함수",
+    label: "sorted 심화",
+    code: `students = [
+    {"name": "김민서", "score": 92, "age": 22},
+    {"name": "이준호", "score": 78, "age": 25},
+    {"name": "박소연", "score": 92, "age": 21},
+    {"name": "최태양", "score": 61, "age": 23},
+    {"name": "정하린", "score": 85, "age": 22},
+]
+
+# key= 단순 정렬
+by_score = sorted(students, key=lambda s: s["score"], reverse=True)
+print("점수 내림차순:")
+for s in by_score:
+    print(f"  {s['name']:6} {s['score']}점")
+
+# 다중 기준 정렬 (점수 내림차순, 나이 오름차순)
+multi = sorted(students, key=lambda s: (-s["score"], s["age"]))
+print("\\n점수↓ 나이↑ 다중정렬:")
+for s in multi:
+    print(f"  {s['name']:6} {s['score']}점 {s['age']}세")
+
+# any / all
+scores = [s["score"] for s in students]
+print(f"\\n모두 합격(60+): {all(sc >= 60 for sc in scores)}")
+print(f"90점 이상 있음: {any(sc >= 90 for sc in scores)}")
+print(f"평균 이상 수:   {sum(1 for sc in scores if sc >= sum(scores)/len(scores))}명")`,
+  },
   // 알고리즘
   {
     category: "알고리즘",
@@ -332,6 +585,46 @@ Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz`,
     description: `1부터 100 사이의 소수를 모두 찾아 출력하세요.\n소수의 개수와 합계도 함께 출력하세요.\n\n(소수: 1과 자기 자신으로만 나누어지는 수)`,
     hint: "에라토스테네스의 체 또는 각 숫자를 2부터 √n까지 나누어 확인하는 방법을 사용하세요.",
     expectedOutput: `2 3 5 7 11 13 17 19 23 29 31 37 41 43 47\n53 59 61 67 71 73 79 83 89 97\n\n소수 개수: 25개\n소수의 합: 1060`,
+  },
+  {
+    id: "zip-scoreboard",
+    label: "zip 성적표",
+    difficulty: "easy",
+    description: `아래 두 리스트를 zip으로 묶어 성적표를 출력하고,\nmap으로 점수를 10점씩 올린 조정 점수도 함께 출력하세요.\n\nnames = ["김민서","이준호","박소연","최태양","정하린"]\nscores = [72, 58, 85, 61, 90]`,
+    hint: "zip(names, scores)로 묶고, map(lambda x: x+10, scores)로 점수를 올립니다. min(100, x)으로 100 초과 방지도 해보세요.",
+    expectedOutput: `=== 원본 성적표 ===\n김민서: 72점\n이준호: 58점\n박소연: 85점\n최태양: 61점\n정하린: 90점\n\n=== 조정 성적표 (+10점) ===\n김민서: 82점\n이준호: 68점\n박소연: 95점\n최태양: 71점\n정하린: 100점`,
+  },
+  {
+    id: "try-calc",
+    label: "안전한 계산기",
+    difficulty: "medium",
+    description: `사용자 입력 없이 아래 연산 목록을 순서대로 처리하는 안전한 계산기를 만드세요.\ntry/except로 오류를 잡아 메시지를 출력하고 계속 실행해야 합니다.\n\nops = [(10, "+", 5), (9, "/", 0), (8, "*", 3), (10, "/", "두"), (7, "-", 2)]`,
+    hint: "각 연산을 try 블록에 넣고 ZeroDivisionError, TypeError를 각각 except로 잡습니다.",
+    expectedOutput: `10 + 5 = 15\n9 / 0 → 오류: 0으로 나눌 수 없습니다\n8 * 3 = 24\n10 / 두 → 오류: 숫자가 아닙니다\n7 - 2 = 5`,
+  },
+  {
+    id: "set-interest",
+    label: "공통 관심사 찾기",
+    difficulty: "easy",
+    description: `세 사람의 관심사 목록을 set으로 비교하여\n① 세 명 모두의 공통 관심사\n② 정확히 두 명만 공유하는 관심사\n③ 한 명만 가진 고유 관심사를 출력하세요.\n\nA = {"AI","Python","여행","음악","독서"}\nB = {"AI","Python","게임","영화","독서"}\nC = {"AI","여행","요리","음악","게임"}`,
+    hint: "A & B & C 로 교집합, (A&B)-(A&B&C) 로 두 명만 공유하는 항목을 구합니다.",
+    expectedOutput: `세 명 공통: {'AI'}\nA&B만: {'Python', '독서'}\nA&C만: {'여행', '음악'}\nB&C만: {'게임'}\nA 고유: {'독서', 'Python'} 중 B,C와 겹치지 않는 것`,
+  },
+  {
+    id: "counter-log",
+    label: "Counter 로그 분석",
+    difficulty: "medium",
+    description: `아래 서버 로그에서 Counter를 활용해\n① 상태코드별 빈도 TOP 3\n② 에러(400대, 500대) 총 횟수\n③ 가장 많이 접근한 경로를 출력하세요.\n\nlogs = ["GET /home 200","POST /api 201","GET /home 200",\n        "GET /login 404","GET /api 500","POST /api 201",\n        "GET /home 200","GET /login 404","GET /api 500","DELETE /api 403"]`,
+    hint: "Counter(status for log in logs for status in [log.split()[2]])로 상태코드를 셉니다. 경로는 log.split()[1]로 추출합니다.",
+    expectedOutput: `=== 상태코드 TOP 3 ===\n200: 3회\n201: 2회\n404: 2회\n\n에러(4xx+5xx) 총 5회\n\n가장 많은 경로: /home (3회)`,
+  },
+  {
+    id: "datetime-calc",
+    label: "날짜 계산기",
+    difficulty: "medium",
+    description: `datetime을 활용해 아래를 출력하세요.\n① 오늘 날짜와 요일\n② 100일 후 날짜\n③ 아래 날짜 목록을 최신순으로 정렬\n\ndates = ["2026-03-15", "2025-12-01", "2026-01-20", "2026-06-30"]`,
+    hint: "datetime.strptime()으로 문자열을 파싱하고, sorted(dates, key=lambda d: datetime.strptime(d,'%Y-%m-%d'), reverse=True)로 정렬합니다.",
+    expectedOutput: `오늘: 2026-03-22 (일요일)\n100일 후: 2026-06-30\n\n날짜 정렬(최신순):\n2026-06-30\n2026-03-15\n2026-01-20\n2025-12-01`,
   },
 ];
 
