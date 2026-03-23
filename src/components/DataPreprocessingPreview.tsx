@@ -204,7 +204,7 @@ function countDateTargets(rows: Row[]): number {
     (count, row) =>
       count +
       Object.entries(row).filter(
-        ([key, value]) => /date/i.test(key) && value.includes("/") && /^\d{4}\/\d{2}\/\d{2}$/.test(value),
+        ([key, value]) => /date|semester/i.test(key) && /\d{4}[\/\.]\d{1,2}[\/\.]\d{1,2}/.test(value),
       ).length,
     0,
   );
@@ -221,127 +221,132 @@ function countDuplicateRows(rows: Row[]): number {
   return duplicates;
 }
 
-function applyOperations(rows: Row[], activeOperations: OperationId[]) {
-  let nextRows = rows.map((row) => ({ ...row }));
+type ProcessResult = {
+  rows: Row[];
+  logs: string[];
+  changedCells: Set<string>;       // "processedRowIdx-colKey"
+  removedOriginalIndices: Set<number>;
+};
+
+function applyOperations(rawRows: Row[], activeOperations: OperationId[]): ProcessResult {
+  let tracked = rawRows.map((row, i) => ({ data: { ...row }, origIdx: i }));
   const logs: string[] = [];
 
   if (activeOperations.includes("trimText")) {
     let changes = 0;
-    nextRows = nextRows.map((row) => {
-      const nextRow: Row = {};
-      Object.entries(row).forEach(([key, value]) => {
+    tracked = tracked.map((item) => {
+      const nextData: Row = {};
+      Object.entries(item.data).forEach(([key, value]) => {
         const trimmed = value.replace(/\s+/g, " ").trim();
         if (trimmed !== value) changes += 1;
-        nextRow[key] = trimmed;
+        nextData[key] = trimmed;
       });
-      return nextRow;
+      return { ...item, data: nextData };
     });
     logs.push(`문자열 공백 정리: ${changes}개 셀`);
   }
 
   if (activeOperations.includes("fillMissing")) {
     let changes = 0;
-    nextRows = nextRows.map((row) => {
-      const nextRow: Row = {};
-      Object.entries(row).forEach(([key, value]) => {
-        if (value.trim() !== "") {
-          nextRow[key] = value;
-          return;
-        }
+    tracked = tracked.map((item) => {
+      const nextData: Row = {};
+      Object.entries(item.data).forEach(([key, value]) => {
+        if (value.trim() !== "") { nextData[key] = value; return; }
         changes += 1;
-        nextRow[key] = /date/i.test(key)
+        nextData[key] = /date/i.test(key)
           ? "1970-01-01"
-          : /sales|amount|price|count/i.test(key)
+          : /sales|amount|price|count|quantity|salary|stock|score/i.test(key)
             ? "0"
             : EMPTY_VALUE;
       });
-      return nextRow;
+      return { ...item, data: nextData };
     });
     logs.push(`누락값 채우기: ${changes}개 셀`);
   }
 
   if (activeOperations.includes("removeDuplicates")) {
-    const before = nextRows.length;
+    const before = tracked.length;
     const seen = new Set<string>();
-    nextRows = nextRows.filter((row) => {
-      const key = JSON.stringify(row);
+    tracked = tracked.filter((item) => {
+      const key = JSON.stringify(item.data);
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
     });
-    logs.push(`중복 행 제거: ${before - nextRows.length}개 행`);
+    logs.push(`중복 행 제거: ${before - tracked.length}개 행`);
   }
 
   if (activeOperations.includes("normalizeDate")) {
     let changes = 0;
-    nextRows = nextRows.map((row) => {
-      const nextRow: Row = {};
-      Object.entries(row).forEach(([key, value]) => {
-        if (/date/i.test(key) && /^\d{4}\/\d{2}\/\d{2}$/.test(value)) {
-          nextRow[key] = value.replaceAll("/", "-");
-          changes += 1;
-          return;
+    tracked = tracked.map((item) => {
+      const nextData: Row = {};
+      Object.entries(item.data).forEach(([key, value]) => {
+        if (/date|semester/i.test(key) && /\d{4}[\/\.]\d{1,2}[\/\.]\d{1,2}/.test(value)) {
+          const normalized = value.replace(/[\/\.]/g, "-");
+          if (normalized !== value) changes += 1;
+          nextData[key] = normalized;
+        } else {
+          nextData[key] = value;
         }
-        nextRow[key] = value;
       });
-      return nextRow;
+      return { ...item, data: nextData };
     });
     logs.push(`날짜 형식 통일: ${changes}개 셀`);
   }
 
   if (activeOperations.includes("dropEmptyRows")) {
-    const before = nextRows.length;
-    nextRows = nextRows.filter((row) =>
-      Object.values(row).some((value) => value.trim() !== "")
+    const before = tracked.length;
+    tracked = tracked.filter((item) =>
+      Object.values(item.data).some((v) => v.trim() !== "")
     );
-    logs.push(`빈 행 제거: ${before - nextRows.length}개 행`);
+    logs.push(`빈 행 제거: ${before - tracked.length}개 행`);
   }
 
   if (activeOperations.includes("normalizeCase")) {
     let changes = 0;
-    nextRows = nextRows.map((row) => {
-      const nextRow: Row = {};
-      Object.entries(row).forEach(([key, value]) => {
+    tracked = tracked.map((item) => {
+      const nextData: Row = {};
+      Object.entries(item.data).forEach(([key, value]) => {
         if (/id|code|phone|email/i.test(key)) {
           const lower = value.toLowerCase();
           if (lower !== value) changes += 1;
-          nextRow[key] = lower;
+          nextData[key] = lower;
         } else {
-          nextRow[key] = value;
+          nextData[key] = value;
         }
       });
-      return nextRow;
+      return { ...item, data: nextData };
     });
     logs.push(`대소문자 통일(소문자): ${changes}개 셀`);
   }
 
   if (activeOperations.includes("formatNumbers")) {
     let changes = 0;
-    nextRows = nextRows.map((row) => {
-      const nextRow: Row = {};
-      Object.entries(row).forEach(([key, value]) => {
+    tracked = tracked.map((item) => {
+      const nextData: Row = {};
+      Object.entries(item.data).forEach(([key, value]) => {
         if (/price|amount|salary|sales|quantity|stock|score/i.test(key)) {
           const cleaned = value.replace(/,/g, "").trim();
           if (cleaned !== value && cleaned !== "" && !isNaN(Number(cleaned))) {
-            nextRow[key] = cleaned;
+            nextData[key] = cleaned;
             changes += 1;
           } else {
-            nextRow[key] = value;
+            nextData[key] = value;
           }
         } else {
-          nextRow[key] = value;
+          nextData[key] = value;
         }
       });
-      return nextRow;
+      return { ...item, data: nextData };
     });
     logs.push(`숫자 형식 정리(콤마 제거): ${changes}개 셀`);
   }
 
   if (activeOperations.includes("normalizePhone")) {
     let changes = 0;
-    nextRows = nextRows.map((row) => {
-      const nextRow: Row = {};
-      Object.entries(row).forEach(([key, value]) => {
+    tracked = tracked.map((item) => {
+      const nextData: Row = {};
+      Object.entries(item.data).forEach(([key, value]) => {
         if (/phone|tel|contact/i.test(key) && value.trim() !== "") {
           const digits = value.replace(/[^0-9]/g, "");
           let normalized = value;
@@ -351,17 +356,31 @@ function applyOperations(rows: Row[], activeOperations: OperationId[]) {
             normalized = `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
           }
           if (normalized !== value) changes += 1;
-          nextRow[key] = normalized;
+          nextData[key] = normalized;
         } else {
-          nextRow[key] = value;
+          nextData[key] = value;
         }
       });
-      return nextRow;
+      return { ...item, data: nextData };
     });
     logs.push(`전화번호 형식 통일: ${changes}개 셀`);
   }
 
-  return { rows: nextRows, logs };
+  // Compute diff
+  const changedCells = new Set<string>();
+  tracked.forEach((item, pIdx) => {
+    const orig = rawRows[item.origIdx];
+    Object.entries(item.data).forEach(([key, value]) => {
+      if (orig[key] !== value) changedCells.add(`${pIdx}-${key}`);
+    });
+  });
+
+  const survivedOrigIndices = new Set(tracked.map((item) => item.origIdx));
+  const removedOriginalIndices = new Set(
+    rawRows.map((_, i) => i).filter((i) => !survivedOrigIndices.has(i))
+  );
+
+  return { rows: tracked.map((item) => item.data), logs, changedCells, removedOriginalIndices };
 }
 
 function getNotebookCode(activeOperations: OperationId[]) {
@@ -450,7 +469,15 @@ function getNotebookCode(activeOperations: OperationId[]) {
   return lines.join("\n");
 }
 
-function PreviewTable({ rows }: { rows: Row[] }) {
+function PreviewTable({
+  rows,
+  changedCells,
+  removedIndices,
+}: {
+  rows: Row[];
+  changedCells?: Set<string>;
+  removedIndices?: Set<number>;
+}) {
   if (rows.length === 0) {
     return <div className="rounded-lg border border-dashed border-slate-700 p-4 text-xs text-slate-500">데이터가 없습니다.</div>;
   }
@@ -469,15 +496,33 @@ function PreviewTable({ rows }: { rows: Row[] }) {
           </tr>
         </thead>
         <tbody>
-          {rows.map((row, index) => (
-            <tr key={`${index}-${JSON.stringify(row)}`} className="bg-slate-950/40 text-slate-200">
-              {headers.map((header) => (
-                <td key={header} className="border-b border-slate-900 px-3 py-2 align-top">
-                  {row[header] || <span className="text-rose-300">(blank)</span>}
-                </td>
-              ))}
-            </tr>
-          ))}
+          {rows.map((row, rowIdx) => {
+            const isRemoved = removedIndices?.has(rowIdx);
+            return (
+              <tr
+                key={`${rowIdx}-${JSON.stringify(row)}`}
+                className={isRemoved ? "bg-rose-950/40 opacity-60" : "bg-slate-950/40 text-slate-200"}
+              >
+                {headers.map((header) => {
+                  const isChanged = changedCells?.has(`${rowIdx}-${header}`);
+                  const val = row[header];
+                  return (
+                    <td
+                      key={header}
+                      className={`border-b border-slate-900 px-3 py-2 align-top transition-colors ${
+                        isChanged ? "bg-emerald-950/50 font-semibold text-emerald-300" : ""
+                      }`}
+                    >
+                      {val || <span className="text-rose-300">(blank)</span>}
+                      {isChanged && (
+                        <span className="ml-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                      )}
+                    </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
@@ -703,14 +748,14 @@ export default function DataPreprocessingPreview() {
               <FlaskConical size={13} />
               {isKo ? "4. 전처리 전" : "4. Before cleaning"}
             </div>
-            <PreviewTable rows={rawRows} />
+            <PreviewTable rows={rawRows} removedIndices={processed.removedOriginalIndices} />
           </div>
           <div className="rounded-xl border border-slate-800 bg-slate-950/40 p-4">
             <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-sky-300">
               <Play size={13} />
               {isKo ? "5. 전처리 후" : "5. After cleaning"}
             </div>
-            <PreviewTable rows={processed.rows} />
+            <PreviewTable rows={processed.rows} changedCells={processed.changedCells} />
             <div className="mt-3 space-y-1 text-xs text-slate-400">
               {processed.logs.map((log) => (
                 <div key={log}>- {log}</div>
