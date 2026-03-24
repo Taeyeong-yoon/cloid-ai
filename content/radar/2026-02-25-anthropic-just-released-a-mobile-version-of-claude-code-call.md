@@ -1,0 +1,16 @@
+---
+title: "Anthropic just released a mobile version of Claude Code called Remote Control - Venturebeat"
+date: "2026-02-25"
+tags:
+  - claude-code
+  - remote-control
+score: 92
+sourceUrl: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQajZ2dFdsdExTeWhGQmJQRHVLUFIxSnBmTUlrTHc5MDMwV2F1OEg3Vzl2RVNUcEVMMDA2U0ppZTlYbk9fQ0U1SkFEcU5yTThnZjFfRDhYZHVfOS1uR2hxTXNVbHVqQW9ZMEN6cDFkQkZPek11eWgxVVFJR3o4R1VYZHk1V2w2c3JyMllwdEVnQmNPSHdLdWNPdTNJUzNxdjJ4Qzgtejk5LTlfbUU?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMiqwFBVV95cUxQajZ2dFdsdExTeWhGQmJQRHVLUFIxSnBmTUlrTHc5MDMwV2F1OEg3Vzl2RVNUcEVMMDA2U0ppZTlYbk9fQ0U1SkFEcU5yTThnZjFfRDhYZHVfOS1uR2hxTXNVbHVqQW9ZMEN6cDFkQkZPek11eWgxVVFJR3o4R1VYZHk1V2w2c3JyMllwdEVnQmNPSHdLdWNPdTNJUzNxdjJ4Qzgtejk5LTlfbUU?oc=5' target='_"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxQajZ2dFdsdExTeWhGQmJQRHVLUFIxSnBmTUlrTHc5MDMwV2F1OEg3Vzl2RVNUcEVMMDA2U0ppZTlYbk9fQ0U1SkFEcU5yTThnZjFfRDhYZHVfOS1uR2hxTXNVbHVqQW9ZMEN6cDFkQkZPek11eWgxVVFJR3o4R1VYZHk1V2w2c3JyMllwdEVnQmNPSHdLdWNPdTNJUzNxdjJ4Qzgtejk5LTlfbUU?oc=5" target="_
+
+**출처**: [https://news.google.com/rss/articles/CBMiqwFBVV95cUxQajZ2dFdsdExTeWhGQmJQRHVLUFIxSnBmTUlrTHc5MDMwV2F1OEg3Vzl2RVNUcEVMMDA2U0ppZTlYbk9fQ0U1SkFEcU5yTThnZjFfRDhYZHVfOS1uR2hxTXNVbHVqQW9ZMEN6cDFkQkZPek11eWgxVVFJR3o4R1VYZHk1V2w2c3JyMllwdEVnQmNPSHdLdWNPdTNJUzNxdjJ4Qzgtejk5LTlfbUU?oc=5](https://news.google.com/rss/articles/CBMiqwFBVV95cUxQajZ2dFdsdExTeWhGQmJQRHVLUFIxSnBmTUlrTHc5MDMwV2F1OEg3Vzl2RVNUcEVMMDA2U0ppZTlYbk9fQ0U1SkFEcU5yTThnZjFfRDhYZHVfOS1uR2hxTXNVbHVqQW9ZMEN6cDFkQkZPek11eWgxVVFJR3o4R1VYZHk1V2w2c3JyMllwdEVnQmNPSHdLdWNPdTNJUzNxdjJ4Qzgtejk5LTlfbUU?oc=5)

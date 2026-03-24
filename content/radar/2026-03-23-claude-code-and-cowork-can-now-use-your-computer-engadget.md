@@ -1,0 +1,15 @@
+---
+title: "Claude Code and Cowork can now use your computer - Engadget"
+date: "2026-03-23"
+tags:
+  - claude-code
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMilgFBVV95cUxQb1MzVVJvNDAyVlNkSVVYeU1kNzBPWXdldDB4d0MwWjRnbVBPbkJjN0JuckdpdERjQ29KM2xhSnAzVTFNYWszSGRyVnVrUVg5MWhEdkUtQThocjJOTmp5RjBfQ2NLWWc2VWVJVGhjSmdSQXJPS3NveExQa3ZMNnhpS3dsOGJNOC12VUx6eDhCYmRPMzlrb1E?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMilgFBVV95cUxQb1MzVVJvNDAyVlNkSVVYeU1kNzBPWXdldDB4d0MwWjRnbVBPbkJjN0JuckdpdERjQ29KM2xhSnAzVTFNYWszSGRyVnVrUVg5MWhEdkUtQThocjJOTmp5RjBfQ2NLWWc2VWVJVGhjSmdSQXJPS3NveExQa3ZMNnhpS3dsOGJNOC12VUx6eDhCYmRPMzlrb1E?oc=5' target='_blank'&gt;Claude Code and Co"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxQb1MzVVJvNDAyVlNkSVVYeU1kNzBPWXdldDB4d0MwWjRnbVBPbkJjN0JuckdpdERjQ29KM2xhSnAzVTFNYWszSGRyVnVrUVg5MWhEdkUtQThocjJOTmp5RjBfQ2NLWWc2VWVJVGhjSmdSQXJPS3NveExQa3ZMNnhpS3dsOGJNOC12VUx6eDhCYmRPMzlrb1E?oc=5" target="_blank"&gt;Claude Code and Co
+
+**출처**: [https://news.google.com/rss/articles/CBMilgFBVV95cUxQb1MzVVJvNDAyVlNkSVVYeU1kNzBPWXdldDB4d0MwWjRnbVBPbkJjN0JuckdpdERjQ29KM2xhSnAzVTFNYWszSGRyVnVrUVg5MWhEdkUtQThocjJOTmp5RjBfQ2NLWWc2VWVJVGhjSmdSQXJPS3NveExQa3ZMNnhpS3dsOGJNOC12VUx6eDhCYmRPMzlrb1E?oc=5](https://news.google.com/rss/articles/CBMilgFBVV95cUxQb1MzVVJvNDAyVlNkSVVYeU1kNzBPWXdldDB4d0MwWjRnbVBPbkJjN0JuckdpdERjQ29KM2xhSnAzVTFNYWszSGRyVnVrUVg5MWhEdkUtQThocjJOTmp5RjBfQ2NLWWc2VWVJVGhjSmdSQXJPS3NveExQa3ZMNnhpS3dsOGJNOC12VUx6eDhCYmRPMzlrb1E?oc=5)
