@@ -1,0 +1,16 @@
+---
+title: "Anthropic unveils Claude Code Security to detect and fix code bugs - Security Affairs"
+date: "2026-02-23"
+tags:
+  - claude-code
+  - security
+score: 92
+sourceUrl: "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaVU3NVJrVmFXU3VfSG9UaVpaOUduS1JDV1REcDR5Q3cyVVZJenQyS1NTQ0taNGFSWjZVUzBhc1gwTGFVeVZnSjVnT1QzcEZmYldKOGRLcW16Zi0ydHlRVDlzaXh4cjJrU2RUOEFhbDVFdWFwT3IwZEZ6MEs4Zm1jZF8xMHRmOUdWejdVYXZuTmExaUJFWVpvVWYzbWhLbVItQnlwdHIxNUdIdERWWkE?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMirgFBVV95cUxQaVU3NVJrVmFXU3VfSG9UaVpaOUduS1JDV1REcDR5Q3cyVVZJenQyS1NTQ0taNGFSWjZVUzBhc1gwTGFVeVZnSjVnT1QzcEZmYldKOGRLcW16Zi0ydHlRVDlzaXh4cjJrU2RUOEFhbDVFdWFwT3IwZEZ6MEs4Zm1jZF8xMHRmOUdWejdVYXZuTmExaUJFWVpvVWYzbWhLbVItQnlwdHIxNUdIdERWWkE?oc=5' targe"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQaVU3NVJrVmFXU3VfSG9UaVpaOUduS1JDV1REcDR5Q3cyVVZJenQyS1NTQ0taNGFSWjZVUzBhc1gwTGFVeVZnSjVnT1QzcEZmYldKOGRLcW16Zi0ydHlRVDlzaXh4cjJrU2RUOEFhbDVFdWFwT3IwZEZ6MEs4Zm1jZF8xMHRmOUdWejdVYXZuTmExaUJFWVpvVWYzbWhLbVItQnlwdHIxNUdIdERWWkE?oc=5" targe
+
+**출처**: [https://news.google.com/rss/articles/CBMirgFBVV95cUxQaVU3NVJrVmFXU3VfSG9UaVpaOUduS1JDV1REcDR5Q3cyVVZJenQyS1NTQ0taNGFSWjZVUzBhc1gwTGFVeVZnSjVnT1QzcEZmYldKOGRLcW16Zi0ydHlRVDlzaXh4cjJrU2RUOEFhbDVFdWFwT3IwZEZ6MEs4Zm1jZF8xMHRmOUdWejdVYXZuTmExaUJFWVpvVWYzbWhLbVItQnlwdHIxNUdIdERWWkE?oc=5](https://news.google.com/rss/articles/CBMirgFBVV95cUxQaVU3NVJrVmFXU3VfSG9UaVpaOUduS1JDV1REcDR5Q3cyVVZJenQyS1NTQ0taNGFSWjZVUzBhc1gwTGFVeVZnSjVnT1QzcEZmYldKOGRLcW16Zi0ydHlRVDlzaXh4cjJrU2RUOEFhbDVFdWFwT3IwZEZ6MEs4Zm1jZF8xMHRmOUdWejdVYXZuTmExaUJFWVpvVWYzbWhLbVItQnlwdHIxNUdIdERWWkE?oc=5)
