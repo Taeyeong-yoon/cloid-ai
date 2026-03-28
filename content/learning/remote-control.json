@@ -30,21 +30,21 @@
     },
     {
       "type": "video",
+      "title": "폰 하나로 PC 원격 제어하는 클로드 역대급 신기능! - Claude Dispatch 소개",
+      "url": "https://www.youtube.com/watch?v=_-yNiESnzL0",
+      "description": "밖에서 갑자기 급한 업무 요청이 왔을 때, 노트북 없어서 당황하신 적 많으시죠?   이제 스마트폰 하나면 충분합니다! 클로드 데스크톱 ..."
+    },
+    {
+      "type": "video",
+      "title": "어디서든 이어 하는 Claude Code 원격 제어 사용법",
+      "url": "https://www.youtube.com/watch?v=BYk7QvsleBo",
+      "description": "원본 영상: https://www.youtube.com/watch?v=Ko7_tC1fMMM Claude Code 원격 제어 기능을 사용해 책상에서 시작한 세션을 ..."
+    },
+    {
+      "type": "video",
       "title": "PC 앞에 없어도 OK! 안티그래비티(Antigravity) 모바일 원격 제어 프로그램 만들기 (디스코드 &amp; 웹 연동)",
       "url": "https://www.youtube.com/watch?v=MK-MS74UiPM",
       "description": "집 밖에서도, 이동 중에도 내 PC의 안티그래비티를 완벽하게 제어하고 싶으셨나요? 이번 영상에서는 디스코드(Discord)와 웹페이지 ..."
-    },
-    {
-      "type": "video",
-      "title": "커서 AI 브라우저 자동화 미쳤네요... | 당분간 클로드코드 말고 커서 쓸게요",
-      "url": "https://www.youtube.com/watch?v=nUtQLCPhKm8",
-      "description": "여러분 안녕하세요, 개발동생입니다. 다가오는 10월 23일, 3번째 콜로소 강의를 오픈하게 되었습니다! 이번 강의에서는 4가지 SaaS ..."
-    },
-    {
-      "type": "video",
-      "title": "AI 초고수들이 지금 쓰는 툴 3가지",
-      "url": "https://www.youtube.com/watch?v=Z5xxQSrn1v8",
-      "description": ""
     },
     {
       "type": "practice",
