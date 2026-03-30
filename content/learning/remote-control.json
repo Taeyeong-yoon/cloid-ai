@@ -30,21 +30,153 @@
     },
     {
       "type": "video",
-      "title": "폰 하나로 PC 원격 제어하는 클로드 역대급 신기능! - Claude Dispatch 소개",
-      "url": "https://www.youtube.com/watch?v=_-yNiESnzL0",
-      "description": "밖에서 갑자기 급한 업무 요청이 왔을 때, 노트북 없어서 당황하신 적 많으시죠?   이제 스마트폰 하나면 충분합니다! 클로드 데스크톱 ..."
-    },
-    {
-      "type": "video",
       "title": "AI로 견적서 자동화하는 법, 코딩 몰라도 됩니다#ReplitAI #업무자동화 #바이브코딩#견적서자동화 #1인기업 #AI자동화",
       "url": "https://www.youtube.com/watch?v=7gs-oIXqBk0",
       "description": "코딩 한줄 없이 견적서 자동화? 레플릿 AI로 진짜 가능합니다! 견적서, 문자, 이메일, 세금계산서까지 AI한테 자연어로 말하면 하루 만 ..."
     },
     {
       "type": "video",
+      "title": "폰 하나로 PC 원격 제어하는 클로드 역대급 신기능! - Claude Dispatch 소개",
+      "url": "https://www.youtube.com/watch?v=_-yNiESnzL0",
+      "description": "밖에서 갑자기 급한 업무 요청이 왔을 때, 노트북 없어서 당황하신 적 많으시죠?   이제 스마트폰 하나면 충분합니다! 클로드 데스크톱 ..."
+    },
+    {
+      "type": "video",
       "title": "어디서든 이어 하는 Claude Code 원격 제어 사용법",
       "url": "https://www.youtube.com/watch?v=BYk7QvsleBo",
       "description": "원본 영상: https://www.youtube.com/watch?v=Ko7_tC1fMMM Claude Code 원격 제어 기능을 사용해 책상에서 시작한 세션을 ..."
+    },
+    {
+      "type": "video",
+      "title": "PC 앞에 없어도 OK! 안티그래비티(Antigravity) 모바일 원격 제어 프로그램 만들기 (디스코드 &amp; 웹 연동)",
+      "url": "https://www.youtube.com/watch?v=MK-MS74UiPM",
+      "description": "집 밖에서도, 이동 중에도 내 PC의 안티그래비티를 완벽하게 제어하고 싶으셨나요? 이번 영상에서는 디스코드(Discord)와 웹페이지 ..."
+    },
+    {
+      "type": "video",
+      "title": "커서 AI 브라우저 자동화 미쳤네요... | 당분간 클로드코드 말고 커서 쓸게요",
+      "url": "https://www.youtube.com/watch?v=nUtQLCPhKm8",
+      "description": "여러분 안녕하세요, 개발동생입니다. 다가오는 10월 23일, 3번째 콜로소 강의를 오픈하게 되었습니다! 이번 강의에서는 4가지 SaaS ..."
+    },
+    {
+      "type": "video",
+      "title": "[클로드코드 원격제어] 비트코인 자동매매 완벽 가이드 (VPN 보안까지)",
+      "url": "https://www.youtube.com/watch?v=iDy_IGRGS30",
+      "description": "스마트폰 하나로 AI 비트코인 자동매매 봇을 제어한다? Claude Code의 Remote Control 기능을 활용해서 원격 서버에 24시간 ..."
+    },
+    {
+      "type": "video",
+      "title": "디스코드로 Claude Code 원격 제어하는 법 | Channels 공식 기능 완전 정복",
+      "url": "https://www.youtube.com/watch?v=-1ossQAiHf8",
+      "description": "이동 중에도, 침대에서도 Claude Code를 자유롭게! Anthropic이 공식 출시한 Channels 기능으로 디스코드와 Claude Code를 연동 ..."
+    },
+    {
+      "type": "video",
+      "title": "AI 초고수들이 지금 쓰는 툴 3가지",
+      "url": "https://www.youtube.com/watch?v=Z5xxQSrn1v8",
+      "description": ""
+    },
+    {
+      "type": "video",
+      "title": "AI시장 뒤흔든 클로드 코워크 윈도우 버전 출시! 이제 컴퓨터가 알아서 일합니다 (설치 및 사용법 공개)",
+      "url": "https://www.youtube.com/watch?v=rNtBcmYc5xI",
+      "description": "2026년 2월, 많은 분이 기다리시던 클로드 코워크(Claude Cowork) 윈도우 버전이 정식 출시되었습니다. 이제 AI에게 파일을 업로드 ..."
+    },
+    {
+      "type": "video",
+      "title": "제미나이만 가능한 16가지 미친 기능(당신이 AI를 써도 인생이 안 바뀌는 이유를 알려드립니다)",
+      "url": "https://www.youtube.com/watch?v=yRMOochqmq8",
+      "description": "gemini #제미나이 #ai AI시대에 살아남는 가장 완벽한 방법(자면서 돈이 들어오는 구조 만들기) ..."
+    },
+    {
+      "type": "video",
+      "title": "04 AI 기반의 원격모니터링 솔루션- SimpliVity  인포사이트",
+      "url": "https://www.youtube.com/watch?v=e1Kz-Lf5n9M",
+      "description": "simplivity,#심플리비티,#InfoSight."
+    },
+    {
+      "type": "video",
+      "title": "node-Red를 이용해 sonoff 원격제어 (4) [두원공과대학교 AI융합과 김동일교수] 9.9.3",
+      "url": "https://www.youtube.com/watch?v=rQi44Kobl1s",
+      "description": "node-Red 로 sonoff 제어 프로그램 하는 밥을 설명한다. node와 프로토콜 설명 사이트 ..."
+    },
+    {
+      "type": "video",
+      "title": "오픈클로 설치, 이 영상 하나로 종결! (나만의 AI 비서 만들기 A to Z)",
+      "url": "https://www.youtube.com/watch?v=31mbv1Mmf4s",
+      "description": "바이브코딩 #openclaw #오픈클로 [타임라인] 00:00~00:33 : 미리보기 (5분 만에 구축한 AI 비서 시연) 00:53~03:50 : OpenClaw란?"
+    },
+    {
+      "type": "video",
+      "title": "[심플존🎈03] PLC 원격제어,스마트 원격제어",
+      "url": "https://www.youtube.com/watch?v=l4KnNselL2o",
+      "description": "스마트폰 프로그램 개발없이 원격제어하는 방법, 현장에 있는 터치스크린화면을 간단히 내 휴대폰에서 확인하고 바로 제어하는 아주 ..."
+    },
+    {
+      "type": "video",
+      "title": "Otto DIY Robot IBM Cloud 컴퓨터로 제어 [두원공과대학교 AI융합과 김동일교수] 7-1-5",
+      "url": "https://www.youtube.com/watch?v=r2xkk8v23gc",
+      "description": "IBM Cloud 컴퓨터에 접속하여 Otto 로봇을 제어한다. 먼저 공부 할 동영상 : 7-1-4 https://youtu.be/4WVizEywolo."
+    },
+    {
+      "type": "video",
+      "title": "게임은 PC지만 AI는 맥북입니다. 써보면 바로 체감되는 차이점",
+      "url": "https://www.youtube.com/watch?v=fYD4B8ikTBo",
+      "description": "감자친구 월 12000원으로 프롬프트 강의를 시청하세요! https://www.youtube.com/channel/UCPP1HVcKyFThWlpO-JJdXdg/join ..."
+    },
+    {
+      "type": "video",
+      "title": "6/24편 • 원격제어 파이썬 코딩 시작 • 해외주식(#LS증권) 자동화 시스템 원격 제어 메신저 구축",
+      "url": "https://www.youtube.com/watch?v=YuvutEBlzG4",
+      "description": "텔레그램api #원격제어 #AI비서 #해외주식자동화 #ai금융 #증권api ▭▭소개▭▭ 드디어 파이썬으로 원격제어 코딩에 들어갑니다!"
+    },
+    {
+      "type": "video",
+      "title": "BLE를 이용한 원격제어 기본설정편 [두원공과대학교 AI융합과 김동일교수] 1.43.1",
+      "url": "https://www.youtube.com/watch?v=SvR8sGMG6ks",
+      "description": "개발자 : 강호진 BLE를 이용하여 제어하기전 밑준비 영상입니다. 1. esp32 보드 설치 방법 및 컴파일 방법 2. esp32 맥 어드레스 확인 ..."
+    },
+    {
+      "type": "video",
+      "title": "딸깍! 난 팝콘만 먹고, 일은 AI가 다 합니다 ㅋㅋ 진짜 AI 활용법 6가지 (Manus)",
+      "url": "https://www.youtube.com/watch?v=qZ_6dEK_Lwc",
+      "description": "하루하루 엄청난 속도로 발전하는 AI. 이제는 내 컴퓨터 안에서 귀찮은 일, 번거로운 일, 내가 하는 작업 등을 도와줄 수 있다는거 알고 ..."
+    },
+    {
+      "type": "video",
+      "title": "#광고 / 5분만에 설치 가능한 누워서 불끄기템 / 스위치봇",
+      "url": "https://www.youtube.com/watch?v=XKh8MkXi6JU",
+      "description": "shorts #내돈내산 #5분살림 #살림팁 #살림템 #스위치봇 #iot #전자제품 #삶의질향상."
+    },
+    {
+      "type": "video",
+      "title": "1~5강 통합본(미리보기) • 메신저로 채팅하는 해외주식 자동매매 방법 • 해외주식(#LS증권) 자동화 시스템 원격 제어 메신저 구축",
+      "url": "https://www.youtube.com/watch?v=ajJpAQdbyXs",
+      "description": "텔레그램api #원격제어 #AI비서 #해외주식자동화 #ai금융 #증권api ▭▭소개▭▭ 프로그램이 올바르게 작동하고 있는지 확인하기 ..."
+    },
+    {
+      "type": "video",
+      "title": "수백 시간 연구해서 만든 Claude Code 세팅, 여러분은 5분이면 됩니다 (무료 공개)",
+      "url": "https://www.youtube.com/watch?v=3lMjX5Gq1zE",
+      "description": "AI 자동화 실전 강의 신청 ..."
+    },
+    {
+      "type": "video",
+      "title": "클로드 신기능 &#39;컴퓨터 사용&#39; 출시 | 클로드가 내 PC를 직접 장악한다",
+      "url": "https://www.youtube.com/watch?v=xKjKSGfYHvM",
+      "description": "클로드가 드디어 내 PC를 직접 제어합니다! 화면을 보고, 마우스를 움직이고, 앱을 실행하는 '컴퓨터 사용' 기능이 출시됐습니다."
+    },
+    {
+      "type": "video",
+      "title": "Claude Code 왕초보 입문 튜토리얼 23가지 팁 | 클로드코드 설치 사용법 50분 강의 완전정복 2026 가이드",
+      "url": "https://www.youtube.com/watch?v=1_bRmkUvjHA",
+      "description": "안녕하세요 AI싱크클럽입니다. 오늘은 Claude Code 왕초보 입문 영상을 준비했습니다. 코딩 1도 몰라도 괜찮습니다. 설치부터 실전 ..."
+    },
+    {
+      "type": "video",
+      "title": "GETSCREEN.ME 완벽 가이드: 수익성 있는 사업을 위한 원격 제어",
+      "url": "https://www.youtube.com/watch?v=g2VpPPcRiT8",
+      "description": "GETSCREEN.ME를 사용하여 안전하고 효율적인 원격 제어를 활용하는 방법을 알아보세요. 기술 지원, 영업 및 온라인 서비스 자동화 ..."
     },
     {
       "type": "practice",
