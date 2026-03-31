@@ -1,5 +1,52 @@
 export type ContentType = "learning" | "lab" | "skill";
 
+// ── 북마크 ────────────────────────────────────────────────────
+// localStorage 키: "cloid-bookmarks"
+// 값: { textbooks: string[], labs: string[] }
+
+const BOOKMARKS_KEY = "cloid-bookmarks";
+
+interface Bookmarks {
+  textbooks: string[];
+  labs: string[];
+}
+
+function loadBookmarks(): Bookmarks {
+  if (typeof window === "undefined") return { textbooks: [], labs: [] };
+  try {
+    const raw = localStorage.getItem(BOOKMARKS_KEY);
+    if (!raw) return { textbooks: [], labs: [] };
+    const parsed = JSON.parse(raw);
+    return {
+      textbooks: Array.isArray(parsed.textbooks) ? parsed.textbooks : [],
+      labs: Array.isArray(parsed.labs) ? parsed.labs : [],
+    };
+  } catch {
+    return { textbooks: [], labs: [] };
+  }
+}
+
+function saveBookmarks(bms: Bookmarks): void {
+  localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(bms));
+}
+
+export function isBookmarked(type: "textbooks" | "labs", id: string): boolean {
+  return loadBookmarks()[type].includes(id);
+}
+
+export function toggleBookmark(type: "textbooks" | "labs", id: string): boolean {
+  const bms = loadBookmarks();
+  const list = bms[type];
+  const exists = list.includes(id);
+  bms[type] = exists ? list.filter((i) => i !== id) : [...list, id];
+  saveBookmarks(bms);
+  return !exists; // true = now bookmarked
+}
+
+export function getAllBookmarks(): Bookmarks {
+  return loadBookmarks();
+}
+
 // localStorage 키: "cloid-progress:{contentType}:{contentId}"
 // 값: JSON.stringify(number[]) — 완료된 step 인덱스 배열
 
