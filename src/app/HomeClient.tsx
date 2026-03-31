@@ -1,22 +1,26 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import type { ComponentType } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
   ArrowRight,
+  Bookmark,
   BookOpen,
   ExternalLink,
   FlaskConical,
   Sparkles,
   TrendingUp,
+  X,
   Zap,
 } from "lucide-react";
 import AskAI from "@/components/AskAI";
 import HeroVisual from "@/components/HeroVisual";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 import { AI_TOOLS, POPULAR_TAGS } from "@/constants/home";
+import { getAllBookmarks } from "@/lib/progress";
+import { TEXTBOOKS } from "@/constants/textbooks";
 
 function TopicTag({ tag, onClick }: { tag: string; onClick?: () => void }) {
   return (
@@ -187,10 +191,25 @@ export default function HomeClient({
   const { locale, t } = useTranslation();
   const router = useRouter();
   const searchParams = useSearchParams();
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  const [bookmarkedTextbooks, setBookmarkedTextbooks] = useState<typeof TEXTBOOKS>([]);
+  const [bookmarkedLabIds, setBookmarkedLabIds] = useState<string[]>([]);
 
   useEffect(() => {
     void searchParams;
+    const dismissed = localStorage.getItem("cloid-onboarding-dismissed");
+    if (!dismissed) setShowOnboarding(true);
+    // Load bookmarks
+    const bms = getAllBookmarks();
+    const matchedTextbooks = TEXTBOOKS.filter((tb) => bms.textbooks.includes(tb.id));
+    setBookmarkedTextbooks(matchedTextbooks);
+    setBookmarkedLabIds(bms.labs);
   }, [searchParams]);
+
+  function dismissOnboarding() {
+    localStorage.setItem("cloid-onboarding-dismissed", "1");
+    setShowOnboarding(false);
+  }
 
   function handleTagClick(tag: string) {
     router.push(`/learning?q=${encodeURIComponent(tag)}`);
@@ -260,6 +279,100 @@ export default function HomeClient({
 
   return (
     <div className="space-y-10">
+
+      {/* 제작 스토리 교재 배너 */}
+      <a
+        href="/story.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="animate-fade-in-up group flex items-center gap-4 rounded-2xl border border-amber-500/40 bg-gradient-to-r from-amber-950/60 to-orange-950/40 px-5 py-4 transition-all hover:border-amber-400/60 hover:from-amber-950/80 hover:to-orange-950/60"
+      >
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/20 text-xl">
+          📖
+        </div>
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-bold text-amber-200 group-hover:text-amber-100 transition-colors">
+            {locale === "ko" ? "코딩을 몰라도 AI 플랫폼을 만들 수 있습니다" : "You Can Build an AI Platform Without Coding"}
+          </p>
+          <p className="mt-0.5 text-xs text-amber-400/80 leading-relaxed">
+            {locale === "ko"
+              ? "마스터플랜 · 에이전트팀 · 병렬작업 · n8n 자동화 — 이 플랫폼을 만든 실제 과정을 인터랙티브 교재로 공개합니다"
+              : "Master plan · Agent teams · Parallel work · n8n automation — the real story behind this platform"}
+          </p>
+        </div>
+        <div className="shrink-0 text-amber-400 text-lg group-hover:translate-x-1 transition-transform">→</div>
+      </a>
+
+      {/* 첫 방문자 온보딩 배너 */}
+      {showOnboarding && (
+        <div className="animate-fade-in-up relative flex items-start gap-4 rounded-2xl border border-violet-500/30 bg-violet-950/40 px-5 py-4">
+          <Sparkles size={18} className="mt-0.5 shrink-0 text-violet-400" />
+          <div className="flex-1 min-w-0">
+            <p className="text-sm font-semibold text-violet-200">
+              {locale === "ko" ? "처음 오셨나요? 여기서 시작하세요" : "New here? Start your journey"}
+            </p>
+            <p className="mt-1 text-xs text-slate-400 leading-relaxed">
+              {locale === "ko"
+                ? "Claude AI를 처음 배운다면 → 인터랙티브 교재부터. 기능이 궁금하다면 → 클로드 허브. 바로 해보고 싶다면 → 직접 실습."
+                : "New to Claude AI? Start with Interactive Textbooks. Curious about features? Check Claude Hub. Ready to try? Jump into Labs."}
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              <Link href="/radar" onClick={dismissOnboarding} className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-300 hover:bg-emerald-500/20 transition-colors">
+                {locale === "ko" ? "인터랙티브 교재 →" : "Interactive Textbooks →"}
+              </Link>
+              <Link href="/skills" onClick={dismissOnboarding} className="rounded-full border border-violet-500/40 bg-violet-500/10 px-3 py-1 text-xs text-violet-300 hover:bg-violet-500/20 transition-colors">
+                {locale === "ko" ? "클로드 허브 →" : "Claude Hub →"}
+              </Link>
+              <Link href="/labs" onClick={dismissOnboarding} className="rounded-full border border-amber-500/40 bg-amber-500/10 px-3 py-1 text-xs text-amber-300 hover:bg-amber-500/20 transition-colors">
+                {locale === "ko" ? "직접 실습 →" : "Hands-on Labs →"}
+              </Link>
+            </div>
+          </div>
+          <button onClick={dismissOnboarding} className="shrink-0 text-slate-500 hover:text-slate-300 transition-colors">
+            <X size={15} />
+          </button>
+        </div>
+      )}
+
+      {/* Continue Learning — bookmark panel */}
+      {(bookmarkedTextbooks.length > 0 || bookmarkedLabIds.length > 0) && (
+        <div className="animate-fade-in-up rounded-2xl border border-slate-800 bg-slate-950/60 p-4">
+          <div className="mb-3 flex items-center gap-2">
+            <Bookmark size={14} className="text-violet-400" fill="currentColor" />
+            <span className="text-sm font-semibold text-white">
+              {locale === "ko" ? "이어 학습하기" : "Continue Learning"}
+            </span>
+            <span className="ml-auto text-xs text-slate-500">
+              {bookmarkedTextbooks.length + bookmarkedLabIds.length}{" "}
+              {locale === "ko" ? "개 북마크" : "saved"}
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {bookmarkedTextbooks.map((tb) => (
+              <Link
+                key={tb.id}
+                href={`/radar/${tb.id}`}
+                className="inline-flex items-center gap-1.5 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-xs text-emerald-300 transition-colors hover:border-emerald-500/40 hover:bg-emerald-500/15"
+              >
+                <BookOpen size={11} />
+                {locale === "ko" ? tb.title : tb.titleEn}
+              </Link>
+            ))}
+            {bookmarkedLabIds.length > 0 && (
+              <Link
+                href="/labs"
+                className="inline-flex items-center gap-1.5 rounded-xl border border-violet-500/20 bg-violet-500/10 px-3 py-1.5 text-xs text-violet-300 transition-colors hover:border-violet-500/40 hover:bg-violet-500/15"
+              >
+                <FlaskConical size={11} />
+                {locale === "ko"
+                  ? `실습 ${bookmarkedLabIds.length}개 저장됨`
+                  : `${bookmarkedLabIds.length} lab${bookmarkedLabIds.length > 1 ? "s" : ""} saved`}
+              </Link>
+            )}
+          </div>
+        </div>
+      )}
+
       <section className="hero-glow animate-fade-in-up py-4" style={{ animationDelay: "0ms" }}>
         <div className="flex flex-col md:flex-row md:items-center md:gap-8 lg:gap-12">
           <div className="min-w-0 flex-1">

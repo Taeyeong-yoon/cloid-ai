@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>코딩을 몰라도 AI 플랫폼을 만들 수 있습니다</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100%;overflow:hidden;font-family:'Noto Serif KR','Georgia',serif;background:#1a1a2e;}
+body{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#2d1b69 0%,#1a1a2e 60%);}
+
+/* ── Book Container ── */
+.scene{perspective:3000px;width:100%;display:flex;justify-content:center;align-items:center;}
+.book-wrap{position:relative;width:860px;height:560px;}
+
+/* ── Book shadow ── */
+.book-wrap::after{content:'';position:absolute;bottom:-30px;left:5%;right:5%;height:40px;background:rgba(0,0,0,0.5);filter:blur(20px);border-radius:50%;z-index:0;}
+
+/* ── Pages ── */
+.book{position:relative;width:860px;height:560px;transform-style:preserve-3d;filter:drop-shadow(0 20px 50px rgba(0,0,0,0.7));}
+
+.spread{position:absolute;inset:0;display:flex;border-radius:4px 12px 12px 4px;}
+
+/* Paper texture pages */
+.page-left,.page-right{
+  height:100%;overflow:hidden;
+  background:linear-gradient(180deg,#fdf8f0 0%,#faf4e8 100%);
+}
+.page-left{
+  width:50%;border-radius:4px 0 0 4px;
+  border-right:1px solid #ddd0b8;
+  box-shadow:inset -8px 0 20px rgba(0,0,0,0.08);
+}
+.page-right{
+  width:50%;border-radius:0 12px 12px 0;
+  box-shadow:inset 8px 0 20px rgba(0,0,0,0.06);
+}
+
+/* Spine */
+.spine{position:absolute;left:50%;top:0;transform:translateX(-50%);width:14px;height:100%;background:linear-gradient(90deg,#c8a96e,#e8c97e,#c8a96e);z-index:20;box-shadow:0 0 12px rgba(0,0,0,0.3);}
+.spine::before{content:'';position:absolute;left:3px;top:10px;right:3px;bottom:10px;background:linear-gradient(180deg,transparent,rgba(0,0,0,0.1),transparent);}
+
+/* ── Page Flip Layer ── */
+.flip-layer{
+  position:absolute;right:0;top:0;width:50%;height:100%;
+  transform-style:preserve-3d;transform-origin:left center;
+  transition:transform 0.85s cubic-bezier(0.645,0.045,0.355,1);
+  z-index:30;
+}
+.flip-layer.go-forward{transform:rotateY(-180deg);}
+.flip-layer.go-backward{transform:rotateY(0deg);}
+
+.flip-front,.flip-back{
+  position:absolute;inset:0;backface-visibility:hidden;
+  background:linear-gradient(180deg,#fdf8f0 0%,#faf4e8 100%);
+  border-radius:0 12px 12px 0;
+  overflow:hidden;
+}
+.flip-back{
+  transform:rotateY(180deg);
+  border-radius:4px 0 0 4px;
+  border-right:1px solid #ddd0b8;
+  box-shadow:inset -8px 0 20px rgba(0,0,0,0.08);
+}
+
+/* ── Page Content Styles ── */
+.page-inner{padding:40px 36px;height:100%;display:flex;flex-direction:column;position:relative;}
+.page-inner.right-inner{padding:40px 36px;}
+
+.page-num{position:absolute;bottom:18px;font-size:11px;color:#a0916e;letter-spacing:1px;font-style:italic;}
+.page-num.left{left:36px;}
+.page-num.right{right:36px;}
+
+.chapter-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#c8a040;margin-bottom:10px;}
+.page-title{font-size:22px;font-weight:700;color:#2c1810;line-height:1.3;margin-bottom:16px;font-family:'Georgia',serif;}
+.page-body{font-size:13px;color:#4a3728;line-height:1.85;flex:1;}
+.page-body p{margin-bottom:12px;}
+.page-body strong{color:#2c1810;font-weight:700;}
+
+.divider{width:40px;height:2px;background:#c8a040;margin:12px 0;}
+
+/* ── Cover ── */
+.cover-spread{background:linear-gradient(135deg,#1a0a3e 0%,#0f0a2e 50%,#1a0a3e 100%)!important;border-radius:4px 12px 12px 4px;}
+.cover-left{
+  width:50%;height:100%;
+  background:linear-gradient(160deg,#2d1060 0%,#1a0a3e 100%);
+  border-radius:4px 0 0 4px;
+  display:flex;align-items:center;justify-content:center;
+  border-right:1px solid rgba(255,255,255,0.05);
+  overflow:hidden;position:relative;
+}
+.cover-left::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 40%,rgba(180,120,255,0.15),transparent 60%);
+}
+.cover-atom{font-size:120px;opacity:0.15;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);animation:spin 20s linear infinite;}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
+.cover-badge{
+  position:relative;z-index:1;text-align:center;
+  background:rgba(255,255,255,0.05);border:1px solid rgba(180,120,255,0.3);
+  border-radius:12px;padding:24px 20px;margin:20px;
+}
+.cover-badge .sub{font-size:11px;color:#a78bfa;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;}
+.cover-badge .big{font-size:48px;color:#f0e8ff;font-weight:900;line-height:1;}
+.cover-badge .desc{font-size:12px;color:#c4b5fd;margin-top:8px;}
+
+.cover-right{
+  width:50%;height:100%;
+  background:linear-gradient(160deg,#1a0a3e 0%,#0f1040 100%);
+  border-radius:0 12px 12px 0;
+  display:flex;flex-direction:column;justify-content:center;padding:50px 44px;
+  position:relative;overflow:hidden;
+}
+.cover-right::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 60%,rgba(99,102,241,0.1),transparent 60%);}
+.cover-main-title{font-size:26px;font-weight:800;color:#f0e8ff;line-height:1.35;margin-bottom:20px;position:relative;z-index:1;}
+.cover-main-title span{color:#c084fc;}
+.cover-subtitle{font-size:13px;color:#a78bfa;line-height:1.7;margin-bottom:28px;position:relative;z-index:1;}
+.cover-tag{display:inline-block;padding:5px 14px;border-radius:20px;font-size:11px;background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.3);color:#c084fc;margin:3px 4px 3px 0;position:relative;z-index:1;}
+.cover-footer{position:absolute;bottom:28px;left:44px;right:44px;z-index:1;}
+.cover-footer p{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:1px;}
+
+/* ── Highlight Box ── */
+.hl-box{background:linear-gradient(135deg,#fff8e8,#fff3d4);border-left:4px solid #c8a040;border-radius:0 8px 8px 0;padding:12px 16px;margin:14px 0;font-size:12.5px;color:#3a2810;}
+.hl-box strong{color:#8b5e08;}
+
+/* ── Prompt Block ── */
+.prompt-block{background:#1e1e2e;border-radius:10px;padding:16px;margin:12px 0;border:1px solid rgba(180,120,255,0.2);}
+.prompt-block .pb-label{font-size:10px;color:#7c6aaa;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;font-family:monospace;}
+.prompt-block .pb-text{font-size:11.5px;color:#c9c0e8;line-height:1.7;font-family:'Consolas',monospace;white-space:pre-wrap;}
+
+/* ── Role Card ── */
+.role-cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0;}
+.role-card{background:rgba(200,160,64,0.08);border:1px solid rgba(200,160,64,0.2);border-radius:8px;padding:10px 12px;}
+.role-card .rc-name{font-size:11px;font-weight:700;color:#c8a040;margin-bottom:3px;}
+.role-card .rc-role{font-size:10.5px;color:#6a5040;}
+.role-card .rc-work{font-size:10px;color:#8a7060;margin-top:4px;line-height:1.5;}
+
+/* ── Inspector Card ── */
+.inspector-list{margin:8px 0;}
+.inspector-item{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #e8dcc8;}
+.inspector-item:last-child{border:none;}
+.insp-icon{font-size:22px;flex-shrink:0;}
+.insp-info .insp-name{font-size:12px;font-weight:700;color:#2c1810;}
+.insp-info .insp-role{font-size:11px;color:#7a6858;margin-top:2px;}
+.insp-info .insp-task{font-size:11px;color:#5a4838;margin-top:4px;line-height:1.5;}
+
+/* ── Phase Table ── */
+.phase-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:11px;}
+.phase-table th{background:#2c1810;color:#f0e0c0;padding:8px 10px;text-align:left;font-weight:600;}
+.phase-table td{padding:8px 10px;border-bottom:1px solid #e8dcc8;color:#4a3728;vertical-align:top;}
+.phase-table tr:hover td{background:#fdf0e0;}
+.tag-claude{background:#dbeafe;color:#1d4ed8;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;}
+.tag-codex{background:#dcfce7;color:#15803d;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;}
+
+/* ── Step Flow ── */
+.flow-steps{margin:10px 0;}
+.flow-step{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #eee0cc;}
+.flow-step:last-child{border:none;}
+.step-num{width:24px;height:24px;border-radius:50%;background:#c8a040;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.step-text{font-size:12px;color:#4a3728;line-height:1.6;}
+.step-text strong{color:#2c1810;}
+
+/* ── Back Cover ── */
+.back-cover{background:linear-gradient(135deg,#0f0a2e 0%,#1a0a3e 100%)!important;border-radius:4px 12px 12px 4px!important;display:flex;align-items:center;justify-content:center;}
+.bc-inner{text-align:center;padding:40px;color:rgba(255,255,255,0.6);}
+.bc-inner .bc-title{font-size:18px;color:#c084fc;margin-bottom:12px;}
+.bc-inner .bc-url{font-size:13px;color:#7c6aaa;margin-top:16px;}
+
+/* ── TOC ── */
+.toc-list{list-style:none;margin:10px 0;}
+.toc-list li{display:flex;align-items:baseline;gap:0;padding:7px 0;border-bottom:1px dotted #ddd0b8;font-size:12.5px;color:#4a3728;}
+.toc-list li .toc-ch{width:80px;color:#c8a040;font-size:11px;font-weight:700;flex-shrink:0;}
+.toc-list li .toc-title{flex:1;}
+.toc-list li .toc-pg{color:#a0916e;font-size:11px;margin-left:8px;}
+
+/* ── Navigation ── */
+.nav-area{position:fixed;bottom:32px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:20px;z-index:100;}
+.nav-btn{
+  width:52px;height:52px;border-radius:50%;border:none;cursor:pointer;
+  background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.2);
+  color:#fff;font-size:18px;
+  transition:all 0.25s;display:flex;align-items:center;justify-content:center;
+}
+.nav-btn:hover:not(:disabled){background:rgba(180,120,255,0.3);border-color:rgba(180,120,255,0.5);transform:scale(1.08);}
+.nav-btn:disabled{opacity:0.2;cursor:not-allowed;}
+.nav-info{text-align:center;min-width:80px;}
+.nav-info .spread-num{font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:1px;}
+.nav-info .spread-title{font-size:12px;color:rgba(255,255,255,0.8);margin-top:2px;}
+
+/* ── Corner Turn Hint ── */
+.corner-hint{
+  position:absolute;bottom:0;right:0;width:36px;height:36px;z-index:40;cursor:pointer;
+  background:linear-gradient(135deg,transparent 50%,rgba(200,160,64,0.2) 50%);
+  border-radius:0 0 12px 0;
+  transition:all 0.2s;
+}
+.corner-hint:hover{background:linear-gradient(135deg,transparent 50%,rgba(200,160,64,0.4) 50%);}
+
+@media(max-width:900px){
+  .book-wrap,.book,.spread{width:100vw;height:auto;min-height:400px;}
+  .page-left,.page-right{width:50%;}
+  .page-inner{padding:24px 20px;}
+  .cover-main-title{font-size:18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="scene">
+<div class="book-wrap">
+<div class="book" id="book">
+
+  <!-- Left static page -->
+  <div class="spread" id="spreadEl">
+    <div class="page-left" id="leftPage"></div>
+    <div class="spine"></div>
+    <div class="page-right" id="rightBg"></div>
+    <!-- Flip layer -->
+    <div class="flip-layer" id="flipLayer">
+      <div class="flip-front" id="flipFront"></div>
+      <div class="flip-back" id="flipBack"></div>
+    </div>
+    <div class="corner-hint" id="cornerHint" title="다음 페이지"></div>
+  </div>
+
+</div>
+</div>
+</div>
+
+<!-- Navigation -->
+<div class="nav-area">
+  <button class="nav-btn" id="prevBtn" title="이전">&#8592;</button>
+  <div class="nav-info">
+    <div class="spread-num" id="spreadNum">1 / 10</div>
+    <div class="spread-title" id="spreadTitle">표지</div>
+  </div>
+  <button class="nav-btn" id="nextBtn" title="다음">&#8594;</button>
+</div>
+
+<script>
+// ─── CONTENT DATA ───────────────────────────────────────────
+
+const spreads = [
+
+// 0: COVER
+{
+  type: 'cover',
+  title: '표지',
+  left: `<div class="cover-left">
+    <div class="cover-atom">⚛</div>
+    <div class="cover-badge">
+      <div class="sub">cloid.ai</div>
+      <div class="big">AI</div>
+      <div class="desc">실제 제작 스토리</div>
+    </div>
+  </div>`,
+  right: `<div class="cover-right">
+    <div class="cover-main-title">코딩을 몰라도<br><span>AI 플랫폼을</span><br>만들 수 있습니다</div>
+    <div class="cover-subtitle">LLM + CLI만으로<br>실제 AI 학습 플랫폼을 만든<br>처음부터 끝까지의 이야기</div>
+    <div>
+      <span class="cover-tag">Claude</span>
+      <span class="cover-tag">Claude Code CLI</span>
+      <span class="cover-tag">Codex CLI</span>
+      <span class="cover-tag">프롬프트 엔지니어링</span>
+    </div>
+    <div class="cover-footer"><p>cloid.ai · 2026</p></div>
+  </div>`
+},
+
+// 1: 들어가며
+{
+  title: '들어가며',
+  left: `<div class="page-inner">
+    <div class="chapter-label">들어가며</div>
+    <div class="page-title">처음엔 실패했습니다<br>— 그래서 더 믿을 수 있습니다</div>
+    <div class="divider"></div>
+    <div class="page-body">
+      <p>첫 진단 점수는 <strong>10점 만점에 3.6점</strong>이었습니다. 히어로 문구는 추상적이었고, 실습은 거의 없었고, 사용자 동기부여는 0에 가까웠습니다.</p>
+      <p>마스터플랜도 처음엔 엉성했습니다. 프롬프트를 고치고, 다시 쓰고, 검증단한테 퇴짜 맞고, 또 고쳤습니다.</p>
+      <div class="hl-box" style="border-left-color:#e88040;">
+        <strong>이 책이 자기자랑이 아닌 이유</strong><br>
+        시행착오가 있었고, 실패가 있었고,<br>그 과정이 전부 여기 담겨 있기 때문입니다.
+      </div>
+      <p>그리고 결국 작동했습니다. <strong>당신도 같은 방법으로 할 수 있습니다.</strong></p>
+    </div>
+    <div class="page-num left">2</div>
+  </div>`,
+  right: `<div class="page-inner right-inner">
+    <div class="chapter-label">들어가며</div>
+    <div class="page-title">이 책을 읽으면<br>당신이 얻는 것</div>
+    <div class="divider"></div>
+    <div class="page-body">
+      <div class="flow-steps">
+        <div class="flow-step"><div class="step-num">①</div><div class="step-text"><strong>마스터플랜 작성법</strong><br>AI에게 대규모 작업을 맡기는 설계 방법</div></div>
+        <div class="flow-step"><div class="step-num">②</div><div class="step-text"><strong>에이전트 팀 운영법</strong><br>역할 분담으로 품질을 높이는 방법</div></div>
+        <div class="flow-step"><div class="step-num">③</div><div class="step-text"><strong>병렬 작업 분배법</strong><br>두 AI를 동시에 써서 속도를 2배로</div></div>
+        <div class="flow-step"><div class="step-num">④</div><div class="step-text"><strong>n8n 자동화 연결</strong><br>이메일 수신 → AI 분석 → 홈페이지 자동등재</div></div>
+      </div>
+      <div class="hl-box" style="margin-top:8px;">
+        <strong>코딩 지식 필요 없음</strong><br>
+        필요한 건 아이디어와 이 책의 방법뿐입니다.
+      </div>
+    </div>
+    <div class="page-num right">3</div>
+  </div>`
+},
+
+// 2: 목차
+{
+  title: '목차',
+  left: `<div class="page-inner">
+    <div class="chapter-label">목차</div>
+    <div class="page-title">여정의 전체 흐름</div>
+    <div class="divider"></div>
+    <ul class="toc-list">
+      <li><span class="toc-ch">들어가며</span><span class="toc-title">이 책의 증거</span><span class="toc-pg">2</span></li>
+      <li><span class="toc-ch">Chapter 1</span><span class="toc-title">마스터플랜 수립</span><span class="toc-pg">6</span></li>
+      <li><span class="toc-ch">Chapter 2</span><span class="toc-title">에이전트 팀 5명 구성</span><span class="toc-pg">8</span></li>
+      <li><span class="toc-ch">Chapter 3</span><span class="toc-title">검증단 3명</span><span class="toc-pg">10</span></li>
+      <li><span class="toc-ch">Chapter 4</span><span class="toc-title">병렬 작업 분배</span><span class="toc-pg">12</span></li>
+      <li><span class="toc-ch">Chapter 5</span><span class="toc-title">머지와 완성</span><span class="toc-pg">14</span></li>
+      <li><span class="toc-ch">Chapter 6</span><span class="toc-title">n8n 자동화 연결</span><span class="toc-pg">16</span></li>
+      <li><span class="toc-ch">에필로그</span><span class="toc-title">당신의 첫 번째 플랫폼</span><span class="toc-pg">18</span></li>
+    </ul>
+    <div class="page-num left">4</div>
+  </div>`,
+  right: `<div class="page-inner right-inner">
+    <div class="chapter-label">목차</div>
+    <div class="page-title">사용한 도구들</div>
+    <div class="divider"></div>
+    <div class="page-body">
+      <div class="flow-steps">
+        <div class="flow-step"><div class="step-num">1</div><div class="step-text"><strong>Claude 웹 (claude.ai)</strong><br>전략 수립, 마스터플랜 작성, 에이전트 역할 설계</div></div>
+        <div class="flow-step"><div class="step-num">2</div><div class="step-text"><strong>Claude Code CLI</strong><br>터미널에서 직접 코드 생성 및 파일 수정 실행</div></div>
+        <div class="flow-step"><div class="step-num">3</div><div class="step-text"><strong>Codex CLI</strong><br>Claude Code와 동시에 다른 기능 병렬 개발</div></div>
+        <div class="flow-step"><div class="step-num">4</div><div class="step-text"><strong>GitHub</strong><br>각자 만든 것을 하나로 합치는 머지 작업</div></div>
+      </div>
+    </div>
+    <div class="page-num right">5</div>
+  </div>`
+},
+
+// 3: Chapter 1 마스터플랜
+{
+  title: 'Chapter 1 · 마스터플랜',
+  left: `<div class="page-inner">
+    <div class="chapter-label">Chapter 1</div>
+    <div class="page-title">모든 것은 Claude 웹에서<br>마스터플랜으로 시작됐다</div>
+    <div class="divider"></div>
+    <div class="page-body">
+      <p>개발 시작 전, 먼저 Claude 웹에서 <strong>전체 설계도</strong>를 만들었습니다.</p>
+      <p>당시 cloid.ai의 진단 점수는 <strong>10점 만점에 3.6점</strong>이었습니다. 목표는 7점 이상으로 끌어올리는 것.</p>
+      <div class="hl-box">
+        <strong>마스터플랜 = "AI에게 주는 설계 명세서"</strong><br>
+        무엇을 만들지, 어떤 순서로, 어떤 규칙을 지키면서, 무엇을 건드리지 말아야 하는지 — 전부 문서로 정의했습니다.
+      </div>
+      <p>이 문서 하나를 Claude Code CLI에 붙여넣으면, 나머지는 AI가 알아서 실행했습니다.</p>
+    </div>
+    <div class="page-num left">6</div>
+  </div>`,
+  right: `<div class="page-inner right-inner">
+    <div class="chapter-label">Chapter 1 · 실제 마스터플랜</div>
+    <div class="page-title">실제로 사용한<br>프롬프트 구조</div>
+    <div class="divider"></div>
+    <div class="prompt-block">
+      <div class="pb-label">마스터프롬프트 핵심 구조</div>
+      <div class="pb-text">너는 cloid.ai 프로젝트의
+대규모 개선 작업을 수행한다.
+
+## 전체 규칙
+- 기존 Next.js App Router 패턴 유지
+- 모든 텍스트는 i18n 키 사용
+- Tailwind 다크 테마 유지
+- 각 PHASE 완료 후 빌드 확인
+
+## PHASE 1: 치명적 문제 해결
+## PHASE 2: 핵심 기능 추가
+## PHASE 3: 콘텐츠 강화
+...</div>
+    </div>
+    <div class="hl-box" style="font-size:11.5px;">
+      💡 <strong>핵심 원칙</strong>: AI가 무엇을 해야 하는지뿐 아니라 <strong>하지 말아야 하는 것</strong>도 명확히 적었습니다. 이것이 충돌을 막는 열쇠였습니다.
+    </div>
+    <div class="page-num right">7</div>
+  </div>`
+},
+
+// 4: Chapter 2 에이전트팀
+{
+  title: 'Chapter 2 · 에이전트 팀',
+  left: `<div class="page-inner">
+    <div class="chapter-label">Chapter 2</div>
+    <div class="page-title">5명의 전문가 팀을<br>Claude로 만들었다</div>
+    <div class="divider"></div>
+    <div class="page-body">
+      <p>혼자 모든 걸 설계하면 놓치는 것이 생깁니다. 그래서 <strong>각 분야 전문가 역할</strong>을 Claude에게 부여했습니다.</p>
+      <p>Claude 웹에서 박사 5명의 역할과 담당 범위를 정의하고, 각자가 교재의 특정 섹션을 담당하도록 했습니다.</p>
+      <div class="hl-box">
+        <strong>에이전트 팀의 핵심 원리</strong><br>
+        한 AI에게 모든 것을 물어보는 것보다, 역할을 나눠서 각 전문가에게 물어보면 훨씬 정교한 결과물이 나옵니다.
+      </div>
+    </div>
+    <div class="page-num left">8</div>
+  </div>`,
+  right: `<div class="page-inner right-inner">
+    <div class="chapter-label">Chapter 2 · 팀 구성</div>
+    <div class="page-title">5명의 박사 역할</div>
+    <div class="divider"></div>
+    <div class="role-cards">
+      <div class="role-card">
+        <div class="rc-name">🟡 Dr. Foundation</div>
+        <div class="rc-role">기초개념 박사</div>
+        <div class="rc-work">처음 배우는 사람 눈높이에서 개념 풀어주기</div>
+      </div>
+      <div class="role-card">
+        <div class="rc-name">🔵 Dr. Workflow</div>
+        <div class="rc-role">작업흐름 박사</div>
+        <div class="rc-work">실제 작업 순서와 흐름 중심으로 설명</div>
+      </div>
+      <div class="role-card">
+        <div class="rc-name">🟢 Dr. Collaboration</div>
+        <div class="rc-role">협업구조 박사</div>
+        <div class="rc-work">팀 협업 관점에서 설명</div>
+      </div>
+      <div class="role-card">
+        <div class="rc-name">🔴 Dr. Safety</div>
+        <div class="rc-role">실수예방 박사</div>
+        <div class="rc-work">초보자 실수 예방, 복구 방법</div>
+      </div>
+    </div>
+    <div class="role-card" style="margin-top:8px;">
+      <div class="rc-name">🟣 Dr. Growth</div>
+      <div class="rc-role">성장경로 박사</div>
+      <div class="rc-work">지금 몰라도 되는 것 구분, 다음 학습 경로 안내</div>
+    </div>
+    <div class="page-num right">9</div>
+  </div>`
+},
+
+// 5: Chapter 3 검증단
+{
+  title: 'Chapter 3 · 검증단',
+  left: `<div class="page-inner">
+    <div class="chapter-label">Chapter 3</div>
+    <div class="page-title">만든 것을 믿지 않았다<br>— 검증단을 따로 뒀다</div>
+    <div class="divider"></div>
+    <div class="page-body">
+      <p>에이전트 팀이 만든 결과물을 그대로 쓰지 않았습니다. <strong>별도의 검증단 3명</strong>이 감시했습니다.</p>
+      <p>이것이 AI 작업의 품질을 높이는 핵심 방법입니다 — <strong>"만드는 팀"과 "검증하는 팀"을 분리</strong>하면 서로 견제가 됩니다.</p>
+      <div class="hl-box">
+        <strong>검증단의 역할</strong><br>
+        각 검사관은 자신의 관점에서 독립적으로 평가합니다. 문제를 찾으면 반드시 이유와 수정안을 함께 제시합니다.
+      </div>
+      <p>최종적으로 세 검사관의 결과를 종합해 공통 개선 권고안을 받았습니다.</p>
+    </div>
+    <div class="page-num left">10</div>
+  </div>`,
+  right: `<div class="page-inner right-inner">
+    <div class="chapter-label">Chapter 3 · 검증단 구성</div>
+    <div class="page-title">3명의 검사관</div>
+    <div class="divider"></div>
+    <div class="inspector-list">
+      <div class="inspector-item">
+        <div class="insp-icon">🔬</div>
+        <div class="insp-info">
+          <div class="insp-name">Inspector Exact</div>
+          <div class="insp-role">기술 정확성 검증관</div>
+          <div class="insp-task">내용이 기술적으로 정확한가? 잘못된 정보는 없는가?</div>
+        </div>
+      </div>
+      <div class="inspector-item">
+        <div class="insp-icon">📚</div>
+        <div class="insp-info">
+          <div class="insp-name">Inspector Beginner</div>
+          <div class="insp-role">교육 적합성 검증관</div>
+          <div class="insp-task">초보자가 이해할 수 있는가? 학습 장벽은 없는가?</div>
+        </div>
+      </div>
+      <div class="inspector-item">
+        <div class="insp-icon">⚙️</div>
+        <div class="insp-info">
+          <div class="insp-name">Inspector Prompt</div>
+          <div class="insp-role">프롬프트 구조 검증관</div>
+          <div class="insp-task">역할 분담과 프롬프트 구조가 일관되고 재현 가능한가?</div>
+        </div>
+      </div>
+    </div>
+    <div class="page-num right">11</div>
+  </div>`
+},
+
+// 6: Chapter 4 병렬 작업
+{
+  title: 'Chapter 4 · 병렬 작업',
+  left: `<div class="page-inner">
+    <div class="chapter-label">Chapter 4</div>
+    <div class="page-title">두 AI에게 동시에<br>다른 일을 시켰다</div>
+    <div class="divider"></div>
+    <div class="page-body">
+      <p>대규모 기능을 빠르게 만들기 위해 <strong>Claude Code와 Codex CLI를 동시에</strong> 실행했습니다.</p>
+      <p>각자 담당 파일을 명확히 나눠, 서로 충돌하지 않도록 했습니다.</p>
+      <div class="hl-box">
+        <strong>파일 충돌 방지의 핵심 규칙</strong><br>
+        각 프롬프트에 "<strong>절대 건드리지 말 것</strong>" 섹션을 만들었습니다. 이것이 두 AI가 동시에 작업해도 문제가 없었던 이유입니다.
+      </div>
+      <p>Claude Code는 브랜치 <code style="font-size:10px;background:#e8dcc8;padding:1px 5px;border-radius:3px;">claude-interactive</code>, Codex는 <code style="font-size:10px;background:#e8dcc8;padding:1px 5px;border-radius:3px;">codex-interactive</code>에서 각자 작업했습니다.</p>
+    </div>
+    <div class="page-num left">12</div>
+  </div>`,
+  right: `<div class="page-inner right-inner">
+    <div class="chapter-label">Chapter 4 · 역할 분배</div>
+    <div class="page-title">누가 무엇을 만들었나</div>
+    <div class="divider"></div>
+    <table class="phase-table">
+      <thead><tr><th>Phase</th><th>담당</th><th>만든 것</th></tr></thead>
+      <tbody>
+        <tr><td>Phase 1</td><td><span class="tag-claude">Claude Code</span></td><td>StepChecklist<br>단계별 진행률 체크</td></tr>
+        <tr><td>Phase 2</td><td><span class="tag-codex">Codex CLI</span></td><td>QuizCheck<br>클라이언트 퀴즈</td></tr>
+        <tr><td>Phase 3</td><td><span class="tag-claude">Claude Code</span></td><td>InlineTutor<br>드래그 AI 설명</td></tr>
+        <tr><td>Phase 4</td><td><span class="tag-codex">Codex CLI</span></td><td>CodeChallenge<br>코딩 빈칸 챌린지</td></tr>
+      </tbody>
+    </table>
+    <div class="hl-box" style="font-size:11px;margin-top:10px;">
+      두 CLI가 동시에 작업 중일 때도, 서로 다른 파일만 건드리도록 프롬프트에 명시했기 때문에 <strong>충돌이 한 번도 없었습니다.</strong>
+    </div>
+    <div class="page-num right">13</div>
+  </div>`
+},
+
+// 7: Chapter 5 머지
+{
+  title: 'Chapter 5 · 완성',
+  left: `<div class="page-inner">
+    <div class="chapter-label">Chapter 5</div>
+    <div class="page-title">각자 만든 것을<br>하나로 합쳤다</div>
+    <div class="divider"></div>
+    <div class="page-body">
+      <p>Claude Code와 Codex가 각자 브랜치에서 만든 결과물을 <strong>GitHub에서 머지</strong>했습니다.</p>
+      <div class="flow-steps">
+        <div class="flow-step"><div class="step-num">1</div><div class="step-text"><strong>브랜치 생성</strong><br>claude-interactive / codex-interactive</div></div>
+        <div class="flow-step"><div class="step-num">2</div><div class="step-text"><strong>동시 작업</strong><br>각자 담당 파일만 수정</div></div>
+        <div class="flow-step"><div class="step-num">3</div><div class="step-text"><strong>빌드 확인</strong><br>각 Phase 완료 후 npm run build</div></div>
+        <div class="flow-step"><div class="step-num">4</div><div class="step-text"><strong>머지</strong><br>main 브랜치로 합치기</div></div>
+        <div class="flow-step"><div class="step-num">5</div><div class="step-text"><strong>Vercel 배포</strong><br>자동으로 라이브 반영</div></div>
+      </div>
+    </div>
+    <div class="page-num left">14</div>
+  </div>`,
+  right: `<div class="page-inner right-inner">
+    <div class="chapter-label">Chapter 5 · 결과</div>
+    <div class="page-title">완성된 플랫폼</div>
+    <div class="divider"></div>
+    <div class="page-body">
+      <p>진단 점수 <strong>3.6점 → 7점+</strong>로 끌어올렸습니다.</p>
+      <div class="role-cards">
+        <div class="role-card">
+          <div class="rc-name">📡 Radar</div>
+          <div class="rc-work">AI 최신 뉴스 자동 업데이트</div>
+        </div>
+        <div class="role-card">
+          <div class="rc-name">📖 Learning</div>
+          <div class="rc-work">체계적 AI 학습 커리큘럼</div>
+        </div>
+        <div class="role-card">
+          <div class="rc-name">🧪 Labs</div>
+          <div class="rc-work">직접 해보는 인터랙티브 실습</div>
+        </div>
+        <div class="role-card">
+          <div class="rc-name">📚 교재</div>
+          <div class="rc-work">퀴즈·체크리스트·튜터 포함</div>
+        </div>
+      </div>
+      <div class="hl-box" style="margin-top:12px;">
+        <strong>개발 기간:</strong> 수 주<br>
+        <strong>직접 작성한 코드:</strong> 0줄<br>
+        <strong>사용한 도구:</strong> Claude 웹 + CLI 2개
+      </div>
+    </div>
+    <div class="page-num right">15</div>
+  </div>`
+},
+
+// 8: Chapter 6 n8n 자동화
+{
+  title: 'Chapter 6 · n8n 자동화',
+  left: `<div class="page-inner">
+    <div class="chapter-label">Chapter 6</div>
+    <div class="page-title">이메일 한 통이 오면<br>홈페이지가 자동으로 업데이트됐다</div>
+    <div class="divider"></div>
+    <div class="page-body">
+      <p>Anthropic에서 Claude 신기술 관련 이메일이 오면, <strong>사람이 아무것도 안 해도</strong> cloid.ai 클로드 허브에 자동으로 등재됩니다.</p>
+      <p>이것이 가능했던 이유는 <strong>n8n</strong> 덕분입니다. n8n은 여러 서비스를 연결해 자동으로 실행되는 워크플로우를 만드는 도구입니다. 코딩 없이도 됩니다.</p>
+      <div class="hl-box">
+        <strong>핵심 아이디어</strong><br>
+        "이메일이 오면 → AI가 읽고 → 정리해서 → 홈페이지에 올린다"<br>
+        이 흐름 전체를 자동화했습니다.
+      </div>
+      <p>이제 Anthropic 뉴스는 사람이 확인하지 않아도 24시간 자동으로 수집됩니다.</p>
+    </div>
+    <div class="page-num left">16</div>
+  </div>`,
+  right: `<div class="page-inner right-inner">
+    <div class="chapter-label">Chapter 6 · 실제 워크플로우</div>
+    <div class="page-title">자동화 파이프라인<br>전체 흐름</div>
+    <div class="divider"></div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Gmail 트리거</strong><br>Anthropic 발신 이메일 수신 감지<br><span style="font-size:10px;color:#8a7060;">n8n Gmail 노드 → 새 메일 자동 감지</span></div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>OpenAI 분석</strong><br>이메일 내용 해석 + 핵심 요약 추출<br><span style="font-size:10px;color:#8a7060;">n8n HTTP Request → OpenAI API 호출</span></div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>콘텐츠 구조화</strong><br>제목, 요약, 태그, 날짜 자동 생성<br><span style="font-size:10px;color:#8a7060;">JSON 형식으로 포맷팅</span></div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>HTTP 자동 등재</strong><br>cloid.ai API로 클로드 허브에 포스트<br><span style="font-size:10px;color:#8a7060;">n8n HTTP Request → /api/create-claude-hub-post</span></div>
+      </div>
+    </div>
+    <div class="hl-box" style="font-size:11px;margin-top:6px;">
+      💡 <strong>당신도 할 수 있습니다</strong><br>
+      n8n은 무료 플랜으로 시작 가능합니다. Gmail + HTTP Request 노드만 있으면 이 전체 흐름을 만들 수 있습니다.
+    </div>
+    <div class="page-num right">17</div>
+  </div>`
+},
+
+// 9: 에필로그
+{
+  title: '에필로그',
+  left: `<div class="page-inner">
+    <div class="chapter-label">에필로그</div>
+    <div class="page-title">당신도 할 수 있습니다<br>지금 당장</div>
+    <div class="divider"></div>
+    <div class="page-body">
+      <p>이 책에서 배운 방법의 핵심은 단순합니다.</p>
+      <div class="hl-box">
+        <strong>코딩 실력 × = 0</strong><br>
+        <strong>프롬프트 실력 + AI = 무한대</strong>
+      </div>
+      <p>처음 마스터플랜은 엉성했습니다. 프롬프트는 여러 번 퇴짜를 맞았습니다. 병렬 작업 도중 충돌도 났습니다.</p>
+      <p><strong>그래도 됐습니다.</strong> 실패는 과정이었고, 고치면 됐습니다. AI는 지치지 않으니까요.</p>
+      <div class="hl-box">
+        <strong>당신에게 필요한 것</strong><br>
+        완벽한 기술 × — 구체적인 아이디어 ✓<br>
+        개발 경력 × — 끝까지 수정하는 의지 ✓
+      </div>
+      <p style="font-size:12px;color:#8a7060;font-style:italic;">"처음 3.6점이었던 플랫폼이 지금 매일 자동으로 업데이트됩니다. 당신의 아이디어도 그렇게 될 수 있습니다."</p>
+    </div>
+    <div class="page-num left">16</div>
+  </div>`,
+  right: `<div class="page-inner right-inner">
+    <div class="chapter-label">에필로그 · 시작하기</div>
+    <div class="page-title">첫 마스터플랜을<br>지금 작성하세요</div>
+    <div class="divider"></div>
+    <div class="prompt-block">
+      <div class="pb-label">첫 번째 마스터플랜 템플릿</div>
+      <div class="pb-text">나는 [목표]를 만들고 싶다.
+
+## 배경
+[현재 상황과 문제점]
+
+## 핵심 목표
+- [목표 1]
+- [목표 2]
+
+## 전체 규칙
+- [지켜야 할 규칙]
+- [건드리지 말 것]
+
+## PHASE 순서
+Phase 1: [첫 번째로 할 일]
+Phase 2: [두 번째로 할 일]
+
+각 Phase 완료 후 결과를 보고하라.</div>
+    </div>
+    <div class="hl-box" style="font-size:11.5px;">
+      이 템플릿을 Claude에게 붙여넣고 시작하세요. 수정하고, 다듬고, 반복하면 — 당신의 플랫폼이 만들어집니다.
+    </div>
+    <div class="page-num right">17</div>
+  </div>`
+},
+
+// 9: 뒤표지
+{
+  type: 'back',
+  title: '뒤표지',
+  left: `<div class="page-inner" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+    <div style="font-size:48px;margin-bottom:16px;">⚛</div>
+    <div style="font-size:15px;color:#c8a040;font-weight:700;margin-bottom:8px;">cloid.ai</div>
+    <div style="font-size:12px;color:#8a7060;line-height:1.7;">AI를 배우고, 직접 만드는 곳</div>
+    <div class="divider" style="margin:16px auto;"></div>
+    <div style="font-size:11px;color:#a0916e;">이 교재도 AI가 만들었습니다</div>
+    <div class="page-num left">18</div>
+  </div>`,
+  right: `<div class="page-inner right-inner" style="display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:40px;">
+    <div style="font-size:11px;color:#a0916e;line-height:1.8;text-align:right;">
+      <p>이 책에 담긴 모든 프롬프트와</p>
+      <p>방법론은 실제로 사용된 것입니다.</p>
+      <br>
+      <p style="color:#c8a040;font-weight:700;">cloid.ai</p>
+      <p>2026년 제작</p>
+    </div>
+  </div>`
+}
+
+]; // end spreads
+
+// ─── ENGINE ───────────────────────────────────────────────────
+let current = 0;
+let animating = false;
+
+const leftPage = document.getElementById('leftPage');
+const rightBg   = document.getElementById('rightBg');
+const flipLayer = document.getElementById('flipLayer');
+const flipFront = document.getElementById('flipFront');
+const flipBack  = document.getElementById('flipBack');
+const prevBtn   = document.getElementById('prevBtn');
+const nextBtn   = document.getElementById('nextBtn');
+const spreadEl  = document.getElementById('spreadEl');
+const spreadNum = document.getElementById('spreadNum');
+const spreadTit = document.getElementById('spreadTitle');
+const cornerHint= document.getElementById('cornerHint');
+
+function getPageContent(index, side) {
+  const s = spreads[index];
+  if (!s) return '';
+  if (s.type === 'cover' || s.type === 'back') return side === 'left' ? s.left : s.right;
+  return side === 'left' ? s.left : s.right;
+}
+
+function isCoverType(index) {
+  return spreads[index] && (spreads[index].type === 'cover' || spreads[index].type === 'back');
+}
+
+function render(animate, direction) {
+  const s = spreads[current];
+
+  // Update info
+  spreadNum.textContent = `${current + 1} / ${spreads.length}`;
+  spreadTit.textContent = s.title;
+  prevBtn.disabled = current === 0;
+  nextBtn.disabled = current === spreads.length - 1;
+
+  if (!animate) {
+    leftPage.innerHTML  = getPageContent(current, 'left');
+    rightBg.innerHTML   = getPageContent(current, 'right');
+    flipLayer.style.transform = 'rotateY(0deg)';
+    flipLayer.style.transition = 'none';
+    flipFront.innerHTML = '';
+    flipBack.innerHTML  = '';
+    return;
+  }
+
+  // Animate forward
+  if (direction === 'forward') {
+    const prev = current - 1;
+    flipFront.innerHTML = getPageContent(prev, 'right');
+    flipBack.innerHTML  = getPageContent(current, 'left');
+    rightBg.innerHTML   = getPageContent(current, 'right');
+
+    flipLayer.style.transition = 'none';
+    flipLayer.style.transform  = 'rotateY(0deg)';
+    flipLayer.offsetHeight; // reflow
+
+    flipLayer.style.transition = 'transform 0.85s cubic-bezier(0.645,0.045,0.355,1)';
+    flipLayer.style.transform  = 'rotateY(-180deg)';
+
+    setTimeout(() => {
+      leftPage.innerHTML = getPageContent(current, 'left');
+      flipLayer.style.transition = 'none';
+      flipLayer.style.transform  = 'rotateY(0deg)';
+      flipFront.innerHTML = '';
+      flipBack.innerHTML  = '';
+      animating = false;
+    }, 860);
+  }
+  // Animate backward
+  else {
+    const next = current + 1;
+    flipBack.innerHTML  = getPageContent(current, 'right');
+    flipFront.innerHTML = getPageContent(next, 'left');
+    leftPage.innerHTML  = getPageContent(current, 'left');
+    rightBg.innerHTML   = getPageContent(current, 'right');
+
+    flipLayer.style.transition = 'none';
+    flipLayer.style.transform  = 'rotateY(-180deg)';
+    flipLayer.offsetHeight;
+
+    flipLayer.style.transition = 'transform 0.85s cubic-bezier(0.645,0.045,0.355,1)';
+    flipLayer.style.transform  = 'rotateY(0deg)';
+
+    setTimeout(() => {
+      rightBg.innerHTML   = getPageContent(current, 'right');
+      flipFront.innerHTML = '';
+      flipBack.innerHTML  = '';
+      animating = false;
+    }, 860);
+  }
+}
+
+function goNext() {
+  if (animating || current >= spreads.length - 1) return;
+  animating = true;
+  current++;
+  render(true, 'forward');
+}
+
+function goPrev() {
+  if (animating || current <= 0) return;
+  animating = true;
+  current--;
+  render(true, 'backward');
+}
+
+nextBtn.addEventListener('click', goNext);
+prevBtn.addEventListener('click', goPrev);
+cornerHint.addEventListener('click', goNext);
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goNext();
+  if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   goPrev();
+});
+
+// Touch swipe
+let touchX = 0;
+document.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, {passive:true});
+document.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchX;
+  if (Math.abs(dx) > 50) { dx < 0 ? goNext() : goPrev(); }
+}, {passive:true});
+
+// Init
+render(false);
+</script>
+</body>
+</html>
