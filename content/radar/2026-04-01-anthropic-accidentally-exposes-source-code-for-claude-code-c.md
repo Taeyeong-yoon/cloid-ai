@@ -1,0 +1,15 @@
+---
+title: "Anthropic Accidentally Exposes Source Code for Claude Code - CNET"
+date: "2026-04-01"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMijgFBVV95cUxPYnhJUGZoUTBHRV9RQm9ZUDR1dEtKM3QtZkhvWG02NHplMmRZWGNsSGpSNkZkeGttbFRSU1RzS1ZzMGd6SEhJSmxiVHFBdVpTSW5ZY2ZsbGFCTXFvRXQzTVVwQWZQRF9Lal9FckpBNS1ES0NQTElGSFA2LWtPdmJ1OGwzU0pEZ1JwbE9jcU5n?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMijgFBVV95cUxPYnhJUGZoUTBHRV9RQm9ZUDR1dEtKM3QtZkhvWG02NHplMmRZWGNsSGpSNkZkeGttbFRSU1RzS1ZzMGd6SEhJSmxiVHFBdVpTSW5ZY2ZsbGFCTXFvRXQzTVVwQWZQRF9Lal9FckpBNS1ES0NQTElGSFA2LWtPdmJ1OGwzU0pEZ1JwbE9jcU5n?oc=5' target='_blank'&gt;Anthropic Accidentally Expose"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPYnhJUGZoUTBHRV9RQm9ZUDR1dEtKM3QtZkhvWG02NHplMmRZWGNsSGpSNkZkeGttbFRSU1RzS1ZzMGd6SEhJSmxiVHFBdVpTSW5ZY2ZsbGFCTXFvRXQzTVVwQWZQRF9Lal9FckpBNS1ES0NQTElGSFA2LWtPdmJ1OGwzU0pEZ1JwbE9jcU5n?oc=5" target="_blank"&gt;Anthropic Accidentally Expose
+
+**출처**: [https://news.google.com/rss/articles/CBMijgFBVV95cUxPYnhJUGZoUTBHRV9RQm9ZUDR1dEtKM3QtZkhvWG02NHplMmRZWGNsSGpSNkZkeGttbFRSU1RzS1ZzMGd6SEhJSmxiVHFBdVpTSW5ZY2ZsbGFCTXFvRXQzTVVwQWZQRF9Lal9FckpBNS1ES0NQTElGSFA2LWtPdmJ1OGwzU0pEZ1JwbE9jcU5n?oc=5](https://news.google.com/rss/articles/CBMijgFBVV95cUxPYnhJUGZoUTBHRV9RQm9ZUDR1dEtKM3QtZkhvWG02NHplMmRZWGNsSGpSNkZkeGttbFRSU1RzS1ZzMGd6SEhJSmxiVHFBdVpTSW5ZY2ZsbGFCTXFvRXQzTVVwQWZQRF9Lal9FckpBNS1ES0NQTElGSFA2LWtPdmJ1OGwzU0pEZ1JwbE9jcU5n?oc=5)

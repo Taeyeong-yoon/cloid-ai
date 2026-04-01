@@ -47,6 +47,138 @@
       "description": "Transform Your Business with AI: https://aibuilder.academy/yt/N3vHJcHBS-w Get the (free) Claude Code Course: ..."
     },
     {
+      "type": "video",
+      "title": "What is MCP? Integrate AI Agents with Databases &amp; APIs",
+      "url": "https://www.youtube.com/watch?v=eur8dUO9mvE",
+      "description": "Ready to become a certified Architect on Cloud Pak? Register now and use code IBMTechYT20 for 20% off of your exam ..."
+    },
+    {
+      "type": "video",
+      "title": "Model Context Protocol (MCP), Clearly Explained (Why it Matters)",
+      "url": "https://www.youtube.com/watch?v=e3MX7HoGXug",
+      "description": "In this video, we explain what MCP (Model Context Protocol) actually is, how this even became a thing, and the pain poin"
+    },
+    {
+      "type": "video",
+      "title": "MCP In 26 Minutes (Model Context Protocol)",
+      "url": "https://www.youtube.com/watch?v=kOhLoixrJXo",
+      "description": "Start building with Bolt V2 ..."
+    },
+    {
+      "type": "video",
+      "title": "you need to learn MCP RIGHT NOW!! (Model Context Protocol)",
+      "url": "https://www.youtube.com/watch?v=GuTcle5edjk",
+      "description": "Try for FREE the Docker MCP Catalog: https://dockr.ly/3UFTCj4 🖥️ Download Docker Desktop: https://dockr.ly/3HgjIGj You "
+    },
+    {
+      "type": "video",
+      "title": "Model Context Protocol Tutorial for Beginners | Build with MCP Server | Amit Thinks | 2026",
+      "url": "https://www.youtube.com/watch?v=0WH0yRxExA0",
+      "description": "Amit Diwan teaches MCP in this video. Model Context Protocol was developed by Anthropic, the company that developed Clau"
+    },
+    {
+      "type": "video",
+      "title": "Claude&#39;s Model Context Protocol is here... Let&#39;s test it",
+      "url": "https://www.youtube.com/watch?v=HyzlYwjoXOQ",
+      "description": "Deploy your app without complexity and $50 in free credits on Sevalla https://sevalla.com/fireship Learn the fundamental"
+    },
+    {
+      "type": "video",
+      "title": "Intro to MCP Servers – Model Context Protocol with Python Course",
+      "url": "https://www.youtube.com/watch?v=DosHnyq78xY",
+      "description": "Learn to build Model-Context Protocol (MCP) servers with the open source FastMCP Python library. MCP is the standard tha"
+    },
+    {
+      "type": "video",
+      "title": "Top 10 MCP Use Cases - Using Claude &amp; Model Context Protocol",
+      "url": "https://www.youtube.com/watch?v=lzbbPBLPtdY",
+      "description": "MCP or Model Context Protocol is the newest ways that you can allow AI to take control of tools on your own computer or "
+    },
+    {
+      "type": "video",
+      "title": "MCP Tutorial: Build Your First MCP Server and Client from Scratch (Free Labs)",
+      "url": "https://www.youtube.com/watch?v=RhTiAOGwbYE",
+      "description": "MCP Labs for Free: https://kode.wiki/4lFwf5p Ever wondered how AI agents can book flights, check databases, or interact "
+    },
+    {
+      "type": "video",
+      "title": "Why MCP really is a big deal | Model Context Protocol with Tim Berglund",
+      "url": "https://www.youtube.com/watch?v=FLpS7OfD5-s",
+      "description": "Blog: https://www.confluent.io/blog/ai-agents-using-anthropic-mcp | Tim Berglund is back at the lightboard with *MCP* (M"
+    },
+    {
+      "type": "video",
+      "title": "All You Need To Know About Model Context Protocol(MCP)",
+      "url": "https://www.youtube.com/watch?v=-UQ6OZywZ2I",
+      "description": "MCP is an open protocol that standardizes how applications provide context to LLMs. Think of MCP like a USB-C port for A"
+    },
+    {
+      "type": "video",
+      "title": "Model Context Protocol MCP: Python ile MCP Server + MCP Client +MCP Tools + Docker + VS Code",
+      "url": "https://www.youtube.com/watch?v=c7yl0GS2mJQ",
+      "description": "Kanalımıza destek olmak ve tüm ayrıcalıklardan yararlanmak için Kanala Katılınız / Üye Olunuz: ..."
+    },
+    {
+      "type": "video",
+      "title": "MCP Crash Course: What Python Developers Need to Know",
+      "url": "https://www.youtube.com/watch?v=5xqFjh56AwM",
+      "description": "Learn AI Engineering from first principles: https://go.datalumina.com/67msUoJ Want to start freelancing? Let me help: .."
+    },
+    {
+      "type": "video",
+      "title": "Model Context Protocol (MCP) Overview - Why You Care!",
+      "url": "https://www.youtube.com/watch?v=1Pf2rW5FsqQ",
+      "description": "A look at MCP. What it is, why you need it, how to leverage! Looking for content on a particular topic? Search the chann"
+    },
+    {
+      "type": "video",
+      "title": "Model Context Protocol (MCP) Explained in 60 Seconds",
+      "url": "https://www.youtube.com/watch?v=Y9iM9E29lfg",
+      "description": "Not quite sure what an MCP is? We are breaking down what the Model Context Protocol (MCP) is in just 60 seconds. Let us "
+    },
+    {
+      "type": "video",
+      "title": "Model Context Protocol (MCP), clearly explained (why it matters)",
+      "url": "https://www.youtube.com/watch?v=7j_NE6Pjv-E",
+      "description": "For startup ideas, trends and prompts to build them join https://Ideabrowser.com....I'm joined by Ras Mic to explain Mod"
+    },
+    {
+      "type": "video",
+      "title": "The Ultimate MCP Crash Course - Build From Scratch",
+      "url": "https://www.youtube.com/watch?v=ZoZxQwp1PiM",
+      "description": "Get 25% off Frontend Masters: https://frontendmasters.com/?code=webdevsimplified&utm_campaign=mcpcrashcourse *Become ..."
+    },
+    {
+      "type": "video",
+      "title": "RAG &amp; MCP Fundamentals – A Hands-On Crash Course",
+      "url": "https://www.youtube.com/watch?v=I7_WXKhyGms",
+      "description": "This practical crash course teaches you to build integrated AI systems rather than standalone tools. You will first mast"
+    },
+    {
+      "type": "video",
+      "title": "MCP Protocol Is Changing Everything | The Secret Behind Scalable AI Agents #MCP #AiAgent #LLM",
+      "url": "https://www.youtube.com/watch?v=7CHr0qwTcJw",
+      "description": "LLMs are powerful—but they hit a wall when it comes to real-world actions. That's where MCP (Model Context Protocol) com"
+    },
+    {
+      "type": "video",
+      "title": "MCP Agentic AI Crash Course With Python",
+      "url": "https://www.youtube.com/watch?v=MDBG2MOp4Go",
+      "description": "github: https://github.com/krishnaik06/MCP-CRASH-Course The Model Context Protocol allows applications to provide contex"
+    },
+    {
+      "type": "video",
+      "title": "MCP Explained | Model Context Protocol Tutorial | How Model Context Protocol Works? | Simplilearn",
+      "url": "https://www.youtube.com/watch?v=znNuYwtMryY",
+      "description": "Michigan - Applied Generative AI Specialization ..."
+    },
+    {
+      "type": "video",
+      "title": "𝐌𝐨𝐝𝐞𝐥 𝐂𝐨𝐧𝐭𝐞𝐱𝐭 𝐏𝐫𝐨𝐭𝐨𝐜𝐨𝐥 (MCP) Explained from Scratch | Full Tutorial in Tamil",
+      "url": "https://www.youtube.com/watch?v=v-HyooPh30w",
+      "description": "In this complete 1-hour MCP masterclass, we start from the fundamentals and build step by step toward the Model Context "
+    },
+    {
       "type": "practice",
       "title": "Filesystem MCP 서버 연결",
       "description": "로컬 파일시스템을 Claude에 연결하는 MCP 서버 설정 실습",
