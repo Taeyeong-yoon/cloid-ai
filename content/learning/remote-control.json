@@ -36,15 +36,15 @@
     },
     {
       "type": "video",
-      "title": "폰 하나로 PC 원격 제어하는 클로드 역대급 신기능! - Claude Dispatch 소개",
-      "url": "https://www.youtube.com/watch?v=_-yNiESnzL0",
-      "description": "밖에서 갑자기 급한 업무 요청이 왔을 때, 노트북 없어서 당황하신 적 많으시죠?   이제 스마트폰 하나면 충분합니다! 클로드 데스크톱 ..."
-    },
-    {
-      "type": "video",
       "title": "AI로 견적서 자동화하는 법, 코딩 몰라도 됩니다#ReplitAI #업무자동화 #바이브코딩#견적서자동화 #1인기업 #AI자동화",
       "url": "https://www.youtube.com/watch?v=7gs-oIXqBk0",
       "description": "코딩 한줄 없이 견적서 자동화? 레플릿 AI로 진짜 가능합니다! 견적서, 문자, 이메일, 세금계산서까지 AI한테 자연어로 말하면 하루 만 ..."
+    },
+    {
+      "type": "video",
+      "title": "PC 앞에 없어도 OK! 안티그래비티(Antigravity) 모바일 원격 제어 프로그램 만들기 (디스코드 &amp; 웹 연동)",
+      "url": "https://www.youtube.com/watch?v=MK-MS74UiPM",
+      "description": "집 밖에서도, 이동 중에도 내 PC의 안티그래비티를 완벽하게 제어하고 싶으셨나요? 이번 영상에서는 디스코드(Discord)와 웹페이지 ..."
     },
     {
       "type": "practice",
