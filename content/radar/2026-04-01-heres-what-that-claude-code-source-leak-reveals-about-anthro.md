@@ -1,0 +1,15 @@
+---
+title: "Here’s what that Claude Code source leak reveals about Anthropic’s plans - Ars Technica"
+date: "2026-04-01"
+tags:
+  - claude-code
+score: 94
+sourceUrl: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOLXFhOW1ZWWNFNkI3ZXJEVEp4c2doZ2RnYWVMbGxFbF8yTzdxd1F3SWtCbGU5Rm1MSWxRWml2ZnJpb1RuNTZjeGU5bGVpYzEwLVpBSEY3ZjFwdGQzaVRIcHVjWGhOMEJuTjdhdkRzaWdvaDZIZjdOc3d6ZE1sc3FycXdISnJEMDZTR0JLakxXNkhMYlpFWkFMOEY5MGdEMEk5MURiVnQ4U1M3Zw?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMiqgFBVV95cUxOLXFhOW1ZWWNFNkI3ZXJEVEp4c2doZ2RnYWVMbGxFbF8yTzdxd1F3SWtCbGU5Rm1MSWxRWml2ZnJpb1RuNTZjeGU5bGVpYzEwLVpBSEY3ZjFwdGQzaVRIcHVjWGhOMEJuTjdhdkRzaWdvaDZIZjdOc3d6ZE1sc3FycXdISnJEMDZTR0JLakxXNkhMYlpFWkFMOEY5MGdEMEk5MURiVnQ4U1M3Zw?oc=5' target='_b"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOLXFhOW1ZWWNFNkI3ZXJEVEp4c2doZ2RnYWVMbGxFbF8yTzdxd1F3SWtCbGU5Rm1MSWxRWml2ZnJpb1RuNTZjeGU5bGVpYzEwLVpBSEY3ZjFwdGQzaVRIcHVjWGhOMEJuTjdhdkRzaWdvaDZIZjdOc3d6ZE1sc3FycXdISnJEMDZTR0JLakxXNkhMYlpFWkFMOEY5MGdEMEk5MURiVnQ4U1M3Zw?oc=5" target="_b
+
+**출처**: [https://news.google.com/rss/articles/CBMiqgFBVV95cUxOLXFhOW1ZWWNFNkI3ZXJEVEp4c2doZ2RnYWVMbGxFbF8yTzdxd1F3SWtCbGU5Rm1MSWxRWml2ZnJpb1RuNTZjeGU5bGVpYzEwLVpBSEY3ZjFwdGQzaVRIcHVjWGhOMEJuTjdhdkRzaWdvaDZIZjdOc3d6ZE1sc3FycXdISnJEMDZTR0JLakxXNkhMYlpFWkFMOEY5MGdEMEk5MURiVnQ4U1M3Zw?oc=5](https://news.google.com/rss/articles/CBMiqgFBVV95cUxOLXFhOW1ZWWNFNkI3ZXJEVEp4c2doZ2RnYWVMbGxFbF8yTzdxd1F3SWtCbGU5Rm1MSWxRWml2ZnJpb1RuNTZjeGU5bGVpYzEwLVpBSEY3ZjFwdGQzaVRIcHVjWGhOMEJuTjdhdkRzaWdvaDZIZjdOc3d6ZE1sc3FycXdISnJEMDZTR0JLakxXNkhMYlpFWkFMOEY5MGdEMEk5MURiVnQ4U1M3Zw?oc=5)
