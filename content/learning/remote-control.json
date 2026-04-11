@@ -30,15 +30,15 @@
     },
     {
       "type": "video",
-      "title": "PC 앞에 없어도 OK! 안티그래비티(Antigravity) 모바일 원격 제어 프로그램 만들기 (디스코드 &amp; 웹 연동)",
-      "url": "https://www.youtube.com/watch?v=MK-MS74UiPM",
-      "description": "집 밖에서도, 이동 중에도 내 PC의 안티그래비티를 완벽하게 제어하고 싶으셨나요? 이번 영상에서는 디스코드(Discord)와 웹페이지 ..."
-    },
-    {
-      "type": "video",
       "title": "[클로드코드 원격제어] 비트코인 자동매매 완벽 가이드 (VPN 보안까지)",
       "url": "https://www.youtube.com/watch?v=iDy_IGRGS30",
       "description": "스마트폰 하나로 AI 비트코인 자동매매 봇을 제어한다? Claude Code의 Remote Control 기능을 활용해서 원격 서버에 24시간 ..."
+    },
+    {
+      "type": "video",
+      "title": "PC 앞에 없어도 OK! 안티그래비티(Antigravity) 모바일 원격 제어 프로그램 만들기 (디스코드 &amp; 웹 연동)",
+      "url": "https://www.youtube.com/watch?v=MK-MS74UiPM",
+      "description": "집 밖에서도, 이동 중에도 내 PC의 안티그래비티를 완벽하게 제어하고 싶으셨나요? 이번 영상에서는 디스코드(Discord)와 웹페이지 ..."
     },
     {
       "type": "video",
