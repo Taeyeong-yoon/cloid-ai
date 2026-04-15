@@ -1,0 +1,15 @@
+---
+title: "Anthropic adds routines to redesigned Claude Code, here’s how it works - 9to5Mac"
+date: "2026-04-14"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMirAFBVV95cUxONXFzZF90X2k2dlctdHdSQ1paNzVaVnd5TzZPdzR4NFFrSTNnSjlyQmRJM0RQV1NySWFoVVRvdExDWXNiaWRwVVhCRkhtR0RwaHBMV09wXzQ3eFozalIydVluN3hCWEtyUnZLUmZWd1hrQUxBTFQtMkx3S3ZraUJKZDhnV2YxWlQ5ZGRIQUI4OGhmWjcwNTFnNEhQOHY3QXJxTC1YVTVxUW5LS2FK?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMirAFBVV95cUxONXFzZF90X2k2dlctdHdSQ1paNzVaVnd5TzZPdzR4NFFrSTNnSjlyQmRJM0RQV1NySWFoVVRvdExDWXNiaWRwVVhCRkhtR0RwaHBMV09wXzQ3eFozalIydVluN3hCWEtyUnZLUmZWd1hrQUxBTFQtMkx3S3ZraUJKZDhnV2YxWlQ5ZGRIQUI4OGhmWjcwNTFnNEhQOHY3QXJxTC1YVTVxUW5LS2FK?oc=5' target='"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxONXFzZF90X2k2dlctdHdSQ1paNzVaVnd5TzZPdzR4NFFrSTNnSjlyQmRJM0RQV1NySWFoVVRvdExDWXNiaWRwVVhCRkhtR0RwaHBMV09wXzQ3eFozalIydVluN3hCWEtyUnZLUmZWd1hrQUxBTFQtMkx3S3ZraUJKZDhnV2YxWlQ5ZGRIQUI4OGhmWjcwNTFnNEhQOHY3QXJxTC1YVTVxUW5LS2FK?oc=5" target="
+
+**출처**: [https://news.google.com/rss/articles/CBMirAFBVV95cUxONXFzZF90X2k2dlctdHdSQ1paNzVaVnd5TzZPdzR4NFFrSTNnSjlyQmRJM0RQV1NySWFoVVRvdExDWXNiaWRwVVhCRkhtR0RwaHBMV09wXzQ3eFozalIydVluN3hCWEtyUnZLUmZWd1hrQUxBTFQtMkx3S3ZraUJKZDhnV2YxWlQ5ZGRIQUI4OGhmWjcwNTFnNEhQOHY3QXJxTC1YVTVxUW5LS2FK?oc=5](https://news.google.com/rss/articles/CBMirAFBVV95cUxONXFzZF90X2k2dlctdHdSQ1paNzVaVnd5TzZPdzR4NFFrSTNnSjlyQmRJM0RQV1NySWFoVVRvdExDWXNiaWRwVVhCRkhtR0RwaHBMV09wXzQ3eFozalIydVluN3hCWEtyUnZLUmZWd1hrQUxBTFQtMkx3S3ZraUJKZDhnV2YxWlQ5ZGRIQUI4OGhmWjcwNTFnNEhQOHY3QXJxTC1YVTVxUW5LS2FK?oc=5)
