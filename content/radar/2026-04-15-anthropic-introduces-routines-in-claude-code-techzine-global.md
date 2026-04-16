@@ -1,0 +1,15 @@
+---
+title: "Anthropic introduces routines in Claude Code - Techzine Global"
+date: "2026-04-15"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMikgFBVV95cUxPNGRxNnk5SjhXVmlZMkp6TWZYMWlWYmJjbEdoRENPZHNBNklKdWljWGtqOW5wTXZFLTZPTjlLZm9TWmpOUW1aLVBFTElxNVJzcHl2ZjNtMUtoNVVMNkZHanpRVFJJV3pZOG9GR0I5QkhReklueEJvNnNqckRxN3dfNHBxXy0teW15dk1KdjdFbjlVdw?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMikgFBVV95cUxPNGRxNnk5SjhXVmlZMkp6TWZYMWlWYmJjbEdoRENPZHNBNklKdWljWGtqOW5wTXZFLTZPTjlLZm9TWmpOUW1aLVBFTElxNVJzcHl2ZjNtMUtoNVVMNkZHanpRVFJJV3pZOG9GR0I5QkhReklueEJvNnNqckRxN3dfNHBxXy0teW15dk1KdjdFbjlVdw?oc=5' target='_blank'&gt;Anthropic introduces ro"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPNGRxNnk5SjhXVmlZMkp6TWZYMWlWYmJjbEdoRENPZHNBNklKdWljWGtqOW5wTXZFLTZPTjlLZm9TWmpOUW1aLVBFTElxNVJzcHl2ZjNtMUtoNVVMNkZHanpRVFJJV3pZOG9GR0I5QkhReklueEJvNnNqckRxN3dfNHBxXy0teW15dk1KdjdFbjlVdw?oc=5" target="_blank"&gt;Anthropic introduces ro
+
+**출처**: [https://news.google.com/rss/articles/CBMikgFBVV95cUxPNGRxNnk5SjhXVmlZMkp6TWZYMWlWYmJjbEdoRENPZHNBNklKdWljWGtqOW5wTXZFLTZPTjlLZm9TWmpOUW1aLVBFTElxNVJzcHl2ZjNtMUtoNVVMNkZHanpRVFJJV3pZOG9GR0I5QkhReklueEJvNnNqckRxN3dfNHBxXy0teW15dk1KdjdFbjlVdw?oc=5](https://news.google.com/rss/articles/CBMikgFBVV95cUxPNGRxNnk5SjhXVmlZMkp6TWZYMWlWYmJjbEdoRENPZHNBNklKdWljWGtqOW5wTXZFLTZPTjlLZm9TWmpOUW1aLVBFTElxNVJzcHl2ZjNtMUtoNVVMNkZHanpRVFJJV3pZOG9GR0I5QkhReklueEJvNnNqckRxN3dfNHBxXy0teW15dk1KdjdFbjlVdw?oc=5)
