@@ -1,0 +1,15 @@
+---
+title: "Anthropic tested removing Claude Code from the Pro plan - Ars Technica"
+date: "2026-04-22"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMilgFBVV95cUxPcDZZMHBKbTdEZDVWTHpLNFduZnZHSHR0RnJNdE1PT0Y4RWpMMW00RjN0Z1EwSE9WRXFHNEhEZ1V3bUNxdHhGbk5jRWR6aTNCcF9PSzBvdlhXd2FNT0QwUkwwUFBfLWxGdC1YcEgtcWxMTEliQ1YxOGRxTVhENUM5UG96WUtnMXgydXhmaHBFSDZ4dGR4OEE?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMilgFBVV95cUxPcDZZMHBKbTdEZDVWTHpLNFduZnZHSHR0RnJNdE1PT0Y4RWpMMW00RjN0Z1EwSE9WRXFHNEhEZ1V3bUNxdHhGbk5jRWR6aTNCcF9PSzBvdlhXd2FNT0QwUkwwUFBfLWxGdC1YcEgtcWxMTEliQ1YxOGRxTVhENUM5UG96WUtnMXgydXhmaHBFSDZ4dGR4OEE?oc=5' target='_blank'&gt;Anthropic tested r"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPcDZZMHBKbTdEZDVWTHpLNFduZnZHSHR0RnJNdE1PT0Y4RWpMMW00RjN0Z1EwSE9WRXFHNEhEZ1V3bUNxdHhGbk5jRWR6aTNCcF9PSzBvdlhXd2FNT0QwUkwwUFBfLWxGdC1YcEgtcWxMTEliQ1YxOGRxTVhENUM5UG96WUtnMXgydXhmaHBFSDZ4dGR4OEE?oc=5" target="_blank"&gt;Anthropic tested r
+
+**출처**: [https://news.google.com/rss/articles/CBMilgFBVV95cUxPcDZZMHBKbTdEZDVWTHpLNFduZnZHSHR0RnJNdE1PT0Y4RWpMMW00RjN0Z1EwSE9WRXFHNEhEZ1V3bUNxdHhGbk5jRWR6aTNCcF9PSzBvdlhXd2FNT0QwUkwwUFBfLWxGdC1YcEgtcWxMTEliQ1YxOGRxTVhENUM5UG96WUtnMXgydXhmaHBFSDZ4dGR4OEE?oc=5](https://news.google.com/rss/articles/CBMilgFBVV95cUxPcDZZMHBKbTdEZDVWTHpLNFduZnZHSHR0RnJNdE1PT0Y4RWpMMW00RjN0Z1EwSE9WRXFHNEhEZ1V3bUNxdHhGbk5jRWR6aTNCcF9PSzBvdlhXd2FNT0QwUkwwUFBfLWxGdC1YcEgtcWxMTEliQ1YxOGRxTVhENUM5UG96WUtnMXgydXhmaHBFSDZ4dGR4OEE?oc=5)
