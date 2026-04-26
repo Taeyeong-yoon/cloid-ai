@@ -30,21 +30,21 @@
     },
     {
       "type": "video",
-      "title": "7분만에 MCP 이해하기 | Model Context Protocol",
-      "url": "https://www.youtube.com/watch?v=ha9kn0qe4Mc",
-      "description": "더 알아보기 : https://www.anthropic.com/news/model-context-protocol https://docs.anthropic.com/en/docs/agents-and-tools/mcp ."
-    },
-    {
-      "type": "video",
       "title": "Model Context Protocol Clearly Explained | MCP Beyond the Hype",
       "url": "https://www.youtube.com/watch?v=tzrwxLNHtRY",
       "description": "This video contains a very simple explanation of MCP, also known as Model Context Protocol. We will first understand wha"
     },
     {
       "type": "video",
-      "title": "you need to learn MCP RIGHT NOW!! (Model Context Protocol)",
-      "url": "https://www.youtube.com/watch?v=GuTcle5edjk",
-      "description": "Try for FREE the Docker MCP Catalog: https://dockr.ly/3UFTCj4 🖥️ Download Docker Desktop: https://dockr.ly/3HgjIGj You "
+      "title": "7분만에 MCP 이해하기 | Model Context Protocol",
+      "url": "https://www.youtube.com/watch?v=ha9kn0qe4Mc",
+      "description": "더 알아보기 : https://www.anthropic.com/news/model-context-protocol https://docs.anthropic.com/en/docs/agents-and-tools/mcp ."
+    },
+    {
+      "type": "video",
+      "title": "Model Context Protocol (MCP) Explained in 20 Minutes",
+      "url": "https://www.youtube.com/watch?v=N3vHJcHBS-w",
+      "description": "Transform Your Business with AI: https://aibuilder.academy/yt/N3vHJcHBS-w Get the (free) Claude Code Course: ..."
     },
     {
       "type": "practice",
