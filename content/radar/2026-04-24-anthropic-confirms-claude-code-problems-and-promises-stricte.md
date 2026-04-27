@@ -1,0 +1,15 @@
+---
+title: "Anthropic confirms Claude Code problems and promises stricter quality controls - the-decoder.com"
+date: "2026-04-24"
+tags:
+  - claude-code
+score: 94
+sourceUrl: "https://news.google.com/rss/articles/CBMipgFBVV95cUxQV0VhRFFid2F4WHVZZ3N5X1JXRXRFTkFlRWpYSGpoMk9ibExHbkl6cTEyU3RtUDE2NjBmdktPN0RqcXhyQzhNWlkxTGhQcWtScDNDMF9pV1NjNG5wNTZ0NnFCZFRZcjJMTkVYWEFxYS1KYkRMRU9DS2wwbUxZcWRvR0taNVR0ZUlMX3BINXZGMmhOdnNYNlRwdVZqZzU5ZVY0QUpXVE5n?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMipgFBVV95cUxQV0VhRFFid2F4WHVZZ3N5X1JXRXRFTkFlRWpYSGpoMk9ibExHbkl6cTEyU3RtUDE2NjBmdktPN0RqcXhyQzhNWlkxTGhQcWtScDNDMF9pV1NjNG5wNTZ0NnFCZFRZcjJMTkVYWEFxYS1KYkRMRU9DS2wwbUxZcWRvR0taNVR0ZUlMX3BINXZGMmhOdnNYNlRwdVZqZzU5ZVY0QUpXVE5n?oc=5' target='_blank'&"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxQV0VhRFFid2F4WHVZZ3N5X1JXRXRFTkFlRWpYSGpoMk9ibExHbkl6cTEyU3RtUDE2NjBmdktPN0RqcXhyQzhNWlkxTGhQcWtScDNDMF9pV1NjNG5wNTZ0NnFCZFRZcjJMTkVYWEFxYS1KYkRMRU9DS2wwbUxZcWRvR0taNVR0ZUlMX3BINXZGMmhOdnNYNlRwdVZqZzU5ZVY0QUpXVE5n?oc=5" target="_blank"&
+
+**출처**: [https://news.google.com/rss/articles/CBMipgFBVV95cUxQV0VhRFFid2F4WHVZZ3N5X1JXRXRFTkFlRWpYSGpoMk9ibExHbkl6cTEyU3RtUDE2NjBmdktPN0RqcXhyQzhNWlkxTGhQcWtScDNDMF9pV1NjNG5wNTZ0NnFCZFRZcjJMTkVYWEFxYS1KYkRMRU9DS2wwbUxZcWRvR0taNVR0ZUlMX3BINXZGMmhOdnNYNlRwdVZqZzU5ZVY0QUpXVE5n?oc=5](https://news.google.com/rss/articles/CBMipgFBVV95cUxQV0VhRFFid2F4WHVZZ3N5X1JXRXRFTkFlRWpYSGpoMk9ibExHbkl6cTEyU3RtUDE2NjBmdktPN0RqcXhyQzhNWlkxTGhQcWtScDNDMF9pV1NjNG5wNTZ0NnFCZFRZcjJMTkVYWEFxYS1KYkRMRU9DS2wwbUxZcWRvR0taNVR0ZUlMX3BINXZGMmhOdnNYNlRwdVZqZzU5ZVY0QUpXVE5n?oc=5)
