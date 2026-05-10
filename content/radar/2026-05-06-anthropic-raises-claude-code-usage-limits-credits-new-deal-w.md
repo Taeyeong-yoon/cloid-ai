@@ -1,0 +1,15 @@
+---
+title: "Anthropic raises Claude Code usage limits, credits new deal with SpaceX - Ars Technica"
+date: "2026-05-06"
+tags:
+  - claude-code
+score: 94
+sourceUrl: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbVZtVjFFcFRfcmpfRjlQT3hPNmY2UUd4ZTdnRmxQZUF5LWNQYW4ycllOOUdCX2cwY0ZNVDRyamdWYVJzTm9yZ0ZCcFlwWHZncG9qenR6MmVCNkJUb0dfNzl4MlRhNmROUGFEbVZWbzJHU2g1eFJucnl2Vm1qWlR1ei1tQzIxUElpdXdlVTA1WGwydGp1LTliSmgzQS1JVnVHQ3MtWWFKRTVZZw?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbVZtVjFFcFRfcmpfRjlQT3hPNmY2UUd4ZTdnRmxQZUF5LWNQYW4ycllOOUdCX2cwY0ZNVDRyamdWYVJzTm9yZ0ZCcFlwWHZncG9qenR6MmVCNkJUb0dfNzl4MlRhNmROUGFEbVZWbzJHU2g1eFJucnl2Vm1qWlR1ei1tQzIxUElpdXdlVTA1WGwydGp1LTliSmgzQS1JVnVHQ3MtWWFKRTVZZw?oc=5' target='_b"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbVZtVjFFcFRfcmpfRjlQT3hPNmY2UUd4ZTdnRmxQZUF5LWNQYW4ycllOOUdCX2cwY0ZNVDRyamdWYVJzTm9yZ0ZCcFlwWHZncG9qenR6MmVCNkJUb0dfNzl4MlRhNmROUGFEbVZWbzJHU2g1eFJucnl2Vm1qWlR1ei1tQzIxUElpdXdlVTA1WGwydGp1LTliSmgzQS1JVnVHQ3MtWWFKRTVZZw?oc=5" target="_b
+
+**출처**: [https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbVZtVjFFcFRfcmpfRjlQT3hPNmY2UUd4ZTdnRmxQZUF5LWNQYW4ycllOOUdCX2cwY0ZNVDRyamdWYVJzTm9yZ0ZCcFlwWHZncG9qenR6MmVCNkJUb0dfNzl4MlRhNmROUGFEbVZWbzJHU2g1eFJucnl2Vm1qWlR1ei1tQzIxUElpdXdlVTA1WGwydGp1LTliSmgzQS1JVnVHQ3MtWWFKRTVZZw?oc=5](https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbVZtVjFFcFRfcmpfRjlQT3hPNmY2UUd4ZTdnRmxQZUF5LWNQYW4ycllOOUdCX2cwY0ZNVDRyamdWYVJzTm9yZ0ZCcFlwWHZncG9qenR6MmVCNkJUb0dfNzl4MlRhNmROUGFEbVZWbzJHU2g1eFJucnl2Vm1qWlR1ei1tQzIxUElpdXdlVTA1WGwydGp1LTliSmgzQS1JVnVHQ3MtWWFKRTVZZw?oc=5)
