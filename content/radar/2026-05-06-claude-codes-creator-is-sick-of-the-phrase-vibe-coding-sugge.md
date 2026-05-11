@@ -1,0 +1,15 @@
+---
+title: "Claude Code's creator is sick of the phrase 'vibe coding.' Suggest your alternative here. - Business Insider"
+date: "2026-05-06"
+tags:
+  - claude-code
+score: 86
+sourceUrl: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTkU3Ym9CWUNndlJSeDQtcHZzekFFVEJld3ZCb3MzZWlJMWdqYmg3aHk1X3NCX3pSZ1NHTUxTTllMcTFjMVU0eDNpUkg2aUpLeHgtYUtJWGRKSlZ6WTYxX29JbkVOMjAxT21hc1MwQU91SmxYMm93ejV2QmVLcGZmUWFvc0dSTmhTS0RtS09HeVF4ZzJLcWtqM2xoNVc?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMinAFBVV95cUxNTkU3Ym9CWUNndlJSeDQtcHZzekFFVEJld3ZCb3MzZWlJMWdqYmg3aHk1X3NCX3pSZ1NHTUxTTllMcTFjMVU0eDNpUkg2aUpLeHgtYUtJWGRKSlZ6WTYxX29JbkVOMjAxT21hc1MwQU91SmxYMm93ejV2QmVLcGZmUWFvc0dSTmhTS0RtS09HeVF4ZzJLcWtqM2xoNVc?oc=5' target='_blank'&gt;Claude Cod"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNTkU3Ym9CWUNndlJSeDQtcHZzekFFVEJld3ZCb3MzZWlJMWdqYmg3aHk1X3NCX3pSZ1NHTUxTTllMcTFjMVU0eDNpUkg2aUpLeHgtYUtJWGRKSlZ6WTYxX29JbkVOMjAxT21hc1MwQU91SmxYMm93ejV2QmVLcGZmUWFvc0dSTmhTS0RtS09HeVF4ZzJLcWtqM2xoNVc?oc=5" target="_blank"&gt;Claude Cod
+
+**출처**: [https://news.google.com/rss/articles/CBMinAFBVV95cUxNTkU3Ym9CWUNndlJSeDQtcHZzekFFVEJld3ZCb3MzZWlJMWdqYmg3aHk1X3NCX3pSZ1NHTUxTTllMcTFjMVU0eDNpUkg2aUpLeHgtYUtJWGRKSlZ6WTYxX29JbkVOMjAxT21hc1MwQU91SmxYMm93ejV2QmVLcGZmUWFvc0dSTmhTS0RtS09HeVF4ZzJLcWtqM2xoNVc?oc=5](https://news.google.com/rss/articles/CBMinAFBVV95cUxNTkU3Ym9CWUNndlJSeDQtcHZzekFFVEJld3ZCb3MzZWlJMWdqYmg3aHk1X3NCX3pSZ1NHTUxTTllMcTFjMVU0eDNpUkg2aUpLeHgtYUtJWGRKSlZ6WTYxX29JbkVOMjAxT21hc1MwQU91SmxYMm93ejV2QmVLcGZmUWFvc0dSTmhTS0RtS09HeVF4ZzJLcWtqM2xoNVc?oc=5)
