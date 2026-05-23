@@ -28,7 +28,6 @@ const SEARCH_TABS = [
 
 function SearchModal({ onClose }: { onClose: () => void }) {
   const { t } = useTranslation();
-  const { user, openLoginModal } = useAuth();
   const router = useRouter();
   const [query, setQuery] = useState("");
   const [activeTab, setActiveTab] = useState<(typeof SEARCH_TABS)[number]["key"]>("all");
@@ -56,11 +55,7 @@ function SearchModal({ onClose }: { onClose: () => void }) {
     const tab = SEARCH_TABS.find((item) => item.key === activeTab) ?? SEARCH_TABS[0];
     const dest = tab.href(query.trim());
     onClose();
-    if (!user) {
-      openLoginModal();
-    } else {
-      router.push(dest);
-    }
+    router.push(dest);
   }
 
   function handleAskAI() {
@@ -176,8 +171,8 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
     { href: "/", label: t.nav.home, icon: Brain, guard: false },
     { href: "/radar", label: textbookLabel, icon: BookOpen, guard: false },
     { href: "/learning", label: t.nav.learning, icon: BookOpen, guard: false },
-    { href: "/skills", label: t.nav.skills, icon: Zap, guard: true },
-    { href: "/labs", label: t.nav.labs, icon: FlaskConical, guard: true },
+    { href: "/skills", label: t.nav.skills, icon: Zap, guard: false },
+    { href: "/labs", label: t.nav.labs, icon: FlaskConical, guard: false },
   ];
 
   function handleClick(e: React.MouseEvent, href: string, guard: boolean) {
