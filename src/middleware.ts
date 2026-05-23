@@ -34,10 +34,10 @@ export async function middleware(request: NextRequest) {
       }
     );
 
-    const { data: { user } } = await supabase.auth.getUser();
+    const { data: { session } } = await supabase.auth.getSession();
 
     // 보호된 경로에 비로그인 상태로 접근하면 홈으로 리다이렉트
-    if (isProtected && !user) {
+    if (isProtected && !session) {
       const url = request.nextUrl.clone();
       url.pathname = "/";
       url.searchParams.set("auth", "required");
