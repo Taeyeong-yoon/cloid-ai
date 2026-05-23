@@ -1,6 +1,9 @@
 "use client";
 
+import { Mail } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
+
+const CONTACT_EMAIL = "openvoiceai@naver.com";
 
 export default function FooterBottom() {
   const { t } = useTranslation();
@@ -8,7 +11,7 @@ export default function FooterBottom() {
   return (
     <footer className="border-t border-slate-800 bg-[#0f1117]/80 mt-16">
       <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 flex-wrap">
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-8 flex-wrap">
           {/* Brand + description */}
           <div>
             <div className="font-bold text-base text-white mb-1">
@@ -20,6 +23,24 @@ export default function FooterBottom() {
             </p>
           </div>
 
+          {/* 문의 사항 */}
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/50 px-5 py-4 min-w-[220px]">
+            <div className="flex items-center gap-2 mb-2">
+              <Mail size={14} className="text-violet-400" />
+              <span className="text-sm font-semibold text-white">{t.footer.contact_title}</span>
+            </div>
+            <p className="text-xs text-slate-400 leading-relaxed mb-3">
+              {t.footer.contact_desc}
+            </p>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="inline-flex items-center gap-2 rounded-xl border border-violet-500/30 bg-violet-500/10 px-3 py-2 text-xs font-medium text-violet-300 transition-all hover:border-violet-400/50 hover:bg-violet-500/20 hover:text-violet-200"
+            >
+              <Mail size={12} />
+              {CONTACT_EMAIL}
+            </a>
+          </div>
+
           {/* Links + update schedule */}
           <div className="flex flex-col sm:items-end gap-2">
             <div className="flex items-center gap-4">
@@ -28,12 +49,6 @@ export default function FooterBottom() {
                 className="text-xs text-slate-500 hover:text-slate-300 transition-colors"
               >
                 {t.footer.faq_link}
-              </a>
-              <a
-                href="mailto:feedback@cloid.ai"
-                className="text-xs text-slate-500 hover:text-slate-300 transition-colors"
-              >
-                {t.footer.feedback_link}
               </a>
             </div>
             <div className="flex items-center gap-1.5">

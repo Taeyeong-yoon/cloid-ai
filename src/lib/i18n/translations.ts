@@ -223,6 +223,9 @@ export const translations = {
       feedback_link: "Send Feedback",
       update_schedule: "Content updated: Daily",
       updated_today: "Updated today",
+      contact_title: "Contact",
+      contact_desc: "Questions, collaboration, or content requests — feel free to reach out.",
+      contact_email_label: "Email",
     },
     search: {
       title: "Search Content",
@@ -533,6 +536,9 @@ export const translations = {
       feedback_link: "피드백 보내기",
       update_schedule: "콘텐츠 업데이트 주기: 매일",
       updated_today: "오늘 업데이트됨",
+      contact_title: "문의 사항",
+      contact_desc: "궁금한 점, 협업 제안, 콘텐츠 요청은 이메일로 편하게 보내주세요.",
+      contact_email_label: "이메일",
     },
     search: {
       title: "콘텐츠 검색",
