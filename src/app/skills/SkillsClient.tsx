@@ -1,12 +1,13 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect } from "react";
-import { Search, ArrowLeft, Copy, Check, X, Cpu, Zap, Calendar, BookOpen } from "lucide-react";
+import { Search, ArrowLeft, Copy, Check, X, Cpu, Zap, Calendar, BookOpen, Clock3 } from "lucide-react";
 import Link from "next/link";
 import type { Skill } from "@/lib/types";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 import FloatingTutor from "@/components/FloatingTutor";
 import { TEXTBOOKS } from "@/constants/textbooks";
+import TextbookIcon from "@/components/TextbookIcon";
 
 // ─── 카테고리 설정 ────────────────────────────────────────────
 const CATEGORY_CONFIG = [
@@ -342,23 +343,48 @@ function HubDetail({ skill, onClose, stickyRef, locale }: {
                       {locale === "ko" ? "관련 인터랙티브 교재" : "Related Textbooks"}
                     </span>
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     {related.map((tb) => (
                       <Link
                         key={tb.id}
                         href={`/radar/${tb.id}`}
-                        className="flex items-center gap-3 rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-3 transition-all hover:border-violet-500/40 hover:bg-violet-900/20 group"
+                        className="group block rounded-[1.25rem] border border-slate-800 bg-slate-950/70 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/40 hover:bg-slate-900/70"
                       >
-                        <BookOpen size={15} className="shrink-0 text-violet-400 group-hover:text-violet-300" />
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-semibold text-slate-200 group-hover:text-white truncate">
-                            {locale === "ko" ? tb.title : tb.titleEn}
-                          </p>
-                          <p className="text-xs text-slate-500 truncate mt-0.5">
-                            {tb.tags.slice(0, 3).join(" · ")}
-                          </p>
+                        <div className="flex items-start gap-3">
+                          <div className="shrink-0 rounded-2xl border border-slate-800 bg-slate-950/80 p-1.5">
+                            <TextbookIcon icon={tb.icon} accentColor={tb.accentColor} size={52} />
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <div className="mb-1.5 flex items-center gap-2">
+                              <span className="rounded-full border border-violet-500/25 bg-violet-500/10 px-2 py-0.5 text-[10px] text-violet-200">
+                                {locale === "ko" ? "교재 열기" : "Open textbook"}
+                              </span>
+                            </div>
+                            <h3 className="text-sm font-semibold text-white leading-snug">
+                              {locale === "ko" ? tb.title : tb.titleEn}
+                            </h3>
+                            <p className="mt-1 text-xs leading-5 text-slate-400 line-clamp-2">
+                              {locale === "ko" ? tb.description : tb.descriptionEn}
+                            </p>
+                            <div className="mt-2 flex items-center gap-3 text-[11px] text-slate-500">
+                              <span className="inline-flex items-center gap-1">
+                                <BookOpen size={11} />
+                                {tb.sections}{locale === "ko" ? "섹션" : " sections"}
+                              </span>
+                              <span className="inline-flex items-center gap-1">
+                                <Clock3 size={11} />
+                                {tb.estimatedMinutes}{locale === "ko" ? "분" : " min"}
+                              </span>
+                            </div>
+                            <div className="mt-2 flex flex-wrap gap-1">
+                              {tb.tags.slice(0, 3).map((tag) => (
+                                <span key={tag} className="rounded-full border border-slate-800 bg-slate-900/70 px-2 py-0.5 text-[10px] text-slate-400">
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
                         </div>
-                        <span className="text-xs text-violet-400 shrink-0">→</span>
                       </Link>
                     ))}
                   </div>
