@@ -250,13 +250,13 @@ export const TEXTBOOKS: Textbook[] = [
 
 export const TEXTBOOK_PRIORITY_LABELS = {
   en: {
-    1: "Start now",
-    2: "Expand skills",
-    3: "Trending",
+    1: "Beginner",
+    2: "Intermediate",
+    3: "Advanced",
   },
   ko: {
-    1: "지금 학습",
-    2: "실무 확장",
-    3: "최신 흐름",
+    1: "초급",
+    2: "중급",
+    3: "고급",
   },
 } as const;

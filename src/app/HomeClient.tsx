@@ -280,29 +280,6 @@ export default function HomeClient({
   return (
     <div className="space-y-10">
 
-      {/* 제작 스토리 교재 배너 */}
-      <a
-        href="/story.html"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="animate-fade-in-up group flex items-center gap-4 rounded-2xl border border-amber-500/40 bg-gradient-to-r from-amber-950/60 to-orange-950/40 px-5 py-4 transition-all hover:border-amber-400/60 hover:from-amber-950/80 hover:to-orange-950/60"
-      >
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/20 text-xl">
-          📖
-        </div>
-        <div className="flex-1 min-w-0">
-          <p className="text-sm font-bold text-amber-200 group-hover:text-amber-100 transition-colors">
-            {locale === "ko" ? "코딩을 몰라도 AI 플랫폼을 만들 수 있습니다" : "You Can Build an AI Platform Without Coding"}
-          </p>
-          <p className="mt-0.5 text-xs text-amber-400/80 leading-relaxed">
-            {locale === "ko"
-              ? "마스터플랜 · 에이전트팀 · 병렬작업 · n8n 자동화 — 이 플랫폼을 만든 실제 과정을 인터랙티브 교재로 공개합니다"
-              : "Master plan · Agent teams · Parallel work · n8n automation — the real story behind this platform"}
-          </p>
-        </div>
-        <div className="shrink-0 text-amber-400 text-lg group-hover:translate-x-1 transition-transform">→</div>
-      </a>
-
       {/* 첫 방문자 온보딩 배너 */}
       {showOnboarding && (
         <div className="animate-fade-in-up relative flex items-start gap-4 rounded-2xl border border-violet-500/30 bg-violet-950/40 px-5 py-4">
@@ -416,6 +393,29 @@ export default function HomeClient({
           </h2>
           <p className="ml-8 text-sm text-slate-400 sm:text-base">{t.home.journey_subtitle}</p>
         </div>
+
+        {/* 제작 스토리 교재 배너 — 인터랙티브 교재 버튼 바로 위 */}
+        <a
+          href="/story.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="animate-fade-in-up mb-4 group flex items-center gap-4 rounded-2xl border border-amber-500/40 bg-gradient-to-r from-amber-950/60 to-orange-950/40 px-5 py-4 transition-all hover:border-amber-400/60 hover:from-amber-950/80 hover:to-orange-950/60"
+        >
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/20 text-xl">
+            📖
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-sm font-bold text-amber-200 group-hover:text-amber-100 transition-colors">
+              {locale === "ko" ? "코딩을 몰라도 AI 플랫폼을 만들 수 있습니다" : "You Can Build an AI Platform Without Coding"}
+            </p>
+            <p className="mt-0.5 text-xs text-amber-400/80 leading-relaxed">
+              {locale === "ko"
+                ? "마스터플랜 · 에이전트팀 · 병렬작업 · n8n 자동화 — 이 플랫폼을 만든 실제 과정을 인터랙티브 교재로 공개합니다"
+                : "Master plan · Agent teams · Parallel work · n8n automation — the real story behind this platform"}
+            </p>
+          </div>
+          <div className="shrink-0 text-amber-400 text-lg group-hover:translate-x-1 transition-transform">→</div>
+        </a>
 
         <div className="journey-grid mb-5 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
           {journey.map((item) => (
