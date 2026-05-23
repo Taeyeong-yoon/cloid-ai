@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache';
 import { createClient } from '@/lib/supabase/server';
 
-export type BookmarkType = 'radar' | 'skill';
+export type BookmarkType = 'radar' | 'skill' | 'labs';
 
 export interface Bookmark {
   id: string;

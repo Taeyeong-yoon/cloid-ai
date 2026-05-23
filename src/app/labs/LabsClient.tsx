@@ -349,7 +349,7 @@ function LabCard({
             {expanded ? t.labs.collapse : `${t.labs.start_steps} (${lab.steps.length})`}
             {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
           </button>
-          <BookmarkButton type="labs" id={lab.id} />
+          <BookmarkButton type="labs" slug={lab.id} />
         </div>
       </div>
 
