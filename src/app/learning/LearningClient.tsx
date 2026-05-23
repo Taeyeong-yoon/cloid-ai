@@ -293,18 +293,27 @@ export default function LearningClient({ topics }: { topics: LearningTopic[] }) 
 
                   {/* 토픽 목록 */}
                   {isOpen && (
-                    <div className="py-1 space-y-0.5 bg-slate-900/20">
+                    <div className="p-2 space-y-1.5 bg-slate-900/20">
                       {levelTopics.map((tp) => (
                         <button
                           key={tp.id}
                           onClick={() => handleTopicSelect(tp.id)}
-                          className={`w-full text-left px-4 py-2.5 transition-all text-sm ${
+                          className={`w-full text-left rounded-xl border px-3 py-2.5 transition-all duration-150 group ${
                             selectedId === tp.id
-                              ? "bg-violet-900/40 text-white border-l-2 border-violet-500"
-                              : "text-slate-400 hover:bg-slate-800/50 hover:text-white border-l-2 border-transparent"
+                              ? "border-violet-500/50 bg-violet-900/40 shadow-sm shadow-violet-900/20"
+                              : "border-slate-800 bg-slate-900/60 hover:border-violet-500/30 hover:bg-slate-800/60"
                           }`}
                         >
-                          {tp.title}
+                          <p className={`text-sm font-semibold leading-snug transition-colors ${
+                            selectedId === tp.id ? "text-white" : "text-slate-200 group-hover:text-white"
+                          }`}>
+                            {tp.title}
+                          </p>
+                          {tp.tags && tp.tags.length > 0 && (
+                            <p className="mt-1 text-xs text-slate-500 truncate">
+                              {tp.tags.slice(0, 2).join(" · ")}
+                            </p>
+                          )}
                         </button>
                       ))}
                     </div>

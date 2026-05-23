@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect } from "react";
-import { Search, ArrowLeft, Copy, Check, X, Cpu, Zap, Calendar } from "lucide-react";
+import { Search, ArrowLeft, Copy, Check, X, Cpu, Zap, Calendar, BookOpen } from "lucide-react";
+import Link from "next/link";
 import type { Skill } from "@/lib/types";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 import FloatingTutor from "@/components/FloatingTutor";
+import { TEXTBOOKS } from "@/constants/textbooks";
 
 // ─── 카테고리 설정 ────────────────────────────────────────────
 const CATEGORY_CONFIG = [
@@ -323,6 +325,46 @@ function HubDetail({ skill, onClose, stickyRef, locale }: {
 
           <div className="px-6 py-5 max-h-[calc(100vh-14rem)] overflow-y-auto">
             <MarkdownContent raw={content} />
+
+            {/* 관련 인터랙티브 교재 */}
+            {(() => {
+              const related = TEXTBOOKS.filter((tb) =>
+                tb.ready && skill.tags.some((tag) =>
+                  tb.tags.some((t) => t.toLowerCase() === tag.toLowerCase())
+                )
+              ).slice(0, 3);
+              if (related.length === 0) return null;
+              return (
+                <div className="mt-6 pt-5 border-t border-slate-800">
+                  <div className="flex items-center gap-2 mb-3">
+                    <BookOpen size={14} className="text-violet-400" />
+                    <span className="text-sm font-semibold text-slate-200">
+                      {locale === "ko" ? "관련 인터랙티브 교재" : "Related Textbooks"}
+                    </span>
+                  </div>
+                  <div className="space-y-2">
+                    {related.map((tb) => (
+                      <Link
+                        key={tb.id}
+                        href={`/radar/${tb.id}`}
+                        className="flex items-center gap-3 rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-3 transition-all hover:border-violet-500/40 hover:bg-violet-900/20 group"
+                      >
+                        <BookOpen size={15} className="shrink-0 text-violet-400 group-hover:text-violet-300" />
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-semibold text-slate-200 group-hover:text-white truncate">
+                            {locale === "ko" ? tb.title : tb.titleEn}
+                          </p>
+                          <p className="text-xs text-slate-500 truncate mt-0.5">
+                            {tb.tags.slice(0, 3).join(" · ")}
+                          </p>
+                        </div>
+                        <span className="text-xs text-violet-400 shrink-0">→</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
           </div>
         </div>
       </div>
