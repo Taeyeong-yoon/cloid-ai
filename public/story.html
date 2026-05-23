@@ -749,10 +749,10 @@ function render(animate, direction) {
 
   if (!animate) {
     leftPage.innerHTML  = getPageContent(current, 'left');
-    rightBg.innerHTML   = getPageContent(current, 'right');
+    rightBg.innerHTML   = '';
     flipLayer.style.transform = 'rotateY(0deg)';
     flipLayer.style.transition = 'none';
-    flipFront.innerHTML = '';
+    flipFront.innerHTML = getPageContent(current, 'right');
     flipBack.innerHTML  = '';
     return;
   }
