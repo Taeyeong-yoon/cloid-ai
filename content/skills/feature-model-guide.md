@@ -3,8 +3,8 @@ title: 모델 선택 가이드 — Haiku · Sonnet · Opus 언제 뭘 쓸까
 category: features
 tags: [모델, Haiku, Sonnet, Opus, 비용]
 difficulty: beginner
-summary: Claude 모델 3종의 특성을 상황별로 비교합니다. 속도가 필요하면 Haiku, 균형은 Sonnet, 최고 성능은 Opus.
-updated: 2026-03-21
+summary: Claude 모델 3종의 특성을 상황별로 비교합니다. 속도가 필요하면 Haiku, 균형은 Sonnet, 최고 성능은 Opus 4.8.
+updated: 2026-05-31
 ---
 
 ## 한눈에 비교
@@ -13,7 +13,10 @@ updated: 2026-03-21
 |------|------|------|------|----------|
 | **Claude Haiku 4.5** | 가장 빠름 | 가장 저렴 | 기본 | 분류, 요약, 간단한 Q&A |
 | **Claude Sonnet 4.6** | 빠름 | 중간 | 높음 | 대부분의 작업, 코딩, 분석 |
-| **Claude Opus 4.6** | 느림 | 가장 비쌈 | 최고 | 복잡한 추론, 전략, 연구 |
+| **Claude Opus 4.7** | 느림 | 비쌈 | 매우 높음 | 복잡한 추론, 전략, 연구 |
+| **Claude Opus 4.8** 🆕 | 느림~빠름 | 가장 비쌈 | 최고 | Dynamic Workflows, 병렬 에이전트 |
+
+> Opus 4.8은 **Fast Mode** 지원으로 속도가 크게 개선됐습니다.
 
 ## 상황별 추천
 
@@ -29,24 +32,38 @@ updated: 2026-03-21
 - 데이터 분석
 - Claude Code CLI 기본 모델
 
-### 깊은 사고가 필요한 고난이도 작업 → **Opus**
+### 깊은 사고가 필요한 고난이도 작업 → **Opus 4.8**
 - 복잡한 법률·의료 문서 해석
 - 장기 전략 수립
 - 멀티스텝 수학·과학 문제
 - Extended Thinking과 함께 사용 시 최대 효과
+- **Dynamic Workflows**: 작업 중 계획을 실시간으로 수정해야 할 때
+- **병렬 서브에이전트**: 여러 작업을 동시에 분산 처리할 때
 
-## API 가격 참고 (2026년 3월 기준)
+## API 가격 참고 (2025년 5월 기준)
 
 | 모델 | 입력 (1M 토큰) | 출력 (1M 토큰) |
 |------|--------------|--------------|
 | Haiku 4.5 | $0.80 | $4.00 |
 | Sonnet 4.6 | $3.00 | $15.00 |
-| Opus 4.6 | $15.00 | $75.00 |
+| Opus 4.7 | $15.00 | $75.00 |
+| Opus 4.8 | $15.00 | $75.00 |
 
 > 가격은 변경될 수 있습니다. 최신 정보는 [anthropic.com/pricing](https://anthropic.com/pricing) 확인.
+
+## Opus 4.7 vs 4.8 차이
+
+| | Opus 4.7 | Opus 4.8 |
+|-|---------|---------|
+| 출시일 | 2025년 4월 16일 | 2025년 5월 28일 |
+| Dynamic Workflows | ❌ | ✅ |
+| Fast Mode | ❌ | ✅ |
+| 병렬 서브에이전트 | 기본 | ✅ 강화 |
+| Managed Agents 연동 | ✅ | ✅ 최적화 |
 
 ## 팁
 
 - claude.ai 웹은 플랜에 따라 사용 가능 모델이 다릅니다
 - API는 모델명을 직접 지정하므로 유연하게 전환 가능
 - 프로덕션에선 Sonnet으로 시작 후 성능 부족 시 Opus로 업그레이드 권장
+- Opus 4.8 Fast Mode는 Opus 품질을 유지하면서 속도를 높이므로 반복 작업에 효과적

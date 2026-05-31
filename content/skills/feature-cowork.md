@@ -3,13 +3,13 @@ title: Cowork — 팀이 함께 Claude와 협업하기
 category: features
 tags: [Cowork, 협업, 팀, 공유]
 difficulty: intermediate
-summary: Cowork는 팀원들이 같은 Claude 대화 공간에서 동시에 작업하는 실시간 협업 기능입니다. Microsoft Copilot에도 통합됐습니다.
-updated: 2026-03-21
+summary: Cowork는 팀원들이 같은 Claude 대화 공간에서 동시에 작업하는 실시간 협업 기능입니다. 2025년 4월 9일 GA 출시, Microsoft Copilot에도 통합됐습니다.
+updated: 2026-05-31
 ---
 
 ## 무엇인가?
 
-Cowork는 여러 사람이 하나의 Claude 대화에 참여해 함께 작업하는 기능입니다. 2025년 출시 후 Microsoft Wave 3 업데이트에서 Copilot과도 통합되었습니다.
+Cowork는 여러 사람이 하나의 Claude 대화에 참여해 함께 작업하는 기능입니다. **2025년 4월 9일 정식(GA) 출시** 후 일반 사용자도 사용 가능합니다. Microsoft Wave 3 업데이트에서 Copilot과도 통합되었습니다.
 
 ## 주요 기능
 
