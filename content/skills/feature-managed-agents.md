@@ -12,7 +12,7 @@ updated: 2026-05-31
 Managed Agents는 Claude 에이전트를 Anthropic 인프라에서 직접 호스팅하는 서비스입니다. 서버를 직접 구축하지 않아도 에이전트를 배포·실행·확장할 수 있습니다.
 
 **출시 타임라인**
-- **2025년 4월 8일** — GA 출시 (클라우드 호스팅 기본 기능)
+- **2026년 4월 8일** — GA 출시 (클라우드 호스팅 기본 기능)
 - **4월 21~23일** — Dreams(메모리 자가개선) + Memory 기능 추가
 - **5월 7일** — Webhooks + Multiagent Orchestration 추가
 - **5월 19일** — MCP Tunnels + Self-hosted Sandboxes 추가
