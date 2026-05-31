@@ -36,15 +36,15 @@
     },
     {
       "type": "video",
-      "title": "Codex 3가지 사랑스러운 기능 | Goal / Pet / 원격제어| AI 가 내일까지 다 해줄거임!",
-      "url": "https://www.youtube.com/watch?v=qMU5CB9M7hI",
-      "description": "Codex 앱이 개발자를 완전히 바꿨습니다! Goal, Pet , 원격 액세스 - 이 3 가지 기능만 알면 AI 코딩이 달라집니다. 이번 영상에서는 ..."
-    },
-    {
-      "type": "video",
       "title": "제발 챗GPT만 쓰지 마세요. AI 에이전트 핵심 총정리",
       "url": "https://www.youtube.com/watch?v=MkScRelUMhQ",
       "description": "ChatGPT만 알고 계셨다면, 이제는 꼭 AI 에이전트를 이해해야 합니다 구글, 마이크로소프트, 오픈AI까지 모두 집중하는 키워드가 바로 ..."
+    },
+    {
+      "type": "video",
+      "title": "어디서든 이어 하는 Claude Code 원격 제어 사용법",
+      "url": "https://www.youtube.com/watch?v=BYk7QvsleBo",
+      "description": "원본 영상: https://www.youtube.com/watch?v=Ko7_tC1fMMM Claude Code 원격 제어 기능을 사용해 책상에서 시작한 세션을 ..."
     },
     {
       "type": "practice",
