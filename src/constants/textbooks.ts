@@ -246,6 +246,21 @@ export const TEXTBOOKS: Textbook[] = [
     tags: ["Marketplace", "Skill", "Plugin", "Cowork"],
     ready: true,
   },
+  {
+    id: "cowork-advanced",
+    title: "Cowork 심화 — 역할분리·작업분해·검토루프",
+    titleEn: "Cowork Advanced — Roles, Breakdown & Review Loop",
+    description: "역할 분리, 작업 분해, 검토 루프를 인터랙티브 맵과 실습으로 익히는 Cowork 심화 교재입니다.",
+    descriptionEn: "An advanced Cowork textbook with interactive maps and labs covering role separation, task breakdown, and review loops.",
+    priority: 2,
+    icon: "cowork",
+    accentColor: "teal",
+    htmlFile: "cowork-mastery.html",
+    sections: 11,
+    estimatedMinutes: 45,
+    tags: ["Cowork", "협업", "워크플로", "심화"],
+    ready: true,
+  },
 ];
 
 export const TEXTBOOK_PRIORITY_LABELS = {
