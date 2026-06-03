@@ -1,0 +1,15 @@
+---
+title: "Uber Caps Usage of AI Tools Like Claude Code to Cut Costs - Bloomberg.com"
+date: "2026-06-02"
+tags:
+  - claude-code
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPLUZubFNWalQwcjRObEdVRm5Sd3lpZGUzSmtIVVhfSGt0MFVPU05IeDI3SEVvUl9CaWQ0OUwwcTVyZ1BlbXluWS1obkRyM09UZ19MNENENzkwVF9XcWUzOXZmUjlleWdIQl90YmttUTd0SUkwSzZtNGpweTdLUEVzb3R1OE9XSTE1RFpwcEo1V3BxZXpJcmJWb0tUdVk5MWhUVTJfTTVKczdKRWd1?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMirAFBVV95cUxPLUZubFNWalQwcjRObEdVRm5Sd3lpZGUzSmtIVVhfSGt0MFVPU05IeDI3SEVvUl9CaWQ0OUwwcTVyZ1BlbXluWS1obkRyM09UZ19MNENENzkwVF9XcWUzOXZmUjlleWdIQl90YmttUTd0SUkwSzZtNGpweTdLUEVzb3R1OE9XSTE1RFpwcEo1V3BxZXpJcmJWb0tUdVk5MWhUVTJfTTVKczdKRWd1?oc=5' target='"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPLUZubFNWalQwcjRObEdVRm5Sd3lpZGUzSmtIVVhfSGt0MFVPU05IeDI3SEVvUl9CaWQ0OUwwcTVyZ1BlbXluWS1obkRyM09UZ19MNENENzkwVF9XcWUzOXZmUjlleWdIQl90YmttUTd0SUkwSzZtNGpweTdLUEVzb3R1OE9XSTE1RFpwcEo1V3BxZXpJcmJWb0tUdVk5MWhUVTJfTTVKczdKRWd1?oc=5" target="
+
+**출처**: [https://news.google.com/rss/articles/CBMirAFBVV95cUxPLUZubFNWalQwcjRObEdVRm5Sd3lpZGUzSmtIVVhfSGt0MFVPU05IeDI3SEVvUl9CaWQ0OUwwcTVyZ1BlbXluWS1obkRyM09UZ19MNENENzkwVF9XcWUzOXZmUjlleWdIQl90YmttUTd0SUkwSzZtNGpweTdLUEVzb3R1OE9XSTE1RFpwcEo1V3BxZXpJcmJWb0tUdVk5MWhUVTJfTTVKczdKRWd1?oc=5](https://news.google.com/rss/articles/CBMirAFBVV95cUxPLUZubFNWalQwcjRObEdVRm5Sd3lpZGUzSmtIVVhfSGt0MFVPU05IeDI3SEVvUl9CaWQ0OUwwcTVyZ1BlbXluWS1obkRyM09UZ19MNENENzkwVF9XcWUzOXZmUjlleWdIQl90YmttUTd0SUkwSzZtNGpweTdLUEVzb3R1OE9XSTE1RFpwcEo1V3BxZXpJcmJWb0tUdVk5MWhUVTJfTTVKczdKRWd1?oc=5)

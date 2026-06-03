@@ -1,0 +1,15 @@
+---
+title: "Anthropic’s IPO march began with a Claude Code breakthrough - Fast Company"
+date: "2026-06-02"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMimwFBVV95cUxQLWRROVU3aVJtelZRLXlzdWpJYUVzRG1HNVBJSXhxTUxqS09wQk9hWU9ESE9FZHdubFRfRUNRTVpHV3BJVExkTWFDUGZMY2pUek1TS1cyOGhLRUhrZXYxM3FBVEl4UTF5THUzMy01VVdoTUl1Uk5XSzRuRWY1cWNjeEFHQURiV0IzRTE4am4teVpzUVcybmFMN3F6dw?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMimwFBVV95cUxQLWRROVU3aVJtelZRLXlzdWpJYUVzRG1HNVBJSXhxTUxqS09wQk9hWU9ESE9FZHdubFRfRUNRTVpHV3BJVExkTWFDUGZMY2pUek1TS1cyOGhLRUhrZXYxM3FBVEl4UTF5THUzMy01VVdoTUl1Uk5XSzRuRWY1cWNjeEFHQURiV0IzRTE4am4teVpzUVcybmFMN3F6dw?oc=5' target='_blank'&gt;Anthropic’s"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQLWRROVU3aVJtelZRLXlzdWpJYUVzRG1HNVBJSXhxTUxqS09wQk9hWU9ESE9FZHdubFRfRUNRTVpHV3BJVExkTWFDUGZMY2pUek1TS1cyOGhLRUhrZXYxM3FBVEl4UTF5THUzMy01VVdoTUl1Uk5XSzRuRWY1cWNjeEFHQURiV0IzRTE4am4teVpzUVcybmFMN3F6dw?oc=5" target="_blank"&gt;Anthropic’s
+
+**출처**: [https://news.google.com/rss/articles/CBMimwFBVV95cUxQLWRROVU3aVJtelZRLXlzdWpJYUVzRG1HNVBJSXhxTUxqS09wQk9hWU9ESE9FZHdubFRfRUNRTVpHV3BJVExkTWFDUGZMY2pUek1TS1cyOGhLRUhrZXYxM3FBVEl4UTF5THUzMy01VVdoTUl1Uk5XSzRuRWY1cWNjeEFHQURiV0IzRTE4am4teVpzUVcybmFMN3F6dw?oc=5](https://news.google.com/rss/articles/CBMimwFBVV95cUxQLWRROVU3aVJtelZRLXlzdWpJYUVzRG1HNVBJSXhxTUxqS09wQk9hWU9ESE9FZHdubFRfRUNRTVpHV3BJVExkTWFDUGZMY2pUek1TS1cyOGhLRUhrZXYxM3FBVEl4UTF5THUzMy01VVdoTUl1Uk5XSzRuRWY1cWNjeEFHQURiV0IzRTE4am4teVpzUVcybmFMN3F6dw?oc=5)
