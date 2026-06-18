@@ -1,0 +1,15 @@
+---
+title: "Anthropic Is Bringing Together AI Design and Coding in Claude - CNET"
+date: "2026-06-17"
+tags:
+  - tool
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMilwFBVV95cUxNX3FNNmtNUHBTaUN3cE9mMjJLWUE1ZzlPRjdoRTgtTENCSkpwYTM3bTM2c0tnNWdsTm1SbFJsc3dTUC12aWNrMzBOZDdnRjN5T2ItWWMyT3N6YlA4NDZfRkJoSFdGM2t5WlRPVHRPaGktNzFaYXE1ZC1nSVVxVkVBdm5WYlRiNnhUZXcteG1sZzI1WEx4bFFV?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMilwFBVV95cUxNX3FNNmtNUHBTaUN3cE9mMjJLWUE1ZzlPRjdoRTgtTENCSkpwYTM3bTM2c0tnNWdsTm1SbFJsc3dTUC12aWNrMzBOZDdnRjN5T2ItWWMyT3N6YlA4NDZfRkJoSFdGM2t5WlRPVHRPaGktNzFaYXE1ZC1nSVVxVkVBdm5WYlRiNnhUZXcteG1sZzI1WEx4bFFV?oc=5' target='_blank'&gt;Anthropic Is Brin"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxNX3FNNmtNUHBTaUN3cE9mMjJLWUE1ZzlPRjdoRTgtTENCSkpwYTM3bTM2c0tnNWdsTm1SbFJsc3dTUC12aWNrMzBOZDdnRjN5T2ItWWMyT3N6YlA4NDZfRkJoSFdGM2t5WlRPVHRPaGktNzFaYXE1ZC1nSVVxVkVBdm5WYlRiNnhUZXcteG1sZzI1WEx4bFFV?oc=5" target="_blank"&gt;Anthropic Is Brin
+
+**출처**: [https://news.google.com/rss/articles/CBMilwFBVV95cUxNX3FNNmtNUHBTaUN3cE9mMjJLWUE1ZzlPRjdoRTgtTENCSkpwYTM3bTM2c0tnNWdsTm1SbFJsc3dTUC12aWNrMzBOZDdnRjN5T2ItWWMyT3N6YlA4NDZfRkJoSFdGM2t5WlRPVHRPaGktNzFaYXE1ZC1nSVVxVkVBdm5WYlRiNnhUZXcteG1sZzI1WEx4bFFV?oc=5](https://news.google.com/rss/articles/CBMilwFBVV95cUxNX3FNNmtNUHBTaUN3cE9mMjJLWUE1ZzlPRjdoRTgtTENCSkpwYTM3bTM2c0tnNWdsTm1SbFJsc3dTUC12aWNrMzBOZDdnRjN5T2ItWWMyT3N6YlA4NDZfRkJoSFdGM2t5WlRPVHRPaGktNzFaYXE1ZC1nSVVxVkVBdm5WYlRiNnhUZXcteG1sZzI1WEx4bFFV?oc=5)
