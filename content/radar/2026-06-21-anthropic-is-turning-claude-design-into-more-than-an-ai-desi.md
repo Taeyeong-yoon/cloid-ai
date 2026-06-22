@@ -1,0 +1,15 @@
+---
+title: "Anthropic Is Turning Claude Design Into More Than an AI Design Generator - Memeburn"
+date: "2026-06-21"
+tags:
+  - tool
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWGFxdS1VbVpOQnVac2phdHRZTklaSTNTYW90TWhHRkFFRFctMDc2dlZmX3lZbUZLNlNiTnZfTWh6UXZ0bFJGYW1aeUZjUDcyMVJLS1RQUTJ1Y2QtNmVFOE9GUWRnSDNCWDcwSUJJWGI4clkwVmh6cHhFaWlONUZLQW1KVThnejY1RF9nRmV6OFQ1SHdWcFVJS1BR?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMimgFBVV95cUxNWGFxdS1VbVpOQnVac2phdHRZTklaSTNTYW90TWhHRkFFRFctMDc2dlZmX3lZbUZLNlNiTnZfTWh6UXZ0bFJGYW1aeUZjUDcyMVJLS1RQUTJ1Y2QtNmVFOE9GUWRnSDNCWDcwSUJJWGI4clkwVmh6cHhFaWlONUZLQW1KVThnejY1RF9nRmV6OFQ1SHdWcFVJS1BR?oc=5' target='_blank'&gt;Anthropic Is "
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxNWGFxdS1VbVpOQnVac2phdHRZTklaSTNTYW90TWhHRkFFRFctMDc2dlZmX3lZbUZLNlNiTnZfTWh6UXZ0bFJGYW1aeUZjUDcyMVJLS1RQUTJ1Y2QtNmVFOE9GUWRnSDNCWDcwSUJJWGI4clkwVmh6cHhFaWlONUZLQW1KVThnejY1RF9nRmV6OFQ1SHdWcFVJS1BR?oc=5" target="_blank"&gt;Anthropic Is 
+
+**출처**: [https://news.google.com/rss/articles/CBMimgFBVV95cUxNWGFxdS1VbVpOQnVac2phdHRZTklaSTNTYW90TWhHRkFFRFctMDc2dlZmX3lZbUZLNlNiTnZfTWh6UXZ0bFJGYW1aeUZjUDcyMVJLS1RQUTJ1Y2QtNmVFOE9GUWRnSDNCWDcwSUJJWGI4clkwVmh6cHhFaWlONUZLQW1KVThnejY1RF9nRmV6OFQ1SHdWcFVJS1BR?oc=5](https://news.google.com/rss/articles/CBMimgFBVV95cUxNWGFxdS1VbVpOQnVac2phdHRZTklaSTNTYW90TWhHRkFFRFctMDc2dlZmX3lZbUZLNlNiTnZfTWh6UXZ0bFJGYW1aeUZjUDcyMVJLS1RQUTJ1Y2QtNmVFOE9GUWRnSDNCWDcwSUJJWGI4clkwVmh6cHhFaWlONUZLQW1KVThnejY1RF9nRmV6OFQ1SHdWcFVJS1BR?oc=5)

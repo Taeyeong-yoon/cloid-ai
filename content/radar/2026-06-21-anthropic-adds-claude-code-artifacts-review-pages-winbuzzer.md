@@ -1,0 +1,15 @@
+---
+title: "Anthropic Adds Claude Code Artifacts Review Pages - WinBuzzer"
+date: "2026-06-21"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMimAFBVV95cUxOR3R1ZG5hVzY4MlMwdDlFWWhtXzI2cE1lc2VqYzgwTkNVMXd3eGU3OHZkZU1vdklTR3FJRGFZTlM3MVRicE5fYTF4YU00TUNqWjFFVkM5M3Z3ejVEWm9KWU9xU1NoWlppbzVRREtqYTRmZTNibUtTUTZLMS1MVjZoU0hCOVFsaHRld0lzcHFVSzJuYlFCNy03ZA?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMimAFBVV95cUxOR3R1ZG5hVzY4MlMwdDlFWWhtXzI2cE1lc2VqYzgwTkNVMXd3eGU3OHZkZU1vdklTR3FJRGFZTlM3MVRicE5fYTF4YU00TUNqWjFFVkM5M3Z3ejVEWm9KWU9xU1NoWlppbzVRREtqYTRmZTNibUtTUTZLMS1MVjZoU0hCOVFsaHRld0lzcHFVSzJuYlFCNy03ZA?oc=5' target='_blank'&gt;Anthropic Adds "
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxOR3R1ZG5hVzY4MlMwdDlFWWhtXzI2cE1lc2VqYzgwTkNVMXd3eGU3OHZkZU1vdklTR3FJRGFZTlM3MVRicE5fYTF4YU00TUNqWjFFVkM5M3Z3ejVEWm9KWU9xU1NoWlppbzVRREtqYTRmZTNibUtTUTZLMS1MVjZoU0hCOVFsaHRld0lzcHFVSzJuYlFCNy03ZA?oc=5" target="_blank"&gt;Anthropic Adds 
+
+**출처**: [https://news.google.com/rss/articles/CBMimAFBVV95cUxOR3R1ZG5hVzY4MlMwdDlFWWhtXzI2cE1lc2VqYzgwTkNVMXd3eGU3OHZkZU1vdklTR3FJRGFZTlM3MVRicE5fYTF4YU00TUNqWjFFVkM5M3Z3ejVEWm9KWU9xU1NoWlppbzVRREtqYTRmZTNibUtTUTZLMS1MVjZoU0hCOVFsaHRld0lzcHFVSzJuYlFCNy03ZA?oc=5](https://news.google.com/rss/articles/CBMimAFBVV95cUxOR3R1ZG5hVzY4MlMwdDlFWWhtXzI2cE1lc2VqYzgwTkNVMXd3eGU3OHZkZU1vdklTR3FJRGFZTlM3MVRicE5fYTF4YU00TUNqWjFFVkM5M3Z3ejVEWm9KWU9xU1NoWlppbzVRREtqYTRmZTNibUtTUTZLMS1MVjZoU0hCOVFsaHRld0lzcHFVSzJuYlFCNy03ZA?oc=5)
