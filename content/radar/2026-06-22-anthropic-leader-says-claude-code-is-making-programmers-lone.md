@@ -1,0 +1,15 @@
+---
+title: "Anthropic Leader Says Claude Code Is Making Programmers Lonelier - Let's Data Science"
+date: "2026-06-22"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQU9oR2hreUlQdDJUUDZwTjJKZDM3RE5lZUtHQVNpLURmdG9PT2VCZzUxdWNzQ0tvLWJ2dkZfZ0RzQllrYmFWQ2YzSzBjZW1QUFBUanRWeWRsMWs2NTdnQkZHa19JMEJ5OFlBbERZVmxLenZwLXpxYVEySEFiUXNuMjlQUUp2Y3c4ellJLXdHT0xhU09tbWw4bXFQR2E0NUZTVElQdQ?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMipAFBVV95cUxPQU9oR2hreUlQdDJUUDZwTjJKZDM3RE5lZUtHQVNpLURmdG9PT2VCZzUxdWNzQ0tvLWJ2dkZfZ0RzQllrYmFWQ2YzSzBjZW1QUFBUanRWeWRsMWs2NTdnQkZHa19JMEJ5OFlBbERZVmxLenZwLXpxYVEySEFiUXNuMjlQUUp2Y3c4ellJLXdHT0xhU09tbWw4bXFQR2E0NUZTVElQdQ?oc=5' target='_blank'&gt"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxPQU9oR2hreUlQdDJUUDZwTjJKZDM3RE5lZUtHQVNpLURmdG9PT2VCZzUxdWNzQ0tvLWJ2dkZfZ0RzQllrYmFWQ2YzSzBjZW1QUFBUanRWeWRsMWs2NTdnQkZHa19JMEJ5OFlBbERZVmxLenZwLXpxYVEySEFiUXNuMjlQUUp2Y3c4ellJLXdHT0xhU09tbWw4bXFQR2E0NUZTVElQdQ?oc=5" target="_blank"&gt
+
+**출처**: [https://news.google.com/rss/articles/CBMipAFBVV95cUxPQU9oR2hreUlQdDJUUDZwTjJKZDM3RE5lZUtHQVNpLURmdG9PT2VCZzUxdWNzQ0tvLWJ2dkZfZ0RzQllrYmFWQ2YzSzBjZW1QUFBUanRWeWRsMWs2NTdnQkZHa19JMEJ5OFlBbERZVmxLenZwLXpxYVEySEFiUXNuMjlQUUp2Y3c4ellJLXdHT0xhU09tbWw4bXFQR2E0NUZTVElQdQ?oc=5](https://news.google.com/rss/articles/CBMipAFBVV95cUxPQU9oR2hreUlQdDJUUDZwTjJKZDM3RE5lZUtHQVNpLURmdG9PT2VCZzUxdWNzQ0tvLWJ2dkZfZ0RzQllrYmFWQ2YzSzBjZW1QUFBUanRWeWRsMWs2NTdnQkZHa19JMEJ5OFlBbERZVmxLenZwLXpxYVEySEFiUXNuMjlQUUp2Y3c4ellJLXdHT0xhU09tbWw4bXFQR2E0NUZTVElQdQ?oc=5)

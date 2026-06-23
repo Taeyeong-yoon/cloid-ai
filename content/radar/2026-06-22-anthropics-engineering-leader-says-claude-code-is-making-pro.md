@@ -1,0 +1,15 @@
+---
+title: "Anthropic's engineering leader says Claude Code is making programmers lonelier - Business Insider"
+date: "2026-06-22"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0N3dUNEeENnZkYzYWJwRTg2djlKVlNnQklUcHZGOFlTWGVtOXN4am1IYm82dTdCaFo0X3VWd0FaT2ZtbjZyOXBOdzF2TjA4VjFzb18yMl85UkxMOVBucHV1WW5OaGJPX1djZFN0OUcyUmoxQS1UZnJBZGJkTXpXQ0ZyWlJGYzJ6ZkNsbUVqcTNvRGRY?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0N3dUNEeENnZkYzYWJwRTg2djlKVlNnQklUcHZGOFlTWGVtOXN4am1IYm82dTdCaFo0X3VWd0FaT2ZtbjZyOXBOdzF2TjA4VjFzb18yMl85UkxMOVBucHV1WW5OaGJPX1djZFN0OUcyUmoxQS1UZnJBZGJkTXpXQ0ZyWlJGYzJ6ZkNsbUVqcTNvRGRY?oc=5' target='_blank'&gt;Anthropic's engineeri"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0N3dUNEeENnZkYzYWJwRTg2djlKVlNnQklUcHZGOFlTWGVtOXN4am1IYm82dTdCaFo0X3VWd0FaT2ZtbjZyOXBOdzF2TjA4VjFzb18yMl85UkxMOVBucHV1WW5OaGJPX1djZFN0OUcyUmoxQS1UZnJBZGJkTXpXQ0ZyWlJGYzJ6ZkNsbUVqcTNvRGRY?oc=5" target="_blank"&gt;Anthropic's engineeri
+
+**출처**: [https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0N3dUNEeENnZkYzYWJwRTg2djlKVlNnQklUcHZGOFlTWGVtOXN4am1IYm82dTdCaFo0X3VWd0FaT2ZtbjZyOXBOdzF2TjA4VjFzb18yMl85UkxMOVBucHV1WW5OaGJPX1djZFN0OUcyUmoxQS1UZnJBZGJkTXpXQ0ZyWlJGYzJ6ZkNsbUVqcTNvRGRY?oc=5](https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0N3dUNEeENnZkYzYWJwRTg2djlKVlNnQklUcHZGOFlTWGVtOXN4am1IYm82dTdCaFo0X3VWd0FaT2ZtbjZyOXBOdzF2TjA4VjFzb18yMl85UkxMOVBucHV1WW5OaGJPX1djZFN0OUcyUmoxQS1UZnJBZGJkTXpXQ0ZyWlJGYzJ6ZkNsbUVqcTNvRGRY?oc=5)
