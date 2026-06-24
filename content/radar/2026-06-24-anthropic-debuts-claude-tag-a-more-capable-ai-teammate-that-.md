@@ -1,0 +1,15 @@
+---
+title: "Anthropic debuts Claude Tag, a more capable AI teammate that lives within Slack - SiliconANGLE"
+date: "2026-06-24"
+tags:
+  - tool
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUFNZZUdRd2RVQWRpb1hFT2l3cEl6NE5pYlM1cHoxbVVEVjdoaEdGU3h5cklyamk2LUdWSkx4OG1nd2ZHcFNMUXI2RFZwR1Zscmc1TkxhT1pQeFJ2X1RxNHFWNUtMaERlSHJkb0dSYjV1YllpalhLbmUtbXZQakxJd1o0cTdLa0FWNlg2ZDlsMkdOTldwcVJZNjNPZ3FVbTYtRW43QktR?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMipgFBVV95cUxNUFNZZUdRd2RVQWRpb1hFT2l3cEl6NE5pYlM1cHoxbVVEVjdoaEdGU3h5cklyamk2LUdWSkx4OG1nd2ZHcFNMUXI2RFZwR1Zscmc1TkxhT1pQeFJ2X1RxNHFWNUtMaERlSHJkb0dSYjV1YllpalhLbmUtbXZQakxJd1o0cTdLa0FWNlg2ZDlsMkdOTldwcVJZNjNPZ3FVbTYtRW43QktR?oc=5' target='_blank'&"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNUFNZZUdRd2RVQWRpb1hFT2l3cEl6NE5pYlM1cHoxbVVEVjdoaEdGU3h5cklyamk2LUdWSkx4OG1nd2ZHcFNMUXI2RFZwR1Zscmc1TkxhT1pQeFJ2X1RxNHFWNUtMaERlSHJkb0dSYjV1YllpalhLbmUtbXZQakxJd1o0cTdLa0FWNlg2ZDlsMkdOTldwcVJZNjNPZ3FVbTYtRW43QktR?oc=5" target="_blank"&
+
+**출처**: [https://news.google.com/rss/articles/CBMipgFBVV95cUxNUFNZZUdRd2RVQWRpb1hFT2l3cEl6NE5pYlM1cHoxbVVEVjdoaEdGU3h5cklyamk2LUdWSkx4OG1nd2ZHcFNMUXI2RFZwR1Zscmc1TkxhT1pQeFJ2X1RxNHFWNUtMaERlSHJkb0dSYjV1YllpalhLbmUtbXZQakxJd1o0cTdLa0FWNlg2ZDlsMkdOTldwcVJZNjNPZ3FVbTYtRW43QktR?oc=5](https://news.google.com/rss/articles/CBMipgFBVV95cUxNUFNZZUdRd2RVQWRpb1hFT2l3cEl6NE5pYlM1cHoxbVVEVjdoaEdGU3h5cklyamk2LUdWSkx4OG1nd2ZHcFNMUXI2RFZwR1Zscmc1TkxhT1pQeFJ2X1RxNHFWNUtMaERlSHJkb0dSYjV1YllpalhLbmUtbXZQakxJd1o0cTdLa0FWNlg2ZDlsMkdOTldwcVJZNjNPZ3FVbTYtRW43QktR?oc=5)

@@ -1,0 +1,15 @@
+---
+title: "Anthropic engineering head says Claude Code made employees’ work a ‘lonely experience’—and it could hint at Big Tech’s bigger morale problem - Yahoo Finance"
+date: "2026-06-23"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMipAFBVV95cUxPeE9zckd2aF9kWFd4NWRPSTVJM2dFOGFoaEVnLU56MWdJbW40eHIwbnVOWFRqZEt6OTFoQ0JwYkhOcU5CenZpNS1Rdm1zQmktRlY5cHJtSTI5aVhmSXBYVDBKUVRXbXBKVDRIaGhFTm9MSkdXM05uaDdvUWpUcnJlQURqaFhLc3Mxamh4WFd6WkNfZVVmUkJTZGhDX0NsTmRaTVAwdw?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMipAFBVV95cUxPeE9zckd2aF9kWFd4NWRPSTVJM2dFOGFoaEVnLU56MWdJbW40eHIwbnVOWFRqZEt6OTFoQ0JwYkhOcU5CenZpNS1Rdm1zQmktRlY5cHJtSTI5aVhmSXBYVDBKUVRXbXBKVDRIaGhFTm9MSkdXM05uaDdvUWpUcnJlQURqaFhLc3Mxamh4WFd6WkNfZVVmUkJTZGhDX0NsTmRaTVAwdw?oc=5' target='_blank'&gt"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxPeE9zckd2aF9kWFd4NWRPSTVJM2dFOGFoaEVnLU56MWdJbW40eHIwbnVOWFRqZEt6OTFoQ0JwYkhOcU5CenZpNS1Rdm1zQmktRlY5cHJtSTI5aVhmSXBYVDBKUVRXbXBKVDRIaGhFTm9MSkdXM05uaDdvUWpUcnJlQURqaFhLc3Mxamh4WFd6WkNfZVVmUkJTZGhDX0NsTmRaTVAwdw?oc=5" target="_blank"&gt
+
+**출처**: [https://news.google.com/rss/articles/CBMipAFBVV95cUxPeE9zckd2aF9kWFd4NWRPSTVJM2dFOGFoaEVnLU56MWdJbW40eHIwbnVOWFRqZEt6OTFoQ0JwYkhOcU5CenZpNS1Rdm1zQmktRlY5cHJtSTI5aVhmSXBYVDBKUVRXbXBKVDRIaGhFTm9MSkdXM05uaDdvUWpUcnJlQURqaFhLc3Mxamh4WFd6WkNfZVVmUkJTZGhDX0NsTmRaTVAwdw?oc=5](https://news.google.com/rss/articles/CBMipAFBVV95cUxPeE9zckd2aF9kWFd4NWRPSTVJM2dFOGFoaEVnLU56MWdJbW40eHIwbnVOWFRqZEt6OTFoQ0JwYkhOcU5CenZpNS1Rdm1zQmktRlY5cHJtSTI5aVhmSXBYVDBKUVRXbXBKVDRIaGhFTm9MSkdXM05uaDdvUWpUcnJlQURqaFhLc3Mxamh4WFd6WkNfZVVmUkJTZGhDX0NsTmRaTVAwdw?oc=5)
