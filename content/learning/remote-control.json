@@ -30,15 +30,15 @@
     },
     {
       "type": "video",
-      "title": "어디서든 이어 하는 Claude Code 원격 제어 사용법",
-      "url": "https://www.youtube.com/watch?v=BYk7QvsleBo",
-      "description": "원본 영상: https://www.youtube.com/watch?v=Ko7_tC1fMMM Claude Code 원격 제어 기능을 사용해 책상에서 시작한 세션을 ..."
-    },
-    {
-      "type": "video",
       "title": "AI 시대의 필수 지식 MCP 이 영상 하나로 끝내세요!",
       "url": "https://www.youtube.com/watch?v=46HxP7kO9oY",
       "description": "Porter AI : https://getporter.ai MCP서버 예제 코드 GitHub 저장소 Node.js: ..."
+    },
+    {
+      "type": "video",
+      "title": "제발 챗GPT만 쓰지 마세요. AI 에이전트 핵심 총정리",
+      "url": "https://www.youtube.com/watch?v=MkScRelUMhQ",
+      "description": "ChatGPT만 알고 계셨다면, 이제는 꼭 AI 에이전트를 이해해야 합니다 구글, 마이크로소프트, 오픈AI까지 모두 집중하는 키워드가 바로 ..."
     },
     {
       "type": "video",
