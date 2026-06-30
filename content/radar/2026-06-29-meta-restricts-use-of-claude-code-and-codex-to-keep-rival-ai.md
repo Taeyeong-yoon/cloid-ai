@@ -1,0 +1,15 @@
+---
+title: "Meta restricts use of Claude Code and Codex to keep rival AI out of its training data - the-decoder.com"
+date: "2026-06-29"
+tags:
+  - claude-code
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVmNrRjdSZ2t2NDJ3ODN0STFpRkE3MEF1eTAxX3Y0UzBYak9zbE1hT3IwVWt1a0dlT3F2QU55NFFZbnlLb3VpWjVyMjlnR1FjMDVBd09wNUhKaFRZZWV0eHVYUkNQd3VlMlo1Q1ljT0xXZUR3X0hTQ2JGdzNBSlNzbjZhSHByejFVMTZCTVhSZmRWc2dURVdYUDBkVGROd0pacjhMYnAyODREQ3dBZkRB?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMirwFBVV95cUxOVmNrRjdSZ2t2NDJ3ODN0STFpRkE3MEF1eTAxX3Y0UzBYak9zbE1hT3IwVWt1a0dlT3F2QU55NFFZbnlLb3VpWjVyMjlnR1FjMDVBd09wNUhKaFRZZWV0eHVYUkNQd3VlMlo1Q1ljT0xXZUR3X0hTQ2JGdzNBSlNzbjZhSHByejFVMTZCTVhSZmRWc2dURVdYUDBkVGROd0pacjhMYnAyODREQ3dBZkRB?oc=5' targ"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxOVmNrRjdSZ2t2NDJ3ODN0STFpRkE3MEF1eTAxX3Y0UzBYak9zbE1hT3IwVWt1a0dlT3F2QU55NFFZbnlLb3VpWjVyMjlnR1FjMDVBd09wNUhKaFRZZWV0eHVYUkNQd3VlMlo1Q1ljT0xXZUR3X0hTQ2JGdzNBSlNzbjZhSHByejFVMTZCTVhSZmRWc2dURVdYUDBkVGROd0pacjhMYnAyODREQ3dBZkRB?oc=5" targ
+
+**출처**: [https://news.google.com/rss/articles/CBMirwFBVV95cUxOVmNrRjdSZ2t2NDJ3ODN0STFpRkE3MEF1eTAxX3Y0UzBYak9zbE1hT3IwVWt1a0dlT3F2QU55NFFZbnlLb3VpWjVyMjlnR1FjMDVBd09wNUhKaFRZZWV0eHVYUkNQd3VlMlo1Q1ljT0xXZUR3X0hTQ2JGdzNBSlNzbjZhSHByejFVMTZCTVhSZmRWc2dURVdYUDBkVGROd0pacjhMYnAyODREQ3dBZkRB?oc=5](https://news.google.com/rss/articles/CBMirwFBVV95cUxOVmNrRjdSZ2t2NDJ3ODN0STFpRkE3MEF1eTAxX3Y0UzBYak9zbE1hT3IwVWt1a0dlT3F2QU55NFFZbnlLb3VpWjVyMjlnR1FjMDVBd09wNUhKaFRZZWV0eHVYUkNQd3VlMlo1Q1ljT0xXZUR3X0hTQ2JGdzNBSlNzbjZhSHByejFVMTZCTVhSZmRWc2dURVdYUDBkVGROd0pacjhMYnAyODREQ3dBZkRB?oc=5)
