@@ -1,0 +1,15 @@
+---
+title: "Alibaba bars employees from using Anthropic's Claude Code (BABA:NYSE) - Seeking Alpha"
+date: "2026-07-03"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUVkydE1LVmRVTXVNbUlMQ0lGUlZBT3BfSXRwMFNqNzBRNjJ6SG9DM1RjNVFvZFZxUDNnbE00NWxFdjN3dGdHRjJJRWwtbVVvMDJYS0VqOWpmSjdwOXlkUEF5SzNVQU9QTUdZZ3hGMlFldnd5dVNzSnZQeVptMk1rUkF1UDdVelJvVnJucmpRWFRPb09DS0ExblFR?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMimgFBVV95cUxNUVkydE1LVmRVTXVNbUlMQ0lGUlZBT3BfSXRwMFNqNzBRNjJ6SG9DM1RjNVFvZFZxUDNnbE00NWxFdjN3dGdHRjJJRWwtbVVvMDJYS0VqOWpmSjdwOXlkUEF5SzNVQU9QTUdZZ3hGMlFldnd5dVNzSnZQeVptMk1rUkF1UDdVelJvVnJucmpRWFRPb09DS0ExblFR?oc=5' target='_blank'&gt;Alibaba bars "
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxNUVkydE1LVmRVTXVNbUlMQ0lGUlZBT3BfSXRwMFNqNzBRNjJ6SG9DM1RjNVFvZFZxUDNnbE00NWxFdjN3dGdHRjJJRWwtbVVvMDJYS0VqOWpmSjdwOXlkUEF5SzNVQU9QTUdZZ3hGMlFldnd5dVNzSnZQeVptMk1rUkF1UDdVelJvVnJucmpRWFRPb09DS0ExblFR?oc=5" target="_blank"&gt;Alibaba bars 
+
+**출처**: [https://news.google.com/rss/articles/CBMimgFBVV95cUxNUVkydE1LVmRVTXVNbUlMQ0lGUlZBT3BfSXRwMFNqNzBRNjJ6SG9DM1RjNVFvZFZxUDNnbE00NWxFdjN3dGdHRjJJRWwtbVVvMDJYS0VqOWpmSjdwOXlkUEF5SzNVQU9QTUdZZ3hGMlFldnd5dVNzSnZQeVptMk1rUkF1UDdVelJvVnJucmpRWFRPb09DS0ExblFR?oc=5](https://news.google.com/rss/articles/CBMimgFBVV95cUxNUVkydE1LVmRVTXVNbUlMQ0lGUlZBT3BfSXRwMFNqNzBRNjJ6SG9DM1RjNVFvZFZxUDNnbE00NWxFdjN3dGdHRjJJRWwtbVVvMDJYS0VqOWpmSjdwOXlkUEF5SzNVQU9QTUdZZ3hGMlFldnd5dVNzSnZQeVptMk1rUkF1UDdVelJvVnJucmpRWFRPb09DS0ExblFR?oc=5)
