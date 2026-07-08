@@ -1,0 +1,15 @@
+---
+title: "Claude Code’s hidden tracker was an “experiment,” says Anthropic - Malwarebytes"
+date: "2026-07-07"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5' target='_"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5" target="_
+
+**출처**: [https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5](https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5)

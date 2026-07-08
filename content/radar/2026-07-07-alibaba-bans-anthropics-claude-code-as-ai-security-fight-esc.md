@@ -1,0 +1,16 @@
+---
+title: "Alibaba Bans Anthropic's Claude Code as AI Security Fight Escalates - Yahoo Finance"
+date: "2026-07-07"
+tags:
+  - claude-code
+  - security
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMioAFBVV95cUxOeExPeVBxSkZNSEtyOFdHb1Ixc2hjYnozUVA5ODhKTkNYMTBmSVFXNlNVR0MxXzM0SEtqNENQNkJRNDRtaWNhSkZZVTI4WGRzNklUdEc3SmlWZkVZcGE5LVBzcm5fQUpWaXp3aW5XTmtKZjBNcldDeVZNT0VwVEdsVmkzUGtGSnZYcnFsNHVKT0JkdTZYTi1kTDVhZlJRQzls?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMioAFBVV95cUxOeExPeVBxSkZNSEtyOFdHb1Ixc2hjYnozUVA5ODhKTkNYMTBmSVFXNlNVR0MxXzM0SEtqNENQNkJRNDRtaWNhSkZZVTI4WGRzNklUdEc3SmlWZkVZcGE5LVBzcm5fQUpWaXp3aW5XTmtKZjBNcldDeVZNT0VwVEdsVmkzUGtGSnZYcnFsNHVKT0JkdTZYTi1kTDVhZlJRQzls?oc=5' target='_blank'&gt;Aliba"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOeExPeVBxSkZNSEtyOFdHb1Ixc2hjYnozUVA5ODhKTkNYMTBmSVFXNlNVR0MxXzM0SEtqNENQNkJRNDRtaWNhSkZZVTI4WGRzNklUdEc3SmlWZkVZcGE5LVBzcm5fQUpWaXp3aW5XTmtKZjBNcldDeVZNT0VwVEdsVmkzUGtGSnZYcnFsNHVKT0JkdTZYTi1kTDVhZlJRQzls?oc=5" target="_blank"&gt;Aliba
+
+**출처**: [https://news.google.com/rss/articles/CBMioAFBVV95cUxOeExPeVBxSkZNSEtyOFdHb1Ixc2hjYnozUVA5ODhKTkNYMTBmSVFXNlNVR0MxXzM0SEtqNENQNkJRNDRtaWNhSkZZVTI4WGRzNklUdEc3SmlWZkVZcGE5LVBzcm5fQUpWaXp3aW5XTmtKZjBNcldDeVZNT0VwVEdsVmkzUGtGSnZYcnFsNHVKT0JkdTZYTi1kTDVhZlJRQzls?oc=5](https://news.google.com/rss/articles/CBMioAFBVV95cUxOeExPeVBxSkZNSEtyOFdHb1Ixc2hjYnozUVA5ODhKTkNYMTBmSVFXNlNVR0MxXzM0SEtqNENQNkJRNDRtaWNhSkZZVTI4WGRzNklUdEc3SmlWZkVZcGE5LVBzcm5fQUpWaXp3aW5XTmtKZjBNcldDeVZNT0VwVEdsVmkzUGtGSnZYcnFsNHVKT0JkdTZYTi1kTDVhZlJRQzls?oc=5)

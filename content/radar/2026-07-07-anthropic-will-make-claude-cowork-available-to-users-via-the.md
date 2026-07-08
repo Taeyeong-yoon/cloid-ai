@@ -1,0 +1,15 @@
+---
+title: "Anthropic will make Claude Cowork available to users via the cloud - NBC News"
+date: "2026-07-07"
+tags:
+  - tool
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObEp1eUMxeWdHeTdEZk93N2NsZmNBcDlwT3VObHZ3VkM0TDdOeERwTEJSeWpSUkZVRU15WnRWS1Fub0NtakpGUjVHRlFSQ3BjcWxjd01oSk0yeWJPdHZwNDktMXhZMDJKSml2NXhkYkVzTmVaZkUzUm9oWVhwTzYteEJ2WHA0clV2bXJRSGVPZXpUa3RoMnhJM3lTRWtrSWMxZFVjSThqcV8?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMiqAFBVV95cUxObEp1eUMxeWdHeTdEZk93N2NsZmNBcDlwT3VObHZ3VkM0TDdOeERwTEJSeWpSUkZVRU15WnRWS1Fub0NtakpGUjVHRlFSQ3BjcWxjd01oSk0yeWJPdHZwNDktMXhZMDJKSml2NXhkYkVzTmVaZkUzUm9oWVhwTzYteEJ2WHA0clV2bXJRSGVPZXpUa3RoMnhJM3lTRWtrSWMxZFVjSThqcV8?oc=5' target='_blan"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxObEp1eUMxeWdHeTdEZk93N2NsZmNBcDlwT3VObHZ3VkM0TDdOeERwTEJSeWpSUkZVRU15WnRWS1Fub0NtakpGUjVHRlFSQ3BjcWxjd01oSk0yeWJPdHZwNDktMXhZMDJKSml2NXhkYkVzTmVaZkUzUm9oWVhwTzYteEJ2WHA0clV2bXJRSGVPZXpUa3RoMnhJM3lTRWtrSWMxZFVjSThqcV8?oc=5" target="_blan
+
+**출처**: [https://news.google.com/rss/articles/CBMiqAFBVV95cUxObEp1eUMxeWdHeTdEZk93N2NsZmNBcDlwT3VObHZ3VkM0TDdOeERwTEJSeWpSUkZVRU15WnRWS1Fub0NtakpGUjVHRlFSQ3BjcWxjd01oSk0yeWJPdHZwNDktMXhZMDJKSml2NXhkYkVzTmVaZkUzUm9oWVhwTzYteEJ2WHA0clV2bXJRSGVPZXpUa3RoMnhJM3lTRWtrSWMxZFVjSThqcV8?oc=5](https://news.google.com/rss/articles/CBMiqAFBVV95cUxObEp1eUMxeWdHeTdEZk93N2NsZmNBcDlwT3VObHZ3VkM0TDdOeERwTEJSeWpSUkZVRU15WnRWS1Fub0NtakpGUjVHRlFSQ3BjcWxjd01oSk0yeWJPdHZwNDktMXhZMDJKSml2NXhkYkVzTmVaZkUzUm9oWVhwTzYteEJ2WHA0clV2bXJRSGVPZXpUa3RoMnhJM3lTRWtrSWMxZFVjSThqcV8?oc=5)

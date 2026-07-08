@@ -1,0 +1,15 @@
+---
+title: "Anthropic Brings Claude Code and Cowork to Government - Let's Data Science"
+date: "2026-07-07"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMimwFBVV95cUxNWFFpQnRvOGkxRHUtUWE0V1F0V0h2SG1jSm9ZTGZXcm80SFc3aU9QdUo4R25MZGxrSlk2VDVBUjF0cUNEMTBlTFo1QTZZckYwdlIyYWw4VzJtbUxXdnUzdDFEZXJNbkN6ZktCZ2hOeUR2Y3Mya1N6cnR3b29zWHc3TUs2b3B6R3NxNDR0V3NtTHRNQ0lSQS1XdkNHWQ?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMimwFBVV95cUxNWFFpQnRvOGkxRHUtUWE0V1F0V0h2SG1jSm9ZTGZXcm80SFc3aU9QdUo4R25MZGxrSlk2VDVBUjF0cUNEMTBlTFo1QTZZckYwdlIyYWw4VzJtbUxXdnUzdDFEZXJNbkN6ZktCZ2hOeUR2Y3Mya1N6cnR3b29zWHc3TUs2b3B6R3NxNDR0V3NtTHRNQ0lSQS1XdkNHWQ?oc=5' target='_blank'&gt;Anthropic B"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNWFFpQnRvOGkxRHUtUWE0V1F0V0h2SG1jSm9ZTGZXcm80SFc3aU9QdUo4R25MZGxrSlk2VDVBUjF0cUNEMTBlTFo1QTZZckYwdlIyYWw4VzJtbUxXdnUzdDFEZXJNbkN6ZktCZ2hOeUR2Y3Mya1N6cnR3b29zWHc3TUs2b3B6R3NxNDR0V3NtTHRNQ0lSQS1XdkNHWQ?oc=5" target="_blank"&gt;Anthropic B
+
+**출처**: [https://news.google.com/rss/articles/CBMimwFBVV95cUxNWFFpQnRvOGkxRHUtUWE0V1F0V0h2SG1jSm9ZTGZXcm80SFc3aU9QdUo4R25MZGxrSlk2VDVBUjF0cUNEMTBlTFo1QTZZckYwdlIyYWw4VzJtbUxXdnUzdDFEZXJNbkN6ZktCZ2hOeUR2Y3Mya1N6cnR3b29zWHc3TUs2b3B6R3NxNDR0V3NtTHRNQ0lSQS1XdkNHWQ?oc=5](https://news.google.com/rss/articles/CBMimwFBVV95cUxNWFFpQnRvOGkxRHUtUWE0V1F0V0h2SG1jSm9ZTGZXcm80SFc3aU9QdUo4R25MZGxrSlk2VDVBUjF0cUNEMTBlTFo1QTZZckYwdlIyYWw4VzJtbUxXdnUzdDFEZXJNbkN6ZktCZ2hOeUR2Y3Mya1N6cnR3b29zWHc3TUs2b3B6R3NxNDR0V3NtTHRNQ0lSQS1XdkNHWQ?oc=5)
