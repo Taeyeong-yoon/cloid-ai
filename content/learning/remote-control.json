@@ -36,15 +36,15 @@
     },
     {
       "type": "video",
-      "title": "주식 고수 따라하기? 커서AI로 코드 없이 만든 자동화 프로그램 공개 #주식자동화 #주식초보 #커서AI #CURSOR AI #AI자동화 #업무자동화",
-      "url": "https://www.youtube.com/watch?v=dobA5RiNXMk",
-      "description": "주식 고수의 거래 내역을 그대로 따라가는 자동화 프로그램. 코딩? 하나도 안 하고, 제가 직접 만들었습니다. “이걸 어떻게 만들었 ..."
-    },
-    {
-      "type": "video",
       "title": "제발 챗GPT만 쓰지 마세요. AI 에이전트 핵심 총정리",
       "url": "https://www.youtube.com/watch?v=MkScRelUMhQ",
       "description": "ChatGPT만 알고 계셨다면, 이제는 꼭 AI 에이전트를 이해해야 합니다 구글, 마이크로소프트, 오픈AI까지 모두 집중하는 키워드가 바로 ..."
+    },
+    {
+      "type": "video",
+      "title": "[클로드코드 원격제어] 비트코인 자동매매 완벽 가이드 (VPN 보안까지)",
+      "url": "https://www.youtube.com/watch?v=iDy_IGRGS30",
+      "description": "스마트폰 하나로 AI 비트코인 자동매매 봇을 제어한다? Claude Code의 Remote Control 기능을 활용해서 원격 서버에 24시간 ..."
     },
     {
       "type": "practice",
