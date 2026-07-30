@@ -1,0 +1,15 @@
+---
+title: "Anthropic's Claude Goes Down for Thousands as 529 Errors Hit Workers Mid-Task - glitchwire.com"
+date: "2026-07-29"
+tags:
+  - tool
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNS0F1aks1ZkJFQ0RaSGtYT2tYX2tQUUFrOXZLTG1EQksxNHhZXzIydEtva0FnUjZFeEE4NXdMdXhmSmZuTFFENjlYN3EwWXhYeWh4MmZCcVRvNzZsSUV4a2IxNWEtSHhuSV9uaFZrdElNY3B5WjVPWTBjV3hic3NCcm9Vd0sxOERqOEhkTllQUkhMVmxjSzdDRXFZYzZkYnBFdUhMajJQNFk?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMiqAFBVV95cUxNS0F1aks1ZkJFQ0RaSGtYT2tYX2tQUUFrOXZLTG1EQksxNHhZXzIydEtva0FnUjZFeEE4NXdMdXhmSmZuTFFENjlYN3EwWXhYeWh4MmZCcVRvNzZsSUV4a2IxNWEtSHhuSV9uaFZrdElNY3B5WjVPWTBjV3hic3NCcm9Vd0sxOERqOEhkTllQUkhMVmxjSzdDRXFZYzZkYnBFdUhMajJQNFk?oc=5' target='_blan"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNS0F1aks1ZkJFQ0RaSGtYT2tYX2tQUUFrOXZLTG1EQksxNHhZXzIydEtva0FnUjZFeEE4NXdMdXhmSmZuTFFENjlYN3EwWXhYeWh4MmZCcVRvNzZsSUV4a2IxNWEtSHhuSV9uaFZrdElNY3B5WjVPWTBjV3hic3NCcm9Vd0sxOERqOEhkTllQUkhMVmxjSzdDRXFZYzZkYnBFdUhMajJQNFk?oc=5" target="_blan
+
+**출처**: [https://news.google.com/rss/articles/CBMiqAFBVV95cUxNS0F1aks1ZkJFQ0RaSGtYT2tYX2tQUUFrOXZLTG1EQksxNHhZXzIydEtva0FnUjZFeEE4NXdMdXhmSmZuTFFENjlYN3EwWXhYeWh4MmZCcVRvNzZsSUV4a2IxNWEtSHhuSV9uaFZrdElNY3B5WjVPWTBjV3hic3NCcm9Vd0sxOERqOEhkTllQUkhMVmxjSzdDRXFZYzZkYnBFdUhMajJQNFk?oc=5](https://news.google.com/rss/articles/CBMiqAFBVV95cUxNS0F1aks1ZkJFQ0RaSGtYT2tYX2tQUUFrOXZLTG1EQksxNHhZXzIydEtva0FnUjZFeEE4NXdMdXhmSmZuTFFENjlYN3EwWXhYeWh4MmZCcVRvNzZsSUV4a2IxNWEtSHhuSV9uaFZrdElNY3B5WjVPWTBjV3hic3NCcm9Vd0sxOERqOEhkTllQUkhMVmxjSzdDRXFZYzZkYnBFdUhMajJQNFk?oc=5)
