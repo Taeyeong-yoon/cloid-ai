@@ -1,0 +1,16 @@
+---
+title: "Anthropic Admits Its Own Bugs Broke Claude Code After Weeks of Denial - Startup Fortune"
+date: "2026-08-02"
+tags:
+  - claude-code
+  - market
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMingFBVV95cUxOWUptNldRQnBmRVRNWmR6YlZBWDRLT2w2bm1FcU16Nk9sem1TdFNzU29ITDRIN0JNUVVWaG9DWDJaNFB3M2RDeUh3NzN3LXBzX0JqN2JVYVl6endQWlNOZkdVbnRZLUZ1U0t0dzROaHJZcEM1RHNrZndOLTloUmpoaG8tZkQwUUpUcEV2TDl6bGF0eUlMcl9LYzY2REsydw?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMingFBVV95cUxOWUptNldRQnBmRVRNWmR6YlZBWDRLT2w2bm1FcU16Nk9sem1TdFNzU29ITDRIN0JNUVVWaG9DWDJaNFB3M2RDeUh3NzN3LXBzX0JqN2JVYVl6endQWlNOZkdVbnRZLUZ1U0t0dzROaHJZcEM1RHNrZndOLTloUmpoaG8tZkQwUUpUcEV2TDl6bGF0eUlMcl9LYzY2REsydw?oc=5' target='_blank'&gt;Anthrop"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOWUptNldRQnBmRVRNWmR6YlZBWDRLT2w2bm1FcU16Nk9sem1TdFNzU29ITDRIN0JNUVVWaG9DWDJaNFB3M2RDeUh3NzN3LXBzX0JqN2JVYVl6endQWlNOZkdVbnRZLUZ1U0t0dzROaHJZcEM1RHNrZndOLTloUmpoaG8tZkQwUUpUcEV2TDl6bGF0eUlMcl9LYzY2REsydw?oc=5" target="_blank"&gt;Anthrop
+
+**출처**: [https://news.google.com/rss/articles/CBMingFBVV95cUxOWUptNldRQnBmRVRNWmR6YlZBWDRLT2w2bm1FcU16Nk9sem1TdFNzU29ITDRIN0JNUVVWaG9DWDJaNFB3M2RDeUh3NzN3LXBzX0JqN2JVYVl6endQWlNOZkdVbnRZLUZ1U0t0dzROaHJZcEM1RHNrZndOLTloUmpoaG8tZkQwUUpUcEV2TDl6bGF0eUlMcl9LYzY2REsydw?oc=5](https://news.google.com/rss/articles/CBMingFBVV95cUxOWUptNldRQnBmRVRNWmR6YlZBWDRLT2w2bm1FcU16Nk9sem1TdFNzU29ITDRIN0JNUVVWaG9DWDJaNFB3M2RDeUh3NzN3LXBzX0JqN2JVYVl6endQWlNOZkdVbnRZLUZ1U0t0dzROaHJZcEM1RHNrZndOLTloUmpoaG8tZkQwUUpUcEV2TDl6bGF0eUlMcl9LYzY2REsydw?oc=5)
