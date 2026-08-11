@@ -1,0 +1,15 @@
+---
+title: "Anthropic lets Claude Code make decisions on its own more often - Techzine Global"
+date: "2026-08-10"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQamN2QTNSbFF0YnJEbUtDcUZxcmtuOTl4S2dNSVNhRDVqakEyUmc2Y1duNU1SS0NwNjZPNzZXTjJRYWR2RVNlVjYwLUprUGhhMmRGSGFWeDV1Y1RhWVZRTkdGV25xdXpoZ3Y4YWlGMUFnNVFPbEdHZjhuZDViY2x0LXV2RkRUM3hGSGFoQzVxRFc5Z2FSYUtsWjRXQko0SElOajhoeHY2VG9SaEk?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMiqwFBVV95cUxQamN2QTNSbFF0YnJEbUtDcUZxcmtuOTl4S2dNSVNhRDVqakEyUmc2Y1duNU1SS0NwNjZPNzZXTjJRYWR2RVNlVjYwLUprUGhhMmRGSGFWeDV1Y1RhWVZRTkdGV25xdXpoZ3Y4YWlGMUFnNVFPbEdHZjhuZDViY2x0LXV2RkRUM3hGSGFoQzVxRFc5Z2FSYUtsWjRXQko0SElOajhoeHY2VG9SaEk?oc=5' target='_"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxQamN2QTNSbFF0YnJEbUtDcUZxcmtuOTl4S2dNSVNhRDVqakEyUmc2Y1duNU1SS0NwNjZPNzZXTjJRYWR2RVNlVjYwLUprUGhhMmRGSGFWeDV1Y1RhWVZRTkdGV25xdXpoZ3Y4YWlGMUFnNVFPbEdHZjhuZDViY2x0LXV2RkRUM3hGSGFoQzVxRFc5Z2FSYUtsWjRXQko0SElOajhoeHY2VG9SaEk?oc=5" target="_
+
+**출처**: [https://news.google.com/rss/articles/CBMiqwFBVV95cUxQamN2QTNSbFF0YnJEbUtDcUZxcmtuOTl4S2dNSVNhRDVqakEyUmc2Y1duNU1SS0NwNjZPNzZXTjJRYWR2RVNlVjYwLUprUGhhMmRGSGFWeDV1Y1RhWVZRTkdGV25xdXpoZ3Y4YWlGMUFnNVFPbEdHZjhuZDViY2x0LXV2RkRUM3hGSGFoQzVxRFc5Z2FSYUtsWjRXQko0SElOajhoeHY2VG9SaEk?oc=5](https://news.google.com/rss/articles/CBMiqwFBVV95cUxQamN2QTNSbFF0YnJEbUtDcUZxcmtuOTl4S2dNSVNhRDVqakEyUmc2Y1duNU1SS0NwNjZPNzZXTjJRYWR2RVNlVjYwLUprUGhhMmRGSGFWeDV1Y1RhWVZRTkdGV25xdXpoZ3Y4YWlGMUFnNVFPbEdHZjhuZDViY2x0LXV2RkRUM3hGSGFoQzVxRFc5Z2FSYUtsWjRXQko0SElOajhoeHY2VG9SaEk?oc=5)

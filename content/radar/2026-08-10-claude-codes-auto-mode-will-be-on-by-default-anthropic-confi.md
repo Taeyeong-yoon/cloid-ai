@@ -1,0 +1,15 @@
+---
+title: "Claude Code’s auto mode will be on by default, Anthropic confirms - Mashable SEA"
+date: "2026-08-10"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMioAFBVV95cUxNTzNtUGdZeGV6OXp1MWtTdHloRFpwZ1ZxeEhoS0Rnc2hOY3R6UC1ORFZPNmRoaGVUVDZjVC1TTWd3OGREdmtJcjRWQ29TR0VzNDREcFg4a20wZnBJMFQ3Wkd4VEJCVHpiWnhtZGdTc2g4blNzWXFfQTkzZGoybG5PWmtPcnc5M1BQUllObVktd0lJdHpXYjNKTG1meFVNcldR?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMioAFBVV95cUxNTzNtUGdZeGV6OXp1MWtTdHloRFpwZ1ZxeEhoS0Rnc2hOY3R6UC1ORFZPNmRoaGVUVDZjVC1TTWd3OGREdmtJcjRWQ29TR0VzNDREcFg4a20wZnBJMFQ3Wkd4VEJCVHpiWnhtZGdTc2g4blNzWXFfQTkzZGoybG5PWmtPcnc5M1BQUllObVktd0lJdHpXYjNKTG1meFVNcldR?oc=5' target='_blank'&gt;Claud"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxNTzNtUGdZeGV6OXp1MWtTdHloRFpwZ1ZxeEhoS0Rnc2hOY3R6UC1ORFZPNmRoaGVUVDZjVC1TTWd3OGREdmtJcjRWQ29TR0VzNDREcFg4a20wZnBJMFQ3Wkd4VEJCVHpiWnhtZGdTc2g4blNzWXFfQTkzZGoybG5PWmtPcnc5M1BQUllObVktd0lJdHpXYjNKTG1meFVNcldR?oc=5" target="_blank"&gt;Claud
+
+**출처**: [https://news.google.com/rss/articles/CBMioAFBVV95cUxNTzNtUGdZeGV6OXp1MWtTdHloRFpwZ1ZxeEhoS0Rnc2hOY3R6UC1ORFZPNmRoaGVUVDZjVC1TTWd3OGREdmtJcjRWQ29TR0VzNDREcFg4a20wZnBJMFQ3Wkd4VEJCVHpiWnhtZGdTc2g4blNzWXFfQTkzZGoybG5PWmtPcnc5M1BQUllObVktd0lJdHpXYjNKTG1meFVNcldR?oc=5](https://news.google.com/rss/articles/CBMioAFBVV95cUxNTzNtUGdZeGV6OXp1MWtTdHloRFpwZ1ZxeEhoS0Rnc2hOY3R6UC1ORFZPNmRoaGVUVDZjVC1TTWd3OGREdmtJcjRWQ29TR0VzNDREcFg4a20wZnBJMFQ3Wkd4VEJCVHpiWnhtZGdTc2g4blNzWXFfQTkzZGoybG5PWmtPcnc5M1BQUllObVktd0lJdHpXYjNKTG1meFVNcldR?oc=5)
