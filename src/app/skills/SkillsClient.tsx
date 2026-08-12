@@ -22,17 +22,19 @@ const CATEGORY_CONFIG = [
   },
   {
     key: "features",
-    labelKo: "기본 기능",
-    labelEn: "Core Features",
+    labelKo: "플랫폼 · 모델",
+    labelEn: "Platform & Models",
     icon: Cpu,
     color: "text-violet-300",
     bg: "bg-violet-900/60",
     border: "border-violet-700",
   },
   {
+    // 데이터의 category 값은 "usecases"를 그대로 쓰되, 축을 기능 영역으로 재정의한다
+    // (허브는 Claude 기술·기능 레퍼런스이므로 활용사례 축은 두지 않는다)
     key: "usecases",
-    labelKo: "활용 사례",
-    labelEn: "Use Cases",
+    labelKo: "Claude Code",
+    labelEn: "Claude Code",
     icon: Zap,
     color: "text-amber-300",
     bg: "bg-amber-900/60",
@@ -228,7 +230,7 @@ function HubCard({ skill, selected, onClick, locale }: {
           {CatIcon && (
             <span className={`inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full font-medium ${cat.bg} ${cat.color} ${cat.border} border`}>
               <CatIcon size={10} />
-              {locale === "ko" ? (skill.category === "features" ? "기본 기능" : "활용 사례") : (skill.category === "features" ? "Feature" : "Use Case")}
+              {locale === "ko" ? (skill.category === "features" ? "플랫폼·모델" : "Claude Code") : (skill.category === "features" ? "Platform" : "Claude Code")}
             </span>
           )}
           <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${diff.bg} ${diff.color} ${diff.border} border`}>
@@ -292,7 +294,7 @@ function HubDetail({ skill, onClose, stickyRef, locale }: {
                   {CatIcon && (
                     <span className={`inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full font-medium ${cat.bg} ${cat.color} ${cat.border} border`}>
                       <CatIcon size={11} />
-                      {locale === "ko" ? (skill.category === "features" ? "기본 기능" : "활용 사례") : (skill.category === "features" ? "Core Feature" : "Use Case")}
+                      {locale === "ko" ? (skill.category === "features" ? "플랫폼·모델" : "Claude Code") : (skill.category === "features" ? "Platform" : "Claude Code")}
                     </span>
                   )}
                   <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${diff.bg} ${diff.color} ${diff.border} border`}>

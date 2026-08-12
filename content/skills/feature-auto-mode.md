@@ -1,13 +1,13 @@
 ---
 title: Auto Mode — 승인 프롬프트 없이 일 시키기
-category: features
+category: usecases
 tags: [Claude Code, Auto Mode, 권한, 2026-08]
 difficulty: beginner
 summary: 2026년 8월 Auto Mode가 유료 사용자 기본값이 됐습니다. 승인 창을 없애고 백그라운드 안전 검사로 대체한 이유와, 권한 모드 6가지를 상황별로 고르는 법.
 updated: 2026-08-12
 badge: NEW
 ---
-> 매번 뜨는 승인 창을 사람이 정말 읽고 있었는가 — 이 질문에서 출발한 변화입니다.
+**매번 뜨는 승인 창을 사람이 정말 읽고 있었는가 — 이 질문에서 출발한 변화입니다.**
 
 ## 왜 알아야 하나
 
@@ -39,35 +39,19 @@ Claude Code는 파일을 고치거나 명령을 실행할 때마다 멈춰 승�
 
 ## 흔한 실수
 
-**❌ 편하다는 이유로 `bypassPermissions`를 상시로 켜둔다**
-
-→ `bypassPermissions`는 안전 검사까지 끄는 모드입니다. 자율성이 필요하면 `auto`를 쓰세요 — 검사는 유지됩니다.
-
-**❌ 한 모드를 정해두고 계속 쓴다**
-
-→ 탐색은 `plan`, 수정은 `acceptEdits`, 긴 작업은 `auto`처럼 단계마다 옮기는 것이 원래 설계 의도입니다.
-
-**❌ Auto Mode면 아무거나 맡겨도 된다고 생각한다**
-
-→ 배포·삭제·전송처럼 되돌리기 어려운 작업은 모드를 낮추세요. 자동 검사는 위험을 줄이지만 없애지는 못합니다.
+- **❌ 편하다는 이유로 `bypassPermissions`를 상시로 켜둔다** — `bypassPermissions`는 안전 검사까지 끄는 모드입니다. 자율성이 필요하면 `auto`를 쓰세요 — 검사는 유지됩니다.
+- **❌ 한 모드를 정해두고 계속 쓴다** — 탐색은 `plan`, 수정은 `acceptEdits`, 긴 작업은 `auto`처럼 단계마다 옮기는 것이 원래 설계 의도입니다.
+- **❌ Auto Mode면 아무거나 맡겨도 된다고 생각한다** — 배포·삭제·전송처럼 되돌리기 어려운 작업은 모드를 낮추세요. 자동 검사는 위험을 줄이지만 없애지는 못합니다.
 
 ## 스스로 점검하기
 
-**Q. `default` 모드에서 승인 없이 되는 일은 무엇인가요?**
+**Q1. `default` 모드에서 승인 없이 되는 일은 무엇인가요?**
 
-<details><summary>답 보기</summary>
+정답: 읽기뿐입니다. 파일 수정·명령 실행·네트워크 요청은 모두 승인을 요구합니다.
 
-읽기뿐입니다. 파일 수정·명령 실행·네트워크 요청은 모두 승인을 요구합니다.
+**Q2. `auto`와 `bypassPermissions`의 결정적 차이는?**
 
-</details>
-
-**Q. `auto`와 `bypassPermissions`의 결정적 차이는?**
-
-<details><summary>답 보기</summary>
-
-백그라운드 안전 검사의 유무입니다. `auto`는 검사를 유지하고, `bypassPermissions`는 그것마저 끕니다.
-
-</details>
+정답: 백그라운드 안전 검사의 유무입니다. `auto`는 검사를 유지하고, `bypassPermissions`는 그것마저 끕니다.
 
 ## 더 읽기
 
