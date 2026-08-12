@@ -1,11 +1,11 @@
 ---
-title: Adaptive Thinking — 생각의 양을 모델이 정한다
+title: "Adaptive Thinking — 생각의 양을 모델이 정한다"
 category: features
 tags: [thinking, effort, API]
 difficulty: intermediate
-summary: 고정 사고 예산을 숫자로 지정하던 방식은 사라졌습니다. 모델이 난이도에 따라 스스로 조절하고, 개발자는 effort로 방향만 잡습니다.
+summary: "고정 사고 예산을 숫자로 지정하던 방식은 사라졌습니다. 모델이 난이도에 따라 스스로 조절하고, 개발자는 effort로 방향만 잡습니다."
 updated: 2026-08-12
-badge: UPDATED
+badge: "UPDATED"
 ---
 **"1만 토큰만큼 생각해라"가 아니라 "이 정도 수준으로 임해라"로 바뀌었습니다.**
 

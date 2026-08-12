@@ -1,9 +1,9 @@
 ---
-title: GitHub Actions 통합 — CI에서 실행하기
+title: "GitHub Actions 통합 — CI에서 실행하기"
 category: usecases
 tags: [GitHub, 코드리뷰, CI]
 difficulty: intermediate
-summary: PR이 열릴 때 변경분을 읽고 의견을 남기게 합니다. 사람 리뷰를 대체하는 게 아니라, 사람이 볼 것을 줄이는 용도입니다.
+summary: "PR이 열릴 때 변경분을 읽고 의견을 남기게 합니다. 사람 리뷰를 대체하는 게 아니라, 사람이 볼 것을 줄이는 용도입니다."
 updated: 2026-08-12
 ---
 **"중요한 것만 알려줘"라고 요청하는 순간, 진짜 버그가 걸러집니다.**

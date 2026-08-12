@@ -1,11 +1,11 @@
 ---
-title: Cowork — 작업을 위임하고 예약하는 작업공간
+title: "Cowork — 작업을 위임하고 예약하는 작업공간"
 category: features
 tags: [Cowork, 업무자동화, Team, Enterprise]
 difficulty: beginner
-summary: Cowork는 실시간 공동 채팅이 아니라 Claude에게 일을 맡기고 결과를 받는 공간입니다. 작업 위임, 반복 예약, 프로젝트 정리, 컴퓨터 사용까지.
+summary: "Cowork는 실시간 공동 채팅이 아니라 Claude에게 일을 맡기고 결과를 받는 공간입니다. 작업 위임, 반복 예약, 프로젝트 정리, 컴퓨터 사용까지."
 updated: 2026-08-12
-badge: UPDATED
+badge: "UPDATED"
 ---
 **채팅이 "묻고 답하기"라면, Cowork는 "맡기고 받기"입니다.**
 

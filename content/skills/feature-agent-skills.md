@@ -1,11 +1,11 @@
 ---
-title: Agent Skills — 반복 작업을 SKILL.md 한 장으로
+title: "Agent Skills — 반복 작업을 SKILL.md 한 장으로"
 category: features
 tags: [Skills, SKILL.md, 자동화]
 difficulty: intermediate
-summary: 같은 설명을 세 번 이상 했다면 Skill로 만들 때입니다. 작업 방법을 파일로 묶어두면 필요한 순간에 자동으로 불려 나옵니다.
+summary: "같은 설명을 세 번 이상 했다면 Skill로 만들 때입니다. 작업 방법을 파일로 묶어두면 필요한 순간에 자동으로 불려 나옵니다."
 updated: 2026-08-12
-badge: HOT
+badge: "HOT"
 ---
 **프롬프트는 그 대화에서 끝나고, Skill은 남습니다.**
 

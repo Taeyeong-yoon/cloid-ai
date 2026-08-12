@@ -1,9 +1,9 @@
 ---
-title: Hooks — 이벤트 시점에 강제 실행
+title: "Hooks — 이벤트 시점에 강제 실행"
 category: usecases
 tags: [Hooks, Claude Code, 자동화]
 difficulty: intermediate
-summary: '항상 이렇게 해줘'를 프롬프트에 적는 대신, 특정 시점에 명령이 반드시 실행되게 만듭니다.
+summary: "'항상 이렇게 해줘'를 프롬프트에 적는 대신, 특정 시점에 명령이 반드시 실행되게 만듭니다."
 updated: 2026-08-12
 ---
 **프롬프트로 부탁한 규칙은 대체로 지켜집니다. 문제는 그 '대체로'입니다.**

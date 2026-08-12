@@ -1,9 +1,9 @@
 ---
-title: 파일·이미지 입력 — PDF와 화면을 그대로 넣기
+title: "파일·이미지 입력 — PDF와 화면을 그대로 넣기"
 category: features
 tags: [PDF, 비전, Files API]
 difficulty: beginner
-summary: PDF·이미지·문서를 그대로 넣고 분석시킵니다. 여러 요청에서 재사용할 파일은 업로드해두고 ID로 참조하면 됩니다.
+summary: "PDF·이미지·문서를 그대로 넣고 분석시킵니다. 여러 요청에서 재사용할 파일은 업로드해두고 ID로 참조하면 됩니다."
 updated: 2026-08-12
 ---
 **텍스트로 옮겨 적는 전처리 단계가 대부분 필요 없습니다.**

@@ -1,9 +1,9 @@
 ---
-title: 도구 사용(Tool use) — 모델이 외부 기능을 호출하는 방식
+title: "도구 사용(Tool use) — 모델이 외부 기능을 호출하는 방식"
 category: features
 tags: [도구호출, API, 에이전트]
 difficulty: intermediate
-summary: 도구를 정의해두면 모델이 필요할 때 스스로 호출합니다. 호출 여부를 가르는 것은 도구 설명(description)입니다.
+summary: "도구를 정의해두면 모델이 필요할 때 스스로 호출합니다. 호출 여부를 가르는 것은 도구 설명(description)입니다."
 updated: 2026-08-12
 ---
 **도구 설명은 사람이 읽는 문서가 아니라, 모델이 읽고 판단하는 근거입니다.**

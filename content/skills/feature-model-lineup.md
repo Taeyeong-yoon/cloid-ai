@@ -1,11 +1,11 @@
 ---
-title: 2026 모델 라인업 — 무엇을 언제 쓸까
+title: "2026 모델 라인업 — 무엇을 언제 쓸까"
 category: features
 tags: [모델선택, Opus, Sonnet, Haiku, 비용]
 difficulty: beginner
-summary: Opus 5 · Sonnet 5 · Haiku 4.5. 성능 비교표보다 '어떤 작업에 무엇을 쓰느냐'가 비용과 품질을 좌우합니다.
+summary: "Opus 5 · Sonnet 5 · Haiku 4.5. 성능 비교표보다 '어떤 작업에 무엇을 쓰느냐'가 비용과 품질을 좌우합니다."
 updated: 2026-08-12
-badge: UPDATED
+badge: "UPDATED"
 ---
 **분류 작업에 최상위 모델을 쓰는 건, 편의점 가는 데 트럭을 모는 것과 같습니다.**
 

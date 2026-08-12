@@ -1,9 +1,9 @@
 ---
-title: Managed Agents — 인프라 없이 에이전트 운영하기
+title: "Managed Agents — 인프라 없이 에이전트 운영하기"
 category: features
 tags: [에이전트, Managed Agents, API]
 difficulty: advanced
-summary: 에이전트 루프와 실행 컨테이너를 Anthropic이 운영합니다. 세션마다 작업공간이 생기고, 설정은 버전으로 관리됩니다.
+summary: "에이전트 루프와 실행 컨테이너를 Anthropic이 운영합니다. 세션마다 작업공간이 생기고, 설정은 버전으로 관리됩니다."
 updated: 2026-08-12
 ---
 **에이전트를 직접 만들면 루프·상태·실행 환경 셋을 전부 떠안게 됩니다.**

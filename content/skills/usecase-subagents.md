@@ -1,9 +1,9 @@
 ---
-title: Subagents — 작업을 나눠 실행하기
+title: "Subagents — 작업을 나눠 실행하기"
 category: usecases
 tags: [서브에이전트, Claude Code, 병렬]
 difficulty: intermediate
-summary: 여러 파일을 동시에 훑을 때는 유리하고, 작은 작업에 쓰면 오히려 느리고 비쌉니다. 판단 기준을 정리합니다.
+summary: "여러 파일을 동시에 훑을 때는 유리하고, 작은 작업에 쓰면 오히려 느리고 비쌉니다. 판단 기준을 정리합니다."
 updated: 2026-08-12
 ---
 **서브에이전트는 공짜가 아닙니다. 맥락을 새로 세팅하는 값을 매번 냅니다.**

@@ -1,9 +1,9 @@
 ---
-title: 헤드리스 모드 — 스크립트에서 Claude Code 실행하기
+title: "헤드리스 모드 — 스크립트에서 Claude Code 실행하기"
 category: usecases
 tags: [Claude Code, CLI, 자동화]
 difficulty: advanced
-summary: 대화형 화면 없이 명령 한 줄로 실행합니다. CI 파이프라인이나 스크립트에 끼워 넣을 때 쓰는 방식입니다.
+summary: "대화형 화면 없이 명령 한 줄로 실행합니다. CI 파이프라인이나 스크립트에 끼워 넣을 때 쓰는 방식입니다."
 updated: 2026-08-12
 ---
 **사람이 앉아 있지 않은 곳에서 Claude Code를 돌리는 방법입니다.**

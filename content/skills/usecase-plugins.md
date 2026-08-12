@@ -1,9 +1,9 @@
 ---
-title: Plugins — 설정 묶어 배포하기
+title: "Plugins — 설정 묶어 배포하기"
 category: usecases
 tags: [플러그인, 팀, 표준화]
 difficulty: intermediate
-summary: 스킬·명령·훅·MCP 설정을 묶어 팀에 배포합니다. 각자 설정하느라 환경이 제각각이 되는 문제를 없앱니다.
+summary: "스킬·명령·훅·MCP 설정을 묶어 팀에 배포합니다. 각자 설정하느라 환경이 제각각이 되는 문제를 없앱니다."
 updated: 2026-08-12
 ---
 **같은 저장소인데 개발 환경이 사람마다 다르면, 버그 재현부터 안 됩니다.**

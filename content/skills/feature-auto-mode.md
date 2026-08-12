@@ -1,11 +1,11 @@
 ---
-title: Auto Mode — 승인 프롬프트 없이 일 시키기
+title: "Auto Mode — 승인 프롬프트 없이 일 시키기"
 category: usecases
 tags: [Claude Code, Auto Mode, 권한, 2026-08]
 difficulty: beginner
-summary: 2026년 8월 Auto Mode가 유료 사용자 기본값이 됐습니다. 승인 창을 없애고 백그라운드 안전 검사로 대체한 이유와, 권한 모드 6가지를 상황별로 고르는 법.
+summary: "2026년 8월 Auto Mode가 유료 사용자 기본값이 됐습니다. 승인 창을 없애고 백그라운드 안전 검사로 대체한 이유와, 권한 모드 6가지를 상황별로 고르는 법."
 updated: 2026-08-12
-badge: NEW
+badge: "NEW"
 ---
 **매번 뜨는 승인 창을 사람이 정말 읽고 있었는가 — 이 질문에서 출발한 변화입니다.**
 

@@ -1,9 +1,9 @@
 ---
-title: CLAUDE.md — 프로젝트 메모리
+title: "CLAUDE.md — 프로젝트 메모리"
 category: usecases
 tags: [CLAUDE.md, Claude Code, 팀]
 difficulty: beginner
-summary: 매번 반복하던 프로젝트 설명을 파일로 옮기면 세션마다 자동 전달됩니다. 무엇을 넣고 무엇을 빼야 효과가 나는지.
+summary: "매번 반복하던 프로젝트 설명을 파일로 옮기면 세션마다 자동 전달됩니다. 무엇을 넣고 무엇을 빼야 효과가 나는지."
 updated: 2026-08-12
 ---
 **같은 지적을 두 번 했다면, 그건 CLAUDE.md에 들어갈 문장입니다.**

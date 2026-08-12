@@ -1,9 +1,9 @@
 ---
-title: Projects — 맥락을 저장해 재사용하기
+title: "Projects — 맥락을 저장해 재사용하기"
 category: features
 tags: [Projects, 컨텍스트, 지침]
 difficulty: beginner
-summary: 지침과 파일을 프로젝트에 저장하면 새 대화를 열어도 같은 맥락에서 시작합니다. 반복 설명이 사라집니다.
+summary: "지침과 파일을 프로젝트에 저장하면 새 대화를 열어도 같은 맥락에서 시작합니다. 반복 설명이 사라집니다."
 updated: 2026-08-12
 ---
 **새 대화를 열 때마다 배경 설명을 다시 하고 있다면, 그건 Projects에 들어갈 내용입니다.**

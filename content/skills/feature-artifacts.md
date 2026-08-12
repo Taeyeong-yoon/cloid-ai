@@ -1,9 +1,9 @@
 ---
-title: Artifacts — 결과물을 즉시 실행·수정하기
+title: "Artifacts — 결과물을 즉시 실행·수정하기"
 category: features
 tags: [Artifacts, 코드실행, 미리보기]
 difficulty: beginner
-summary: Claude가 만든 코드·HTML·문서를 대화창 옆 패널에서 바로 실행하고 고칩니다. 결과를 보면서 자연어로 수정 요청을 이어갈 수 있습니다.
+summary: "Claude가 만든 코드·HTML·문서를 대화창 옆 패널에서 바로 실행하고 고칩니다. 결과를 보면서 자연어로 수정 요청을 이어갈 수 있습니다."
 updated: 2026-08-12
 ---
 **복사해서 붙여넣고 실행해 보는 왕복이 사라집니다.**

@@ -1,11 +1,11 @@
 ---
-title: Routines — 작업 예약 실행
+title: "Routines — 작업 예약 실행"
 category: usecases
 tags: [예약, 자동화, 루틴]
 difficulty: beginner
-summary: 매일·매주 같은 시각에 도는 작업을 등록합니다. 형식이 고정된 정리·점검·요약 업무가 가장 잘 맞습니다.
+summary: "매일·매주 같은 시각에 도는 작업을 등록합니다. 형식이 고정된 정리·점검·요약 업무가 가장 잘 맞습니다."
 updated: 2026-08-12
-badge: NEW
+badge: "NEW"
 ---
 **사람이 시작 버튼을 눌러야만 도는 자동화는, 절반만 자동화된 것입니다.**
 
