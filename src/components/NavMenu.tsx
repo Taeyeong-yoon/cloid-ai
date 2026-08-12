@@ -157,7 +157,7 @@ function SearchModal({ onClose }: { onClose: () => void }) {
   );
 }
 
-export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
+export default function NavMenu() {
   const [open, setOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [loginTooltipVisible, setLoginTooltipVisible] = useState(false);
@@ -166,7 +166,7 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
   const router = useRouter();
   const pathname = usePathname();
 
-  const authed = isLoggedIn || !!user;
+  const authed = !!user;
   const textbookLabel = locale === "ko" ? "교재" : "Textbook";
 
   const links = [

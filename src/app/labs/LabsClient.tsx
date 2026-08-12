@@ -12,9 +12,7 @@ import {
   ChevronRight,
   ChevronUp,
   Clock,
-  Code2,
   Copy,
-  Database,
   FlaskConical,
   Lightbulb,
   Network,
@@ -22,15 +20,11 @@ import {
   Rocket,
   Search,
   Target,
-  Terminal,
 } from "lucide-react";
 import type { LabItem, LabVideo } from "@/lib/types";
 import { TEXTBOOKS } from "@/constants/textbooks";
 import BookmarkButton from "@/components/BookmarkButton";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
-import HTMLPreview from "@/components/HTMLPreview";
-import PythonPreview from "@/components/PythonPreview";
-import DataPreprocessingPreview from "@/components/DataPreprocessingPreview";
 import CodeChallenge from "@/components/CodeChallenge";
 import ResultEvaluator from "@/components/ResultEvaluator";
 import StepChecklist, { type ChecklistStep } from "@/components/StepChecklist";
@@ -255,32 +249,14 @@ function LabTrackCard({
   );
 }
 
-type ToolId = "html" | "python" | "preprocessing";
-
-function getLinkedTool(lab: LabItem): ToolId | null {
-  if (lab.id === "lab-data-preprocessing") return "preprocessing";
-  const tags = lab.tags.map((tag) => tag.toLowerCase());
-  if (tags.includes("html") || tags.includes("javascript")) return "html";
-  if (tags.includes("python")) return "python";
-  return null;
-}
-
-const TOOL_META: Record<ToolId, { label: string; labelKo: string; color: string; icon: string }> = {
-  html: { label: "Test in HTML Preview", labelKo: "HTML Preview에서 테스트", color: "border-amber-500/40 bg-amber-500/10 text-amber-300 hover:bg-amber-500/20", icon: "</>" },
-  python: { label: "Run in Python Preview", labelKo: "Python Preview에서 실행", color: "border-teal-500/40 bg-teal-500/10 text-teal-300 hover:bg-teal-500/20", icon: "▶" },
-  preprocessing: { label: "Open Data Preprocessing Lab", labelKo: "데이터 전처리 도구 열기", color: "border-sky-500/40 bg-sky-500/10 text-sky-300 hover:bg-sky-500/20", icon: "⊞" },
-};
-
 function LabCard({
   lab,
   index,
   onActivate,
-  onOpenTool,
 }: {
   lab: LabItem;
   index: number;
   onActivate: (lab: LabItem) => void;
-  onOpenTool: (tool: ToolId) => void;
 }) {
   const { t, locale } = useTranslation();
   const [expanded, setExpanded] = useState(false);
@@ -305,8 +281,6 @@ function LabCard({
       return next;
     });
   }
-
-  const linkedTool = getLinkedTool(lab);
 
   const interactiveChallenge =
     typeof lab.challenge === "object" && lab.challenge && "starterCode" in lab.challenge
@@ -355,15 +329,6 @@ function LabCard({
 
       {expanded && (
         <div className="space-y-4 border-t border-slate-800 p-5">
-          {linkedTool && (
-            <button
-              onClick={() => onOpenTool(linkedTool)}
-              className={`inline-flex items-center gap-2 rounded-lg border px-3 py-1.5 text-xs font-medium transition-colors ${TOOL_META[linkedTool].color}`}
-            >
-              <span>{TOOL_META[linkedTool].icon}</span>
-              {locale === "ko" ? TOOL_META[linkedTool].labelKo : TOOL_META[linkedTool].label}
-            </button>
-          )}
           {lab.steps.length > 0 && (() => {
             const checklistSteps: ChecklistStep[] = lab.steps.map((step) => ({
               title: step.title,
@@ -488,18 +453,9 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
   const { t, locale } = useTranslation();
   const isKo = locale === "ko";
   const [activeLab, setActiveLab] = useState<LabItem | null>(labs[0] ?? null);
-  const [activeTool, setActiveTool] = useState<ToolId | null>(null);
   const [selectedTrackId, setSelectedTrackId] = useState<LabTrackId>("ai-basics");
   const selectedTrackRef = useRef<HTMLDivElement>(null);
-  const toolsSectionRef = useRef<HTMLDivElement>(null);
   const isInitialMount = useRef(true);
-
-  function handleOpenTool(tool: ToolId) {
-    setActiveTool(tool);
-    requestAnimationFrame(() => {
-      toolsSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  }
 
   const trackGroups = useMemo(
     () =>
@@ -554,108 +510,6 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
       </div>
       <p className="mb-6 text-sm text-slate-400">{t.labs.desc}</p>
 
-      <div ref={toolsSectionRef} className="mb-8 rounded-2xl border border-slate-800 bg-slate-950/55 p-3 sm:p-4">
-        <div className="mb-3 flex items-center justify-between gap-3 border-b border-slate-800/80 pb-3">
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-violet-300/80">AI Labs Tools</p>
-            <p className="mt-1 text-xs text-slate-400">Open a browser-based tool only when you need it and keep the lab list in focus.</p>
-          </div>
-          <span className="hidden rounded-full border border-slate-700 bg-slate-900 px-2.5 py-1 text-[11px] text-slate-400 sm:inline-flex">
-            3 interactive tools
-          </span>
-        </div>
-
-        <div className="grid gap-3 md:grid-cols-3">
-          <div className={`lab-tool-launcher text-left ${activeTool === "html" ? "lab-tool-launcher-active" : ""}`}>
-            <span className="lab-tool-launcher-icon border-amber-500/20 bg-amber-500/15 text-amber-300">
-              <Code2 size={16} />
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className="flex items-center gap-2">
-                <span className="text-sm font-semibold text-white">{t.labs.code_preview_title}</span>
-                <span className="rounded-full border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.18em] text-amber-200">
-                  HTML
-                </span>
-              </span>
-              <span className="mt-1 block text-xs text-slate-400">Preview HTML, CSS, and JS with fullscreen and download kept intact.</span>
-            </span>
-            <div className="ml-auto flex shrink-0 flex-col items-end gap-2">
-              <button type="button" onClick={() => setActiveTool((current) => (current === "html" ? null : "html"))} className="lab-tool-launcher-cta">
-                {activeTool === "html" ? t.labs.collapse : "Open"}
-              </button>
-              <Link
-                href="/labs/code-preview-guide"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1.5 text-[11px] font-medium text-amber-100 transition-colors hover:bg-amber-500/20"
-              >
-                {isKo ? "매우 상세한 설명서" : "Detailed Guide"}
-              </Link>
-            </div>
-          </div>
-
-          <div className={`lab-tool-launcher text-left ${activeTool === "python" ? "lab-tool-launcher-active" : ""}`}>
-            <span className="lab-tool-launcher-icon border-teal-500/20 bg-teal-500/15 text-teal-300">
-              <Terminal size={16} />
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className="flex items-center gap-2">
-                <span className="text-sm font-semibold text-white">{t.labs.python_title}</span>
-                <span className="rounded-full border border-teal-500/20 bg-teal-500/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.18em] text-teal-200">
-                  Python
-                </span>
-              </span>
-              <span className="mt-1 block text-xs text-slate-400">Run Python in-browser and keep the existing full view and VS Code open actions.</span>
-            </span>
-            <div className="ml-auto flex shrink-0 flex-col items-end gap-2">
-              <button type="button" onClick={() => setActiveTool((current) => (current === "python" ? null : "python"))} className="lab-tool-launcher-cta">
-                {activeTool === "python" ? t.labs.collapse : "Open"}
-              </button>
-              <Link
-                href="/labs/python-guide"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex rounded-full border border-teal-500/30 bg-teal-500/10 px-3 py-1.5 text-[11px] font-medium text-teal-100 transition-colors hover:bg-teal-500/20"
-              >
-                {isKo ? "매우 상세한 설명서" : "Detailed Guide"}
-              </Link>
-            </div>
-          </div>
-
-          <div className={`lab-tool-launcher text-left ${activeTool === "preprocessing" ? "lab-tool-launcher-active" : ""}`}>
-            <span className="lab-tool-launcher-icon border-sky-500/20 bg-sky-500/15 text-sky-300">
-              <Database size={16} />
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className="flex items-center gap-2">
-                <span className="text-sm font-semibold text-white">Data Preprocessing Lab</span>
-                <span className="rounded-full border border-sky-500/20 bg-sky-500/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.18em] text-sky-200">
-                  CSV
-                </span>
-              </span>
-              <span className="mt-1 block text-xs text-slate-400">Practice missing values, duplicates, date cleanup, and pandas code generation in a notebook-like flow.</span>
-            </span>
-            <div className="ml-auto flex shrink-0 flex-col items-end gap-2">
-              <button type="button" onClick={() => setActiveTool((current) => (current === "preprocessing" ? null : "preprocessing"))} className="lab-tool-launcher-cta">
-                {activeTool === "preprocessing" ? t.labs.collapse : "Open"}
-              </button>
-              <Link
-                href="/labs/preprocessing-guide"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1.5 text-[11px] font-medium text-sky-100 transition-colors hover:bg-sky-500/20"
-              >
-                {isKo ? "매우 상세한 설명서" : "Detailed Guide"}
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {activeTool === "html" && <div className="mt-4"><HTMLPreview /></div>}
-        {activeTool === "python" && <div className="mt-4"><PythonPreview /></div>}
-        {activeTool === "preprocessing" && <div className="mt-4"><DataPreprocessingPreview /></div>}
-      </div>
-
       <section className="space-y-6">
         <div>
           <div className="mb-2 flex items-center gap-2">
@@ -706,7 +560,7 @@ export default function LabsClient({ labs }: { labs: LabItem[] }) {
 
             <div className="space-y-4 bg-slate-900/10">
               {selectedTrack.labs.map((lab, i) => (
-                <LabCard key={lab.id} lab={lab} index={i} onActivate={setActiveLab} onOpenTool={handleOpenTool} />
+                <LabCard key={lab.id} lab={lab} index={i} onActivate={setActiveLab} />
               ))}
             </div>
           </div>
