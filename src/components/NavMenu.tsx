@@ -8,6 +8,7 @@ import {
   BookOpen,
   Zap,
   FlaskConical,
+  GraduationCap,
   User,
   LogIn,
   Menu,
@@ -169,6 +170,7 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
 
   const links = [
     { href: "/", label: t.nav.home, icon: Brain, guard: false },
+    { href: "/course", label: locale === "ko" ? "교육 과정" : "Course", icon: GraduationCap, guard: false },
     { href: "/radar", label: textbookLabel, icon: BookOpen, guard: false },
     { href: "/learning", label: t.nav.learning, icon: BookOpen, guard: false },
     { href: "/skills", label: t.nav.skills, icon: Zap, guard: false },

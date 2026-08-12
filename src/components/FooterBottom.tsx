@@ -52,14 +52,9 @@ export default function FooterBottom() {
               </a>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-violet-400" />
               <span className="text-xs text-slate-500">
-                {t.footer.update_schedule} ·{" "}
-                {new Date().toLocaleDateString(undefined, {
-                  month: "long",
-                  day: "numeric",
-                })}{" "}
-                {t.footer.updated_today}
+                {t.footer.update_schedule} · {t.footer.updated_today}
               </span>
             </div>
           </div>

@@ -1,379 +1,137 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { ComponentType } from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
 import {
   ArrowRight,
-  Bookmark,
   BookOpen,
+  Clock3,
+  Download,
   ExternalLink,
+  FileText,
   FlaskConical,
+  GraduationCap,
+  Layers,
   Sparkles,
-  TrendingUp,
-  X,
   Zap,
 } from "lucide-react";
 import AskAI from "@/components/AskAI";
 import HeroVisual from "@/components/HeroVisual";
+import TextbookIcon from "@/components/TextbookIcon";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
-import { AI_TOOLS, POPULAR_TAGS } from "@/constants/home";
-import { getAllBookmarks } from "@/lib/progress";
+import { AI_TOOLS } from "@/constants/home";
 import { TEXTBOOKS } from "@/constants/textbooks";
+import {
+  COURSE_LESSONS,
+  COURSE_MATERIALS,
+  COURSE_META,
+} from "@/constants/course";
+import { getVisitedLessons } from "@/lib/course-progress";
 
-function TopicTag({ tag, onClick }: { tag: string; onClick?: () => void }) {
-  return (
-    <button
-      onClick={onClick}
-      className="rounded-full border border-slate-700 bg-slate-800 px-2 py-0.5 text-[10px] text-slate-400 transition-colors hover:bg-slate-700 hover:text-slate-200"
-    >
-      {tag}
-    </button>
-  );
-}
-
-type JourneyCardKey = "radar" | "learning" | "skills" | "labs";
-
-interface TodayUpdateData {
-  radar: { slug: string; title: string; summary: string; tags: string[] } | null;
-  learning: { id: string; title: string; description: string; level: string; tags: string[] } | null;
-  lab: { id: string; title: string; description: string; difficulty: string; tags: string[] } | null;
-}
-
-interface ContentCounts {
-  total: number;
+export interface LibraryCounts {
   learning: number;
   labs: number;
-  radar: number;
+  skills: number;
 }
 
-interface JourneyCardConfig {
-  key: JourneyCardKey;
-  step: string;
-  href: string;
-  label: string;
-  icon: ComponentType<{ size?: number; className?: string }>;
-  desc: string;
-  cta: string;
-  event: string;
-  accentText: string;
-  borderHover: string;
-  badgeClass: string;
-  heroClass: string;
-}
-
-function JourneyHero({ variant }: { variant: JourneyCardKey }) {
-  if (variant === "radar") {
-    return (
-      <div className="journey-hero journey-hero-radar">
-        <div className="journey-radar-grid" />
-        <div className="journey-radar-ring journey-radar-ring-1" />
-        <div className="journey-radar-ring journey-radar-ring-2" />
-        <div className="journey-radar-ring journey-radar-ring-3" />
-        <div className="journey-radar-sweep" />
-        <div className="journey-radar-node journey-radar-node-1" />
-        <div className="journey-radar-node journey-radar-node-2" />
-        <div className="journey-radar-node journey-radar-node-3" />
-      </div>
-    );
-  }
-
-  if (variant === "learning") {
-    return (
-      <div className="journey-hero journey-hero-learning">
-        <div className="journey-learning-map" />
-        <div className="journey-learning-panel journey-learning-panel-1" />
-        <div className="journey-learning-panel journey-learning-panel-2" />
-        <div className="journey-learning-panel journey-learning-panel-3" />
-        <div className="journey-learning-node journey-learning-node-a" />
-        <div className="journey-learning-node journey-learning-node-b" />
-        <div className="journey-learning-node journey-learning-node-c" />
-        <div className="journey-learning-node journey-learning-node-d" />
-      </div>
-    );
-  }
-
-  if (variant === "skills") {
-    return (
-      <div className="journey-hero journey-hero-skills">
-        <div className="journey-hub-bg" />
-        <div className="journey-hub-orbit" />
-        <div className="journey-hub-line journey-hub-line-1" />
-        <div className="journey-hub-line journey-hub-line-2" />
-        <div className="journey-hub-line journey-hub-line-3" />
-        <div className="journey-hub-line journey-hub-line-4" />
-        <div className="journey-hub-line journey-hub-line-5" />
-        <div className="journey-hub-node journey-hub-node-1" />
-        <div className="journey-hub-node journey-hub-node-2" />
-        <div className="journey-hub-node journey-hub-node-3" />
-        <div className="journey-hub-node journey-hub-node-4" />
-        <div className="journey-hub-node journey-hub-node-5" />
-        <div className="journey-hub-center">
-          <svg viewBox="0 0 24 24" fill="currentColor" className="journey-hub-claude-logo">
-            <path d="M13.827 3.52h3.603L24 20h-3.603l-6.57-16.48zm-7.258 0h3.767L16.906 20h-3.674l-1.343-3.461H5.017L3.674 20H0L6.569 3.52zm4.132 9.959L8.453 7.687 6.205 13.48H10.7z" />
-          </svg>
-        </div>
-        <div className="journey-hub-pulse" />
-        <div className="journey-hub-chip journey-hub-chip-1" />
-        <div className="journey-hub-chip journey-hub-chip-2" />
-        <div className="journey-hub-chip journey-hub-chip-3" />
-      </div>
-    );
-  }
-
-  return (
-    <div className="journey-hero journey-hero-labs">
-      <div className="journey-lab-grid" />
-      <div className="journey-lab-window journey-lab-window-1" />
-      <div className="journey-lab-window journey-lab-window-2" />
-      <div className="journey-lab-window journey-lab-window-3" />
-      <div className="journey-lab-signal" />
-      <div className="journey-lab-dot journey-lab-dot-1" />
-      <div className="journey-lab-dot journey-lab-dot-2" />
-    </div>
-  );
-}
-
-function JourneyFeatureCard({
-  keyName,
-  step,
-  href,
-  label,
-  icon: Icon,
-  desc,
-  cta,
-  event,
-  accentText,
-  borderHover,
-  badgeClass,
-  heroClass,
-}: JourneyCardConfig & { keyName: JourneyCardKey }) {
-  return (
-    <Link
-      href={href}
-      data-event={event}
-      className={`journey-card group flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-slate-800/90 bg-slate-950/60 transition-all duration-300 ${borderHover}`}
-    >
-      <div className={`journey-card-hero ${heroClass}`}>
-        <JourneyHero variant={keyName} />
-      </div>
-      <div className="journey-card-content">
-        <div className="mb-3 flex items-center justify-between gap-3">
-          <span className={`journey-card-step ${badgeClass}`}>{step}</span>
-          <div className={`journey-card-icon ${badgeClass}`}>
-            <Icon size={17} className={accentText} />
-          </div>
-        </div>
-        <div className="space-y-2">
-          <h3 className="text-base font-semibold tracking-tight text-white">{label}</h3>
-          <p className="text-sm leading-6 text-slate-400">{desc}</p>
-        </div>
-        <div className="mt-5 flex items-center gap-2 text-sm font-medium">
-          <span className={accentText}>{cta}</span>
-          <ArrowRight
-            size={15}
-            className={`transition-transform duration-300 motion-safe:group-hover:translate-x-1 ${accentText}`}
-          />
-        </div>
-      </div>
-    </Link>
-  );
-}
-
-export default function HomeClient({
-  todayUpdate: _todayUpdate,
-  contentCounts,
-}: {
-  todayUpdate: TodayUpdateData;
-  contentCounts: ContentCounts;
-}) {
-  const { locale, t } = useTranslation();
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const [showOnboarding, setShowOnboarding] = useState(false);
-  const [bookmarkedTextbooks, setBookmarkedTextbooks] = useState<typeof TEXTBOOKS>([]);
-  const [bookmarkedLabIds, setBookmarkedLabIds] = useState<string[]>([]);
+export default function HomeClient({ libraryCounts }: { libraryCounts: LibraryCounts }) {
+  const { locale } = useTranslation();
+  const ko = locale === "ko";
+  const [visited, setVisited] = useState<string[]>([]);
 
   useEffect(() => {
-    void searchParams;
-    const dismissed = localStorage.getItem("cloid-onboarding-dismissed");
-    if (!dismissed) setShowOnboarding(true);
-    // Load bookmarks
-    const bms = getAllBookmarks();
-    const matchedTextbooks = TEXTBOOKS.filter((tb) => bms.textbooks.includes(tb.id));
-    setBookmarkedTextbooks(matchedTextbooks);
-    setBookmarkedLabIds(bms.labs);
-  }, [searchParams]);
+    setVisited(getVisitedLessons());
+  }, []);
 
-  function dismissOnboarding() {
-    localStorage.setItem("cloid-onboarding-dismissed", "1");
-    setShowOnboarding(false);
-  }
+  const nextLesson = COURSE_LESSONS.find((lesson) => !visited.includes(lesson.id)) ?? COURSE_LESSONS[0];
+  const started = visited.length > 0;
 
-  function handleTagClick(tag: string) {
-    router.push(`/learning?q=${encodeURIComponent(tag)}`);
-  }
-
-  const journey: JourneyCardConfig[] = [
+  const library = [
     {
-      key: "radar",
-      step: "01",
       href: "/radar",
-      label: locale === "ko" ? "인터랙티브 교재" : "Interactive Textbooks",
+      label: ko ? "인터랙티브 교재" : "Interactive Textbooks",
+      count: TEXTBOOKS.filter((t) => t.ready).length,
       icon: BookOpen,
-      desc:
-        locale === "ko"
-          ? "MCP, Marketplace, Prompt, Cowork 주제를 카드형 교재로 깊게 학습합니다"
-          : "Study MCP, marketplace, prompt, and cowork topics through immersive interactive textbooks",
-      cta: locale === "ko" ? "교재 열기" : "Open textbooks",
-      event: "cta_journey_radar",
-      accentText: "text-emerald-300",
-      borderHover: "hover:border-emerald-500/60 hover:shadow-[0_18px_48px_rgba(16,185,129,0.12)]",
-      badgeClass: "border-emerald-500/25 bg-emerald-500/10",
-      heroClass: "journey-hero-surface journey-hero-surface-radar",
+      accent: "text-emerald-300",
     },
     {
-      key: "learning",
-      step: "02",
       href: "/learning",
-      label: t.home.learning_label,
-      icon: BookOpen,
-      desc: t.home.journey_learning_desc,
-      cta: t.home.learning_label,
-      event: "cta_journey_learning",
-      accentText: "text-sky-300",
-      borderHover: "hover:border-sky-500/60 hover:shadow-[0_18px_48px_rgba(56,189,248,0.12)]",
-      badgeClass: "border-sky-500/25 bg-sky-500/10",
-      heroClass: "journey-hero-surface journey-hero-surface-learning",
+      label: ko ? "주제별 학습" : "Topic Learning",
+      count: libraryCounts.learning,
+      icon: GraduationCap,
+      accent: "text-sky-300",
     },
     {
-      key: "skills",
-      step: "03",
       href: "/skills",
-      label: t.home.skills_label,
+      label: ko ? "클로드 허브" : "Claude Hub",
+      count: libraryCounts.skills,
       icon: Zap,
-      desc: t.home.journey_skills_desc,
-      cta: t.home.skills_label,
-      event: "cta_journey_skills",
-      accentText: "text-violet-300",
-      borderHover: "hover:border-violet-500/60 hover:shadow-[0_18px_48px_rgba(139,92,246,0.12)]",
-      badgeClass: "border-violet-500/25 bg-violet-500/10",
-      heroClass: "journey-hero-surface journey-hero-surface-skills",
+      accent: "text-violet-300",
     },
     {
-      key: "labs",
-      step: "04",
       href: "/labs",
-      label: t.home.labs_label,
+      label: ko ? "실습 Labs" : "Hands-on Labs",
+      count: libraryCounts.labs,
       icon: FlaskConical,
-      desc: t.home.journey_labs_desc,
-      cta: t.home.labs_label,
-      event: "cta_journey_labs",
-      accentText: "text-fuchsia-300",
-      borderHover: "hover:border-fuchsia-500/60 hover:shadow-[0_18px_48px_rgba(217,70,239,0.12)]",
-      badgeClass: "border-fuchsia-500/25 bg-fuchsia-500/10",
-      heroClass: "journey-hero-surface journey-hero-surface-labs",
+      accent: "text-fuchsia-300",
     },
   ];
 
   return (
     <div className="space-y-10">
-
-      {/* 첫 방문자 온보딩 배너 */}
-      {showOnboarding && (
-        <div className="animate-fade-in-up relative flex items-start gap-4 rounded-2xl border border-violet-500/30 bg-violet-950/40 px-5 py-4">
-          <Sparkles size={18} className="mt-0.5 shrink-0 text-violet-400" />
-          <div className="flex-1 min-w-0">
-            <p className="text-sm font-semibold text-violet-200">
-              {locale === "ko" ? "처음 오셨나요? 여기서 시작하세요" : "New here? Start your journey"}
-            </p>
-            <p className="mt-1 text-xs text-slate-400 leading-relaxed">
-              {locale === "ko"
-                ? "Claude AI를 처음 배운다면 → 인터랙티브 교재부터. 기능이 궁금하다면 → 클로드 허브. 바로 해보고 싶다면 → 직접 실습."
-                : "New to Claude AI? Start with Interactive Textbooks. Curious about features? Check Claude Hub. Ready to try? Jump into Labs."}
-            </p>
-            <div className="mt-3 flex flex-wrap gap-2">
-              <Link href="/radar" onClick={dismissOnboarding} className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-300 hover:bg-emerald-500/20 transition-colors">
-                {locale === "ko" ? "인터랙티브 교재 →" : "Interactive Textbooks →"}
-              </Link>
-              <Link href="/skills" onClick={dismissOnboarding} className="rounded-full border border-violet-500/40 bg-violet-500/10 px-3 py-1 text-xs text-violet-300 hover:bg-violet-500/20 transition-colors">
-                {locale === "ko" ? "클로드 허브 →" : "Claude Hub →"}
-              </Link>
-              <Link href="/labs" onClick={dismissOnboarding} className="rounded-full border border-amber-500/40 bg-amber-500/10 px-3 py-1 text-xs text-amber-300 hover:bg-amber-500/20 transition-colors">
-                {locale === "ko" ? "직접 실습 →" : "Hands-on Labs →"}
-              </Link>
-            </div>
-          </div>
-          <button onClick={dismissOnboarding} className="shrink-0 text-slate-500 hover:text-slate-300 transition-colors">
-            <X size={15} />
-          </button>
-        </div>
-      )}
-
-      {/* Continue Learning — bookmark panel */}
-      {(bookmarkedTextbooks.length > 0 || bookmarkedLabIds.length > 0) && (
-        <div className="animate-fade-in-up rounded-2xl border border-slate-800 bg-slate-950/60 p-4">
-          <div className="mb-3 flex items-center gap-2">
-            <Bookmark size={14} className="text-violet-400" fill="currentColor" />
-            <span className="text-sm font-semibold text-white">
-              {locale === "ko" ? "이어 학습하기" : "Continue Learning"}
-            </span>
-            <span className="ml-auto text-xs text-slate-500">
-              {bookmarkedTextbooks.length + bookmarkedLabIds.length}{" "}
-              {locale === "ko" ? "개 북마크" : "saved"}
-            </span>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {bookmarkedTextbooks.map((tb) => (
-              <Link
-                key={tb.id}
-                href={`/radar/${tb.id}`}
-                className="inline-flex items-center gap-1.5 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-xs text-emerald-300 transition-colors hover:border-emerald-500/40 hover:bg-emerald-500/15"
-              >
-                <BookOpen size={11} />
-                {locale === "ko" ? tb.title : tb.titleEn}
-              </Link>
-            ))}
-            {bookmarkedLabIds.length > 0 && (
-              <Link
-                href="/labs"
-                className="inline-flex items-center gap-1.5 rounded-xl border border-violet-500/20 bg-violet-500/10 px-3 py-1.5 text-xs text-violet-300 transition-colors hover:border-violet-500/40 hover:bg-violet-500/15"
-              >
-                <FlaskConical size={11} />
-                {locale === "ko"
-                  ? `실습 ${bookmarkedLabIds.length}개 저장됨`
-                  : `${bookmarkedLabIds.length} lab${bookmarkedLabIds.length > 1 ? "s" : ""} saved`}
-              </Link>
-            )}
-          </div>
-        </div>
-      )}
-
+      {/* ── 히어로: 교육 과정 ─────────────────────────────── */}
       <section className="hero-glow animate-fade-in-up py-4" style={{ animationDelay: "0ms" }}>
         <div className="flex flex-col md:flex-row md:items-center md:gap-8 lg:gap-12">
           <div className="min-w-0 flex-1">
-            <div className="mb-3 flex items-center gap-2 text-sm font-medium text-violet-400">
-              <TrendingUp size={16} />
-              <span>{t.home.trending_badge}</span>
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-violet-500/25 bg-violet-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-violet-200">
+              <Sparkles size={12} />
+              {COURSE_META.level} · Free Course
             </div>
-            <h1 className="mb-2 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-              CLOID<span className="text-violet-400">.AI</span>
+
+            <h1 className="mb-3 text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl">
+              {ko ? COURSE_META.title : COURSE_META.titleEn}
             </h1>
-            <p className="mb-1 max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg">
-              {t.home.hero_desc}
-            </p>
-            <p className="mb-3 max-w-xl text-sm leading-relaxed text-slate-500">
-              {t.home.hero_sub_desc}
+
+            <p className="mb-5 max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg">
+              {ko ? COURSE_META.subtitle : COURSE_META.subtitleEn}
             </p>
 
-            <div className="flex flex-col items-start gap-2 text-xs text-slate-500 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 sm:text-sm">
-              <span className="flex items-center gap-1.5">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-green-400" />
-                {t.home.social_proof_updated}
+            <div className="mb-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-500 sm:text-sm">
+              <span className="inline-flex items-center gap-1.5">
+                <Layers size={14} className="text-violet-400" />
+                {ko ? `${COURSE_LESSONS.length}개 교시` : `${COURSE_LESSONS.length} sessions`}
               </span>
-              <span>{t.home.content_count.replace("{n}", String(contentCounts.total))}</span>
-              <span>{t.home.lab_count.replace("{n}", String(contentCounts.labs))}</span>
+              <span className="inline-flex items-center gap-1.5">
+                <FileText size={14} className="text-violet-400" />
+                {ko ? `슬라이드 ${COURSE_META.totalSlides}장` : `${COURSE_META.totalSlides} slides`}
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Clock3 size={14} className="text-violet-400" />
+                {ko ? `약 ${Math.round(COURSE_META.totalMinutes / 60)}시간` : `~${Math.round(COURSE_META.totalMinutes / 60)} hours`}
+              </span>
+            </div>
+
+            <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+              <Link
+                href={`/course/${nextLesson.id}`}
+                data-event="cta_course_start"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-violet-500"
+              >
+                {started
+                  ? ko
+                    ? `이어서 · ${nextLesson.session} ${nextLesson.title}`
+                    : `Continue · ${nextLesson.titleEn}`
+                  : ko
+                    ? "1교시 시작하기"
+                    : "Start session 1"}
+                <ArrowRight size={15} />
+              </Link>
+              <Link
+                href="/course"
+                className="inline-flex items-center gap-1.5 rounded-xl border border-slate-700 px-4 py-2.5 text-sm text-slate-300 transition-colors hover:border-slate-600 hover:text-white"
+              >
+                {ko ? "커리큘럼 전체 보기" : "See full curriculum"}
+              </Link>
             </div>
           </div>
 
@@ -383,62 +141,146 @@ export default function HomeClient({
         </div>
       </section>
 
+      {/* ── 커리큘럼 ─────────────────────────────────────── */}
       <section className="animate-fade-in-up" style={{ animationDelay: "100ms" }}>
         <div className="mb-4">
           <h2 className="mb-1 flex items-center gap-2">
             <span className="flex h-6 w-6 items-center justify-center rounded-md border border-violet-800/60 bg-violet-900/40 text-sm">
-              <Sparkles size={13} className="text-violet-300" />
+              <Layers size={13} className="text-violet-300" />
             </span>
-            <span className="text-lg font-bold tracking-tight text-white sm:text-xl">{t.home.journey_title}</span>
+            <span className="text-lg font-bold tracking-tight text-white sm:text-xl">
+              {ko ? "커리큘럼" : "Curriculum"}
+            </span>
           </h2>
-          <p className="ml-8 text-sm text-slate-400 sm:text-base">{t.home.journey_subtitle}</p>
+          <p className="ml-8 text-sm text-slate-400 sm:text-base">
+            {ko
+              ? "기초 개념 → 프롬프트 → 작업공간 → 보고서 디자인 → 나만의 스킬"
+              : "Foundations → Prompting → Workspace → Report design → Your own skill"}
+          </p>
         </div>
 
-        {/* 제작 스토리 교재 배너 — 인터랙티브 교재 버튼 바로 위 */}
-        <a
-          href="/story.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="animate-fade-in-up mb-4 group flex items-center gap-4 rounded-2xl border border-amber-500/40 bg-gradient-to-r from-amber-950/60 to-orange-950/40 px-5 py-4 transition-all hover:border-amber-400/60 hover:from-amber-950/80 hover:to-orange-950/60"
-        >
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/20 text-xl">
-            📖
-          </div>
-          <div className="flex-1 min-w-0">
-            <p className="text-sm font-bold text-amber-200 group-hover:text-amber-100 transition-colors">
-              {locale === "ko" ? "코딩을 몰라도 AI 플랫폼을 만들 수 있습니다" : "You Can Build an AI Platform Without Coding"}
-            </p>
-            <p className="mt-0.5 text-xs text-amber-400/80 leading-relaxed">
-              {locale === "ko"
-                ? "마스터플랜 · 에이전트팀 · 병렬작업 · n8n 자동화 — 이 플랫폼을 만든 실제 과정을 인터랙티브 교재로 공개합니다"
-                : "Master plan · Agent teams · Parallel work · n8n automation — the real story behind this platform"}
-            </p>
-          </div>
-          <div className="shrink-0 text-amber-400 text-lg group-hover:translate-x-1 transition-transform">→</div>
-        </a>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {COURSE_LESSONS.map((lesson) => {
+            const isDone = visited.includes(lesson.id);
+            return (
+              <Link
+                key={lesson.id}
+                href={`/course/${lesson.id}`}
+                data-event={`cta_lesson_${lesson.id}`}
+                className="group flex flex-col rounded-[1.5rem] border border-slate-800/90 bg-slate-950/60 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/50 hover:bg-slate-900/70"
+              >
+                <div className="mb-4 flex items-start justify-between gap-3">
+                  <div className="rounded-2xl border border-slate-800 bg-slate-950/80 p-2">
+                    <TextbookIcon icon={lesson.icon} accentColor={lesson.accentColor} size={72} />
+                  </div>
+                  <span
+                    className={`rounded-full border px-2.5 py-1 text-[11px] ${
+                      isDone
+                        ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-300"
+                        : "border-slate-700 bg-slate-900/80 text-slate-300"
+                    }`}
+                  >
+                    {ko ? lesson.session : lesson.sessionEn}
+                  </span>
+                </div>
 
-        <div className="journey-grid mb-5 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {journey.map((item) => (
-            <div key={item.href} className="h-full">
-              <JourneyFeatureCard keyName={item.key} {...item} />
+                <h3 className="text-base font-semibold tracking-tight text-white">
+                  {ko ? lesson.title : lesson.titleEn}
+                </h3>
+                <p className="mt-1 text-sm leading-6 text-slate-400">
+                  {ko ? lesson.tagline : lesson.taglineEn}
+                </p>
+
+                <div className="mt-4 flex items-center gap-3 text-xs text-slate-500">
+                  <span className="inline-flex items-center gap-1.5">
+                    <FileText size={13} />
+                    {ko ? `${lesson.slides}장` : `${lesson.slides} slides`}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <Clock3 size={13} />
+                    {lesson.minutes}
+                    {ko ? "분" : " min"}
+                  </span>
+                </div>
+
+                <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-violet-300">
+                  {ko ? "교재 열기" : "Open lesson"}
+                  <ArrowRight
+                    size={14}
+                    className="transition-transform duration-300 motion-safe:group-hover:translate-x-1"
+                  />
+                </div>
+              </Link>
+            );
+          })}
+
+          {/* 실습자료 카드 */}
+          <div className="flex flex-col rounded-[1.5rem] border border-dashed border-slate-700/80 bg-slate-950/40 p-5">
+            <div className="mb-3 inline-flex w-fit items-center gap-2 rounded-lg border border-violet-500/25 bg-violet-500/10 px-2.5 py-1 text-[11px] text-violet-200">
+              <Download size={12} />
+              {ko ? "실습자료" : "Materials"}
             </div>
-          ))}
-        </div>
-
-        <div className="border-t border-slate-800 pt-4">
-          <p className="mb-2 text-xs text-slate-500"># {t.home.popular_topics}</p>
-          <div className="flex flex-wrap gap-2">
-            {POPULAR_TAGS.map((tag) => (
-              <TopicTag key={tag} tag={tag} onClick={() => handleTagClick(tag)} />
-            ))}
+            <p className="mb-4 text-sm leading-6 text-slate-400">
+              {ko
+                ? "3·4교시는 실습 파일이 필요합니다. 미리 내려받아 두세요."
+                : "Sessions 3 and 4 need sample files — download them first."}
+            </p>
+            <div className="mt-auto space-y-2">
+              {COURSE_MATERIALS.map((material) => (
+                <a
+                  key={material.id}
+                  href={material.href}
+                  download
+                  className="flex items-center gap-2 rounded-xl border border-slate-800 bg-slate-900/50 px-3 py-2.5 text-xs text-slate-300 transition-colors hover:border-violet-500/40 hover:text-white"
+                >
+                  <Download size={13} className="shrink-0 text-violet-300" />
+                  <span className="min-w-0 flex-1 truncate">
+                    {ko ? material.label.split(" — ")[0] : material.labelEn.split(" — ")[0]}
+                  </span>
+                  <span className="shrink-0 text-[10px] text-slate-500">{material.sizeLabel}</span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
+      {/* ── AI 튜터 ──────────────────────────────────────── */}
       <div className="animate-fade-in-up" style={{ animationDelay: "200ms" }}>
         <AskAI />
       </div>
 
+      {/* ── 더 배우기 (기존 라이브러리) ────────────────────── */}
+      <section className="rounded-2xl border border-slate-800 bg-slate-950/50 p-5">
+        <h2 className="mb-1 text-base font-bold tracking-tight text-white sm:text-lg">
+          {ko ? "더 배우기" : "Go further"}
+        </h2>
+        <p className="mb-4 text-sm text-slate-400">
+          {ko
+            ? "과정을 마쳤다면 주제별 교재와 실습으로 이어서 학습하세요."
+            : "Finished the course? Continue with topic textbooks and hands-on labs."}
+        </p>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {library.map(({ href, label, count, icon: Icon, accent }) => (
+            <Link
+              key={href}
+              href={href}
+              className="group flex items-center gap-3 rounded-xl border border-slate-800 bg-slate-900/50 p-3 transition-all hover:-translate-y-0.5 hover:border-slate-600"
+            >
+              <Icon size={16} className={accent} />
+              <div className="min-w-0">
+                <p className="truncate text-xs font-medium text-slate-200 group-hover:text-white">{label}</p>
+                <p className="text-[11px] text-slate-500">
+                  {count}
+                  {ko ? "개" : ""}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ── AI 도구 바로가기 ──────────────────────────────── */}
       <section className="rounded-xl border border-slate-700 bg-slate-900/50 p-4">
         <div className="tools-section relative overflow-hidden rounded-[1.35rem] border border-slate-800/80 bg-slate-950/60 p-4 sm:p-5">
           <div className="tools-section-bg tools-section-bg-1" />
@@ -455,10 +297,14 @@ export default function HomeClient({
                 <span className="flex h-6 w-6 items-center justify-center rounded-md border border-blue-800/60 bg-blue-900/40">
                   <ExternalLink size={12} className="text-blue-400" />
                 </span>
-                <span className="text-base font-bold tracking-tight text-white sm:text-lg">{t.home.ai_tools_heading}</span>
+                <span className="text-base font-bold tracking-tight text-white sm:text-lg">
+                  {ko ? "AI 도구 바로가기" : "AI tool shortcuts"}
+                </span>
               </h2>
               <p className="mt-1 text-xs text-slate-400 sm:text-sm">
-                Launch the most-used AI products from one cinematic command deck.
+                {ko
+                  ? "수업에서 다루는 도구와 참고용 외부 도구를 한 곳에서 엽니다."
+                  : "Open the tools used in class, plus references, from one deck."}
               </p>
             </div>
             <div className="hidden rounded-full border border-violet-400/15 bg-violet-500/10 px-3 py-1 text-[11px] text-violet-200 sm:block">
@@ -466,10 +312,10 @@ export default function HomeClient({
             </div>
           </div>
 
-        <div className="relative z-10 grid grid-cols-2 gap-3 sm:grid-cols-5">
-          {AI_TOOLS.map((tool) => (
-            <div key={tool.name} className="flex flex-col items-center gap-1">
+          <div className="relative z-10 grid grid-cols-2 gap-3 sm:grid-cols-5">
+            {AI_TOOLS.map((tool) => (
               <a
+                key={tool.name}
                 href={tool.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -499,17 +345,9 @@ export default function HomeClient({
                   </div>
                 </div>
               </a>
-              <Link
-                href="/learning"
-                data-event={`cta_learn_tool_${tool.learnTag}`}
-                className="text-[9px] text-violet-400 transition-colors hover:text-violet-200 hover:underline"
-              >
-                {t.home.learn_tool}
-              </Link>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
       </section>
     </div>
   );

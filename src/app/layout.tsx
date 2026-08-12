@@ -7,19 +7,19 @@ import FooterBottom from "@/components/FooterBottom";
 
 // ── SEO 메타 태그 (2-1) ────────────────────────────────────
 export const metadata: Metadata = {
-  title: "CLOID.AI – AI Learning & Practice Portal | Prompts, API, Agents",
+  title: "CLOID.AI – AI 클로드 활용 기본 교육 | 무료 6교시 실습 과정",
   description:
-    "From AI basics to real-world use cases — practice prompts, API integration, and agent building hands-on. A free AI learning portal updated daily.",
+    "생성형 AI의 원리부터 프롬프트, 작업공간 정리, 보고서 디자인, 나만의 스킬 만들기까지. 6교시 120슬라이드로 배우는 무료 Claude 실무 교육 과정입니다.",
   keywords: [
-    "AI learning",
-    "AI practice",
-    "prompt engineering",
-    "Claude API",
-    "GPT",
+    "클로드 교육",
+    "Claude 활용법",
+    "AI 실무 교육",
+    "프롬프트 엔지니어링",
+    "Claude Cowork",
+    "Claude Skills",
+    "AI 업무 자동화",
     "MCP",
     "AI agent",
-    "LangChain",
-    "RAG",
   ],
   authors: [{ name: "CLOID.AI" }],
   creator: "CLOID.AI",
@@ -39,19 +39,19 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    alternateLocale: "ko_KR",
+    locale: "ko_KR",
+    alternateLocale: "en_US",
     url: "https://cloid.ai",
     siteName: "CLOID.AI",
-    title: "CLOID.AI – AI Learning & Practice Portal",
+    title: "CLOID.AI – AI 클로드 활용 기본 교육",
     description:
-      "From AI basics to real-world use — practice prompts, APIs, and agents hands-on. Free AI practice portal.",
+      "AI 원리 · 프롬프트 · 작업공간 · 보고서 디자인 · 나만의 스킬까지, 6교시 무료 실습 과정.",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "CLOID.AI" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CLOID.AI – AI Learning & Practice Portal",
-    description: "From AI basics to real-world use — a free hands-on AI practice portal.",
+    title: "CLOID.AI – AI 클로드 활용 기본 교육",
+    description: "6교시 120슬라이드로 배우는 무료 Claude 실무 교육 과정.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -65,16 +65,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    // TODO: Google Search Console에서 인증코드 발급 후 교체
-    // 발급: https://search.google.com/search-console → 속성 추가 → HTML 태그 인증
-    google: "여기에_구글서치콘솔_인증코드",
-    other: {
-      // TODO: 네이버 서치어드바이저에서 인증코드 발급 후 교체
-      // 발급: https://searchadvisor.naver.com → 사이트 등록 → HTML 태그 인증
-      "naver-site-verification": "여기에_네이버_인증코드",
-    },
-  },
+  // 검색엔진 인증코드는 발급 후 아래 형태로 추가하세요.
+  // 플레이스홀더를 그대로 두면 잘못된 meta 태그가 배포되므로 비워 둡니다.
+  //   verification: {
+  //     google: "<구글 서치콘솔 인증코드>",
+  //     other: { "naver-site-verification": "<네이버 인증코드>" },
+  //   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -121,19 +117,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        {/* ── Naver Analytics (2-6) ── */}
-        {/* TODO: 네이버 애널리틱스에서 사이트 ID 발급 후 교체 */}
-        {/* 발급 방법: https://analytics.naver.com → 사이트 등록 → 스크립트 발급 */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if(!wcs_add) var wcs_add = {};
-              wcs_add["wa"] = "여기에_네이버애널리틱스_ID";
-              if(window.wcs) { wcs_do(); }
-            `,
-          }}
-        />
-        <script async src="https://wcs.naver.net/wcslog.js" />
+        {/* 네이버 애널리틱스: 사이트 ID 발급 후 스크립트를 여기에 추가하세요.
+            발급 전 플레이스홀더 스크립트는 잘못된 ID를 전송하므로 제거했습니다. */}
 
         {/* ── JSON-LD 구조화 데이터 (2-4) ── */}
         <script
@@ -144,7 +129,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@type": "WebSite",
               name: "CLOID.AI",
               url: "https://cloid.ai",
-              description: "From AI basics to real-world use — a free hands-on AI learning and practice portal.",
+              description:
+                "AI 클로드 활용 기본 교육과 실습 자료를 제공하는 무료 학습 사이트.",
               potentialAction: {
                 "@type": "SearchAction",
                 target: "https://cloid.ai/learning?q={search_term_string}",
@@ -162,8 +148,34 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@type": "EducationalOrganization",
               name: "CLOID.AI",
               url: "https://cloid.ai",
-              description: "A portal for learning and practicing AI tools, prompts, and development patterns.",
+              description: "AI 도구·프롬프트·업무 활용을 가르치는 온라인 학습 사이트.",
               sameAs: [],
+            }),
+          }}
+        />
+        {/* 교육 과정 구조화 데이터 — 검색 결과의 코스 리치 결과용 */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Course",
+              name: "AI 클로드 활용 기본 교육 Level 1",
+              description:
+                "생성형 AI의 원리부터 프롬프트, 작업공간 정리, 보고서 디자인, 나만의 스킬 만들기까지 다루는 6교시 실습 과정.",
+              url: "https://cloid.ai/course",
+              inLanguage: "ko",
+              isAccessibleForFree: true,
+              provider: {
+                "@type": "EducationalOrganization",
+                name: "CLOID.AI",
+                url: "https://cloid.ai",
+              },
+              hasCourseInstance: {
+                "@type": "CourseInstance",
+                courseMode: "online",
+                courseWorkload: "PT5H30M",
+              },
             }),
           }}
         />
