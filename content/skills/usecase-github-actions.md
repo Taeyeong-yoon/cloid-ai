@@ -1,128 +1,78 @@
 ---
-title: GitHub Actions + Claude Code — PR 자동 리뷰
+title: GitHub Actions — PR에 자동 리뷰 붙이기
 category: usecases
-tags: [GitHub Actions, CI/CD, PR 리뷰, 자동화]
-difficulty: advanced
-summary: PR이 열릴 때마다 Claude Code가 자동으로 코드를 리뷰하고 GitHub 코멘트를 남깁니다. 팀 리뷰 부담을 줄이는 실전 패턴입니다.
-updated: 2026-03-21
+tags: [GitHub, 코드리뷰, CI]
+difficulty: intermediate
+summary: PR이 열릴 때 변경분을 읽고 의견을 남기게 합니다. 사람 리뷰를 대체하는 게 아니라, 사람이 볼 것을 줄이는 용도입니다.
+updated: 2026-08-12
 ---
+> "중요한 것만 알려줘"라고 요청하는 순간, 진짜 버그가 걸러집니다.
 
-## 동작 원리
+## 왜 알아야 하나
 
-```
-PR 오픈 → GitHub Actions 트리거
-        → Claude Code API 호출 (diff 전달)
-        → 리뷰 코멘트 생성
-        → PR에 자동 코멘트 게시
-```
+AI 리뷰를 붙였는데 기대만큼 못 잡는다는 이야기가 많습니다. 원인은 대개 모델이 아니라 **요청 방식**입니다.
 
-## GitHub Actions 워크플로우
+"중요한 것만", "보수적으로", "사소한 건 빼고" 같은 지시를 넣으면 모델이 그걸 충실히 따릅니다. 조사는 똑같이 하고, 확신이 낮은 항목을 스스로 걸러냅니다. 정밀도는 올라가지만 **놓치는 버그가 늘어납니다.**
 
-```yaml
-# .github/workflows/claude-review.yml
-name: Claude Code Review
+## 개념 잡기
 
-on:
-  pull_request:
-    types: [opened, synchronize]
+역할을 나누는 것이 핵심입니다.
 
-jobs:
-  review:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
+**AI가 잘하는 것**
+- 놓치기 쉬운 경계 조건·예외 처리 누락
+- 변경과 무관하게 깨질 수 있는 지점
+- 반복되는 실수 패턴
 
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+**사람이 해야 하는 것**
+- 이 변경이 제품 방향에 맞는지
+- 설계 선택이 타당한지
+- 우선순위와 범위 판단
 
-      - name: Get PR diff
-        id: diff
-        run: |
-          git diff origin/${{ github.base_ref }}...HEAD > pr_diff.txt
-          echo "diff_size=$(wc -c < pr_diff.txt)" >> $GITHUB_OUTPUT
+리뷰 요청은 이렇게 씁니다.
 
-      - name: Claude Code Review
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: |
-          pip install anthropic
+> 발견한 문제를 확신이 낮은 것까지 전부 보고하고, 각 항목에 심각도와 확신도를 표시해줘. 걸러내는 건 다음 단계에서 한다.
 
-          python3 << 'EOF'
-          import anthropic
-          import os
+넓게 받고 사람이 거르는 편이, 좁게 받고 놓치는 것보다 낫습니다.
 
-          with open("pr_diff.txt") as f:
-              diff = f.read()[:30000]  # 토큰 제한
+## 바로 해보기
 
-          client = anthropic.Anthropic()
-          response = client.messages.create(
-              model="claude-sonnet-4-6",
-              max_tokens=2000,
-              messages=[{
-                  "role": "user",
-                  "content": f"""다음 PR diff를 코드 리뷰해줘.
+1. 최근 PR 하나를 골라 "중요한 것만" 요청으로 리뷰를 받아 봅니다.
+2. 같은 PR을 "전부 보고 + 심각도·확신도 표시" 요청으로 다시 받습니다.
+3. 두 결과의 항목 수와, 실제 버그가 몇 개씩 잡혔는지 비교합니다.
+4. 쓸 만한 쪽을 CI에 붙이되, 코멘트는 상위 심각도만 남기도록 필터를 겁니다.
 
-리뷰 항목:
-1. 버그 가능성
-2. 보안 취약점
-3. 성능 이슈
-4. 코드 스타일·가독성
-5. 테스트 누락
+## 흔한 실수
 
-마크다운 형식으로 작성. 심각도를 🔴(높음) 🟡(중간) 🟢(낮음)으로 표시.
+**❌ 리뷰 요청에 "보수적으로", "사소한 건 빼고"를 넣는다**
 
-```diff
-{diff}
-```"""
-              }]
-          )
+→ 모델이 그대로 따르면서 진짜 버그까지 걸러냅니다. 필터링은 받은 뒤에 하세요.
 
-          with open("review.md", "w") as f:
-              f.write(response.content[0].text)
-          EOF
+**❌ PR 본문을 비워두고 코드만 넘긴다**
 
-      - name: Post Review Comment
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const fs = require('fs');
-            const review = fs.readFileSync('review.md', 'utf8');
+→ 무엇을 왜 바꿨는지 알아야 "의도와 다른 동작"을 잡습니다. 코드만 주면 표면적 지적에 그칩니다.
 
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `## Claude Code Review\n\n${review}\n\n---\n*자동 리뷰 by Claude Sonnet*`
-            });
-```
+**❌ 모든 지적을 자동 코멘트로 남긴다**
 
-## Secrets 설정
+→ 코멘트가 많으면 아무도 안 읽습니다. 상위만 노출하고 나머지는 접어두세요.
 
-GitHub 레포 → Settings → Secrets → `ANTHROPIC_API_KEY` 추가
+## 스스로 점검하기
 
-## 고급 패턴
+**Q. AI 리뷰의 recall이 낮아 보일 때 가장 먼저 볼 곳은?**
 
-### 특정 파일 타입만 리뷰
-```yaml
-- name: Filter Changed Files
-  run: |
-    git diff --name-only origin/${{ github.base_ref }}...HEAD \
-      | grep -E '\.(py|ts|js)$' > changed_files.txt
-```
+<details><summary>답 보기</summary>
 
-### 심각한 이슈 발견 시 PR 블록
-```python
-# 🔴 항목이 있으면 exit code 1 반환
-if "🔴" in review_text:
-    print("심각한 이슈 발견 — PR 병합 차단")
-    exit(1)
-```
+리뷰 요청 문구입니다. 심각도 필터를 걸어두면 모델이 스스로 걸러냅니다.
 
-## 비용 최적화
+</details>
 
-- diff가 큰 PR은 `claude-haiku-4-5`로 1차 빠른 스캔 후 Sonnet으로 상세 리뷰
-- 50줄 미만 변경은 자동 통과 처리
-- 월 예산 설정: Anthropic 콘솔에서 Usage Limits 설정
+**Q. 리뷰 품질을 높이는 입력은?**
+
+<details><summary>답 보기</summary>
+
+변경 의도와 맥락입니다. PR 본문이 비어 있으면 표면적 지적만 나옵니다.
+
+</details>
+
+## 더 읽기
+
+- [GitHub Actions 연동](https://code.claude.com/docs/en/github-actions)

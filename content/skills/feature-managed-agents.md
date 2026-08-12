@@ -1,131 +1,77 @@
 ---
-title: Managed Agents — 인프라 없이 Claude 에이전트 클라우드 배포
+title: Managed Agents — 인프라 없이 에이전트 운영하기
 category: features
-tags: [Managed Agents, 에이전트, 클라우드, 배포, MCP, Webhooks]
+tags: [에이전트, Managed Agents, API]
 difficulty: advanced
-summary: Anthropic 클라우드에서 Claude 에이전트를 직접 호스팅. 서버·인프라 없이 배포하고 Dreams 메모리·Webhooks·MCP Tunnels까지 한 번에 사용합니다.
-updated: 2026-05-31
+summary: 에이전트 루프와 실행 컨테이너를 Anthropic이 운영합니다. 세션마다 작업공간이 생기고, 설정은 버전으로 관리됩니다.
+updated: 2026-08-12
 ---
+> 에이전트를 직접 만들면 루프·상태·실행 환경 셋을 전부 떠안게 됩니다.
 
-## 무엇인가?
+## 왜 알아야 하나
 
-Managed Agents는 Claude 에이전트를 Anthropic 인프라에서 직접 호스팅하는 서비스입니다. 서버를 직접 구축하지 않아도 에이전트를 배포·실행·확장할 수 있습니다.
+에이전트를 직접 구현하면 관리할 것이 셋입니다. 도구 호출 루프, 세션 상태, 코드가 실제로 실행될 환경.
 
-**출시 타임라인**
-- **2026년 4월 8일** — GA 출시 (클라우드 호스팅 기본 기능)
-- **4월 21~23일** — Dreams(메모리 자가개선) + Memory 기능 추가
-- **5월 7일** — Webhooks + Multiagent Orchestration 추가
-- **5월 19일** — MCP Tunnels + Self-hosted Sandboxes 추가
+Managed Agents는 앞의 둘을 Anthropic이 맡습니다. 개발자는 에이전트 설정(모델·시스템 프롬프트·도구·스킬)을 정의하고, 실행할 때마다 세션을 만듭니다.
 
-## 핵심 기능
-
-### 클라우드 호스팅 배포
-서버 없이 에이전트를 배포합니다. Anthropic이 스케일·가용성·보안을 관리합니다.
-
-```python
-import anthropic
-
-client = anthropic.Anthropic()
-
-# Managed Agent 생성
-agent = client.managed_agents.create(
-    name="my-research-agent",
-    model="claude-opus-4-8",
-    system="당신은 리서치 전문 에이전트입니다.",
-    tools=[{"type": "web_search"}, {"type": "computer_use"}],
-)
-
-print(agent.id)  # agent_01XYZ...
-```
-
-### Dreams — 메모리 자가개선
-
-에이전트가 작업 중 학습한 내용을 자동으로 메모리에 반영합니다. 다음 실행 때 이전 경험을 활용합니다.
-
-```python
-# Dreams 활성화
-agent = client.managed_agents.create(
-    name="learning-agent",
-    model="claude-opus-4-8",
-    memory={"type": "dreams", "auto_consolidate": True},
-    system="작업할 때마다 배운 점을 정리해서 다음에 더 잘 활용하세요.",
-)
-```
-
-### Webhooks — 이벤트 기반 트리거
-
-에이전트가 완료되면 지정한 URL로 결과를 전송합니다. 비동기 파이프라인 구성에 적합합니다.
-
-```python
-# Webhook으로 실행 결과 수신
-run = client.managed_agents.runs.create(
-    agent_id=agent.id,
-    input="최신 AI 뉴스 요약해줘",
-    webhook={
-        "url": "https://your-app.com/api/agent-callback",
-        "secret": "your-webhook-secret",
-    }
-)
-```
-
-### Multiagent Orchestration
-
-여러 Managed Agent가 서로 역할을 나눠 협력합니다.
+## 개념 잡기
 
 ```
-오케스트레이터 Agent
-    ├─ 리서치 Agent  (웹 검색 담당)
-    ├─ 분석 Agent   (데이터 처리 담당)
-    └─ 작성 Agent   (보고서 작성 담당)
+에이전트 생성 (한 번)  →  세션 생성 (실행할 때마다)
 ```
 
-```python
-# 오케스트레이터가 서브에이전트에 작업 위임
-orchestrator = client.managed_agents.create(
-    name="orchestrator",
-    model="claude-opus-4-8",
-    sub_agents=["agent_research_id", "agent_writer_id"],
-    system="복잡한 작업을 서브에이전트에 위임하고 결과를 통합하세요.",
-)
-```
+에이전트는 **저장되는 자원**입니다. ID를 보관해두고 재사용해야 합니다.
 
-### MCP Tunnels — 로컬 도구를 클라우드 에이전트에 연결
+수정할 때마다 새 버전이 생기는데, 이 구조 덕분에:
 
-로컬 서버·사내 시스템을 Managed Agent에 안전하게 연결합니다. 외부 노출 없이 내부 MCP 서버 사용이 가능합니다.
+- 진행 중인 세션은 기존 버전으로 계속 동작
+- 새 세션은 최신 버전 사용 (또는 특정 버전 고정)
+- 문제가 생기면 이전 버전으로 롤백
 
-```bash
-# 로컬 MCP 서버를 Managed Agent에 터널로 연결
-npx @anthropic-ai/mcp-tunnel --agent-id agent_01XYZ --local-port 3001
-```
+**어떤 방식을 고를까**
 
-### Self-hosted Sandboxes
+| 상황 | 선택 |
+|---|---|
+| 도구도 서버도 내가 운영 | API + 도구 사용 |
+| 루프만 자동화하고 싶음 | SDK 툴 러너 |
+| 루프와 실행 환경 모두 맡김 | **Managed Agents** |
+| 코딩 에이전트를 내 인프라에서 | Claude Agent SDK |
 
-코드 실행 환경을 직접 제공합니다. 기본 Anthropic 샌드박스 대신 자체 Docker 환경을 연결합니다.
+## 바로 해보기
 
-```python
-agent = client.managed_agents.create(
-    name="code-agent",
-    model="claude-opus-4-8",
-    sandbox={
-        "type": "self_hosted",
-        "url": "https://your-sandbox.internal:8080",
-        "auth": {"token": "sandbox-token"},
-    },
-)
-```
+1. 에이전트를 하나 만들고 반환된 ID를 설정 파일이나 환경변수에 저장합니다.
+2. 그 ID로 세션을 두 번 만들어 실행합니다 — 에이전트를 다시 만들지 않는 것이 핵심입니다.
+3. 에이전트 설정을 수정해 새 버전을 만들고, 버전을 고정한 세션과 최신을 쓰는 세션의 동작 차이를 확인합니다.
 
-## 언제 쓸까?
+## 흔한 실수
 
-| 상황 | 추천 여부 |
-|------|---------|
-| 서버 관리 없이 에이전트 배포 | ✅ 최적 |
-| 장기 실행(수십 분 이상) 에이전트 | ✅ 최적 |
-| 사내 시스템 연결 필요 | ✅ MCP Tunnels 활용 |
-| 단순 단발성 API 호출 | ❌ 일반 Messages API로 충분 |
-| 로컬 개발·테스트 | ❌ SDK 직접 사용이 빠름 |
+**❌ 실행할 때마다 에이전트를 새로 만든다**
 
-## 팁
+→ 가장 흔한 실수입니다. 고아 에이전트가 쌓이고 생성 지연도 매번 발생합니다. ID를 저장해 재사용하세요.
 
-- Dreams 메모리는 에이전트 재실행 시 이전 결과를 반영하므로 반복 작업 효율이 높아집니다
-- Webhook을 쓰면 장시간 실행 에이전트를 폴링하지 않아도 됩니다
-- MCP Tunnels는 VPN 없이 사내 도구를 연결할 때 유용합니다
+**❌ 정리 목적으로 에이전트를 아카이브한다**
+
+→ 아카이브는 되돌릴 수 없습니다. 일회성 자원은 세션이지, 에이전트나 환경이 아닙니다.
+
+## 스스로 점검하기
+
+**Q. 에이전트와 세션의 관계는?**
+
+<details><summary>답 보기</summary>
+
+에이전트는 한 번 만들어 재사용하는 설정, 세션은 실행할 때마다 만드는 일회성 자원입니다.
+
+</details>
+
+**Q. 설정을 바꿨는데 진행 중인 작업이 깨지지 않는 이유는?**
+
+<details><summary>답 보기</summary>
+
+수정 시 새 버전이 생기고, 진행 중인 세션은 기존 버전으로 계속 동작하기 때문입니다.
+
+</details>
+
+## 더 읽기
+
+- [Managed Agents 개요](https://platform.claude.com/docs/en/managed-agents/overview)
+- [Claude Agent SDK](https://code.claude.com/docs/en/agent-sdk/overview)
