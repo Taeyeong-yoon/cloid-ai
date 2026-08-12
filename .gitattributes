@@ -1,0 +1,10 @@
+# 바이너리 실습자료가 Windows 체크아웃에서 CRLF 변환으로 손상되지 않도록 고정
+*.pdf   binary
+*.zip   binary
+*.xls   binary
+*.xlsx  binary
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.gif   binary
+*.webp  binary
