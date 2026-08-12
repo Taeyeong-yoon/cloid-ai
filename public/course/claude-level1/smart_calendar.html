@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>스마트 캘린더 · 말로 넣는 일정</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{background:radial-gradient(1000px 620px at 75% -12%,#1a2a55 0%,#060f24 60%);
+  color:#eaf1ff;font-family:"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo",-apple-system,sans-serif;
+  display:flex;align-items:center;justify-content:center;overflow:hidden}
+#wrap{display:flex;gap:18px;padding:16px;width:100%;max-width:1500px;height:100%;align-items:stretch}
+.panel{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:16px;
+  box-shadow:0 18px 44px rgba(4,10,30,.45)}
+/* ── 왼쪽: 입력 ── */
+#left{flex:0 0 320px;display:flex;flex-direction:column;gap:12px;min-height:0}
+#left h1{font-size:19px;font-weight:900;letter-spacing:-.4px;line-height:1.3}
+#left h1 span{color:#7ea6ff}
+.sub{font-size:11.5px;color:#9fb0cf;font-weight:700;margin-top:5px;line-height:1.55}
+.lbl{font-size:10.5px;font-weight:900;letter-spacing:.12em;color:#7ea6ff;margin-bottom:8px}
+#nlq{width:100%;background:#0a1226;border:1.5px solid rgba(47,107,255,.45);border-radius:11px;
+  padding:12px 13px;color:#eaf1ff;font-family:inherit;font-size:14px;font-weight:700;
+  resize:none;height:76px;line-height:1.5;outline:none}
+#nlq:focus{border-color:#7ea6ff;box-shadow:0 0 0 3px rgba(47,107,255,.18)}
+#nlq::placeholder{color:#5d6d8c}
+.btn{width:100%;border:none;border-radius:11px;padding:11px;font-family:inherit;font-size:14px;
+  font-weight:900;cursor:pointer;background:linear-gradient(100deg,#2f6bff,#7ea6ff);color:#fff;
+  box-shadow:0 8px 20px rgba(47,107,255,.38)}
+.btn:hover{filter:brightness(1.1)}
+.btn.sm{font-size:12px;padding:8px;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.2);color:#cfe0ff;box-shadow:none}
+.samples{display:flex;flex-wrap:wrap;gap:6px}
+.samp{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:8px;
+  padding:6px 10px;font-size:11.5px;font-weight:800;color:#cfe0ff;cursor:pointer;transition:.15s}
+.samp:hover{background:rgba(47,107,255,.25);border-color:#7ea6ff;color:#fff}
+/* 파싱 결과 */
+#parsed{display:flex;flex-direction:column;gap:7px}
+.prow{display:flex;align-items:center;gap:9px;background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:8px 11px;
+  opacity:0;transform:translateY(6px);transition:.3s}
+.prow.on{opacity:1;transform:none}
+.prow .pk{flex:0 0 54px;font-size:10.5px;font-weight:900;color:#7ea6ff;letter-spacing:.04em}
+.prow .pv{flex:1;font-size:13px;font-weight:900;color:#fff}
+.prow .pv em{font-style:normal;color:#9fb0cf;font-weight:700;font-size:11.5px}
+.hint{font-size:11px;color:#7b8aa8;font-weight:700;line-height:1.55}
+/* ── 오른쪽: 캘린더 ── */
+#right{flex:1;min-width:0;display:flex;flex-direction:column;gap:12px}
+#calhead{display:flex;align-items:center;gap:12px;padding:13px 18px}
+#calhead .mtitle{font-size:22px;font-weight:900;letter-spacing:-.5px}
+#calhead .mtitle small{font-size:13px;color:#9fb0cf;font-weight:800;margin-left:7px}
+#calhead .nav{margin-left:auto;display:flex;gap:6px}
+#calhead .nav button{width:34px;height:32px;border-radius:9px;border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.06);color:#cfe0ff;font-size:15px;font-weight:900;cursor:pointer;font-family:inherit}
+#calhead .nav button:hover{background:rgba(47,107,255,.28);color:#fff}
+#cal{flex:1;min-height:0;display:flex;flex-direction:column;padding:0 14px 14px}
+.dow{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px}
+.dow span{text-align:center;font-size:11px;font-weight:900;color:#9fb0cf;letter-spacing:.08em;padding:4px 0}
+.dow span:first-child{color:#ff8c9e}
+.dow span:last-child{color:#7ea6ff}
+#grid{flex:1;display:grid;grid-template-columns:repeat(7,1fr);grid-auto-rows:1fr;gap:6px;min-height:0}
+.cell{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:10px;
+  padding:6px 7px;display:flex;flex-direction:column;gap:3px;min-height:0;overflow:hidden;position:relative}
+.cell.out{opacity:.32}
+.cell.today{border-color:#7ea6ff;background:rgba(47,107,255,.14);box-shadow:0 0 0 1px rgba(126,166,255,.5)}
+.cell.hol{background:rgba(255,107,129,.10)}
+.cell .dn{font-size:12px;font-weight:900;color:#cfe0ff;display:flex;align-items:center;gap:5px}
+.cell.today .dn{color:#fff}
+.cell .dn i{font-style:normal;font-size:9px;font-weight:800;color:#ff8c9e;background:rgba(255,107,129,.18);
+  border-radius:4px;padding:0 5px}
+.cell .dn b.tag{font-size:8.5px;font-weight:900;color:#0a1226;background:#7ea6ff;border-radius:4px;padding:1px 5px}
+.cell .evs{flex:1;display:flex;flex-direction:column;gap:3px;overflow:hidden}
+.ev{border-radius:6px;padding:3px 6px;font-size:10.5px;font-weight:800;color:#fff;cursor:pointer;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-left:3px solid rgba(255,255,255,.55);
+  animation:pop .35s ease}
+@keyframes pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:none}}
+.ev:hover{filter:brightness(1.2)}
+.ev.new{animation:flash 1.2s ease 2}
+@keyframes flash{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}50%{box-shadow:0 0 0 4px rgba(255,255,255,.35)}}
+/* 하단 요약 */
+#foot{display:flex;gap:10px;padding:0 14px 14px}
+.fcard{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  border-radius:11px;padding:10px 13px;display:flex;align-items:center;gap:10px}
+.fcard .fi{font-size:19px}
+.fcard b{font-size:12px;font-weight:900;color:#9fb0cf;display:block}
+.fcard i{font-style:normal;font-size:15px;font-weight:900;color:#fff}
+.legend{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.lg{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:800;color:#9fb0cf}
+.lg em{width:10px;height:10px;border-radius:3px;display:inline-block}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);
+  background:rgba(255,107,129,.95);color:#fff;border-radius:10px;padding:10px 18px;font-size:13px;
+  font-weight:900;opacity:0;transition:.3s;pointer-events:none;z-index:20}
+#toast.on{opacity:1;transform:translateX(-50%)}
+@media (max-width:980px){#wrap{flex-direction:column;overflow:auto}#left{flex:0 0 auto}}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="left">
+    <div class="panel" style="padding:15px 17px">
+      <h1>🗓️ <span>스마트 캘린더</span></h1>
+      <div class="sub">날짜를 고르지 마세요.<br><b style="color:#eaf1ff">그냥 말하듯이 적으면</b> 알아서 들어갑니다.</div>
+    </div>
+
+    <div class="panel" style="padding:15px 17px;display:flex;flex-direction:column;gap:10px">
+      <div class="lbl">말로 일정 넣기</div>
+      <textarea id="nlq" placeholder="예) 다음 주 화요일 오후 3시 안전교육 2시간"></textarea>
+      <button class="btn" onclick="addFromText()">＋ 캘린더에 넣기</button>
+      <div class="samples" id="samples"></div>
+    </div>
+
+    <div class="panel" style="padding:15px 17px;flex:1;min-height:0;display:flex;flex-direction:column;gap:10px">
+      <div class="lbl">이렇게 알아들었습니다</div>
+      <div id="parsed">
+        <div class="hint">위 예시를 눌러보거나 직접 적어보세요.<br>
+          <b style="color:#9fb0cf">내일 · 모레 · 다음 주 수요일 · 3일 뒤 · 8/25 · 매주 월요일</b> 같은 표현을 알아듣습니다.</div>
+      </div>
+      <button class="btn sm" onclick="clearAll()">전체 일정 지우기</button>
+    </div>
+  </div>
+
+  <div id="right" class="panel">
+    <div id="calhead">
+      <div class="mtitle" id="mtitle"></div>
+      <div class="legend" id="legend"></div>
+      <div class="nav">
+        <button onclick="moveMonth(-1)">‹</button>
+        <button onclick="goToday()" style="width:auto;padding:0 12px;font-size:12px">오늘</button>
+        <button onclick="moveMonth(1)">›</button>
+      </div>
+    </div>
+    <div id="cal">
+      <div class="dow"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>
+      <div id="grid"></div>
+    </div>
+    <div id="foot">
+      <div class="fcard"><span class="fi">📌</span><span><b>이번 달 일정</b><i id="cntMonth">0건</i></span></div>
+      <div class="fcard"><span class="fi">⏳</span><span><b id="ddLbl">다음 일정</b><i id="ddVal">없음</i></span></div>
+      <div class="fcard"><span class="fi">📅</span><span><b>이번 주</b><i id="cntWeek">0건</i></span></div>
+    </div>
+  </div>
+</div>
+<div id="toast"></div>
+
+<script>
+/* ================= 기준 날짜 ================= */
+const TODAY = new Date(2026, 7, 7);           // 2026-08-07 (금)
+let view = new Date(TODAY.getFullYear(), TODAY.getMonth(), 1);
+const DOW = ['일','월','화','수','목','금','토'];
+
+/* 2026 대한민국 공휴일 */
+const HOLIDAYS = {
+ '2026-01-01':'신정','2026-02-16':'설날','2026-02-17':'설날','2026-02-18':'설날',
+ '2026-03-01':'삼일절','2026-03-02':'대체','2026-05-05':'어린이날','2026-05-24':'부처님오신날',
+ '2026-06-06':'현충일','2026-08-15':'광복절','2026-08-17':'대체',
+ '2026-09-24':'추석','2026-09-25':'추석','2026-09-26':'추석',
+ '2026-10-03':'개천절','2026-10-09':'한글날','2026-12-25':'성탄절'
+};
+
+/* 분류 */
+const CATS = [
+ {k:'마감', c:'#ff6b81', kw:['마감','제출','기한','납기','데드라인']},
+ {k:'휴가', c:'#3ddc9b', kw:['휴가','연차','반차','휴무','여행']},
+ {k:'교육', c:'#a78bfa', kw:['교육','강의','세미나','워크샵','워크숍','연수','실습','스터디']},
+ {k:'회의', c:'#2f6bff', kw:['회의','미팅','보고','브리핑','논의','협의','간담']},
+ {k:'개인', c:'#ffce6a', kw:[]}
+];
+function catOf(t){ for(const c of CATS) if(c.kw.some(w=>t.includes(w))) return c; return CATS[CATS.length-1]; }
+
+let events = [];
+let seq = 0;
+
+/* ================= 한국어 자연어 파싱 ================= */
+function key(d){ return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function addDays(d,n){ const r=new Date(d); r.setDate(r.getDate()+n); return r; }
+
+function parseText(raw){
+  let t = raw.trim();
+  if(!t) return null;
+  let rest = t;
+  let date = null, repeat = 0, dateWord = '';
+
+  const eat = (re) => { const m = rest.match(re); if(m){ rest = rest.replace(m[0],' '); } return m; };
+
+  /* 1) 반복 — 매주 X요일 */
+  let m = eat(/매주\s*([일월화수목금토])요일?/);
+  if(m){
+    const want = DOW.indexOf(m[1]);
+    let d = new Date(TODAY);
+    do { d = addDays(d,1); } while(d.getDay()!==want);
+    date = d; repeat = 4; dateWord = '매주 '+m[1]+'요일 (4주)';
+  }
+
+  /* 2) M월 D일 / M/D */
+  if(!date && (m = eat(/(\d{1,2})\s*월\s*(\d{1,2})\s*일/))){
+    date = new Date(TODAY.getFullYear(), +m[1]-1, +m[2]);
+    if(date < TODAY) date.setFullYear(date.getFullYear()+1);
+    dateWord = m[1]+'월 '+m[2]+'일';
+  }
+  if(!date && (m = eat(/(?<!\d)(\d{1,2})\/(\d{1,2})(?!\d)/))){
+    date = new Date(TODAY.getFullYear(), +m[1]-1, +m[2]);
+    if(date < TODAY) date.setFullYear(date.getFullYear()+1);
+    dateWord = m[1]+'월 '+m[2]+'일';
+  }
+
+  /* 3) 상대 표현 */
+  if(!date && (m = eat(/(\d{1,2})\s*(일|주)\s*(뒤|후|후에)/))){
+    const n = +m[1] * (m[2]==='주'?7:1);
+    date = addDays(TODAY, n); dateWord = m[1]+m[2]+' 뒤';
+  }
+  if(!date && (m = eat(/(오늘|내일|낼|모레|글피)/))){
+    const n = {'오늘':0,'내일':1,'낼':1,'모레':2,'글피':3}[m[1]];
+    date = addDays(TODAY, n); dateWord = m[1];
+  }
+  if(!date && (m = eat(/(이번\s*주|금주|다음\s*주|담주|차주|다다음\s*주)?\s*([일월화수목금토])요일/))){
+    const want = DOW.indexOf(m[2]);
+    const w = (m[1]||'').replace(/\s/g,'');
+    let base = new Date(TODAY);
+    let off = (want - base.getDay() + 7) % 7;
+    if(off===0) off = 7;
+    let d = addDays(base, off);
+    if(w==='다음주'||w==='담주'||w==='차주') d = addDays(d, (want - TODAY.getDay() + 7)%7 === 0 ? 0 : (d.getDay()>=TODAY.getDay()?7:0));
+    if(w==='다음주'||w==='담주'||w==='차주'){
+      // 이번 주 남은 요일이면 +7
+      const thisWeekEnd = addDays(TODAY, 6-TODAY.getDay());
+      if(d <= thisWeekEnd) d = addDays(d,7);
+    }
+    if(w==='다다음주'){
+      const thisWeekEnd = addDays(TODAY, 6-TODAY.getDay());
+      while(d <= addDays(thisWeekEnd,7)) d = addDays(d,7);
+    }
+    date = d; dateWord = (w?w+' ':'') + m[2]+'요일';
+  }
+
+  /* 4) 시간 */
+  let hh = null, mm = 0, timeWord = '';
+  let ap = null;
+  const apm = rest.match(/(오전|아침|오후|저녁|밤)/);
+  if(apm){ ap = apm[1]; rest = rest.replace(apm[0],' '); }
+  if((m = eat(/(\d{1,2})\s*시\s*(반|(\d{1,2})\s*분)?/))){
+    hh = +m[1];
+    if(m[2]==='반') mm = 30; else if(m[3]) mm = +m[3];
+  } else if((m = eat(/(\d{1,2}):(\d{2})/))){
+    hh = +m[1]; mm = +m[2];
+  }
+  if(hh!==null){
+    if((ap==='오후'||ap==='저녁'||ap==='밤') && hh<12) hh+=12;
+    if((ap==='오전'||ap==='아침') && hh===12) hh=0;
+    timeWord = (ap? ap+' ':'') + (hh%12===0?12:hh%12) + '시' + (mm? ' '+mm+'분':'');
+    timeWord = (hh<12?'오전 ':'오후 ') + (hh%12===0?12:hh%12) + '시' + (mm? ' '+mm+'분':'');
+  }
+
+  /* 5) 소요시간 */
+  let dur = '';
+  if((m = eat(/(\d{1,2})\s*시간/))) dur = m[1]+'시간';
+  else if((m = eat(/(\d{1,3})\s*분\s*(간|동안)?/))) dur = m[1]+'분';
+
+  /* 6) 제목 = 남은 말 */
+  let title = rest.replace(/\s+/g,' ').replace(/^[에서,·\-\s]+|[에서,·\-\s]+$/g,'').trim();
+  title = title.replace(/^(에|에서|부터|까지)\s*/,'').trim();
+  if(!title) title = '일정';
+
+  if(!date){ date = new Date(TODAY); dateWord = '오늘 (날짜를 못 찾아 오늘로)'; }
+
+  const cat = catOf(title + ' ' + raw);
+  return {date, dateWord, hh, mm, timeWord, dur, title, cat, repeat};
+}
+
+/* ================= 일정 추가 ================= */
+function addFromText(){
+  const raw = document.getElementById('nlq').value;
+  const p = parseText(raw);
+  if(!p){ toast('무엇을 넣을지 적어주세요'); return; }
+  showParsed(p, raw);
+
+  const n = p.repeat || 1;
+  let firstKey = null;
+  for(let i=0;i<n;i++){
+    const d = addDays(p.date, i*7);
+    const id = ++seq;
+    if(!firstKey) firstKey = key(d);
+    events.push({id, k:key(d), title:p.title, hh:p.hh, mm:p.mm, dur:p.dur, c:p.cat.c, cat:p.cat.k, isNew:true});
+  }
+  // 추가된 달로 이동
+  view = new Date(p.date.getFullYear(), p.date.getMonth(), 1);
+  render();
+  setTimeout(()=>{ events.forEach(e=>e.isNew=false); }, 2600);
+  document.getElementById('nlq').value='';
+}
+function showParsed(p, raw){
+  const rows = [
+    ['원문', raw],
+    ['날짜', p.date.getFullYear()+'년 '+(p.date.getMonth()+1)+'월 '+p.date.getDate()+'일 ('+DOW[p.date.getDay()]+') <em>' + (p.dateWord||'') + '</em>'],
+    ['시간', p.timeWord ? p.timeWord + (p.dur? ' <em>· '+p.dur+'</em>':'') : '<em>시간 지정 없음 (종일)</em>'],
+    ['제목', p.title],
+    ['분류', '<span style="color:'+p.cat.c+'">● </span>'+p.cat.k + (p.repeat? ' <em>· '+p.repeat+'주 반복</em>':'')]
+  ];
+  const box = document.getElementById('parsed');
+  box.innerHTML = rows.map(r=>'<div class="prow"><span class="pk">'+r[0]+'</span><span class="pv">'+r[1]+'</span></div>').join('');
+  [...box.children].forEach((el,i)=>setTimeout(()=>el.classList.add('on'), 90*i));
+}
+function clearAll(){ events=[]; render(); document.getElementById('parsed').innerHTML=
+  '<div class="hint">전부 지웠습니다. 다시 적어보세요.</div>'; }
+function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('on');
+  setTimeout(()=>t.classList.remove('on'),1800); }
+
+/* ================= 렌더 ================= */
+function moveMonth(n){ view = new Date(view.getFullYear(), view.getMonth()+n, 1); render(); }
+function goToday(){ view = new Date(TODAY.getFullYear(), TODAY.getMonth(), 1); render(); }
+
+function render(){
+  const y=view.getFullYear(), mo=view.getMonth();
+  document.getElementById('mtitle').innerHTML = y+'년 '+(mo+1)+'월 <small>'+
+    (mo===TODAY.getMonth()&&y===TODAY.getFullYear()? '오늘 '+(TODAY.getMonth()+1)+'/'+TODAY.getDate()+' ('+DOW[TODAY.getDay()]+')':'')+'</small>';
+
+  document.getElementById('legend').innerHTML = CATS.map(c=>
+    '<span class="lg"><em style="background:'+c.c+'"></em>'+c.k+'</span>').join('');
+
+  const first = new Date(y, mo, 1);
+  const start = addDays(first, -first.getDay());
+  const g = document.getElementById('grid');
+  g.innerHTML='';
+  for(let i=0;i<42;i++){
+    const d = addDays(start, i);
+    const k = key(d);
+    const cell = document.createElement('div');
+    cell.className = 'cell' + (d.getMonth()!==mo?' out':'') + (k===key(TODAY)?' today':'') +
+      (HOLIDAYS[k]||d.getDay()===0?' hol':'');
+    const evs = events.filter(e=>e.k===k).sort((a,b)=>(a.hh??99)-(b.hh??99));
+    cell.innerHTML = '<div class="dn">'+d.getDate() +
+      (HOLIDAYS[k]?' <i>'+HOLIDAYS[k]+'</i>':'') +
+      (k===key(TODAY)?' <b class="tag">오늘</b>':'') + '</div>' +
+      '<div class="evs">' + evs.map(e=>
+        '<div class="ev'+(e.isNew?' new':'')+'" style="background:'+e.c+'cc;border-left-color:'+e.c+'" '+
+        'onclick="delEvent('+e.id+')" title="클릭하면 삭제">'+
+        (e.hh!==null&&e.hh!==undefined ? String(e.hh).padStart(2,'0')+':'+String(e.mm).padStart(2,'0')+' ' : '') +
+        e.title + '</div>').join('') + '</div>';
+    g.appendChild(cell);
+  }
+
+  // 하단 요약
+  const inMonth = events.filter(e=>{ const [yy,mm2]=e.k.split('-').map(Number); return yy===y&&mm2===mo+1; });
+  document.getElementById('cntMonth').textContent = inMonth.length+'건';
+  const wkStart = addDays(TODAY, -TODAY.getDay()), wkEnd = addDays(wkStart,6);
+  const inWeek = events.filter(e=>{ const d=new Date(e.k); return d>=wkStart&&d<=wkEnd; });
+  document.getElementById('cntWeek').textContent = inWeek.length+'건';
+  const upcoming = events.map(e=>({e,d:new Date(e.k)})).filter(x=>x.d>=TODAY).sort((a,b)=>a.d-b.d)[0];
+  if(upcoming){
+    const days = Math.round((upcoming.d - TODAY)/86400000);
+    document.getElementById('ddLbl').textContent = upcoming.e.title;
+    document.getElementById('ddVal').textContent = days===0? 'D-DAY' : 'D-'+days;
+  } else {
+    document.getElementById('ddLbl').textContent = '다음 일정';
+    document.getElementById('ddVal').textContent = '없음';
+  }
+}
+function delEvent(id){ events = events.filter(e=>e.id!==id); render(); toast('일정을 삭제했습니다'); }
+
+/* ================= 예시 ================= */
+const SAMPLES = [
+  '다음 주 화요일 오후 3시 안전교육 2시간',
+  '내일 오전 10시 공정 회의',
+  '8월 21일 월간 보고서 제출 마감',
+  '3일 뒤 저녁 7시 회식',
+  '매주 월요일 오전 9시 주간회의',
+  '모레 반차'
+];
+document.getElementById('samples').innerHTML = SAMPLES.map(s=>
+  '<span class="samp" onclick="useSample(this)">'+s+'</span>').join('');
+function useSample(el){ document.getElementById('nlq').value = el.textContent; addFromText(); }
+
+document.getElementById('nlq').addEventListener('keydown',e=>{
+  if(e.key==='Enter' && !e.shiftKey){ e.preventDefault(); addFromText(); }
+});
+
+render();
+</script>
+</body>
+</html>

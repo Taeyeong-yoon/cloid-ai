@@ -33,6 +33,13 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# secrets — 절대 커밋 금지
+api_keys.json
+.claude/settings.local.json
+
+# 교재 원본 (이식 완료본은 public/course/에 있음)
+교재수정본*
+
 # vercel
 .vercel
 
