@@ -427,21 +427,26 @@ async function runPipeline() {
   } catch {/* no existing index */}
 
   // Merge new items + existing, dedup by slug
+  // 주의: 기존 index.json 항목은 { sourceUrl, excerpt } 형태로 저장돼 있고
+  // 새 항목은 { url, summary } 형태다. 한쪽 이름만 가정하면 undefined.slice()로
+  // 크래시하므로(2026-03-15 이후 갱신 중단 원인) 공통 형태로 정규화한 뒤 병합한다.
+  type IndexShape = { slug: string; title: string; date: string; tags?: string[]; score?: number; sourceUrl?: string; excerpt?: string };
+  const normalize = (item: Partial<ScoredItem> & IndexShape): IndexShape => ({
+    slug: item.slug,
+    title: item.title,
+    date: item.date,
+    tags: item.tags ?? [],
+    score: item.score ?? 50,
+    sourceUrl: item.sourceUrl ?? item.url ?? '',
+    excerpt: (item.excerpt ?? item.summary ?? '').slice(0, 120),
+  });
+
   const existingSlugs = new Set(existing.map((e) => e.slug));
   const newEntries = top.filter((t) => !existingSlugs.has(t.slug));
-  const merged = [...newEntries, ...existing]
+  const indexEntries = [...newEntries, ...existing]
+    .map((item) => normalize(item as Partial<ScoredItem> & IndexShape))
     .sort((a, b) => (b.score ?? 50) - (a.score ?? 50) || b.date.localeCompare(a.date))
     .slice(0, 50); // Keep at most 50 entries
-
-  const indexEntries = merged.map(({ slug, title, date, tags, score, url, summary }) => ({
-    slug,
-    title,
-    date,
-    tags,
-    score,
-    sourceUrl: url,
-    excerpt: summary.slice(0, 120),
-  }));
 
   fs.writeFileSync(indexPath, JSON.stringify(indexEntries, null, 2), 'utf-8');
   console.log(`✅ index.json 갱신: 총 ${indexEntries.length}개 항목\n`);

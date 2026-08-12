@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { getAllTopics } from "@/lib/learning";
 import { getAllLabs } from "@/lib/labs";
+import { getAllRadarPosts } from "@/lib/radar";
 import { COURSE_LESSONS } from "@/constants/course";
 import { TEXTBOOKS } from "@/constants/textbooks";
 
@@ -14,7 +15,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/learning`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/skills`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/labs`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/trends`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
   ];
+
+  // AI 트렌드 — 매일 자동 수집되는 콘텐츠
+  const trendPages: MetadataRoute.Sitemap = getAllRadarPosts().map((post) => ({
+    url: `${baseUrl}/trends/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
 
   // 교육 과정 교시
   const coursePages: MetadataRoute.Sitemap = COURSE_LESSONS.map((lesson) => ({
@@ -46,5 +56,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...coursePages, ...textbookPages, ...learningPages, ...labPages];
+  return [
+    ...staticPages,
+    ...coursePages,
+    ...textbookPages,
+    ...learningPages,
+    ...labPages,
+    ...trendPages,
+  ];
 }

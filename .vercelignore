@@ -1,0 +1,4 @@
+# 배포에 불필요한 로컬 자산
+교재수정본*
+api_keys.json
+.claude

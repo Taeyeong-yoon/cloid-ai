@@ -13,6 +13,7 @@ import {
   LogIn,
   Menu,
   X,
+  Radar,
   Search,
 } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
@@ -21,7 +22,7 @@ import LangSwitcher from "./LangSwitcher";
 
 const SEARCH_TABS = [
   { key: "all", labelKey: "tab_all", href: (q: string) => `/learning?q=${encodeURIComponent(q)}` },
-  { key: "radar", labelKey: "tab_radar", href: (q: string) => `/radar?q=${encodeURIComponent(q)}` },
+  { key: "radar", labelKey: "tab_radar", href: (q: string) => `/trends?q=${encodeURIComponent(q)}` },
   { key: "learning", labelKey: "tab_learning", href: (q: string) => `/learning?q=${encodeURIComponent(q)}` },
   { key: "skills", labelKey: "tab_skills", href: (q: string) => `/skills?q=${encodeURIComponent(q)}` },
   { key: "labs", labelKey: "tab_labs", href: (q: string) => `/labs?q=${encodeURIComponent(q)}` },
@@ -175,6 +176,7 @@ export default function NavMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
     { href: "/learning", label: t.nav.learning, icon: BookOpen, guard: false },
     { href: "/skills", label: t.nav.skills, icon: Zap, guard: false },
     { href: "/labs", label: t.nav.labs, icon: FlaskConical, guard: false },
+    { href: "/trends", label: locale === "ko" ? "트렌드" : "Trends", icon: Radar, guard: false },
   ];
 
   function handleClick(e: React.MouseEvent, href: string, guard: boolean) {

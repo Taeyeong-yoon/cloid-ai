@@ -12,6 +12,7 @@ import {
   FlaskConical,
   GraduationCap,
   Layers,
+  Radar,
   Sparkles,
   Zap,
 } from "lucide-react";
@@ -32,6 +33,7 @@ export interface LibraryCounts {
   learning: number;
   labs: number;
   skills: number;
+  trends: number;
 }
 
 export default function HomeClient({ libraryCounts }: { libraryCounts: LibraryCounts }) {
@@ -74,6 +76,13 @@ export default function HomeClient({ libraryCounts }: { libraryCounts: LibraryCo
       count: libraryCounts.labs,
       icon: FlaskConical,
       accent: "text-fuchsia-300",
+    },
+    {
+      href: "/trends",
+      label: ko ? "AI 트렌드" : "AI Trends",
+      count: libraryCounts.trends,
+      icon: Radar,
+      accent: "text-amber-300",
     },
   ];
 
@@ -260,7 +269,7 @@ export default function HomeClient({ libraryCounts }: { libraryCounts: LibraryCo
             ? "과정을 마쳤다면 주제별 교재와 실습으로 이어서 학습하세요."
             : "Finished the course? Continue with topic textbooks and hands-on labs."}
         </p>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
           {library.map(({ href, label, count, icon: Icon, accent }) => (
             <Link
               key={href}
