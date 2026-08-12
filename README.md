@@ -71,3 +71,8 @@ interface SourceProvider {
 | `/labs` | 오늘의 실습 3개 |
 | `/login` | 이메일 로그인/회원가입 |
 | `/account` | 내 정보 + 북마크 목록 |
+
+## 배포
+
+`main` 브랜치에 push하면 Vercel이 자동으로 프로덕션 배포합니다.
+(GitHub Actions의 일일 콘텐츠 커밋도 동일하게 배포를 트리거합니다)
