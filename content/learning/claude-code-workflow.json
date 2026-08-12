@@ -1,0 +1,121 @@
+{
+  "id": "claude-code-workflow",
+  "title": "Claude Code 실전 워크플로",
+  "description": "CLAUDE.md로 프로젝트 규칙을 심고, 서브에이전트로 작업을 나누고, 훅과 GitHub Actions로 반복을 자동화하는 실무 흐름입니다.",
+  "level": "intermediate",
+  "tags": [
+    "Claude Code",
+    "자동화",
+    "CLAUDE.md",
+    "워크플로"
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "CLAUDE.md로 프로젝트 규칙 관리하기",
+      "url": "https://code.claude.com/docs/en/memory"
+    },
+    {
+      "type": "doc",
+      "title": "서브에이전트로 작업 나누기",
+      "url": "https://code.claude.com/docs/en/sub-agents"
+    },
+    {
+      "type": "doc",
+      "title": "훅(Hooks)으로 동작 자동화",
+      "url": "https://code.claude.com/docs/en/hooks"
+    },
+    {
+      "type": "doc",
+      "title": "GitHub Actions 연동",
+      "url": "https://code.claude.com/docs/en/github-actions"
+    },
+    {
+      "type": "video",
+      "title": "클로드 스킬, 서브에이전트, 커맨드 개념 몰랐던 사람 한번에 이해시켜드림 ",
+      "url": "https://www.youtube.com/watch?v=2eqPBLgVH0U",
+      "description": "00:00 AI로 코딩 하는 법 03:12 서브에이전트 만드는 법 12:12 skills 만드는 법 14:18 command 만드는 법 15:49 skills 웹사이트 16:46 ..."
+    },
+    {
+      "type": "video",
+      "title": "클로드 코드 CLAUDE.md·메모리·스킬 완전정복 | AI 생각 근육 1~2강 부록편 1강",
+      "url": "https://www.youtube.com/watch?v=idR4BbI0ZZo",
+      "description": "1강에서 접수표 5칸을 채우셨죠. 교재 각 칸 아래에 있던 「   에이전트에선 —」 한 줄, 그거 하나하나를 이번 영상에서 실제 파일로 ..."
+    },
+    {
+      "type": "video",
+      "title": "클로드코드 대박 신기능 Agent View | 멀티 에이전트 관리가 너무 쉽습니다",
+      "url": "https://www.youtube.com/watch?v=MPWKZzP-bQs",
+      "description": "개발동생 블로그 보러가기: https://devbrothers.ai/blog/ Claude Code에 Agent View 기능이 추가되면서 멀티 에이전트를 한 화면에서 ..."
+    },
+    {
+      "type": "practice",
+      "title": "프로젝트 루트에 CLAUDE.md를 만들고 코딩 규칙 3줄을 적은 뒤, 지켜지는지 확인하기"
+    },
+    {
+      "type": "practice",
+      "title": "긴 작업을 서브에이전트에게 위임해 보고, 직접 처리했을 때와 결과를 비교하기"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "CLAUDE.md 파일의 역할은?",
+      "options": [
+        "프로젝트의 규칙과 맥락을 매 세션마다 자동으로 전달한다",
+        "코드를 실행한다",
+        "의존성을 설치한다",
+        "테스트 결과를 저장한다"
+      ],
+      "answer": 0,
+      "explanation": "CLAUDE.md는 매번 반복해서 설명하던 프로젝트 규칙·구조·주의사항을 파일 하나로 고정해 두는 장치입니다."
+    },
+    {
+      "question": "서브에이전트를 쓰기에 적절한 상황은?",
+      "options": [
+        "여러 파일을 동시에 조사해야 하는 넓은 탐색 작업",
+        "한 줄짜리 오타 수정",
+        "단순 파일 읽기 한 번",
+        "짧은 질문 하나"
+      ],
+      "answer": 0,
+      "explanation": "서브에이전트는 맥락을 새로 세팅하는 비용이 있어, 병렬로 넓게 조사할 때 이득이 큽니다. 작은 작업은 직접 하는 게 빠릅니다."
+    },
+    {
+      "question": "훅(Hook)이 필요한 이유는?",
+      "options": [
+        "특정 시점에 항상 같은 동작이 실행되도록 보장하기 위해",
+        "모델을 더 똑똑하게 만들기 위해",
+        "토큰 비용을 0으로 만들기 위해",
+        "인터넷 없이 쓰기 위해"
+      ],
+      "answer": 0,
+      "explanation": "프롬프트로 '항상 이렇게 해줘'라고 부탁하는 것보다, 훅으로 강제하는 편이 훨씬 확실합니다."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "실습 1",
+      "instruction": "프로젝트 루트에 CLAUDE.md를 만들고 코딩 규칙 3줄을 적은 뒤, 지켜지는지 확인하기",
+      "prompt": "프로젝트 루트에 CLAUDE.md를 만들고 코딩 규칙 3줄을 적은 뒤, 지켜지는지 확인하기"
+    },
+    {
+      "label": "실습 2",
+      "instruction": "긴 작업을 서브에이전트에게 위임해 보고, 직접 처리했을 때와 결과를 비교하기",
+      "prompt": "긴 작업을 서브에이전트에게 위임해 보고, 직접 처리했을 때와 결과를 비교하기"
+    }
+  ],
+  "evaluation": {
+    "prompt": "여기에 실습 결과(명령어 출력, 생성된 문서, 작성한 프롬프트 등)를 붙여넣으면 학습 목표에 도달했는지 평가해 드립니다.",
+    "context": "학습 토픽: \"Claude Code 실전 워크플로\". CLAUDE.md로 프로젝트 규칙을 심고, 서브에이전트로 작업을 나누고, 훅과 GitHub Actions로 반복을 자동화하는 실무 흐름입니다.",
+    "successCriteria": [
+      "실습 단계를 실제로 실행해 결과물을 만들었다",
+      "결과가 이 토픽의 학습 목표와 이어진다",
+      "무엇이 왜 그렇게 동작했는지 설명할 수 있다"
+    ],
+    "commonMistakes": [
+      "읽기만 하고 실습을 건너뜀",
+      "결과물 없이 계획만 제출함",
+      "환경 설정 문제와 학습 내용의 문제를 혼동함"
+    ]
+  }
+}

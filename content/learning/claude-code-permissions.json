@@ -1,0 +1,116 @@
+{
+  "id": "claude-code-permissions",
+  "title": "Claude Code 권한 모드와 Auto Mode",
+  "description": "2026년 8월 Auto Mode가 유료 사용자 기본값이 되면서 승인 방식이 바뀌었습니다. 6가지 권한 모드의 차이와 언제 무엇을 쓸지 정리합니다.",
+  "level": "beginner",
+  "tags": [
+    "Claude Code",
+    "Auto Mode",
+    "권한",
+    "2026-08"
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "권한 모드 공식 문서",
+      "url": "https://code.claude.com/docs/en/permission-modes"
+    },
+    {
+      "type": "doc",
+      "title": "설정 파일과 권한 규칙",
+      "url": "https://code.claude.com/docs/en/settings"
+    },
+    {
+      "type": "doc",
+      "title": "Claude Code 보안 모델",
+      "url": "https://code.claude.com/docs/en/security"
+    },
+    {
+      "type": "video",
+      "title": "[Claude Code 입문 E17] 권한 시스템과 보안: 6가지 모드, 규칙 설정, 샌드박스 가이드",
+      "url": "https://www.youtube.com/watch?v=kGBThunfxsI",
+      "description": "Claude Code의 권한 시스템을 살펴봅니다. 6가지 권한 모드의 차이점, allow/ask/deny 규칙으로 도구별 권한을 세밀하게 설정하는 ..."
+    },
+    {
+      "type": "video",
+      "title": "클로드 코드 권한 완전 정복: Plan 모드부터 YOLO 모드까지 (feat. Auto 모드)",
+      "url": "https://www.youtube.com/watch?v=aSrRVM7OQWA",
+      "description": "클로드 코드(Claude Code)를 쓰다 보면 \"이거 해도 돼요?\"라는 권한 프롬프트가 끝없이 뜨죠. 큰 작업에서는 클릭 노동이 되고, 반대로 ..."
+    },
+    {
+      "type": "video",
+      "title": "클로드 코드 권한 모드 여섯 가지를 짚는다 — 클로드 코드 권한 모드란 무엇이고, 언제 auto로 손을 떼도 되는가?",
+      "url": "https://www.youtube.com/watch?v=Wg-44Y43TFE",
+      "description": "권한 모드(permission mode)는 클로드 코드에게 '내가 매번 승인하지 않아도 무엇을 실행해도 되는지'를 한 번에 정해 두는 설정이다."
+    },
+    {
+      "type": "practice",
+      "title": "Shift+Tab으로 모드를 순환해 보고 상태 표시줄이 어떻게 바뀌는지 확인하기"
+    },
+    {
+      "type": "practice",
+      "title": "민감한 작업과 반복 작업에 각각 어떤 모드를 쓸지 기준을 정해 적어 보기"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "기본(default) 모드에서 승인 없이 실행되는 것은?",
+      "options": [
+        "읽기 작업만",
+        "모든 작업",
+        "파일 수정까지",
+        "네트워크 요청까지"
+      ],
+      "answer": 0,
+      "explanation": "default 모드는 읽기만 자동 허용하고, 파일 수정·명령 실행·네트워크 요청은 매번 승인을 요구합니다."
+    },
+    {
+      "question": "Auto Mode의 특징으로 옳은 것은?",
+      "options": [
+        "모든 작업을 실행하되 백그라운드 안전 검사가 함께 돈다",
+        "아무 검사 없이 전부 실행한다",
+        "읽기만 허용한다",
+        "네트워크를 차단한다"
+      ],
+      "answer": 0,
+      "explanation": "Auto Mode는 승인 프롬프트를 없애는 대신 백그라운드 안전 검사를 붙입니다. 승인 피로로 무심코 전부 수락하던 문제를 겨냥한 설계입니다."
+    },
+    {
+      "question": "코드베이스를 먼저 파악하고 싶을 때 적합한 모드는?",
+      "options": [
+        "plan",
+        "acceptEdits",
+        "bypassPermissions",
+        "dontAsk"
+      ],
+      "answer": 0,
+      "explanation": "plan 모드는 읽기 중심으로 동작해 변경 전에 구조와 영향 범위를 먼저 파악하는 데 적합합니다."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "실습 1",
+      "instruction": "Shift+Tab으로 모드를 순환해 보고 상태 표시줄이 어떻게 바뀌는지 확인하기",
+      "prompt": "Shift+Tab으로 모드를 순환해 보고 상태 표시줄이 어떻게 바뀌는지 확인하기"
+    },
+    {
+      "label": "실습 2",
+      "instruction": "민감한 작업과 반복 작업에 각각 어떤 모드를 쓸지 기준을 정해 적어 보기",
+      "prompt": "민감한 작업과 반복 작업에 각각 어떤 모드를 쓸지 기준을 정해 적어 보기"
+    }
+  ],
+  "evaluation": {
+    "prompt": "여기에 실습 결과(명령어 출력, 생성된 문서, 작성한 프롬프트 등)를 붙여넣으면 학습 목표에 도달했는지 평가해 드립니다.",
+    "context": "학습 토픽: \"Claude Code 권한 모드와 Auto Mode\". 2026년 8월 Auto Mode가 유료 사용자 기본값이 되면서 승인 방식이 바뀌었습니다. 6가지 권한 모드의 차이와 언제 무엇을 쓸지 정리합니다.",
+    "successCriteria": [
+      "실습 단계를 실제로 실행해 결과물을 만들었다",
+      "결과가 이 토픽의 학습 목표와 이어진다",
+      "무엇이 왜 그렇게 동작했는지 설명할 수 있다"
+    ],
+    "commonMistakes": [
+      "읽기만 하고 실습을 건너뜀",
+      "결과물 없이 계획만 제출함",
+      "환경 설정 문제와 학습 내용의 문제를 혼동함"
+    ]
+  }
+}

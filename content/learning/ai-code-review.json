@@ -1,0 +1,110 @@
+{
+  "id": "ai-code-review",
+  "title": "AI 코드 리뷰 활용법",
+  "description": "AI에게 코드 리뷰를 맡길 때 무엇을 시키고 무엇을 사람이 봐야 하는지. 리뷰 요청 방식과 결과 검증 기준을 다룹니다.",
+  "level": "intermediate",
+  "tags": [
+    "코드리뷰",
+    "품질",
+    "Claude Code"
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Claude Code 개요",
+      "url": "https://code.claude.com/docs/en/overview"
+    },
+    {
+      "type": "doc",
+      "title": "GitHub Actions 연동",
+      "url": "https://code.claude.com/docs/en/github-actions"
+    },
+    {
+      "type": "video",
+      "title": "클로드 코드 리뷰 기능 출시! 코드 검증 자동화 방법",
+      "url": "https://www.youtube.com/watch?v=5-TTCYop5bo",
+      "description": "클래스101 X 헤이제임스 무료 특강: https://abr.ge/ic9vp2 이런 영상을 딸깍 제작하려면? https://fingr.io 헤이제임스의 최신 강의(무료 ..."
+    },
+    {
+      "type": "video",
+      "title": "PR 올리면 AI가 버그 잡아줍니다 — Claude Code Review 완전 정리",
+      "url": "https://www.youtube.com/watch?v=hU8qY4lGn_w",
+      "description": "PR의 84%가 제대로 된 리뷰 없이 승인되고 있었습니다. Anthropic이 내놓은 Claude Code Review는 여러 AI 에이전트가 동시에 PR ..."
+    },
+    {
+      "type": "video",
+      "title": "[Claude Code 입문 E40] 코드 리뷰 활용: /code-review·/review·/security-review, --fix와 ultra·REVIEW.md",
+      "url": "https://www.youtube.com/watch?v=xhIhIC1pUY0",
+      "description": "이 채널의 번역 음성 트랙 상당수는 HeyGen으로 제작됩니다. AI 영상 번역, 더빙, 다국어 콘텐츠 제작에 관심이 있다면 HeyGen을 ..."
+    },
+    {
+      "type": "practice",
+      "title": "최근 작성한 변경분을 리뷰시키되, '심각도와 확신도를 함께 표시해줘'라고 요청해 보기"
+    },
+    {
+      "type": "practice",
+      "title": "AI가 지적한 항목 중 실제 버그와 취향 문제를 직접 분류해 보기"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "AI에게 코드 리뷰를 맡길 때 흔한 실수는?",
+      "options": [
+        "'중요한 것만 알려줘'라고 해서 실제 버그까지 걸러지게 하는 것",
+        "변경 범위를 알려주는 것",
+        "테스트 결과를 함께 주는 것",
+        "심각도 표시를 요청하는 것"
+      ],
+      "answer": 0,
+      "explanation": "필터를 강하게 걸면 모델이 충실히 따르느라 낮은 확신도의 진짜 버그까지 보고하지 않습니다. 넓게 받고 사람이 거르는 편이 낫습니다."
+    },
+    {
+      "question": "AI 리뷰 결과를 다룰 때 올바른 태도는?",
+      "options": [
+        "지적을 근거와 함께 검증하고 판단은 사람이 한다",
+        "모두 그대로 반영한다",
+        "전부 무시한다",
+        "테스트 없이 배포한다"
+      ],
+      "answer": 0,
+      "explanation": "AI 리뷰는 후보를 넓게 뽑아주는 데 강합니다. 최종 판단은 맥락을 아는 사람의 몫입니다."
+    },
+    {
+      "question": "리뷰 품질을 높이는 입력은?",
+      "options": [
+        "변경 의도와 관련 맥락을 함께 주는 것",
+        "파일 이름만 주는 것",
+        "코드를 잘라서 일부만 주는 것",
+        "질문을 짧게 하는 것"
+      ],
+      "answer": 0,
+      "explanation": "무엇을 왜 바꿨는지 알아야 '의도와 다른 동작'을 잡아낼 수 있습니다. 코드만 주면 표면적 지적에 그칩니다."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "실습 1",
+      "instruction": "최근 작성한 변경분을 리뷰시키되, '심각도와 확신도를 함께 표시해줘'라고 요청해 보기",
+      "prompt": "최근 작성한 변경분을 리뷰시키되, '심각도와 확신도를 함께 표시해줘'라고 요청해 보기"
+    },
+    {
+      "label": "실습 2",
+      "instruction": "AI가 지적한 항목 중 실제 버그와 취향 문제를 직접 분류해 보기",
+      "prompt": "AI가 지적한 항목 중 실제 버그와 취향 문제를 직접 분류해 보기"
+    }
+  ],
+  "evaluation": {
+    "prompt": "여기에 실습 결과(명령어 출력, 생성된 문서, 작성한 프롬프트 등)를 붙여넣으면 학습 목표에 도달했는지 평가해 드립니다.",
+    "context": "학습 토픽: \"AI 코드 리뷰 활용법\". AI에게 코드 리뷰를 맡길 때 무엇을 시키고 무엇을 사람이 봐야 하는지. 리뷰 요청 방식과 결과 검증 기준을 다룹니다.",
+    "successCriteria": [
+      "실습 단계를 실제로 실행해 결과물을 만들었다",
+      "결과가 이 토픽의 학습 목표와 이어진다",
+      "무엇이 왜 그렇게 동작했는지 설명할 수 있다"
+    ],
+    "commonMistakes": [
+      "읽기만 하고 실습을 건너뜀",
+      "결과물 없이 계획만 제출함",
+      "환경 설정 문제와 학습 내용의 문제를 혼동함"
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "ai-model-selection",
+  "title": "모델 선택과 비용 최적화",
+  "description": "어떤 작업에 어떤 모델을 쓸지, 토큰이 어디서 새는지. 품질을 지키면서 비용을 낮추는 실무 기준을 정리합니다.",
+  "level": "intermediate",
+  "tags": [
+    "모델선택",
+    "비용",
+    "토큰"
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "모델 개요와 비교",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "type": "doc",
+      "title": "프롬프트 캐싱",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
+    },
+    {
+      "type": "doc",
+      "title": "Anthropic 최신 소식",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "type": "video",
+      "title": "클로드 코드 토큰 녹는 분들, 이 6가지만 바꿔보세요",
+      "url": "https://www.youtube.com/watch?v=gLZ1wJUADqk",
+      "description": "클로드 코드 토큰이 녹는다고 고민하시는 분들을 위한 실전 최적화 가이드입니다. Pro 플랜 사용자라면 필수로 확인하세요! ⏱️ 타임 ..."
+    },
+    {
+      "type": "video",
+      "title": "클로드 토큰 50% 절약 하는 3가지 방법 | 3분 마스터",
+      "url": "https://www.youtube.com/watch?v=VifIeENIVFY",
+      "description": "클로드 코드 완벽 마스터: AI 개발 워크플로우 】 할인 : 출시기념 30% 할인! 강의 페이지: ..."
+    },
+    {
+      "type": "video",
+      "title": "클로드 코드 토큰, 이거 모르면 돈만 버립니다!! (컨텍스트)",
+      "url": "https://www.youtube.com/watch?v=1ipBdfCV0Og",
+      "description": "[구독자 전용] 강의 특가 진행 중 https://gymcoding.co/vip 문의 (교육/협업/제휴) bruce.lean17@gmail.com 인스타그램 ..."
+    },
+    {
+      "type": "practice",
+      "title": "자주 하는 작업 3개를 난이도별로 나누고 각각에 맞는 모델 정해 보기"
+    },
+    {
+      "type": "practice",
+      "title": "반복되는 긴 지시문을 캐싱 가능한 형태로 앞쪽에 고정해 보기"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "모델을 고르는 현실적인 기준은?",
+      "options": [
+        "작업 난이도와 허용 가능한 응답 시간·비용",
+        "무조건 최신 모델",
+        "이름이 익숙한 모델",
+        "가장 저렴한 모델"
+      ],
+      "answer": 0,
+      "explanation": "분류나 요약 같은 작업에 최상위 모델을 쓰는 건 낭비이고, 복잡한 추론에 저가 모델을 쓰면 다시 하게 됩니다."
+    },
+    {
+      "question": "프롬프트 캐싱이 효과를 내는 조건은?",
+      "options": [
+        "긴 공통 앞부분이 여러 요청에서 그대로 반복될 때",
+        "매 요청의 앞부분이 매번 달라질 때",
+        "요청이 아주 짧을 때",
+        "한 번만 호출할 때"
+      ],
+      "answer": 0,
+      "explanation": "캐싱은 앞부분이 바이트 단위로 같아야 적중합니다. 앞에 시각이나 임의 값이 끼면 매번 무효화됩니다."
+    },
+    {
+      "question": "토큰이 예상보다 많이 나올 때 먼저 확인할 것은?",
+      "options": [
+        "매 요청에 붙는 고정 맥락의 크기",
+        "인터넷 속도",
+        "화면 해상도",
+        "파일 확장자"
+      ],
+      "answer": 0,
+      "explanation": "대개 범인은 매번 통째로 붙는 긴 시스템 프롬프트나 첨부 문서입니다. 고정 부분부터 재보세요."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "실습 1",
+      "instruction": "자주 하는 작업 3개를 난이도별로 나누고 각각에 맞는 모델 정해 보기",
+      "prompt": "자주 하는 작업 3개를 난이도별로 나누고 각각에 맞는 모델 정해 보기"
+    },
+    {
+      "label": "실습 2",
+      "instruction": "반복되는 긴 지시문을 캐싱 가능한 형태로 앞쪽에 고정해 보기",
+      "prompt": "반복되는 긴 지시문을 캐싱 가능한 형태로 앞쪽에 고정해 보기"
+    }
+  ],
+  "evaluation": {
+    "prompt": "여기에 실습 결과(명령어 출력, 생성된 문서, 작성한 프롬프트 등)를 붙여넣으면 학습 목표에 도달했는지 평가해 드립니다.",
+    "context": "학습 토픽: \"모델 선택과 비용 최적화\". 어떤 작업에 어떤 모델을 쓸지, 토큰이 어디서 새는지. 품질을 지키면서 비용을 낮추는 실무 기준을 정리합니다.",
+    "successCriteria": [
+      "실습 단계를 실제로 실행해 결과물을 만들었다",
+      "결과가 이 토픽의 학습 목표와 이어진다",
+      "무엇이 왜 그렇게 동작했는지 설명할 수 있다"
+    ],
+    "commonMistakes": [
+      "읽기만 하고 실습을 건너뜀",
+      "결과물 없이 계획만 제출함",
+      "환경 설정 문제와 학습 내용의 문제를 혼동함"
+    ]
+  }
+}

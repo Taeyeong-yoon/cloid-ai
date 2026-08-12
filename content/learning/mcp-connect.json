@@ -1,0 +1,115 @@
+{
+  "id": "mcp-connect",
+  "title": "MCP로 외부 도구 연결하기",
+  "description": "MCP는 AI가 파일·DB·업무 도구에 표준 방식으로 연결되는 통로입니다. 개념부터 실제 연결, 권한 관리까지 다룹니다.",
+  "level": "intermediate",
+  "tags": [
+    "MCP",
+    "연동",
+    "도구"
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "MCP 공식 소개",
+      "url": "https://modelcontextprotocol.io/docs/getting-started/intro"
+    },
+    {
+      "type": "doc",
+      "title": "Claude Code에 MCP 서버 연결하기",
+      "url": "https://code.claude.com/docs/en/mcp"
+    },
+    {
+      "type": "doc",
+      "title": "도구 사용(Tool use) 개요",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview"
+    },
+    {
+      "type": "video",
+      "title": "장담하건데  가장  쉬운 MCP영상이  될 겁니다 |클로드로  mcp  연결하는  법",
+      "url": "https://www.youtube.com/watch?v=eEtZENgCux4",
+      "description": "00:00 MCP란? 02:26 MCP 설치할 AI 클라이언트 고르는 법 04:23 MCP 찾는법 (mcp 찾을 때 헷깔리는 점 정리!) 06:18 1. Notion mcp ..."
+    },
+    {
+      "type": "video",
+      "title": "【오픈소스 로컬 LLM 활용] OpenWebUI와 MCP 통합 가이드 (실습파일 제공)",
+      "url": "https://www.youtube.com/watch?v=C_VOGWjTyTs",
+      "description": "로컬 LLM과 OpenAI를 하나로! Docker 기반 OpenWebUI + MCP 통합 안녕하세요, 판다스 스튜디오입니다. 로컬 Ollama 모델과 ..."
+    },
+    {
+      "type": "video",
+      "title": "클로드 스킬 무료 공유! 힉스필드 MCP로 25분 만에 AI 광고 만드는 법 (일관성 유지)",
+      "url": "https://www.youtube.com/watch?v=35MN2o0xH6A",
+      "description": "25분만 투자하면 나머지는 클로드가 알아서 작업합니다. 이번 영상에서는 제가 직접 만든 클로드 스킬(Claude Skill) 을 무료로 공유 ..."
+    },
+    {
+      "type": "practice",
+      "title": "파일시스템 MCP 서버를 하나 연결하고, 접근 가능한 경로를 최소로 제한해 보기"
+    },
+    {
+      "type": "practice",
+      "title": "연결한 도구가 실제로 호출되는지 간단한 작업으로 확인하기"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "MCP가 해결하는 문제는?",
+      "options": [
+        "AI와 외부 도구를 연결하는 방식을 표준화하는 것",
+        "모델 학습 속도를 높이는 것",
+        "이미지 화질을 개선하는 것",
+        "인터넷 속도를 높이는 것"
+      ],
+      "answer": 0,
+      "explanation": "도구마다 제각각이던 연동 방식을 하나의 규격으로 묶어, 한 번 만든 서버를 여러 AI 클라이언트에서 재사용할 수 있게 합니다."
+    },
+    {
+      "question": "MCP 서버를 연결할 때 보안상 중요한 것은?",
+      "options": [
+        "접근 가능한 경로와 권한을 필요한 범위로 좁히는 것",
+        "가능한 많은 권한을 주는 것",
+        "비밀번호를 프롬프트에 적어두는 것",
+        "모든 서버를 동시에 켜두는 것"
+      ],
+      "answer": 0,
+      "explanation": "연결한 도구가 할 수 있는 일은 곧 AI가 할 수 있는 일입니다. 권한은 최소로 주는 것이 원칙입니다."
+    },
+    {
+      "question": "MCP 연결이 특히 유용한 상황은?",
+      "options": [
+        "사내 문서나 DB 등 모델이 모르는 데이터를 다뤄야 할 때",
+        "일반 상식을 물어볼 때",
+        "번역만 할 때",
+        "짧은 글을 다듬을 때"
+      ],
+      "answer": 0,
+      "explanation": "모델이 학습하지 않은 우리 데이터에 접근해야 할 때 MCP가 필요합니다. 일반 지식 질문에는 필요 없습니다."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "실습 1",
+      "instruction": "파일시스템 MCP 서버를 하나 연결하고, 접근 가능한 경로를 최소로 제한해 보기",
+      "prompt": "파일시스템 MCP 서버를 하나 연결하고, 접근 가능한 경로를 최소로 제한해 보기"
+    },
+    {
+      "label": "실습 2",
+      "instruction": "연결한 도구가 실제로 호출되는지 간단한 작업으로 확인하기",
+      "prompt": "연결한 도구가 실제로 호출되는지 간단한 작업으로 확인하기"
+    }
+  ],
+  "evaluation": {
+    "prompt": "여기에 실습 결과(명령어 출력, 생성된 문서, 작성한 프롬프트 등)를 붙여넣으면 학습 목표에 도달했는지 평가해 드립니다.",
+    "context": "학습 토픽: \"MCP로 외부 도구 연결하기\". MCP는 AI가 파일·DB·업무 도구에 표준 방식으로 연결되는 통로입니다. 개념부터 실제 연결, 권한 관리까지 다룹니다.",
+    "successCriteria": [
+      "실습 단계를 실제로 실행해 결과물을 만들었다",
+      "결과가 이 토픽의 학습 목표와 이어진다",
+      "무엇이 왜 그렇게 동작했는지 설명할 수 있다"
+    ],
+    "commonMistakes": [
+      "읽기만 하고 실습을 건너뜀",
+      "결과물 없이 계획만 제출함",
+      "환경 설정 문제와 학습 내용의 문제를 혼동함"
+    ]
+  }
+}

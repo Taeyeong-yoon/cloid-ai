@@ -1,0 +1,110 @@
+{
+  "id": "ai-security-basics",
+  "title": "AI 사용 보안과 데이터 관리",
+  "description": "무엇을 넣어도 되고 무엇은 안 되는지. 민감정보 판단 기준, 키 관리, 회사 자료 사용 시 지켜야 할 선을 정리합니다.",
+  "level": "beginner",
+  "tags": [
+    "보안",
+    "개인정보",
+    "실무"
+  ],
+  "resources": [
+    {
+      "type": "doc",
+      "title": "Anthropic 신뢰와 안전 센터",
+      "url": "https://trust.anthropic.com/"
+    },
+    {
+      "type": "doc",
+      "title": "Anthropic 개인정보 처리방침",
+      "url": "https://www.anthropic.com/legal/privacy"
+    },
+    {
+      "type": "video",
+      "title": "AI 쓴다고 데이터 털릴까봐 불안하세요? 기업용 ChatGPT 보안 A to Z",
+      "url": "https://www.youtube.com/watch?v=KfcuppQ4enk",
+      "description": "이번 영상에서는 ChatGPT API를 기업에서 안전하게 활용하는 방법을 알려드립니다. ✓ API는 데이터를 학습하지 않는다? ✓ 기업용 ..."
+    },
+    {
+      "type": "video",
+      "title": "[EBS] 챗GPT, 정보 유출로 벌어지는 일 | 생성형 AI의 정보 수집과 그 위험성 | #지식채널e",
+      "url": "https://www.youtube.com/watch?v=7SrQm6ywmco",
+      "description": "이것은 가상이 아니다 - AI에게 털어놓은 이야기, 어디까지 안전할까? 생성형 AI와 나눈 상담, 업무 대화, 이직 고민… 우리가 입력한 ..."
+    },
+    {
+      "type": "video",
+      "title": "AI 에이전트 보안, 무엇을 해야 되나? [세미남824@토크아이티, 장소영 매니저 / Microsoft, 에쓰핀테크놀로지]",
+      "url": "https://www.youtube.com/watch?v=dLdGCDMNvf0",
+      "description": "AI에이전트, #기업보안, #제로트러스트, #AI거버넌스, #엔터프라이즈AI, #접근통제, #AI리스크관리, #CISO전략, #ResponsibleAI, #AI ..."
+    },
+    {
+      "type": "practice",
+      "title": "최근 AI에 붙여넣은 자료를 되짚어 민감정보가 없었는지 점검하기"
+    },
+    {
+      "type": "practice",
+      "title": "팀에서 쓸 '넣어도 되는 것 / 안 되는 것' 한 장 기준표 만들기"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "AI에 입력하면 안 되는 정보에 가장 가까운 것은?",
+      "options": [
+        "고객 실명과 연락처가 담긴 원본 명단",
+        "공개된 기술 문서",
+        "직접 작성한 샘플 코드",
+        "공개 논문 요약"
+      ],
+      "answer": 0,
+      "explanation": "개인 식별 정보, 계약·단가, 미공개 설계자료는 익명화하거나 제외해야 합니다."
+    },
+    {
+      "question": "API 키가 유출됐을 때 가장 먼저 할 일은?",
+      "options": [
+        "해당 키를 즉시 폐기하고 새로 발급한다",
+        "일단 지켜본다",
+        "비밀번호만 바꾼다",
+        "로그를 삭제한다"
+      ],
+      "answer": 0,
+      "explanation": "유출된 키는 회수가 불가능합니다. 폐기·재발급이 유일한 해결이고, 그다음이 원인 점검입니다."
+    },
+    {
+      "question": "사내 자료로 AI를 활용할 때 현실적인 원칙은?",
+      "options": [
+        "익명화·비기밀 자료로 범위를 정해두고 쓴다",
+        "아무것도 쓰지 않는다",
+        "전부 그대로 올린다",
+        "개인 계정으로만 쓴다"
+      ],
+      "answer": 0,
+      "explanation": "전면 금지도, 무제한 허용도 현실적이지 않습니다. 쓸 수 있는 범위를 명확히 정하는 것이 실무적 해법입니다."
+    }
+  ],
+  "practicePrompts": [
+    {
+      "label": "실습 1",
+      "instruction": "최근 AI에 붙여넣은 자료를 되짚어 민감정보가 없었는지 점검하기",
+      "prompt": "최근 AI에 붙여넣은 자료를 되짚어 민감정보가 없었는지 점검하기"
+    },
+    {
+      "label": "실습 2",
+      "instruction": "팀에서 쓸 '넣어도 되는 것 / 안 되는 것' 한 장 기준표 만들기",
+      "prompt": "팀에서 쓸 '넣어도 되는 것 / 안 되는 것' 한 장 기준표 만들기"
+    }
+  ],
+  "evaluation": {
+    "prompt": "여기에 실습 결과(명령어 출력, 생성된 문서, 작성한 프롬프트 등)를 붙여넣으면 학습 목표에 도달했는지 평가해 드립니다.",
+    "context": "학습 토픽: \"AI 사용 보안과 데이터 관리\". 무엇을 넣어도 되고 무엇은 안 되는지. 민감정보 판단 기준, 키 관리, 회사 자료 사용 시 지켜야 할 선을 정리합니다.",
+    "successCriteria": [
+      "실습 단계를 실제로 실행해 결과물을 만들었다",
+      "결과가 이 토픽의 학습 목표와 이어진다",
+      "무엇이 왜 그렇게 동작했는지 설명할 수 있다"
+    ],
+    "commonMistakes": [
+      "읽기만 하고 실습을 건너뜀",
+      "결과물 없이 계획만 제출함",
+      "환경 설정 문제와 학습 내용의 문제를 혼동함"
+    ]
+  }
+}
