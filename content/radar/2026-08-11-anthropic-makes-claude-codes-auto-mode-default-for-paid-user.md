@@ -1,0 +1,15 @@
+---
+title: "Anthropic makes Claude Code’s auto mode default for paid users - InfoWorld"
+date: "2026-08-11"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQkpOQlI3NlNCa3dpT2F4U3RkUXJPXzdiNHNGMEhWemhoNEo0dFNIaUhoVDVvV1VEX2VrbW1qMkFmV2hGSXlTQ3o3RDJ1MXU3QU52NTgxcUFhV3VkSjl6ZUwxYjVrV0E4Yi1mMm9mc005Wkw5Tkhxdjk1ZXNWYXhOZ25GQ1M5dF95MlAxaFFYRk9aZGtQdDlOU1dVZElJSEo5cXU3c19TSnByVzNm?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMirAFBVV95cUxNQkpOQlI3NlNCa3dpT2F4U3RkUXJPXzdiNHNGMEhWemhoNEo0dFNIaUhoVDVvV1VEX2VrbW1qMkFmV2hGSXlTQ3o3RDJ1MXU3QU52NTgxcUFhV3VkSjl6ZUwxYjVrV0E4Yi1mMm9mc005Wkw5Tkhxdjk1ZXNWYXhOZ25GQ1M5dF95MlAxaFFYRk9aZGtQdDlOU1dVZElJSEo5cXU3c19TSnByVzNm?oc=5' target='"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNQkpOQlI3NlNCa3dpT2F4U3RkUXJPXzdiNHNGMEhWemhoNEo0dFNIaUhoVDVvV1VEX2VrbW1qMkFmV2hGSXlTQ3o3RDJ1MXU3QU52NTgxcUFhV3VkSjl6ZUwxYjVrV0E4Yi1mMm9mc005Wkw5Tkhxdjk1ZXNWYXhOZ25GQ1M5dF95MlAxaFFYRk9aZGtQdDlOU1dVZElJSEo5cXU3c19TSnByVzNm?oc=5" target="
+
+**출처**: [https://news.google.com/rss/articles/CBMirAFBVV95cUxNQkpOQlI3NlNCa3dpT2F4U3RkUXJPXzdiNHNGMEhWemhoNEo0dFNIaUhoVDVvV1VEX2VrbW1qMkFmV2hGSXlTQ3o3RDJ1MXU3QU52NTgxcUFhV3VkSjl6ZUwxYjVrV0E4Yi1mMm9mc005Wkw5Tkhxdjk1ZXNWYXhOZ25GQ1M5dF95MlAxaFFYRk9aZGtQdDlOU1dVZElJSEo5cXU3c19TSnByVzNm?oc=5](https://news.google.com/rss/articles/CBMirAFBVV95cUxNQkpOQlI3NlNCa3dpT2F4U3RkUXJPXzdiNHNGMEhWemhoNEo0dFNIaUhoVDVvV1VEX2VrbW1qMkFmV2hGSXlTQ3o3RDJ1MXU3QU52NTgxcUFhV3VkSjl6ZUwxYjVrV0E4Yi1mMm9mc005Wkw5Tkhxdjk1ZXNWYXhOZ25GQ1M5dF95MlAxaFFYRk9aZGtQdDlOU1dVZElJSEo5cXU3c19TSnByVzNm?oc=5)

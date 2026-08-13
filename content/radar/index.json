@@ -1,5 +1,85 @@
 [
   {
+    "slug": "2026-08-12-anthropicsclaude-code-v21229",
+    "title": "[anthropics/claude-code] v2.1.229",
+    "date": "2026-08-12",
+    "tags": [
+      "claude-code",
+      "remote-control"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
+    "excerpt": "## What's changed\n\n- Documented `claude remote-control --continue` for resuming the most recent Remote Control session\n-"
+  },
+  {
+    "slug": "2026-08-12-deepseek-publicizes-efforts-to-challenge-anthropics-claude-c",
+    "title": "DeepSeek Publicizes Efforts to Challenge Anthropic’s Claude Code - Bloomberg.com",
+    "date": "2026-08-12",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPbVR5Qm1Mb1dzd1BRNzUxYjlnQlhPbmZVV1l3STR0UDV5d19VaDloOTdXUGp2LWNJNk5RVTdrS04zTUw5aEZQUnRXSkRLUXpPUUc2OTdGMHZ2cmVKejNLek56SlhDVG1IbnBoZzRpMFNOa1FvbDVXMDVmemFXVnZDTUxkc2NfQ0thRm9pcVpDZ1FMTWNMWnlud0plN1p5NmhVY0JHdnYzRzU1OVJyNms1T1FlZFlYZw?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPbVR5Qm1Mb1dzd1BRNzUxYjlnQlhPbmZVV1l3STR0UDV5d19VaDloOTd"
+  },
+  {
+    "slug": "2026-08-11-anthropicsclaude-code-v21228",
+    "title": "[anthropics/claude-code] v2.1.228",
+    "date": "2026-08-11",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.228",
+    "excerpt": "## What's changed\n\n- Fixed interactive sessions that could stop redrawing entirely, while the process kept running, afte"
+  },
+  {
+    "slug": "2026-08-11-anthropic-makes-claude-codes-auto-mode-default-for-paid-user",
+    "title": "Anthropic makes Claude Code’s auto mode default for paid users - InfoWorld",
+    "date": "2026-08-11",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQkpOQlI3NlNCa3dpT2F4U3RkUXJPXzdiNHNGMEhWemhoNEo0dFNIaUhoVDVvV1VEX2VrbW1qMkFmV2hGSXlTQ3o3RDJ1MXU3QU52NTgxcUFhV3VkSjl6ZUwxYjVrV0E4Yi1mMm9mc005Wkw5Tkhxdjk1ZXNWYXhOZ25GQ1M5dF95MlAxaFFYRk9aZGtQdDlOU1dVZElJSEo5cXU3c19TSnByVzNm?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNQkpOQlI3NlNCa3dpT2F4U3RkUXJPXzdiNHNGMEhWemhoNEo0dFNIaUh"
+  },
+  {
+    "slug": "2026-08-10-anthropicsclaude-code-v21227",
+    "title": "[anthropics/claude-code] v2.1.227",
+    "date": "2026-08-10",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.227",
+    "excerpt": "## What's changed\n\n- Fixed feature flags being evaluated without the user's subscription tier when a session started wit"
+  },
+  {
+    "slug": "2026-08-10-anthropic-to-put-ai-in-charge-of-reviewing-claude-code-actio",
+    "title": "Anthropic to put AI in charge of reviewing Claude Code actions by default - Help Net Security",
+    "date": "2026-08-10",
+    "tags": [
+      "claude-code",
+      "security"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOemhYelZlbmhJajAxR1hUSHk3czgybWVvel9fVUg2VUs1RmtGWmh0VVRJRGFUay1pWVdwUkoyTnZqazJiZWZlOGU0NHhCZHNESExCNmZBNFEzSWtWcFlkZTNQRW5BNmJRU2c5QWRrenEtX0g3RlVsV3BfLW0tTEdVSw?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxOemhYelZlbmhJajAxR1hUSHk3czgybWVvel9fVUg2VUs1RmtGWmh0VVR"
+  },
+  {
+    "slug": "2026-08-10-aws-continuum-integrates-with-openai-codex-and-anthropic-cla",
+    "title": "AWS Continuum integrates with OpenAI Codex and Anthropic Claude Code in major AI security push - VentureBeat",
+    "date": "2026-08-10",
+    "tags": [
+      "claude-code",
+      "security"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNWE9YZmluV0VTOEs0WlV1UDhfZGF4SXRKRkUyZWx5SVRqQ01ld2g5blVyYVo3ckdOUWhhcHNtVDE2OFBKQzZDOS14TnRVUk5qaUVQaHpSUEtKUW44bl8zdXNweTVNU1ZMNlV0bVR0QlUtMnNKZzhmVnBlQzdLdWt5Tkt0YzRBeVVPUTgtNW4zSXdJYUE3N0FtcThveTBXLVFZZWVKd0JhVHlOc2d5Sm1XVUxPaHpza0lmUnBIdThKVzd4eE5YTEE?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxNWE9YZmluV0VTOEs0WlV1UDhfZGF4SXRKRkUyZWx5SVRqQ01ld2g5blV"
+  },
+  {
     "slug": "2026-03-14-anthropicsclaude-code-v2176",
     "title": "[anthropics/claude-code] v2.1.76",
     "date": "2026-03-14",
@@ -43,7 +123,19 @@
       "Sonnet 4.6"
     ],
     "score": 98,
+    "sourceUrl": "",
     "excerpt": "Anthropic releases Claude Sonnet 4.6, the latest in the Claude 4 family alongside Opus 4.6 and Haiku 4.5. Sonnet 4.6 del"
+  },
+  {
+    "slug": "2026-08-12-some-claude-users-are-mad-that-anthropics-new-watermarks-wil",
+    "title": "Some Claude users are mad that Anthropic's new watermarks will catch them using it at their jobs, classes - TechCrunch",
+    "date": "2026-08-12",
+    "tags": [
+      "tool"
+    ],
+    "score": 96,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMEVNMnZGYXhTZUZwOUdOOEsxUGpaVnJNa1RGdkZ3SE9ldzRoaUF1cVFXcWJ5bzRvaXV1N2txOFAtTkt1andTTWdiZVY4UU92UTBqRHVQbXBYQzlaMVFCZ2dMamhoc05jckdPdnpycmE0SHQ4Snp2LTFMOTRqT3Q2cE5XNDUwREhzMEZBalpEaUhabzJzRFd3X20tQmlGLVlmYVJhb1k5cHpmbEd3dWNZQjhPTC03OVpMM0FhSDAxY1lLZkJMX0w4a3JMR0pBVDJySHVNMg?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMEVNMnZGYXhTZUZwOUdOOEsxUGpaVnJNa1RGdkZ3SE9ldzRoaUF1cVF"
   },
   {
     "slug": "2026-03-11-gemini-3-1-release",
@@ -55,7 +147,19 @@
       "AI Model"
     ],
     "score": 95,
+    "sourceUrl": "",
     "excerpt": "Google releases Gemini 3.1 as the latest in the Gemini family. The model delivers state-of-the-art multimodal reasoning "
+  },
+  {
+    "slug": "2026-08-10-anthropic-makes-claude-codes-auto-mode-the-default-betting-a",
+    "title": "Anthropic Makes Claude Code's Auto Mode the Default, Betting Automation Beats Manual Review - DevOps.com",
+    "date": "2026-08-10",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 94,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQWUs3LXA1cjJQNnlaT1ZOUUtYdGZPQW45bkpGcG1oU091a29wNFRIbm81d25EZlR3eVgycXJiUnpOVjAzOVdJX1Y0aW1LMlF6SzZpNnJDa1ozcXhiREpNXzd5aXNUVDcyUWwyUFBYSFNrQmdQVVlOZDFhczh2N2tmNHVnTTJsVEhqbTBZUEdwQzZoNE1YQlJMTzgyamo5NUF0TDd0dWlJbGVZVk8tNUE?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQWUs3LXA1cjJQNnlaT1ZOUUtYdGZPQW45bkpGcG1oU091a29wNFRIbm8"
   },
   {
     "slug": "2026-03-09-this-new-claude-code-review-tool-uses-ai-agents-to-check-you",
@@ -69,6 +173,17 @@
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNUGtIVVE2QkZrODJrZ3dHNkJwQUZSY09FYU9BdDhkSmZxazJ2MVZva3F"
   },
   {
+    "slug": "2026-08-07-anthropicsanthropic-sdk-python-v01210",
+    "title": "[anthropics/anthropic-sdk-python] v0.121.0",
+    "date": "2026-08-07",
+    "tags": [
+      "tool"
+    ],
+    "score": 93,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.121.0",
+    "excerpt": "## 0.121.0 (2026-08-07)\n\nFull Changelog: [v0.120.2...v0.121.0](https://github.com/anthropics/anthropic-sdk-python/compar"
+  },
+  {
     "slug": "2026-03-13-claude-code-web-search-mcp-integration",
     "title": "Claude Code Gains Real-Time Web Search via MCP Integration",
     "date": "2026-03-13",
@@ -78,6 +193,7 @@
       "Web Search"
     ],
     "score": 93,
+    "sourceUrl": "",
     "excerpt": "Claude Code now officially supports MCP-based web search. During coding sessions, developers can instantly reference up-"
   },
   {
@@ -90,6 +206,7 @@
       "Claude"
     ],
     "score": 91,
+    "sourceUrl": "",
     "excerpt": "An analysis of Claude Market's first week reveals that the highest-earning skills share three traits: narrow scope, fast"
   },
   {
@@ -101,6 +218,7 @@
       "Security"
     ],
     "score": 91,
+    "sourceUrl": "",
     "excerpt": "Anthropic's Claude Code security scanning feature discovered over 500 high-severity vulnerabilities across early enterpr"
   },
   {
@@ -113,6 +231,7 @@
       "Reasoning"
     ],
     "score": 90,
+    "sourceUrl": "",
     "excerpt": "OpenAI's o3 model uses adaptive compute scaling to 'think longer' on hard problems. This overview covers benchmark resul"
   },
   {
@@ -125,6 +244,7 @@
       "Agent"
     ],
     "score": 89,
+    "sourceUrl": "",
     "excerpt": "A practical guide to using Claude Code's native MCP integration to build complete agent workflows — reading files, calli"
   },
   {
@@ -137,6 +257,7 @@
       "Gen-3"
     ],
     "score": 89,
+    "sourceUrl": "",
     "excerpt": "Runway Gen-3 delivers high-fidelity AI video generation with motion brush, camera control, and style reference. The API "
   },
   {
@@ -149,6 +270,7 @@
       "Multi-Agent"
     ],
     "score": 88,
+    "sourceUrl": "",
     "excerpt": "n8n's latest release adds native support for chaining multiple AI agents in a single workflow, with shared memory nodes "
   },
   {
@@ -161,6 +283,7 @@
       "AI Model"
     ],
     "score": 88,
+    "sourceUrl": "",
     "excerpt": "OpenAI launches GPT-5 Mini targeting the small, cost-efficient model market. It directly competes with Claude Haiku and "
   },
   {
@@ -172,6 +295,7 @@
       "Release"
     ],
     "score": 88,
+    "sourceUrl": "",
     "excerpt": "Claude Code v2.1.68 sets Opus 4.6 as the default model on medium effort for Max and Team subscribers. Medium effort work"
   },
   {
@@ -184,6 +308,7 @@
       "Agent"
     ],
     "score": 87,
+    "sourceUrl": "",
     "excerpt": "Genspark's AI agent researches queries across the web and compiles results into interactive 'Sparkpages' with citations "
   },
   {
@@ -196,6 +321,7 @@
       "Agent"
     ],
     "score": 87,
+    "sourceUrl": "",
     "excerpt": "Skill chaining lets you combine multiple focused Claude Market skills into a larger workflow. This overview explains how"
   },
   {
@@ -209,6 +335,7 @@
       "Productivity"
     ],
     "score": 87,
+    "sourceUrl": "",
     "excerpt": "A practical guide to connecting remote MCP servers in Claude Code — enabling full AI agent workflows without relying on "
   },
   {
@@ -222,6 +349,7 @@
       "Trend"
     ],
     "score": 86,
+    "sourceUrl": "",
     "excerpt": "A viral YouTube series documenting how a solo founder replaced five operational roles with n8n workflows powered by Clau"
   },
   {
@@ -267,6 +395,7 @@
       "Research"
     ],
     "score": 86,
+    "sourceUrl": "",
     "excerpt": "Perplexity's Deep Research mode breaks complex queries into sub-questions, searches dozens of sources, and synthesizes a"
   },
   {
@@ -279,6 +408,7 @@
       "Developer Tools"
     ],
     "score": 86,
+    "sourceUrl": "",
     "excerpt": "A growing number of engineering teams at mid-to-large companies are standardizing on Claude Code for code review, docume"
   },
   {
@@ -291,6 +421,7 @@
       "Video AI"
     ],
     "score": 86,
+    "sourceUrl": "",
     "excerpt": "Google's Veo video generation model is available via Vertex AI for enterprise use. Developers can generate short video c"
   },
   {
@@ -303,6 +434,7 @@
       "Agent"
     ],
     "score": 86,
+    "sourceUrl": "",
     "excerpt": "Cursor's Agent Mode lets AI autonomously refactor, test, and document code across multiple files while you continue work"
   },
   {
@@ -315,6 +447,7 @@
       "Developer Tools"
     ],
     "score": 85,
+    "sourceUrl": "",
     "excerpt": "Codex CLI, OpenAI's terminal-based coding assistant, is gaining traction as a daily code review tool. Developers pipe di"
   },
   {
@@ -327,6 +460,7 @@
       "Slack"
     ],
     "score": 85,
+    "sourceUrl": "",
     "excerpt": "This n8n pattern pauses an AI automation and sends a Slack message requesting human approval before the agent takes an i"
   },
   {
@@ -339,6 +473,7 @@
       "Generation"
     ],
     "score": 85,
+    "sourceUrl": "",
     "excerpt": "Suno generates full songs from text prompts across dozens of genres. This overview covers the model's capabilities, API "
   },
   {
@@ -350,6 +485,7 @@
       "Release"
     ],
     "score": 85,
+    "sourceUrl": "",
     "excerpt": "Claude Code v2.1.63 ships two new bundled slash commands: /simplify for automated code cleanup and /batch for running th"
   },
   {
@@ -362,6 +498,7 @@
       "Document Analysis"
     ],
     "score": 84,
+    "sourceUrl": "",
     "excerpt": "Gemini CLI leverages Gemini 3.1's extended context window to analyze large documents from the command line. Developers a"
   },
   {
@@ -374,6 +511,7 @@
       "Voice AI"
     ],
     "score": 84,
+    "sourceUrl": "",
     "excerpt": "ElevenLabs offers low-latency TTS streaming, voice cloning, and multi-language support. This guide covers API integratio"
   },
   {
@@ -386,6 +524,7 @@
       "AI Agent"
     ],
     "score": 84,
+    "sourceUrl": "",
     "excerpt": "n8n now supports native AI Agent nodes with persistent memory and tool calling, directly integrating with Claude, GPT-4o"
   },
   {
@@ -409,6 +548,7 @@
       "Claude Skills"
     ],
     "score": 83,
+    "sourceUrl": "",
     "excerpt": "Anthropic's review team has identified three recurring reasons skills fail Claude Market review: insufficient input vali"
   },
   {
@@ -421,6 +561,7 @@
       "Multimodal"
     ],
     "score": 83,
+    "sourceUrl": "",
     "excerpt": "Walkthrough for integrating Gemini 3.1 Flash/Pro's multimodal inputs — images, audio, and video — with a Next.js API rou"
   },
   {
@@ -444,6 +585,7 @@
       "Tool"
     ],
     "score": 82,
+    "sourceUrl": "",
     "excerpt": "Anthropic SDK for Python v0.84.0 includes new streaming helpers, improved error handling for tool-use loops, and updated"
   },
   {
@@ -456,6 +598,7 @@
       "Frontend"
     ],
     "score": 82,
+    "sourceUrl": "",
     "excerpt": "Next.js 15 rethinks caching (opt-in vs opt-out), enables Turbopack by default for development, and adds full React 19 su"
   }
 ]
