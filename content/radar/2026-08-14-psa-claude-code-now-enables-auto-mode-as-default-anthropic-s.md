@@ -1,0 +1,15 @@
+---
+title: "PSA: Claude Code now enables auto mode as default, Anthropic says - 9to5Mac"
+date: "2026-08-14"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWlZ6V2R2YzEtOHRPRWR5bjlmcWdrcGtIblROSE1nb29PYmhRMnhYMGp5MkpYcVE2YXRNTlVITE9oS3Nwc1dvSUU2S1NnY3ptRC12ODNYSlJxaGZBTnFlODh6eHNDcGc3UjVoWGxUS0NNUVIyUkp1eDdSYzZ2OVlDV19xQ1hsYmllWFI4b3ZiVDVRdjZOTVU2Y0VkZVlZTDJaX3pBUQ?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMipAFBVV95cUxPWlZ6V2R2YzEtOHRPRWR5bjlmcWdrcGtIblROSE1nb29PYmhRMnhYMGp5MkpYcVE2YXRNTlVITE9oS3Nwc1dvSUU2S1NnY3ptRC12ODNYSlJxaGZBTnFlODh6eHNDcGc3UjVoWGxUS0NNUVIyUkp1eDdSYzZ2OVlDV19xQ1hsYmllWFI4b3ZiVDVRdjZOTVU2Y0VkZVlZTDJaX3pBUQ?oc=5' target='_blank'&gt"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxPWlZ6V2R2YzEtOHRPRWR5bjlmcWdrcGtIblROSE1nb29PYmhRMnhYMGp5MkpYcVE2YXRNTlVITE9oS3Nwc1dvSUU2S1NnY3ptRC12ODNYSlJxaGZBTnFlODh6eHNDcGc3UjVoWGxUS0NNUVIyUkp1eDdSYzZ2OVlDV19xQ1hsYmllWFI4b3ZiVDVRdjZOTVU2Y0VkZVlZTDJaX3pBUQ?oc=5" target="_blank"&gt
+
+**출처**: [https://news.google.com/rss/articles/CBMipAFBVV95cUxPWlZ6V2R2YzEtOHRPRWR5bjlmcWdrcGtIblROSE1nb29PYmhRMnhYMGp5MkpYcVE2YXRNTlVITE9oS3Nwc1dvSUU2S1NnY3ptRC12ODNYSlJxaGZBTnFlODh6eHNDcGc3UjVoWGxUS0NNUVIyUkp1eDdSYzZ2OVlDV19xQ1hsYmllWFI4b3ZiVDVRdjZOTVU2Y0VkZVlZTDJaX3pBUQ?oc=5](https://news.google.com/rss/articles/CBMipAFBVV95cUxPWlZ6V2R2YzEtOHRPRWR5bjlmcWdrcGtIblROSE1nb29PYmhRMnhYMGp5MkpYcVE2YXRNTlVITE9oS3Nwc1dvSUU2S1NnY3ptRC12ODNYSlJxaGZBTnFlODh6eHNDcGc3UjVoWGxUS0NNUVIyUkp1eDdSYzZ2OVlDV19xQ1hsYmllWFI4b3ZiVDVRdjZOTVU2Y0VkZVlZTDJaX3pBUQ?oc=5)

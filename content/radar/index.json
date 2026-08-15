@@ -1,5 +1,38 @@
 [
   {
+    "slug": "2026-08-14-anthropicsclaude-code-v21233",
+    "title": "[anthropics/claude-code] v2.1.233",
+    "date": "2026-08-14",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
+    "excerpt": "## What's changed\n\n- Added GitLab merge request URL support to the `--worktree` flag and the `claude agents` view (where"
+  },
+  {
+    "slug": "2026-08-14-psa-claude-code-now-enables-auto-mode-as-default-anthropic-s",
+    "title": "PSA: Claude Code now enables auto mode as default, Anthropic says - 9to5Mac",
+    "date": "2026-08-14",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWlZ6V2R2YzEtOHRPRWR5bjlmcWdrcGtIblROSE1nb29PYmhRMnhYMGp5MkpYcVE2YXRNTlVITE9oS3Nwc1dvSUU2S1NnY3ptRC12ODNYSlJxaGZBTnFlODh6eHNDcGc3UjVoWGxUS0NNUVIyUkp1eDdSYzZ2OVlDV19xQ1hsYmllWFI4b3ZiVDVRdjZOTVU2Y0VkZVlZTDJaX3pBUQ?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxPWlZ6V2R2YzEtOHRPRWR5bjlmcWdrcGtIblROSE1nb29PYmhRMnhYMGp"
+  },
+  {
+    "slug": "2026-08-14-claude-code-now-runs-daily-maintenance-on-anthropics-softwar",
+    "title": "Claude Code now runs daily maintenance on Anthropic's software with a 46 percent merge rate - the-decoder.com",
+    "date": "2026-08-14",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTHJKR21CRlI3aGgwQVp4VWxkai1Pb1dvLW1MbGVYajdORmNKZnhRR1NjZi02WGp2NXhlV3RCNVNWX1pJMm1FV2p5VnNXaFA4Q2psTVFqMEw0VFNyVk56U3hnNzdUQTJDMjM4THh6enBReE5sOGlLNGxGSVJZMTY4anBUcUU5M3kyRFV6V2lpMFdVNHZiUGNrQ2VtekxYU2JBdm5IU2taZU5FZGdnX0tFS2o2Y2F5dw?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPTHJKR21CRlI3aGgwQVp4VWxkai1Pb1dvLW1MbGVYajdORmNKZnhRR1N"
+  },
+  {
     "slug": "2026-08-13-anthropicsclaude-code-v21232",
     "title": "[anthropics/claude-code] v2.1.232",
     "date": "2026-08-13",
@@ -193,6 +226,17 @@
     "score": 98,
     "sourceUrl": "",
     "excerpt": "Anthropic releases Claude Sonnet 4.6, the latest in the Claude 4 family alongside Opus 4.6 and Haiku 4.5. Sonnet 4.6 del"
+  },
+  {
+    "slug": "2026-08-14-how-claudes-text-watermarking-works-anthropic",
+    "title": "How Claude's text watermarking works - Anthropic",
+    "date": "2026-08-14",
+    "tags": [
+      "tool"
+    ],
+    "score": 96,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXR"
   },
   {
     "slug": "2026-08-12-some-claude-users-are-mad-that-anthropics-new-watermarks-wil",
@@ -555,55 +599,5 @@
     "score": 85,
     "sourceUrl": "",
     "excerpt": "Claude Code v2.1.63 ships two new bundled slash commands: /simplify for automated code cleanup and /batch for running th"
-  },
-  {
-    "slug": "gemini-cli-long-context-analysis",
-    "title": "Gemini CLI: Long-Context Document Analysis in Practice",
-    "date": "2026-03-11",
-    "tags": [
-      "Gemini CLI",
-      "Long Context",
-      "Document Analysis"
-    ],
-    "score": 84,
-    "sourceUrl": "",
-    "excerpt": "Gemini CLI leverages Gemini 3.1's extended context window to analyze large documents from the command line. Developers a"
-  },
-  {
-    "slug": "2026-03-elevenlabs-tts",
-    "title": "ElevenLabs: Production-Ready AI Voice — TTS API Guide",
-    "date": "2026-03-04",
-    "tags": [
-      "ElevenLabs",
-      "TTS",
-      "Voice AI"
-    ],
-    "score": 84,
-    "sourceUrl": "",
-    "excerpt": "ElevenLabs offers low-latency TTS streaming, voice cloning, and multi-language support. This guide covers API integratio"
-  },
-  {
-    "slug": "2026-03-n8n-ai-agents",
-    "title": "n8n AI Agents: Building No-Code Automation Workflows with Claude and GPT",
-    "date": "2026-03-04",
-    "tags": [
-      "n8n",
-      "Automation",
-      "AI Agent"
-    ],
-    "score": 84,
-    "sourceUrl": "",
-    "excerpt": "n8n now supports native AI Agent nodes with persistent memory and tool calling, directly integrating with Claude, GPT-4o"
-  },
-  {
-    "slug": "2026-02-25-anthropic-says-claude-code-transformed-programming-now-claud",
-    "title": "Anthropic says Claude Code transformed programming. Now Claude Cowork is coming for the rest of the enterprise. - VentureBeat",
-    "date": "2026-02-25",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 84,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQSmNoMnBEUmFoenFBM1RPU2NBcUh2cDNXM2YwYVhTNno3Z25pTVFWVmJnTDduMzBFRHROc1VTWVBRVHQ5dDB3NjRYQUdJTEk4Q0k0M3JuY21tTGQ3RmVjUUJrbEFqZUFCcTMzTF90R21KeWc1ZWxFZk1ycFd4YUk0Z1Q0QXJ1VlJSMXM1bnlvYTNkX1UyOXhUcjZUamJ2ZDhSTWkwSnBWTklRbkpYWnc?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQSmNoMnBEUmFoenFBM1RPU2NBcUh2cDNXM2YwYVhTNno3Z25pTVFWVmJ"
   }
 ]
