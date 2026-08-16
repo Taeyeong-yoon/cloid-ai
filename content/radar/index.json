@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-08-15-claude-codes-auto-mode-will-be-on-by-default-anthropic-confi",
+    "title": "Claude Code’s auto mode will be on by default, Anthropic confirms - Mashable",
+    "date": "2026-08-15",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjRuOENMVHZvbmQwQ2o5UkhndzZlUVB2T3ROMGNEc0w2dXZhR2YwaDlrQzJPRTdqXzF6X0tYZ0htbU5zNVkwRVJqdDhHNzJj?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjR"
+  },
+  {
     "slug": "2026-08-14-anthropicsclaude-code-v21233",
     "title": "[anthropics/claude-code] v2.1.233",
     "date": "2026-08-14",
@@ -226,6 +237,39 @@
     "score": 98,
     "sourceUrl": "",
     "excerpt": "Anthropic releases Claude Sonnet 4.6, the latest in the Claude 4 family alongside Opus 4.6 and Haiku 4.5. Sonnet 4.6 del"
+  },
+  {
+    "slug": "2026-08-15-anthropic-shares-more-details-about-how-claudes-new-watermar",
+    "title": "Anthropic shares more details about how Claude’s new watermarks will work - TechCrunch",
+    "date": "2026-08-15",
+    "tags": [
+      "tool"
+    ],
+    "score": 96,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdWJ1ZmhOTldsYm5ndl83cmtEeC03dGxRT28tcEZQOXV3MVZUVmFDS3JhZzVzUDBnMFg5N0hPUE9VYTdRd2ljSGU1TUk0VTE1a0hOcFZ0RTNEWFg1OWJkRVdkcVVQSzM3MmR3WDBqQ1lQbXZFaEhOQ0tDaW9za3REd1RaX3ZZdGMwdzRHb3pOMTd5X004V0RLanFRdEhPT05RbXlWVFhDZklWWlk?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdWJ1ZmhOTldsYm5ndl83cmtEeC03dGxRT28tcEZQOXV3MVZUVmFDS3J"
+  },
+  {
+    "slug": "2026-08-14-sponsored-how-claude-code-could-help-reshape-utah-government",
+    "title": "SPONSORED How Claude Code could help reshape Utah government - Axios",
+    "date": "2026-08-14",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 96,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNS11T2w0d18zV2RKcU1sUjZ2YW1OYjR3SXE5bWUzZlAwYldxb3BRQXhVY0VPakdsckJaWVRUaXYtekpPeUplbFRiN0xQT1NqRmxCUG1OWEtjMVhndjNsT2stVEhyZUl3aGJKSlVIR1NFMmcxcWRSSUxNT25wSWhXZEdvdk5tYlltSHc?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQNS11T2w0d18zV2RKcU1sUjZ2YW1OYjR3SXE5bWUzZlAwYldxb3BRQXh"
+  },
+  {
+    "slug": "2026-08-14-claude-code-returns-blank-thinking-blocks-but-reasoning-stil",
+    "title": "Claude Code returns blank thinking blocks, but reasoning still costs you - The Register",
+    "date": "2026-08-14",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 96,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOVU9QRmVaMkpFUUFOeV9PVnZyVTlIeFNzczBOVk1BRUprZjhud3VCVDctckNDMXZxYkN0TXZnekxXZllGTFMwSk1kS2xKc0d2RDJ0RGRza2xMdFdQS2FuaVM5SnpNZUowUlJiVHRBWDQ0cFg5ekNSb2g4SkxIWV8ydDN0ZF9XX3huUFAyRzFwSG0yX1FzVjBkSmNSd2JKM3dlZmdYOXZwLVU2ZHRzOERmaGgtTk9qTC1FLVVkSFlsNGgtMGJhTnVJ?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxOVU9QRmVaMkpFUUFOeV9PVnZyVTlIeFNzczBOVk1BRUprZjhud3VCVDc"
   },
   {
     "slug": "2026-08-14-how-claudes-text-watermarking-works-anthropic",
@@ -548,56 +592,5 @@
     "score": 86,
     "sourceUrl": "",
     "excerpt": "Cursor's Agent Mode lets AI autonomously refactor, test, and document code across multiple files while you continue work"
-  },
-  {
-    "slug": "codex-cli-code-review-workflow",
-    "title": "Codex CLI: How Developers Are Using It for Daily Code Review",
-    "date": "2026-03-12",
-    "tags": [
-      "Codex CLI",
-      "Code Review",
-      "Developer Tools"
-    ],
-    "score": 85,
-    "sourceUrl": "",
-    "excerpt": "Codex CLI, OpenAI's terminal-based coding assistant, is gaining traction as a daily code review tool. Developers pipe di"
-  },
-  {
-    "slug": "n8n-human-in-the-loop-approval",
-    "title": "n8n Human-in-the-Loop: Getting Slack Approval Before Agent Acts",
-    "date": "2026-03-08",
-    "tags": [
-      "n8n",
-      "Human in the Loop",
-      "Slack"
-    ],
-    "score": 85,
-    "sourceUrl": "",
-    "excerpt": "This n8n pattern pauses an AI automation and sends a Slack message requesting human approval before the agent takes an i"
-  },
-  {
-    "slug": "2026-03-suno-ai-music",
-    "title": "Suno AI: How the Leading AI Music Generator Works in 2026",
-    "date": "2026-03-06",
-    "tags": [
-      "Suno",
-      "Music AI",
-      "Generation"
-    ],
-    "score": 85,
-    "sourceUrl": "",
-    "excerpt": "Suno generates full songs from text prompts across dozens of genres. This overview covers the model's capabilities, API "
-  },
-  {
-    "slug": "2026-02-28-anthropicsclaude-code-v2163",
-    "title": "Claude Code v2.1.63 — /simplify and /batch Slash Commands",
-    "date": "2026-02-28",
-    "tags": [
-      "Claude Code",
-      "Release"
-    ],
-    "score": 85,
-    "sourceUrl": "",
-    "excerpt": "Claude Code v2.1.63 ships two new bundled slash commands: /simplify for automated code cleanup and /batch for running th"
   }
 ]
