@@ -239,6 +239,17 @@
     "excerpt": "Anthropic releases Claude Sonnet 4.6, the latest in the Claude 4 family alongside Opus 4.6 and Haiku 4.5. Sonnet 4.6 del"
   },
   {
+    "slug": "2026-08-16-anthropic-confirms-claude-is-down-in-major-outage-affecting-",
+    "title": "Anthropic confirms Claude is down in major outage affecting multiple services - BleepingComputer",
+    "date": "2026-08-16",
+    "tags": [
+      "tool"
+    ],
+    "score": 96,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdUFoSTRXenA2LWo3RksxNG9TMzI3dG1ydUpRempMTVFBZVBNb3N5Qi1Kbi10WlkwcUZ5OFVfTkdpZDB5eU1CZUV1dlBDc0UtQ2FJRTBERE42elFjQXhfcmlqN2U3aWhhT0pxZjFtc0p3V2VRNWxLaWZyYjlhLUF3WmpYS1oxU3BGMkctbTlrbXNzekxCYUpJb1JvXzVlMjk4OHdtSWMxLTFuZzZqWmVVek9CYVpvT1FtMUtvc0pmUkNwaEFLa2ZObU9TOGtfWWpFcnVlS0xVNNIB3AFBVV95cUxQUmdsRndjTnFfckQ5bU5icjdfZFZzSi14NlM2Qm5aX2lFbmpKUTk0cHh2Rm5NWFNqaTNrOWVacXJDeXJuOHIyaFNuM0FyRGwyM1loWjZNNzM0eFc2ZWVDSDl5Q1d3UHhIaEZ1ZmJneEpwMGVSVG5TRHpoUjlUV0dMMkV6SUVEWlo2VEctU0pEN0FwMU9OdjJEZUgtOE9ycDRZZDQ0UGlvaHVTRUotems5WDFWZXlackVyMm1MYUJHZ0h1SzNFRm5YVmtvYU5xZUtGYUJCRl9jQ0kzcUlK?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdUFoSTRXenA2LWo3RksxNG9TMzI3dG1ydUpRempMTVFBZVBNb3N5Qi1"
+  },
+  {
     "slug": "2026-08-15-anthropic-shares-more-details-about-how-claudes-new-watermar",
     "title": "Anthropic shares more details about how Claude’s new watermarks will work - TechCrunch",
     "date": "2026-08-15",
@@ -579,18 +590,5 @@
     "score": 86,
     "sourceUrl": "",
     "excerpt": "Google's Veo video generation model is available via Vertex AI for enterprise use. Developers can generate short video c"
-  },
-  {
-    "slug": "2026-03-cursor-agent-mode",
-    "title": "Cursor Agent Mode: Autonomous Multi-File Coding with Background Tasks",
-    "date": "2026-03-02",
-    "tags": [
-      "Cursor",
-      "AI Code Editor",
-      "Agent"
-    ],
-    "score": 86,
-    "sourceUrl": "",
-    "excerpt": "Cursor's Agent Mode lets AI autonomously refactor, test, and document code across multiple files while you continue work"
   }
 ]
