@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-08-18-anthropicsclaude-code-v21235",
+    "title": "[anthropics/claude-code] v2.1.235",
+    "date": "2026-08-18",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.235",
+    "excerpt": "## What's changed\n\n- Added an optional `spellcheck` setting that underlines misspelled words in the prompt input as you "
+  },
+  {
     "slug": "2026-08-17-anthropicsclaude-code-v21234",
     "title": "[anthropics/claude-code] v2.1.234",
     "date": "2026-08-17",
@@ -261,6 +272,17 @@
     "excerpt": "Anthropic releases Claude Sonnet 4.6, the latest in the Claude 4 family alongside Opus 4.6 and Haiku 4.5. Sonnet 4.6 del"
   },
   {
+    "slug": "2026-08-18-claude-down-anthropic-investigates-multi-model-errors-sq-mag",
+    "title": "Claude Down: Anthropic Investigates Multi-Model Errors - SQ Magazine",
+    "date": "2026-08-18",
+    "tags": [
+      "tool"
+    ],
+    "score": 96,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFB4Y19sM3FlTndNT0pxV3YxRENxeGJEMl92UzVTVkJOZHhfTHBadmc5Y0lUSGNwZ1E4NC1vMFRMZzhDY3UyRVp5cw?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTFB4Y19sM3FlTndNT0pxV3YxRENxeGJEMl92UzVTVkJOZHhfTHBadmc5Y0l"
+  },
+  {
     "slug": "2026-08-16-anthropic-confirms-claude-is-down-in-major-outage-affecting-",
     "title": "Anthropic confirms Claude is down in major outage affecting multiple services - BleepingComputer",
     "date": "2026-08-16",
@@ -384,6 +406,17 @@
     "score": 93,
     "sourceUrl": "",
     "excerpt": "Claude Code now officially supports MCP-based web search. During coding sessions, developers can instantly reference up-"
+  },
+  {
+    "slug": "2026-07-28-anthropicsanthropic-sdk-python-v01202",
+    "title": "[anthropics/anthropic-sdk-python] v0.120.2",
+    "date": "2026-07-28",
+    "tags": [
+      "mcp"
+    ],
+    "score": 91,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.120.2",
+    "excerpt": "## 0.120.2 (2026-07-28)\n\nFull Changelog: [v0.120.1...v0.120.2](https://github.com/anthropics/anthropic-sdk-python/compar"
   },
   {
     "slug": "claude-market-week-one-analysis",
@@ -551,40 +584,5 @@
     "score": 86,
     "sourceUrl": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUk9fWUppQmRlT1dleGF0MWl3NnlvcGtBOVAyUGNTbUQ3NGZEcHhWTE13OWxGb19WZ1g0ME9iMXh5V1Q3d1dpZTFpQlI3TVRfQ0VXdjVSMUZ4cnFrU3pDU2xXb0pHU1g1M01peWlZaHV3UkU1SnFuYVlqWnlraXprb1JEdFB0VG84ZUU5ZDBBVUZCMExHVkRGWmlzSTBncENKMW4tTQ?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNUk9fWUppQmRlT1dleGF0MWl3NnlvcGtBOVAyUGNTbUQ3NGZEcHhWTE1"
-  },
-  {
-    "slug": "2026-03-11-anthropic-launched-an-ai-code-reviewer-some-developers-say-i",
-    "title": "Anthropic launched an AI code reviewer. Some developers say it's expensive and undermines senior engineers. - Business Insider",
-    "date": "2026-03-11",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 86,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNXzVIRWZLRGxHcXNtVGRreS02dFFhS0NvVE52NEhoSEJJQjIxSjE0Rm9nN2l1U3hNY20wYmtFY29IVV9jUnVhMjJ5dk1kamxRWXc4LUhvN0VuNjlMYmU2R083ZE1UOUpZTlo2VXBKVUNxbUpYWnl1MldwcEVreTBjQjc0OVpRSkFKVy1Kd0dIUExQM2NOdWhWa19QMV9NS3BzcTNmb0lXVHBLaFR3LVE?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNXzVIRWZLRGxHcXNtVGRreS02dFFhS0NvVE52NEhoSEJJQjIxSjE0Rm9"
-  },
-  {
-    "slug": "2026-03-09-anthropic-launches-code-review-tool-to-check-flood-of-ai-gen",
-    "title": "Anthropic launches code review tool to check flood of AI-generated code - TechCrunch",
-    "date": "2026-03-09",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 86,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbnFScENmekJRVklGN1VvTmFyQVNrWjNpQ2xwWnY4NnczYU5BZkJySzkzUnZVbjF3aXdnSGJiMU5ybWpXMW9oSlJkYS11YlZVOGdRRndLM2tieXZHYkEyaUMyT2dLSFJVaHhOUm5neTlia0c5b1UyVFYydHQwakRCanJ2QWhuMDBkeVU0aEl3SWZtUVh0ZllpV3h0bGdLekFtTGYxNm45UWFaQQ?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbnFScENmekJRVklGN1VvTmFyQVNrWjNpQ2xwWnY4NnczYU5BZkJySzk"
-  },
-  {
-    "slug": "2026-03-perplexity-deep-research",
-    "title": "Perplexity Deep Research: Autonomous Multi-Step Research with Source Verification",
-    "date": "2026-03-07",
-    "tags": [
-      "Perplexity",
-      "AI Search",
-      "Research"
-    ],
-    "score": 86,
-    "sourceUrl": "",
-    "excerpt": "Perplexity's Deep Research mode breaks complex queries into sub-questions, searches dozens of sources, and synthesizes a"
   }
 ]
