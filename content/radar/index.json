@@ -1,5 +1,60 @@
 [
   {
+    "slug": "2026-08-19-anthropicsanthropic-sdk-python-v01250",
+    "title": "[anthropics/anthropic-sdk-python] v0.125.0",
+    "date": "2026-08-19",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0",
+    "excerpt": "## 0.125.0 (2026-08-19)\n\nFull Changelog: [v0.124.0...v0.125.0](https://github.com/anthropics/anthropic-sdk-python/compar"
+  },
+  {
+    "slug": "2026-08-19-anthropicsanthropic-sdk-python-v01240",
+    "title": "[anthropics/anthropic-sdk-python] v0.124.0",
+    "date": "2026-08-19",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.124.0",
+    "excerpt": "## 0.124.0 (2026-08-19)\n\nFull Changelog: [v0.123.0...v0.124.0](https://github.com/anthropics/anthropic-sdk-python/compar"
+  },
+  {
+    "slug": "2026-08-19-anthropicsanthropic-sdk-python-v01230",
+    "title": "[anthropics/anthropic-sdk-python] v0.123.0",
+    "date": "2026-08-19",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.123.0",
+    "excerpt": "## 0.123.0 (2026-08-18)\n\nFull Changelog: [v0.122.0...v0.123.0](https://github.com/anthropics/anthropic-sdk-python/compar"
+  },
+  {
+    "slug": "2026-08-19-i-use-claude-code-without-paying-a-dime-to-anthropic-makeuse",
+    "title": "I use Claude Code without paying a dime to Anthropic - MakeUseOf",
+    "date": "2026-08-19",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNSEF6Y3R5WEVCQ3h2RVZHNGRXOHJDX0g2Yzg0ZXd1cTYtVkY5Z3FzUFFnYjZWM0JzZ0dhWnd3eEwySm1lTUFGeF9tOTRaRklhTjhiQTM3Y3hJb1I1VnVjaUZSU2Z1Qkh3QUVWQmNvTEZOcmhtWW1VMDh6Z0dPZG1PZGQtZktGZw?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNSEF6Y3R5WEVCQ3h2RVZHNGRXOHJDX0g2Yzg0ZXd1cTYtVkY5Z3FzUFF"
+  },
+  {
+    "slug": "2026-08-19-claude-codes-auto-mode-will-be-on-by-default-anthropic-confi",
+    "title": "Claude Code’s auto mode will be on by default, Anthropic confirms - Mashable",
+    "date": "2026-08-19",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjRuOENMVHZvbmQwQ2o5UkhndzZlUVB2T3ROMGNEc0w2dXZhR2YwaDlrQzJPRTdqXzF6X0tYZ0htbU5zNVkwRVJqdDhHNzJj?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjR"
+  },
+  {
     "slug": "2026-08-18-anthropicsclaude-code-v21235",
     "title": "[anthropics/claude-code] v2.1.235",
     "date": "2026-08-18",
@@ -272,6 +327,17 @@
     "excerpt": "Anthropic releases Claude Sonnet 4.6, the latest in the Claude 4 family alongside Opus 4.6 and Haiku 4.5. Sonnet 4.6 del"
   },
   {
+    "slug": "2026-08-19-claude-codes-temporary-usage-boost-expires-tonight-heres-wha",
+    "title": "Claude Code’s Temporary Usage Boost Expires Tonight. Here’s What Actually Changes - DevOps.com",
+    "date": "2026-08-19",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 96,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPRkh5TFNKWHNTQXZzUV9XTGthdUZBQzJzRThrQlRwZ1YzalBhUEYtU29Sc2FBcWNDbWctQzFRRkxiQ2xtaWRxT2pUOGsyclBLME9udDgyX0tpRjM3NlV2V0dKME5QMDF1VHNHZ0VSSGF0amNaU09SSXljNzd2S1ZYN2twTUlyUWJHVG5iTDNmbExPN3ZDWjBqTU10U2JRTFU?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPRkh5TFNKWHNTQXZzUV9XTGthdUZBQzJzRThrQlRwZ1YzalBhUEYtU29"
+  },
+  {
     "slug": "2026-08-18-claude-down-anthropic-investigates-multi-model-errors-sq-mag",
     "title": "Claude Down: Anthropic Investigates Multi-Model Errors - SQ Magazine",
     "date": "2026-08-18",
@@ -507,82 +573,5 @@
     "score": 88,
     "sourceUrl": "",
     "excerpt": "OpenAI launches GPT-5 Mini targeting the small, cost-efficient model market. It directly competes with Claude Haiku and "
-  },
-  {
-    "slug": "2026-03-04-anthropicsclaude-code-v2168",
-    "title": "Claude Code v2.1.68 — Opus 4.6 Default for Max & Team Subscribers",
-    "date": "2026-03-04",
-    "tags": [
-      "Claude Code",
-      "Release"
-    ],
-    "score": 88,
-    "sourceUrl": "",
-    "excerpt": "Claude Code v2.1.68 sets Opus 4.6 as the default model on medium effort for Max and Team subscribers. Medium effort work"
-  },
-  {
-    "slug": "2026-03-genspark-ai-search",
-    "title": "Genspark: AI-Native Search That Builds Interactive Research Pages",
-    "date": "2026-03-10",
-    "tags": [
-      "Genspark",
-      "AI Search",
-      "Agent"
-    ],
-    "score": 87,
-    "sourceUrl": "",
-    "excerpt": "Genspark's AI agent researches queries across the web and compiles results into interactive 'Sparkpages' with citations "
-  },
-  {
-    "slug": "skill-chaining-mega-agent",
-    "title": "Skill Chaining: Building Complex Agents by Linking Claude Skills",
-    "date": "2026-03-09",
-    "tags": [
-      "Claude Market",
-      "Skill Chaining",
-      "Agent"
-    ],
-    "score": 87,
-    "sourceUrl": "",
-    "excerpt": "Skill chaining lets you combine multiple focused Claude Market skills into a larger workflow. This overview explains how"
-  },
-  {
-    "slug": "claude-code-remote-mcp",
-    "title": "Claude Code + Remote MCP: Run Powerful AI Agents Without a Local Filesystem",
-    "date": "2026-03-01",
-    "tags": [
-      "Claude",
-      "MCP",
-      "Remote",
-      "Productivity"
-    ],
-    "score": 87,
-    "sourceUrl": "",
-    "excerpt": "A practical guide to connecting remote MCP servers in Claude Code — enabling full AI agent workflows without relying on "
-  },
-  {
-    "slug": "youtube-trend-n8n-claude-startup-automation",
-    "title": "Trending: 'I Automated My Entire Startup with n8n + Claude'",
-    "date": "2026-03-13",
-    "tags": [
-      "n8n",
-      "Claude",
-      "Automation",
-      "Trend"
-    ],
-    "score": 86,
-    "sourceUrl": "",
-    "excerpt": "A viral YouTube series documenting how a solo founder replaced five operational roles with n8n workflows powered by Clau"
-  },
-  {
-    "slug": "2026-03-11-claude-ai-and-code-are-experiencing-log-in-issues-and-slow-p",
-    "title": "Claude AI and Code are experiencing log in issues and slow performance [U] - 9to5Mac",
-    "date": "2026-03-11",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 86,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUk9fWUppQmRlT1dleGF0MWl3NnlvcGtBOVAyUGNTbUQ3NGZEcHhWTE13OWxGb19WZ1g0ME9iMXh5V1Q3d1dpZTFpQlI3TVRfQ0VXdjVSMUZ4cnFrU3pDU2xXb0pHU1g1M01peWlZaHV3UkU1SnFuYVlqWnlraXprb1JEdFB0VG84ZUU5ZDBBVUZCMExHVkRGWmlzSTBncENKMW4tTQ?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNUk9fWUppQmRlT1dleGF0MWl3NnlvcGtBOVAyUGNTbUQ3NGZEcHhWTE1"
   }
 ]
