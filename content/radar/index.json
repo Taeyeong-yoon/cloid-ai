@@ -1,5 +1,82 @@
 [
   {
+    "slug": "2026-08-20-anthropicsclaude-code-v21238",
+    "title": "[anthropics/claude-code] v2.1.238",
+    "date": "2026-08-20",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
+    "excerpt": "## What's changed\n\n- Added a `keybindingFlavor` setting: set it to `\"readline\"` to make Ctrl+W in the prompt delete back"
+  },
+  {
+    "slug": "2026-08-20-anthropicsclaude-code-v21237",
+    "title": "[anthropics/claude-code] v2.1.237",
+    "date": "2026-08-20",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237",
+    "excerpt": "## What's changed\n\n- Fixed prompt caching for sessions using an LLM gateway or custom base URL\n- Added a built-in \"Conci"
+  },
+  {
+    "slug": "2026-08-20-anthropicsanthropic-sdk-python-v100",
+    "title": "[anthropics/anthropic-sdk-python] v1.0.0",
+    "date": "2026-08-20",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.0.0",
+    "excerpt": "## 1.0.0 (2026-08-20)\n\nFull Changelog: [v0.125.0...v1.0.0](https://github.com/anthropics/anthropic-sdk-python/compare/v0"
+  },
+  {
+    "slug": "2026-08-19-anthropicsclaude-code-v21236",
+    "title": "[anthropics/claude-code] v2.1.236",
+    "date": "2026-08-19",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
+    "excerpt": "## What's changed\n\n- Added `ANTHROPIC_DEFAULT_MODEL` environment variable: sets the model new sessions start on, while a"
+  },
+  {
+    "slug": "2026-08-19-anthropicsanthropic-sdk-typescript-vertex-sdk-v0195",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.5",
+    "date": "2026-08-19",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.5",
+    "excerpt": "## 0.19.5 (2026-08-19)\n\nFull Changelog: [vertex-sdk-v0.19.4...vertex-sdk-v0.19.5](https://github.com/anthropics/anthropi"
+  },
+  {
+    "slug": "2026-08-19-anthropicsanthropic-sdk-typescript-sdk-v01200",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.120.0",
+    "date": "2026-08-19",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.120.0",
+    "excerpt": "## 0.120.0 (2026-08-19)\n\nFull Changelog: [sdk-v0.119.0...sdk-v0.120.0](https://github.com/anthropics/anthropic-sdk-types"
+  },
+  {
+    "slug": "2026-08-19-anthropicsanthropic-sdk-typescript-sdk-v01190",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.119.0",
+    "date": "2026-08-19",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.119.0",
+    "excerpt": "## 0.119.0 (2026-08-19)\n\nFull Changelog: [sdk-v0.118.0...sdk-v0.119.0](https://github.com/anthropics/anthropic-sdk-types"
+  },
+  {
     "slug": "2026-08-19-anthropicsanthropic-sdk-python-v01250",
     "title": "[anthropics/anthropic-sdk-python] v0.125.0",
     "date": "2026-08-19",
@@ -483,95 +560,5 @@
     "score": 91,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.120.2",
     "excerpt": "## 0.120.2 (2026-07-28)\n\nFull Changelog: [v0.120.1...v0.120.2](https://github.com/anthropics/anthropic-sdk-python/compar"
-  },
-  {
-    "slug": "claude-market-week-one-analysis",
-    "title": "Claude Market Week 1: What Top-Earning Skills Have in Common",
-    "date": "2026-03-14",
-    "tags": [
-      "Claude Market",
-      "Monetization",
-      "Claude"
-    ],
-    "score": 91,
-    "sourceUrl": "",
-    "excerpt": "An analysis of Claude Market's first week reveals that the highest-earning skills share three traits: narrow scope, fast"
-  },
-  {
-    "slug": "2026-02-23-anthropics-claude-code-security-finds-500-vulnerabilities",
-    "title": "Claude Code Security Scanner Finds 500+ Vulnerabilities Across Enterprise Codebases",
-    "date": "2026-02-23",
-    "tags": [
-      "Claude Code",
-      "Security"
-    ],
-    "score": 91,
-    "sourceUrl": "",
-    "excerpt": "Anthropic's Claude Code security scanning feature discovered over 500 high-severity vulnerabilities across early enterpr"
-  },
-  {
-    "slug": "2026-03-openai-o3-reasoning-model",
-    "title": "OpenAI o3: A Deep Dive into the New Extended Reasoning Model",
-    "date": "2026-03-05",
-    "tags": [
-      "OpenAI",
-      "o3",
-      "Reasoning"
-    ],
-    "score": 90,
-    "sourceUrl": "",
-    "excerpt": "OpenAI's o3 model uses adaptive compute scaling to 'think longer' on hard problems. This overview covers benchmark resul"
-  },
-  {
-    "slug": "claude-code-mcp-agent-workflow",
-    "title": "Claude Code + MCP: Building Agent Workflows Without Extra Infrastructure",
-    "date": "2026-03-10",
-    "tags": [
-      "Claude Code",
-      "MCP",
-      "Agent"
-    ],
-    "score": 89,
-    "sourceUrl": "",
-    "excerpt": "A practical guide to using Claude Code's native MCP integration to build complete agent workflows — reading files, calli"
-  },
-  {
-    "slug": "2026-03-runway-gen3-video",
-    "title": "Runway Gen-3: State-of-the-Art AI Video Generation for Creators",
-    "date": "2026-03-08",
-    "tags": [
-      "Runway",
-      "Video AI",
-      "Gen-3"
-    ],
-    "score": 89,
-    "sourceUrl": "",
-    "excerpt": "Runway Gen-3 delivers high-fidelity AI video generation with motion brush, camera control, and style reference. The API "
-  },
-  {
-    "slug": "n8n-latest-multi-agent-pipelines",
-    "title": "n8n Latest: Multi-Agent Pipeline Support Gets Stronger",
-    "date": "2026-03-14",
-    "tags": [
-      "n8n",
-      "Automation",
-      "Multi-Agent"
-    ],
-    "score": 88,
-    "sourceUrl": "",
-    "excerpt": "n8n's latest release adds native support for chaining multiple AI agents in a single workflow, with shared memory nodes "
-  },
-  {
-    "slug": "2026-03-11-openai-gpt5-mini-released-competitive-pricing",
-    "title": "OpenAI GPT-5 Mini Released — Targeting Cost-Efficient API Use Cases",
-    "date": "2026-03-11",
-    "tags": [
-      "OpenAI",
-      "GPT-5",
-      "AI Model"
-    ],
-    "score": 88,
-    "sourceUrl": "",
-    "excerpt": "OpenAI launches GPT-5 Mini targeting the small, cost-efficient model market. It directly competes with Claude Haiku and "
   }
 ]
