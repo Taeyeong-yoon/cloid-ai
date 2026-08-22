@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-08-21-anthropicsclaude-code-v21239",
+    "title": "[anthropics/claude-code] v2.1.239",
+    "date": "2026-08-21",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.239",
+    "excerpt": "## What's changed\n\n- Cost estimates (`/cost`, status line, `--max-budget-usd`) now include the 1.1× US-only-inference pr"
+  },
+  {
     "slug": "2026-08-20-anthropicsclaude-code-v21238",
     "title": "[anthropics/claude-code] v2.1.238",
     "date": "2026-08-20",
@@ -549,16 +560,5 @@
     "score": 93,
     "sourceUrl": "",
     "excerpt": "Claude Code now officially supports MCP-based web search. During coding sessions, developers can instantly reference up-"
-  },
-  {
-    "slug": "2026-07-28-anthropicsanthropic-sdk-python-v01202",
-    "title": "[anthropics/anthropic-sdk-python] v0.120.2",
-    "date": "2026-07-28",
-    "tags": [
-      "mcp"
-    ],
-    "score": 91,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.120.2",
-    "excerpt": "## 0.120.2 (2026-07-28)\n\nFull Changelog: [v0.120.1...v0.120.2](https://github.com/anthropics/anthropic-sdk-python/compar"
   }
 ]
