@@ -1,5 +1,27 @@
 [
   {
+    "slug": "2026-08-23-anthropicsclaude-code-v21241",
+    "title": "[anthropics/claude-code] v2.1.241",
+    "date": "2026-08-23",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.241",
+    "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
+  },
+  {
+    "slug": "2026-08-22-anthropicsclaude-code-v21240",
+    "title": "[anthropics/claude-code] v2.1.240",
+    "date": "2026-08-22",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.240",
+    "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
+  },
+  {
     "slug": "2026-08-21-anthropicsclaude-code-v21239",
     "title": "[anthropics/claude-code] v2.1.239",
     "date": "2026-08-21",
@@ -415,6 +437,28 @@
     "excerpt": "Anthropic releases Claude Sonnet 4.6, the latest in the Claude 4 family alongside Opus 4.6 and Haiku 4.5. Sonnet 4.6 del"
   },
   {
+    "slug": "2026-08-22-claude-code-adds-ai-design-cross-session-chat-startuphubai",
+    "title": "Claude Code Adds AI Design, Cross-Session Chat - StartupHub.ai",
+    "date": "2026-08-22",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 96,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQT2xzQVBlUlJHUjEwZzdkQkM0Y3JWYXctOTVZY3E1SXFzYmdIa2ZoaUwxNFU2RzJWQjVmeFA5NWJTb2tBX0xROVN6NzhJTEwwTmhZS203UkxHT29CRzVGYVZ4Wjd3UnlRSHVjd3RNejRIQjEwX05kYWloVmpJd2xUQ0lwNlJKWGtXeXNMR2ZqRlpaUDRPWjdSa1d1aVdyMjYzQ2VLZWZwaWNfSENR?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQT2xzQVBlUlJHUjEwZzdkQkM0Y3JWYXctOTVZY3E1SXFzYmdIa2ZoaUw"
+  },
+  {
+    "slug": "2026-08-22-has-codex-started-to-strike-back-against-claude-code-key-ai-",
+    "title": "Has Codex Started to Strike Back Against Claude Code? Key AI Code Assistant Showdown - 36Kr",
+    "date": "2026-08-22",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 96,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE94d3d0S0RPMkstQzNXYlpoUHRFeTRvcTJoMVpJWTdncWdkbGtRakdWaDEzMXhDZmhIU2Z1a1BiQ0llRFZJWGdMM2VHZmI2bWpHR2ww?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE94d3d0S0RPMkstQzNXYlpoUHRFeTRvcTJoMVpJWTdncWdkbGtRakdWaDE"
+  },
+  {
     "slug": "2026-08-19-claude-codes-temporary-usage-boost-expires-tonight-heres-wha",
     "title": "Claude Code’s Temporary Usage Boost Expires Tonight. Here’s What Actually Changes - DevOps.com",
     "date": "2026-08-19",
@@ -514,51 +558,5 @@
     "score": 95,
     "sourceUrl": "",
     "excerpt": "Google releases Gemini 3.1 as the latest in the Gemini family. The model delivers state-of-the-art multimodal reasoning "
-  },
-  {
-    "slug": "2026-08-10-anthropic-makes-claude-codes-auto-mode-the-default-betting-a",
-    "title": "Anthropic Makes Claude Code's Auto Mode the Default, Betting Automation Beats Manual Review - DevOps.com",
-    "date": "2026-08-10",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 94,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQWUs3LXA1cjJQNnlaT1ZOUUtYdGZPQW45bkpGcG1oU091a29wNFRIbm81d25EZlR3eVgycXJiUnpOVjAzOVdJX1Y0aW1LMlF6SzZpNnJDa1ozcXhiREpNXzd5aXNUVDcyUWwyUFBYSFNrQmdQVVlOZDFhczh2N2tmNHVnTTJsVEhqbTBZUEdwQzZoNE1YQlJMTzgyamo5NUF0TDd0dWlJbGVZVk8tNUE?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQWUs3LXA1cjJQNnlaT1ZOUUtYdGZPQW45bkpGcG1oU091a29wNFRIbm8"
-  },
-  {
-    "slug": "2026-03-09-this-new-claude-code-review-tool-uses-ai-agents-to-check-you",
-    "title": "This new Claude Code Review tool uses AI agents to check your pull requests for bugs - here's how - ZDNET",
-    "date": "2026-03-09",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 94,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNUGtIVVE2QkZrODJrZ3dHNkJwQUZSY09FYU9BdDhkSmZxazJ2MVZva3FSVTlRTE02ZUt4ZHh2TFFSRWcxUlQyOVlsZ0V0V05YOWN1VnJKemxwWXdLWDJMX1ZndVFrLXh0dXdKQk1pUzRhTTZ6c0RDR2RDbVFKLXpJVHBqS084VFVjbWhvM09XSQ?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNUGtIVVE2QkZrODJrZ3dHNkJwQUZSY09FYU9BdDhkSmZxazJ2MVZva3F"
-  },
-  {
-    "slug": "2026-08-07-anthropicsanthropic-sdk-python-v01210",
-    "title": "[anthropics/anthropic-sdk-python] v0.121.0",
-    "date": "2026-08-07",
-    "tags": [
-      "tool"
-    ],
-    "score": 93,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.121.0",
-    "excerpt": "## 0.121.0 (2026-08-07)\n\nFull Changelog: [v0.120.2...v0.121.0](https://github.com/anthropics/anthropic-sdk-python/compar"
-  },
-  {
-    "slug": "2026-03-13-claude-code-web-search-mcp-integration",
-    "title": "Claude Code Gains Real-Time Web Search via MCP Integration",
-    "date": "2026-03-13",
-    "tags": [
-      "Claude Code",
-      "MCP",
-      "Web Search"
-    ],
-    "score": 93,
-    "sourceUrl": "",
-    "excerpt": "Claude Code now officially supports MCP-based web search. During coding sessions, developers can instantly reference up-"
   }
 ]
