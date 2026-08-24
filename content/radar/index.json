@@ -437,6 +437,17 @@
     "excerpt": "Anthropic releases Claude Sonnet 4.6, the latest in the Claude 4 family alongside Opus 4.6 and Haiku 4.5. Sonnet 4.6 del"
   },
   {
+    "slug": "2026-08-23-anthropic-is-testing-hub-mode-a-control-center-for-ai-sub-ag",
+    "title": "Anthropic Is Testing Hub Mode: A Control Center for AI Sub-Agents - Memeburn",
+    "date": "2026-08-23",
+    "tags": [
+      "tool"
+    ],
+    "score": 96,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1tWkRQdUVwcEQxejNfdFN5TElhNC1MRW9qcTNFa3ExTmxtOE12X09admc2WHF1N2VkWXhYQWlZZXR0RHIyUzF0MTZpU2RVWmg4bzFXTjdVbC0yc3dtdnZUa1BpTXY4WG9Rd3c?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE1tWkRQdUVwcEQxejNfdFN5TElhNC1MRW9qcTNFa3ExTmxtOE12X09admc"
+  },
+  {
     "slug": "2026-08-22-claude-code-adds-ai-design-cross-session-chat-startuphubai",
     "title": "Claude Code Adds AI Design, Cross-Session Chat - StartupHub.ai",
     "date": "2026-08-22",
@@ -545,18 +556,5 @@
     "score": 96,
     "sourceUrl": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMEVNMnZGYXhTZUZwOUdOOEsxUGpaVnJNa1RGdkZ3SE9ldzRoaUF1cVFXcWJ5bzRvaXV1N2txOFAtTkt1andTTWdiZVY4UU92UTBqRHVQbXBYQzlaMVFCZ2dMamhoc05jckdPdnpycmE0SHQ4Snp2LTFMOTRqT3Q2cE5XNDUwREhzMEZBalpEaUhabzJzRFd3X20tQmlGLVlmYVJhb1k5cHpmbEd3dWNZQjhPTC03OVpMM0FhSDAxY1lLZkJMX0w4a3JMR0pBVDJySHVNMg?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMEVNMnZGYXhTZUZwOUdOOEsxUGpaVnJNa1RGdkZ3SE9ldzRoaUF1cVF"
-  },
-  {
-    "slug": "2026-03-11-gemini-3-1-release",
-    "title": "Google Gemini 3.1 — Latest Flagship Model with Advanced Multimodal Reasoning",
-    "date": "2026-03-11",
-    "tags": [
-      "Gemini",
-      "Google",
-      "AI Model"
-    ],
-    "score": 95,
-    "sourceUrl": "",
-    "excerpt": "Google releases Gemini 3.1 as the latest in the Gemini family. The model delivers state-of-the-art multimodal reasoning "
   }
 ]
