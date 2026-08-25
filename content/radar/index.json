@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-08-24-anthropicsclaude-code-v21243",
+    "title": "[anthropics/claude-code] v2.1.243",
+    "date": "2026-08-24",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.243",
+    "excerpt": "## What's changed\n\n- Added a Loops breakdown to `/usage`: per-loop run count, total tokens, tokens per run, and last run"
+  },
+  {
     "slug": "2026-08-23-anthropicsclaude-code-v21241",
     "title": "[anthropics/claude-code] v2.1.241",
     "date": "2026-08-23",
@@ -437,6 +448,28 @@
     "excerpt": "Anthropic releases Claude Sonnet 4.6, the latest in the Claude 4 family alongside Opus 4.6 and Haiku 4.5. Sonnet 4.6 del"
   },
   {
+    "slug": "2026-08-24-ai-weekly-codex-growth-overtakes-claude-code-deepseek-quietl",
+    "title": "AI Weekly: Codex Growth Overtakes Claude Code; DeepSeek Quietly Launches Vision Model - finance.biggo.com",
+    "date": "2026-08-24",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 96,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTE02dlFiYVh5emEzZjNBdlJZN3BqRWtraVJ3T2kwYXdVajJHZmh6MGszSk1ydmJmVDlaV254WjFlSjRlZHdGYkhvc0Mtd3pKV212Y1NQSk0xVURtM2VIbGFqamozaERCTVFNcm91RDZDMndzTEE1SUE?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE02dlFiYVh5emEzZjNBdlJZN3BqRWtraVJ3T2kwYXdVajJHZmh6MGszSk1"
+  },
+  {
+    "slug": "2026-08-24-claude-is-down-anthropic-scrambles-to-fix-the-global-outage-",
+    "title": "Claude is Down : Anthropic Scrambles to Fix The Global Outage - SQ Magazine",
+    "date": "2026-08-24",
+    "tags": [
+      "tool"
+    ],
+    "score": 96,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBXbk5yMy1GTW5QY0tFbEJ1bk0tUlp3X3ppd2JocmF1Zmg0RjVoWHJJUm0xQ0x6c3RSVmYwczlrMWVYNDE3cllZRmNjeUpMNTFlQlg0eThLSW5JVDM0emFzdHE5cC1oUHlsSVNCR2lRVlphNEdvMVhj?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTFBXbk5yMy1GTW5QY0tFbEJ1bk0tUlp3X3ppd2JocmF1Zmg0RjVoWHJJUm0"
+  },
+  {
     "slug": "2026-08-23-anthropic-is-testing-hub-mode-a-control-center-for-ai-sub-ag",
     "title": "Anthropic Is Testing Hub Mode: A Control Center for AI Sub-Agents - Memeburn",
     "date": "2026-08-23",
@@ -523,38 +556,5 @@
     "score": 96,
     "sourceUrl": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNS11T2w0d18zV2RKcU1sUjZ2YW1OYjR3SXE5bWUzZlAwYldxb3BRQXhVY0VPakdsckJaWVRUaXYtekpPeUplbFRiN0xQT1NqRmxCUG1OWEtjMVhndjNsT2stVEhyZUl3aGJKSlVIR1NFMmcxcWRSSUxNT25wSWhXZEdvdk5tYlltSHc?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQNS11T2w0d18zV2RKcU1sUjZ2YW1OYjR3SXE5bWUzZlAwYldxb3BRQXh"
-  },
-  {
-    "slug": "2026-08-14-claude-code-returns-blank-thinking-blocks-but-reasoning-stil",
-    "title": "Claude Code returns blank thinking blocks, but reasoning still costs you - The Register",
-    "date": "2026-08-14",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 96,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOVU9QRmVaMkpFUUFOeV9PVnZyVTlIeFNzczBOVk1BRUprZjhud3VCVDctckNDMXZxYkN0TXZnekxXZllGTFMwSk1kS2xKc0d2RDJ0RGRza2xMdFdQS2FuaVM5SnpNZUowUlJiVHRBWDQ0cFg5ekNSb2g4SkxIWV8ydDN0ZF9XX3huUFAyRzFwSG0yX1FzVjBkSmNSd2JKM3dlZmdYOXZwLVU2ZHRzOERmaGgtTk9qTC1FLVVkSFlsNGgtMGJhTnVJ?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxOVU9QRmVaMkpFUUFOeV9PVnZyVTlIeFNzczBOVk1BRUprZjhud3VCVDc"
-  },
-  {
-    "slug": "2026-08-14-how-claudes-text-watermarking-works-anthropic",
-    "title": "How Claude's text watermarking works - Anthropic",
-    "date": "2026-08-14",
-    "tags": [
-      "tool"
-    ],
-    "score": 96,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXR"
-  },
-  {
-    "slug": "2026-08-12-some-claude-users-are-mad-that-anthropics-new-watermarks-wil",
-    "title": "Some Claude users are mad that Anthropic's new watermarks will catch them using it at their jobs, classes - TechCrunch",
-    "date": "2026-08-12",
-    "tags": [
-      "tool"
-    ],
-    "score": 96,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMEVNMnZGYXhTZUZwOUdOOEsxUGpaVnJNa1RGdkZ3SE9ldzRoaUF1cVFXcWJ5bzRvaXV1N2txOFAtTkt1andTTWdiZVY4UU92UTBqRHVQbXBYQzlaMVFCZ2dMamhoc05jckdPdnpycmE0SHQ4Snp2LTFMOTRqT3Q2cE5XNDUwREhzMEZBalpEaUhabzJzRFd3X20tQmlGLVlmYVJhb1k5cHpmbEd3dWNZQjhPTC03OVpMM0FhSDAxY1lLZkJMX0w4a3JMR0pBVDJySHVNMg?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMEVNMnZGYXhTZUZwOUdOOEsxUGpaVnJNa1RGdkZ3SE9ldzRoaUF1cVF"
   }
 ]
