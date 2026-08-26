@@ -1,5 +1,40 @@
 [
   {
+    "slug": "2026-08-25-anthropicsclaude-code-v21246",
+    "title": "[anthropics/claude-code] v2.1.246",
+    "date": "2026-08-25",
+    "tags": [
+      "claude-code",
+      "market"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
+    "excerpt": "## What's changed\n\n- Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. `Bash(git "
+  },
+  {
+    "slug": "2026-08-25-anthropicsclaude-code-v21245",
+    "title": "[anthropics/claude-code] v2.1.245",
+    "date": "2026-08-25",
+    "tags": [
+      "claude-code",
+      "market"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.245",
+    "excerpt": "## What's changed\n\n- Fixed a crash on startup on Linux distributions that ship glibc 2.44 (for example Arch Linux, Cachy"
+  },
+  {
+    "slug": "2026-08-25-6-claude-code-masterpieces-handpicked-by-anthropic-expert-se",
+    "title": "6 Claude Code Masterpieces Handpicked by Anthropic: Expert-Selected Top AI-Powered Coding Creations - 36Kr",
+    "date": "2026-08-25",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBhVGpZRGE5M1gwVUw5TW95ZjFiLWRYeWxxLWNSWWxxM1lOWmVOSmgzbThGM0VaSXdwTkVMQUw4X1hMTmhsVHJKS1prVVkzQ29MNTU0?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTFBhVGpZRGE5M1gwVUw5TW95ZjFiLWRYeWxxLWNSWWxxM1lOWmVOSmgzbTh"
+  },
+  {
     "slug": "2026-08-24-anthropicsclaude-code-v21243",
     "title": "[anthropics/claude-code] v2.1.243",
     "date": "2026-08-24",
@@ -523,38 +558,5 @@
     "score": 96,
     "sourceUrl": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFB4Y19sM3FlTndNT0pxV3YxRENxeGJEMl92UzVTVkJOZHhfTHBadmc5Y0lUSGNwZ1E4NC1vMFRMZzhDY3UyRVp5cw?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTFB4Y19sM3FlTndNT0pxV3YxRENxeGJEMl92UzVTVkJOZHhfTHBadmc5Y0l"
-  },
-  {
-    "slug": "2026-08-16-anthropic-confirms-claude-is-down-in-major-outage-affecting-",
-    "title": "Anthropic confirms Claude is down in major outage affecting multiple services - BleepingComputer",
-    "date": "2026-08-16",
-    "tags": [
-      "tool"
-    ],
-    "score": 96,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdUFoSTRXenA2LWo3RksxNG9TMzI3dG1ydUpRempMTVFBZVBNb3N5Qi1Kbi10WlkwcUZ5OFVfTkdpZDB5eU1CZUV1dlBDc0UtQ2FJRTBERE42elFjQXhfcmlqN2U3aWhhT0pxZjFtc0p3V2VRNWxLaWZyYjlhLUF3WmpYS1oxU3BGMkctbTlrbXNzekxCYUpJb1JvXzVlMjk4OHdtSWMxLTFuZzZqWmVVek9CYVpvT1FtMUtvc0pmUkNwaEFLa2ZObU9TOGtfWWpFcnVlS0xVNNIB3AFBVV95cUxQUmdsRndjTnFfckQ5bU5icjdfZFZzSi14NlM2Qm5aX2lFbmpKUTk0cHh2Rm5NWFNqaTNrOWVacXJDeXJuOHIyaFNuM0FyRGwyM1loWjZNNzM0eFc2ZWVDSDl5Q1d3UHhIaEZ1ZmJneEpwMGVSVG5TRHpoUjlUV0dMMkV6SUVEWlo2VEctU0pEN0FwMU9OdjJEZUgtOE9ycDRZZDQ0UGlvaHVTRUotems5WDFWZXlackVyMm1MYUJHZ0h1SzNFRm5YVmtvYU5xZUtGYUJCRl9jQ0kzcUlK?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdUFoSTRXenA2LWo3RksxNG9TMzI3dG1ydUpRempMTVFBZVBNb3N5Qi1"
-  },
-  {
-    "slug": "2026-08-15-anthropic-shares-more-details-about-how-claudes-new-watermar",
-    "title": "Anthropic shares more details about how Claude’s new watermarks will work - TechCrunch",
-    "date": "2026-08-15",
-    "tags": [
-      "tool"
-    ],
-    "score": 96,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdWJ1ZmhOTldsYm5ndl83cmtEeC03dGxRT28tcEZQOXV3MVZUVmFDS3JhZzVzUDBnMFg5N0hPUE9VYTdRd2ljSGU1TUk0VTE1a0hOcFZ0RTNEWFg1OWJkRVdkcVVQSzM3MmR3WDBqQ1lQbXZFaEhOQ0tDaW9za3REd1RaX3ZZdGMwdzRHb3pOMTd5X004V0RLanFRdEhPT05RbXlWVFhDZklWWlk?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdWJ1ZmhOTldsYm5ndl83cmtEeC03dGxRT28tcEZQOXV3MVZUVmFDS3J"
-  },
-  {
-    "slug": "2026-08-14-sponsored-how-claude-code-could-help-reshape-utah-government",
-    "title": "SPONSORED How Claude Code could help reshape Utah government - Axios",
-    "date": "2026-08-14",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 96,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNS11T2w0d18zV2RKcU1sUjZ2YW1OYjR3SXE5bWUzZlAwYldxb3BRQXhVY0VPakdsckJaWVRUaXYtekpPeUplbFRiN0xQT1NqRmxCUG1OWEtjMVhndjNsT2stVEhyZUl3aGJKSlVIR1NFMmcxcWRSSUxNT25wSWhXZEdvdk5tYlltSHc?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQNS11T2w0d18zV2RKcU1sUjZ2YW1OYjR3SXE5bWUzZlAwYldxb3BRQXh"
   }
 ]
