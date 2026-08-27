@@ -1,5 +1,93 @@
 [
   {
+    "slug": "2026-08-26-anthropicsclaude-code-v21247",
+    "title": "[anthropics/claude-code] v2.1.247",
+    "date": "2026-08-26",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
+    "excerpt": "## What's changed\n\n- Added the `SendFeedback` tool: when something goes wrong in a session, Claude can draft a feedback "
+  },
+  {
+    "slug": "2026-08-26-anthropicsanthropic-sdk-python-v110",
+    "title": "[anthropics/anthropic-sdk-python] v1.1.0",
+    "date": "2026-08-26",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.1.0",
+    "excerpt": "## 1.1.0 (2026-08-26)\n\nFull Changelog: [v1.0.0...v1.1.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.0"
+  },
+  {
+    "slug": "2026-08-26-anthropicsanthropic-sdk-typescript-vertex-sdk-v0196",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.6",
+    "date": "2026-08-26",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.6",
+    "excerpt": "## 0.19.6 (2026-08-26)\n\nFull Changelog: [vertex-sdk-v0.19.5...vertex-sdk-v0.19.6](https://github.com/anthropics/anthropi"
+  },
+  {
+    "slug": "2026-08-26-anthropicsanthropic-sdk-typescript-sdk-v01210",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.121.0",
+    "date": "2026-08-26",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.121.0",
+    "excerpt": "## 0.121.0 (2026-08-26)\n\nFull Changelog: [sdk-v0.120.0...sdk-v0.121.0](https://github.com/anthropics/anthropic-sdk-types"
+  },
+  {
+    "slug": "2026-08-26-anthropicsanthropic-sdk-typescript-google-cloud-sdk-v0011",
+    "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk: v0.0.11",
+    "date": "2026-08-26",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.11",
+    "excerpt": "## 0.0.11 (2026-08-26)\n\nFull Changelog: [google-cloud-sdk-v0.0.10...google-cloud-sdk-v0.0.11](https://github.com/anthrop"
+  },
+  {
+    "slug": "2026-08-26-shopify-ceo-threatens-to-ditch-claude-code-anthropic-finally",
+    "title": "Shopify CEO threatens to ditch Claude Code; Anthropic finally responds to AGENTS.md compatibility dispute - finance.biggo.com",
+    "date": "2026-08-26",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1tYUhxVlk2TkduODlnVDB6S3FBQXhrS0dFb1lQZEpSUXpaMWRzUzRXV1A5X2l1NVNwTmFOV1pVeU51ZnNFMWhVODRzSTlRMUdxMmI4ZkYwVkRZeklyRjFEeUJCOXo5NHY5ZXdsT2RkUlM3bnpQSkE?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE1tYUhxVlk2TkduODlnVDB6S3FBQXhrS0dFb1lQZEpSUXpaMWRzUzRXV1A"
+  },
+  {
+    "slug": "2026-08-26-claude-code-sparks-developer-backlash-over-agentsmd-ban-anth",
+    "title": "Claude Code Sparks Developer Backlash Over AGENTS.md Ban: Anthropic's Controversial Industry Standard Rejection &amp; Official Response That Enraged the Dev Community - 36 Kr",
+    "date": "2026-08-26",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1IeWhZak5Hdkd3S2M3clQ3YVVMeUxLYVg3YzJhbmZkM2JtMGQ0UEZOaThZbURKa3Zhem5jMU9EOTZPMDFzemk2blY0eWZSaEcweFhn?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE1IeWhZak5Hdkd3S2M3clQ3YVVMeUxLYVg3YzJhbmZkM2JtMGQ0UEZOaTh"
+  },
+  {
+    "slug": "2026-08-25-shopifys-ceo-threatened-to-ban-claude-code-anthropic-had-alr",
+    "title": "Shopify's CEO threatened to ban Claude Code. Anthropic had already closed the feature request. - The New Stack",
+    "date": "2026-08-25",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9kOEpmSGtkU2M5SnROVV9kVVM0Z1liN1B6aW5pZkI4UC1ZV2VYaFU4WlNHbXU3a1NUVUxYOERxc2dJOU5Hak9DOTJmUEFYLXA5bnJjZFVPdlpxSzd1aDdaWlVB?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE9kOEpmSGtkU2M5SnROVV9kVVM0Z1liN1B6aW5pZkI4UC1ZV2VYaFU4WlN"
+  },
+  {
     "slug": "2026-08-25-anthropicsclaude-code-v21246",
     "title": "[anthropics/claude-code] v2.1.246",
     "date": "2026-08-25",
@@ -468,95 +556,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.74",
     "excerpt": "## What's changed\n\n- Added actionable suggestions to `/context` command — identifies context-heavy tools, memory bloat, "
-  },
-  {
-    "slug": "2026-03-14-claude-sonnet-4-6-release",
-    "title": "Claude Sonnet 4.6 Released — Anthropic's Most Capable Mid-Tier Model Yet",
-    "date": "2026-03-14",
-    "tags": [
-      "Claude",
-      "AI Model",
-      "Sonnet 4.6"
-    ],
-    "score": 98,
-    "sourceUrl": "",
-    "excerpt": "Anthropic releases Claude Sonnet 4.6, the latest in the Claude 4 family alongside Opus 4.6 and Haiku 4.5. Sonnet 4.6 del"
-  },
-  {
-    "slug": "2026-08-24-ai-weekly-codex-growth-overtakes-claude-code-deepseek-quietl",
-    "title": "AI Weekly: Codex Growth Overtakes Claude Code; DeepSeek Quietly Launches Vision Model - finance.biggo.com",
-    "date": "2026-08-24",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 96,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTE02dlFiYVh5emEzZjNBdlJZN3BqRWtraVJ3T2kwYXdVajJHZmh6MGszSk1ydmJmVDlaV254WjFlSjRlZHdGYkhvc0Mtd3pKV212Y1NQSk0xVURtM2VIbGFqamozaERCTVFNcm91RDZDMndzTEE1SUE?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE02dlFiYVh5emEzZjNBdlJZN3BqRWtraVJ3T2kwYXdVajJHZmh6MGszSk1"
-  },
-  {
-    "slug": "2026-08-24-claude-is-down-anthropic-scrambles-to-fix-the-global-outage-",
-    "title": "Claude is Down : Anthropic Scrambles to Fix The Global Outage - SQ Magazine",
-    "date": "2026-08-24",
-    "tags": [
-      "tool"
-    ],
-    "score": 96,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBXbk5yMy1GTW5QY0tFbEJ1bk0tUlp3X3ppd2JocmF1Zmg0RjVoWHJJUm0xQ0x6c3RSVmYwczlrMWVYNDE3cllZRmNjeUpMNTFlQlg0eThLSW5JVDM0emFzdHE5cC1oUHlsSVNCR2lRVlphNEdvMVhj?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTFBXbk5yMy1GTW5QY0tFbEJ1bk0tUlp3X3ppd2JocmF1Zmg0RjVoWHJJUm0"
-  },
-  {
-    "slug": "2026-08-23-anthropic-is-testing-hub-mode-a-control-center-for-ai-sub-ag",
-    "title": "Anthropic Is Testing Hub Mode: A Control Center for AI Sub-Agents - Memeburn",
-    "date": "2026-08-23",
-    "tags": [
-      "tool"
-    ],
-    "score": 96,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1tWkRQdUVwcEQxejNfdFN5TElhNC1MRW9qcTNFa3ExTmxtOE12X09admc2WHF1N2VkWXhYQWlZZXR0RHIyUzF0MTZpU2RVWmg4bzFXTjdVbC0yc3dtdnZUa1BpTXY4WG9Rd3c?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE1tWkRQdUVwcEQxejNfdFN5TElhNC1MRW9qcTNFa3ExTmxtOE12X09admc"
-  },
-  {
-    "slug": "2026-08-22-claude-code-adds-ai-design-cross-session-chat-startuphubai",
-    "title": "Claude Code Adds AI Design, Cross-Session Chat - StartupHub.ai",
-    "date": "2026-08-22",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 96,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQT2xzQVBlUlJHUjEwZzdkQkM0Y3JWYXctOTVZY3E1SXFzYmdIa2ZoaUwxNFU2RzJWQjVmeFA5NWJTb2tBX0xROVN6NzhJTEwwTmhZS203UkxHT29CRzVGYVZ4Wjd3UnlRSHVjd3RNejRIQjEwX05kYWloVmpJd2xUQ0lwNlJKWGtXeXNMR2ZqRlpaUDRPWjdSa1d1aVdyMjYzQ2VLZWZwaWNfSENR?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQT2xzQVBlUlJHUjEwZzdkQkM0Y3JWYXctOTVZY3E1SXFzYmdIa2ZoaUw"
-  },
-  {
-    "slug": "2026-08-22-has-codex-started-to-strike-back-against-claude-code-key-ai-",
-    "title": "Has Codex Started to Strike Back Against Claude Code? Key AI Code Assistant Showdown - 36Kr",
-    "date": "2026-08-22",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 96,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE94d3d0S0RPMkstQzNXYlpoUHRFeTRvcTJoMVpJWTdncWdkbGtRakdWaDEzMXhDZmhIU2Z1a1BiQ0llRFZJWGdMM2VHZmI2bWpHR2ww?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE94d3d0S0RPMkstQzNXYlpoUHRFeTRvcTJoMVpJWTdncWdkbGtRakdWaDE"
-  },
-  {
-    "slug": "2026-08-19-claude-codes-temporary-usage-boost-expires-tonight-heres-wha",
-    "title": "Claude Code’s Temporary Usage Boost Expires Tonight. Here’s What Actually Changes - DevOps.com",
-    "date": "2026-08-19",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 96,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPRkh5TFNKWHNTQXZzUV9XTGthdUZBQzJzRThrQlRwZ1YzalBhUEYtU29Sc2FBcWNDbWctQzFRRkxiQ2xtaWRxT2pUOGsyclBLME9udDgyX0tpRjM3NlV2V0dKME5QMDF1VHNHZ0VSSGF0amNaU09SSXljNzd2S1ZYN2twTUlyUWJHVG5iTDNmbExPN3ZDWjBqTU10U2JRTFU?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPRkh5TFNKWHNTQXZzUV9XTGthdUZBQzJzRThrQlRwZ1YzalBhUEYtU29"
-  },
-  {
-    "slug": "2026-08-18-claude-down-anthropic-investigates-multi-model-errors-sq-mag",
-    "title": "Claude Down: Anthropic Investigates Multi-Model Errors - SQ Magazine",
-    "date": "2026-08-18",
-    "tags": [
-      "tool"
-    ],
-    "score": 96,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFB4Y19sM3FlTndNT0pxV3YxRENxeGJEMl92UzVTVkJOZHhfTHBadmc5Y0lUSGNwZ1E4NC1vMFRMZzhDY3UyRVp5cw?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTFB4Y19sM3FlTndNT0pxV3YxRENxeGJEMl92UzVTVkJOZHhfTHBadmc5Y0l"
   }
 ]
