@@ -1,5 +1,71 @@
 [
   {
+    "slug": "2026-08-28-anthropicsclaude-code-v21250",
+    "title": "[anthropics/claude-code] v2.1.250",
+    "date": "2026-08-28",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.250",
+    "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
+  },
+  {
+    "slug": "2026-08-27-anthropicsclaude-code-v21248",
+    "title": "[anthropics/claude-code] v2.1.248",
+    "date": "2026-08-27",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
+    "excerpt": "## What's changed\n\n- Added `--restricted` (or `CLAUDE_CODE_RESTRICTED=1`): removes the built-in tools that run commands "
+  },
+  {
+    "slug": "2026-08-27-anthropicsanthropic-sdk-python-v120",
+    "title": "[anthropics/anthropic-sdk-python] v1.2.0",
+    "date": "2026-08-27",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.2.0",
+    "excerpt": "## 1.2.0 (2026-08-27)\n\nFull Changelog: [v1.1.0...v1.2.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.1"
+  },
+  {
+    "slug": "2026-08-27-anthropicsanthropic-sdk-typescript-sdk-v01220",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.122.0",
+    "date": "2026-08-27",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.122.0",
+    "excerpt": "## 0.122.0 (2026-08-27)\n\nFull Changelog: [sdk-v0.121.0...sdk-v0.122.0](https://github.com/anthropics/anthropic-sdk-types"
+  },
+  {
+    "slug": "2026-08-27-anthropicsanthropic-sdk-typescript-bedrock-sdk-v0333",
+    "title": "[anthropics/anthropic-sdk-typescript] bedrock-sdk: v0.33.3",
+    "date": "2026-08-27",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v0.33.3",
+    "excerpt": "## 0.33.3 (2026-08-27)\n\nFull Changelog: [bedrock-sdk-v0.33.2...bedrock-sdk-v0.33.3](https://github.com/anthropics/anthro"
+  },
+  {
+    "slug": "2026-08-27-anthropicsanthropic-sdk-typescript-aws-sdk-v066",
+    "title": "[anthropics/anthropic-sdk-typescript] aws-sdk: v0.6.6",
+    "date": "2026-08-27",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.6.6",
+    "excerpt": "## 0.6.6 (2026-08-27)\n\nFull Changelog: [aws-sdk-v0.6.5...aws-sdk-v0.6.6](https://github.com/anthropics/anthropic-sdk-typ"
+  },
+  {
     "slug": "2026-08-26-anthropicsclaude-code-v21247",
     "title": "[anthropics/claude-code] v2.1.247",
     "date": "2026-08-26",
@@ -487,74 +553,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQkpOQlI3NlNCa3dpT2F4U3RkUXJPXzdiNHNGMEhWemhoNEo0dFNIaUhoVDVvV1VEX2VrbW1qMkFmV2hGSXlTQ3o3RDJ1MXU3QU52NTgxcUFhV3VkSjl6ZUwxYjVrV0E4Yi1mMm9mc005Wkw5Tkhxdjk1ZXNWYXhOZ25GQ1M5dF95MlAxaFFYRk9aZGtQdDlOU1dVZElJSEo5cXU3c19TSnByVzNm?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNQkpOQlI3NlNCa3dpT2F4U3RkUXJPXzdiNHNGMEhWemhoNEo0dFNIaUh"
-  },
-  {
-    "slug": "2026-08-10-anthropicsclaude-code-v21227",
-    "title": "[anthropics/claude-code] v2.1.227",
-    "date": "2026-08-10",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.227",
-    "excerpt": "## What's changed\n\n- Fixed feature flags being evaluated without the user's subscription tier when a session started wit"
-  },
-  {
-    "slug": "2026-08-10-anthropic-to-put-ai-in-charge-of-reviewing-claude-code-actio",
-    "title": "Anthropic to put AI in charge of reviewing Claude Code actions by default - Help Net Security",
-    "date": "2026-08-10",
-    "tags": [
-      "claude-code",
-      "security"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOemhYelZlbmhJajAxR1hUSHk3czgybWVvel9fVUg2VUs1RmtGWmh0VVRJRGFUay1pWVdwUkoyTnZqazJiZWZlOGU0NHhCZHNESExCNmZBNFEzSWtWcFlkZTNQRW5BNmJRU2c5QWRrenEtX0g3RlVsV3BfLW0tTEdVSw?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxOemhYelZlbmhJajAxR1hUSHk3czgybWVvel9fVUg2VUs1RmtGWmh0VVR"
-  },
-  {
-    "slug": "2026-08-10-aws-continuum-integrates-with-openai-codex-and-anthropic-cla",
-    "title": "AWS Continuum integrates with OpenAI Codex and Anthropic Claude Code in major AI security push - VentureBeat",
-    "date": "2026-08-10",
-    "tags": [
-      "claude-code",
-      "security"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNWE9YZmluV0VTOEs0WlV1UDhfZGF4SXRKRkUyZWx5SVRqQ01ld2g5blVyYVo3ckdOUWhhcHNtVDE2OFBKQzZDOS14TnRVUk5qaUVQaHpSUEtKUW44bl8zdXNweTVNU1ZMNlV0bVR0QlUtMnNKZzhmVnBlQzdLdWt5Tkt0YzRBeVVPUTgtNW4zSXdJYUE3N0FtcThveTBXLVFZZWVKd0JhVHlOc2d5Sm1XVUxPaHpza0lmUnBIdThKVzd4eE5YTEE?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxNWE9YZmluV0VTOEs0WlV1UDhfZGF4SXRKRkUyZWx5SVRqQ01ld2g5blV"
-  },
-  {
-    "slug": "2026-03-14-anthropicsclaude-code-v2176",
-    "title": "[anthropics/claude-code] v2.1.76",
-    "date": "2026-03-14",
-    "tags": [
-      "claude-code",
-      "mcp"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.76",
-    "excerpt": "## What's changed\n\n- Added MCP elicitation support — MCP servers can now request structured input mid-task via an intera"
-  },
-  {
-    "slug": "2026-03-13-anthropicsclaude-code-v2175",
-    "title": "[anthropics/claude-code] v2.1.75",
-    "date": "2026-03-13",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.75",
-    "excerpt": "\n"
-  },
-  {
-    "slug": "2026-03-12-anthropicsclaude-code-v2174",
-    "title": "[anthropics/claude-code] v2.1.74",
-    "date": "2026-03-12",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.74",
-    "excerpt": "## What's changed\n\n- Added actionable suggestions to `/context` command — identifies context-heavy tools, memory bloat, "
   }
 ]

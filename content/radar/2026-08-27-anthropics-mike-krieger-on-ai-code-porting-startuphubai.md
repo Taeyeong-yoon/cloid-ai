@@ -1,0 +1,15 @@
+---
+title: "Anthropic's Mike Krieger on AI Code Porting - StartupHub.ai"
+date: "2026-08-27"
+tags:
+  - claude-code
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcG8wX3N0V3o3ZGVoR0tPSTc4UzlYTWVBc3BnSnNpeVlkWFFCamlwMVIyQkl2SFhtSEQwZHdxRThyOEhUZjhTd2xCbVBjTE15TElXcFBvbzViaGlFbTRLLWFRUkFhVjJWODBnQVlETVdqSDEwTDZyT2NaQTE4d2VGb2l0OENlNGZBOElydEFqVmZsWHBITW5HTmtR?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMimgFBVV95cUxPcG8wX3N0V3o3ZGVoR0tPSTc4UzlYTWVBc3BnSnNpeVlkWFFCamlwMVIyQkl2SFhtSEQwZHdxRThyOEhUZjhTd2xCbVBjTE15TElXcFBvbzViaGlFbTRLLWFRUkFhVjJWODBnQVlETVdqSDEwTDZyT2NaQTE4d2VGb2l0OENlNGZBOElydEFqVmZsWHBITW5HTmtR?oc=5' target='_blank'&gt;Anthropic's M"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPcG8wX3N0V3o3ZGVoR0tPSTc4UzlYTWVBc3BnSnNpeVlkWFFCamlwMVIyQkl2SFhtSEQwZHdxRThyOEhUZjhTd2xCbVBjTE15TElXcFBvbzViaGlFbTRLLWFRUkFhVjJWODBnQVlETVdqSDEwTDZyT2NaQTE4d2VGb2l0OENlNGZBOElydEFqVmZsWHBITW5HTmtR?oc=5" target="_blank"&gt;Anthropic's M
+
+**출처**: [https://news.google.com/rss/articles/CBMimgFBVV95cUxPcG8wX3N0V3o3ZGVoR0tPSTc4UzlYTWVBc3BnSnNpeVlkWFFCamlwMVIyQkl2SFhtSEQwZHdxRThyOEhUZjhTd2xCbVBjTE15TElXcFBvbzViaGlFbTRLLWFRUkFhVjJWODBnQVlETVdqSDEwTDZyT2NaQTE4d2VGb2l0OENlNGZBOElydEFqVmZsWHBITW5HTmtR?oc=5](https://news.google.com/rss/articles/CBMimgFBVV95cUxPcG8wX3N0V3o3ZGVoR0tPSTc4UzlYTWVBc3BnSnNpeVlkWFFCamlwMVIyQkl2SFhtSEQwZHdxRThyOEhUZjhTd2xCbVBjTE15TElXcFBvbzViaGlFbTRLLWFRUkFhVjJWODBnQVlETVdqSDEwTDZyT2NaQTE4d2VGb2l0OENlNGZBOElydEFqVmZsWHBITW5HTmtR?oc=5)
