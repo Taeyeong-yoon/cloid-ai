@@ -1,5 +1,28 @@
 [
   {
+    "slug": "2026-08-28-anthropicsclaude-code-v21251",
+    "title": "[anthropics/claude-code] v2.1.251",
+    "date": "2026-08-28",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251",
+    "excerpt": "## What's changed\n\n- Added `PreModelSwitch` and `PostModelSwitch` hook events (block, confirm, or annotate a model switc"
+  },
+  {
+    "slug": "2026-08-28-claude-code-runs-malware-despite-auto-mode-security-tries-to",
+    "title": "Claude Code runs malware despite “Auto Mode” security, tries to fix it, gets denied - Cybernews",
+    "date": "2026-08-28",
+    "tags": [
+      "claude-code",
+      "security"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOa3NyX2NkT2ZteThBZllzOXJTMGMycmRrajNPQ1o3N3c3X2VYMlhHRm1pRG56NG1MWWo3aHlvdTlydk1XczdGMTVwSVdIQ0UzUzhPbGFzek9PSjQ1emFuTmpOVzFlTzZUTjNQTmpVVTgxTVpfMl9aREs2b211WnJ0Zw?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxOa3NyX2NkT2ZteThBZllzOXJTMGMycmRrajNPQ1o3N3c3X2VYMlhHRm1"
+  },
+  {
     "slug": "2026-08-28-anthropicsclaude-code-v21250",
     "title": "[anthropics/claude-code] v2.1.250",
     "date": "2026-08-28",
@@ -531,27 +554,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPbVR5Qm1Mb1dzd1BRNzUxYjlnQlhPbmZVV1l3STR0UDV5d19VaDloOTdXUGp2LWNJNk5RVTdrS04zTUw5aEZQUnRXSkRLUXpPUUc2OTdGMHZ2cmVKejNLek56SlhDVG1IbnBoZzRpMFNOa1FvbDVXMDVmemFXVnZDTUxkc2NfQ0thRm9pcVpDZ1FMTWNMWnlud0plN1p5NmhVY0JHdnYzRzU1OVJyNms1T1FlZFlYZw?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPbVR5Qm1Mb1dzd1BRNzUxYjlnQlhPbmZVV1l3STR0UDV5d19VaDloOTd"
-  },
-  {
-    "slug": "2026-08-11-anthropicsclaude-code-v21228",
-    "title": "[anthropics/claude-code] v2.1.228",
-    "date": "2026-08-11",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.228",
-    "excerpt": "## What's changed\n\n- Fixed interactive sessions that could stop redrawing entirely, while the process kept running, afte"
-  },
-  {
-    "slug": "2026-08-11-anthropic-makes-claude-codes-auto-mode-default-for-paid-user",
-    "title": "Anthropic makes Claude Code’s auto mode default for paid users - InfoWorld",
-    "date": "2026-08-11",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQkpOQlI3NlNCa3dpT2F4U3RkUXJPXzdiNHNGMEhWemhoNEo0dFNIaUhoVDVvV1VEX2VrbW1qMkFmV2hGSXlTQ3o3RDJ1MXU3QU52NTgxcUFhV3VkSjl6ZUwxYjVrV0E4Yi1mMm9mc005Wkw5Tkhxdjk1ZXNWYXhOZ25GQ1M5dF95MlAxaFFYRk9aZGtQdDlOU1dVZElJSEo5cXU3c19TSnByVzNm?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNQkpOQlI3NlNCa3dpT2F4U3RkUXJPXzdiNHNGMEhWemhoNEo0dFNIaUh"
   }
 ]
