@@ -1,5 +1,27 @@
 [
   {
+    "slug": "2026-08-29-anthropic-is-cutting-claude-codes-current-weekly-limits-by-1",
+    "title": "Anthropic is cutting Claude Code's current weekly limits by 17% - BleepingComputer",
+    "date": "2026-08-29",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPb3lzZENsdmlkQU5TVWo4VGFNdVYwV05wVDVEdEdEelc5dkhNeDVkQ3FqR0JPNHdLaXllWHphTWFSd3FkRUFCYTR5OUVFdGhVVzM5emZjalZHTDYxLTI1RXhvcGplRERpZ0dVR0RZWm5MU29uLVhURHREd1MzdjJHNFJMaGtxSUU3S0dDSXI4RXRKSEpjS2FiWDVQNS14MG1IZEo5a0pkcVJVY2tWV0hCaDJxSDN5Sjlpc3gwSTBTcnpMQmFJQ2p4UUttZTfSAdIBQVVfeXFMTll1YlFSYW1Ec3V6VFBOZzE2OE9mUC1nR1FLeWlZMHNXbk1ndzBYZm11SzQ4OWhQQWhZSnBTbkRYLTRaNG0tQTZSRmdTRXdDcDZpR3kzdUVjdWppdlp1d2ZwUTJGZEZGaFlGeVNOSnNiZGFvRmdGT0Fucjlkd3V2S0tRVmc1VnN4SXhSdGhlMG91QWxtRzhsSkNoUG5IdmtEeHFCc3JRVng4ZmdZeVJEZUpnWnQ0MnBOeHBoUk1aUm1rSVlyZk9WLXlkYV85WldhcENR?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxPb3lzZENsdmlkQU5TVWo4VGFNdVYwV05wVDVEdEdEelc5dkhNeDVkQ3F"
+  },
+  {
+    "slug": "2026-08-29-anthropic-announces-a-25-increase-to-claude-code-limits-but-",
+    "title": "Anthropic announces a 25% increase to Claude Code limits, but there’s a 17% catch - Notebookcheck",
+    "date": "2026-08-29",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOFk0YUdLbmoxamk5QmJvYmNrQmJWU18weVU5NUlmUExqMTB1STNLSDVtTHpqREQ3Y0NTeXUtbFV3Y0NCZWpsZGp1aGFzZFB4Q0d5cm9qRzFwR0pBenVraXhFclFScnBKazBPUXNOWk82cmpfamM0eXpzbGctRUpNY3NJYUNrdFJTYnNHcDk1N0J6YkU1QmFuc2Vuc25oWlNFd012YVJOaTd6SmFVb2h1UWFFQUFWWDNoZS0tNmYwRlQ?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOFk0YUdLbmoxamk5QmJvYmNrQmJWU18weVU5NUlmUExqMTB1STNLSDV"
+  },
+  {
     "slug": "2026-08-28-anthropicsclaude-code-v21251",
     "title": "[anthropics/claude-code] v2.1.251",
     "date": "2026-08-28",
@@ -531,28 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.2",
     "excerpt": "## 0.19.2 (2026-08-13)\n\nFull Changelog: [vertex-sdk-v0.19.1...vertex-sdk-v0.19.2](https://github.com/anthropics/anthropi"
-  },
-  {
-    "slug": "2026-08-12-anthropicsclaude-code-v21229",
-    "title": "[anthropics/claude-code] v2.1.229",
-    "date": "2026-08-12",
-    "tags": [
-      "claude-code",
-      "remote-control"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
-    "excerpt": "## What's changed\n\n- Documented `claude remote-control --continue` for resuming the most recent Remote Control session\n-"
-  },
-  {
-    "slug": "2026-08-12-deepseek-publicizes-efforts-to-challenge-anthropics-claude-c",
-    "title": "DeepSeek Publicizes Efforts to Challenge Anthropic’s Claude Code - Bloomberg.com",
-    "date": "2026-08-12",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPbVR5Qm1Mb1dzd1BRNzUxYjlnQlhPbmZVV1l3STR0UDV5d19VaDloOTdXUGp2LWNJNk5RVTdrS04zTUw5aEZQUnRXSkRLUXpPUUc2OTdGMHZ2cmVKejNLek56SlhDVG1IbnBoZzRpMFNOa1FvbDVXMDVmemFXVnZDTUxkc2NfQ0thRm9pcVpDZ1FMTWNMWnlud0plN1p5NmhVY0JHdnYzRzU1OVJyNms1T1FlZFlYZw?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPbVR5Qm1Mb1dzd1BRNzUxYjlnQlhPbmZVV1l3STR0UDV5d19VaDloOTd"
   }
 ]
