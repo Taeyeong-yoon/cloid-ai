@@ -1,5 +1,27 @@
 [
   {
+    "slug": "2026-08-31-anthropicsclaude-code-v21252",
+    "title": "[anthropics/claude-code] v2.1.252",
+    "date": "2026-08-31",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.252",
+    "excerpt": "## What's changed\n\n- Fixed Bash commands failing with \"task output swap refused (tasks dir moved or linked)\" on some Mac"
+  },
+  {
+    "slug": "2026-08-30-anthropics-claude-code-usage-cap-update-actually-hides-a-qui",
+    "title": "Anthropic's Claude Code Usage Cap Update Actually Hides a Quiet Downgrade - androidheadlines.com",
+    "date": "2026-08-30",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNT0JGWEp5NHl3aTVNZU5tT201RkdNUThpTHZxbEpSM3E0cWVYQjQ0RkZuc1hYUjVucGFOWFJxRVpfU1N1Sl85RWpRRjNRUzZQWFlNd1MwZHZoUFM2UVJqZWt5cHpIb1ZFaDhKM2VSV2d4bjVnUDdYVFpGVEpZcjhxQ1dHQ2NUdnNIVkJNc1pqR1pzUQ?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNT0JGWEp5NHl3aTVNZU5tT201RkdNUThpTHZxbEpSM3E0cWVYQjQ0RkZ"
+  },
+  {
     "slug": "2026-08-29-anthropic-is-cutting-claude-codes-current-weekly-limits-by-1",
     "title": "Anthropic is cutting Claude Code's current weekly limits by 17% - BleepingComputer",
     "date": "2026-08-29",
@@ -531,27 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.4",
     "excerpt": "## 0.19.4 (2026-08-13)\n\nFull Changelog: [vertex-sdk-v0.19.3...vertex-sdk-v0.19.4](https://github.com/anthropics/anthropi"
-  },
-  {
-    "slug": "2026-08-13-anthropicsanthropic-sdk-typescript-vertex-sdk-v0193",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.3",
-    "date": "2026-08-13",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.3",
-    "excerpt": "## 0.19.3 (2026-08-13)\n\nFull Changelog: [vertex-sdk-v0.19.2...vertex-sdk-v0.19.3](https://github.com/anthropics/anthropi"
-  },
-  {
-    "slug": "2026-08-13-anthropicsanthropic-sdk-typescript-vertex-sdk-v0192",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.2",
-    "date": "2026-08-13",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.2",
-    "excerpt": "## 0.19.2 (2026-08-13)\n\nFull Changelog: [vertex-sdk-v0.19.1...vertex-sdk-v0.19.2](https://github.com/anthropics/anthropi"
   }
 ]
