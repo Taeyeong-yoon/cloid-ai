@@ -1,5 +1,50 @@
 [
   {
+    "slug": "2026-09-01-anthropicsclaude-code-v21258",
+    "title": "[anthropics/claude-code] v2.1.258",
+    "date": "2026-09-01",
+    "tags": [
+      "claude-code",
+      "remote-control"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.258",
+    "excerpt": "## What's changed\n\n- Fixed Claude Code failing to launch on macOS 12 (Monterey), a regression introduced in 2.1.255\n- Fi"
+  },
+  {
+    "slug": "2026-09-01-anthropicsclaude-code-v21257",
+    "title": "[anthropics/claude-code] v2.1.257",
+    "date": "2026-09-01",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.257",
+    "excerpt": "## What's changed\n\n- Added Claude Fable 5.1 (`claude-fable-5-1`), now the default Fable model — 1M context, $10/$50 per "
+  },
+  {
+    "slug": "2026-09-01-anthropicsanthropic-sdk-python-v130",
+    "title": "[anthropics/anthropic-sdk-python] v1.3.0",
+    "date": "2026-09-01",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.3.0",
+    "excerpt": "## 1.3.0 (2026-09-01)\n\nFull Changelog: [v1.2.0...v1.3.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.2"
+  },
+  {
+    "slug": "2026-09-01-anthropicsanthropic-sdk-typescript-sdk-v01230",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.123.0",
+    "date": "2026-09-01",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.123.0",
+    "excerpt": "## 0.123.0 (2026-09-01)\n\nFull Changelog: [sdk-v0.122.0...sdk-v0.123.0](https://github.com/anthropics/anthropic-sdk-types"
+  },
+  {
     "slug": "2026-08-31-anthropicsclaude-code-v21252",
     "title": "[anthropics/claude-code] v2.1.252",
     "date": "2026-08-31",
@@ -507,51 +552,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTHJKR21CRlI3aGgwQVp4VWxkai1Pb1dvLW1MbGVYajdORmNKZnhRR1NjZi02WGp2NXhlV3RCNVNWX1pJMm1FV2p5VnNXaFA4Q2psTVFqMEw0VFNyVk56U3hnNzdUQTJDMjM4THh6enBReE5sOGlLNGxGSVJZMTY4anBUcUU5M3kyRFV6V2lpMFdVNHZiUGNrQ2VtekxYU2JBdm5IU2taZU5FZGdnX0tFS2o2Y2F5dw?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPTHJKR21CRlI3aGgwQVp4VWxkai1Pb1dvLW1MbGVYajdORmNKZnhRR1N"
-  },
-  {
-    "slug": "2026-08-13-anthropicsclaude-code-v21232",
-    "title": "[anthropics/claude-code] v2.1.232",
-    "date": "2026-08-13",
-    "tags": [
-      "claude-code",
-      "agent"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
-    "excerpt": "## What's changed\n\n- Subagent forking is now on by default: a `subagent_type: \"fork\"` subagent inherits the full convers"
-  },
-  {
-    "slug": "2026-08-13-anthropicsclaude-code-v21231",
-    "title": "[anthropics/claude-code] v2.1.231",
-    "date": "2026-08-13",
-    "tags": [
-      "claude-code",
-      "mcp"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.231",
-    "excerpt": "## What's changed\n\n- Fixed MCP OAuth sign-in failing with a redirect URI mismatch for servers that use a pre-registered "
-  },
-  {
-    "slug": "2026-08-13-anthropicsanthropic-sdk-python-v01220",
-    "title": "[anthropics/anthropic-sdk-python] v0.122.0",
-    "date": "2026-08-13",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.122.0",
-    "excerpt": "## 0.122.0 (2026-08-13)\n\nFull Changelog: [v0.121.0...v0.122.0](https://github.com/anthropics/anthropic-sdk-python/compar"
-  },
-  {
-    "slug": "2026-08-13-anthropicsanthropic-sdk-typescript-vertex-sdk-v0194",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.4",
-    "date": "2026-08-13",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.4",
-    "excerpt": "## 0.19.4 (2026-08-13)\n\nFull Changelog: [vertex-sdk-v0.19.3...vertex-sdk-v0.19.4](https://github.com/anthropics/anthropi"
   }
 ]
