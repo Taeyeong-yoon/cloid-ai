@@ -1,5 +1,17 @@
 [
   {
+    "slug": "2026-09-02-anthropicsclaude-code-v21259",
+    "title": "[anthropics/claude-code] v2.1.259",
+    "date": "2026-09-02",
+    "tags": [
+      "claude-code",
+      "mcp"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
+    "excerpt": "## What's changed\n\n- Added `managedMcpServers` managed setting: organizations can provide HTTP/SSE MCP servers to every "
+  },
+  {
     "slug": "2026-09-01-anthropicsclaude-code-v21258",
     "title": "[anthropics/claude-code] v2.1.258",
     "date": "2026-09-01",
@@ -541,16 +553,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWlZ6V2R2YzEtOHRPRWR5bjlmcWdrcGtIblROSE1nb29PYmhRMnhYMGp5MkpYcVE2YXRNTlVITE9oS3Nwc1dvSUU2S1NnY3ptRC12ODNYSlJxaGZBTnFlODh6eHNDcGc3UjVoWGxUS0NNUVIyUkp1eDdSYzZ2OVlDV19xQ1hsYmllWFI4b3ZiVDVRdjZOTVU2Y0VkZVlZTDJaX3pBUQ?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxPWlZ6V2R2YzEtOHRPRWR5bjlmcWdrcGtIblROSE1nb29PYmhRMnhYMGp"
-  },
-  {
-    "slug": "2026-08-14-claude-code-now-runs-daily-maintenance-on-anthropics-softwar",
-    "title": "Claude Code now runs daily maintenance on Anthropic's software with a 46 percent merge rate - the-decoder.com",
-    "date": "2026-08-14",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTHJKR21CRlI3aGgwQVp4VWxkai1Pb1dvLW1MbGVYajdORmNKZnhRR1NjZi02WGp2NXhlV3RCNVNWX1pJMm1FV2p5VnNXaFA4Q2psTVFqMEw0VFNyVk56U3hnNzdUQTJDMjM4THh6enBReE5sOGlLNGxGSVJZMTY4anBUcUU5M3kyRFV6V2lpMFdVNHZiUGNrQ2VtekxYU2JBdm5IU2taZU5FZGdnX0tFS2o2Y2F5dw?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPTHJKR21CRlI3aGgwQVp4VWxkai1Pb1dvLW1MbGVYajdORmNKZnhRR1N"
   }
 ]
