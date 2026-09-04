@@ -1,0 +1,15 @@
+---
+title: "Anthropic releases Claude AI agents to handle sales in retail, travel, and more - SmartCompany"
+date: "2026-09-03"
+tags:
+  - tool
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMipwFBVV95cUxPS01oTnpQMVJjUkwyR1ZjTHhjRHdCQVBfVGc5UmFEOWZUdlJVWVlBSnk5bUpnNmZlUlBUZ19MSU9Xd2NZLWg5RDVBT3ZPRzFTM0o4ZTl1NXQ5V1VydzY5YV9RczJiQUViMzhZVmw0QlpuS2tWd1hBMmtsLUs4WWZPY1RDb0dBMm5tQmhQVGJFVXltSm1yRFdnbmhoNHpSaXA3M1JxMEgtOA?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMipwFBVV95cUxPS01oTnpQMVJjUkwyR1ZjTHhjRHdCQVBfVGc5UmFEOWZUdlJVWVlBSnk5bUpnNmZlUlBUZ19MSU9Xd2NZLWg5RDVBT3ZPRzFTM0o4ZTl1NXQ5V1VydzY5YV9RczJiQUViMzhZVmw0QlpuS2tWd1hBMmtsLUs4WWZPY1RDb0dBMm5tQmhQVGJFVXltSm1yRFdnbmhoNHpSaXA3M1JxMEgtOA?oc=5' target='_blank"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPS01oTnpQMVJjUkwyR1ZjTHhjRHdCQVBfVGc5UmFEOWZUdlJVWVlBSnk5bUpnNmZlUlBUZ19MSU9Xd2NZLWg5RDVBT3ZPRzFTM0o4ZTl1NXQ5V1VydzY5YV9RczJiQUViMzhZVmw0QlpuS2tWd1hBMmtsLUs4WWZPY1RDb0dBMm5tQmhQVGJFVXltSm1yRFdnbmhoNHpSaXA3M1JxMEgtOA?oc=5" target="_blank
+
+**출처**: [https://news.google.com/rss/articles/CBMipwFBVV95cUxPS01oTnpQMVJjUkwyR1ZjTHhjRHdCQVBfVGc5UmFEOWZUdlJVWVlBSnk5bUpnNmZlUlBUZ19MSU9Xd2NZLWg5RDVBT3ZPRzFTM0o4ZTl1NXQ5V1VydzY5YV9RczJiQUViMzhZVmw0QlpuS2tWd1hBMmtsLUs4WWZPY1RDb0dBMm5tQmhQVGJFVXltSm1yRFdnbmhoNHpSaXA3M1JxMEgtOA?oc=5](https://news.google.com/rss/articles/CBMipwFBVV95cUxPS01oTnpQMVJjUkwyR1ZjTHhjRHdCQVBfVGc5UmFEOWZUdlJVWVlBSnk5bUpnNmZlUlBUZ19MSU9Xd2NZLWg5RDVBT3ZPRzFTM0o4ZTl1NXQ5V1VydzY5YV9RczJiQUViMzhZVmw0QlpuS2tWd1hBMmtsLUs4WWZPY1RDb0dBMm5tQmhQVGJFVXltSm1yRFdnbmhoNHpSaXA3M1JxMEgtOA?oc=5)

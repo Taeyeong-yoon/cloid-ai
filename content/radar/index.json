@@ -1,5 +1,27 @@
 [
   {
+    "slug": "2026-09-03-anthropicsclaude-code-v21260",
+    "title": "[anthropics/claude-code] v2.1.260",
+    "date": "2026-09-03",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260",
+    "excerpt": "## What's changed\n\n- Added a diff panel that opens beside the conversation in fullscreen mode and shows your uncommitted"
+  },
+  {
+    "slug": "2026-09-03-anthropic-releases-claude-ai-agents-to-handle-sales-in-retai",
+    "title": "Anthropic releases Claude AI agents to handle sales in retail, travel, and more - SmartCompany",
+    "date": "2026-09-03",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPS01oTnpQMVJjUkwyR1ZjTHhjRHdCQVBfVGc5UmFEOWZUdlJVWVlBSnk5bUpnNmZlUlBUZ19MSU9Xd2NZLWg5RDVBT3ZPRzFTM0o4ZTl1NXQ5V1VydzY5YV9RczJiQUViMzhZVmw0QlpuS2tWd1hBMmtsLUs4WWZPY1RDb0dBMm5tQmhQVGJFVXltSm1yRFdnbmhoNHpSaXA3M1JxMEgtOA?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPS01oTnpQMVJjUkwyR1ZjTHhjRHdCQVBfVGc5UmFEOWZUdlJVWVlBSnk"
+  },
+  {
     "slug": "2026-09-02-anthropicsclaude-code-v21259",
     "title": "[anthropics/claude-code] v2.1.259",
     "date": "2026-09-02",
@@ -531,27 +553,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjRuOENMVHZvbmQwQ2o5UkhndzZlUVB2T3ROMGNEc0w2dXZhR2YwaDlrQzJPRTdqXzF6X0tYZ0htbU5zNVkwRVJqdDhHNzJj?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjR"
-  },
-  {
-    "slug": "2026-08-14-anthropicsclaude-code-v21233",
-    "title": "[anthropics/claude-code] v2.1.233",
-    "date": "2026-08-14",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
-    "excerpt": "## What's changed\n\n- Added GitLab merge request URL support to the `--worktree` flag and the `claude agents` view (where"
-  },
-  {
-    "slug": "2026-08-14-psa-claude-code-now-enables-auto-mode-as-default-anthropic-s",
-    "title": "PSA: Claude Code now enables auto mode as default, Anthropic says - 9to5Mac",
-    "date": "2026-08-14",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWlZ6V2R2YzEtOHRPRWR5bjlmcWdrcGtIblROSE1nb29PYmhRMnhYMGp5MkpYcVE2YXRNTlVITE9oS3Nwc1dvSUU2S1NnY3ptRC12ODNYSlJxaGZBTnFlODh6eHNDcGc3UjVoWGxUS0NNUVIyUkp1eDdSYzZ2OVlDV19xQ1hsYmllWFI4b3ZiVDVRdjZOTVU2Y0VkZVlZTDJaX3pBUQ?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxPWlZ6V2R2YzEtOHRPRWR5bjlmcWdrcGtIblROSE1nb29PYmhRMnhYMGp"
   }
 ]
