@@ -1,5 +1,60 @@
 [
   {
+    "slug": "2026-09-04-anthropicsclaude-code-v21261",
+    "title": "[anthropics/claude-code] v2.1.261",
+    "date": "2026-09-04",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.261",
+    "excerpt": "## What's changed\n\n- Added an \"Organization policy\" line to `/status` and `claude doctor` that says why your organizatio"
+  },
+  {
+    "slug": "2026-09-04-anthropicsanthropic-sdk-python-v140",
+    "title": "[anthropics/anthropic-sdk-python] v1.4.0",
+    "date": "2026-09-04",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.4.0",
+    "excerpt": "## 1.4.0 (2026-09-04)\n\nFull Changelog: [v1.3.0...v1.4.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.3"
+  },
+  {
+    "slug": "2026-09-04-anthropicsanthropic-sdk-typescript-vertex-sdk-v0197",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.7",
+    "date": "2026-09-04",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.7",
+    "excerpt": "## 0.19.7 (2026-09-04)\n\nFull Changelog: [vertex-sdk-v0.19.6...vertex-sdk-v0.19.7](https://github.com/anthropics/anthropi"
+  },
+  {
+    "slug": "2026-09-04-anthropicsanthropic-sdk-typescript-sdk-v01240",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.124.0",
+    "date": "2026-09-04",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.124.0",
+    "excerpt": "## 0.124.0 (2026-09-04)\n\nFull Changelog: [sdk-v0.123.0...sdk-v0.124.0](https://github.com/anthropics/anthropic-sdk-types"
+  },
+  {
+    "slug": "2026-09-04-anthropicsanthropic-sdk-typescript-foundry-sdk-v045",
+    "title": "[anthropics/anthropic-sdk-typescript] foundry-sdk: v0.4.5",
+    "date": "2026-09-04",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/foundry-sdk-v0.4.5",
+    "excerpt": "## 0.4.5 (2026-09-04)\n\nFull Changelog: [foundry-sdk-v0.4.4...foundry-sdk-v0.4.5](https://github.com/anthropics/anthropic"
+  },
+  {
     "slug": "2026-09-03-anthropicsclaude-code-v21260",
     "title": "[anthropics/claude-code] v2.1.260",
     "date": "2026-09-03",
@@ -498,60 +553,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNSEF6Y3R5WEVCQ3h2RVZHNGRXOHJDX0g2Yzg0ZXd1cTYtVkY5Z3FzUFFnYjZWM0JzZ0dhWnd3eEwySm1lTUFGeF9tOTRaRklhTjhiQTM3Y3hJb1I1VnVjaUZSU2Z1Qkh3QUVWQmNvTEZOcmhtWW1VMDh6Z0dPZG1PZGQtZktGZw?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNSEF6Y3R5WEVCQ3h2RVZHNGRXOHJDX0g2Yzg0ZXd1cTYtVkY5Z3FzUFF"
-  },
-  {
-    "slug": "2026-08-19-claude-codes-auto-mode-will-be-on-by-default-anthropic-confi",
-    "title": "Claude Code’s auto mode will be on by default, Anthropic confirms - Mashable",
-    "date": "2026-08-19",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjRuOENMVHZvbmQwQ2o5UkhndzZlUVB2T3ROMGNEc0w2dXZhR2YwaDlrQzJPRTdqXzF6X0tYZ0htbU5zNVkwRVJqdDhHNzJj?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjR"
-  },
-  {
-    "slug": "2026-08-18-anthropicsclaude-code-v21235",
-    "title": "[anthropics/claude-code] v2.1.235",
-    "date": "2026-08-18",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.235",
-    "excerpt": "## What's changed\n\n- Added an optional `spellcheck` setting that underlines misspelled words in the prompt input as you "
-  },
-  {
-    "slug": "2026-08-17-anthropicsclaude-code-v21234",
-    "title": "[anthropics/claude-code] v2.1.234",
-    "date": "2026-08-17",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
-    "excerpt": "## What's changed\n\n- Added the optional `CLAUDE_CODE_PROJECT_DIR_NAME` environment variable: hosts that give each sessio"
-  },
-  {
-    "slug": "2026-08-17-claude-codes-auto-mode-will-be-on-by-default-anthropic-confi",
-    "title": "Claude Code’s auto mode will be on by default, Anthropic confirms - Mashable",
-    "date": "2026-08-17",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjRuOENMVHZvbmQwQ2o5UkhndzZlUVB2T3ROMGNEc0w2dXZhR2YwaDlrQzJPRTdqXzF6X0tYZ0htbU5zNVkwRVJqdDhHNzJj?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjR"
-  },
-  {
-    "slug": "2026-08-15-claude-codes-auto-mode-will-be-on-by-default-anthropic-confi",
-    "title": "Claude Code’s auto mode will be on by default, Anthropic confirms - Mashable",
-    "date": "2026-08-15",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjRuOENMVHZvbmQwQ2o5UkhndzZlUVB2T3ROMGNEc0w2dXZhR2YwaDlrQzJPRTdqXzF6X0tYZ0htbU5zNVkwRVJqdDhHNzJj?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjR"
   }
 ]
