@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-09-06-anthropicsclaude-code-v21263",
+    "title": "[anthropics/claude-code] v2.1.263",
+    "date": "2026-09-06",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.263",
+    "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
+  },
+  {
     "slug": "2026-09-04-anthropicsclaude-code-v21261",
     "title": "[anthropics/claude-code] v2.1.261",
     "date": "2026-09-04",
@@ -542,16 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.123.0",
     "excerpt": "## 0.123.0 (2026-08-18)\n\nFull Changelog: [v0.122.0...v0.123.0](https://github.com/anthropics/anthropic-sdk-python/compar"
-  },
-  {
-    "slug": "2026-08-19-i-use-claude-code-without-paying-a-dime-to-anthropic-makeuse",
-    "title": "I use Claude Code without paying a dime to Anthropic - MakeUseOf",
-    "date": "2026-08-19",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNSEF6Y3R5WEVCQ3h2RVZHNGRXOHJDX0g2Yzg0ZXd1cTYtVkY5Z3FzUFFnYjZWM0JzZ0dhWnd3eEwySm1lTUFGeF9tOTRaRklhTjhiQTM3Y3hJb1I1VnVjaUZSU2Z1Qkh3QUVWQmNvTEZOcmhtWW1VMDh6Z0dPZG1PZGQtZktGZw?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNSEF6Y3R5WEVCQ3h2RVZHNGRXOHJDX0g2Yzg0ZXd1cTYtVkY5Z3FzUFF"
   }
 ]

@@ -1,0 +1,15 @@
+---
+title: "Fermat’s last theorem formalised by AI agents in just 11 days - New Scientist"
+date: "2026-09-05"
+tags:
+  - tool
+score: 88
+sourceUrl: "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNnpPUTdPQThobWktNXR4eERZb3NUbWNES2NKdGdWMy1MQWpReHcwSzdsSzFfank0RjJOLTJKaDgzZXFPdFVTMjVjRUpfRW9rNUFtV3l1Smd4WEx5MkZOSVJ2cVUzZlRkSEp4ZWw4QXVNdkZRSlhQNkllaW52NkpicndjSHF6ckR6QzlyNWFWTTJjZlFKUUtpX0pyY3JJQlc0SVVhXzdYRDZSQQ?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNnpPUTdPQThobWktNXR4eERZb3NUbWNES2NKdGdWMy1MQWpReHcwSzdsSzFfank0RjJOLTJKaDgzZXFPdFVTMjVjRUpfRW9rNUFtV3l1Smd4WEx5MkZOSVJ2cVUzZlRkSEp4ZWw4QXVNdkZRSlhQNkllaW52NkpicndjSHF6ckR6QzlyNWFWTTJjZlFKUUtpX0pyY3JJQlc0SVVhXzdYRDZSQQ?oc=5' target='_b"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNnpPUTdPQThobWktNXR4eERZb3NUbWNES2NKdGdWMy1MQWpReHcwSzdsSzFfank0RjJOLTJKaDgzZXFPdFVTMjVjRUpfRW9rNUFtV3l1Smd4WEx5MkZOSVJ2cVUzZlRkSEp4ZWw4QXVNdkZRSlhQNkllaW52NkpicndjSHF6ckR6QzlyNWFWTTJjZlFKUUtpX0pyY3JJQlc0SVVhXzdYRDZSQQ?oc=5" target="_b
+
+**출처**: [https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNnpPUTdPQThobWktNXR4eERZb3NUbWNES2NKdGdWMy1MQWpReHcwSzdsSzFfank0RjJOLTJKaDgzZXFPdFVTMjVjRUpfRW9rNUFtV3l1Smd4WEx5MkZOSVJ2cVUzZlRkSEp4ZWw4QXVNdkZRSlhQNkllaW52NkpicndjSHF6ckR6QzlyNWFWTTJjZlFKUUtpX0pyY3JJQlc0SVVhXzdYRDZSQQ?oc=5](https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNnpPUTdPQThobWktNXR4eERZb3NUbWNES2NKdGdWMy1MQWpReHcwSzdsSzFfank0RjJOLTJKaDgzZXFPdFVTMjVjRUpfRW9rNUFtV3l1Smd4WEx5MkZOSVJ2cVUzZlRkSEp4ZWw4QXVNdkZRSlhQNkllaW52NkpicndjSHF6ckR6QzlyNWFWTTJjZlFKUUtpX0pyY3JJQlc0SVVhXzdYRDZSQQ?oc=5)
