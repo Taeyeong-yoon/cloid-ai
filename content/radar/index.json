@@ -1,5 +1,27 @@
 [
   {
+    "slug": "2026-09-08-anthropicsclaude-code-v21266",
+    "title": "[anthropics/claude-code] v2.1.266",
+    "date": "2026-09-08",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.266",
+    "excerpt": "## What's changed\n\n- Fixed a 2.1.265 regression affecting LLM-gateway and proxy setups: the undocumented `CLAUDE_CODE_US"
+  },
+  {
+    "slug": "2026-09-08-anthropicsclaude-code-v21265",
+    "title": "[anthropics/claude-code] v2.1.265",
+    "date": "2026-09-08",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.265",
+    "excerpt": "## What's changed\n\n- Added `user.email` and `user.groups` to the telemetry Claude Desktop and Cowork send through a Clau"
+  },
+  {
     "slug": "2026-09-06-anthropicsclaude-code-v21263",
     "title": "[anthropics/claude-code] v2.1.263",
     "date": "2026-09-06",
@@ -531,27 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0",
     "excerpt": "## 0.125.0 (2026-08-19)\n\nFull Changelog: [v0.124.0...v0.125.0](https://github.com/anthropics/anthropic-sdk-python/compar"
-  },
-  {
-    "slug": "2026-08-19-anthropicsanthropic-sdk-python-v01240",
-    "title": "[anthropics/anthropic-sdk-python] v0.124.0",
-    "date": "2026-08-19",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.124.0",
-    "excerpt": "## 0.124.0 (2026-08-19)\n\nFull Changelog: [v0.123.0...v0.124.0](https://github.com/anthropics/anthropic-sdk-python/compar"
-  },
-  {
-    "slug": "2026-08-19-anthropicsanthropic-sdk-python-v01230",
-    "title": "[anthropics/anthropic-sdk-python] v0.123.0",
-    "date": "2026-08-19",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.123.0",
-    "excerpt": "## 0.123.0 (2026-08-18)\n\nFull Changelog: [v0.122.0...v0.123.0](https://github.com/anthropics/anthropic-sdk-python/compar"
   }
 ]
