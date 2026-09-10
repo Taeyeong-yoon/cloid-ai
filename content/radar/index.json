@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-09-09-anthropicsclaude-code-v21267",
+    "title": "[anthropics/claude-code] v2.1.267",
+    "date": "2026-09-09",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.267",
+    "excerpt": "## What's changed\n\n- Added `maxEffortLevel` setting (top-level or per model under `modelSettings`): caps the effort leve"
+  },
+  {
     "slug": "2026-09-08-anthropicsclaude-code-v21266",
     "title": "[anthropics/claude-code] v2.1.266",
     "date": "2026-09-08",
@@ -542,16 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.119.0",
     "excerpt": "## 0.119.0 (2026-08-19)\n\nFull Changelog: [sdk-v0.118.0...sdk-v0.119.0](https://github.com/anthropics/anthropic-sdk-types"
-  },
-  {
-    "slug": "2026-08-19-anthropicsanthropic-sdk-python-v01250",
-    "title": "[anthropics/anthropic-sdk-python] v0.125.0",
-    "date": "2026-08-19",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0",
-    "excerpt": "## 0.125.0 (2026-08-19)\n\nFull Changelog: [v0.124.0...v0.125.0](https://github.com/anthropics/anthropic-sdk-python/compar"
   }
 ]
