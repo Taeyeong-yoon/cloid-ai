@@ -1,5 +1,60 @@
 [
   {
+    "slug": "2026-09-10-anthropicsclaude-code-v21268",
+    "title": "[anthropics/claude-code] v2.1.268",
+    "date": "2026-09-10",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.268",
+    "excerpt": "## What's changed\n\n- Added to the Claude apps gateway: with `pricing:` set in `gateway.yaml`, signed-in Claude Code clie"
+  },
+  {
+    "slug": "2026-09-10-anthropicsanthropic-sdk-python-v150",
+    "title": "[anthropics/anthropic-sdk-python] v1.5.0",
+    "date": "2026-09-10",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.5.0",
+    "excerpt": "## 1.5.0 (2026-09-10)\n\nFull Changelog: [v1.4.0...v1.5.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.4"
+  },
+  {
+    "slug": "2026-09-10-anthropicsanthropic-sdk-typescript-vertex-sdk-v0198",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.8",
+    "date": "2026-09-10",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.8",
+    "excerpt": "## 0.19.8 (2026-09-10)\n\nFull Changelog: [vertex-sdk-v0.19.7...vertex-sdk-v0.19.8](https://github.com/anthropics/anthropi"
+  },
+  {
+    "slug": "2026-09-10-anthropicsanthropic-sdk-typescript-sdk-v01250",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.125.0",
+    "date": "2026-09-10",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.125.0",
+    "excerpt": "## 0.125.0 (2026-09-10)\n\nFull Changelog: [sdk-v0.124.0...sdk-v0.125.0](https://github.com/anthropics/anthropic-sdk-types"
+  },
+  {
+    "slug": "2026-09-10-anthropicsanthropic-sdk-typescript-foundry-sdk-v046",
+    "title": "[anthropics/anthropic-sdk-typescript] foundry-sdk: v0.4.6",
+    "date": "2026-09-10",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/foundry-sdk-v0.4.6",
+    "excerpt": "## 0.4.6 (2026-09-10)\n\nFull Changelog: [foundry-sdk-v0.4.5...foundry-sdk-v0.4.6](https://github.com/anthropics/anthropic"
+  },
+  {
     "slug": "2026-09-09-anthropicsclaude-code-v21267",
     "title": "[anthropics/claude-code] v2.1.267",
     "date": "2026-09-09",
@@ -498,60 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237",
     "excerpt": "## What's changed\n\n- Fixed prompt caching for sessions using an LLM gateway or custom base URL\n- Added a built-in \"Conci"
-  },
-  {
-    "slug": "2026-08-20-anthropicsanthropic-sdk-python-v100",
-    "title": "[anthropics/anthropic-sdk-python] v1.0.0",
-    "date": "2026-08-20",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.0.0",
-    "excerpt": "## 1.0.0 (2026-08-20)\n\nFull Changelog: [v0.125.0...v1.0.0](https://github.com/anthropics/anthropic-sdk-python/compare/v0"
-  },
-  {
-    "slug": "2026-08-19-anthropicsclaude-code-v21236",
-    "title": "[anthropics/claude-code] v2.1.236",
-    "date": "2026-08-19",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
-    "excerpt": "## What's changed\n\n- Added `ANTHROPIC_DEFAULT_MODEL` environment variable: sets the model new sessions start on, while a"
-  },
-  {
-    "slug": "2026-08-19-anthropicsanthropic-sdk-typescript-vertex-sdk-v0195",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.5",
-    "date": "2026-08-19",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.5",
-    "excerpt": "## 0.19.5 (2026-08-19)\n\nFull Changelog: [vertex-sdk-v0.19.4...vertex-sdk-v0.19.5](https://github.com/anthropics/anthropi"
-  },
-  {
-    "slug": "2026-08-19-anthropicsanthropic-sdk-typescript-sdk-v01200",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.120.0",
-    "date": "2026-08-19",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.120.0",
-    "excerpt": "## 0.120.0 (2026-08-19)\n\nFull Changelog: [sdk-v0.119.0...sdk-v0.120.0](https://github.com/anthropics/anthropic-sdk-types"
-  },
-  {
-    "slug": "2026-08-19-anthropicsanthropic-sdk-typescript-sdk-v01190",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.119.0",
-    "date": "2026-08-19",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.119.0",
-    "excerpt": "## 0.119.0 (2026-08-19)\n\nFull Changelog: [sdk-v0.118.0...sdk-v0.119.0](https://github.com/anthropics/anthropic-sdk-types"
   }
 ]

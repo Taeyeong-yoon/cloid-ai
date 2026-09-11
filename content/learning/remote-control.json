@@ -30,21 +30,21 @@
     },
     {
       "type": "video",
-      "title": "[100% 무료] 스마트폰 텔레그램으로 AI 에이전트 원격 제어하기 (초보 가이드)",
-      "url": "https://www.youtube.com/watch?v=Yx7VRBlCiJw",
-      "description": "컴퓨터 앞에 없어도 스마트폰 텔레그램으로 AI 에이전트를 원격 제어하는 100% 무료 연동 세팅 가이드입니다. [실습 필수 명령어 ..."
-    },
-    {
-      "type": "video",
-      "title": "1~5강 통합본(미리보기) • 메신저로 채팅하는 해외주식 자동매매 방법 • 해외주식(#LS증권) 자동화 시스템 원격 제어 메신저 구축",
-      "url": "https://www.youtube.com/watch?v=ajJpAQdbyXs",
-      "description": "텔레그램api #원격제어 #AI비서 #해외주식자동화 #ai금융 #증권api ▭▭소개▭▭ 프로그램이 올바르게 작동하고 있는지 확인하기 ..."
+      "title": "주식 고수 따라하기? 커서AI로 코드 없이 만든 자동화 프로그램 공개 #주식자동화 #주식초보 #커서AI #CURSOR AI #AI자동화 #업무자동화",
+      "url": "https://www.youtube.com/watch?v=dobA5RiNXMk",
+      "description": "주식 고수의 거래 내역을 그대로 따라가는 자동화 프로그램. 코딩? 하나도 안 하고, 제가 직접 만들었습니다. “이걸 어떻게 만들었 ..."
     },
     {
       "type": "video",
       "title": "Claude Code 서버 설치 및 텔레그램 연동 가이드 (자동 설치 스크립트 포함)",
       "url": "https://www.youtube.com/watch?v=n8Y_JfVia_k",
       "description": "서버 관리와 코딩, 이제 터미널을 떠나 텔레그램에서 자유롭게 진행하세요. 복잡한 수동 설치 과정 없이, API 키만 입력하면 모든 세팅 ..."
+    },
+    {
+      "type": "video",
+      "title": "인턴을 만들었다 ep.1 #n8n #aiagents #ai에이전트 #ai자동화 #gpt #업무자동화",
+      "url": "https://www.youtube.com/watch?v=MOlPys1suoc",
+      "description": ""
     },
     {
       "type": "practice",
