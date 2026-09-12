@@ -1,5 +1,27 @@
 [
   {
+    "slug": "2026-09-11-anthropicsclaude-code-v21269",
+    "title": "[anthropics/claude-code] v2.1.269",
+    "date": "2026-09-11",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.269",
+    "excerpt": "## What's changed\n\n- Added `claude plugin eval`: run a plugin's eval suite against Claude Code and get scored, reproduci"
+  },
+  {
+    "slug": "2026-09-11-anthropic-adds-plugin-evals-to-claude-code-6-grader-types-a-",
+    "title": "Anthropic Adds Plugin Evals to Claude Code: 6 Grader Types, a No-Plugin Baseline, and a CI Gate for Skills - marktechpost.com",
+    "date": "2026-09-11",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPTTJnN2w0WEJGRHRPZzU1SzFIM0JLTDRHZ1BXYjl5bmNPSmVmY2ZWOElQSEZYMExyMERaM3pnMW1RQjZvLVBjRVpVN2cxN3RrYTdIbndQVGNxZVh4RS1ONXBQbDJmMlFYX2UtVU5qR2RWYVlzZXVoRnhobzYxeTlpSXByU0VTV0xaMnQwNE1zMmNBUVdGZTRUMTRJOTdqWUJXOFhfUkthaW1Kcmd3ajZVWUZhV096MEZ0NEFMb0FnOUt6ZXIxTnpZQ0lERXlJd21EN0JobWZQbmhyT0FR0gHiAUFVX3lxTE1fNW5lOHMzc3BuN0o4NU55UGpJWUMzZTRyNi1FdUh3Y1EtOHVpcDh4c0ZVUWdTTHVqNlRraG9kRld0VFpGSmJUZ0dWRGFTQnlSd2I2SGFIcnlYRWZ0amloQ004clppc3lTN3JCVTM1emprbzBOLU55UWpLVm5hM1BFcVh6Y3VqckpKUU1pYkFBRU5wNEVOazZyTGFDaEotaktwbWhrb3Y1T1Z0V1JBRXFfWVBQbXpTd0JpR1l1R3dDWlVvWTc2amtmcnA5cnk0cElPRElTOGwwQmRJdUQ5czdoTmc?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxPTTJnN2w0WEJGRHRPZzU1SzFIM0JLTDRHZ1BXYjl5bmNPSmVmY2ZWOEl"
+  },
+  {
     "slug": "2026-09-10-anthropicsclaude-code-v21268",
     "title": "[anthropics/claude-code] v2.1.268",
     "date": "2026-09-10",
@@ -531,27 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.239",
     "excerpt": "## What's changed\n\n- Cost estimates (`/cost`, status line, `--max-budget-usd`) now include the 1.1× US-only-inference pr"
-  },
-  {
-    "slug": "2026-08-20-anthropicsclaude-code-v21238",
-    "title": "[anthropics/claude-code] v2.1.238",
-    "date": "2026-08-20",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
-    "excerpt": "## What's changed\n\n- Added a `keybindingFlavor` setting: set it to `\"readline\"` to make Ctrl+W in the prompt delete back"
-  },
-  {
-    "slug": "2026-08-20-anthropicsclaude-code-v21237",
-    "title": "[anthropics/claude-code] v2.1.237",
-    "date": "2026-08-20",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237",
-    "excerpt": "## What's changed\n\n- Fixed prompt caching for sessions using an LLM gateway or custom base URL\n- Added a built-in \"Conci"
   }
 ]
