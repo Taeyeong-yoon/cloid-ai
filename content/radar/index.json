@@ -1,5 +1,38 @@
 [
   {
+    "slug": "2026-09-12-anthropicsclaude-code-v21270",
+    "title": "[anthropics/claude-code] v2.1.270",
+    "date": "2026-09-12",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270",
+    "excerpt": "## What's changed\n\n- Fixed read-only git commands in Bash unexpectedly asking for permission after a session had been ru"
+  },
+  {
+    "slug": "2026-09-12-iran-and-houthi-rebels-used-anthropics-claude-ai-to-target-u",
+    "title": "Iran and Houthi rebels used Anthropic's Claude AI to target US warships and build hypersonic missiles — Houthi rebels also used the bot to code ballistic missile guidance systems - Tom's Hardware",
+    "date": "2026-09-12",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxNTkRvTzNfa0EwSzJVenh1NU5MUjQtQzByQkhnMkVEUl81bVRjVm1jRXo3dmE1S1FxejZOcjlUQmhtLTVKeFlaWjFsSGlfNE1VQUVsTnBrZGZwU3ZZYzlGOHFCS3lMd2VHQld1Uk5GekphZ25ORm84TTd6bngxbV9BbGY5Q0RocGc3dV9VRTVGaXFWUVVqV05DQzRWcUU3SkVWcjlpd1VNdVM3M0syLTd5OUxOWWptSGpDcWE1OHJVZElFZmJRR0tUZnotNFNOUGI4c0JFMjQ0T1lvdDVrUDBtdFZOZ3RyX2JrUFBUTGVHZGFiZFBVbGlLSW43YldpRWVJUmRZd2NJdlgxVmRrcHBVaHNKbW1KSjY3OHdSMkU3elU1R2IyWjAtcXZERHJaYTNxM3hENXl0MGNMdTVwVzl1YjhydmRPcE1qS1VkSHl5SWpXMU5IREZUVDN5ZnUzMnc?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi3wJBVV95cUxNTkRvTzNfa0EwSzJVenh1NU5MUjQtQzByQkhnMkVEUl81bVRjVm1jRXo"
+  },
+  {
+    "slug": "2026-09-12-anthropic-catches-russians-using-claude-to-code-self-targeti",
+    "title": "Anthropic Catches Russians Using Claude to Code Self-Targeting Drones - DroneXL",
+    "date": "2026-09-12",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxObVE5aWZpMEpzQ1ZfTDRRM2lqV3VjbFdXUUVjdE9LenBETEh4dzR0MDdHdTUwd0pzR3JXb0tBSkI5WTdyMEtIbGdwZDV6MkoxNWxPNGh3bjNDN0pKbDVKRVhOZEpJbUtMTXplR1k1d3cxdW0zWk5GSnVzQnpOR1czcFlVRXNkd2t2aDMzeGV3?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxObVE5aWZpMEpzQ1ZfTDRRM2lqV3VjbFdXUUVjdE9LenBETEh4dzR0MDd"
+  },
+  {
     "slug": "2026-09-11-anthropicsclaude-code-v21269",
     "title": "[anthropics/claude-code] v2.1.269",
     "date": "2026-09-11",
@@ -520,38 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.243",
     "excerpt": "## What's changed\n\n- Added a Loops breakdown to `/usage`: per-loop run count, total tokens, tokens per run, and last run"
-  },
-  {
-    "slug": "2026-08-23-anthropicsclaude-code-v21241",
-    "title": "[anthropics/claude-code] v2.1.241",
-    "date": "2026-08-23",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.241",
-    "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
-  },
-  {
-    "slug": "2026-08-22-anthropicsclaude-code-v21240",
-    "title": "[anthropics/claude-code] v2.1.240",
-    "date": "2026-08-22",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.240",
-    "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
-  },
-  {
-    "slug": "2026-08-21-anthropicsclaude-code-v21239",
-    "title": "[anthropics/claude-code] v2.1.239",
-    "date": "2026-08-21",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.239",
-    "excerpt": "## What's changed\n\n- Cost estimates (`/cost`, status line, `--max-budget-usd`) now include the 1.1× US-only-inference pr"
   }
 ]
