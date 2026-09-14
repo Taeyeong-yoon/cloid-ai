@@ -36,15 +36,15 @@
     },
     {
       "type": "video",
-      "title": "[전체강의 통합본] 클로드 코드 2시간  안에 마스터하기 | 입문→실전→심화 완전 정복 (풀버전)",
-      "url": "https://www.youtube.com/watch?v=vxEvo2BLM6A",
-      "description": "Claude Code 입문편 · 실전편 · 심화편을 한 편으로 묶은 풀버전 통합 강의입니다. 초기 설정부터 커스텀 스킬, Sub-Agent 병렬 실행, ..."
-    },
-    {
-      "type": "video",
       "title": "2026 클로드(Claude) 기초 완전 정복 | 초보자도 이 영상 하나로 끝!",
       "url": "https://www.youtube.com/watch?v=vsw3OSVBSm0",
       "description": "클로드 바로가기 : https://claude.ai/ 클로드 코워크 왕초보 가이드 (클로드 설치, 폴더 정리, 캔바 연동 사용법) | claude cowork ..."
+    },
+    {
+      "type": "video",
+      "title": "[전체강의 통합본] 클로드 코드 2시간  안에 마스터하기 | 입문→실전→심화 완전 정복 (풀버전)",
+      "url": "https://www.youtube.com/watch?v=vxEvo2BLM6A",
+      "description": "Claude Code 입문편 · 실전편 · 심화편을 한 편으로 묶은 풀버전 통합 강의입니다. 초기 설정부터 커스텀 스킬, Sub-Agent 병렬 실행, ..."
     },
     {
       "type": "practice",
