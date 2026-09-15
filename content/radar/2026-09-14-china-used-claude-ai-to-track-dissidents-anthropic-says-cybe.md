@@ -1,0 +1,15 @@
+---
+title: "China used Claude AI to track dissidents, Anthropic says - Cybernews"
+date: "2026-09-14"
+tags:
+  - tool
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMimAFBVV95cUxPZUZmMzN0bGp0eGFQckY2cWRlQ3pLQUdiUWFJbDd6NWRLTUxLSGpmWVpPWng1Mng3bDBaZG1idW44Z3c0Uk1iWFpPb2ViLTRHRk9WaXVVTGt6T1FnUDlTckczbFRZSVBOMm02TFVyMUFXbGdPLUhYOVpRTkpYVHRHR09aLWd3QzA0Zkx1aUlPcUdDRFM2M1NPag?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMimAFBVV95cUxPZUZmMzN0bGp0eGFQckY2cWRlQ3pLQUdiUWFJbDd6NWRLTUxLSGpmWVpPWng1Mng3bDBaZG1idW44Z3c0Uk1iWFpPb2ViLTRHRk9WaXVVTGt6T1FnUDlTckczbFRZSVBOMm02TFVyMUFXbGdPLUhYOVpRTkpYVHRHR09aLWd3QzA0Zkx1aUlPcUdDRFM2M1NPag?oc=5' target='_blank'&gt;China used Clau"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPZUZmMzN0bGp0eGFQckY2cWRlQ3pLQUdiUWFJbDd6NWRLTUxLSGpmWVpPWng1Mng3bDBaZG1idW44Z3c0Uk1iWFpPb2ViLTRHRk9WaXVVTGt6T1FnUDlTckczbFRZSVBOMm02TFVyMUFXbGdPLUhYOVpRTkpYVHRHR09aLWd3QzA0Zkx1aUlPcUdDRFM2M1NPag?oc=5" target="_blank"&gt;China used Clau
+
+**출처**: [https://news.google.com/rss/articles/CBMimAFBVV95cUxPZUZmMzN0bGp0eGFQckY2cWRlQ3pLQUdiUWFJbDd6NWRLTUxLSGpmWVpPWng1Mng3bDBaZG1idW44Z3c0Uk1iWFpPb2ViLTRHRk9WaXVVTGt6T1FnUDlTckczbFRZSVBOMm02TFVyMUFXbGdPLUhYOVpRTkpYVHRHR09aLWd3QzA0Zkx1aUlPcUdDRFM2M1NPag?oc=5](https://news.google.com/rss/articles/CBMimAFBVV95cUxPZUZmMzN0bGp0eGFQckY2cWRlQ3pLQUdiUWFJbDd6NWRLTUxLSGpmWVpPWng1Mng3bDBaZG1idW44Z3c0Uk1iWFpPb2ViLTRHRk9WaXVVTGt6T1FnUDlTckczbFRZSVBOMm02TFVyMUFXbGdPLUhYOVpRTkpYVHRHR09aLWd3QzA0Zkx1aUlPcUdDRFM2M1NPag?oc=5)

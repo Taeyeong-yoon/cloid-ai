@@ -36,15 +36,15 @@
     },
     {
       "type": "video",
-      "title": "AI 시대의 필수 지식 MCP 이 영상 하나로 끝내세요!",
-      "url": "https://www.youtube.com/watch?v=46HxP7kO9oY",
-      "description": "Porter AI : https://getporter.ai MCP서버 예제 코드 GitHub 저장소 Node.js: ..."
-    },
-    {
-      "type": "video",
       "title": "MCP In 26 Minutes (Model Context Protocol)",
       "url": "https://www.youtube.com/watch?v=kOhLoixrJXo",
       "description": "Start building with Bolt V2 ..."
+    },
+    {
+      "type": "video",
+      "title": "MCP Explained in 2 Minutes (Model Context Protocol)",
+      "url": "https://www.youtube.com/watch?v=taeX8tgpPRQ",
+      "description": "FREE AI & AUTOMATION TUTORIALS: https://go9x.me/vawa8q FREE CRASH COURSE: https://go9x.me/7h75a4 We train ..."
     },
     {
       "type": "practice",
