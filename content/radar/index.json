@@ -1,5 +1,94 @@
 [
   {
+    "slug": "2026-09-15-anthropicsclaude-code-v21273",
+    "title": "[anthropics/claude-code] v2.1.273",
+    "date": "2026-09-15",
+    "tags": [
+      "claude-code",
+      "agent"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273",
+    "excerpt": "## What's changed\n\n- Added `x-claude-code-request-class`, `x-claude-code-agent-type`, `x-claude-code-prev-tool-durations"
+  },
+  {
+    "slug": "2026-09-15-anthropicsanthropic-sdk-python-v160",
+    "title": "[anthropics/anthropic-sdk-python] v1.6.0",
+    "date": "2026-09-15",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.6.0",
+    "excerpt": "## 1.6.0 (2026-09-15)\n\nFull Changelog: [v1.5.0...v1.6.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.5"
+  },
+  {
+    "slug": "2026-09-15-anthropicsanthropic-sdk-typescript-vertex-sdk-v0199",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.9",
+    "date": "2026-09-15",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.9",
+    "excerpt": "## 0.19.9 (2026-09-15)\n\nFull Changelog: [vertex-sdk-v0.19.8...vertex-sdk-v0.19.9](https://github.com/anthropics/anthropi"
+  },
+  {
+    "slug": "2026-09-15-anthropicsanthropic-sdk-typescript-sdk-v01260",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.126.0",
+    "date": "2026-09-15",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.126.0",
+    "excerpt": "## 0.126.0 (2026-09-15)\n\nFull Changelog: [sdk-v0.125.0...sdk-v0.126.0](https://github.com/anthropics/anthropic-sdk-types"
+  },
+  {
+    "slug": "2026-09-15-anthropicsanthropic-sdk-typescript-google-cloud-sdk-v0012",
+    "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk: v0.0.12",
+    "date": "2026-09-15",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.12",
+    "excerpt": "## 0.0.12 (2026-09-15)\n\nFull Changelog: [google-cloud-sdk-v0.0.11...google-cloud-sdk-v0.0.12](https://github.com/anthrop"
+  },
+  {
+    "slug": "2026-09-15-developers-find-ways-to-use-claude-code-without-anthropic-mo",
+    "title": "Developers Find Ways to Use Claude Code Without Anthropic Models - The Information",
+    "date": "2026-09-15",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTEJqWWx4bUduSXRtaGpIZEJuODMwLUpjT2Q0c2gycW1yU3NiR1dib3hndlFpVEc2bzdKSk5zRnJmQkRSOUFock92QTZpaEZHRWZzRTBRYmthVkJqMmJtYnBpMTF5X25hYXhHaEZxLUxiVzRKbVE0OUZsSS1lOE5LRXRCWGs0R01TblR4RVdTdkU5MExyMlpONWxQRTFGaUdZNE1TWVdmLVV0eVQ0THJwbmduVjc?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOTEJqWWx4bUduSXRtaGpIZEJuODMwLUpjT2Q0c2gycW1yU3NiR1dib3h"
+  },
+  {
+    "slug": "2026-09-15-anthropic-leaks-512k-lines-of-claude-code-source-yellowcom",
+    "title": "Anthropic Leaks 512K Lines Of Claude Code Source - Yellow.com",
+    "date": "2026-09-15",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1Fc0N0enExeDJWYVFEVTF2aGtTLXZIY1VTTHhPQU5fdVd1OEtaVnJva2tFSmNmN3JyYWVkLTlCMUpSeUF3dWN5NXQtTVZRVG1oY21xbzA1XzFIZVRmZzR6c1MzLUp6TFV4QmJ5bzl5eXBoc3pj?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE1Fc0N0enExeDJWYVFEVTF2aGtTLXZIY1VTTHhPQU5fdVd1OEtaVnJva2t"
+  },
+  {
+    "slug": "2026-09-15-rubrik-unveils-ai-powered-code-guardian-built-on-anthropics-",
+    "title": "Rubrik Unveils AI-Powered Code Guardian Built on Anthropic’s Claude Mythos 5 - citybiz",
+    "date": "2026-09-15",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORU9icFFvMEZqQzliSGlZcUtCeG4zYnlhWTN6UjNtYVVUZUhyaWtVNGVQQUtqbl92U3dxWGFUemdNMVRYRW9GRVh6YWphSTNmSFpYSFZDQk9ITHE3V09HeXV4M04waXdVYzZCZW0waEtaNWlDWE9zNXU3c2ZTamtzbk16RVNYZEFGYXFVMUpIRlNlZU5FLXJ2ZlhZVi1HWUJCY1YyWFZOVUdGSkVxbzlxRzdCMWs?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxORU9icFFvMEZqQzliSGlZcUtCeG4zYnlhWTN6UjNtYVVUZUhyaWtVNGV"
+  },
+  {
     "slug": "2026-09-15-anthropicsclaude-code-v21272",
     "title": "[anthropics/claude-code] v2.1.272",
     "date": "2026-09-15",
@@ -464,93 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.6.6",
     "excerpt": "## 0.6.6 (2026-08-27)\n\nFull Changelog: [aws-sdk-v0.6.5...aws-sdk-v0.6.6](https://github.com/anthropics/anthropic-sdk-typ"
-  },
-  {
-    "slug": "2026-08-26-anthropicsclaude-code-v21247",
-    "title": "[anthropics/claude-code] v2.1.247",
-    "date": "2026-08-26",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
-    "excerpt": "## What's changed\n\n- Added the `SendFeedback` tool: when something goes wrong in a session, Claude can draft a feedback "
-  },
-  {
-    "slug": "2026-08-26-anthropicsanthropic-sdk-python-v110",
-    "title": "[anthropics/anthropic-sdk-python] v1.1.0",
-    "date": "2026-08-26",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.1.0",
-    "excerpt": "## 1.1.0 (2026-08-26)\n\nFull Changelog: [v1.0.0...v1.1.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.0"
-  },
-  {
-    "slug": "2026-08-26-anthropicsanthropic-sdk-typescript-vertex-sdk-v0196",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.6",
-    "date": "2026-08-26",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.6",
-    "excerpt": "## 0.19.6 (2026-08-26)\n\nFull Changelog: [vertex-sdk-v0.19.5...vertex-sdk-v0.19.6](https://github.com/anthropics/anthropi"
-  },
-  {
-    "slug": "2026-08-26-anthropicsanthropic-sdk-typescript-sdk-v01210",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.121.0",
-    "date": "2026-08-26",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.121.0",
-    "excerpt": "## 0.121.0 (2026-08-26)\n\nFull Changelog: [sdk-v0.120.0...sdk-v0.121.0](https://github.com/anthropics/anthropic-sdk-types"
-  },
-  {
-    "slug": "2026-08-26-anthropicsanthropic-sdk-typescript-google-cloud-sdk-v0011",
-    "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk: v0.0.11",
-    "date": "2026-08-26",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.11",
-    "excerpt": "## 0.0.11 (2026-08-26)\n\nFull Changelog: [google-cloud-sdk-v0.0.10...google-cloud-sdk-v0.0.11](https://github.com/anthrop"
-  },
-  {
-    "slug": "2026-08-26-shopify-ceo-threatens-to-ditch-claude-code-anthropic-finally",
-    "title": "Shopify CEO threatens to ditch Claude Code; Anthropic finally responds to AGENTS.md compatibility dispute - finance.biggo.com",
-    "date": "2026-08-26",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1tYUhxVlk2TkduODlnVDB6S3FBQXhrS0dFb1lQZEpSUXpaMWRzUzRXV1A5X2l1NVNwTmFOV1pVeU51ZnNFMWhVODRzSTlRMUdxMmI4ZkYwVkRZeklyRjFEeUJCOXo5NHY5ZXdsT2RkUlM3bnpQSkE?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE1tYUhxVlk2TkduODlnVDB6S3FBQXhrS0dFb1lQZEpSUXpaMWRzUzRXV1A"
-  },
-  {
-    "slug": "2026-08-26-claude-code-sparks-developer-backlash-over-agentsmd-ban-anth",
-    "title": "Claude Code Sparks Developer Backlash Over AGENTS.md Ban: Anthropic's Controversial Industry Standard Rejection &amp; Official Response That Enraged the Dev Community - 36 Kr",
-    "date": "2026-08-26",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1IeWhZak5Hdkd3S2M3clQ3YVVMeUxLYVg3YzJhbmZkM2JtMGQ0UEZOaThZbURKa3Zhem5jMU9EOTZPMDFzemk2blY0eWZSaEcweFhn?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE1IeWhZak5Hdkd3S2M3clQ3YVVMeUxLYVg3YzJhbmZkM2JtMGQ0UEZOaTh"
-  },
-  {
-    "slug": "2026-08-25-shopifys-ceo-threatened-to-ban-claude-code-anthropic-had-alr",
-    "title": "Shopify's CEO threatened to ban Claude Code. Anthropic had already closed the feature request. - The New Stack",
-    "date": "2026-08-25",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9kOEpmSGtkU2M5SnROVV9kVVM0Z1liN1B6aW5pZkI4UC1ZV2VYaFU4WlNHbXU3a1NUVUxYOERxc2dJOU5Hak9DOTJmUEFYLXA5bnJjZFVPdlpxSzd1aDdaWlVB?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE9kOEpmSGtkU2M5SnROVV9kVVM0Z1liN1B6aW5pZkI4UC1ZV2VYaFU4WlN"
   }
 ]
