@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-09-17-anthropicsclaude-code-v21274",
+    "title": "[anthropics/claude-code] v2.1.274",
+    "date": "2026-09-17",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.274",
+    "excerpt": "## What's changed\n\n- Added a visible warning when memory usage is critical, with steps to free memory or restart safely\n"
+  },
+  {
     "slug": "2026-09-15-anthropicsclaude-code-v21273",
     "title": "[anthropics/claude-code] v2.1.273",
     "date": "2026-09-15",
@@ -542,16 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v0.33.3",
     "excerpt": "## 0.33.3 (2026-08-27)\n\nFull Changelog: [bedrock-sdk-v0.33.2...bedrock-sdk-v0.33.3](https://github.com/anthropics/anthro"
-  },
-  {
-    "slug": "2026-08-27-anthropicsanthropic-sdk-typescript-aws-sdk-v066",
-    "title": "[anthropics/anthropic-sdk-typescript] aws-sdk: v0.6.6",
-    "date": "2026-08-27",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.6.6",
-    "excerpt": "## 0.6.6 (2026-08-27)\n\nFull Changelog: [aws-sdk-v0.6.5...aws-sdk-v0.6.6](https://github.com/anthropics/anthropic-sdk-typ"
   }
 ]

@@ -42,9 +42,9 @@
     },
     {
       "type": "video",
-      "title": "How Model Context Protocol (MCP) actually works",
-      "url": "https://www.youtube.com/watch?v=cGuyrANVi4A",
-      "description": "Google MCPs → https://goo.gle/3PYkjky Build an ADK agent with Google MCPs → https://goo.gle/4o6h8DP Connect an MCP ..."
+      "title": "AI 시대의 필수 지식 MCP 이 영상 하나로 끝내세요!",
+      "url": "https://www.youtube.com/watch?v=46HxP7kO9oY",
+      "description": "Porter AI : https://getporter.ai MCP서버 예제 코드 GitHub 저장소 Node.js: ..."
     },
     {
       "type": "practice",
