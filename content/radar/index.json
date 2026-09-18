@@ -1,5 +1,72 @@
 [
   {
+    "slug": "2026-09-18-anthropicsclaude-code-v21276",
+    "title": "[anthropics/claude-code] v2.1.276",
+    "date": "2026-09-18",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.276",
+    "excerpt": "## What's changed\n\n- Fixed every request failing with `400 … Input tag 'advisor_20260301'` when `ANTHROPIC_BASE_URL` poi"
+  },
+  {
+    "slug": "2026-09-17-anthropicsclaude-code-v21275",
+    "title": "[anthropics/claude-code] v2.1.275",
+    "date": "2026-09-17",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.275",
+    "excerpt": "## What's changed\n\n- Added the signed-in account to Claude apps gateway sign-in: when the gateway names it, you confirm "
+  },
+  {
+    "slug": "2026-09-17-anthropic-launches-claude-code-projects-an-always-on-convers",
+    "title": "Anthropic launches Claude Code Projects, an ‘always-on’ conversation that remembers and delegates your long-running dev work - venturebeat.com",
+    "date": "2026-09-17",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1p"
+  },
+  {
+    "slug": "2026-09-17-anthropics-new-claude-code-feature-could-drain-your-plan-bef",
+    "title": "Anthropic’s new Claude Code feature could drain your plan before lunch - The New Stack",
+    "date": "2026-09-17",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0xMkdGYnpZQ0E5SU1yelZSVVM5d3dqV0g0aWVzNUw1WVItbjBnNFF6dG85TlZNc09rQ3IzZnR0bjUzbmhSNXBjdWdTTWNwQTdTU2Jjbm5Fa1I5V2tCZDc4ZXFkRQ?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE0xMkdGYnpZQ0E5SU1yelZSVVM5d3dqV0g0aWVzNUw1WVItbjBnNFF6dG8"
+  },
+  {
+    "slug": "2026-09-17-anthropic-redesigns-claude-code-projects-to-coordinate-agent",
+    "title": "Anthropic Redesigns Claude Code Projects to Coordinate Agent Threads - Unite.AI",
+    "date": "2026-09-17",
+    "tags": [
+      "claude-code",
+      "agent"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPV0lhaWdKNC1VekFkMHFlSTdMSXJDcEJYT2g1SkFwZWdIVDZqT0c4QXdIVGNLd29wdGFKcC1HM2FZZEx6Q0N4M0JHR2xBVGxLaXRxSDhING85V00zRTRFRkZyemFRQjdlZEUzZno1ZFNQbUlmdmN6dzVwNUc3S3pOWjdaNFBNRGZXb21fczRTMmpNbDQx?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxPV0lhaWdKNC1VekFkMHFlSTdMSXJDcEJYT2g1SkFwZWdIVDZqT0c4QXd"
+  },
+  {
+    "slug": "2026-09-17-anthropic-launches-claude-code-projects-in-beta-parallel-clo",
+    "title": "Anthropic Launches Claude Code Projects in Beta: Parallel Cloud Sessions That Keep Running After You Close Your Laptop - marktechpost.com",
+    "date": "2026-09-17",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPVkRDWENsX2daLXRENUFaNDVhQ1JHNnVra2x6ZzFnSU5kT2pncVZ5T1V5QTBUaDVKLVVKb2tHNzZKakNJMzdEdmJDUExGRUtGVFh4NXNsdkJ5cTJrd1o5ZWk1QUktd08zR0VFNVBNRlhjSWVnMHIya1d0TlBlLUprTVozanowT0pFRjNxNmd0cHRvdkQ1OUpLb2k1b0VRUFRkYVF3cGVYQnItbjBEdGEyejFkMmJ5VzlUbUtWcFJDMnhDbjZxbUVqbV9GN2R2ejBxQmN3NGJROHBKeVNCYWdmQTc0eDd5SkE0Sl9aamZwUdIB9AFBVV95cUxOYldva1B5YU0tUlE3RjJsem9SajUzNnF6Rm1peEgyWW1qUDQ2by16SW52cEZHU0pBT0YwMWdfd1FVUXN1cm93S2Vlb2R0NkJNMlBKVkhmWExWTmVCQWV4U05Ed0NMVDdMdzdLY3ZabjNjbEI0MDlEaEdvN0VHaElkQ1lXb2RMTmIwSjhNM295b05VUk1jSHBhQzEtT0hqRlhSU3g5NmlxUTNnVS1yczhld2dpN2xMcExReGs4VFNyUWlSUzJCTTcyaUFLZFNwbDRaUy1yZmE5a1JZRHVfa2FyU3REV1NHZzhjYTdLX3ZxaG1qVTdR?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi7wFBVV95cUxPVkRDWENsX2daLXRENUFaNDVhQ1JHNnVra2x6ZzFnSU5kT2pncVZ5T1V"
+  },
+  {
     "slug": "2026-09-17-anthropicsclaude-code-v21274",
     "title": "[anthropics/claude-code] v2.1.274",
     "date": "2026-09-17",
@@ -486,72 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251",
     "excerpt": "## What's changed\n\n- Added `PreModelSwitch` and `PostModelSwitch` hook events (block, confirm, or annotate a model switc"
-  },
-  {
-    "slug": "2026-08-28-claude-code-runs-malware-despite-auto-mode-security-tries-to",
-    "title": "Claude Code runs malware despite “Auto Mode” security, tries to fix it, gets denied - Cybernews",
-    "date": "2026-08-28",
-    "tags": [
-      "claude-code",
-      "security"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOa3NyX2NkT2ZteThBZllzOXJTMGMycmRrajNPQ1o3N3c3X2VYMlhHRm1pRG56NG1MWWo3aHlvdTlydk1XczdGMTVwSVdIQ0UzUzhPbGFzek9PSjQ1emFuTmpOVzFlTzZUTjNQTmpVVTgxTVpfMl9aREs2b211WnJ0Zw?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxOa3NyX2NkT2ZteThBZllzOXJTMGMycmRrajNPQ1o3N3c3X2VYMlhHRm1"
-  },
-  {
-    "slug": "2026-08-28-anthropicsclaude-code-v21250",
-    "title": "[anthropics/claude-code] v2.1.250",
-    "date": "2026-08-28",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.250",
-    "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
-  },
-  {
-    "slug": "2026-08-27-anthropicsclaude-code-v21248",
-    "title": "[anthropics/claude-code] v2.1.248",
-    "date": "2026-08-27",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
-    "excerpt": "## What's changed\n\n- Added `--restricted` (or `CLAUDE_CODE_RESTRICTED=1`): removes the built-in tools that run commands "
-  },
-  {
-    "slug": "2026-08-27-anthropicsanthropic-sdk-python-v120",
-    "title": "[anthropics/anthropic-sdk-python] v1.2.0",
-    "date": "2026-08-27",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.2.0",
-    "excerpt": "## 1.2.0 (2026-08-27)\n\nFull Changelog: [v1.1.0...v1.2.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.1"
-  },
-  {
-    "slug": "2026-08-27-anthropicsanthropic-sdk-typescript-sdk-v01220",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.122.0",
-    "date": "2026-08-27",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.122.0",
-    "excerpt": "## 0.122.0 (2026-08-27)\n\nFull Changelog: [sdk-v0.121.0...sdk-v0.122.0](https://github.com/anthropics/anthropic-sdk-types"
-  },
-  {
-    "slug": "2026-08-27-anthropicsanthropic-sdk-typescript-bedrock-sdk-v0333",
-    "title": "[anthropics/anthropic-sdk-typescript] bedrock-sdk: v0.33.3",
-    "date": "2026-08-27",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v0.33.3",
-    "excerpt": "## 0.33.3 (2026-08-27)\n\nFull Changelog: [bedrock-sdk-v0.33.2...bedrock-sdk-v0.33.3](https://github.com/anthropics/anthro"
   }
 ]
