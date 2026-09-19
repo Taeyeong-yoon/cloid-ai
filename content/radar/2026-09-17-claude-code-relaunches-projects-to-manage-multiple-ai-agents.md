@@ -1,0 +1,15 @@
+---
+title: "Claude Code relaunches Projects to manage multiple AI agents in the cloud - The Verge"
+date: "2026-09-17"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZUxTNjFoWnlrU0x5ektWaF93WEJ4U0RxbTBRMV9MVVlmQ19pS3ZnYnBsV1lLVkN4YXI4UmlrcktOMmRmRkV1cTFSUk56SkJWaWgwT2dEZ1FTeHdhUlUyVndiWWxvZ0VQZTVueE1PVWtya2ZiZ2dnUlRUUHVVbmotaUNqMExwQ1JCdWZQQWpoanRsQWc?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMikwFBVV95cUxNZUxTNjFoWnlrU0x5ektWaF93WEJ4U0RxbTBRMV9MVVlmQ19pS3ZnYnBsV1lLVkN4YXI4UmlrcktOMmRmRkV1cTFSUk56SkJWaWgwT2dEZ1FTeHdhUlUyVndiWWxvZ0VQZTVueE1PVWtya2ZiZ2dnUlRUUHVVbmotaUNqMExwQ1JCdWZQQWpoanRsQWc?oc=5' target='_blank'&gt;Claude Code relaunches"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNZUxTNjFoWnlrU0x5ektWaF93WEJ4U0RxbTBRMV9MVVlmQ19pS3ZnYnBsV1lLVkN4YXI4UmlrcktOMmRmRkV1cTFSUk56SkJWaWgwT2dEZ1FTeHdhUlUyVndiWWxvZ0VQZTVueE1PVWtya2ZiZ2dnUlRUUHVVbmotaUNqMExwQ1JCdWZQQWpoanRsQWc?oc=5" target="_blank"&gt;Claude Code relaunches
+
+**출처**: [https://news.google.com/rss/articles/CBMikwFBVV95cUxNZUxTNjFoWnlrU0x5ektWaF93WEJ4U0RxbTBRMV9MVVlmQ19pS3ZnYnBsV1lLVkN4YXI4UmlrcktOMmRmRkV1cTFSUk56SkJWaWgwT2dEZ1FTeHdhUlUyVndiWWxvZ0VQZTVueE1PVWtya2ZiZ2dnUlRUUHVVbmotaUNqMExwQ1JCdWZQQWpoanRsQWc?oc=5](https://news.google.com/rss/articles/CBMikwFBVV95cUxNZUxTNjFoWnlrU0x5ektWaF93WEJ4U0RxbTBRMV9MVVlmQ19pS3ZnYnBsV1lLVkN4YXI4UmlrcktOMmRmRkV1cTFSUk56SkJWaWgwT2dEZ1FTeHdhUlUyVndiWWxvZ0VQZTVueE1PVWtya2ZiZ2dnUlRUUHVVbmotaUNqMExwQ1JCdWZQQWpoanRsQWc?oc=5)

@@ -42,9 +42,9 @@
     },
     {
       "type": "video",
-      "title": "MCP In 26 Minutes (Model Context Protocol)",
-      "url": "https://www.youtube.com/watch?v=kOhLoixrJXo",
-      "description": "Start building with Bolt V2 ..."
+      "title": "How Model Context Protocol (MCP) actually works",
+      "url": "https://www.youtube.com/watch?v=cGuyrANVi4A",
+      "description": "Google MCPs → https://goo.gle/3PYkjky Build an ADK agent with Google MCPs → https://goo.gle/4o6h8DP Connect an MCP ..."
     },
     {
       "type": "practice",
