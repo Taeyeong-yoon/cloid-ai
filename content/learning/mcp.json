@@ -42,9 +42,9 @@
     },
     {
       "type": "video",
-      "title": "Model Context Protocol: Guia que todo Dev precisa saber",
-      "url": "https://www.youtube.com/watch?v=gc9MEMdOZxM",
-      "description": "Nesse vídeo você aprenderá na teoria e na prática como funcionam os famosos Servidores MCPs ou Model Context Protocol, ."
+      "title": "How Model Context Protocol (MCP) actually works",
+      "url": "https://www.youtube.com/watch?v=cGuyrANVi4A",
+      "description": "Google MCPs → https://goo.gle/3PYkjky Build an ADK agent with Google MCPs → https://goo.gle/4o6h8DP Connect an MCP ..."
     },
     {
       "type": "practice",
