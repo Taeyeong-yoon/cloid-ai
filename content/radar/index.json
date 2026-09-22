@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-09-21-claude-code-now-also-accepts-instructions-in-openais-agentsm",
+    "title": "Claude Code now also accepts instructions in OpenAI’s Agents.md format - InfoWorld",
+    "date": "2026-09-21",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQcTRzQTdDY2pzbXNLMUxQemdoOXprM213anB2SUN5d216WHdBeExKRnYwOUkzcUw5VHZobllvb01IbDFMdFdYdFh5MW5qSVVkSVZiS194WUlYb2xFUEh6Nk82LWppNUdoUWVMdlZrYWdQanlRb3pDTmJpUVUwZFp6VFQ0dC1VUWl2LWRhRHpVcHQtUFpNUVNTdDY2SGdRMDYyTERsTml6RXBtc2dvT0lTNzk4V3BuUWc?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQcTRzQTdDY2pzbXNLMUxQemdoOXprM213anB2SUN5d216WHdBeExKRnY"
+  },
+  {
     "slug": "2026-09-19-anthropicsclaude-code-v21278",
     "title": "[anthropics/claude-code] v2.1.278",
     "date": "2026-09-19",
@@ -541,17 +552,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
     "excerpt": "## What's changed\n\n- Added `managedMcpServers` managed setting: organizations can provide HTTP/SSE MCP servers to every "
-  },
-  {
-    "slug": "2026-09-01-anthropicsclaude-code-v21258",
-    "title": "[anthropics/claude-code] v2.1.258",
-    "date": "2026-09-01",
-    "tags": [
-      "claude-code",
-      "remote-control"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.258",
-    "excerpt": "## What's changed\n\n- Fixed Claude Code failing to launch on macOS 12 (Monterey), a regression introduced in 2.1.255\n- Fi"
   }
 ]
