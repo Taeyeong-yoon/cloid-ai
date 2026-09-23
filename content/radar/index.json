@@ -1,5 +1,60 @@
 [
   {
+    "slug": "2026-09-22-anthropicsclaude-code-v21280",
+    "title": "[anthropics/claude-code] v2.1.280",
+    "date": "2026-09-22",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280",
+    "excerpt": "## What's changed\n\n- Added Claude Opus 5.5 (`claude-opus-5-5`), now the default Opus model — 1M context, $4/$20 per Mtok"
+  },
+  {
+    "slug": "2026-09-22-anthropicsanthropic-sdk-python-v180",
+    "title": "[anthropics/anthropic-sdk-python] v1.8.0",
+    "date": "2026-09-22",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.8.0",
+    "excerpt": "## 1.8.0 (2026-09-22)\n\nFull Changelog: [v1.7.0...v1.8.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.7"
+  },
+  {
+    "slug": "2026-09-22-anthropicsanthropic-sdk-typescript-vertex-sdk-v01911",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.11",
+    "date": "2026-09-22",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.11",
+    "excerpt": "## 0.19.11 (2026-09-22)\n\nFull Changelog: [vertex-sdk-v0.19.10...vertex-sdk-v0.19.11](https://github.com/anthropics/anthr"
+  },
+  {
+    "slug": "2026-09-22-anthropicsanthropic-sdk-typescript-sdk-v01280",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.128.0",
+    "date": "2026-09-22",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.128.0",
+    "excerpt": "## 0.128.0 (2026-09-22)\n\nFull Changelog: [sdk-v0.127.0...sdk-v0.128.0](https://github.com/anthropics/anthropic-sdk-types"
+  },
+  {
+    "slug": "2026-09-22-anthropicsanthropic-sdk-typescript-google-cloud-sdk-v0014",
+    "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk: v0.0.14",
+    "date": "2026-09-22",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.14",
+    "excerpt": "## 0.0.14 (2026-09-22)\n\nFull Changelog: [google-cloud-sdk-v0.0.13...google-cloud-sdk-v0.0.14](https://github.com/anthrop"
+  },
+  {
     "slug": "2026-09-21-claude-code-now-also-accepts-instructions-in-openais-agentsm",
     "title": "Claude Code now also accepts instructions in OpenAI’s Agents.md format - InfoWorld",
     "date": "2026-09-21",
@@ -496,61 +551,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.7",
     "excerpt": "## 0.19.7 (2026-09-04)\n\nFull Changelog: [vertex-sdk-v0.19.6...vertex-sdk-v0.19.7](https://github.com/anthropics/anthropi"
-  },
-  {
-    "slug": "2026-09-04-anthropicsanthropic-sdk-typescript-sdk-v01240",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.124.0",
-    "date": "2026-09-04",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.124.0",
-    "excerpt": "## 0.124.0 (2026-09-04)\n\nFull Changelog: [sdk-v0.123.0...sdk-v0.124.0](https://github.com/anthropics/anthropic-sdk-types"
-  },
-  {
-    "slug": "2026-09-04-anthropicsanthropic-sdk-typescript-foundry-sdk-v045",
-    "title": "[anthropics/anthropic-sdk-typescript] foundry-sdk: v0.4.5",
-    "date": "2026-09-04",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/foundry-sdk-v0.4.5",
-    "excerpt": "## 0.4.5 (2026-09-04)\n\nFull Changelog: [foundry-sdk-v0.4.4...foundry-sdk-v0.4.5](https://github.com/anthropics/anthropic"
-  },
-  {
-    "slug": "2026-09-03-anthropicsclaude-code-v21260",
-    "title": "[anthropics/claude-code] v2.1.260",
-    "date": "2026-09-03",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260",
-    "excerpt": "## What's changed\n\n- Added a diff panel that opens beside the conversation in fullscreen mode and shows your uncommitted"
-  },
-  {
-    "slug": "2026-09-03-anthropic-releases-claude-ai-agents-to-handle-sales-in-retai",
-    "title": "Anthropic releases Claude AI agents to handle sales in retail, travel, and more - SmartCompany",
-    "date": "2026-09-03",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPS01oTnpQMVJjUkwyR1ZjTHhjRHdCQVBfVGc5UmFEOWZUdlJVWVlBSnk5bUpnNmZlUlBUZ19MSU9Xd2NZLWg5RDVBT3ZPRzFTM0o4ZTl1NXQ5V1VydzY5YV9RczJiQUViMzhZVmw0QlpuS2tWd1hBMmtsLUs4WWZPY1RDb0dBMm5tQmhQVGJFVXltSm1yRFdnbmhoNHpSaXA3M1JxMEgtOA?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPS01oTnpQMVJjUkwyR1ZjTHhjRHdCQVBfVGc5UmFEOWZUdlJVWVlBSnk"
-  },
-  {
-    "slug": "2026-09-02-anthropicsclaude-code-v21259",
-    "title": "[anthropics/claude-code] v2.1.259",
-    "date": "2026-09-02",
-    "tags": [
-      "claude-code",
-      "mcp"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
-    "excerpt": "## What's changed\n\n- Added `managedMcpServers` managed setting: organizations can provide HTTP/SSE MCP servers to every "
   }
 ]
