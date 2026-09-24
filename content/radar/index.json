@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-09-23-anthropicsclaude-code-v21281",
+    "title": "[anthropics/claude-code] v2.1.281",
+    "date": "2026-09-23",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.281",
+    "excerpt": "## What's changed\n\n- Added Claude apps gateway support for newer Claude Desktop keys in `desktop` policy blocks, includi"
+  },
+  {
     "slug": "2026-09-22-anthropicsclaude-code-v21280",
     "title": "[anthropics/claude-code] v2.1.280",
     "date": "2026-09-22",
@@ -540,16 +551,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.4.0",
     "excerpt": "## 1.4.0 (2026-09-04)\n\nFull Changelog: [v1.3.0...v1.4.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.3"
-  },
-  {
-    "slug": "2026-09-04-anthropicsanthropic-sdk-typescript-vertex-sdk-v0197",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.7",
-    "date": "2026-09-04",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.7",
-    "excerpt": "## 0.19.7 (2026-09-04)\n\nFull Changelog: [vertex-sdk-v0.19.6...vertex-sdk-v0.19.7](https://github.com/anthropics/anthropi"
   }
 ]
