@@ -1,5 +1,28 @@
 [
   {
+    "slug": "2026-09-24-anthropicsclaude-code-v21282",
+    "title": "[anthropics/claude-code] v2.1.282",
+    "date": "2026-09-24",
+    "tags": [
+      "claude-code",
+      "market"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.282",
+    "excerpt": "## What's changed\n\n- Added a `maxProseWidth` setting that caps the width of Claude's prose in wide terminals while table"
+  },
+  {
+    "slug": "2026-09-24-anthropic-explains-claude-codes-quality-drop-3-hit-2026-shat",
+    "title": "Anthropic Explains Claude Code’s Quality Drop: 3% Hit [2026] - shattered.io",
+    "date": "2026-09-24",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1FbFRybmtOZm9paW1XaEJ5Q1lpZ1gxMExWUDF2Q2N2X0FEakZKUkdBWXVBcjF1bWFfVnlzNnY2WFd1akVZa3VNZmJ2T0REV0UwUlpXdUhjdGlWYlF1M25iMmpvLWNQVUNLeC1feWJDNjI2Y3BfNGRoc1VFVQ?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE1FbFRybmtOZm9paW1XaEJ5Q1lpZ1gxMExWUDF2Q2N2X0FEakZKUkdBWXV"
+  },
+  {
     "slug": "2026-09-23-anthropicsclaude-code-v21281",
     "title": "[anthropics/claude-code] v2.1.281",
     "date": "2026-09-23",
@@ -529,27 +552,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.263",
     "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
-  },
-  {
-    "slug": "2026-09-04-anthropicsclaude-code-v21261",
-    "title": "[anthropics/claude-code] v2.1.261",
-    "date": "2026-09-04",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.261",
-    "excerpt": "## What's changed\n\n- Added an \"Organization policy\" line to `/status` and `claude doctor` that says why your organizatio"
-  },
-  {
-    "slug": "2026-09-04-anthropicsanthropic-sdk-python-v140",
-    "title": "[anthropics/anthropic-sdk-python] v1.4.0",
-    "date": "2026-09-04",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.4.0",
-    "excerpt": "## 1.4.0 (2026-09-04)\n\nFull Changelog: [v1.3.0...v1.4.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.3"
   }
 ]
