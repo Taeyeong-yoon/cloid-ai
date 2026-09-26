@@ -36,15 +36,15 @@
     },
     {
       "type": "video",
-      "title": "Google Ads Automation with Claude AI — Full Tutorial | Google Ads MCP",
-      "url": "https://www.youtube.com/watch?v=DirMqZ4Lavs",
-      "description": "How to automate Google Ads reporting with Claude and the InsightfulPipe Google Ads MCP server: a scheduled prompt pulls "
-    },
-    {
-      "type": "video",
       "title": "폰 하나로 PC 원격 제어하기! 클로드 신기능 3개 다 써봤습니다 ㅣ Dispatch vs Remote Control vs Channels",
       "url": "https://www.youtube.com/watch?v=YkiGCwNYBIE",
       "description": "컴퓨터 앞에 묶여있던 클로드가 풀렸습니다. 이제 폰 하나로 어디서든 클로드한테 일을 시킬 수 있어요. 근데 원격 기능이 3가지나 돼서 ..."
+    },
+    {
+      "type": "video",
+      "title": "Google Ads Automation with Claude AI — Full Tutorial | Google Ads MCP",
+      "url": "https://www.youtube.com/watch?v=DirMqZ4Lavs",
+      "description": "How to automate Google Ads reporting with Claude and the InsightfulPipe Google Ads MCP server: a scheduled prompt pulls "
     },
     {
       "type": "practice",

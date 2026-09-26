@@ -1,5 +1,49 @@
 [
   {
+    "slug": "2026-09-25-anthropicsclaude-code-v21283",
+    "title": "[anthropics/claude-code] v2.1.283",
+    "date": "2026-09-25",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
+    "excerpt": "## What's changed\n\n- Added `x-claude-code-prompt-id` to the gateway hint headers so LLM gateways can group the requests "
+  },
+  {
+    "slug": "2026-09-25-anthropic-rolls-out-up-to-250-in-free-claude-code-credits-bu",
+    "title": "Anthropic rolls out up to $250 in free Claude Code credits, but only for cloud sessions - BleepingComputer",
+    "date": "2026-09-25",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQdU5XenNOOFVnSDJuWXA0N2NkRnVKRmo1UndiQzNfOUI4aGpnYzhWc1I2YkFPV0dwdlFtX3JQUTBFZjZzN19hS0NnV0JnVG5WX1EtRzRHRVdKXzBPaC05UzZwSnRDS2JVeW1wUlh3NTRLeUZnT2liRmNXcmlMWlZQS3VGbzlmMkpnV0NRNUVsVHVLZUVMRWZ5ZlAzZGYyUjhjOU1JUU0zeUl0VlVNSlJ2SlZ6UEM0UEwwV3RGU2dweE9jM2dBTG8yNlJtQkxFNWpkOEtxRkZPcElwV2VoNU0xNmZR?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi4gFBVV95cUxQdU5XenNOOFVnSDJuWXA0N2NkRnVKRmo1UndiQzNfOUI4aGpnYzhWc1I"
+  },
+  {
+    "slug": "2026-09-25-do-not-let-programs-run-commands-on-your-machine-claude-code",
+    "title": "‘Do not let programs run commands on your machine’: Claude Code allegedly deleted 48,000 files in 103 seconds, and it’s a terrifying warning about AI agents - techradar.com",
+    "date": "2026-09-25",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxNQVVjM0pQRFpzektxX3NLM1ZqSERGMEljWW5pYWJ2c1hnTUZMTmZCVnRRdGtkRlpCQjlEQTR5bnd6MTRudlA3dWVubjZISzBGZng5eVg5NlBjcTdVRHdobXB5bDlfb1BncldYc2lUWVUzY0s2RkFZZmxpdFN2ZlNBU2huNzRIYUtEUGszYldjMksyS3ZXd0dwdFh2b1I3ZEQ2cFVuXzFKRVhlWGNUVC1ISkhvazJOYTZ0emtJR3FKUzBGR1JlMHdSekowekRDSzRZTmhGalZyWHZsdlVvQ1dHQVdWQ3lhWV9VakVFWUM2YkFDdUw0cXZUUEd2dmVSYnlldTAxeVVULUd0NjdqMTVXd2J5NUV3RjNYRHVmZjdFaWJRTHNPU2V0Mw?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiqAJBVV95cUxNQVVjM0pQRFpzektxX3NLM1ZqSERGMEljWW5pYWJ2c1hnTUZMTmZCVnR"
+  },
+  {
+    "slug": "2026-09-24-anthropic-launches-claude-code-cloud-sessions-and-hands-out-",
+    "title": "Anthropic launches Claude Code cloud sessions and hands out up to $250 in credit - Pasquale Pillitteri",
+    "date": "2026-09-24",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUXdYYWZEdlR2eVNXVlp0UkZUUDRza3B4RExWM0EtUE81cTNTVUZDMUkwbGllRm9kSE5TQXZJNmpUWjVPdWJ5TDRJVXQ0MmMyOHpwNXVFRTRYOVNhblB5eTZqWC03Rko0dHV5dTh1RHJqWDNVcXl5ckkyUHl3dWRKeGVnajdpWUZFdUlRMVNpekowRkE?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxOUXdYYWZEdlR2eVNXVlp0UkZUUDRza3B4RExWM0EtUE81cTNTVUZDMUk"
+  },
+  {
     "slug": "2026-09-24-anthropicsclaude-code-v21282",
     "title": "[anthropics/claude-code] v2.1.282",
     "date": "2026-09-24",
@@ -508,49 +552,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/foundry-sdk-v0.4.6",
     "excerpt": "## 0.4.6 (2026-09-10)\n\nFull Changelog: [foundry-sdk-v0.4.5...foundry-sdk-v0.4.6](https://github.com/anthropics/anthropic"
-  },
-  {
-    "slug": "2026-09-09-anthropicsclaude-code-v21267",
-    "title": "[anthropics/claude-code] v2.1.267",
-    "date": "2026-09-09",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.267",
-    "excerpt": "## What's changed\n\n- Added `maxEffortLevel` setting (top-level or per model under `modelSettings`): caps the effort leve"
-  },
-  {
-    "slug": "2026-09-08-anthropicsclaude-code-v21266",
-    "title": "[anthropics/claude-code] v2.1.266",
-    "date": "2026-09-08",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.266",
-    "excerpt": "## What's changed\n\n- Fixed a 2.1.265 regression affecting LLM-gateway and proxy setups: the undocumented `CLAUDE_CODE_US"
-  },
-  {
-    "slug": "2026-09-08-anthropicsclaude-code-v21265",
-    "title": "[anthropics/claude-code] v2.1.265",
-    "date": "2026-09-08",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.265",
-    "excerpt": "## What's changed\n\n- Added `user.email` and `user.groups` to the telemetry Claude Desktop and Cowork send through a Clau"
-  },
-  {
-    "slug": "2026-09-06-anthropicsclaude-code-v21263",
-    "title": "[anthropics/claude-code] v2.1.263",
-    "date": "2026-09-06",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.263",
-    "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
   }
 ]
