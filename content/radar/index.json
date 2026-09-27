@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-09-26-anthropic-offers-up-to-250-in-free-claude-code-cloud-credits",
+    "title": "Anthropic Offers Up to $250 in Free Claude Code Cloud Credits to Pro and Max Subscribers - gHacks",
+    "date": "2026-09-26",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcjl4WGw3RGpBenhGOFh4dDZ3ajFJeThrNmtfUWhJZ21TUG1yWGx0TWZGYkdrRW8tVHREWTlEM2pCZ1dWUTFwb3VESURaTTRzUElUemR0dDd2TnhwcDVpOHp0b3FKQTlPYnlnUS1XWHlobTdadEVOamN3X3MyWTJsMi1VQ2Q1UHd1MlJIUlVQZ09UeExJUDd2ZkZlUWl2UEpRRG5JSUVSWXVuSW93WWVPQmFsMnlvcDlnRk94aWwxQQ?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQcjl4WGw3RGpBenhGOFh4dDZ3ajFJeThrNmtfUWhJZ21TUG1yWGx0TWZ"
+  },
+  {
     "slug": "2026-09-25-anthropicsclaude-code-v21283",
     "title": "[anthropics/claude-code] v2.1.283",
     "date": "2026-09-25",
@@ -541,16 +552,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.125.0",
     "excerpt": "## 0.125.0 (2026-09-10)\n\nFull Changelog: [sdk-v0.124.0...sdk-v0.125.0](https://github.com/anthropics/anthropic-sdk-types"
-  },
-  {
-    "slug": "2026-09-10-anthropicsanthropic-sdk-typescript-foundry-sdk-v046",
-    "title": "[anthropics/anthropic-sdk-typescript] foundry-sdk: v0.4.6",
-    "date": "2026-09-10",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/foundry-sdk-v0.4.6",
-    "excerpt": "## 0.4.6 (2026-09-10)\n\nFull Changelog: [foundry-sdk-v0.4.5...foundry-sdk-v0.4.6](https://github.com/anthropics/anthropic"
   }
 ]
