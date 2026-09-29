@@ -1,5 +1,72 @@
 [
   {
+    "slug": "2026-09-28-anthropicsclaude-code-v21284",
+    "title": "[anthropics/claude-code] v2.1.284",
+    "date": "2026-09-28",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
+    "excerpt": "## What's changed\n\n- Added Claude Sonnet 5.5 (`claude-sonnet-5-5`), now the default Sonnet model on the Anthropic API — "
+  },
+  {
+    "slug": "2026-09-28-anthropicsanthropic-sdk-python-v190",
+    "title": "[anthropics/anthropic-sdk-python] v1.9.0",
+    "date": "2026-09-28",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.9.0",
+    "excerpt": "## 1.9.0 (2026-09-28)\n\nFull Changelog: [v1.8.0...v1.9.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.8"
+  },
+  {
+    "slug": "2026-09-28-anthropicsanthropic-sdk-typescript-vertex-sdk-v0200",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.20.0",
+    "date": "2026-09-28",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.20.0",
+    "excerpt": "## 0.20.0 (2026-09-28)\n\nFull Changelog: [vertex-sdk-v0.19.11...vertex-sdk-v0.20.0](https://github.com/anthropics/anthrop"
+  },
+  {
+    "slug": "2026-09-28-anthropicsanthropic-sdk-typescript-sdk-v01290",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.129.0",
+    "date": "2026-09-28",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.129.0",
+    "excerpt": "## 0.129.0 (2026-09-28)\n\nFull Changelog: [sdk-v0.128.0...sdk-v0.129.0](https://github.com/anthropics/anthropic-sdk-types"
+  },
+  {
+    "slug": "2026-09-28-anthropicsanthropic-sdk-typescript-google-cloud-sdk-v0015",
+    "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk: v0.0.15",
+    "date": "2026-09-28",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.15",
+    "excerpt": "## 0.0.15 (2026-09-28)\n\nFull Changelog: [google-cloud-sdk-v0.0.14...google-cloud-sdk-v0.0.15](https://github.com/anthrop"
+  },
+  {
+    "slug": "2026-09-27-i-broke-something-a-claude-code-ai-agent-deleted-48000-files",
+    "title": "'I broke something': A Claude Code AI agent deleted 48,000 files in just over 100 seconds — then apologized for doing so - TechRadar",
+    "date": "2026-09-27",
+    "tags": [
+      "claude-code",
+      "agent"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQdnIzWUdCeWdTb1MwYzhPVmYtZmduSkduQnJPQmFFUmFpOHZrQzBlOWo2ZXJpLVg4dUtBdWdudzFseXNqYWJQTlJTb2hxS1piWFdUMkpMeGRHbFNLaktheEJRLTlsdk1rVzljaTNmTExFUk56VUxKMUFTYmhHN3daS1VialZUQTVZSnh4MTZkbzZJTk1kOVkzWjVLNEtBb2NXdGIwS01hZGNZUFhJSTcyeWxheWhRdzAtNWxzNXZPOENLSWV5R2xDeU9EVVdTODY2T2Y2eDdsN01wc0x4SFV2QU1CU2tZaGlLSnc?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxQdnIzWUdCeWdTb1MwYzhPVmYtZmduSkduQnJPQmFFUmFpOHZrQzBlOWo"
+  },
+  {
     "slug": "2026-09-26-anthropic-offers-up-to-250-in-free-claude-code-cloud-credits",
     "title": "Anthropic Offers Up to $250 in Free Claude Code Cloud Credits to Pro and Max Subscribers - gHacks",
     "date": "2026-09-26",
@@ -486,71 +553,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxObVE5aWZpMEpzQ1ZfTDRRM2lqV3VjbFdXUUVjdE9LenBETEh4dzR0MDdHdTUwd0pzR3JXb0tBSkI5WTdyMEtIbGdwZDV6MkoxNWxPNGh3bjNDN0pKbDVKRVhOZEpJbUtMTXplR1k1d3cxdW0zWk5GSnVzQnpOR1czcFlVRXNkd2t2aDMzeGV3?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxObVE5aWZpMEpzQ1ZfTDRRM2lqV3VjbFdXUUVjdE9LenBETEh4dzR0MDd"
-  },
-  {
-    "slug": "2026-09-11-anthropicsclaude-code-v21269",
-    "title": "[anthropics/claude-code] v2.1.269",
-    "date": "2026-09-11",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.269",
-    "excerpt": "## What's changed\n\n- Added `claude plugin eval`: run a plugin's eval suite against Claude Code and get scored, reproduci"
-  },
-  {
-    "slug": "2026-09-11-anthropic-adds-plugin-evals-to-claude-code-6-grader-types-a-",
-    "title": "Anthropic Adds Plugin Evals to Claude Code: 6 Grader Types, a No-Plugin Baseline, and a CI Gate for Skills - marktechpost.com",
-    "date": "2026-09-11",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPTTJnN2w0WEJGRHRPZzU1SzFIM0JLTDRHZ1BXYjl5bmNPSmVmY2ZWOElQSEZYMExyMERaM3pnMW1RQjZvLVBjRVpVN2cxN3RrYTdIbndQVGNxZVh4RS1ONXBQbDJmMlFYX2UtVU5qR2RWYVlzZXVoRnhobzYxeTlpSXByU0VTV0xaMnQwNE1zMmNBUVdGZTRUMTRJOTdqWUJXOFhfUkthaW1Kcmd3ajZVWUZhV096MEZ0NEFMb0FnOUt6ZXIxTnpZQ0lERXlJd21EN0JobWZQbmhyT0FR0gHiAUFVX3lxTE1fNW5lOHMzc3BuN0o4NU55UGpJWUMzZTRyNi1FdUh3Y1EtOHVpcDh4c0ZVUWdTTHVqNlRraG9kRld0VFpGSmJUZ0dWRGFTQnlSd2I2SGFIcnlYRWZ0amloQ004clppc3lTN3JCVTM1emprbzBOLU55UWpLVm5hM1BFcVh6Y3VqckpKUU1pYkFBRU5wNEVOazZyTGFDaEotaktwbWhrb3Y1T1Z0V1JBRXFfWVBQbXpTd0JpR1l1R3dDWlVvWTc2amtmcnA5cnk0cElPRElTOGwwQmRJdUQ5czdoTmc?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxPTTJnN2w0WEJGRHRPZzU1SzFIM0JLTDRHZ1BXYjl5bmNPSmVmY2ZWOEl"
-  },
-  {
-    "slug": "2026-09-10-anthropicsclaude-code-v21268",
-    "title": "[anthropics/claude-code] v2.1.268",
-    "date": "2026-09-10",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.268",
-    "excerpt": "## What's changed\n\n- Added to the Claude apps gateway: with `pricing:` set in `gateway.yaml`, signed-in Claude Code clie"
-  },
-  {
-    "slug": "2026-09-10-anthropicsanthropic-sdk-python-v150",
-    "title": "[anthropics/anthropic-sdk-python] v1.5.0",
-    "date": "2026-09-10",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.5.0",
-    "excerpt": "## 1.5.0 (2026-09-10)\n\nFull Changelog: [v1.4.0...v1.5.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.4"
-  },
-  {
-    "slug": "2026-09-10-anthropicsanthropic-sdk-typescript-vertex-sdk-v0198",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.8",
-    "date": "2026-09-10",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.8",
-    "excerpt": "## 0.19.8 (2026-09-10)\n\nFull Changelog: [vertex-sdk-v0.19.7...vertex-sdk-v0.19.8](https://github.com/anthropics/anthropi"
-  },
-  {
-    "slug": "2026-09-10-anthropicsanthropic-sdk-typescript-sdk-v01250",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.125.0",
-    "date": "2026-09-10",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.125.0",
-    "excerpt": "## 0.125.0 (2026-09-10)\n\nFull Changelog: [sdk-v0.124.0...sdk-v0.125.0](https://github.com/anthropics/anthropic-sdk-types"
   }
 ]
