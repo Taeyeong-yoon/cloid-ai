@@ -1,5 +1,71 @@
 [
   {
+    "slug": "2026-09-30-anthropicsclaude-code-v21286",
+    "title": "[anthropics/claude-code] v2.1.286",
+    "date": "2026-09-30",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.286",
+    "excerpt": "## What's changed\n\n- Added a count such as \"2 of 5\" to the permission prompt when several permission requests stack up\n-"
+  },
+  {
+    "slug": "2026-09-30-anthropicsanthropic-sdk-python-v1110",
+    "title": "[anthropics/anthropic-sdk-python] v1.11.0",
+    "date": "2026-09-30",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.11.0",
+    "excerpt": "## 1.11.0 (2026-09-30)\n\nFull Changelog: [v1.10.0...v1.11.0](https://github.com/anthropics/anthropic-sdk-python/compare/v"
+  },
+  {
+    "slug": "2026-09-30-anthropicsanthropic-sdk-python-v1100",
+    "title": "[anthropics/anthropic-sdk-python] v1.10.0",
+    "date": "2026-09-30",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.10.0",
+    "excerpt": "## 1.10.0 (2026-09-30)\n\nFull Changelog: [v1.9.0...v1.10.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1"
+  },
+  {
+    "slug": "2026-09-30-anthropicsanthropic-sdk-typescript-vertex-sdk-v0202",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.20.2",
+    "date": "2026-09-30",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.20.2",
+    "excerpt": "## 0.20.2 (2026-09-30)\n\nFull Changelog: [vertex-sdk-v0.20.1...vertex-sdk-v0.20.2](https://github.com/anthropics/anthropi"
+  },
+  {
+    "slug": "2026-09-30-anthropicsanthropic-sdk-typescript-vertex-sdk-v0201",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.20.1",
+    "date": "2026-09-30",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.20.1",
+    "excerpt": "## 0.20.1 (2026-09-30)\n\nFull Changelog: [vertex-sdk-v0.20.0...vertex-sdk-v0.20.1](https://github.com/anthropics/anthropi"
+  },
+  {
+    "slug": "2026-09-30-anthropicsanthropic-sdk-typescript-sdk-v01310",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.131.0",
+    "date": "2026-09-30",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.131.0",
+    "excerpt": "## 0.131.0 (2026-09-30)\n\nFull Changelog: [sdk-v0.130.0...sdk-v0.131.0](https://github.com/anthropics/anthropic-sdk-types"
+  },
+  {
     "slug": "2026-09-29-anthropicsclaude-code-v21285",
     "title": "[anthropics/claude-code] v2.1.285",
     "date": "2026-09-29",
@@ -486,72 +552,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1Fc0N0enExeDJWYVFEVTF2aGtTLXZIY1VTTHhPQU5fdVd1OEtaVnJva2tFSmNmN3JyYWVkLTlCMUpSeUF3dWN5NXQtTVZRVG1oY21xbzA1XzFIZVRmZzR6c1MzLUp6TFV4QmJ5bzl5eXBoc3pj?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE1Fc0N0enExeDJWYVFEVTF2aGtTLXZIY1VTTHhPQU5fdVd1OEtaVnJva2t"
-  },
-  {
-    "slug": "2026-09-15-rubrik-unveils-ai-powered-code-guardian-built-on-anthropics-",
-    "title": "Rubrik Unveils AI-Powered Code Guardian Built on Anthropic’s Claude Mythos 5 - citybiz",
-    "date": "2026-09-15",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORU9icFFvMEZqQzliSGlZcUtCeG4zYnlhWTN6UjNtYVVUZUhyaWtVNGVQQUtqbl92U3dxWGFUemdNMVRYRW9GRVh6YWphSTNmSFpYSFZDQk9ITHE3V09HeXV4M04waXdVYzZCZW0waEtaNWlDWE9zNXU3c2ZTamtzbk16RVNYZEFGYXFVMUpIRlNlZU5FLXJ2ZlhZVi1HWUJCY1YyWFZOVUdGSkVxbzlxRzdCMWs?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxORU9icFFvMEZqQzliSGlZcUtCeG4zYnlhWTN6UjNtYVVUZUhyaWtVNGV"
-  },
-  {
-    "slug": "2026-09-15-anthropicsclaude-code-v21272",
-    "title": "[anthropics/claude-code] v2.1.272",
-    "date": "2026-09-15",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.272",
-    "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
-  },
-  {
-    "slug": "2026-09-14-anthropicsclaude-code-v21271",
-    "title": "[anthropics/claude-code] v2.1.271",
-    "date": "2026-09-14",
-    "tags": [
-      "claude-code",
-      "remote-control"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.271",
-    "excerpt": "## What's changed\n\n- Added fast mode in Claude Code Remote sessions (cloud and self-hosted runners): the host's fast-mod"
-  },
-  {
-    "slug": "2026-09-14-anthropic-analyzed-400000-claude-code-sessions-and-it-turns-",
-    "title": "Anthropic analyzed 400,000 Claude Code sessions, and it turns out there's a right way to use it - XDA",
-    "date": "2026-09-14",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNRWFITFh0RTJHTkdyVnEyb3JtTFZQd3MtNEcxeXBKT3UxRTFOSFdPY2dmOWc1aWE3WjMwTFpnd2toZE9rV1ZSUXcxTFBOazBrdnBQcmpqcElRSHRURkJNRFVyMXdXU3VXNDR4QTJQVENIaTV0ZW5LQ2szQW9BQ0JrWHplRWdQTmNLOERnaFZ4MS1xSDlLQWRWbW5ZRTJqU3pLczNqNEhNVHlNelpmNFdlNDd4XzRkaWpm?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxNRWFITFh0RTJHTkdyVnEyb3JtTFZQd3MtNEcxeXBKT3UxRTFOSFdPY2d"
-  },
-  {
-    "slug": "2026-09-14-iran-yemeni-cell-used-claude-in-developing-weapons-threats-a",
-    "title": "Iran, Yemeni Cell Used Claude in Developing Weapons, Threats: Anthropic - Security Boulevard",
-    "date": "2026-09-14",
-    "tags": [
-      "security"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNTmszQTNNV3R3UGxLMzRnUmd4WG9iNTYzUG1FWUhsMW50MTE3R0NLaVpmNVBkNGtXZEt1R1ZVM1o2cWdFU25BOFlPMUp2OXp4MWdEcmd6T1RmcXQ1OW5GRXRIZHMybENid0xmYV9DY0ZBbkdnRXk2RlZHVzJTTERmVEFCSTZhZUppQjhIMmlqN1RTOXRleHQ1NGZjWGtral9rdlNOaU9ubFU5bUU?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNTmszQTNNV3R3UGxLMzRnUmd4WG9iNTYzUG1FWUhsMW50MTE3R0NLaVp"
-  },
-  {
-    "slug": "2026-09-12-anthropicsclaude-code-v21270",
-    "title": "[anthropics/claude-code] v2.1.270",
-    "date": "2026-09-12",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270",
-    "excerpt": "## What's changed\n\n- Fixed read-only git commands in Bash unexpectedly asking for permission after a session had been ru"
   }
 ]
