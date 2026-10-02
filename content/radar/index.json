@@ -1,5 +1,28 @@
 [
   {
+    "slug": "2026-10-01-anthropicsclaude-code-v21287",
+    "title": "[anthropics/claude-code] v2.1.287",
+    "date": "2026-10-01",
+    "tags": [
+      "claude-code",
+      "agent"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+    "excerpt": "## What's changed\n\n- Added Claude Mods: plugins may now modify deeper behavior\n- Added You should know, a built-in mod w"
+  },
+  {
+    "slug": "2026-10-01-barclays-accelerates-ai-rollout-with-anthropics-claude-code-",
+    "title": "Barclays Accelerates AI Rollout With Anthropic’s Claude Code - PYMNTS.com",
+    "date": "2026-10-01",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOXzF4ZEFaN2JQZEhmd09Md2RpeWRLMjMwM1diaFBfVW9FZzFYX2ZCXzNodVRMeVRkak5mZjg0aXBrSEhodG5KaEhXdDFLSG9xTVZvVVpTVW9IejVfa0d4NFpoWWZzaW12TmlvQlI0MUxkS3dCbUc1VnRxYlM2ZDRGMDd1Yk9ZSHplNjRVYnNJblhuZ0kxN2dkSC1NY3VKZW5sWDRpVDdqZS04aVFfWmhaRnhmdUdQLWM?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxOXzF4ZEFaN2JQZEhmd09Md2RpeWRLMjMwM1diaFBfVW9FZzFYX2ZCXzN"
+  },
+  {
     "slug": "2026-09-30-anthropicsclaude-code-v21286",
     "title": "[anthropics/claude-code] v2.1.286",
     "date": "2026-09-30",
@@ -530,27 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.12",
     "excerpt": "## 0.0.12 (2026-09-15)\n\nFull Changelog: [google-cloud-sdk-v0.0.11...google-cloud-sdk-v0.0.12](https://github.com/anthrop"
-  },
-  {
-    "slug": "2026-09-15-developers-find-ways-to-use-claude-code-without-anthropic-mo",
-    "title": "Developers Find Ways to Use Claude Code Without Anthropic Models - The Information",
-    "date": "2026-09-15",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTEJqWWx4bUduSXRtaGpIZEJuODMwLUpjT2Q0c2gycW1yU3NiR1dib3hndlFpVEc2bzdKSk5zRnJmQkRSOUFock92QTZpaEZHRWZzRTBRYmthVkJqMmJtYnBpMTF5X25hYXhHaEZxLUxiVzRKbVE0OUZsSS1lOE5LRXRCWGs0R01TblR4RVdTdkU5MExyMlpONWxQRTFGaUdZNE1TWVdmLVV0eVQ0THJwbmduVjc?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOTEJqWWx4bUduSXRtaGpIZEJuODMwLUpjT2Q0c2gycW1yU3NiR1dib3h"
-  },
-  {
-    "slug": "2026-09-15-anthropic-leaks-512k-lines-of-claude-code-source-yellowcom",
-    "title": "Anthropic Leaks 512K Lines Of Claude Code Source - Yellow.com",
-    "date": "2026-09-15",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1Fc0N0enExeDJWYVFEVTF2aGtTLXZIY1VTTHhPQU5fdVd1OEtaVnJva2tFSmNmN3JyYWVkLTlCMUpSeUF3dWN5NXQtTVZRVG1oY21xbzA1XzFIZVRmZzR6c1MzLUp6TFV4QmJ5bzl5eXBoc3pj?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE1Fc0N0enExeDJWYVFEVTF2aGtTLXZIY1VTTHhPQU5fdVd1OEtaVnJva2t"
   }
 ]
