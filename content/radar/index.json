@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-10-03-anthropicsclaude-code-v21289",
+    "title": "[anthropics/claude-code] v2.1.289",
+    "date": "2026-10-03",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.289",
+    "excerpt": "## What's changed\n\n- Fixed a deny or ask rule on a nested part of a compound shell command not holding over a user-insta"
+  },
+  {
     "slug": "2026-10-02-anthropicsclaude-code-v21288",
     "title": "[anthropics/claude-code] v2.1.288",
     "date": "2026-10-02",
@@ -542,16 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273",
     "excerpt": "## What's changed\n\n- Added `x-claude-code-request-class`, `x-claude-code-agent-type`, `x-claude-code-prev-tool-durations"
-  },
-  {
-    "slug": "2026-09-15-anthropicsanthropic-sdk-python-v160",
-    "title": "[anthropics/anthropic-sdk-python] v1.6.0",
-    "date": "2026-09-15",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.6.0",
-    "excerpt": "## 1.6.0 (2026-09-15)\n\nFull Changelog: [v1.5.0...v1.6.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.5"
   }
 ]
