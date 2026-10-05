@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-10-04-anthropic-implements-built-in-plugin-system-mods-in-claude-c",
+    "title": "Anthropic Implements Built-In Plugin System \"Mods\" in Claude Code - finance.biggo.com",
+    "date": "2026-10-04",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTE40d01mVVp5bGtBaWwyN2ZZd3RHVTFqMnYwdGpDZTZuVnl4aTVBN0hORGx5M1d1NmVZd1RrSGN3c2tpb1FLUGJYUllqaG5qNXdOQ0NmT1hfOHpuUzdNOUdPLWQzcVgwdHR5dDVQWWJiSnVQVWhxMkE?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE40d01mVVp5bGtBaWwyN2ZZd3RHVTFqMnYwdGpDZTZuVnl4aTVBN0hORGx"
+  },
+  {
     "slug": "2026-10-03-anthropicsclaude-code-v21289",
     "title": "[anthropics/claude-code] v2.1.289",
     "date": "2026-10-03",
@@ -541,17 +552,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.274",
     "excerpt": "## What's changed\n\n- Added a visible warning when memory usage is critical, with steps to free memory or restart safely\n"
-  },
-  {
-    "slug": "2026-09-15-anthropicsclaude-code-v21273",
-    "title": "[anthropics/claude-code] v2.1.273",
-    "date": "2026-09-15",
-    "tags": [
-      "claude-code",
-      "agent"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273",
-    "excerpt": "## What's changed\n\n- Added `x-claude-code-request-class`, `x-claude-code-agent-type`, `x-claude-code-prev-tool-durations"
   }
 ]
