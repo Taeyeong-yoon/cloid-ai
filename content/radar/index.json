@@ -1,5 +1,27 @@
 [
   {
+    "slug": "2026-10-06-anthropicsclaude-code-v21291",
+    "title": "[anthropics/claude-code] v2.1.291",
+    "date": "2026-10-06",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.291",
+    "excerpt": "## What's changed\n\n- Fixed a regression in 2.1.290 where cloud sessions could drop answers to permission prompts\n- Fixed"
+  },
+  {
+    "slug": "2026-10-05-anthropicsclaude-code-v21290",
+    "title": "[anthropics/claude-code] v2.1.290",
+    "date": "2026-10-05",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
+    "excerpt": "## What's changed\n\n- Added `serverToolUses` to the result of a mod's `turn.step` hook: the tool calls the API ran itself"
+  },
+  {
     "slug": "2026-10-04-anthropic-implements-built-in-plugin-system-mods-in-claude-c",
     "title": "Anthropic Implements Built-In Plugin System \"Mods\" in Claude Code - finance.biggo.com",
     "date": "2026-10-04",
@@ -530,27 +552,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPV0lhaWdKNC1VekFkMHFlSTdMSXJDcEJYT2g1SkFwZWdIVDZqT0c4QXdIVGNLd29wdGFKcC1HM2FZZEx6Q0N4M0JHR2xBVGxLaXRxSDhING85V00zRTRFRkZyemFRQjdlZEUzZno1ZFNQbUlmdmN6dzVwNUc3S3pOWjdaNFBNRGZXb21fczRTMmpNbDQx?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxPV0lhaWdKNC1VekFkMHFlSTdMSXJDcEJYT2g1SkFwZWdIVDZqT0c4QXd"
-  },
-  {
-    "slug": "2026-09-17-anthropic-launches-claude-code-projects-in-beta-parallel-clo",
-    "title": "Anthropic Launches Claude Code Projects in Beta: Parallel Cloud Sessions That Keep Running After You Close Your Laptop - marktechpost.com",
-    "date": "2026-09-17",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPVkRDWENsX2daLXRENUFaNDVhQ1JHNnVra2x6ZzFnSU5kT2pncVZ5T1V5QTBUaDVKLVVKb2tHNzZKakNJMzdEdmJDUExGRUtGVFh4NXNsdkJ5cTJrd1o5ZWk1QUktd08zR0VFNVBNRlhjSWVnMHIya1d0TlBlLUprTVozanowT0pFRjNxNmd0cHRvdkQ1OUpLb2k1b0VRUFRkYVF3cGVYQnItbjBEdGEyejFkMmJ5VzlUbUtWcFJDMnhDbjZxbUVqbV9GN2R2ejBxQmN3NGJROHBKeVNCYWdmQTc0eDd5SkE0Sl9aamZwUdIB9AFBVV95cUxOYldva1B5YU0tUlE3RjJsem9SajUzNnF6Rm1peEgyWW1qUDQ2by16SW52cEZHU0pBT0YwMWdfd1FVUXN1cm93S2Vlb2R0NkJNMlBKVkhmWExWTmVCQWV4U05Ed0NMVDdMdzdLY3ZabjNjbEI0MDlEaEdvN0VHaElkQ1lXb2RMTmIwSjhNM295b05VUk1jSHBhQzEtT0hqRlhSU3g5NmlxUTNnVS1yczhld2dpN2xMcExReGs4VFNyUWlSUzJCTTcyaUFLZFNwbDRaUy1yZmE5a1JZRHVfa2FyU3REV1NHZzhjYTdLX3ZxaG1qVTdR?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi7wFBVV95cUxPVkRDWENsX2daLXRENUFaNDVhQ1JHNnVra2x6ZzFnSU5kT2pncVZ5T1V"
-  },
-  {
-    "slug": "2026-09-17-anthropicsclaude-code-v21274",
-    "title": "[anthropics/claude-code] v2.1.274",
-    "date": "2026-09-17",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.274",
-    "excerpt": "## What's changed\n\n- Added a visible warning when memory usage is critical, with steps to free memory or restart safely\n"
   }
 ]
