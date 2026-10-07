@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-10-06-anthropicsclaude-code-v21292",
+    "title": "[anthropics/claude-code] v2.1.292",
+    "date": "2026-10-06",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.292",
+    "excerpt": "## What's changed\n\n- Added `--marketplace ` to `claude plugin install`: adds the marketplace if needed, under the same p"
+  },
+  {
     "slug": "2026-10-06-anthropicsclaude-code-v21291",
     "title": "[anthropics/claude-code] v2.1.291",
     "date": "2026-10-06",
@@ -540,17 +551,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0xMkdGYnpZQ0E5SU1yelZSVVM5d3dqV0g0aWVzNUw1WVItbjBnNFF6dG85TlZNc09rQ3IzZnR0bjUzbmhSNXBjdWdTTWNwQTdTU2Jjbm5Fa1I5V2tCZDc4ZXFkRQ?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE0xMkdGYnpZQ0E5SU1yelZSVVM5d3dqV0g0aWVzNUw1WVItbjBnNFF6dG8"
-  },
-  {
-    "slug": "2026-09-17-anthropic-redesigns-claude-code-projects-to-coordinate-agent",
-    "title": "Anthropic Redesigns Claude Code Projects to Coordinate Agent Threads - Unite.AI",
-    "date": "2026-09-17",
-    "tags": [
-      "claude-code",
-      "agent"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPV0lhaWdKNC1VekFkMHFlSTdMSXJDcEJYT2g1SkFwZWdIVDZqT0c4QXdIVGNLd29wdGFKcC1HM2FZZEx6Q0N4M0JHR2xBVGxLaXRxSDhING85V00zRTRFRkZyemFRQjdlZEUzZno1ZFNQbUlmdmN6dzVwNUc3S3pOWjdaNFBNRGZXb21fczRTMmpNbDQx?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxPV0lhaWdKNC1VekFkMHFlSTdMSXJDcEJYT2g1SkFwZWdIVDZqT0c4QXd"
   }
 ]
