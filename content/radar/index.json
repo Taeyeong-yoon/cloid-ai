@@ -1,5 +1,84 @@
 [
   {
+    "slug": "2026-10-08-anthropicsclaude-code-v21294",
+    "title": "[anthropics/claude-code] v2.1.294",
+    "date": "2026-10-08",
+    "tags": [
+      "claude-code",
+      "agent"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.294",
+    "excerpt": "## What's changed\n\n- Fixed `prompt` and `agent` hooks written as instructions (such as \"Block commands that...\") allowin"
+  },
+  {
+    "slug": "2026-10-08-anthropicsanthropic-sdk-python-v1121",
+    "title": "[anthropics/anthropic-sdk-python] v1.12.1",
+    "date": "2026-10-08",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.12.1",
+    "excerpt": "### Chores\n\n* **ci:** check that pull requests update the changelog\n* **docs:** note that listing Claude Console spend l"
+  },
+  {
+    "slug": "2026-10-08-anthropicsanthropic-sdk-typescript-vertex-sdk-v0204",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk-v0.20.4",
+    "date": "2026-10-08",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.20.4",
+    "excerpt": "### Chores\n\n* **ci:** check that pull requests update the changelog"
+  },
+  {
+    "slug": "2026-10-08-anthropicsanthropic-sdk-typescript-sdk-v01321",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v0.132.1",
+    "date": "2026-10-08",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.132.1",
+    "excerpt": "### Bug Fixes\n\n* **client:** throw before sending a request with an empty path parameter\n\n\n### Chores\n\n* **ci:** check t"
+  },
+  {
+    "slug": "2026-10-08-anthropicsanthropic-sdk-typescript-google-cloud-sdk-v0019",
+    "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk-v0.0.19",
+    "date": "2026-10-08",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.19",
+    "excerpt": "### Chores\n\n* **ci:** check that pull requests update the changelog"
+  },
+  {
+    "slug": "2026-10-07-anthropicsclaude-code-v21293",
+    "title": "[anthropics/claude-code] v2.1.293",
+    "date": "2026-10-07",
+    "tags": [
+      "claude-code",
+      "agent"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
+    "excerpt": "## What's changed\n\n- Added Claude Haiku 5.5 (`claude-haiku-5-5`), now the default Haiku model on the Anthropic API — 1M "
+  },
+  {
+    "slug": "2026-10-07-anthropicsanthropic-sdk-python-v1120",
+    "title": "[anthropics/anthropic-sdk-python] v1.12.0",
+    "date": "2026-10-07",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.12.0",
+    "excerpt": "## 1.12.0 (2026-10-07)\n\nFull Changelog: [v1.11.0...v1.12.0](https://github.com/anthropics/anthropic-sdk-python/compare/v"
+  },
+  {
     "slug": "2026-10-06-anthropicsclaude-code-v21292",
     "title": "[anthropics/claude-code] v2.1.292",
     "date": "2026-10-06",
@@ -474,82 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.127.0",
     "excerpt": "## 0.127.0 (2026-09-18)\n\nFull Changelog: [sdk-v0.126.0...sdk-v0.127.0](https://github.com/anthropics/anthropic-sdk-types"
-  },
-  {
-    "slug": "2026-09-18-anthropicsanthropic-sdk-typescript-google-cloud-sdk-v0013",
-    "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk: v0.0.13",
-    "date": "2026-09-18",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.13",
-    "excerpt": "## 0.0.13 (2026-09-18)\n\nFull Changelog: [google-cloud-sdk-v0.0.12...google-cloud-sdk-v0.0.13](https://github.com/anthrop"
-  },
-  {
-    "slug": "2026-09-18-three-guys-using-anthropics-claude-hacked-into-openai-and-ac",
-    "title": "Three guys using Anthropic’s Claude hacked into OpenAI and accessed its source code for $6,500 reward - Fortune",
-    "date": "2026-09-18",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVW80YlEwQkJ0MlpGREhiRy12UGVkdUpULW1GUm1WenpEM2NQbGk0Z2lETGNNVlZtQVJFN3lna2Mzb0xKSWoxVzN5T19lZmwycnRJNmVlc3RRVmZLdU9Md3pDd1BVUDFiLXVXR0ZFVWhCaW9OOFM1bWxoNXFwNWlSelFVYjhCcU5kS181RUQ2VjM?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxQVW80YlEwQkJ0MlpGREhiRy12UGVkdUpULW1GUm1WenpEM2NQbGk0Z2l"
-  },
-  {
-    "slug": "2026-09-18-anthropicsclaude-code-v21276",
-    "title": "[anthropics/claude-code] v2.1.276",
-    "date": "2026-09-18",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.276",
-    "excerpt": "## What's changed\n\n- Fixed every request failing with `400 … Input tag 'advisor_20260301'` when `ANTHROPIC_BASE_URL` poi"
-  },
-  {
-    "slug": "2026-09-17-claude-code-relaunches-projects-to-manage-multiple-ai-agents",
-    "title": "Claude Code relaunches Projects to manage multiple AI agents in the cloud - The Verge",
-    "date": "2026-09-17",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZUxTNjFoWnlrU0x5ektWaF93WEJ4U0RxbTBRMV9MVVlmQ19pS3ZnYnBsV1lLVkN4YXI4UmlrcktOMmRmRkV1cTFSUk56SkJWaWgwT2dEZ1FTeHdhUlUyVndiWWxvZ0VQZTVueE1PVWtya2ZiZ2dnUlRUUHVVbmotaUNqMExwQ1JCdWZQQWpoanRsQWc?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNZUxTNjFoWnlrU0x5ektWaF93WEJ4U0RxbTBRMV9MVVlmQ19pS3ZnYnB"
-  },
-  {
-    "slug": "2026-09-17-anthropicsclaude-code-v21275",
-    "title": "[anthropics/claude-code] v2.1.275",
-    "date": "2026-09-17",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.275",
-    "excerpt": "## What's changed\n\n- Added the signed-in account to Claude apps gateway sign-in: when the gateway names it, you confirm "
-  },
-  {
-    "slug": "2026-09-17-anthropic-launches-claude-code-projects-an-always-on-convers",
-    "title": "Anthropic launches Claude Code Projects, an ‘always-on’ conversation that remembers and delegates your long-running dev work - venturebeat.com",
-    "date": "2026-09-17",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1p"
-  },
-  {
-    "slug": "2026-09-17-anthropics-new-claude-code-feature-could-drain-your-plan-bef",
-    "title": "Anthropic’s new Claude Code feature could drain your plan before lunch - The New Stack",
-    "date": "2026-09-17",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0xMkdGYnpZQ0E5SU1yelZSVVM5d3dqV0g0aWVzNUw1WVItbjBnNFF6dG85TlZNc09rQ3IzZnR0bjUzbmhSNXBjdWdTTWNwQTdTU2Jjbm5Fa1I5V2tCZDc4ZXFkRQ?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE0xMkdGYnpZQ0E5SU1yelZSVVM5d3dqV0g0aWVzNUw1WVItbjBnNFF6dG8"
   }
 ]
