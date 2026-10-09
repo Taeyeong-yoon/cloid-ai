@@ -1,0 +1,17 @@
+---
+title: "Anthropic offers free AI security scans for open source as Claude Code faces scrutiny - Startup Fortune"
+date: "2026-10-08"
+tags:
+  - claude-code
+  - market
+  - security
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQnhwa1Y4dFFGRkhESXc0TFdNbExMOGNId2FOSmh2Z2ZvdTVHR19aUXRsNFAzOXVUUTNkbGlNUEF2RGFWd3hYeFdFU1UxUWtfWW95MFJiVW1MbTEyYnBhTGsyZzQzenZCYUdWUHdvZVhjUlE2aThraElOcUlGcUJIeTBHZ1Zuellfa2V4NlU5a1hYdGJMaEZRT1p0emtWQnNYZXc2VmtOTXhJOUlhUDg4djZDWQ?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMiswFBVV95cUxQQnhwa1Y4dFFGRkhESXc0TFdNbExMOGNId2FOSmh2Z2ZvdTVHR19aUXRsNFAzOXVUUTNkbGlNUEF2RGFWd3hYeFdFU1UxUWtfWW95MFJiVW1MbTEyYnBhTGsyZzQzenZCYUdWUHdvZVhjUlE2aThraElOcUlGcUJIeTBHZ1Zuellfa2V4NlU5a1hYdGJMaEZRT1p0emtWQnNYZXc2VmtOTXhJOUlhUDg4djZDWQ?oc=5"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQQnhwa1Y4dFFGRkhESXc0TFdNbExMOGNId2FOSmh2Z2ZvdTVHR19aUXRsNFAzOXVUUTNkbGlNUEF2RGFWd3hYeFdFU1UxUWtfWW95MFJiVW1MbTEyYnBhTGsyZzQzenZCYUdWUHdvZVhjUlE2aThraElOcUlGcUJIeTBHZ1Zuellfa2V4NlU5a1hYdGJMaEZRT1p0emtWQnNYZXc2VmtOTXhJOUlhUDg4djZDWQ?oc=5
+
+**출처**: [https://news.google.com/rss/articles/CBMiswFBVV95cUxQQnhwa1Y4dFFGRkhESXc0TFdNbExMOGNId2FOSmh2Z2ZvdTVHR19aUXRsNFAzOXVUUTNkbGlNUEF2RGFWd3hYeFdFU1UxUWtfWW95MFJiVW1MbTEyYnBhTGsyZzQzenZCYUdWUHdvZVhjUlE2aThraElOcUlGcUJIeTBHZ1Zuellfa2V4NlU5a1hYdGJMaEZRT1p0emtWQnNYZXc2VmtOTXhJOUlhUDg4djZDWQ?oc=5](https://news.google.com/rss/articles/CBMiswFBVV95cUxQQnhwa1Y4dFFGRkhESXc0TFdNbExMOGNId2FOSmh2Z2ZvdTVHR19aUXRsNFAzOXVUUTNkbGlNUEF2RGFWd3hYeFdFU1UxUWtfWW95MFJiVW1MbTEyYnBhTGsyZzQzenZCYUdWUHdvZVhjUlE2aThraElOcUlGcUJIeTBHZ1Zuellfa2V4NlU5a1hYdGJMaEZRT1p0emtWQnNYZXc2VmtOTXhJOUlhUDg4djZDWQ?oc=5)

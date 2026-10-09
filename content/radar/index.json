@@ -1,5 +1,29 @@
 [
   {
+    "slug": "2026-10-08-anthropicsclaude-code-v21295",
+    "title": "[anthropics/claude-code] v2.1.295",
+    "date": "2026-10-08",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.295",
+    "excerpt": "## What's changed\n\n- Added `onFailure: \"block\"` for command and HTTP hooks: a hook that can't start, times out, or exits"
+  },
+  {
+    "slug": "2026-10-08-anthropic-offers-free-ai-security-scans-for-open-source-as-c",
+    "title": "Anthropic offers free AI security scans for open source as Claude Code faces scrutiny - Startup Fortune",
+    "date": "2026-10-08",
+    "tags": [
+      "claude-code",
+      "market",
+      "security"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQnhwa1Y4dFFGRkhESXc0TFdNbExMOGNId2FOSmh2Z2ZvdTVHR19aUXRsNFAzOXVUUTNkbGlNUEF2RGFWd3hYeFdFU1UxUWtfWW95MFJiVW1MbTEyYnBhTGsyZzQzenZCYUdWUHdvZVhjUlE2aThraElOcUlGcUJIeTBHZ1Zuellfa2V4NlU5a1hYdGJMaEZRT1p0emtWQnNYZXc2VmtOTXhJOUlhUDg4djZDWQ?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQQnhwa1Y4dFFGRkhESXc0TFdNbExMOGNId2FOSmh2Z2ZvdTVHR19aUXR"
+  },
+  {
     "slug": "2026-10-08-anthropicsclaude-code-v21294",
     "title": "[anthropics/claude-code] v2.1.294",
     "date": "2026-10-08",
@@ -531,27 +555,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.7.0",
     "excerpt": "## 1.7.0 (2026-09-18)\n\nFull Changelog: [v1.6.0...v1.7.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.6"
-  },
-  {
-    "slug": "2026-09-18-anthropicsanthropic-sdk-typescript-vertex-sdk-v01910",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.10",
-    "date": "2026-09-18",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.10",
-    "excerpt": "## 0.19.10 (2026-09-18)\n\nFull Changelog: [vertex-sdk-v0.19.9...vertex-sdk-v0.19.10](https://github.com/anthropics/anthro"
-  },
-  {
-    "slug": "2026-09-18-anthropicsanthropic-sdk-typescript-sdk-v01270",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.127.0",
-    "date": "2026-09-18",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.127.0",
-    "excerpt": "## 0.127.0 (2026-09-18)\n\nFull Changelog: [sdk-v0.126.0...sdk-v0.127.0](https://github.com/anthropics/anthropic-sdk-types"
   }
 ]
