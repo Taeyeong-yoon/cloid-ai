@@ -1,5 +1,38 @@
 [
   {
+    "slug": "2026-10-09-anthropicsclaude-code-v21296",
+    "title": "[anthropics/claude-code] v2.1.296",
+    "date": "2026-10-09",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
+    "excerpt": "## What's changed\n\n- Added a `code` key to the Claude apps gateway's `managed.policies[]`: the same settings as `cli`, a"
+  },
+  {
+    "slug": "2026-10-09-anthropicsanthropic-sdk-python-v1130",
+    "title": "[anthropics/anthropic-sdk-python] v1.13.0",
+    "date": "2026-10-09",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.13.0",
+    "excerpt": "### Features\n\n* **api:** add types for the Chat and Cowork unified analytics metrics\n* **api:** add workflows, multiagen"
+  },
+  {
+    "slug": "2026-10-09-anthropicsanthropic-sdk-typescript-sdk-v01330",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v0.133.0",
+    "date": "2026-10-09",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.133.0",
+    "excerpt": "### Features\n\n* **api:** add types for the Chat and Cowork unified analytics metrics\n* **api:** add workflows, multiagen"
+  },
+  {
     "slug": "2026-10-08-anthropicsclaude-code-v21295",
     "title": "[anthropics/claude-code] v2.1.295",
     "date": "2026-10-08",
@@ -522,38 +555,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQcTRzQTdDY2pzbXNLMUxQemdoOXprM213anB2SUN5d216WHdBeExKRnYwOUkzcUw5VHZobllvb01IbDFMdFdYdFh5MW5qSVVkSVZiS194WUlYb2xFUEh6Nk82LWppNUdoUWVMdlZrYWdQanlRb3pDTmJpUVUwZFp6VFQ0dC1VUWl2LWRhRHpVcHQtUFpNUVNTdDY2SGdRMDYyTERsTml6RXBtc2dvT0lTNzk4V3BuUWc?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQcTRzQTdDY2pzbXNLMUxQemdoOXprM213anB2SUN5d216WHdBeExKRnY"
-  },
-  {
-    "slug": "2026-09-19-anthropicsclaude-code-v21278",
-    "title": "[anthropics/claude-code] v2.1.278",
-    "date": "2026-09-19",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.278",
-    "excerpt": "## What's changed\n\n- Changed auto mode for Claude API and Enterprise users, and on Bedrock, Vertex, Foundry and gateways"
-  },
-  {
-    "slug": "2026-09-18-anthropicsclaude-code-v21277",
-    "title": "[anthropics/claude-code] v2.1.277",
-    "date": "2026-09-18",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.277",
-    "excerpt": "## What's changed\n\n- Added AGENTS.md support: in a project with no CLAUDE.md, Claude Code reads AGENTS.md instead; chang"
-  },
-  {
-    "slug": "2026-09-18-anthropicsanthropic-sdk-python-v170",
-    "title": "[anthropics/anthropic-sdk-python] v1.7.0",
-    "date": "2026-09-18",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.7.0",
-    "excerpt": "## 1.7.0 (2026-09-18)\n\nFull Changelog: [v1.6.0...v1.7.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.6"
   }
 ]
