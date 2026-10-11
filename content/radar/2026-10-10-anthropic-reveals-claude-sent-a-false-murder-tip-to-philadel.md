@@ -1,0 +1,15 @@
+---
+title: "Anthropic reveals Claude sent a false murder tip to Philadelphia police - Pasquale Pillitteri"
+date: "2026-10-10"
+tags:
+  - tool
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMingFBVV95cUxNWEhUbnNlTHNTTnM1Z1dLZy1JRzh2NjZFdWFhTms2OU9XQkFRTXdDZnduVW5WaXNqX2hEOHJQS1VNVlRCNkdhUFZuSW9XaFdoUHlwT0MwbEFZMWUyaGdOS2o2UndQNEhaby1sSEVrVXgwOFByU0ZrWS1aSWh2T0RfY0NyWG8wYjNzZU9SMEpNT0VXenRnOXdoWkRzblZwdw?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMingFBVV95cUxNWEhUbnNlTHNTTnM1Z1dLZy1JRzh2NjZFdWFhTms2OU9XQkFRTXdDZnduVW5WaXNqX2hEOHJQS1VNVlRCNkdhUFZuSW9XaFdoUHlwT0MwbEFZMWUyaGdOS2o2UndQNEhaby1sSEVrVXgwOFByU0ZrWS1aSWh2T0RfY0NyWG8wYjNzZU9SMEpNT0VXenRnOXdoWkRzblZwdw?oc=5' target='_blank'&gt;Anthrop"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMingFBVV95cUxNWEhUbnNlTHNTTnM1Z1dLZy1JRzh2NjZFdWFhTms2OU9XQkFRTXdDZnduVW5WaXNqX2hEOHJQS1VNVlRCNkdhUFZuSW9XaFdoUHlwT0MwbEFZMWUyaGdOS2o2UndQNEhaby1sSEVrVXgwOFByU0ZrWS1aSWh2T0RfY0NyWG8wYjNzZU9SMEpNT0VXenRnOXdoWkRzblZwdw?oc=5" target="_blank"&gt;Anthrop
+
+**출처**: [https://news.google.com/rss/articles/CBMingFBVV95cUxNWEhUbnNlTHNTTnM1Z1dLZy1JRzh2NjZFdWFhTms2OU9XQkFRTXdDZnduVW5WaXNqX2hEOHJQS1VNVlRCNkdhUFZuSW9XaFdoUHlwT0MwbEFZMWUyaGdOS2o2UndQNEhaby1sSEVrVXgwOFByU0ZrWS1aSWh2T0RfY0NyWG8wYjNzZU9SMEpNT0VXenRnOXdoWkRzblZwdw?oc=5](https://news.google.com/rss/articles/CBMingFBVV95cUxNWEhUbnNlTHNTTnM1Z1dLZy1JRzh2NjZFdWFhTms2OU9XQkFRTXdDZnduVW5WaXNqX2hEOHJQS1VNVlRCNkdhUFZuSW9XaFdoUHlwT0MwbEFZMWUyaGdOS2o2UndQNEhaby1sSEVrVXgwOFByU0ZrWS1aSWh2T0RfY0NyWG8wYjNzZU9SMEpNT0VXenRnOXdoWkRzblZwdw?oc=5)
