@@ -30,21 +30,21 @@
     },
     {
       "type": "video",
-      "title": "[프로젝트] 실내 에어컨 원격제어 및 자동화 시스템",
-      "url": "https://www.youtube.com/watch?v=Wre2-0YmSfo",
-      "description": "설명."
-    },
-    {
-      "type": "video",
       "title": "아직도 오픈클로·텔레그램으로 원격 제어하세요? 이제 코덱스에서 바로 연결하세요",
       "url": "https://www.youtube.com/watch?v=cFMmbDSAHk8",
       "description": "노하우공유받는 단체소통방 https://open.kakao.com/o/pYrATSJi ▷AI로 SNS 한방에 끝내기 https://www.snsmakeit.com/ ..."
     },
     {
       "type": "video",
-      "title": "디스코드로 Claude Code 원격 제어하는 법 | Channels 공식 기능 완전 정복",
-      "url": "https://www.youtube.com/watch?v=-1ossQAiHf8",
-      "description": "이동 중에도, 침대에서도 Claude Code를 자유롭게! Anthropic이 공식 출시한 Channels 기능으로 디스코드와 Claude Code를 연동 ..."
+      "title": "폰 하나로 PC 원격 제어하기! 클로드 신기능 3개 다 써봤습니다 ㅣ Dispatch vs Remote Control vs Channels",
+      "url": "https://www.youtube.com/watch?v=YkiGCwNYBIE",
+      "description": "컴퓨터 앞에 묶여있던 클로드가 풀렸습니다. 이제 폰 하나로 어디서든 클로드한테 일을 시킬 수 있어요. 근데 원격 기능이 3가지나 돼서 ..."
+    },
+    {
+      "type": "video",
+      "title": "ChatGPT Work 완벽 가이드, 세팅부터 자동화까지 이 영상 하나로 끝납니다",
+      "url": "https://www.youtube.com/watch?v=-qNPPDEEExQ",
+      "description": "ChatGPT Work, 아직 채팅처럼 쓰고 계신가요? 질문하고, 답 받고, 복사해서 붙여 넣고. 그러면 절반도 못 쓰는 겁니다. ChatGPT Work ..."
     },
     {
       "type": "practice",
