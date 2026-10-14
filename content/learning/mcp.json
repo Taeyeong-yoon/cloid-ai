@@ -30,21 +30,21 @@
     },
     {
       "type": "video",
-      "title": "Model Context Protocol Clearly Explained | MCP Beyond the Hype",
-      "url": "https://www.youtube.com/watch?v=tzrwxLNHtRY",
-      "description": "This video contains a very simple explanation of MCP, also known as Model Context Protocol. We will first understand wha"
+      "title": "Model Context Protocol (MCP) Tutorial: Build a Text-to-SQL MCP Server &amp; AI Agents",
+      "url": "https://www.youtube.com/watch?v=tiZCLoupYd0",
+      "description": "AI agents are everywhere, but how do they actually talk to your databases, Notion, or GitHub? Meet the Model Context Pro"
     },
     {
       "type": "video",
-      "title": "How Model Context Protocol (MCP) actually works",
-      "url": "https://www.youtube.com/watch?v=cGuyrANVi4A",
-      "description": "Google MCPs → https://goo.gle/3PYkjky Build an ADK agent with Google MCPs → https://goo.gle/4o6h8DP Connect an MCP ..."
+      "title": "All You Need To Know About Model Context Protocol(MCP)",
+      "url": "https://www.youtube.com/watch?v=-UQ6OZywZ2I",
+      "description": "MCP is an open protocol that standardizes how applications provide context to LLMs. Think of MCP like a USB-C port for A"
     },
     {
       "type": "video",
-      "title": "What is MCP? Integrate AI Agents with Databases &amp; APIs",
-      "url": "https://www.youtube.com/watch?v=eur8dUO9mvE",
-      "description": "Ready to become a certified Architect on Cloud Pak? Register now and use code IBMTechYT20 for 20% off of your exam ..."
+      "title": "Building Agents with Model Context Protocol - Full Workshop with Mahesh Murag of Anthropic",
+      "url": "https://www.youtube.com/watch?v=kQmXtrmQ5Zg",
+      "description": "The Model Context Protocol is a universal, open standard for connecting AI systems with data sources, replacing fragment"
     },
     {
       "type": "practice",
