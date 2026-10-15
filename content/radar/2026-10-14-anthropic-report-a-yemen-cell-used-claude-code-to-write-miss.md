@@ -1,0 +1,15 @@
+---
+title: "Anthropic Report: A Yemen Cell Used Claude Code to Write Missile Guidance Software - MiGFlug"
+date: "2026-10-14"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMipgFBVV95cUxPYWdwVTJOZjFmeXNMN3JQdFdWSW5ROXhmTkNCZlBsdm1LRVVNZnFHdUwycWV5akowdC1PdktHTm9aTDFMalpjT1hxNy1ndWF3LUMzTy1vS1dLTFVNdjdpU3RtaUNjbEFuRXBBOExfTlZJMEFScDJuNUZXNGo2TlR6bWtLVVh2MTJGY1ZLLUt3Q3RMMTU4Tmp0LURhTmt1ekdlN2NfOTNB?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMipgFBVV95cUxPYWdwVTJOZjFmeXNMN3JQdFdWSW5ROXhmTkNCZlBsdm1LRVVNZnFHdUwycWV5akowdC1PdktHTm9aTDFMalpjT1hxNy1ndWF3LUMzTy1vS1dLTFVNdjdpU3RtaUNjbEFuRXBBOExfTlZJMEFScDJuNUZXNGo2TlR6bWtLVVh2MTJGY1ZLLUt3Q3RMMTU4Tmp0LURhTmt1ekdlN2NfOTNB?oc=5' target='_blank'&"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxPYWdwVTJOZjFmeXNMN3JQdFdWSW5ROXhmTkNCZlBsdm1LRVVNZnFHdUwycWV5akowdC1PdktHTm9aTDFMalpjT1hxNy1ndWF3LUMzTy1vS1dLTFVNdjdpU3RtaUNjbEFuRXBBOExfTlZJMEFScDJuNUZXNGo2TlR6bWtLVVh2MTJGY1ZLLUt3Q3RMMTU4Tmp0LURhTmt1ekdlN2NfOTNB?oc=5" target="_blank"&
+
+**출처**: [https://news.google.com/rss/articles/CBMipgFBVV95cUxPYWdwVTJOZjFmeXNMN3JQdFdWSW5ROXhmTkNCZlBsdm1LRVVNZnFHdUwycWV5akowdC1PdktHTm9aTDFMalpjT1hxNy1ndWF3LUMzTy1vS1dLTFVNdjdpU3RtaUNjbEFuRXBBOExfTlZJMEFScDJuNUZXNGo2TlR6bWtLVVh2MTJGY1ZLLUt3Q3RMMTU4Tmp0LURhTmt1ekdlN2NfOTNB?oc=5](https://news.google.com/rss/articles/CBMipgFBVV95cUxPYWdwVTJOZjFmeXNMN3JQdFdWSW5ROXhmTkNCZlBsdm1LRVVNZnFHdUwycWV5akowdC1PdktHTm9aTDFMalpjT1hxNy1ndWF3LUMzTy1vS1dLTFVNdjdpU3RtaUNjbEFuRXBBOExfTlZJMEFScDJuNUZXNGo2TlR6bWtLVVh2MTJGY1ZLLUt3Q3RMMTU4Tmp0LURhTmt1ekdlN2NfOTNB?oc=5)

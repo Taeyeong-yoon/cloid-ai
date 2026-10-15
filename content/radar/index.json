@@ -1,5 +1,94 @@
 [
   {
+    "slug": "2026-10-14-anthropicsclaude-code-v21300",
+    "title": "[anthropics/claude-code] v2.1.300",
+    "date": "2026-10-14",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
+    "excerpt": "## What's changed\n\n- Added `virtualText` to a mod's prompt decorations: text drawn in the prompt box that never enters t"
+  },
+  {
+    "slug": "2026-10-14-anthropicsanthropic-sdk-python-v1140",
+    "title": "[anthropics/anthropic-sdk-python] v1.14.0",
+    "date": "2026-10-14",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.14.0",
+    "excerpt": "### Features\n\n* **api:** add execution_identity to Managed Agents agents\n* **api:** add organization_type_not_supported "
+  },
+  {
+    "slug": "2026-10-14-anthropicsanthropic-sdk-typescript-vertex-sdk-v0210",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk-v0.21.0",
+    "date": "2026-10-14",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.21.0",
+    "excerpt": "### Features\n\n* **api:** add execution_identity to Managed Agents agents\n* **client:** add OpenTelemetry spans for API c"
+  },
+  {
+    "slug": "2026-10-14-anthropicsanthropic-sdk-typescript-sdk-v01340",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v0.134.0",
+    "date": "2026-10-14",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.134.0",
+    "excerpt": "### Features\n\n* **api:** add execution_identity to Managed Agents agents\n* **api:** add organization_type_not_supported "
+  },
+  {
+    "slug": "2026-10-14-anthropicsanthropic-sdk-typescript-google-cloud-sdk-v010",
+    "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk-v0.1.0",
+    "date": "2026-10-14",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.1.0",
+    "excerpt": "### Features\n\n* **api:** add execution_identity to Managed Agents agents\n* **client:** add OpenTelemetry spans for API c"
+  },
+  {
+    "slug": "2026-10-14-anthropics-claude-agents-pushed-code-merges-to-30000-a-day-i",
+    "title": "Anthropic's Claude agents pushed code merges to 30,000 a day in September - Startup Fortune",
+    "date": "2026-10-14",
+    "tags": [
+      "claude-code",
+      "market"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTjFhOEhuMmtzcUxnaHZTelBqT3VIQU5YQ3pRYWJ5RFNJbGpUSWYteXFZNFppcHByYmJ0dml5V2Y4QkllaWtEUlNiMlp1QVpVc0ZscGx5cVJ1N3FRYkFzdFV3ZDZLQTBGNmlwQnJoYnQzOWNPTzdzdXZCNHktemdLZ3g2ZzZXOGJZcm5EMS1LQVh4VXlUd3BNWDVweGp0bDBL?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQTjFhOEhuMmtzcUxnaHZTelBqT3VIQU5YQ3pRYWJ5RFNJbGpUSWYteXF"
+  },
+  {
+    "slug": "2026-10-14-claude-code-was-sending-your-gateways-api-key-to-anthropic-a",
+    "title": "Claude Code was sending your gateway's API key to Anthropic, and 2.1.299 stops it - MIXED Reality News",
+    "date": "2026-10-14",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ01RUjh5T1d5UXRLUi1OdlNITU5LNlZaZ1Awd01ZV081QTU3TUlBZVhBZTR4UllzdUc1Z2lZanZZS3ZCY1RMSnlGU1pyQnZUckU5VElnbTB1bVZCNDBwR2NwRHNOYW01QnhNbVk3NVFsdldHTmF5bGhjd3B6bDFmVEdRcHp5YXMxX1lfc3JremNteWgySVFJ?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ01RUjh5T1d5UXRLUi1OdlNITU5LNlZaZ1Awd01ZV081QTU3TUlBZVh"
+  },
+  {
+    "slug": "2026-10-14-anthropic-report-a-yemen-cell-used-claude-code-to-write-miss",
+    "title": "Anthropic Report: A Yemen Cell Used Claude Code to Write Missile Guidance Software - MiGFlug",
+    "date": "2026-10-14",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPYWdwVTJOZjFmeXNMN3JQdFdWSW5ROXhmTkNCZlBsdm1LRVVNZnFHdUwycWV5akowdC1PdktHTm9aTDFMalpjT1hxNy1ndWF3LUMzTy1vS1dLTFVNdjdpU3RtaUNjbEFuRXBBOExfTlZJMEFScDJuNUZXNGo2TlR6bWtLVVh2MTJGY1ZLLUt3Q3RMMTU4Tmp0LURhTmt1ekdlN2NfOTNB?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPYWdwVTJOZjFmeXNMN3JQdFdWSW5ROXhmTkNCZlBsdm1LRVVNZnFHdUw"
+  },
+  {
     "slug": "2026-10-14-anthropicsclaude-code-v21299",
     "title": "[anthropics/claude-code] v2.1.299",
     "date": "2026-10-14",
@@ -466,94 +555,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
     "excerpt": "## What's changed\n\n- Added `x-claude-code-prompt-id` to the gateway hint headers so LLM gateways can group the requests "
-  },
-  {
-    "slug": "2026-09-25-anthropic-rolls-out-up-to-250-in-free-claude-code-credits-bu",
-    "title": "Anthropic rolls out up to $250 in free Claude Code credits, but only for cloud sessions - BleepingComputer",
-    "date": "2026-09-25",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQdU5XenNOOFVnSDJuWXA0N2NkRnVKRmo1UndiQzNfOUI4aGpnYzhWc1I2YkFPV0dwdlFtX3JQUTBFZjZzN19hS0NnV0JnVG5WX1EtRzRHRVdKXzBPaC05UzZwSnRDS2JVeW1wUlh3NTRLeUZnT2liRmNXcmlMWlZQS3VGbzlmMkpnV0NRNUVsVHVLZUVMRWZ5ZlAzZGYyUjhjOU1JUU0zeUl0VlVNSlJ2SlZ6UEM0UEwwV3RGU2dweE9jM2dBTG8yNlJtQkxFNWpkOEtxRkZPcElwV2VoNU0xNmZR?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi4gFBVV95cUxQdU5XenNOOFVnSDJuWXA0N2NkRnVKRmo1UndiQzNfOUI4aGpnYzhWc1I"
-  },
-  {
-    "slug": "2026-09-25-do-not-let-programs-run-commands-on-your-machine-claude-code",
-    "title": "‘Do not let programs run commands on your machine’: Claude Code allegedly deleted 48,000 files in 103 seconds, and it’s a terrifying warning about AI agents - techradar.com",
-    "date": "2026-09-25",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxNQVVjM0pQRFpzektxX3NLM1ZqSERGMEljWW5pYWJ2c1hnTUZMTmZCVnRRdGtkRlpCQjlEQTR5bnd6MTRudlA3dWVubjZISzBGZng5eVg5NlBjcTdVRHdobXB5bDlfb1BncldYc2lUWVUzY0s2RkFZZmxpdFN2ZlNBU2huNzRIYUtEUGszYldjMksyS3ZXd0dwdFh2b1I3ZEQ2cFVuXzFKRVhlWGNUVC1ISkhvazJOYTZ0emtJR3FKUzBGR1JlMHdSekowekRDSzRZTmhGalZyWHZsdlVvQ1dHQVdWQ3lhWV9VakVFWUM2YkFDdUw0cXZUUEd2dmVSYnlldTAxeVVULUd0NjdqMTVXd2J5NUV3RjNYRHVmZjdFaWJRTHNPU2V0Mw?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiqAJBVV95cUxNQVVjM0pQRFpzektxX3NLM1ZqSERGMEljWW5pYWJ2c1hnTUZMTmZCVnR"
-  },
-  {
-    "slug": "2026-09-24-anthropic-launches-claude-code-cloud-sessions-and-hands-out-",
-    "title": "Anthropic launches Claude Code cloud sessions and hands out up to $250 in credit - Pasquale Pillitteri",
-    "date": "2026-09-24",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUXdYYWZEdlR2eVNXVlp0UkZUUDRza3B4RExWM0EtUE81cTNTVUZDMUkwbGllRm9kSE5TQXZJNmpUWjVPdWJ5TDRJVXQ0MmMyOHpwNXVFRTRYOVNhblB5eTZqWC03Rko0dHV5dTh1RHJqWDNVcXl5ckkyUHl3dWRKeGVnajdpWUZFdUlRMVNpekowRkE?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxOUXdYYWZEdlR2eVNXVlp0UkZUUDRza3B4RExWM0EtUE81cTNTVUZDMUk"
-  },
-  {
-    "slug": "2026-09-24-anthropicsclaude-code-v21282",
-    "title": "[anthropics/claude-code] v2.1.282",
-    "date": "2026-09-24",
-    "tags": [
-      "claude-code",
-      "market"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.282",
-    "excerpt": "## What's changed\n\n- Added a `maxProseWidth` setting that caps the width of Claude's prose in wide terminals while table"
-  },
-  {
-    "slug": "2026-09-24-anthropic-explains-claude-codes-quality-drop-3-hit-2026-shat",
-    "title": "Anthropic Explains Claude Code’s Quality Drop: 3% Hit [2026] - shattered.io",
-    "date": "2026-09-24",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1FbFRybmtOZm9paW1XaEJ5Q1lpZ1gxMExWUDF2Q2N2X0FEakZKUkdBWXVBcjF1bWFfVnlzNnY2WFd1akVZa3VNZmJ2T0REV0UwUlpXdUhjdGlWYlF1M25iMmpvLWNQVUNLeC1feWJDNjI2Y3BfNGRoc1VFVQ?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE1FbFRybmtOZm9paW1XaEJ5Q1lpZ1gxMExWUDF2Q2N2X0FEakZKUkdBWXV"
-  },
-  {
-    "slug": "2026-09-23-anthropicsclaude-code-v21281",
-    "title": "[anthropics/claude-code] v2.1.281",
-    "date": "2026-09-23",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.281",
-    "excerpt": "## What's changed\n\n- Added Claude apps gateway support for newer Claude Desktop keys in `desktop` policy blocks, includi"
-  },
-  {
-    "slug": "2026-09-22-anthropicsclaude-code-v21280",
-    "title": "[anthropics/claude-code] v2.1.280",
-    "date": "2026-09-22",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280",
-    "excerpt": "## What's changed\n\n- Added Claude Opus 5.5 (`claude-opus-5-5`), now the default Opus model — 1M context, $4/$20 per Mtok"
-  },
-  {
-    "slug": "2026-09-22-anthropicsanthropic-sdk-python-v180",
-    "title": "[anthropics/anthropic-sdk-python] v1.8.0",
-    "date": "2026-09-22",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.8.0",
-    "excerpt": "## 1.8.0 (2026-09-22)\n\nFull Changelog: [v1.7.0...v1.8.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.7"
   }
 ]
