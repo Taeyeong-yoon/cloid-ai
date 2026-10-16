@@ -1,5 +1,71 @@
 [
   {
+    "slug": "2026-10-15-anthropicsclaude-code-v21301",
+    "title": "[anthropics/claude-code] v2.1.301",
+    "date": "2026-10-15",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.301",
+    "excerpt": "## What's changed\n\n- Added `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS` so unattended retry mode (`CLAUDE_CODE_R"
+  },
+  {
+    "slug": "2026-10-15-anthropicsanthropic-sdk-python-v1150",
+    "title": "[anthropics/anthropic-sdk-python] v1.15.0",
+    "date": "2026-10-15",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.15.0",
+    "excerpt": "### Features\n\n* **api:** add between_tools to thinking types in model capabilities\n* **api:** add the speed parameter an"
+  },
+  {
+    "slug": "2026-10-15-anthropicsanthropic-sdk-typescript-sdk-v01350",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v0.135.0",
+    "date": "2026-10-15",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.135.0",
+    "excerpt": "### Features\n\n* **api:** add between_tools to thinking types in model capabilities\n* **api:** add the speed parameter an"
+  },
+  {
+    "slug": "2026-10-15-anthropic-makes-code-review-for-claude-code-generally-availa",
+    "title": "Anthropic Makes Code Review for Claude Code Generally Available - Unite.AI",
+    "date": "2026-10-15",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQb3FMQ1VwU3JveHMtSHFpaDdSUlRGX19Hc20ybW1pYUdtcFktWXFXeUdnY0tnenNackdGVC1uOWJzQ1FVSkd0NVpsMTBNcDl4VlhrUUstTUZwLVBnRWZrTG52TDhCWm9zVTJCRS1GZkdIUFJrbGVPVXB6dExMb1dYMlRxZDdSNF9GdWt3MDVR?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQb3FMQ1VwU3JveHMtSHFpaDdSUlRGX19Hc20ybW1pYUdtcFktWXFXeUd"
+  },
+  {
+    "slug": "2026-10-15-anthropic-ditched-git-for-its-own-version-control-system-bec",
+    "title": "Anthropic ditched Git for its own version control system because Claude is writing too much code - TechSpot",
+    "date": "2026-10-15",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSDVqS21yZ1k3Zi1sQ19IWFRsZEJ1a0xDQW1aZFBVQ0pXX1Y4SGJDY0RBNVV1bFhqQ3dxLWpkTVdEbUJLUDBsQ0p0aTgtUjZfU3pFR3JWVDdhdkUwdUh1WEV4WThnTGpORHlzVzdIMVpPbjBwbkRnRjd3TXQ1aTZpNFdNTDZUYnNjcmROaElSQm5TMnhKYmFYVGxGMzM5Mm8?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPSDVqS21yZ1k3Zi1sQ19IWFRsZEJ1a0xDQW1aZFBVQ0pXX1Y4SGJDY0R"
+  },
+  {
+    "slug": "2026-10-15-anthropics-internal-roadmap-from-five-years-ago-surfaces-cla",
+    "title": "Anthropic's internal roadmap from five years ago surfaces: Claude Code and trillion-parameter models were planned all along - BigGo Finance",
+    "date": "2026-10-15",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQSWkySWxhRy1kLTJ4NUtsbWp4VXRNZk8xdXNGYkNPM3ltLW90SllyWlNwMVlVQzFTMkd5bXRtY0ZXRUNKaVJSYWxDdzhHQVA3T0xGTVphNlFsS2VWOXRhcFo2OHNHbDFDRTktWjNCb3lpUVdLLXc?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTFBQSWkySWxhRy1kLTJ4NUtsbWp4VXRNZk8xdXNGYkNPM3ltLW90SllyWlN"
+  },
+  {
     "slug": "2026-10-14-anthropicsclaude-code-v21300",
     "title": "[anthropics/claude-code] v2.1.300",
     "date": "2026-10-14",
@@ -488,72 +554,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.9.0",
     "excerpt": "## 1.9.0 (2026-09-28)\n\nFull Changelog: [v1.8.0...v1.9.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.8"
-  },
-  {
-    "slug": "2026-09-28-anthropicsanthropic-sdk-typescript-vertex-sdk-v0200",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.20.0",
-    "date": "2026-09-28",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.20.0",
-    "excerpt": "## 0.20.0 (2026-09-28)\n\nFull Changelog: [vertex-sdk-v0.19.11...vertex-sdk-v0.20.0](https://github.com/anthropics/anthrop"
-  },
-  {
-    "slug": "2026-09-28-anthropicsanthropic-sdk-typescript-sdk-v01290",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.129.0",
-    "date": "2026-09-28",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.129.0",
-    "excerpt": "## 0.129.0 (2026-09-28)\n\nFull Changelog: [sdk-v0.128.0...sdk-v0.129.0](https://github.com/anthropics/anthropic-sdk-types"
-  },
-  {
-    "slug": "2026-09-28-anthropicsanthropic-sdk-typescript-google-cloud-sdk-v0015",
-    "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk: v0.0.15",
-    "date": "2026-09-28",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.15",
-    "excerpt": "## 0.0.15 (2026-09-28)\n\nFull Changelog: [google-cloud-sdk-v0.0.14...google-cloud-sdk-v0.0.15](https://github.com/anthrop"
-  },
-  {
-    "slug": "2026-09-27-i-broke-something-a-claude-code-ai-agent-deleted-48000-files",
-    "title": "'I broke something': A Claude Code AI agent deleted 48,000 files in just over 100 seconds — then apologized for doing so - TechRadar",
-    "date": "2026-09-27",
-    "tags": [
-      "claude-code",
-      "agent"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQdnIzWUdCeWdTb1MwYzhPVmYtZmduSkduQnJPQmFFUmFpOHZrQzBlOWo2ZXJpLVg4dUtBdWdudzFseXNqYWJQTlJTb2hxS1piWFdUMkpMeGRHbFNLaktheEJRLTlsdk1rVzljaTNmTExFUk56VUxKMUFTYmhHN3daS1VialZUQTVZSnh4MTZkbzZJTk1kOVkzWjVLNEtBb2NXdGIwS01hZGNZUFhJSTcyeWxheWhRdzAtNWxzNXZPOENLSWV5R2xDeU9EVVdTODY2T2Y2eDdsN01wc0x4SFV2QU1CU2tZaGlLSnc?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxQdnIzWUdCeWdTb1MwYzhPVmYtZmduSkduQnJPQmFFUmFpOHZrQzBlOWo"
-  },
-  {
-    "slug": "2026-09-26-anthropic-offers-up-to-250-in-free-claude-code-cloud-credits",
-    "title": "Anthropic Offers Up to $250 in Free Claude Code Cloud Credits to Pro and Max Subscribers - gHacks",
-    "date": "2026-09-26",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcjl4WGw3RGpBenhGOFh4dDZ3ajFJeThrNmtfUWhJZ21TUG1yWGx0TWZGYkdrRW8tVHREWTlEM2pCZ1dWUTFwb3VESURaTTRzUElUemR0dDd2TnhwcDVpOHp0b3FKQTlPYnlnUS1XWHlobTdadEVOamN3X3MyWTJsMi1VQ2Q1UHd1MlJIUlVQZ09UeExJUDd2ZkZlUWl2UEpRRG5JSUVSWXVuSW93WWVPQmFsMnlvcDlnRk94aWwxQQ?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQcjl4WGw3RGpBenhGOFh4dDZ3ajFJeThrNmtfUWhJZ21TUG1yWGx0TWZ"
-  },
-  {
-    "slug": "2026-09-25-anthropicsclaude-code-v21283",
-    "title": "[anthropics/claude-code] v2.1.283",
-    "date": "2026-09-25",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
-    "excerpt": "## What's changed\n\n- Added `x-claude-code-prompt-id` to the gateway hint headers so LLM gateways can group the requests "
   }
 ]
