@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-10-16-anthropicsclaude-code-v21302",
+    "title": "[anthropics/claude-code] v2.1.302",
+    "date": "2026-10-16",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
+    "excerpt": "## What's changed\n\n- Added `CLAUDE_CODE_AUTO_MODE_MODEL` to choose the model the client-side auto mode classifier uses; "
+  },
+  {
     "slug": "2026-10-15-anthropicsclaude-code-v21301",
     "title": "[anthropics/claude-code] v2.1.301",
     "date": "2026-10-15",
@@ -543,16 +554,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
     "excerpt": "## What's changed\n\n- Added Claude Sonnet 5.5 (`claude-sonnet-5-5`), now the default Sonnet model on the Anthropic API — "
-  },
-  {
-    "slug": "2026-09-28-anthropicsanthropic-sdk-python-v190",
-    "title": "[anthropics/anthropic-sdk-python] v1.9.0",
-    "date": "2026-09-28",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.9.0",
-    "excerpt": "## 1.9.0 (2026-09-28)\n\nFull Changelog: [v1.8.0...v1.9.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1.8"
   }
 ]
