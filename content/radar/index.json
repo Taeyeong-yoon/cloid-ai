@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-10-18-anthropicsclaude-code-v21303",
+    "title": "[anthropics/claude-code] v2.1.303",
+    "date": "2026-10-18",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.303",
+    "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
+  },
+  {
     "slug": "2026-10-16-anthropicsclaude-code-v21302",
     "title": "[anthropics/claude-code] v2.1.302",
     "date": "2026-10-16",
@@ -543,16 +554,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZm5uNXFULTRXd05ESjFWN3lLY25qeUdPMktYM2RqVzZoZ0VGNjBoSFZRaFY5Qm03TjZnTlMyQmIzUnhMUVpiNGMtU19IMVNzNWg4TkUyRWlRczZha3RPSk9hYzZ3RXVDYzdxNUx6MXBXam9UblZuZ1lJaGN1WXFXT29Tb0dwaDRzM2xkdk40N3NmWDhXekF5OGZuRQ?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQZm5uNXFULTRXd05ESjFWN3lLY25qeUdPMktYM2RqVzZoZ0VGNjBoSFZ"
-  },
-  {
-    "slug": "2026-09-28-anthropicsclaude-code-v21284",
-    "title": "[anthropics/claude-code] v2.1.284",
-    "date": "2026-09-28",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
-    "excerpt": "## What's changed\n\n- Added Claude Sonnet 5.5 (`claude-sonnet-5-5`), now the default Sonnet model on the Anthropic API — "
   }
 ]
