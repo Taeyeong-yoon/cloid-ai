@@ -1,5 +1,38 @@
 [
   {
+    "slug": "2026-10-19-anthropicsclaude-code-v21304",
+    "title": "[anthropics/claude-code] v2.1.304",
+    "date": "2026-10-19",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
+    "excerpt": "## What's changed\n\n- Added a transcript line when a plugin that runs first skips one of your mod's hooks, naming the eve"
+  },
+  {
+    "slug": "2026-10-19-exclusive-anthropics-code-hints-at-a-gated-way-to-cc-claude-",
+    "title": "EXCLUSIVE: Anthropic's code hints at a gated way to CC Claude on email - RuntimeWire",
+    "date": "2026-10-19",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPT1BCQ3FMVXcyd2otdmpxYi1xUUFGcGl2R1FNajJkRy0tNW1vdWtiN0U1MVpGVVdYT3Nxa1o5SDhKbFdEcTllMkN0ajh6MkxSZGI3V0JqU2NBT1RTaWxUY2ZyLU9FVnBWRGwyOGg2UVV6VTZGLVExVnBhT0FxSVJuS01kQl9PQXRQSElvbnFQaFdPWVd2R0tEWS1FWDYyZXd5RWxR?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxPT1BCQ3FMVXcyd2otdmpxYi1xUUFGcGl2R1FNajJkRy0tNW1vdWtiN0U"
+  },
+  {
+    "slug": "2026-10-19-claude-writes-code-so-fast-git-cant-keep-up-anthropic-built-",
+    "title": "Claude Writes Code So Fast Git Can't Keep Up: Anthropic Built a New Version Control System With Only 7 People in 5 Months - 36氪",
+    "date": "2026-10-19",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9jRmRmdldGbXMyMl9JY0M0SUFHemw3LWdWcGp5cGJiRFdlSFh4Tm5VeFBGeXlPMDZrdkRJSDZzZ0RfRHVqcC1DTTRmdi1PVkJ2NDFF?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE9jRmRmdldGbXMyMl9JY0M0SUFHemw3LWdWcGp5cGJiRFdlSFh4Tm5VeFB"
+  },
+  {
     "slug": "2026-10-18-anthropicsclaude-code-v21303",
     "title": "[anthropics/claude-code] v2.1.303",
     "date": "2026-10-18",
@@ -521,38 +554,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.20.1",
     "excerpt": "## 0.20.1 (2026-09-30)\n\nFull Changelog: [vertex-sdk-v0.20.0...vertex-sdk-v0.20.1](https://github.com/anthropics/anthropi"
-  },
-  {
-    "slug": "2026-09-30-anthropicsanthropic-sdk-typescript-sdk-v01310",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.131.0",
-    "date": "2026-09-30",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.131.0",
-    "excerpt": "## 0.131.0 (2026-09-30)\n\nFull Changelog: [sdk-v0.130.0...sdk-v0.131.0](https://github.com/anthropics/anthropic-sdk-types"
-  },
-  {
-    "slug": "2026-09-29-anthropicsclaude-code-v21285",
-    "title": "[anthropics/claude-code] v2.1.285",
-    "date": "2026-09-29",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285",
-    "excerpt": "## What's changed\n\n- Added `CLAUDE_CODE_DISABLE_WEB_FETCH` environment variable to turn off the WebFetch tool\n- Added `c"
-  },
-  {
-    "slug": "2026-09-29-anthropic-reports-service-disruption-across-claudeai-code-co",
-    "title": "Anthropic Reports Service Disruption Across Claude.ai, Code, Cowork and API - unite.ai",
-    "date": "2026-09-29",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZm5uNXFULTRXd05ESjFWN3lLY25qeUdPMktYM2RqVzZoZ0VGNjBoSFZRaFY5Qm03TjZnTlMyQmIzUnhMUVpiNGMtU19IMVNzNWg4TkUyRWlRczZha3RPSk9hYzZ3RXVDYzdxNUx6MXBXam9UblZuZ1lJaGN1WXFXT29Tb0dwaDRzM2xkdk40N3NmWDhXekF5OGZuRQ?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQZm5uNXFULTRXd05ESjFWN3lLY25qeUdPMktYM2RqVzZoZ0VGNjBoSFZ"
   }
 ]
