@@ -1,5 +1,82 @@
 [
   {
+    "slug": "2026-10-21-anthropicsclaude-code-v21306",
+    "title": "[anthropics/claude-code] v2.1.306",
+    "date": "2026-10-21",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.306",
+    "excerpt": "## What's changed\n\n- Fixed `claude -p` inside cloud sessions reporting \"Not logged in\" when started without the session'"
+  },
+  {
+    "slug": "2026-10-20-anthropicsclaude-code-v21305",
+    "title": "[anthropics/claude-code] v2.1.305",
+    "date": "2026-10-20",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.305",
+    "excerpt": "## What's changed\n\n- Added `sandbox.allowNestedUserNamespaces` so sandboxed commands on Linux can create user namespaces"
+  },
+  {
+    "slug": "2026-10-20-anthropicsanthropic-sdk-python-v1170",
+    "title": "[anthropics/anthropic-sdk-python] v1.17.0",
+    "date": "2026-10-20",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.17.0",
+    "excerpt": "### Features\n\n* **api:** add org webhook endpoints and user profile enforcement events\n* **api:** add RBAC Group owner-a"
+  },
+  {
+    "slug": "2026-10-20-anthropicsanthropic-sdk-python-v1160",
+    "title": "[anthropics/anthropic-sdk-python] v1.16.0",
+    "date": "2026-10-20",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.16.0",
+    "excerpt": "### Features\n\n* **api:** add data_refreshed_at and has_more to analytics report pages\n* **api:** add workspace rate-limi"
+  },
+  {
+    "slug": "2026-10-20-anthropicsanthropic-sdk-typescript-vertex-sdk-v0220",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk-v0.22.0",
+    "date": "2026-10-20",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.22.0",
+    "excerpt": "### Features\n\n* **vertex:** throw an `AnthropicError` when `userProfiles` or `beta.userProfiles` is read on `AnthropicVe"
+  },
+  {
+    "slug": "2026-10-20-anthropicsanthropic-sdk-typescript-sdk-v01370",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v0.137.0",
+    "date": "2026-10-20",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.137.0",
+    "excerpt": "### Features\n\n* **api:** add org webhook endpoints and user profile enforcement events\n\n\n### Chores\n\n* **ci:** run the c"
+  },
+  {
+    "slug": "2026-10-20-anthropicsanthropic-sdk-typescript-sdk-v01360",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v0.136.0",
+    "date": "2026-10-20",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.136.0",
+    "excerpt": "### Features\n\n* **api:** add data_refreshed_at and has_more to analytics report pages\n* **api:** add workspace rate-limi"
+  },
+  {
     "slug": "2026-10-19-anthropicsclaude-code-v21304",
     "title": "[anthropics/claude-code] v2.1.304",
     "date": "2026-10-19",
@@ -476,83 +553,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMURITlFybklqUDktaUU1QXQzX1FGWjA5WkFneFlVWTJHS0VQX251aXVOVVRlSVNxWEE2enRzNGM3akZ6UERFYUdWb2NzNFNXTl9MXzYyMEU5U2J0N2prUkRRbE9WT3YxV1BRWE0xMURjTGFJSlphVXNVdWJRSk45ZVRtcGNlVEhoVzh3OV81T1hwR0RtNTBRcXI3Y3BYbEVzTkFLY09qT0RfSy1rWGhNenJ2RmFKTUZhRHozWWNfclJoZWwzMW9wRGtOWHZVcXloUXRmaUNFZlhGaG8waTlUUHBBOA?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMURITlFybklqUDktaUU1QXQzX1FGWjA5WkFneFlVWTJHS0VQX251aXV"
-  },
-  {
-    "slug": "2026-10-01-anthropicsclaude-code-v21287",
-    "title": "[anthropics/claude-code] v2.1.287",
-    "date": "2026-10-01",
-    "tags": [
-      "claude-code",
-      "agent"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
-    "excerpt": "## What's changed\n\n- Added Claude Mods: plugins may now modify deeper behavior\n- Added You should know, a built-in mod w"
-  },
-  {
-    "slug": "2026-10-01-barclays-accelerates-ai-rollout-with-anthropics-claude-code-",
-    "title": "Barclays Accelerates AI Rollout With Anthropic’s Claude Code - PYMNTS.com",
-    "date": "2026-10-01",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOXzF4ZEFaN2JQZEhmd09Md2RpeWRLMjMwM1diaFBfVW9FZzFYX2ZCXzNodVRMeVRkak5mZjg0aXBrSEhodG5KaEhXdDFLSG9xTVZvVVpTVW9IejVfa0d4NFpoWWZzaW12TmlvQlI0MUxkS3dCbUc1VnRxYlM2ZDRGMDd1Yk9ZSHplNjRVYnNJblhuZ0kxN2dkSC1NY3VKZW5sWDRpVDdqZS04aVFfWmhaRnhmdUdQLWM?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxOXzF4ZEFaN2JQZEhmd09Md2RpeWRLMjMwM1diaFBfVW9FZzFYX2ZCXzN"
-  },
-  {
-    "slug": "2026-09-30-anthropicsclaude-code-v21286",
-    "title": "[anthropics/claude-code] v2.1.286",
-    "date": "2026-09-30",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.286",
-    "excerpt": "## What's changed\n\n- Added a count such as \"2 of 5\" to the permission prompt when several permission requests stack up\n-"
-  },
-  {
-    "slug": "2026-09-30-anthropicsanthropic-sdk-python-v1110",
-    "title": "[anthropics/anthropic-sdk-python] v1.11.0",
-    "date": "2026-09-30",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.11.0",
-    "excerpt": "## 1.11.0 (2026-09-30)\n\nFull Changelog: [v1.10.0...v1.11.0](https://github.com/anthropics/anthropic-sdk-python/compare/v"
-  },
-  {
-    "slug": "2026-09-30-anthropicsanthropic-sdk-python-v1100",
-    "title": "[anthropics/anthropic-sdk-python] v1.10.0",
-    "date": "2026-09-30",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.10.0",
-    "excerpt": "## 1.10.0 (2026-09-30)\n\nFull Changelog: [v1.9.0...v1.10.0](https://github.com/anthropics/anthropic-sdk-python/compare/v1"
-  },
-  {
-    "slug": "2026-09-30-anthropicsanthropic-sdk-typescript-vertex-sdk-v0202",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.20.2",
-    "date": "2026-09-30",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.20.2",
-    "excerpt": "## 0.20.2 (2026-09-30)\n\nFull Changelog: [vertex-sdk-v0.20.1...vertex-sdk-v0.20.2](https://github.com/anthropics/anthropi"
-  },
-  {
-    "slug": "2026-09-30-anthropicsanthropic-sdk-typescript-vertex-sdk-v0201",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.20.1",
-    "date": "2026-09-30",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.20.1",
-    "excerpt": "## 0.20.1 (2026-09-30)\n\nFull Changelog: [vertex-sdk-v0.20.0...vertex-sdk-v0.20.1](https://github.com/anthropics/anthropi"
   }
 ]
