@@ -1,0 +1,15 @@
+---
+title: "Anthropic Adds Continuous Scanning and Fix Tracking to Claude Security - Unite.AI"
+date: "2026-10-21"
+tags:
+  - security
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMilwFBVV95cUxQOWdjNl9fX0lTRHI0d0pRQ01mQmZyZ3dkWk5hTE1KTEtNdWZoanlnNm8zRFczOU4xSFVXOVdmVXR1WDFFY2MxVU5tLXhjN2VPNVRheTVmNUt4U3FubWNPaEN4bDhsX3AtdWpsanFWVWFLTTJfRU5iaGZUS1Fzd3lfVmFnc1Nqd3FSZXdOakVnTEh5azVnMFY0?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMilwFBVV95cUxQOWdjNl9fX0lTRHI0d0pRQ01mQmZyZ3dkWk5hTE1KTEtNdWZoanlnNm8zRFczOU4xSFVXOVdmVXR1WDFFY2MxVU5tLXhjN2VPNVRheTVmNUt4U3FubWNPaEN4bDhsX3AtdWpsanFWVWFLTTJfRU5iaGZUS1Fzd3lfVmFnc1Nqd3FSZXdOakVnTEh5azVnMFY0?oc=5' target='_blank'&gt;Anthropic Adds Co"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxQOWdjNl9fX0lTRHI0d0pRQ01mQmZyZ3dkWk5hTE1KTEtNdWZoanlnNm8zRFczOU4xSFVXOVdmVXR1WDFFY2MxVU5tLXhjN2VPNVRheTVmNUt4U3FubWNPaEN4bDhsX3AtdWpsanFWVWFLTTJfRU5iaGZUS1Fzd3lfVmFnc1Nqd3FSZXdOakVnTEh5azVnMFY0?oc=5" target="_blank"&gt;Anthropic Adds Co
+
+**출처**: [https://news.google.com/rss/articles/CBMilwFBVV95cUxQOWdjNl9fX0lTRHI0d0pRQ01mQmZyZ3dkWk5hTE1KTEtNdWZoanlnNm8zRFczOU4xSFVXOVdmVXR1WDFFY2MxVU5tLXhjN2VPNVRheTVmNUt4U3FubWNPaEN4bDhsX3AtdWpsanFWVWFLTTJfRU5iaGZUS1Fzd3lfVmFnc1Nqd3FSZXdOakVnTEh5azVnMFY0?oc=5](https://news.google.com/rss/articles/CBMilwFBVV95cUxQOWdjNl9fX0lTRHI0d0pRQ01mQmZyZ3dkWk5hTE1KTEtNdWZoanlnNm8zRFczOU4xSFVXOVdmVXR1WDFFY2MxVU5tLXhjN2VPNVRheTVmNUt4U3FubWNPaEN4bDhsX3AtdWpsanFWVWFLTTJfRU5iaGZUS1Fzd3lfVmFnc1Nqd3FSZXdOakVnTEh5azVnMFY0?oc=5)

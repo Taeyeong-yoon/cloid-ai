@@ -1,5 +1,82 @@
 [
   {
+    "slug": "2026-10-21-anthropicsclaude-code-v21307",
+    "title": "[anthropics/claude-code] v2.1.307",
+    "date": "2026-10-21",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.307",
+    "excerpt": "## What's changed\n\n- Added `/claude-api api-version` to move Claude API code to API version `2026-10-21`\n- Added the `cl"
+  },
+  {
+    "slug": "2026-10-21-anthropicsanthropic-sdk-python-v210",
+    "title": "[anthropics/anthropic-sdk-python] v2.1.0",
+    "date": "2026-10-21",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.1.0",
+    "excerpt": "### Features\n\n* **api:** add enforcement status, actions and filter to user profiles"
+  },
+  {
+    "slug": "2026-10-21-anthropicsanthropic-sdk-python-v200",
+    "title": "[anthropics/anthropic-sdk-python] v2.0.0",
+    "date": "2026-10-21",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.0.0",
+    "excerpt": "### ⚠ BREAKING CHANGES\n\n* **api:** add support for new API version 2026-10-21\n\n### Features\n\n* **api:** add a workspace_"
+  },
+  {
+    "slug": "2026-10-21-anthropicsanthropic-sdk-typescript-vertex-sdk-v100",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk-v1.0.0",
+    "date": "2026-10-21",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.0.0",
+    "excerpt": "### ⚠ BREAKING CHANGES\n\n* **api:** add support for new API version 2026-10-21\n\n### Features\n\n* **api:** add support for "
+  },
+  {
+    "slug": "2026-10-21-anthropicsanthropic-sdk-typescript-sdk-v110",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.1.0",
+    "date": "2026-10-21",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.1.0",
+    "excerpt": "### Features\n\n* **api:** add enforcement status, actions and filter to user profiles"
+  },
+  {
+    "slug": "2026-10-21-anthropicsanthropic-sdk-typescript-sdk-v100",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.0.0",
+    "date": "2026-10-21",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.0.0",
+    "excerpt": "### ⚠ BREAKING CHANGES\n\n* **api:** add support for new API version 2026-10-21\n\n### Features\n\n* **api:** add a workspace_"
+  },
+  {
+    "slug": "2026-10-21-anthropic-adds-continuous-scanning-and-fix-tracking-to-claud",
+    "title": "Anthropic Adds Continuous Scanning and Fix Tracking to Claude Security - Unite.AI",
+    "date": "2026-10-21",
+    "tags": [
+      "security"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQOWdjNl9fX0lTRHI0d0pRQ01mQmZyZ3dkWk5hTE1KTEtNdWZoanlnNm8zRFczOU4xSFVXOVdmVXR1WDFFY2MxVU5tLXhjN2VPNVRheTVmNUt4U3FubWNPaEN4bDhsX3AtdWpsanFWVWFLTTJfRU5iaGZUS1Fzd3lfVmFnc1Nqd3FSZXdOakVnTEh5azVnMFY0?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQOWdjNl9fX0lTRHI0d0pRQ01mQmZyZ3dkWk5hTE1KTEtNdWZoanlnNm8"
+  },
+  {
     "slug": "2026-10-21-anthropicsclaude-code-v21306",
     "title": "[anthropics/claude-code] v2.1.306",
     "date": "2026-10-21",
@@ -476,82 +553,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.292",
     "excerpt": "## What's changed\n\n- Added `--marketplace ` to `claude plugin install`: adds the marketplace if needed, under the same p"
-  },
-  {
-    "slug": "2026-10-06-anthropicsclaude-code-v21291",
-    "title": "[anthropics/claude-code] v2.1.291",
-    "date": "2026-10-06",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.291",
-    "excerpt": "## What's changed\n\n- Fixed a regression in 2.1.290 where cloud sessions could drop answers to permission prompts\n- Fixed"
-  },
-  {
-    "slug": "2026-10-05-anthropicsclaude-code-v21290",
-    "title": "[anthropics/claude-code] v2.1.290",
-    "date": "2026-10-05",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
-    "excerpt": "## What's changed\n\n- Added `serverToolUses` to the result of a mod's `turn.step` hook: the tool calls the API ran itself"
-  },
-  {
-    "slug": "2026-10-04-anthropic-implements-built-in-plugin-system-mods-in-claude-c",
-    "title": "Anthropic Implements Built-In Plugin System \"Mods\" in Claude Code - finance.biggo.com",
-    "date": "2026-10-04",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTE40d01mVVp5bGtBaWwyN2ZZd3RHVTFqMnYwdGpDZTZuVnl4aTVBN0hORGx5M1d1NmVZd1RrSGN3c2tpb1FLUGJYUllqaG5qNXdOQ0NmT1hfOHpuUzdNOUdPLWQzcVgwdHR5dDVQWWJiSnVQVWhxMkE?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE40d01mVVp5bGtBaWwyN2ZZd3RHVTFqMnYwdGpDZTZuVnl4aTVBN0hORGx"
-  },
-  {
-    "slug": "2026-10-03-anthropicsclaude-code-v21289",
-    "title": "[anthropics/claude-code] v2.1.289",
-    "date": "2026-10-03",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.289",
-    "excerpt": "## What's changed\n\n- Fixed a deny or ask rule on a nested part of a compound shell command not holding over a user-insta"
-  },
-  {
-    "slug": "2026-10-02-anthropicsclaude-code-v21288",
-    "title": "[anthropics/claude-code] v2.1.288",
-    "date": "2026-10-02",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
-    "excerpt": "## What's changed\n\n- Added `$.ui.selection()` for mods: returns the text you last selected in fullscreen mode and, when "
-  },
-  {
-    "slug": "2026-10-02-claude-code-21287-adds-mods-and-anthropic-says-they-can-read",
-    "title": "Claude Code 2.1.287 adds mods, and Anthropic says they can read your API key - MIXED Reality News",
-    "date": "2026-10-02",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTE94VHo1THdydmxIUUUzc1pZNFFQdHk4d2JwazVlbHQ0SjZZZnhCbndpQ09TSXluZ09tMVlMZVQyUXdCc0o0WWMtODB6Qy1tSHlYM2lGVndRcUpOU0VVUWVoWnBDeUVVbEJ5M2ZwaHVDWU5GTGF0eUhtaHpmNHA4QQ?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE94VHo1THdydmxIUUUzc1pZNFFQdHk4d2JwazVlbHQ0SjZZZnhCbndpQ09"
-  },
-  {
-    "slug": "2026-10-02-barclays-expands-anthropics-claude-code-to-support-software-",
-    "title": "Barclays expands Anthropic’s Claude Code to support software development and legacy modernisation - theasianbanker.com",
-    "date": "2026-10-02",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMURITlFybklqUDktaUU1QXQzX1FGWjA5WkFneFlVWTJHS0VQX251aXVOVVRlSVNxWEE2enRzNGM3akZ6UERFYUdWb2NzNFNXTl9MXzYyMEU5U2J0N2prUkRRbE9WT3YxV1BRWE0xMURjTGFJSlphVXNVdWJRSk45ZVRtcGNlVEhoVzh3OV81T1hwR0RtNTBRcXI3Y3BYbEVzTkFLY09qT0RfSy1rWGhNenJ2RmFKTUZhRHozWWNfclJoZWwzMW9wRGtOWHZVcXloUXRmaUNFZlhGaG8waTlUUHBBOA?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMURITlFybklqUDktaUU1QXQzX1FGWjA5WkFneFlVWTJHS0VQX251aXV"
   }
 ]
