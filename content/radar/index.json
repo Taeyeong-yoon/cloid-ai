@@ -1,5 +1,40 @@
 [
   {
+    "slug": "2026-10-22-anthropicsclaude-code-v21309",
+    "title": "[anthropics/claude-code] v2.1.309",
+    "date": "2026-10-22",
+    "tags": [
+      "claude-code",
+      "market"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.309",
+    "excerpt": "## What's changed\n\n- Fixed sandboxed Bash commands on macOS and Linux running the shell's startup files outside the sand"
+  },
+  {
+    "slug": "2026-10-22-anthropicsclaude-code-v21308",
+    "title": "[anthropics/claude-code] v2.1.308",
+    "date": "2026-10-22",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.308",
+    "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
+  },
+  {
+    "slug": "2026-10-22-claude-security-can-now-spot-vulnerabilities-that-reappear-i",
+    "title": "Claude Security can now spot vulnerabilities that reappear in code - Help Net Security",
+    "date": "2026-10-22",
+    "tags": [
+      "claude-code",
+      "security"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSWoyZjQ4X0ZoYUtacURwZU4yM1BqbTQ4d284NVJxM3hGc3RmUTFOMHJzcFFFLVdfa3piUzAyVDB0aXAwX1FjTDJRNHlZdUlhVUg1UVVzNXNWaUpIWUdSMmVlQmZaN2NfVTU3Rm85bnkzZ20wemwtck40eERoWmVUWUhyMng3aS02UEViWWs1NA?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPSWoyZjQ4X0ZoYUtacURwZU4yM1BqbTQ4d284NVJxM3hGc3RmUTFOMHJ"
+  },
+  {
     "slug": "2026-10-21-anthropicsclaude-code-v21307",
     "title": "[anthropics/claude-code] v2.1.307",
     "date": "2026-10-21",
@@ -519,39 +554,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.19",
     "excerpt": "### Chores\n\n* **ci:** check that pull requests update the changelog"
-  },
-  {
-    "slug": "2026-10-07-anthropicsclaude-code-v21293",
-    "title": "[anthropics/claude-code] v2.1.293",
-    "date": "2026-10-07",
-    "tags": [
-      "claude-code",
-      "agent"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
-    "excerpt": "## What's changed\n\n- Added Claude Haiku 5.5 (`claude-haiku-5-5`), now the default Haiku model on the Anthropic API — 1M "
-  },
-  {
-    "slug": "2026-10-07-anthropicsanthropic-sdk-python-v1120",
-    "title": "[anthropics/anthropic-sdk-python] v1.12.0",
-    "date": "2026-10-07",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.12.0",
-    "excerpt": "## 1.12.0 (2026-10-07)\n\nFull Changelog: [v1.11.0...v1.12.0](https://github.com/anthropics/anthropic-sdk-python/compare/v"
-  },
-  {
-    "slug": "2026-10-06-anthropicsclaude-code-v21292",
-    "title": "[anthropics/claude-code] v2.1.292",
-    "date": "2026-10-06",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.292",
-    "excerpt": "## What's changed\n\n- Added `--marketplace ` to `claude plugin install`: adds the marketplace if needed, under the same p"
   }
 ]
