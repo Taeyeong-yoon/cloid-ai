@@ -1,5 +1,51 @@
 [
   {
+    "slug": "2026-10-30-anthropicsclaude-code-v21314",
+    "title": "[anthropics/claude-code] v2.1.314",
+    "date": "2026-10-30",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
+    "excerpt": "## What's changed\n\n- Added `permissions.blockWritesOutsideWorkingDirectories`: Write, Edit and NotebookEdit refuse paths"
+  },
+  {
+    "slug": "2026-10-30-trust3-ai-brings-enterprise-agent-security-to-claude-code-cy",
+    "title": "Trust3 AI brings enterprise agent security to Claude Code - Cyprus Shipping News",
+    "date": "2026-10-30",
+    "tags": [
+      "claude-code",
+      "agent",
+      "security"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNZ2dRSFV3Q0Y4enhabTc4RUlKVms0WkVKTk44UEl3akF5M2RwZ0lkYkU1Y0lfclh6Zkp2M1VaNWJCS1gzQ0VpSURBcHRKZ0QzQVdtbXBZaHJjcXRNUDlFNTRVUFFtbzZ3emJ2ZVZwNmFkR21yc3NxOWtvUGZvSkZsd1kwZXBkVWJQUThRZE1TbUw2N1lMSENQVU05bGpZWjVrcGc?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxNZ2dRSFV3Q0Y4enhabTc4RUlKVms0WkVKTk44UEl3akF5M2RwZ0lkYkU"
+  },
+  {
+    "slug": "2026-10-30-anthropic-platform-engineering-team-says-claude-now-writes-a",
+    "title": "Anthropic Platform Engineering Team Says Claude Now Writes All of Its Code - Howl.Link",
+    "date": "2026-10-30",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE80d1o4eUw3ejZaeTJXSVhBbURxN05HNkVRWUtPOG1Nd3RaV0dZbVluaUdHSmo3aFA5dnk4?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiO0FVX3lxTE80d1o4eUw3ejZaeTJXSVhBbURxN05HNkVRWUtPOG1Nd3RaV0dZbVluaUd"
+  },
+  {
+    "slug": "2026-10-29-anthropic-says-nobody-needs-a-mental-model-of-claude-code-pr",
+    "title": "Anthropic Says Nobody Needs a Mental Model of Claude Code. Practitioners Are Testing That - infoq.com",
+    "date": "2026-10-29",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5va3NCQ1NINmlOLW0yNmdUZzRnQzAyMjMyRmpNdURMbDRicFR5VkZpclNlY2c1V1BKdTQyNGpZNXJ6WGJnM3FoR3hLNGFHQ2Fxdm9Zblh2UjJNTVVwMUhzTGNJcFZyQXd6?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE5va3NCQ1NINmlOLW0yNmdUZzRnQzAyMjMyRmpNdURMbDRicFR5VkZpclN"
+  },
+  {
     "slug": "2026-10-27-anthropicsclaude-code-v21312",
     "title": "[anthropics/claude-code] v2.1.312",
     "date": "2026-10-27",
@@ -509,49 +555,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ01RUjh5T1d5UXRLUi1OdlNITU5LNlZaZ1Awd01ZV081QTU3TUlBZVhBZTR4UllzdUc1Z2lZanZZS3ZCY1RMSnlGU1pyQnZUckU5VElnbTB1bVZCNDBwR2NwRHNOYW01QnhNbVk3NVFsdldHTmF5bGhjd3B6bDFmVEdRcHp5YXMxX1lfc3JremNteWgySVFJ?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ01RUjh5T1d5UXRLUi1OdlNITU5LNlZaZ1Awd01ZV081QTU3TUlBZVh"
-  },
-  {
-    "slug": "2026-10-14-anthropic-report-a-yemen-cell-used-claude-code-to-write-miss",
-    "title": "Anthropic Report: A Yemen Cell Used Claude Code to Write Missile Guidance Software - MiGFlug",
-    "date": "2026-10-14",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPYWdwVTJOZjFmeXNMN3JQdFdWSW5ROXhmTkNCZlBsdm1LRVVNZnFHdUwycWV5akowdC1PdktHTm9aTDFMalpjT1hxNy1ndWF3LUMzTy1vS1dLTFVNdjdpU3RtaUNjbEFuRXBBOExfTlZJMEFScDJuNUZXNGo2TlR6bWtLVVh2MTJGY1ZLLUt3Q3RMMTU4Tmp0LURhTmt1ekdlN2NfOTNB?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPYWdwVTJOZjFmeXNMN3JQdFdWSW5ROXhmTkNCZlBsdm1LRVVNZnFHdUw"
-  },
-  {
-    "slug": "2026-10-14-anthropicsclaude-code-v21299",
-    "title": "[anthropics/claude-code] v2.1.299",
-    "date": "2026-10-14",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
-    "excerpt": "## What's changed\n\n- Added `CLAUDE_CODE_DISABLE_FILE_MENTIONS` environment variable: Claude gets the paths of `@` file m"
-  },
-  {
-    "slug": "2026-10-13-anthropic-reinvents-source-control-as-claude-floods-the-worl",
-    "title": "Anthropic reinvents source control as Claude floods the world with code - The Register",
-    "date": "2026-10-13",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVTRpQW9xY3pGQkgxQk1zbjlwQXdDQTMzcTh1cGMtY1BZWmVtNU5XWkNYVnRMOVNfOWFlUm5KWDk0RDRpTzRCMExEYUJQOHVXbDRVcmROX2FPN0tndzZJY21MUDVhbFFFUm1KZ2RfUzl5c1oybkR0WkNVRUd4MWU5OEZSOU80Wi1fUFk1MFZSYng2Q25FdHBzRG1Idks4Y2tNeUZibFJyajI5end2MlRKWHR5MmVnRDZjN3NRcGo4UGhhQjQ?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVTRpQW9xY3pGQkgxQk1zbjlwQXdDQTMzcTh1cGMtY1BZWmVtNU5XWkN"
-  },
-  {
-    "slug": "2026-10-12-anthropic-brings-live-shareable-artifacts-to-claude-code-dev",
-    "title": "Anthropic Brings Live, Shareable Artifacts to Claude Code - DevOps.com",
-    "date": "2026-10-12",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQRzh3MEFIOEpPbGM0elQ3RlR5alhIdXE5eEhRV3NCMC1ZRVhDcE5qeDlfY3otb3hKc0d4LWdEb1VKNkxDTjVfYjY2MkJaRFFsUG0wcnFwOWdJSjQwZDRyWXBVOTFFTVZXb3I1V0o0WWplTTI1WjFVWW9SOVdYTVgxZw?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQRzh3MEFIOEpPbGM0elQ3RlR5alhIdXE5eEhRV3NCMC1ZRVhDcE5qeDl"
   }
 ]
