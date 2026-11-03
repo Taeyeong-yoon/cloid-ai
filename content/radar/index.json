@@ -1,5 +1,93 @@
 [
   {
+    "slug": "2026-11-03-anthropicsclaude-code-v21317",
+    "title": "[anthropics/claude-code] v2.1.317",
+    "date": "2026-11-03",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+    "excerpt": "## What's changed\n\n- Added a warning to `/schedule` when a new cloud scheduled task gets connectors you did not ask for,"
+  },
+  {
+    "slug": "2026-11-03-anthropic-clamps-down-on-using-claude-to-make-copycat-gameso",
+    "title": "Anthropic clamps down on using Claude to make copycat games—or reverse-engineer code - Boing Boing",
+    "date": "2026-11-03",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYndhNmhyRVJBMVNocVIzRldNdjZPcW0xeVRnV21za29zOUswemY5Wlg2anc5TGRTWUs4T1ZPU0lFZmg1NDdDQTBpMVpIb1NHaS1pZFE5ai02N09mS3RmX25JN3Q5b0xDY2FhWU1ZbUpqTjk5Wld5Q1NnVGp0dVhpS0g5OVZEUFlxcGVrMGw0M1NOZmpiekVSdkZmY0ZpUW5OUnRfM2RGT3E0bVA2S0Rnd3RFZzFnWDVzbXI4eVFJbUHSAcYBQVVfeXFMTkpJRVlWQS1ZRUt0VUtBeVNrdlFQTGljNDNPVTlMZE9WOEgyOGZDY3FCZU90QmhyajZMMEp5QUpUcXV4dDBjU01xa0xDZUhoT0U5MkwwVXhITkRmRUV0RWZrZmhFTnJrQzBMSkZhMUFhU1pFLVZDMmFGWlJDcXE5akU1bFBJX25uQ1FRNWtJM2YzQnAtX0Z0Z3Vuc1o0dHN5VEFxU1hUdzJrdjdHbkMxU3gta2lfRU13Nld6ejN0YmdiaW9FenN3?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYndhNmhyRVJBMVNocVIzRldNdjZPcW0xeVRnV21za29zOUswemY5Wlg"
+  },
+  {
+    "slug": "2026-11-02-anthropicsanthropic-sdk-python-v240",
+    "title": "[anthropics/anthropic-sdk-python] v2.4.0",
+    "date": "2026-11-02",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.4.0",
+    "excerpt": "### Features\n\n* **api:** add GA methods for analytics, spend limits and RBAC\n* **api:** add named beta types for unified"
+  },
+  {
+    "slug": "2026-11-02-anthropicsanthropic-sdk-typescript-vertex-sdk-v111",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk-v1.1.1",
+    "date": "2026-11-02",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.1",
+    "excerpt": "### Chores\n\n* **internal:** type-check the published declarations of every subpackage"
+  },
+  {
+    "slug": "2026-11-02-anthropicsanthropic-sdk-typescript-sdk-v140",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.4.0",
+    "date": "2026-11-02",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.4.0",
+    "excerpt": "### Features\n\n* **api:** add GA methods for analytics, spend limits and RBAC\n* **api:** add named beta types for unified"
+  },
+  {
+    "slug": "2026-11-02-anthropicsanthropic-sdk-typescript-google-cloud-sdk-v112",
+    "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk-v1.1.2",
+    "date": "2026-11-02",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v1.1.2",
+    "excerpt": "### Chores\n\n* **internal:** type-check the published declarations of every subpackage\n\n\n### Documentation\n\n* **examples:"
+  },
+  {
+    "slug": "2026-11-02-anthropic-adds-rule-to-stop-claude-code-recreating-existing-",
+    "title": "Anthropic adds rule to stop Claude Code recreating existing games - GamesIndustry.biz",
+    "date": "2026-11-02",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQN1kwaEVjT0ZUcUtveDdXdnNKUUVwMXM4X3AtM2RnR1JyRGU2VUZ6OEFHUEFGUjlkajBYZ2U5LXA1WEhSV1c2aG8ycjQ5R2RrbW80RkM2WVlPYWJLV2RuLTdhYnN5TWRiaVN6R2hmX01fd3lBXzYxMzhhSzJIbjZYQnR6S2EwX3J1VDNvODNlVW5uNDIyT2t6b3VvQQ?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQN1kwaEVjT0ZUcUtveDdXdnNKUUVwMXM4X3AtM2RnR1JyRGU2VUZ6OEF"
+  },
+  {
+    "slug": "2026-11-02-anthropic-confirms-new-claude-code-limits-to-prevent-game-cl",
+    "title": "Anthropic confirms new Claude Code limits to prevent game cloning — users report Opus 5.5 is also actively blocking reverse engineering tasks - Tom's Hardware",
+    "date": "2026-11-02",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMirwJBVV95cUxOQmtwU201Rm8zX2dFeGRGay0wY0F2UVZ2V0wydFFNVEU1Q1d1SzJlQmgwT0JhUnB3eHF2X3BmdGFQZ2dMajR4UHp1by1rUmlMZHBqd2Z1VkRwYlRhVmkxUG9GWE93X3JNd3dFbExob0VPcl9KN1czbFlJdXpqbTJxU1hCTTNSMWIxaEs4SHdoYVAwMlI2cEQ3dDlVVUF0bDdnV0RDOTBnQWpmUGJtSmZLOWQ5QUItTDhxWlN2ZEdhMTNuMGEwQ0gweDZvVWRLRWVZQ1BMeTNETzA2MTlwTnAxYXEyNTFFRFZUZTl1eDJMV0hCVExYRkFnazFKZjBybGRlQ2JWUG9BM2Y4U0MzOVF0NEJVRDV4RVNHNDBKczBRbk03di0zV0ppd1A2N3lCZ1k?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMirwJBVV95cUxOQmtwU201Rm8zX2dFeGRGay0wY0F2UVZ2V0wydFFNVEU1Q1d1SzJlQmg"
+  },
+  {
     "slug": "2026-10-31-anthropicsclaude-code-v21316",
     "title": "[anthropics/claude-code] v2.1.316",
     "date": "2026-10-31",
@@ -466,93 +554,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.15.0",
     "excerpt": "### Features\n\n* **api:** add between_tools to thinking types in model capabilities\n* **api:** add the speed parameter an"
-  },
-  {
-    "slug": "2026-10-15-anthropicsanthropic-sdk-typescript-sdk-v01350",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk-v0.135.0",
-    "date": "2026-10-15",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.135.0",
-    "excerpt": "### Features\n\n* **api:** add between_tools to thinking types in model capabilities\n* **api:** add the speed parameter an"
-  },
-  {
-    "slug": "2026-10-15-anthropic-makes-code-review-for-claude-code-generally-availa",
-    "title": "Anthropic Makes Code Review for Claude Code Generally Available - Unite.AI",
-    "date": "2026-10-15",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQb3FMQ1VwU3JveHMtSHFpaDdSUlRGX19Hc20ybW1pYUdtcFktWXFXeUdnY0tnenNackdGVC1uOWJzQ1FVSkd0NVpsMTBNcDl4VlhrUUstTUZwLVBnRWZrTG52TDhCWm9zVTJCRS1GZkdIUFJrbGVPVXB6dExMb1dYMlRxZDdSNF9GdWt3MDVR?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQb3FMQ1VwU3JveHMtSHFpaDdSUlRGX19Hc20ybW1pYUdtcFktWXFXeUd"
-  },
-  {
-    "slug": "2026-10-15-anthropic-ditched-git-for-its-own-version-control-system-bec",
-    "title": "Anthropic ditched Git for its own version control system because Claude is writing too much code - TechSpot",
-    "date": "2026-10-15",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSDVqS21yZ1k3Zi1sQ19IWFRsZEJ1a0xDQW1aZFBVQ0pXX1Y4SGJDY0RBNVV1bFhqQ3dxLWpkTVdEbUJLUDBsQ0p0aTgtUjZfU3pFR3JWVDdhdkUwdUh1WEV4WThnTGpORHlzVzdIMVpPbjBwbkRnRjd3TXQ1aTZpNFdNTDZUYnNjcmROaElSQm5TMnhKYmFYVGxGMzM5Mm8?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPSDVqS21yZ1k3Zi1sQ19IWFRsZEJ1a0xDQW1aZFBVQ0pXX1Y4SGJDY0R"
-  },
-  {
-    "slug": "2026-10-15-anthropics-internal-roadmap-from-five-years-ago-surfaces-cla",
-    "title": "Anthropic's internal roadmap from five years ago surfaces: Claude Code and trillion-parameter models were planned all along - BigGo Finance",
-    "date": "2026-10-15",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQSWkySWxhRy1kLTJ4NUtsbWp4VXRNZk8xdXNGYkNPM3ltLW90SllyWlNwMVlVQzFTMkd5bXRtY0ZXRUNKaVJSYWxDdzhHQVA3T0xGTVphNlFsS2VWOXRhcFo2OHNHbDFDRTktWjNCb3lpUVdLLXc?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTFBQSWkySWxhRy1kLTJ4NUtsbWp4VXRNZk8xdXNGYkNPM3ltLW90SllyWlN"
-  },
-  {
-    "slug": "2026-10-14-anthropicsclaude-code-v21300",
-    "title": "[anthropics/claude-code] v2.1.300",
-    "date": "2026-10-14",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
-    "excerpt": "## What's changed\n\n- Added `virtualText` to a mod's prompt decorations: text drawn in the prompt box that never enters t"
-  },
-  {
-    "slug": "2026-10-14-anthropicsanthropic-sdk-python-v1140",
-    "title": "[anthropics/anthropic-sdk-python] v1.14.0",
-    "date": "2026-10-14",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.14.0",
-    "excerpt": "### Features\n\n* **api:** add execution_identity to Managed Agents agents\n* **api:** add organization_type_not_supported "
-  },
-  {
-    "slug": "2026-10-14-anthropicsanthropic-sdk-typescript-vertex-sdk-v0210",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk-v0.21.0",
-    "date": "2026-10-14",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.21.0",
-    "excerpt": "### Features\n\n* **api:** add execution_identity to Managed Agents agents\n* **client:** add OpenTelemetry spans for API c"
-  },
-  {
-    "slug": "2026-10-14-anthropicsanthropic-sdk-typescript-sdk-v01340",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk-v0.134.0",
-    "date": "2026-10-14",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.134.0",
-    "excerpt": "### Features\n\n* **api:** add execution_identity to Managed Agents agents\n* **api:** add organization_type_not_supported "
   }
 ]

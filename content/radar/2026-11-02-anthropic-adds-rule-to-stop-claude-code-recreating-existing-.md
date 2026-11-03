@@ -1,0 +1,15 @@
+---
+title: "Anthropic adds rule to stop Claude Code recreating existing games - GamesIndustry.biz"
+date: "2026-11-02"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMimwFBVV95cUxQN1kwaEVjT0ZUcUtveDdXdnNKUUVwMXM4X3AtM2RnR1JyRGU2VUZ6OEFHUEFGUjlkajBYZ2U5LXA1WEhSV1c2aG8ycjQ5R2RrbW80RkM2WVlPYWJLV2RuLTdhYnN5TWRiaVN6R2hmX01fd3lBXzYxMzhhSzJIbjZYQnR6S2EwX3J1VDNvODNlVW5uNDIyT2t6b3VvQQ?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMimwFBVV95cUxQN1kwaEVjT0ZUcUtveDdXdnNKUUVwMXM4X3AtM2RnR1JyRGU2VUZ6OEFHUEFGUjlkajBYZ2U5LXA1WEhSV1c2aG8ycjQ5R2RrbW80RkM2WVlPYWJLV2RuLTdhYnN5TWRiaVN6R2hmX01fd3lBXzYxMzhhSzJIbjZYQnR6S2EwX3J1VDNvODNlVW5uNDIyT2t6b3VvQQ?oc=5' target='_blank'&gt;Anthropic a"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQN1kwaEVjT0ZUcUtveDdXdnNKUUVwMXM4X3AtM2RnR1JyRGU2VUZ6OEFHUEFGUjlkajBYZ2U5LXA1WEhSV1c2aG8ycjQ5R2RrbW80RkM2WVlPYWJLV2RuLTdhYnN5TWRiaVN6R2hmX01fd3lBXzYxMzhhSzJIbjZYQnR6S2EwX3J1VDNvODNlVW5uNDIyT2t6b3VvQQ?oc=5" target="_blank"&gt;Anthropic a
+
+**출처**: [https://news.google.com/rss/articles/CBMimwFBVV95cUxQN1kwaEVjT0ZUcUtveDdXdnNKUUVwMXM4X3AtM2RnR1JyRGU2VUZ6OEFHUEFGUjlkajBYZ2U5LXA1WEhSV1c2aG8ycjQ5R2RrbW80RkM2WVlPYWJLV2RuLTdhYnN5TWRiaVN6R2hmX01fd3lBXzYxMzhhSzJIbjZYQnR6S2EwX3J1VDNvODNlVW5uNDIyT2t6b3VvQQ?oc=5](https://news.google.com/rss/articles/CBMimwFBVV95cUxQN1kwaEVjT0ZUcUtveDdXdnNKUUVwMXM4X3AtM2RnR1JyRGU2VUZ6OEFHUEFGUjlkajBYZ2U5LXA1WEhSV1c2aG8ycjQ5R2RrbW80RkM2WVlPYWJLV2RuLTdhYnN5TWRiaVN6R2hmX01fd3lBXzYxMzhhSzJIbjZYQnR6S2EwX3J1VDNvODNlVW5uNDIyT2t6b3VvQQ?oc=5)
