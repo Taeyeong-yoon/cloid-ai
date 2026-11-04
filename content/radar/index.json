@@ -1,5 +1,28 @@
 [
   {
+    "slug": "2026-11-04-anthropicsclaude-code-v21318",
+    "title": "[anthropics/claude-code] v2.1.318",
+    "date": "2026-11-04",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+    "excerpt": "## What's changed\n\n- Added a record of your answer when Claude Code asks to turn on the mods it writes in a session\n- Ad"
+  },
+  {
+    "slug": "2026-11-03-top-anthropic-product-leader-cat-wu-one-of-the-faces-of-clau",
+    "title": "Top Anthropic product leader Cat Wu, one of the faces of Claude Code, has left the startup - Business Insider",
+    "date": "2026-11-03",
+    "tags": [
+      "claude-code",
+      "market"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNV3VPODg4OFh2Wk9FNTFNRlMzTzV4WnpOWGZ2Z1lNZ01nYUh2SS0xN1R0LUpTTHhUTnMwVFZQS2tiNHRpdHVuZVVjT0ZwZmJqbDdndlZZcGJkcHFQSElyZG5MSVdHczNtS0d3VGlONGVibnhVWDJIaVNNbHZMNENwR2ZzNFlaWWRjVDNQeHpaUXNEdk1OZ012a3MybFA?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxNV3VPODg4OFh2Wk9FNTFNRlMzTzV4WnpOWGZ2Z1lNZ01nYUh2SS0xN1R"
+  },
+  {
     "slug": "2026-11-03-anthropicsclaude-code-v21317",
     "title": "[anthropics/claude-code] v2.1.317",
     "date": "2026-11-03",
@@ -532,27 +555,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
     "excerpt": "## What's changed\n\n- Added `CLAUDE_CODE_AUTO_MODE_MODEL` to choose the model the client-side auto mode classifier uses; "
-  },
-  {
-    "slug": "2026-10-15-anthropicsclaude-code-v21301",
-    "title": "[anthropics/claude-code] v2.1.301",
-    "date": "2026-10-15",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.301",
-    "excerpt": "## What's changed\n\n- Added `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS` so unattended retry mode (`CLAUDE_CODE_R"
-  },
-  {
-    "slug": "2026-10-15-anthropicsanthropic-sdk-python-v1150",
-    "title": "[anthropics/anthropic-sdk-python] v1.15.0",
-    "date": "2026-10-15",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.15.0",
-    "excerpt": "### Features\n\n* **api:** add between_tools to thinking types in model capabilities\n* **api:** add the speed parameter an"
   }
 ]

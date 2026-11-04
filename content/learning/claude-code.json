@@ -30,21 +30,21 @@
     },
     {
       "type": "video",
-      "title": "Claude Code 왕초보 입문 튜토리얼 23가지 팁 | 클로드코드 설치 사용법 50분 강의 완전정복 2026 가이드",
-      "url": "https://www.youtube.com/watch?v=1_bRmkUvjHA",
-      "description": "안녕하세요 AI싱크클럽입니다. 2026년 상반기 최신버전 업데이트 영상 링크로 보시면 더 좋습니다 https://youtu.be/2R-kUFv7GZg ..."
+      "title": "2026 클로드(Claude) 기초 완전 정복 | 초보자도 이 영상 하나로 끝!",
+      "url": "https://www.youtube.com/watch?v=vsw3OSVBSm0",
+      "description": "클로드 바로가기 : https://claude.ai/ 클로드 코워크 왕초보 가이드 (클로드 설치, 폴더 정리, 캔바 연동 사용법) | claude cowork ..."
+    },
+    {
+      "type": "video",
+      "title": "Claude Code - Full Tutorial for Beginners",
+      "url": "https://www.youtube.com/watch?v=ntDIxaeo3Wg",
+      "description": "Create your DINQ page for free: https://dinq.me/?from=tim - use code TIM to get a discount if you upgrade. This video wi"
     },
     {
       "type": "video",
       "title": "[전체강의 통합본] 클로드 코드 2시간  안에 마스터하기 | 입문→실전→심화 완전 정복 (풀버전)",
       "url": "https://www.youtube.com/watch?v=vxEvo2BLM6A",
       "description": "Claude Code 입문편 · 실전편 · 심화편을 한 편으로 묶은 풀버전 통합 강의입니다. 초기 설정부터 커스텀 스킬, Sub-Agent 병렬 실행, ..."
-    },
-    {
-      "type": "video",
-      "title": "2026 클로드(Claude) 기초 완전 정복 | 초보자도 이 영상 하나로 끝!",
-      "url": "https://www.youtube.com/watch?v=vsw3OSVBSm0",
-      "description": "클로드 바로가기 : https://claude.ai/ 클로드 코워크 왕초보 가이드 (클로드 설치, 폴더 정리, 캔바 연동 사용법) | claude cowork ..."
     },
     {
       "type": "practice",
