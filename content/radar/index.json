@@ -1,5 +1,49 @@
 [
   {
+    "slug": "2026-11-04-anthropicsanthropic-sdk-python-v250",
+    "title": "[anthropics/anthropic-sdk-python] v2.5.0",
+    "date": "2026-11-04",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.5.0",
+    "excerpt": "### Features\n\n* **api:** add error details types and new error type values\n* **api:** add ids filter to list workspaces\n"
+  },
+  {
+    "slug": "2026-11-04-anthropicsanthropic-sdk-typescript-vertex-sdk-v112",
+    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk-v1.1.2",
+    "date": "2026-11-04",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.2",
+    "excerpt": "### Bug Fixes\n\n* **vertex:** percent-encode the project ID, region and model in the request path, so a `/` in the model "
+  },
+  {
+    "slug": "2026-11-04-anthropicsanthropic-sdk-typescript-sdk-v150",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.5.0",
+    "date": "2026-11-04",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.5.0",
+    "excerpt": "### Features\n\n* **api:** add error details types and new error type values\n* **api:** add ids filter to list workspaces\n"
+  },
+  {
+    "slug": "2026-11-04-anthropicsanthropic-sdk-typescript-google-cloud-sdk-v113",
+    "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk-v1.1.3",
+    "date": "2026-11-04",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v1.1.3",
+    "excerpt": "### Bug Fixes\n\n* **google-cloud:** percent-encode the project, location and workspace ID in the derived base URL, and th"
+  },
+  {
     "slug": "2026-11-04-anthropicsclaude-code-v21318",
     "title": "[anthropics/claude-code] v2.1.318",
     "date": "2026-11-04",
@@ -9,6 +53,17 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
     "excerpt": "## What's changed\n\n- Added a record of your answer when Claude Code asks to turn on the mods it writes in a session\n- Ad"
+  },
+  {
+    "slug": "2026-11-03-anthropic-speeds-up-claude-code-with-message-threads-but-you",
+    "title": "Anthropic speeds up Claude Code with message threads. But your token bill stays the same. - The New Stack",
+    "date": "2026-11-03",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE00S0lXVE1UVDl2VnluQzE0Z1NVbDlBQmktT3NKRnVZaGFuSmlMdENzaUFKSGcwTjZQTGFNMjJlMmkyMExNQUp3OVdhbVJLR29jOE41Y3JzZlY0WWRpeG5oQzhOS0pWeXM?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE00S0lXVE1UVDl2VnluQzE0Z1NVbDlBQmktT3NKRnVZaGFuSmlMdENzaUF"
   },
   {
     "slug": "2026-11-03-top-anthropic-product-leader-cat-wu-one-of-the-faces-of-clau",
@@ -500,60 +555,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.136.0",
     "excerpt": "### Features\n\n* **api:** add data_refreshed_at and has_more to analytics report pages\n* **api:** add workspace rate-limi"
-  },
-  {
-    "slug": "2026-10-19-anthropicsclaude-code-v21304",
-    "title": "[anthropics/claude-code] v2.1.304",
-    "date": "2026-10-19",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
-    "excerpt": "## What's changed\n\n- Added a transcript line when a plugin that runs first skips one of your mod's hooks, naming the eve"
-  },
-  {
-    "slug": "2026-10-19-exclusive-anthropics-code-hints-at-a-gated-way-to-cc-claude-",
-    "title": "EXCLUSIVE: Anthropic's code hints at a gated way to CC Claude on email - RuntimeWire",
-    "date": "2026-10-19",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPT1BCQ3FMVXcyd2otdmpxYi1xUUFGcGl2R1FNajJkRy0tNW1vdWtiN0U1MVpGVVdYT3Nxa1o5SDhKbFdEcTllMkN0ajh6MkxSZGI3V0JqU2NBT1RTaWxUY2ZyLU9FVnBWRGwyOGg2UVV6VTZGLVExVnBhT0FxSVJuS01kQl9PQXRQSElvbnFQaFdPWVd2R0tEWS1FWDYyZXd5RWxR?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxPT1BCQ3FMVXcyd2otdmpxYi1xUUFGcGl2R1FNajJkRy0tNW1vdWtiN0U"
-  },
-  {
-    "slug": "2026-10-19-claude-writes-code-so-fast-git-cant-keep-up-anthropic-built-",
-    "title": "Claude Writes Code So Fast Git Can't Keep Up: Anthropic Built a New Version Control System With Only 7 People in 5 Months - 36氪",
-    "date": "2026-10-19",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9jRmRmdldGbXMyMl9JY0M0SUFHemw3LWdWcGp5cGJiRFdlSFh4Tm5VeFBGeXlPMDZrdkRJSDZzZ0RfRHVqcC1DTTRmdi1PVkJ2NDFF?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE9jRmRmdldGbXMyMl9JY0M0SUFHemw3LWdWcGp5cGJiRFdlSFh4Tm5VeFB"
-  },
-  {
-    "slug": "2026-10-18-anthropicsclaude-code-v21303",
-    "title": "[anthropics/claude-code] v2.1.303",
-    "date": "2026-10-18",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.303",
-    "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
-  },
-  {
-    "slug": "2026-10-16-anthropicsclaude-code-v21302",
-    "title": "[anthropics/claude-code] v2.1.302",
-    "date": "2026-10-16",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
-    "excerpt": "## What's changed\n\n- Added `CLAUDE_CODE_AUTO_MODE_MODEL` to choose the model the client-side auto mode classifier uses; "
   }
 ]
