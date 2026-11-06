@@ -1,0 +1,15 @@
+---
+title: "An Anthropic engineer warns about 'cognitive surrender' as AI agents take over his work - Business Insider"
+date: "2026-11-05"
+tags:
+  - tool
+score: 96
+sourceUrl: "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUklQdDVGTG53Ql84czNTdEVNWW1SYWQ1SldtWmtkMEdlZHZ3LWVZUm5kazJsYW5rdmp4c1p4Mlg2TEN4SGNwNENpQ1cwT2tNWHVVU3VUYTN0bkY4WXFiNVhOMG9Md2NqYWkzZjRZanM1SVpXN3g4ZHpDbEJQQU5MS0VRSmgxN0JJMTZOSTF1WGd4U090aWtDR1Ytckk5UlE?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMinwFBVV95cUxOUklQdDVGTG53Ql84czNTdEVNWW1SYWQ1SldtWmtkMEdlZHZ3LWVZUm5kazJsYW5rdmp4c1p4Mlg2TEN4SGNwNENpQ1cwT2tNWHVVU3VUYTN0bkY4WXFiNVhOMG9Md2NqYWkzZjRZanM1SVpXN3g4ZHpDbEJQQU5MS0VRSmgxN0JJMTZOSTF1WGd4U090aWtDR1Ytckk5UlE?oc=5' target='_blank'&gt;An Ant"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOUklQdDVGTG53Ql84czNTdEVNWW1SYWQ1SldtWmtkMEdlZHZ3LWVZUm5kazJsYW5rdmp4c1p4Mlg2TEN4SGNwNENpQ1cwT2tNWHVVU3VUYTN0bkY4WXFiNVhOMG9Md2NqYWkzZjRZanM1SVpXN3g4ZHpDbEJQQU5MS0VRSmgxN0JJMTZOSTF1WGd4U090aWtDR1Ytckk5UlE?oc=5" target="_blank"&gt;An Ant
+
+**출처**: [https://news.google.com/rss/articles/CBMinwFBVV95cUxOUklQdDVGTG53Ql84czNTdEVNWW1SYWQ1SldtWmtkMEdlZHZ3LWVZUm5kazJsYW5rdmp4c1p4Mlg2TEN4SGNwNENpQ1cwT2tNWHVVU3VUYTN0bkY4WXFiNVhOMG9Md2NqYWkzZjRZanM1SVpXN3g4ZHpDbEJQQU5MS0VRSmgxN0JJMTZOSTF1WGd4U090aWtDR1Ytckk5UlE?oc=5](https://news.google.com/rss/articles/CBMinwFBVV95cUxOUklQdDVGTG53Ql84czNTdEVNWW1SYWQ1SldtWmtkMEdlZHZ3LWVZUm5kazJsYW5rdmp4c1p4Mlg2TEN4SGNwNENpQ1cwT2tNWHVVU3VUYTN0bkY4WXFiNVhOMG9Md2NqYWkzZjRZanM1SVpXN3g4ZHpDbEJQQU5MS0VRSmgxN0JJMTZOSTF1WGd4U090aWtDR1Ytckk5UlE?oc=5)
