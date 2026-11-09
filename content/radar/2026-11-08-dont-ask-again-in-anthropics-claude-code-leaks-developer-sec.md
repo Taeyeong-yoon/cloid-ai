@@ -1,0 +1,15 @@
+---
+title: "'Don't ask again' in Anthropic's Claude Code leaks developer secrets - iTnews"
+date: "2026-11-08"
+tags:
+  - claude-code
+score: 100
+sourceUrl: "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVEdHMU9IS3lrWHF1YjBVYkxoZjFsWFB1V2Y0MHZwOTBkSDRnX1VtbG5YSTlfenJBbGpyVFNQNm1qcDh3UkV3RkdrckZ6QUtjRkFUS0phVkk5bHRSUXJnS0lvV2J1NDM3QVpWVG1nOHBvUEtnWnRtSUVoWV9hdG9nZmRad0ZjTl9rUV9KZTdOUUFTX2Q5c3dWbzVRUEJrbVNlYVJLcA?oc=5"
+summary: "&lt;a href='https://news.google.com/rss/articles/CBMipAFBVV95cUxQVEdHMU9IS3lrWHF1YjBVYkxoZjFsWFB1V2Y0MHZwOTBkSDRnX1VtbG5YSTlfenJBbGpyVFNQNm1qcDh3UkV3RkdrckZ6QUtjRkFUS0phVkk5bHRSUXJnS0lvV2J1NDM3QVpWVG1nOHBvUEtnWnRtSUVoWV9hdG9nZmRad0ZjTl9rUV9KZTdOUUFTX2Q5c3dWbzVRUEJrbVNlYVJLcA?oc=5' target='_blank'&gt"
+---
+
+## 개요
+
+&lt;a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQVEdHMU9IS3lrWHF1YjBVYkxoZjFsWFB1V2Y0MHZwOTBkSDRnX1VtbG5YSTlfenJBbGpyVFNQNm1qcDh3UkV3RkdrckZ6QUtjRkFUS0phVkk5bHRSUXJnS0lvV2J1NDM3QVpWVG1nOHBvUEtnWnRtSUVoWV9hdG9nZmRad0ZjTl9rUV9KZTdOUUFTX2Q5c3dWbzVRUEJrbVNlYVJLcA?oc=5" target="_blank"&gt
+
+**출처**: [https://news.google.com/rss/articles/CBMipAFBVV95cUxQVEdHMU9IS3lrWHF1YjBVYkxoZjFsWFB1V2Y0MHZwOTBkSDRnX1VtbG5YSTlfenJBbGpyVFNQNm1qcDh3UkV3RkdrckZ6QUtjRkFUS0phVkk5bHRSUXJnS0lvV2J1NDM3QVpWVG1nOHBvUEtnWnRtSUVoWV9hdG9nZmRad0ZjTl9rUV9KZTdOUUFTX2Q5c3dWbzVRUEJrbVNlYVJLcA?oc=5](https://news.google.com/rss/articles/CBMipAFBVV95cUxQVEdHMU9IS3lrWHF1YjBVYkxoZjFsWFB1V2Y0MHZwOTBkSDRnX1VtbG5YSTlfenJBbGpyVFNQNm1qcDh3UkV3RkdrckZ6QUtjRkFUS0phVkk5bHRSUXJnS0lvV2J1NDM3QVpWVG1nOHBvUEtnWnRtSUVoWV9hdG9nZmRad0ZjTl9rUV9KZTdOUUFTX2Q5c3dWbzVRUEJrbVNlYVJLcA?oc=5)
