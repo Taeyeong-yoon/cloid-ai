@@ -1,5 +1,29 @@
 [
   {
+    "slug": "2026-11-12-anthropicsclaude-code-v21323",
+    "title": "[anthropics/claude-code] v2.1.323",
+    "date": "2026-11-12",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+    "excerpt": "## What's changed\n\n- Added Code Mode, an experimental opt-in in which Claude writes JavaScript to call its tools; see ht"
+  },
+  {
+    "slug": "2026-11-12-stolen-claude-api-keys-can-turn-claude-code-into-a-remote-co",
+    "title": "Stolen Claude API keys can turn Claude Code into a remote-controlled implant - Help Net Security",
+    "date": "2026-11-12",
+    "tags": [
+      "claude-code",
+      "remote-control",
+      "security"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQWDRNVVdqMy1DQ19iWGZTM3NtaFN3a0RNWEV6ZlU1QWZlZVQwVjdBZFFBRkpEenBIN29yM2VRc0xGWTFfeHlfeUlaU2xIWkZnMjNXdXN4VFJjTWJIMXd1Wm9sRWJNU2djMkFuSm9NWC0xTnNBY0FheXVYWjR5N3RkdU40MERTLU96Ulk3eS1FTzdMRFVGd3Jv?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQWDRNVVdqMy1DQ19iWGZTM3NtaFN3a0RNWEV6ZlU1QWZlZVQwVjdBZFF"
+  },
+  {
     "slug": "2026-11-10-anthropicsanthropic-sdk-python-v280",
     "title": "[anthropics/anthropic-sdk-python] v2.8.0",
     "date": "2026-11-10",
@@ -534,28 +558,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.309",
     "excerpt": "## What's changed\n\n- Fixed sandboxed Bash commands on macOS and Linux running the shell's startup files outside the sand"
-  },
-  {
-    "slug": "2026-10-22-anthropicsclaude-code-v21308",
-    "title": "[anthropics/claude-code] v2.1.308",
-    "date": "2026-10-22",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.308",
-    "excerpt": "## What's changed\n\n- Bug fixes and reliability improvements\n"
-  },
-  {
-    "slug": "2026-10-22-claude-security-can-now-spot-vulnerabilities-that-reappear-i",
-    "title": "Claude Security can now spot vulnerabilities that reappear in code - Help Net Security",
-    "date": "2026-10-22",
-    "tags": [
-      "claude-code",
-      "security"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSWoyZjQ4X0ZoYUtacURwZU4yM1BqbTQ4d284NVJxM3hGc3RmUTFOMHJzcFFFLVdfa3piUzAyVDB0aXAwX1FjTDJRNHlZdUlhVUg1UVVzNXNWaUpIWUdSMmVlQmZaN2NfVTU3Rm85bnkzZ20wemwtck40eERoWmVUWUhyMng3aS02UEViWWs1NA?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPSWoyZjQ4X0ZoYUtacURwZU4yM1BqbTQ4d284NVJxM3hGc3RmUTFOMHJ"
   }
 ]
