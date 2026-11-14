@@ -1,5 +1,61 @@
 [
   {
+    "slug": "2026-11-13-anthropicsclaude-code-v21325",
+    "title": "[anthropics/claude-code] v2.1.325",
+    "date": "2026-11-13",
+    "tags": [
+      "claude-code",
+      "security"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+    "excerpt": "## What's changed\n\n- Fixed a security issue in how zstd-compressed responses are decoded\n- Added a spinner tip in VS Cod"
+  },
+  {
+    "slug": "2026-11-13-anthropic-claude-down-why-it-said-it-was-unable-to-authentic",
+    "title": "Anthropic Claude down: Why it said it was unable to authenticate code - Mashable",
+    "date": "2026-11-13",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOcDBjX2hrQXlxUEV2Q3pZVUlzVUpPcTU1TFpiaGY4bEtualhpY2FWemdBQnlpclpESjlVSkxobHJ1NDJyZU9FZlJSQW9odU1zUmdvazJqUXV6YmxPYmRDc19HWnNBTDRwRHVGcWJLc1VGZDd4RWxHUTF0Z0lKd05vOA?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxOcDBjX2hrQXlxUEV2Q3pZVUlzVUpPcTU1TFpiaGY4bEtualhpY2FWemd"
+  },
+  {
+    "slug": "2026-11-13-anthropics-claude-hit-by-widespread-login-failures-across-ch",
+    "title": "Anthropic's Claude Hit by Widespread Login Failures Across Chat, Code and Console - BigGo Finance",
+    "date": "2026-11-13",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTE41eTMzNVR2ZzBKYWxZSjNrN25VZF85SDMxdU9UbE1QSnNnbXc4M0dYR2lqRHhITGd0a0lnT2YzWFJRVVhGZUF3bFJZZGhpaFVsb0NjVF83MTVBZVFXbVByOUtKbFhGQlVZNmYwejM3ekFWZ2U2WFE?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE41eTMzNVR2ZzBKYWxZSjNrN25VZF85SDMxdU9UbE1QSnNnbXc4M0dYR2l"
+  },
+  {
+    "slug": "2026-11-13-anthropic-claude-down-why-it-said-it-was-unable-to-authentic",
+    "title": "Anthropic Claude down: Why it said it was unable to authenticate code - Yahoo Tech",
+    "date": "2026-11-13",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNYUFVRDB5NXBDZnB0WklGUGpzYVJCRnNCeWZjYlptVjlxQ3NoOG42QWZDOVdTbmcxRVRHNUZMWnFJelBjZlNCNEgtNnk1TmFXZDVPTk1rMG5COG9mZG9jamsySHlJWWhjeGF4bVFJZUFEQkZsUDdubmdQMzV4aElqMGU4a0dtUVMxQlYtb050RDk?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNYUFVRDB5NXBDZnB0WklGUGpzYVJCRnNCeWZjYlptVjlxQ3NoOG42QWZ"
+  },
+  {
+    "slug": "2026-11-13-anthropic-investigates-authentication-errors-hitting-claude-",
+    "title": "Anthropic investigates authentication errors hitting Claude AI and Claude Code - Crypto Briefing",
+    "date": "2026-11-13",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPSTc0Y2Jhc2RjbHZqbG56SG5NbkVfTGU2bGQ4ejVUUENSbGZQZUhzR2NSRDVuc08yTmRjb1BtbEo0RjYwUWJSNl9kTERlV09vV2FtWHp6cW95SkZHYWVyNzRUU0ljSC1Ia3RWYko5UGp1QWtXMVZia0YzQTF5NEM2dGNmYnExdw?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxPSTc0Y2Jhc2RjbHZqbG56SG5NbkVfTGU2bGQ4ejVUUENSbGZQZUhzR2N"
+  },
+  {
     "slug": "2026-11-12-anthropicsclaude-code-v21323",
     "title": "[anthropics/claude-code] v2.1.323",
     "date": "2026-11-12",
@@ -501,62 +557,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.2.0",
     "excerpt": "### Features\n\n* **api:** add support for message threads\n* **api:** add usage and cost reports by dimension, mark older "
-  },
-  {
-    "slug": "2026-10-23-anthropicsanthropic-sdk-typescript-vertex-sdk-v110",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk-v1.1.0",
-    "date": "2026-10-23",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.0",
-    "excerpt": "### Features\n\n* **api:** add support for message threads"
-  },
-  {
-    "slug": "2026-10-23-anthropicsanthropic-sdk-typescript-sdk-v130",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.3.0",
-    "date": "2026-10-23",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.3.0",
-    "excerpt": "### Features\n\n* **api:** add Claude Tag endpoints for Claude Enterprise organizations\n\n\n### Bug Fixes\n\n* **client:** lin"
-  },
-  {
-    "slug": "2026-10-23-anthropicsanthropic-sdk-typescript-sdk-v120",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.2.0",
-    "date": "2026-10-23",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.2.0",
-    "excerpt": "### Features\n\n* **api:** add support for message threads\n* **api:** add usage and cost reports by dimension, mark older "
-  },
-  {
-    "slug": "2026-10-23-anthropics-claude-now-writes-code-and-proves-it-safe-automat",
-    "title": "Anthropic's Claude now writes code and proves it safe automatically - The Decoder",
-    "date": "2026-10-23",
-    "tags": [
-      "claude-code",
-      "security"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQWdjb3ROVHcwOVVEQ2RXd2U4dTVjYTN4TUNyTlA1U0pXTDRXNTBaWFhWNmYyaWJiMHdMWXJFZHVGam5MMjR4TVRSNUV0c3hHV1JVb2JHTzJYYzNqZ0ZFY1ppdi1RRUU1ZUJ3SjJ4WmZkYlNXSWhBWEU1eEl4X2E3VFhlaVZfQmpmNTFGQW1YRkowQlNlakE?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxOQWdjb3ROVHcwOVVEQ2RXd2U4dTVjYTN4TUNyTlA1U0pXTDRXNTBaWFh"
-  },
-  {
-    "slug": "2026-10-22-anthropicsclaude-code-v21309",
-    "title": "[anthropics/claude-code] v2.1.309",
-    "date": "2026-10-22",
-    "tags": [
-      "claude-code",
-      "market"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.309",
-    "excerpt": "## What's changed\n\n- Fixed sandboxed Bash commands on macOS and Linux running the shell's startup files outside the sand"
   }
 ]
