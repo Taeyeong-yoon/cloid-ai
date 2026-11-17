@@ -1,5 +1,40 @@
 [
   {
+    "slug": "2026-11-16-anthropicsclaude-code-v21326",
+    "title": "[anthropics/claude-code] v2.1.326",
+    "date": "2026-11-16",
+    "tags": [
+      "claude-code",
+      "market",
+      "agent"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+    "excerpt": "## What's changed\n\n- Added support for turning on Code Mode while agent teams are enabled; if you already turned it on, "
+  },
+  {
+    "slug": "2026-11-16-anthropicsanthropic-sdk-python-v290",
+    "title": "[anthropics/anthropic-sdk-python] v2.9.0",
+    "date": "2026-11-16",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.9.0",
+    "excerpt": "### Features\n\n* **api:** add source and error codes to the RBAC Role read endpoints\n* **api:** add Update Bundle, which "
+  },
+  {
+    "slug": "2026-11-16-anthropicsanthropic-sdk-typescript-sdk-v190",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.9.0",
+    "date": "2026-11-16",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.9.0",
+    "excerpt": "### Features\n\n* **api:** add source and error codes to the RBAC Role read endpoints\n* **api:** add Update Bundle, which "
+  },
+  {
     "slug": "2026-11-15-meet-boris-cherny-the-engineer-behind-anthropics-claude-code",
     "title": "Meet Boris Cherny, the engineer behind Anthropic’s Claude Code - and its miso hobbyist - Mezha.net",
     "date": "2026-11-15",
@@ -523,39 +558,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.312",
     "excerpt": "## What's changed\n\n- Added `oidc.user_id_claim` to the Claude apps gateway, to identify people by an id_token claim othe"
-  },
-  {
-    "slug": "2026-10-26-anthropicsclaude-code-v21311",
-    "title": "[anthropics/claude-code] v2.1.311",
-    "date": "2026-10-26",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
-    "excerpt": "## What's changed\n\n- Added `--hold-idle-file` and `--max-hold-min` to `self-hosted-runner`, to keep an idle session whil"
-  },
-  {
-    "slug": "2026-10-26-claude-now-writes-90-of-anthropics-code-forbes",
-    "title": "Claude Now Writes 90% Of Anthropic’s Code - Forbes",
-    "date": "2026-10-26",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOU0JXRjV1cEtLRWZRQjJUanEySE0wRVc1WGZoYmlKalZlLThGaFlFdlZ2VEVSdmRfWjNYUDR1N21tdHJ1NG5oUDcwZGNsaW9TLUlpOC1zU0RHUTgzWkZ3eVlITnJSYThyWTNyQnpNaDRIMDBCNGdITFF3eFBWVTdhQ3oxU3lzTUFXZFpvc01MUndKS1NfOFFnSHhrQ2w3TlBhRE9ZVTVOa3Bob09UQTVzR0ZKTmktQWVEZFVJcFMtcDZVX3Z3Z0p2eWhR?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxOU0JXRjV1cEtLRWZRQjJUanEySE0wRVc1WGZoYmlKalZlLThGaFlFdlZ"
-  },
-  {
-    "slug": "2026-10-24-anthropics-claude-mythos-5-ai-agent-tried-to-inject-maliciou",
-    "title": "Anthropic's Claude Mythos 5 AI Agent Tried to Inject Malicious Code and Trick Real Developers - CyberSecurityNews",
-    "date": "2026-10-24",
-    "tags": [
-      "claude-code",
-      "agent"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1sVkxLV3kzQks4c1pKd01waTFQUkJLOE9ZZ2txNVUwMmM3cTZtX2NMNy1yeDRLZmgyX082ZnFaU1lCZy1ZVlhqNFg5VFJLUEJzS2l6YmVTU29pMFA4VmIxV1JIREFycHZubVZnT1Roc0tXNXFnY3pZ0gF8QVVfeXFMT1Z3Q25tQXdPbUJnUDNuM2M2b25KOUEzQnl5ZnkzSWQxU2FoUEpxakdJZkFrZERRMWgtOGtTMjQ0TjZxdTNkU2dBdFREbkE2QmhwNzFmUFV1bnJISHd3Q1VOdElVejBkOW9DNExORVo4RjFXYlUyZVg3b253Vg?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE1sVkxLV3kzQks4c1pKd01waTFQUkJLOE9ZZ2txNVUwMmM3cTZtX2NMNy1"
   }
 ]
