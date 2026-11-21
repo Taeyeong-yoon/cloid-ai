@@ -1,5 +1,71 @@
 [
   {
+    "slug": "2026-11-20-anthropicsclaude-code-v21330",
+    "title": "[anthropics/claude-code] v2.1.330",
+    "date": "2026-11-20",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+    "excerpt": "## What's changed\n\n- Added sign-in to organizations managed in Anthropic's Enterprise Admin Console: after `claude auth "
+  },
+  {
+    "slug": "2026-11-20-anthropicsanthropic-sdk-python-v2120",
+    "title": "[anthropics/anthropic-sdk-python] v2.12.0",
+    "date": "2026-11-20",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.12.0",
+    "excerpt": "### Features\n\n* **api:** add the image_dimensions_too_large error code\n\n\n### Bug Fixes\n\n* **bedrock:** send the user pro"
+  },
+  {
+    "slug": "2026-11-20-anthropicsanthropic-sdk-typescript-sdk-v1120",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.12.0",
+    "date": "2026-11-20",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.12.0",
+    "excerpt": "### Features\n\n* **api:** add the image_dimensions_too_large error code\n\n\n### Bug Fixes\n\n* **client:** merge ANTHROPIC_CU"
+  },
+  {
+    "slug": "2026-11-20-anthropicsanthropic-sdk-typescript-bedrock-sdk-v113",
+    "title": "[anthropics/anthropic-sdk-typescript] bedrock-sdk-v1.1.3",
+    "date": "2026-11-20",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v1.1.3",
+    "excerpt": "### Bug Fixes\n\n* **bedrock:** send the user profile ID in the request body\n\n  Amazon Bedrock reads `user_profile_id` fro"
+  },
+  {
+    "slug": "2026-11-20-anthropic-says-claude-writes-and-reviews-90-of-its-teams-cod",
+    "title": "Anthropic says Claude writes and reviews 90% of its team's code. The catch is how it checks the work. - The New Stack",
+    "date": "2026-11-20",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBubFFkd0ZmODhXb3FwN2tYNTRHT2hLbTdDZ0taWDJncU1OdTBqTmJ0eDQ0UGlfSUtTb0FLdXNtcUdncnZiMW1hc1N4ejVPWVk2SkRGajRndFRkTjExMXZwU1dZQXhEaGQteUE?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTFBubFFkd0ZmODhXb3FwN2tYNTRHT2hLbTdDZ0taWDJncU1OdTBqTmJ0eDQ"
+  },
+  {
+    "slug": "2026-11-20-claude-code-fueled-anthropics-ipo-now-the-company-needs-to-f",
+    "title": "Claude Code fueled Anthropic's IPO. Now the company needs to figure out what comes next. - Business Insider",
+    "date": "2026-11-20",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOV2pRQUN2T29QcDU5Q2hOc0trRVFIWUt5MmlqMHdJb0dDX1JMbVdVaEFwWWt4bmhTWENCNWNrVVVGZ3VVb1dpMG9uN0NhZEZwNTVudEJYZ1Y4dlN0dV9YbEFkSjhlME5Oc1ZfNEdtMGVrYXhRVDFERFFzdWYycEZUZXc5TnFkajg4MlR3eFhSNFdnandxSWVQMzVqZXM0UzQzZFlz?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxOV2pRQUN2T29QcDU5Q2hOc0trRVFIWUt5MmlqMHdJb0dDX1JMbVdVaEF"
+  },
+  {
     "slug": "2026-11-19-anthropicsclaude-code-v21329",
     "title": "[anthropics/claude-code] v2.1.329",
     "date": "2026-11-19",
@@ -491,72 +557,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE00S0lXVE1UVDl2VnluQzE0Z1NVbDlBQmktT3NKRnVZaGFuSmlMdENzaUFKSGcwTjZQTGFNMjJlMmkyMExNQUp3OVdhbVJLR29jOE41Y3JzZlY0WWRpeG5oQzhOS0pWeXM?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE00S0lXVE1UVDl2VnluQzE0Z1NVbDlBQmktT3NKRnVZaGFuSmlMdENzaUF"
-  },
-  {
-    "slug": "2026-11-03-top-anthropic-product-leader-cat-wu-one-of-the-faces-of-clau",
-    "title": "Top Anthropic product leader Cat Wu, one of the faces of Claude Code, has left the startup - Business Insider",
-    "date": "2026-11-03",
-    "tags": [
-      "claude-code",
-      "market"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNV3VPODg4OFh2Wk9FNTFNRlMzTzV4WnpOWGZ2Z1lNZ01nYUh2SS0xN1R0LUpTTHhUTnMwVFZQS2tiNHRpdHVuZVVjT0ZwZmJqbDdndlZZcGJkcHFQSElyZG5MSVdHczNtS0d3VGlONGVibnhVWDJIaVNNbHZMNENwR2ZzNFlaWWRjVDNQeHpaUXNEdk1OZ012a3MybFA?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxNV3VPODg4OFh2Wk9FNTFNRlMzTzV4WnpOWGZ2Z1lNZ01nYUh2SS0xN1R"
-  },
-  {
-    "slug": "2026-11-03-anthropicsclaude-code-v21317",
-    "title": "[anthropics/claude-code] v2.1.317",
-    "date": "2026-11-03",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
-    "excerpt": "## What's changed\n\n- Added a warning to `/schedule` when a new cloud scheduled task gets connectors you did not ask for,"
-  },
-  {
-    "slug": "2026-11-03-anthropic-clamps-down-on-using-claude-to-make-copycat-gameso",
-    "title": "Anthropic clamps down on using Claude to make copycat games—or reverse-engineer code - Boing Boing",
-    "date": "2026-11-03",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYndhNmhyRVJBMVNocVIzRldNdjZPcW0xeVRnV21za29zOUswemY5Wlg2anc5TGRTWUs4T1ZPU0lFZmg1NDdDQTBpMVpIb1NHaS1pZFE5ai02N09mS3RmX25JN3Q5b0xDY2FhWU1ZbUpqTjk5Wld5Q1NnVGp0dVhpS0g5OVZEUFlxcGVrMGw0M1NOZmpiekVSdkZmY0ZpUW5OUnRfM2RGT3E0bVA2S0Rnd3RFZzFnWDVzbXI4eVFJbUHSAcYBQVVfeXFMTkpJRVlWQS1ZRUt0VUtBeVNrdlFQTGljNDNPVTlMZE9WOEgyOGZDY3FCZU90QmhyajZMMEp5QUpUcXV4dDBjU01xa0xDZUhoT0U5MkwwVXhITkRmRUV0RWZrZmhFTnJrQzBMSkZhMUFhU1pFLVZDMmFGWlJDcXE5akU1bFBJX25uQ1FRNWtJM2YzQnAtX0Z0Z3Vuc1o0dHN5VEFxU1hUdzJrdjdHbkMxU3gta2lfRU13Nld6ejN0YmdiaW9FenN3?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYndhNmhyRVJBMVNocVIzRldNdjZPcW0xeVRnV21za29zOUswemY5Wlg"
-  },
-  {
-    "slug": "2026-11-02-anthropicsanthropic-sdk-python-v240",
-    "title": "[anthropics/anthropic-sdk-python] v2.4.0",
-    "date": "2026-11-02",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.4.0",
-    "excerpt": "### Features\n\n* **api:** add GA methods for analytics, spend limits and RBAC\n* **api:** add named beta types for unified"
-  },
-  {
-    "slug": "2026-11-02-anthropicsanthropic-sdk-typescript-vertex-sdk-v111",
-    "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk-v1.1.1",
-    "date": "2026-11-02",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.1",
-    "excerpt": "### Chores\n\n* **internal:** type-check the published declarations of every subpackage"
-  },
-  {
-    "slug": "2026-11-02-anthropicsanthropic-sdk-typescript-sdk-v140",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.4.0",
-    "date": "2026-11-02",
-    "tags": [
-      "tool"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.4.0",
-    "excerpt": "### Features\n\n* **api:** add GA methods for analytics, spend limits and RBAC\n* **api:** add named beta types for unified"
   }
 ]
