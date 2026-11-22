@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-11-21-anthropic-engineers-warning-about-claude-code-explains-why-t",
+    "title": "Anthropic engineer's warning about Claude Code explains why tech outages could get much worse - Yahoo Finance",
+    "date": "2026-11-21",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPZHJCVThaVWVtUkpteGlHSWR3MDRPd0lsVjJ6dTlEaGhVX1hsWVFhRW45WEdDTlNTS05iUGs3TzVrTTY4QTI3aVBrVG5CbU40Yi1sWFNYN0JPUXY0RE1TUGJ1WndpanJVbUZiOVNiV2JXbUhicno2eGludENWRmFlU3RVR0hLemhoYkVLd05PMDZzSGc1dVhHNEJYWUpvMmdyTmh0TXUzWW1icGhDRGhRZTBkN2ctSlA3ei1nMEJxRnRSYlhSRlpnMC10Zm8tODhIQjkzdjl3VEZNODNVaHJCR2plZ3drajg?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMi5wFBVV95cUxPZHJCVThaVWVtUkpteGlHSWR3MDRPd0lsVjJ6dTlEaGhVX1hsWVFhRW4"
+  },
+  {
     "slug": "2026-11-20-anthropicsclaude-code-v21330",
     "title": "[anthropics/claude-code] v2.1.330",
     "date": "2026-11-20",
@@ -546,16 +557,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
     "excerpt": "## What's changed\n\n- Added a record of your answer when Claude Code asks to turn on the mods it writes in a session\n- Ad"
-  },
-  {
-    "slug": "2026-11-03-anthropic-speeds-up-claude-code-with-message-threads-but-you",
-    "title": "Anthropic speeds up Claude Code with message threads. But your token bill stays the same. - The New Stack",
-    "date": "2026-11-03",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE00S0lXVE1UVDl2VnluQzE0Z1NVbDlBQmktT3NKRnVZaGFuSmlMdENzaUFKSGcwTjZQTGFNMjJlMmkyMExNQUp3OVdhbVJLR29jOE41Y3JzZlY0WWRpeG5oQzhOS0pWeXM?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE00S0lXVE1UVDl2VnluQzE0Z1NVbDlBQmktT3NKRnVZaGFuSmlMdENzaUF"
   }
 ]
