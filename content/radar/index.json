@@ -1,5 +1,51 @@
 [
   {
+    "slug": "2026-11-25-anthropicsclaude-code-v21332",
+    "title": "[anthropics/claude-code] v2.1.332",
+    "date": "2026-11-25",
+    "tags": [
+      "claude-code",
+      "mcp",
+      "skills"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+    "excerpt": "## What's changed\n\n- Added skills from MCP servers (beta). They show as `server:skill` in the `/` menu; other skills kee"
+  },
+  {
+    "slug": "2026-11-25-anthropics-claude-ship-tackles-the-pull-request-bottleneck-c",
+    "title": "Anthropic’s Claude Ship tackles the pull request bottleneck created by AI coding agents - The New Stack",
+    "date": "2026-11-25",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1ORnM2QXFuaDQ5RFo4ZldrWHJOWG9XTnR1a0tIc1FPa3JhN20tUWJNbGtWUWlSakdMTVMzYTFZeXg3QUJyaDJyNUduY1B3MVRhRWNwUm5CaXNhbXJiajVpbnNQNGhVdw?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE1ORnM2QXFuaDQ5RFo4ZldrWHJOWG9XTnR1a0tIc1FPa3JhN20tUWJNbGt"
+  },
+  {
+    "slug": "2026-11-24-anthropicsanthropic-sdk-python-v2140",
+    "title": "[anthropics/anthropic-sdk-python] v2.14.0",
+    "date": "2026-11-24",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.14.0",
+    "excerpt": "### Features\n\n* **api:** add Google-managed data controls for Google Cloud projects\n* **api:** add Google-managed data c"
+  },
+  {
+    "slug": "2026-11-24-anthropicsanthropic-sdk-typescript-sdk-v1140",
+    "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.14.0",
+    "date": "2026-11-24",
+    "tags": [
+      "tool"
+    ],
+    "score": 100,
+    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.14.0",
+    "excerpt": "### Features\n\n* **api:** add Google-managed data controls for Google Cloud projects\n* **api:** add Google-managed data c"
+  },
+  {
     "slug": "2026-11-23-anthropicsclaude-code-v21331",
     "title": "[anthropics/claude-code] v2.1.331",
     "date": "2026-11-23",
@@ -513,50 +559,5 @@
     "score": 100,
     "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
     "excerpt": "## What's changed\n\n- Changed auto mode with telemetry or feature flags off, including behind LLM gateways: calls the ser"
-  },
-  {
-    "slug": "2026-11-06-anthropics-claude-code-reportedly-leaks-user-email-addresses",
-    "title": "Anthropic's Claude Code Reportedly Leaks User Email Addresses Through HTTP User-Agent Headers - CyberSecurityNews",
-    "date": "2026-11-06",
-    "tags": [
-      "claude-code",
-      "agent"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBCSU9YMTU4eXZjZ2lISEd1OXNMSXVOb0JESS1WZE5VaWlBUV9hUzA2RmtrX1BjSG9KemFhLXkwUEhQdVAwQUtRdmxhVnh1aUhUNkltM3Q1U196WTZIVGd5X2w0Q2UxNWlWN25V0gFwQVVfeXFMUEVId1RlTy1yTTdyT0VPVUhhVkMyQ0V2UWZ4TjFKMXB3SDdDNXNjeGhRNjFoODl1M3B4TEQ2dVVFV244TzF6d3pYdjJPTjlWcFZWSE80eC0xUU5nMFZrUjgtZ0E0ZnRaaWdLT293RlJaZA?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTFBCSU9YMTU4eXZjZ2lISEd1OXNMSXVOb0JESS1WZE5VaWlBUV9hUzA2Rmt"
-  },
-  {
-    "slug": "2026-11-05-anthropic-wont-fix-a-claude-dispatch-flaw-that-could-let-att",
-    "title": "Anthropic won't fix a Claude Dispatch flaw that could let attackers execute remote commands across corporate boundaries - The Register",
-    "date": "2026-11-05",
-    "tags": [
-      "remote-control"
-    ],
-    "score": 100,
-    "sourceUrl": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOWmNYRUNBVGRtakc4aTBFX3c2VXpUQzVuUGJtdjNzNHp0a3VVNG0xMXpUUVBzb053T19yeThmeXl0U1lYeGd4LWY4aF9jMmdHR3lERmN6MVBWai1ZTks5SW5CTEE3NnRSYVljWmpSVGRUMzJ3TnpRS2FEYXQtUnpUeC01eVNBdUM5WmJZakxGUzZvVXJocVBwUWhLWHJudDRIa05rT25udmFMWnhVX201MUJ2NjdWSFJVeVJvSjVDR2k3VE5KNm9iVVJwZnhDMzV3QmVzLUZxZ3ZIQkF2YzdDOGIzNW9UVFU1WDFHcmIzbFFkYm5QMjVXZXFHVGx1cDlkX0JQQw?oc=5",
-    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMihAJBVV95cUxOWmNYRUNBVGRtakc4aTBFX3c2VXpUQzVuUGJtdjNzNHp0a3VVNG0xMXp"
-  },
-  {
-    "slug": "2026-11-05-anthropicsanthropic-sdk-python-v260",
-    "title": "[anthropics/anthropic-sdk-python] v2.6.0",
-    "date": "2026-11-05",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.6.0",
-    "excerpt": "### Features\n\n* **api:** add error code for ramp limit errors\n* **api:** add error codes for External Key validation fai"
-  },
-  {
-    "slug": "2026-11-05-anthropicsanthropic-sdk-typescript-sdk-v160",
-    "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.6.0",
-    "date": "2026-11-05",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.6.0",
-    "excerpt": "### Features\n\n* **api:** add error code for ramp limit errors\n* **api:** add error codes for External Key validation fai"
   }
 ]

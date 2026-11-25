@@ -36,15 +36,15 @@
     },
     {
       "type": "video",
-      "title": "Claude 2.0 완전 정복! 왕초보를 위한 클로드 코드 데스크탑 새 기능 13가지 (15분 정리)",
-      "url": "https://www.youtube.com/watch?v=zO68MQmfvcA",
-      "description": "영상 설명 클로드 코드 데스크탑 앱(Claude Code desktop)이 몇 주 사이에 화면부터 기능까지 새로 바뀌었습니다. Claude 2.0이라고 ..."
-    },
-    {
-      "type": "video",
       "title": "[전체강의 통합본] 클로드 코드 2시간  안에 마스터하기 | 입문→실전→심화 완전 정복 (풀버전)",
       "url": "https://www.youtube.com/watch?v=vxEvo2BLM6A",
       "description": "Claude Code 입문편 · 실전편 · 심화편을 한 편으로 묶은 풀버전 통합 강의입니다. 초기 설정부터 커스텀 스킬, Sub-Agent 병렬 실행, ..."
+    },
+    {
+      "type": "video",
+      "title": "Claude 2.0 완전 정복! 왕초보를 위한 클로드 코드 데스크탑 새 기능 13가지 (15분 정리)",
+      "url": "https://www.youtube.com/watch?v=zO68MQmfvcA",
+      "description": "영상 설명 클로드 코드 데스크탑 앱(Claude Code desktop)이 몇 주 사이에 화면부터 기능까지 새로 바뀌었습니다. Claude 2.0이라고 ..."
     },
     {
       "type": "practice",
