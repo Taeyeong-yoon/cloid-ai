@@ -1,5 +1,16 @@
 [
   {
+    "slug": "2026-11-25-anthropic-launches-claude-ship-for-ai-code-reviews-and-appro",
+    "title": "Anthropic Launches Claude Ship For AI Code Reviews And Approvals - Dataconomy",
+    "date": "2026-11-25",
+    "tags": [
+      "claude-code"
+    ],
+    "score": 100,
+    "sourceUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNQ3h3NFdiOGRYQXEzaWU3SXYyRzVjMHNWc1Z0R0lBRFEwcENKdDhFYkN0c21yQW1oY0ZZQjBuakR6bkc3WllqMGxOVFFVSW9PcXQxM0ZqVkEtR0tWQWF4eFVVTWxBNENvaERUVElQVlY5OW9WN0tJdDliUFRyVDVsNzJvaUJWdXlpQXlYcG9vcU1tY0U?oc=5",
+    "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNQ3h3NFdiOGRYQXEzaWU3SXYyRzVjMHNWc1Z0R0lBRFEwcENKdDhFYkN"
+  },
+  {
     "slug": "2026-11-25-anthropicsclaude-code-v21332",
     "title": "[anthropics/claude-code] v2.1.332",
     "date": "2026-11-25",
@@ -548,16 +559,5 @@
     "score": 100,
     "sourceUrl": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVEdHMU9IS3lrWHF1YjBVYkxoZjFsWFB1V2Y0MHZwOTBkSDRnX1VtbG5YSTlfenJBbGpyVFNQNm1qcDh3UkV3RkdrckZ6QUtjRkFUS0phVkk5bHRSUXJnS0lvV2J1NDM3QVpWVG1nOHBvUEtnWnRtSUVoWV9hdG9nZmRad0ZjTl9rUV9KZTdOUUFTX2Q5c3dWbzVRUEJrbVNlYVJLcA?oc=5",
     "excerpt": "&lt;a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQVEdHMU9IS3lrWHF1YjBVYkxoZjFsWFB1V2Y0MHZwOTBkSDRnX1VtbG5"
-  },
-  {
-    "slug": "2026-11-06-anthropicsclaude-code-v21319",
-    "title": "[anthropics/claude-code] v2.1.319",
-    "date": "2026-11-06",
-    "tags": [
-      "claude-code"
-    ],
-    "score": 100,
-    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
-    "excerpt": "## What's changed\n\n- Changed auto mode with telemetry or feature flags off, including behind LLM gateways: calls the ser"
   }
 ]
